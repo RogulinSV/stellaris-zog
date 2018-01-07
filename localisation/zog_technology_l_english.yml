@@ -32,6 +32,8 @@
     tech_antarctic_construction_desc: ""
     tech_tropical_construction: ""
     tech_tropical_construction_desc: ""
+    tech_warmical_construction: ""
+    tech_warmical_construction_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
@@ -66,3 +68,5 @@
     tech_antarctic_construction_prereqfor.desc: ""
     tech_tropical_construction_prereqfor.title: ""
     tech_tropical_construction_prereqfor.desc: ""
+    tech_warmical_construction_prereqfor.title: ""
+    tech_warmical_construction_prereqfor.desc: ""

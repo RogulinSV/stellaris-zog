@@ -32,6 +32,8 @@
     tech_antarctic_construction_desc: "Антарктическое строительство"
     tech_tropical_construction: "Тропическое строительство"
     tech_tropical_construction_desc: "Тропическое строительство"
+    tech_warmical_construction: "Термическое строительство"
+    tech_warmical_construction_desc: "Термическое строительство"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -66,3 +68,5 @@
     tech_antarctic_construction_prereqfor.desc: "Антарктическое строительство"
     tech_tropical_construction_prereqfor.title: "Тропическое строительство"
     tech_tropical_construction_prereqfor.desc: "Тропическое строительство"
+    tech_warmical_construction_prereqfor.title: "Термическое строительство"
+    tech_warmical_construction_prereqfor.desc: "Термическое строительство"
