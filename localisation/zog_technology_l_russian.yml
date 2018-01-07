@@ -6,6 +6,8 @@
     tech_supreme_engineering_desc: "Совершенные инженерные работы"
     tech_agglomerate_construction: "Агломератное строительств"
     tech_agglomerate_construction_desc: "Агломератное строительств"
+    tech_continental_construction: "Континентальное строительств"
+    tech_continental_construction_desc: "Континентальное строительств"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -14,3 +16,5 @@
     tech_supreme_engineering_prereqfor.desc: "Совершенные инженерные работы"
     tech_agglomerate_construction_prereqfor.title: "Агломератное строительств"
     tech_agglomerate_construction_prereqfor.desc: "Агломератное строительств"
+    tech_continental_construction_prereqfor.title: "Континентальное строительств"
+    tech_continental_construction_prereqfor.desc: "Континентальное строительств"

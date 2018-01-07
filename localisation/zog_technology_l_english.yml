@@ -6,6 +6,8 @@
     tech_supreme_engineering_desc: ""
     tech_agglomerate_construction: ""
     tech_agglomerate_construction_desc: ""
+    tech_continental_construction: ""
+    tech_continental_construction_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
@@ -14,3 +16,5 @@
     tech_supreme_engineering_prereqfor.desc: ""
     tech_agglomerate_construction_prereqfor.title: ""
     tech_agglomerate_construction_prereqfor.desc: ""
+    tech_continental_construction_prereqfor.title: ""
+    tech_continental_construction_prereqfor.desc: ""

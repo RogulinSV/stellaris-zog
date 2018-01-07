@@ -143,7 +143,7 @@ tech_agglomerate_construction = {
     start_tech = no
     category = { industry }
     icon = "tech_agglomerate_construction"
-    tier = 0
+    tier = 1
 
     is_reverse_engineerable = no
     is_rare = no
@@ -226,5 +226,107 @@ tech_agglomerate_construction = {
 
     ai_weight = {
         factor = 90
+    }
+}
+
+tech_continental_construction = {
+    cost = 6000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_continental_construction"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_agglomerate_construction"
+        "tech_colonial_centralization"
+    }
+
+    prereqfor_desc = {
+        building = {
+            title = tech_continental_construction_prereqfor.title
+            desc = tech_continental_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        building_time_mult = -0.10
+        planet_building_cost_mult = -0.10
+        planet_building_build_speed_mult = 0.10
+        planet_colony_development_speed_mult = 0.10
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOR = {
+                    is_planet_class = pc_desert
+                    is_planet_class = pc_arid
+                    is_planet_class = pc_savannah
+                    is_planet_class = pc_tropical
+                    is_planet_class = pc_continental
+                    is_planet_class = pc_tundra
+                    is_planet_class = pc_alpine
+                    is_planet_class = pc_gaia
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_steppe
+                    is_planet_class = pc_hadesert
+                    is_planet_class = pc_sandsea
+                    is_planet_class = pc_geothermal
+                    is_planet_class = pc_cascadian
+                    is_planet_class = pc_mangrove
+                    is_planet_class = pc_desertislands
+                    is_planet_class = pc_mesa
+                    is_planet_class = pc_oasis
+                    is_planet_class = pc_hajungle
+                }
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NOT = {
+                ideal_planet_class = pc_continental
+                ideal_planet_class = pc_tropical
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 2
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 0.90
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 1.50
+            has_tradition = "tr_expansion_finish"
+        }
+        modifier = {
+            factor = 1.30
+            has_technology = "tech_supreme_engineering"
+        }
+    }
+
+    ai_weight = {
+        factor = 80
     }
 }
