@@ -1,1 +1,8 @@
 ﻿l_russian:
+    # Technology
+    tech_advanced_engineering: "Передовые инженерные работы"
+    tech_advanced_engineering_desc: "Передовые инженерные работы"
+
+    # Technology Prerequisites
+    tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
+    tech_advanced_engineering_prereqfor.desc: "Передовые инженерные работы"

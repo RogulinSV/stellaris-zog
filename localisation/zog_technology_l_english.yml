@@ -1,1 +1,8 @@
 ﻿l_english:
+    # Technology
+    tech_advanced_engineering: ""
+    tech_advanced_engineering_desc: ""
+
+    # Technology Prerequisites
+    tech_advanced_engineering_prereqfor.title: ""
+    tech_advanced_engineering_prereqfor.desc: ""

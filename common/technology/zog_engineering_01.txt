@@ -1,0 +1,47 @@
+###########################
+## Engineering / Main
+###########################
+
+tech_advanced_engineering = {
+    cost = 700
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_advanced_engineering"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {}
+
+    prereqfor_desc = {
+        custom = {
+            title = tech_advanced_engineering_prereqfor.title
+            desc = tech_advanced_engineering_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        category_industry_research_speed_mult = 0.05
+        category_materials_research_speed_mult = 0.05
+    }
+
+    weight = 100
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            is_ai = yes
+        }
+        modifier = {
+            factor = 0
+            years_passed < 5
+        }
+    }
+
+    ai_weight = {
+        factor = 0
+    }
+}
