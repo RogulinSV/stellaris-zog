@@ -2,7 +2,11 @@
     # Technology
     tech_advanced_engineering: ""
     tech_advanced_engineering_desc: ""
+    tech_supreme_engineering: ""
+    tech_supreme_engineering_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
     tech_advanced_engineering_prereqfor.desc: ""
+    tech_supreme_engineering_prereqfor.title: ""
+    tech_supreme_engineering_prereqfor.desc: ""

@@ -2,7 +2,11 @@
     # Technology
     tech_advanced_engineering: "Передовые инженерные работы"
     tech_advanced_engineering_desc: "Передовые инженерные работы"
+    tech_supreme_engineering: "Совершенные инженерные работы"
+    tech_supreme_engineering_desc: "Совершенные инженерные работы"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
     tech_advanced_engineering_prereqfor.desc: "Передовые инженерные работы"
+    tech_supreme_engineering_prereqfor.title: "Совершенные инженерные работы"
+    tech_supreme_engineering_prereqfor.desc: "Совершенные инженерные работы"
