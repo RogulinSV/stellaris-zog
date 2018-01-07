@@ -1087,3 +1087,88 @@ tech_molten_construction = {
         factor = 70
     }
 }
+
+#########################################
+## Engineering / Buildings / Frozen
+#########################################
+
+tech_polar_construction = {
+    cost = 3000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_polar_construction"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_engineering"
+        "tech_planetary_unification"
+    }
+
+    prereqfor_desc = {
+        building = {
+            title = tech_polar_construction_prereqfor.title
+            desc = tech_polar_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        building_time_mult = -0.01
+        planet_building_cost_mult = -0.01
+        planet_building_build_speed_mult = 0.01
+        planet_colony_development_speed_mult = 0.01
+    }
+
+    weight = 90
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            any_owned_planet = {
+                NOT = {
+                    is_planet_class = pc_arctic
+                    is_planet_class = pc_frozen
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_glacial
+                    is_planet_class = pc_frozen_desert
+                    is_planet_class = pc_antarctic
+                    is_planet_class = pc_subarctic
+                }
+            }
+        }
+        modifier = {
+            factor = 1.05
+            OR = {
+                ideal_planet_class = pc_arctic
+                ideal_planet_class = pc_frozen
+                # @depend "Planetary Diversity" (id:819148835)
+                ideal_planet_class = pc_glacial
+                ideal_planet_class = pc_frozen_desert
+                ideal_planet_class = pc_antarctic
+                ideal_planet_class = pc_subarctic
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 1
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 90
+    }
+}

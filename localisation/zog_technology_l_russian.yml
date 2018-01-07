@@ -24,6 +24,8 @@
     tech_desert_construction_desc: "Пустынное строительство"
     tech_molten_construction: "Расплавленное строительство"
     tech_molten_construction_desc: "Расплавленное строительство"
+    tech_polar_construction: "Полярное строительство"
+    tech_polar_construction_desc: "Полярное строительство"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -50,3 +52,5 @@
     tech_desert_construction_prereqfor.desc: "Пустынное строительство"
     tech_molten_construction_prereqfor.title: "Расплавленное строительство"
     tech_molten_construction_prereqfor.desc: "Расплавленное строительство"
+    tech_polar_construction_prereqfor.title: ""
+    tech_polar_construction_prereqfor.desc: ""
