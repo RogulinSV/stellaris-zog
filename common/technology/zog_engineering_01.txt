@@ -587,8 +587,8 @@ tech_oceanic_construction = {
             factor = 0
             any_owned_planet = {
                 NOT = {
-                    # @depend "Planetary Diversity" (id:819148835)
                     is_planet_class = pc_ocean
+                    # @depend "Planetary Diversity" (id:819148835)
                     is_planet_class = pc_tidallylocked
                 }
             }
@@ -596,8 +596,8 @@ tech_oceanic_construction = {
         modifier = {
             factor = 1.05
             OR = {
-                # @depend "Planetary Diversity" (id:819148835)
                 ideal_planet_class = pc_ocean
+                # @depend "Planetary Diversity" (id:819148835)
                 ideal_planet_class = pc_tidallylocked
             }
         }
@@ -623,5 +623,92 @@ tech_oceanic_construction = {
 
     ai_weight = {
         factor = 90
+    }
+}
+
+tech_underwater_construction = {
+    cost = 6000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_underwater_construction"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_oceanic_construction"
+        "tech_colonial_centralization"
+    }
+
+    prereqfor_desc = {
+        building = {
+            title = tech_underwater_construction_prereqfor.title
+            desc = tech_underwater_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        building_time_mult = -0.03
+        planet_building_cost_mult = -0.03
+        planet_building_build_speed_mult = 0.03
+        planet_colony_development_speed_mult = 0.03
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            any_owned_planet = {
+                NOT = {
+                    is_planet_class = pc_ocean
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_tidallylocked
+                }
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NOT = {
+                ideal_planet_class = pc_ocean
+                # @depend "Planetary Diversity" (id:819148835)
+                ideal_planet_class = pc_tidallylocked
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 2
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 0.90
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 1.50
+            has_tradition = "tr_expansion_finish"
+        }
+        modifier = {
+            factor = 1.30
+            has_technology = "tech_supreme_engineering"
+        }
+    }
+
+    ai_weight = {
+        factor = 80
     }
 }
