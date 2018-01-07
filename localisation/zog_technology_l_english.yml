@@ -22,6 +22,8 @@
     tech_sandsea_construction_desc: ""
     tech_desert_construction: ""
     tech_desert_construction_desc: ""
+    tech_molten_construction: ""
+    tech_molten_construction_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
@@ -46,3 +48,5 @@
     tech_sandsea_construction_prereqfor.desc: ""
     tech_desert_construction_prereqfor.title: ""
     tech_desert_construction_prereqfor.desc: ""
+    tech_molten_construction_prereqfor.title: ""
+    tech_molten_construction_prereqfor.desc: ""
