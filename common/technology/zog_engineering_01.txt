@@ -432,3 +432,115 @@ tech_intercontinental_construction = {
         factor = 70
     }
 }
+
+tech_planetary_construction = {
+    cost = 24000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_planetary_construction"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_intercontinental_construction"
+    }
+
+    prereqfor_desc = {
+        building = {
+            title = tech_planetary_construction_prereqfor.title
+            desc = tech_planetary_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        building_time_mult = -0.20
+        planet_building_cost_mult = -0.20
+        planet_building_build_speed_mult = 0.50
+        planet_colony_development_speed_mult = 0.20
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOR = {
+                    is_planet_class = pc_desert
+                    is_planet_class = pc_arid
+                    is_planet_class = pc_savannah
+                    is_planet_class = pc_tropical
+                    is_planet_class = pc_continental
+                    is_planet_class = pc_tundra
+                    is_planet_class = pc_alpine
+                    is_planet_class = pc_gaia
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_steppe
+                    is_planet_class = pc_hadesert
+                    is_planet_class = pc_sandsea
+                    is_planet_class = pc_geothermal
+                    is_planet_class = pc_cascadian
+                    is_planet_class = pc_mangrove
+                    is_planet_class = pc_desertislands
+                    is_planet_class = pc_mesa
+                    is_planet_class = pc_oasis
+                    is_planet_class = pc_hajungle
+                }
+            }
+        }
+        modifier = {
+            factor = 0.85
+            NOT = {
+                ideal_planet_class = pc_continental
+                ideal_planet_class = pc_tropical
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = engineering
+                has_level > 4
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_curator"
+            }
+        }
+        modifier = {
+            factor = 0.65
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_expansion_finish"
+        }
+        modifier = {
+            factor = 1.10
+            has_ethic = "ethic_fanatic_materialist"
+        }
+        modifier = {
+            factor = 1.10
+            has_technology = "tech_supreme_engineering"
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}
