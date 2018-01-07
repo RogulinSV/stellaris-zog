@@ -12,6 +12,8 @@
     tech_intercontinental_construction_desc: "Межконтинентальное строительство"
     tech_planetary_construction: "Планетарное строительство"
     tech_planetary_construction_desc: "Планетарное строительство"
+    tech_oceanic_construction: "Океаническое строительство"
+    tech_oceanic_construction_desc: "Океаническое строительство"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -26,3 +28,5 @@
     tech_intercontinental_construction_prereqfor.desc: "Межконтинентальное строительство"
     tech_planetary_construction_prereqfor.title: "Планетарное строительство"
     tech_planetary_construction_prereqfor.desc: "Планетарное строительство"
+    tech_oceanic_construction_prereqfor.title: "Океаническое строительство"
+    tech_oceanic_construction_prereqfor.desc: "Океаническое строительство"

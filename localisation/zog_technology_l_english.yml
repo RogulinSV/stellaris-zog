@@ -12,6 +12,8 @@
     tech_intercontinental_construction_desc: ""
     tech_planetary_construction: ""
     tech_planetary_construction_desc: ""
+    tech_oceanic_construction: ""
+    tech_oceanic_construction_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
@@ -26,3 +28,5 @@
     tech_intercontinental_construction_prereqfor.desc: ""
     tech_planetary_construction_prereqfor.title: ""
     tech_planetary_construction_prereqfor.desc: ""
+    tech_oceanic_construction_prereqfor.title: ""
+    tech_oceanic_construction_prereqfor.desc: ""
