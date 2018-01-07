@@ -17,7 +17,7 @@ tech_advanced_engineering = {
     prerequisites = {}
 
     prereqfor_desc = {
-        custom = {
+        feature = {
             title = tech_advanced_engineering_prereqfor.title
             desc = tech_advanced_engineering_prereqfor.desc
         }
@@ -63,7 +63,7 @@ tech_supreme_engineering = {
     }
 
     prereqfor_desc = {
-        custom = {
+        feature = {
             title = tech_supreme_engineering_prereqfor.title
             desc = tech_supreme_engineering_prereqfor.desc
         }
@@ -130,5 +130,101 @@ tech_supreme_engineering = {
 
     ai_weight = {
         factor = 70
+    }
+}
+
+###########################
+## Engineering / Buildings
+###########################
+
+tech_agglomerate_construction = {
+    cost = 3000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_agglomerate_construction"
+    tier = 0
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_engineering"
+        "tech_planetary_unification"
+    }
+
+    prereqfor_desc = {
+        building = {
+            title = tech_agglomerate_construction_prereqfor.title
+            desc = tech_agglomerate_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        building_time_mult = -0.05
+        planet_building_cost_mult = -0.05
+        planet_building_build_speed_mult = 0.05
+        planet_colony_development_speed_mult = 0.05
+    }
+
+    weight = 90
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            any_owned_planet = {
+                NOT = {
+                    is_planet_class = pc_desert
+                    is_planet_class = pc_arid
+                    is_planet_class = pc_savannah
+                    is_planet_class = pc_tropical
+                    is_planet_class = pc_continental
+                    is_planet_class = pc_tundra
+                    is_planet_class = pc_alpine
+                    is_planet_class = pc_gaia
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_steppe
+                    is_planet_class = pc_hadesert
+                    is_planet_class = pc_sandsea
+                    is_planet_class = pc_geothermal
+                    is_planet_class = pc_cascadian
+                    is_planet_class = pc_mangrove
+                    is_planet_class = pc_desertislands
+                    is_planet_class = pc_mesa
+                    is_planet_class = pc_oasis
+                    is_planet_class = pc_hajungle
+                }
+            }
+        }
+        modifier = {
+            factor = 1.05
+            OR = {
+                ideal_planet_class = pc_continental
+                ideal_planet_class = pc_tropical
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 1
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            years_passed > 15
+        }
+    }
+
+    ai_weight = {
+        factor = 90
     }
 }
