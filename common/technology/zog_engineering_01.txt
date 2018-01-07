@@ -745,7 +745,7 @@ tech_deepwater_construction = {
     weight_modifier = {
         modifier = {
             factor = 0
-            any_planet_within_border = {
+            any_owned_planet = {
                 NOR = {
                     is_planet_class = pc_ocean
                     # @depend "Planetary Diversity" (id:819148835)
