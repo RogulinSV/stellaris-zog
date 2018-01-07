@@ -1267,3 +1267,111 @@ tech_arctic_construction = {
         factor = 80
     }
 }
+
+tech_antarctic_construction = {
+    cost = 12000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_antarctic_construction"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_arctic_construction"
+        "tech_galactic_administration"
+    }
+
+    prereqfor_desc = {
+        building = {
+            title = tech_antarctic_construction_prereqfor.title
+            desc = tech_antarctic_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        building_time_mult = -0.03
+        planet_building_cost_mult = -0.03
+        planet_building_build_speed_mult = 0.03
+        planet_colony_development_speed_mult = 0.03
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            any_owned_planet = {
+                NOT = {
+                    is_planet_class = pc_arctic
+                    is_planet_class = pc_frozen
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_glacial
+                    is_planet_class = pc_frozen_desert
+                    is_planet_class = pc_antarctic
+                    is_planet_class = pc_subarctic
+                }
+            }
+        }
+        modifier = {
+            factor = 1.02
+            any_planet_within_border = {
+                OR = {
+                    is_planet_class = pc_barren_cold
+                    is_planet_class = pc_barren
+                }
+            }
+        }
+        modifier = {
+            factor = 0.85
+            NOT = {
+                ideal_planet_class = pc_arctic
+                ideal_planet_class = pc_frozen
+                # @depend "Planetary Diversity" (id:819148835)
+                ideal_planet_class = pc_glacial
+                ideal_planet_class = pc_frozen_desert
+                ideal_planet_class = pc_antarctic
+                ideal_planet_class = pc_subarctic
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 3
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 0.80
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 1.30
+            has_tradition = "tr_expansion_finish"
+        }
+        modifier = {
+            factor = 1.05
+            has_ethic = "ethic_fanatic_materialist"
+        }
+        modifier = {
+            factor = 1.20
+            has_technology = "tech_supreme_engineering"
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}

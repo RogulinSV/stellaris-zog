@@ -28,6 +28,8 @@
     tech_polar_construction_desc: ""
     tech_arctic_construction: ""
     tech_arctic_construction_desc: ""
+    tech_antarctic_construction: ""
+    tech_antarctic_construction_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
@@ -58,3 +60,5 @@
     tech_polar_construction_prereqfor.desc: ""
     tech_arctic_construction_prereqfor.title: ""
     tech_arctic_construction_prereqfor.desc: ""
+    tech_antarctic_construction_prereqfor.title: ""
+    tech_antarctic_construction_prereqfor.desc: ""

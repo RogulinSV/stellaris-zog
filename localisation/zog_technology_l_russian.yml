@@ -28,6 +28,8 @@
     tech_polar_construction_desc: "Полярное строительство"
     tech_arctic_construction: "Арктическое строительство"
     tech_arctic_construction_desc: "Арктическое строительство"
+    tech_antarctic_construction: "Антарктическое строительство"
+    tech_antarctic_construction_desc: "Антарктическое строительство"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -58,3 +60,5 @@
     tech_polar_construction_prereqfor.desc: "Полярное строительство"
     tech_arctic_construction_prereqfor.title: "Арктическое строительство"
     tech_arctic_construction_prereqfor.desc: "Арктическое строительство"
+    tech_antarctic_construction_prereqfor.title: "Антарктическое строительство"
+    tech_antarctic_construction_prereqfor.desc: "Антарктическое строительство"
