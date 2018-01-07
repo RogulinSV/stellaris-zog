@@ -34,6 +34,8 @@
     tech_tropical_construction_desc: "Тропическое строительство"
     tech_warmical_construction: "Термическое строительство"
     tech_warmical_construction_desc: "Термическое строительство"
+    tech_hothouse_construction: "Парниковое строительство"
+    tech_hothouse_construction_desc: "Парниковое строительство"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -70,3 +72,5 @@
     tech_tropical_construction_prereqfor.desc: "Тропическое строительство"
     tech_warmical_construction_prereqfor.title: "Термическое строительство"
     tech_warmical_construction_prereqfor.desc: "Термическое строительство"
+    tech_hothouse_construction_prereqfor.title: "Парниковое строительство"
+    tech_hothouse_construction_prereqfor.desc: "Парниковое строительство"
