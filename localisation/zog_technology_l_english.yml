@@ -38,6 +38,8 @@
     tech_hothouse_construction_desc: ""
     tech_barycentric_construction: ""
     tech_barycentric_construction_desc: ""
+    tech_engineering_theory: ""
+    tech_engineering_theory_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
@@ -78,3 +80,5 @@
     tech_hothouse_construction_prereqfor.desc: ""
     tech_barycentric_construction_prereqfor.title: ""
     tech_barycentric_construction_prereqfor.desc: ""
+    tech_engineering_theory_prereqfor.title: ""
+    tech_engineering_theory_prereqfor.desc: ""

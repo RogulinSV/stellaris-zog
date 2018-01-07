@@ -1,0 +1,51 @@
+###########################
+## Engineering / Boost
+###########################
+
+tech_engineering_theory = {
+    cost = 1300
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_engineering_theory"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {}
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_engineering_theory_prereqfor.title
+            desc = tech_engineering_theory_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        country_engineering_tech_research_speed = 0.05
+        building_time_mult = -0.05
+        hydroponics_farm_build_cost_mult = -0.05
+        power_plant_build_cost_mult = -0.05
+        mining_network_build_cost_mult = -0.05
+        science_lab_build_cost_mult = -0.05
+    }
+
+    weight = 90
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            is_ai = yes
+        }
+        modifier = {
+            factor = 0
+            years_passed < 20
+        }
+    }
+
+    ai_weight = {
+        factor = 0
+    }
+}

@@ -38,6 +38,8 @@
     tech_hothouse_construction_desc: "Парниковое строительство"
     tech_barycentric_construction: "Барицентрическое строительство"
     tech_barycentric_construction_desc: "Барицентрическое строительство"
+    tech_engineering_theory: "Инженерная теория"
+    tech_engineering_theory_desc: "Инженерная теория"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -78,3 +80,5 @@
     tech_hothouse_construction_prereqfor.desc: "Парниковое строительство"
     tech_barycentric_construction_prereqfor.title: "Барицентрическое строительство"
     tech_barycentric_construction_prereqfor.desc: "Барицентрическое строительство"
+    tech_engineering_theory_prereqfor.title: "Инженерная теория"
+    tech_engineering_theory_prereqfor.desc: "Инженерная теория"
