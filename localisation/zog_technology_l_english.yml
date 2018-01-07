@@ -20,6 +20,8 @@
     tech_deepwater_construction_desc: ""
     tech_sandsea_construction: ""
     tech_sandsea_construction_desc: ""
+    tech_desert_construction: ""
+    tech_desert_construction_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
@@ -42,3 +44,5 @@
     tech_deepwater_construction_prereqfor.desc: ""
     tech_sandsea_construction_prereqfor.title: ""
     tech_sandsea_construction_prereqfor.desc: ""
+    tech_desert_construction_prereqfor.title: ""
+    tech_desert_construction_prereqfor.desc: ""
