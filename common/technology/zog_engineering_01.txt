@@ -1,5 +1,5 @@
 ###########################
-## Engineering / Main
+## Engineering / Common
 ###########################
 
 tech_advanced_engineering = {
@@ -133,9 +133,9 @@ tech_supreme_engineering = {
     }
 }
 
-###########################
-## Engineering / Buildings
-###########################
+#########################################
+## Engineering / Buildings / Continental
+#########################################
 
 tech_agglomerate_construction = {
     cost = 3000
@@ -265,7 +265,7 @@ tech_continental_construction = {
     weight_modifier = {
         modifier = {
             factor = 0
-            any_planet_within_border = {
+            any_owned_planet = {
                 NOR = {
                     is_planet_class = pc_desert
                     is_planet_class = pc_arid
@@ -367,7 +367,7 @@ tech_intercontinental_construction = {
     weight_modifier = {
         modifier = {
             factor = 0
-            any_planet_within_border = {
+            any_owned_planet = {
                 NOR = {
                     is_planet_class = pc_desert
                     is_planet_class = pc_arid
@@ -468,7 +468,7 @@ tech_planetary_construction = {
     weight_modifier = {
         modifier = {
             factor = 0
-            any_planet_within_border = {
+            any_owned_planet = {
                 NOR = {
                     is_planet_class = pc_desert
                     is_planet_class = pc_arid
@@ -544,3 +544,4 @@ tech_planetary_construction = {
         factor = 60
     }
 }
+
