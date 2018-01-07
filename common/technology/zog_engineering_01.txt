@@ -615,10 +615,6 @@ tech_oceanic_construction = {
                 has_trait = "leader_trait_expertise_industry"
             }
         }
-        modifier = {
-            factor = 1.15
-            years_passed > 15
-        }
     }
 
     ai_weight = {
