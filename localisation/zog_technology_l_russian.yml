@@ -16,6 +16,8 @@
     tech_oceanic_construction_desc: "Океаническое строительство"
     tech_underwater_construction: "Подводное строительство"
     tech_underwater_construction_desc: "Подводное строительство"
+    tech_deepwater_construction: "Глубоководное строительство"
+    tech_deepwater_construction_desc: "Глубоководное строительство"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -34,3 +36,5 @@
     tech_oceanic_construction_prereqfor.desc: "Океаническое строительство"
     tech_underwater_construction_prereqfor.title: "Подводное строительство"
     tech_underwater_construction_prereqfor.desc: "Подводное строительство"
+    tech_deepwater_construction_prereqfor.title: "Глубоководное строительство"
+    tech_deepwater_construction_prereqfor.desc: "Глубоководное строительство"

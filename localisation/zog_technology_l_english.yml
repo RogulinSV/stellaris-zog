@@ -16,6 +16,8 @@
     tech_oceanic_construction_desc: ""
     tech_underwater_construction: ""
     tech_underwater_construction_desc: ""
+    tech_deepwater_construction: ""
+    tech_deepwater_construction_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
@@ -34,3 +36,5 @@
     tech_oceanic_construction_prereqfor.desc: ""
     tech_underwater_construction_prereqfor.title: ""
     tech_underwater_construction_prereqfor.desc: ""
+    tech_deepwater_construction_prereqfor.title: ""
+    tech_deepwater_construction_prereqfor.desc: ""
