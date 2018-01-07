@@ -585,6 +585,10 @@ tech_oceanic_construction = {
     weight_modifier = {
         modifier = {
             factor = 0
+            has_authority = auth_machine_intelligence
+        }
+        modifier = {
+            factor = 0
             any_owned_planet = {
                 NOT = {
                     is_planet_class = pc_ocean
@@ -656,6 +660,10 @@ tech_underwater_construction = {
     weight = 80
 
     weight_modifier = {
+        modifier = {
+            factor = 0
+            has_authority = auth_machine_intelligence
+        }
         modifier = {
             factor = 0
             any_owned_planet = {
@@ -743,6 +751,10 @@ tech_deepwater_construction = {
     weight = 70
 
     weight_modifier = {
+        modifier = {
+            factor = 0
+            has_authority = auth_machine_intelligence
+        }
         modifier = {
             factor = 0
             any_owned_planet = {
@@ -840,6 +852,10 @@ tech_sandsea_construction = {
     weight_modifier = {
         modifier = {
             factor = 0
+            has_authority = auth_machine_intelligence
+        }
+        modifier = {
+            factor = 0
             any_owned_planet = {
                 NOT = {
                     is_planet_class = pc_desert
@@ -919,6 +935,10 @@ tech_desert_construction = {
     weight = 80
 
     weight_modifier = {
+        modifier = {
+            factor = 0
+            has_authority = auth_machine_intelligence
+        }
         modifier = {
             factor = 0
             any_owned_planet = {
@@ -1014,6 +1034,10 @@ tech_molten_construction = {
     weight = 70
 
     weight_modifier = {
+        modifier = {
+            factor = 0
+            has_authority = auth_machine_intelligence
+        }
         modifier = {
             factor = 0
             any_owned_planet = {
@@ -1128,6 +1152,10 @@ tech_polar_construction = {
     weight_modifier = {
         modifier = {
             factor = 0
+            has_authority = auth_machine_intelligence
+        }
+        modifier = {
+            factor = 0
             any_owned_planet = {
                 NOT = {
                     is_planet_class = pc_arctic
@@ -1207,6 +1235,10 @@ tech_arctic_construction = {
     weight = 80
 
     weight_modifier = {
+        modifier = {
+            factor = 0
+            has_authority = auth_machine_intelligence
+        }
         modifier = {
             factor = 0
             any_owned_planet = {
@@ -1302,6 +1334,10 @@ tech_antarctic_construction = {
     weight = 70
 
     weight_modifier = {
+        modifier = {
+            factor = 0
+            has_authority = auth_machine_intelligence
+        }
         modifier = {
             factor = 0
             any_owned_planet = {
