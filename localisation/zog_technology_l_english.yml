@@ -48,6 +48,8 @@
     tech_engineering_transcendence_desc: ""
     tech_hydroponics_theory: ""
     tech_hydroponics_theory_desc: ""
+    tech_hydroponics_science: ""
+    tech_hydroponics_science_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
@@ -98,3 +100,5 @@
     tech_engineering_transcendence_prereqfor.desc: ""
     tech_hydroponics_theory_prereqfor.title: ""
     tech_hydroponics_theory_prereqfor.desc: ""
+    tech_hydroponics_science_prereqfor.title: ""
+    tech_hydroponics_science_prereqfor.desc: ""

@@ -225,14 +225,95 @@ tech_hydroponics_theory = {
     weight_modifier = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "hydroponics_farm_1_built" 
-                value < 5
+            NOT = {
+                check_variable = {
+                    which = "hydroponics_farm_1_built" 
+                    value > 5
+                }
+                check_variable = {
+                    which = "hydroponics_farm_2_built" 
+                    value > 4
+                }
+                check_variable = {
+                    which = "hydroponics_farm_3_built" 
+                    value > 3
+                }
+                check_variable = {
+                    which = "hydroponics_farm_4_built" 
+                    value > 2
+                }
+                check_variable = {
+                    which = "hydroponics_farm_5_built" 
+                    value > 1
+                }
             }
         }
     }
 
     ai_weight = {
         factor = 100
+    }
+}
+
+tech_hydroponics_science = {
+    cost = 2500
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_hydroponics_science"
+    tier = 0
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_hydroponics_theory"
+        "tech_hydroponics"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_hydroponics_science_prereqfor.title
+            desc = tech_hydroponics_science_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        hydroponics_farm_build_cost_mult = -0.20
+    }
+
+    weight = 90
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                check_variable = {
+                    which = "hydroponics_farm_1_built" 
+                    value > 10
+                }
+                check_variable = {
+                    which = "hydroponics_farm_2_built" 
+                    value > 8
+                }
+                check_variable = {
+                    which = "hydroponics_farm_3_built" 
+                    value > 6
+                }
+                check_variable = {
+                    which = "hydroponics_farm_4_built" 
+                    value > 4
+                }
+                check_variable = {
+                    which = "hydroponics_farm_5_built" 
+                    value > 2
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 90
     }
 }
