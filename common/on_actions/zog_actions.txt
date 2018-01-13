@@ -1,0 +1,76 @@
+on_yearly_pulse = {
+    events = {
+        # Building "Hydroponics farm"
+        zog_building_events.0
+        # Building "Mining network"
+        zog_building_events.1
+    }
+}
+
+on_building_complete = {
+    events = {
+        # Building "Hydroponics farm"
+        zog_building_events.10
+        zog_building_events.20
+        zog_building_events.30
+        zog_building_events.40
+        zog_building_events.50
+        # Building "Mining network"
+        zog_building_events.15
+        zog_building_events.25
+        zog_building_events.35
+        zog_building_events.45
+        zog_building_events.55
+    }
+}
+
+on_building_upgraded = {
+    events = {
+        # Building "Hydroponics farm"
+        zog_building_events.10
+        zog_building_events.20
+        zog_building_events.30
+        zog_building_events.40
+        zog_building_events.50
+        # Building "Mining network"
+        zog_building_events.15
+        zog_building_events.25
+        zog_building_events.35
+        zog_building_events.45
+        zog_building_events.55
+    }
+}
+
+on_building_demolished = {
+    events = {
+        # Building "Hydroponics farm"
+        zog_building_events.11
+        zog_building_events.21
+        zog_building_events.31
+        zog_building_events.41
+        zog_building_events.51
+        # Building "Mining network"
+        zog_building_events.16
+        zog_building_events.26
+        zog_building_events.36
+        zog_building_events.46
+        zog_building_events.56
+    }
+}
+
+on_building_replaced = {
+    events = {
+        # Building "Hydroponics farm"
+        zog_building_events.11
+        zog_building_events.21
+        zog_building_events.31
+        zog_building_events.41
+        zog_building_events.51
+        # Building "Mining network"
+        zog_building_events.16
+        zog_building_events.26
+        zog_building_events.36
+        zog_building_events.46
+        zog_building_events.56
+    }
+}

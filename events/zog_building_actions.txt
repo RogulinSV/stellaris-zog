@@ -1,0 +1,795 @@
+namespace = zog_building_events
+
+#############################################
+### Building "Hydroponics farm" yearly event
+#############################################
+
+event = {
+    id = zog_building_events.0
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        every_country = {
+            set_variable = {
+                which = "hydroponics_farm_built"
+                value = 0
+            }
+
+            every_owned_planet = {
+                every_tile = {
+                    if = {
+                        limit = {
+                            OR = {
+                                has_building = "building_hydroponics_farm_1"
+                                has_building = "building_hydroponics_farm_2"
+                                has_building = "building_hydroponics_farm_3"
+                                has_building = "building_hydroponics_farm_4"
+                                has_building = "building_hydroponics_farm_5"
+                            }
+                        }
+                        prev = {
+                            owner = {
+                                if = {
+                                    limit = {
+                                        check_variable = {
+                                            which = "hydroponics_farm_built"
+                                            value < 1
+                                        }
+                                    }
+                                    set_variable = {
+                                        which = "hydroponics_farm_built"
+                                        value = 1
+                                    }
+                                    else = {
+                                        change_variable = {
+                                            which = "hydroponics_farm_built"
+                                            value = 1
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+##########################################
+### Building "Hydroponics farm I" events
+##########################################
+
+planet_event = {
+    id = zog_building_events.10
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_building = "building_hydroponics_farm_1"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "hydroponics_farm_1_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "hydroponics_farm_1_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "hydroponics_farm_1_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+planet_event = {
+    id = zog_building_events.11
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_prev_building = "building_hydroponics_farm_1"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "hydroponics_farm_1_built"
+                        value > 1
+                    }
+                }
+                change_variable = {
+                    which = "hydroponics_farm_1_built"
+                    value = -1
+                }
+            }
+        }
+    }
+}
+
+##########################################
+### Building "Hydroponics farm II" events
+##########################################
+
+planet_event = {
+    id = zog_building_events.20
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_building = "building_hydroponics_farm_2"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "hydroponics_farm_2_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "hydroponics_farm_2_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "hydroponics_farm_2_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+planet_event = {
+    id = zog_building_events.21
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_prev_building = "building_hydroponics_farm_2"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "hydroponics_farm_2_built"
+                        value > 1
+                    }
+                }
+                change_variable = {
+                    which = "hydroponics_farm_2_built"
+                    value = -1
+                }
+            }
+        }
+    }
+}
+
+##########################################
+### Building "Hydroponics farm III" events
+##########################################
+
+planet_event = {
+    id = zog_building_events.30
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_building = "building_hydroponics_farm_3"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "hydroponics_farm_3_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "hydroponics_farm_3_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "hydroponics_farm_3_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+planet_event = {
+    id = zog_building_events.31
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_prev_building = "building_hydroponics_farm_3"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "hydroponics_farm_3_built"
+                        value > 1
+                    }
+                }
+                change_variable = {
+                    which = "hydroponics_farm_3_built"
+                    value = -1
+                }
+            }
+        }
+    }
+}
+
+##########################################
+### Building "Hydroponics farm IV" events
+##########################################
+
+planet_event = {
+    id = zog_building_events.40
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_building = "building_hydroponics_farm_4"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "hydroponics_farm_4_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "hydroponics_farm_4_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "hydroponics_farm_4_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+planet_event = {
+    id = zog_building_events.41
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_prev_building = "building_hydroponics_farm_4"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "hydroponics_farm_4_built"
+                        value > 1
+                    }
+                }
+                change_variable = {
+                    which = "hydroponics_farm_4_built"
+                    value = -1
+                }
+            }
+        }
+    }
+}
+
+##########################################
+### Building "Hydroponics farm V" events
+##########################################
+
+planet_event = {
+    id = zog_building_events.50
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_building = "building_hydroponics_farm_5"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "hydroponics_farm_5_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "hydroponics_farm_5_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "hydroponics_farm_5_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+planet_event = {
+    id = zog_building_events.51
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_prev_building = "building_hydroponics_farm_5"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "hydroponics_farm_5_built"
+                        value > 1
+                    }
+                }
+                change_variable = {
+                    which = "hydroponics_farm_5_built"
+                    value = -1
+                }
+            }
+        }
+    }
+}
+
+#############################################
+### Building "Mining network" yearly event
+#############################################
+
+event = {
+    id = zog_building_events.1
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        every_country = {
+            set_variable = {
+                which = "mining_network_built"
+                value = 0
+            }
+
+            every_owned_planet = {
+                every_tile = {
+                    if = {
+                        limit = {
+                            OR = {
+                                has_building = "building_mining_network_1"
+                                has_building = "building_mining_network_2"
+                                has_building = "building_mining_network_3"
+                                has_building = "building_mining_network_4"
+                                has_building = "building_mining_network_5"
+                            }
+                        }
+                        prev = {
+                            owner = {
+                                if = {
+                                    limit = {
+                                        check_variable = {
+                                            which = "mining_network_built"
+                                            value < 1
+                                        }
+                                    }
+                                    set_variable = {
+                                        which = "mining_network_built"
+                                        value = 1
+                                    }
+                                    else = {
+                                        change_variable = {
+                                            which = "mining_network_built"
+                                            value = 1
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+##########################################
+### Building "Mining network I" events
+##########################################
+
+planet_event = {
+    id = zog_building_events.15
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_building = "building_mining_network_1"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "mining_network_1_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "mining_network_1_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "mining_network_1_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+planet_event = {
+    id = zog_building_events.16
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_prev_building = "building_mining_network_1"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "mining_network_1_built"
+                        value > 1
+                    }
+                }
+                change_variable = {
+                    which = "mining_network_1_built"
+                    value = -1
+                }
+            }
+        }
+    }
+}
+
+##########################################
+### Building "Mining network II" events
+##########################################
+
+planet_event = {
+    id = zog_building_events.25
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_building = "building_mining_network_2"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "mining_network_2_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "mining_network_2_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "mining_network_2_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+planet_event = {
+    id = zog_building_events.26
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_prev_building = "building_mining_network_2"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "mining_network_2_built"
+                        value > 1
+                    }
+                }
+                change_variable = {
+                    which = "mining_network_2_built"
+                    value = -1
+                }
+            }
+        }
+    }
+}
+
+##########################################
+### Building "Mining network III" events
+##########################################
+
+planet_event = {
+    id = zog_building_events.35
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_building = "building_mining_network_3"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "mining_network_3_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "mining_network_3_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "mining_network_3_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+planet_event = {
+    id = zog_building_events.36
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_prev_building = "building_mining_network_3"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "mining_network_3_built"
+                        value > 1
+                    }
+                }
+                change_variable = {
+                    which = "mining_network_3_built"
+                    value = -1
+                }
+            }
+        }
+    }
+}
+
+##########################################
+### Building "Mining network IV" events
+##########################################
+
+planet_event = {
+    id = zog_building_events.45
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_building = "building_mining_network_4"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "mining_network_4_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "mining_network_4_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "mining_network_4_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+planet_event = {
+    id = zog_building_events.46
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_prev_building = "building_mining_network_4"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "mining_network_4_built"
+                        value > 1
+                    }
+                }
+                change_variable = {
+                    which = "mining_network_4_built"
+                    value = -1
+                }
+            }
+        }
+    }
+}
+
+##########################################
+### Building "Mining network V" events
+##########################################
+
+planet_event = {
+    id = zog_building_events.55
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_building = "building_mining_network_5"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "mining_network_5_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "mining_network_5_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "mining_network_5_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+planet_event = {
+    id = zog_building_events.56
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_prev_building = "building_mining_network_5"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "mining_network_5_built"
+                        value > 1
+                    }
+                }
+                change_variable = {
+                    which = "mining_network_5_built"
+                    value = -1
+                }
+            }
+        }
+    }
+}
