@@ -8,7 +8,7 @@ tech_engineering_theory = {
     start_tech = no
     category = { industry }
     icon = "tech_engineering_theory"
-    tier = 4
+    tier = 1
 
     is_reverse_engineerable = no
     is_rare = no
@@ -25,14 +25,11 @@ tech_engineering_theory = {
 
     modifier = {
         country_engineering_tech_research_speed = 0.05
+        planet_building_cost_mult = -0.05
         building_time_mult = -0.05
-        hydroponics_farm_build_cost_mult = -0.05
-        power_plant_build_cost_mult = -0.05
-        mining_network_build_cost_mult = -0.05
-        science_lab_build_cost_mult = -0.05
     }
 
-    weight = 90
+    weight = 100
 
     weight_modifier = {
         modifier = {
@@ -41,7 +38,7 @@ tech_engineering_theory = {
         }
         modifier = {
             factor = 0
-            years_passed < 20
+            years_passed < 10
         }
     }
 
