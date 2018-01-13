@@ -3,7 +3,7 @@
 ###########################
 
 tech_engineering_theory = {
-    cost = 1300
+    cost = 5000
     area = engineering
     start_tech = no
     category = { industry }
@@ -44,5 +44,195 @@ tech_engineering_theory = {
 
     ai_weight = {
         factor = 0
+    }
+}
+
+tech_engineering_science = {
+    cost = 10000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_engineering_science"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_engineering_theory"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_engineering_science_prereqfor.title
+            desc = tech_engineering_science_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        country_engineering_tech_research_speed = 0.10
+        planet_building_cost_mult = -0.25
+        building_time_mult = -0.25
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_domination_adopt"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 80
+    }
+}
+
+tech_engineering_doctrine = {
+    cost = 25000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_engineering_doctrine"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_engineering_science"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_engineering_doctrine_prereqfor.title
+            desc = tech_engineering_doctrine_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        country_engineering_tech_research_speed = 0.10
+        planet_building_cost_mult = -0.50
+        building_time_mult = -0.50
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_a_new_life"
+                has_tradition = "tr_domination_star_lords"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}
+
+tech_engineering_transcendence = {
+    cost = 50000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_engineering_transcendence"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_engineering_doctrine"
+        "tech_mega_engineering"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_engineering_transcendence_prereqfor.title
+            desc = tech_engineering_transcendence_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        country_engineering_tech_research_speed = 0.25
+        planet_building_cost_mult = -0.75
+        building_time_mult = -0.75
+        megastructure_build_speed_mult = 0.50
+        mod_megastructure_build_cost_mult = -0.50
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_finish"
+                has_tradition = "tr_domination_finish"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}
+
+##########################################
+## Engineering / Hydroponics Farm / Boost
+##########################################
+
+tech_hydroponics_theory = {
+    cost = 1000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_hydroponics_theory"
+    tier = 0
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_engineering_theory"
+        "tech_eco_simulation"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_hydroponics_theory_prereqfor.title
+            desc = tech_hydroponics_theory_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        hydroponics_farm_build_cost_mult = -0.20
+    }
+
+    weight = 100
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "hydroponics_farm_1_built" 
+                value < 5
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 100
     }
 }
