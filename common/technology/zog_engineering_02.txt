@@ -356,9 +356,9 @@ tech_hydroponics_doctrine = {
         modifier = {
             factor = 0
             NOT = {
-                any_owned_planet = {
-                    has_spaceport = yes
-                    has_spaceport_module = "hydroponic_farms"
+                check_variable = {
+                    which = "hydroponics_module_built"
+                    value > 0
                 }
                 check_variable = {
                     which = "hydroponics_farm_1_built"
@@ -386,5 +386,73 @@ tech_hydroponics_doctrine = {
 
     ai_weight = {
         factor = 80
+    }
+}
+
+tech_hydroponics_transcendence = {
+    cost = 10000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_hydroponics_transcendence"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_hydroponics_doctrine"
+        "tech_nano_vitality_crops"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_hydroponics_transcendence_prereqfor.title
+            desc = tech_hydroponics_transcendence_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        hydroponics_farm_build_cost_mult = -0.20
+        building_hydroponics_farm_4_build_cost_mult = -0.50
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                check_variable = {
+                    which = "hydroponics_module_built"
+                    value > 4
+                }
+                check_variable = {
+                    which = "hydroponics_farm_1_built"
+                    value > 40
+                }
+                check_variable = {
+                    which = "hydroponics_farm_2_built"
+                    value > 32
+                }
+                check_variable = {
+                    which = "hydroponics_farm_3_built"
+                    value > 24
+                }
+                check_variable = {
+                    which = "hydroponics_farm_4_built"
+                    value > 16
+                }
+                check_variable = {
+                    which = "hydroponics_farm_5_built"
+                    value > 8
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 70
     }
 }

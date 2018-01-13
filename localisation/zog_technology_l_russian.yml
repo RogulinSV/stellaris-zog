@@ -52,6 +52,8 @@
     tech_hydroponics_science_desc: "Наука по гидропонике"
     tech_hydroponics_doctrine: "Доктрина по гидропонике"
     tech_hydroponics_doctrine_desc: "Доктрина по гидропонике"
+    tech_hydroponics_transcendence: "Трансцендентная гидропоника"
+    tech_hydroponics_transcendence_desc: "Трансцендентная гидропоника"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -106,3 +108,5 @@
     tech_hydroponics_science_prereqfor.desc: "Наука по гидропонике"
     tech_hydroponics_doctrine_prereqfor.title: "Доктрина по гидропонике"
     tech_hydroponics_doctrine_prereqfor.desc: "Доктрина по гидропонике"
+    tech_hydroponics_transcendence_prereqfor.title: "Трансцендентная гидропоника"
+    tech_hydroponics_transcendence_prereqfor.desc: "Трансцендентная гидропоника"

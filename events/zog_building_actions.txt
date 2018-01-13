@@ -793,3 +793,49 @@ planet_event = {
         }
     }
 }
+
+#############################################
+### Spaceport module "Hydroponics farm" yearly event
+#############################################
+
+event = {
+    id = zog_building_events.2
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        every_country = {
+            set_variable = {
+                which = "hydroponics_module_built"
+                value = 0
+            }
+
+            every_owned_planet = {
+                limit = {
+                    has_spaceport = yes
+                    has_spaceport_module = "hydroponic_farms"
+                }
+                owner = {
+                    if = {
+                        limit = {
+                            check_variable = {
+                                which = "hydroponics_module_built"
+                                value < 1
+                            }
+                        }
+                        set_variable = {
+                            which = "hydroponics_module_built"
+                            value = 1
+                        }
+                        else = {
+                            change_variable = {
+                                which = "hydroponics_module_built"
+                                value = 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
