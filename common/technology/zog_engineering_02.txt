@@ -721,3 +721,70 @@ tech_electric_doctrine = {
         factor = 80
     }
 }
+
+tech_electric_transcendence = {
+    cost = 10000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_electric_transcendence"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_electric_doctrine"
+        "tech_power_plant_4"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_electric_transcendence_prereqfor.title
+            desc = tech_electric_transcendence_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        building_power_plant_4_build_cost_mult = -0.50
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                check_variable = {
+                    which = "solar_panel_module_built"
+                    value > 4
+                }
+                check_variable = {
+                    which = "power_plant_1_built"
+                    value > 40
+                }
+                check_variable = {
+                    which = "power_plant_2_built"
+                    value > 32
+                }
+                check_variable = {
+                    which = "power_plant_3_built"
+                    value > 24
+                }
+                check_variable = {
+                    which = "power_plant_4_built"
+                    value > 16
+                }
+                check_variable = {
+                    which = "power_plant_5_built"
+                    value > 8
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}
