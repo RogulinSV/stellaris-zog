@@ -60,6 +60,8 @@
     tech_electric_theory_desc: "Теория по электроэнеогетике"
     tech_electric_science: "Наука по электроэнеогетике"
     tech_electric_science_desc: "Наука по электроэнеогетике"
+    tech_electric_doctrine: "Доктрина по электроэнеогетике"
+    tech_electric_doctrine_desc: "Доктрина по электроэнеогетике"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -122,3 +124,5 @@
     tech_electric_theory_prereqfor.desc: "Теория по электроэнеогетике"
     tech_electric_science_prereqfor.title: "Наука по электроэнеогетике"
     tech_electric_science_prereqfor.desc: "Наука по электроэнеогетике"
+    tech_electric_doctrine_prereqfor.title: "Доктрина по электроэнеогетике"
+    tech_electric_doctrine_prereqfor.desc: "Доктрина по электроэнеогетике"
