@@ -456,3 +456,70 @@ tech_hydroponics_transcendence = {
         factor = 70
     }
 }
+
+tech_hydroponics_infinitum = {
+    cost = 20000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_hydroponics_infinitum"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_hydroponics_transcendence"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_hydroponics_infinitum_prereqfor.title
+            desc = tech_hydroponics_infinitum_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        hydroponics_farm_build_cost_mult = -0.25
+        building_hydroponics_farm_5_build_cost_mult = -0.50
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                check_variable = {
+                    which = "hydroponics_module_built"
+                    value > 9
+                }
+                check_variable = {
+                    which = "hydroponics_farm_1_built"
+                    value > 80
+                }
+                check_variable = {
+                    which = "hydroponics_farm_2_built"
+                    value > 64
+                }
+                check_variable = {
+                    which = "hydroponics_farm_3_built"
+                    value > 48
+                }
+                check_variable = {
+                    which = "hydroponics_farm_4_built"
+                    value > 32
+                }
+                check_variable = {
+                    which = "hydroponics_farm_5_built"
+                    value > 16
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}

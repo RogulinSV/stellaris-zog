@@ -54,6 +54,8 @@
     tech_hydroponics_doctrine_desc: ""
     tech_hydroponics_transcendence: ""
     tech_hydroponics_transcendence_desc: ""
+    tech_hydroponics_infinitum: ""
+    tech_hydroponics_infinitum_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
@@ -110,3 +112,5 @@
     tech_hydroponics_doctrine_prereqfor.desc: ""
     tech_hydroponics_transcendence_prereqfor.title: ""
     tech_hydroponics_transcendence_prereqfor.desc: ""
+    tech_hydroponics_infinitum_prereqfor.title: ""
+    tech_hydroponics_infinitum_prereqfor.desc: ""
