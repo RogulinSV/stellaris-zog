@@ -1047,3 +1047,66 @@ tech_mining_doctrine = {
         factor = 80
     }
 }
+
+tech_mining_transcendence = {
+    cost = 10000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_mining_transcendence"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_mining_doctrine"
+        "tech_mining_network_4"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_mining_transcendence_prereqfor.title
+            desc = tech_mining_transcendence_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        building_mining_network_4_build_cost_mult = -0.50
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                check_variable = {
+                    which = "mining_network_1_built"
+                    value > 40
+                }
+                check_variable = {
+                    which = "mining_network_2_built"
+                    value > 32
+                }
+                check_variable = {
+                    which = "mining_network_3_built"
+                    value > 24
+                }
+                check_variable = {
+                    which = "mining_network_4_built"
+                    value > 16
+                }
+                check_variable = {
+                    which = "mining_network_5_built"
+                    value > 8
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}

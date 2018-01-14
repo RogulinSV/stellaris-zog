@@ -72,6 +72,8 @@
     tech_mining_science_desc: ""
     tech_mining_doctrine: ""
     tech_mining_doctrine_desc: ""
+    tech_mining_transcendence: ""
+    tech_mining_transcendence_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
@@ -146,3 +148,5 @@
     tech_mining_science_prereqfor.desc: ""
     tech_mining_doctrine_prereqfor.title: ""
     tech_mining_doctrine_prereqfor.desc: ""
+    tech_mining_transcendence_prereqfor.title: ""
+    tech_mining_transcendence_prereqfor.desc: ""
