@@ -56,6 +56,8 @@
     tech_hydroponics_transcendence_desc: "Трансцендентная гидропоника"
     tech_hydroponics_infinitum: "Гидропоника бесконечности"
     tech_hydroponics_infinitum_desc: "Гидропоника бесконечности"
+    tech_electric_theory: "Теория по электроэнеогетике"
+    tech_electric_theory_desc: "Теория по электроэнеогетике"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -114,3 +116,5 @@
     tech_hydroponics_transcendence_prereqfor.desc: "Трансцендентная гидропоника"
     tech_hydroponics_infinitum_prereqfor.title: "Гидропоника бесконечности"
     tech_hydroponics_infinitum_prereqfor.desc: "Гидропоника бесконечности"
+    tech_electric_theory_prereqfor.title: "Теория по электроэнеогетике"
+    tech_electric_theory_prereqfor.desc: "Теория по электроэнеогетике"
