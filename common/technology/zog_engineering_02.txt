@@ -590,3 +590,66 @@ tech_electric_theory = {
         factor = 100
     }
 }
+
+tech_electric_science = {
+    cost = 2500
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_electric_science"
+    tier = 0
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_electric_theory"
+        "tech_power_plant_2"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_electric_science_prereqfor.title
+            desc = tech_electric_science_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        building_power_plant_2_build_cost_mult = -0.50
+    }
+
+    weight = 90
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                check_variable = {
+                    which = "power_plant_1_built"
+                    value > 10
+                }
+                check_variable = {
+                    which = "power_plant_2_built"
+                    value > 8
+                }
+                check_variable = {
+                    which = "power_plant_3_built"
+                    value > 6
+                }
+                check_variable = {
+                    which = "power_plant_4_built"
+                    value > 4
+                }
+                check_variable = {
+                    which = "power_plant_5_built"
+                    value > 2
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 90
+    }
+}

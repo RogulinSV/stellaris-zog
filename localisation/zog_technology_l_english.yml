@@ -58,6 +58,8 @@
     tech_hydroponics_infinitum_desc: ""
     tech_electric_theory: ""
     tech_electric_theory_desc: ""
+    tech_electric_science: ""
+    tech_electric_science_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
@@ -118,3 +120,5 @@
     tech_hydroponics_infinitum_prereqfor.desc: ""
     tech_electric_theory_prereqfor.title: ""
     tech_electric_theory_prereqfor.desc: ""
+    tech_electric_science_prereqfor.title: ""
+    tech_electric_science_prereqfor.desc: ""
