@@ -854,3 +854,70 @@ tech_electric_infinitum = {
         factor = 60
     }
 }
+
+##########################################
+## Engineering / Mining Network / Boost
+##########################################
+
+tech_mining_theory = {
+    cost = 1000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_mining_theory"
+    tier = 0
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_engineering_theory"
+        "tech_basic_industry"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_mining_theory_prereqfor.title
+            desc = tech_mining_theory_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        building_mining_network_1_build_cost_mult = -0.50
+    }
+
+    weight = 100
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                check_variable = {
+                    which = "mining_network_1_built"
+                    value > 5
+                }
+                check_variable = {
+                    which = "mining_network_2_built"
+                    value > 4
+                }
+                check_variable = {
+                    which = "mining_network_3_built"
+                    value > 3
+                }
+                check_variable = {
+                    which = "mining_network_4_built"
+                    value > 2
+                }
+                check_variable = {
+                    which = "mining_network_5_built"
+                    value > 1
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 100
+    }
+}

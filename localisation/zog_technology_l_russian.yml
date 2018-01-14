@@ -66,6 +66,8 @@
     tech_electric_transcendence_desc: "Трансцендентная электроэнеогетика"
     tech_electric_infinitum: "Электроэнеогетика бесконечности"
     tech_electric_infinitum_desc: "Электроэнеогетика бесконечности"
+    tech_mining_theory: "Теория по добывающей индустрии"
+    tech_mining_theory_desc: "Теория по добывающей индустрии"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -134,3 +136,5 @@
     tech_electric_transcendence_prereqfor.desc: "Трансцендентная электроэнеогетика"
     tech_electric_infinitum_prereqfor.title: "Электроэнеогетика бесконечности"
     tech_electric_infinitum_prereqfor.desc: "Электроэнеогетика бесконечности"
+    tech_mining_theory_prereqfor.title: "Теория по добывающей индустрии"
+    tech_mining_theory_prereqfor.desc: "Теория по добывающей индустрии"
