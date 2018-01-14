@@ -74,6 +74,8 @@
     tech_mining_doctrine_desc: "Доктрина по добывающей индустрии"
     tech_mining_transcendence: "Трансцендентная добывающая индустрия"
     tech_mining_transcendence_desc: "Трансцендентная добывающая индустрия"
+    tech_mining_infinitum: "Добывающая индустрия бесконечности"
+    tech_mining_infinitum_desc: "Добывающая индустрия бесконечности"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -150,3 +152,5 @@
     tech_mining_doctrine_prereqfor.desc: "Доктрина по добывающей индустрии"
     tech_mining_transcendence_prereqfor.title: "Трансцендентная добывающая индустрия"
     tech_mining_transcendence_prereqfor.desc: "Трансцендентная добывающая индустрия"
+    tech_mining_infinitum_prereqfor.title: "Добывающая индустрия бесконечности"
+    tech_mining_infinitum_prereqfor.desc: "Добывающая индустрия бесконечности"
