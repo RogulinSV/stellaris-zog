@@ -788,3 +788,69 @@ tech_electric_transcendence = {
         factor = 70
     }
 }
+
+tech_electric_infinitum = {
+    cost = 20000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_electric_infinitum"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_electric_transcendence"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_electric_infinitum_prereqfor.title
+            desc = tech_electric_infinitum_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        building_power_plant_5_build_cost_mult = -0.50
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                check_variable = {
+                    which = "solar_panel_module_built"
+                    value > 9
+                }
+                check_variable = {
+                    which = "power_plant_1_built"
+                    value > 80
+                }
+                check_variable = {
+                    which = "power_plant_2_built"
+                    value > 64
+                }
+                check_variable = {
+                    which = "power_plant_3_built"
+                    value > 48
+                }
+                check_variable = {
+                    which = "power_plant_4_built"
+                    value > 32
+                }
+                check_variable = {
+                    which = "power_plant_5_built"
+                    value > 16
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}

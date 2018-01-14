@@ -64,6 +64,8 @@
     tech_electric_doctrine_desc: ""
     tech_electric_transcendence: ""
     tech_electric_transcendence_desc: ""
+    tech_electric_infinitum: ""
+    tech_electric_infinitum_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
@@ -130,3 +132,5 @@
     tech_electric_doctrine_prereqfor.desc: ""
     tech_electric_transcendence_prereqfor.title: ""
     tech_electric_transcendence_prereqfor.desc: ""
+    tech_electric_infinitum_prereqfor.title: ""
+    tech_electric_infinitum_prereqfor.desc: ""

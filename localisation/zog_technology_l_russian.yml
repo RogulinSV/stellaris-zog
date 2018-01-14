@@ -64,6 +64,8 @@
     tech_electric_doctrine_desc: "Доктрина по электроэнеогетике"
     tech_electric_transcendence: "Трансцендентная электроэнеогетика"
     tech_electric_transcendence_desc: "Трансцендентная электроэнеогетика"
+    tech_electric_infinitum: "Электроэнеогетика бесконечности"
+    tech_electric_infinitum_desc: "Электроэнеогетика бесконечности"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -130,3 +132,5 @@
     tech_electric_doctrine_prereqfor.desc: "Доктрина по электроэнеогетике"
     tech_electric_transcendence_prereqfor.title: "Трансцендентная электроэнеогетика"
     tech_electric_transcendence_prereqfor.desc: "Трансцендентная электроэнеогетика"
+    tech_electric_infinitum_prereqfor.title: "Электроэнеогетика бесконечности"
+    tech_electric_infinitum_prereqfor.desc: "Электроэнеогетика бесконечности"
