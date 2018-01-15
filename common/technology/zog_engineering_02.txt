@@ -1174,12 +1174,12 @@ tech_mining_infinitum = {
 }
 
 tech_advanced_mineral_extraction = {
-    cost = 20000
+    cost = 25000
     area = engineering
     start_tech = no
     category = { industry }
     icon = "tech_advanced_mineral_extraction"
-    tier = 4
+    tier = 1
 
     is_reverse_engineerable = no
     is_rare = yes
@@ -1187,7 +1187,7 @@ tech_advanced_mineral_extraction = {
 
     prerequisites = {
         "tech_supreme_engineering"
-        "tech_droid_workers"
+        "tech_robotic_workers"
     }
 
     prereqfor_desc = {
@@ -1201,7 +1201,7 @@ tech_advanced_mineral_extraction = {
         tile_resource_minerals_mult = 1.0
     }
 
-    weight = 50
+    weight = 60
 
     weight_modifier = {
         modifier = {
@@ -1212,9 +1212,21 @@ tech_advanced_mineral_extraction = {
             }
         }
         modifier = {
+            factor = 0
+            is_at_war = yes
+        }
+        modifier = {
+            factor = 0.50
+            recently_lost_war = yes
+        }
+        modifier = {
             factor = 1.25
             AND = {
                 has_faction = "imperialist"
+                has_monthly_income = {
+                    resource = minerals
+                    value < 50
+                }
                 research_leader = {
                     area = engineering
                     has_trait = "leader_trait_expertise_industry"
@@ -1223,20 +1235,10 @@ tech_advanced_mineral_extraction = {
             }
         }
         modifier = {
-            factor = 1.30
+            factor = 1.35
             AND = {
                 exists = ruler
                 ruler = { leader_of_faction = "imperialist" }
-                research_leader = {
-                    area = engineering
-                    has_trait = "leader_trait_expertise_industry"
-                    has_level > 3
-                }
-            }
-        }
-        modifier = {
-            factor = 1.40
-            AND = {
                 has_monthly_income = {
                     resource = minerals
                     value < 100
@@ -1251,7 +1253,7 @@ tech_advanced_mineral_extraction = {
     }
 
     ai_weight = {
-        factor = 50
+        factor = 60
     }
 }
 
@@ -1261,7 +1263,7 @@ tech_supreme_mineral_extraction = {
     start_tech = no
     category = { industry }
     icon = "tech_supreme_mineral_extraction"
-    tier = 4
+    tier = 2
 
     is_reverse_engineerable = no
     is_rare = yes
@@ -1269,13 +1271,104 @@ tech_supreme_mineral_extraction = {
 
     prerequisites = {
         "tech_advanced_mineral_extraction"
-        "tech_synthetic_workers"
+        "tech_droid_workers"
     }
 
     prereqfor_desc = {
         feature = {
             title = tech_supreme_mineral_extraction_prereqfor.title
             desc = tech_supreme_mineral_extraction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        tile_resource_minerals_mult = 1.0
+    }
+
+    weight = 55
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NAND = {
+                has_government = "gov_megacorporation"
+                has_government = "gov_trade_league"
+                OR = {
+                    has_ascension_perk = "ap_imperial_prerogative"
+                    has_ascension_perk = "ap_master_builders"
+                }
+                OR = {
+                    has_tradition = "tr_expansion_finish"
+                    has_tradition = "tr_supremacy_finish"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_at_war = yes
+                recently_lost_war = yes
+            }
+        }
+        modifier = {
+            factor = 1.15
+            AND = {
+                has_faction = "imperialist"
+                has_monthly_income = {
+                    resource = minerals
+                    value < 10
+                }
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_industry"
+                    has_level > 4
+                }
+            }
+        }
+        modifier = {
+            factor = 1.20
+            AND = {
+                exists = ruler
+                ruler = { leader_of_faction = "imperialist" }
+                has_monthly_income = {
+                    resource = minerals
+                    value < 25
+                }
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_industry"
+                    has_level > 4
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 55
+    }
+}
+
+tech_transcendental_mineral_extraction = {
+    cost = 100000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_transcendental_mineral_extraction"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_supreme_mineral_extraction"
+        "tech_synthetic_workers"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_transcendental_mineral_extraction_prereqfor.title
+            desc = tech_transcendental_mineral_extraction_prereqfor.desc
         }
     }
 
@@ -1291,21 +1384,21 @@ tech_supreme_mineral_extraction = {
             NAND = {
                 has_government = "gov_megacorporation"
                 has_government = "gov_trade_league"
-                OR = {
+                AND = {
                     has_ascension_perk = "ap_imperial_prerogative"
-                    has_ascension_perk = "ap_technological_ascendancy"
+                    has_ascension_perk = "ap_master_builders"
+                }
+                AND = {
+                    has_tradition = "tr_expansion_finish"
+                    has_tradition = "tr_supremacy_finish"
                 }
             }
         }
         modifier = {
-            factor = 1.20
-            AND = {
-                has_faction = "imperialist"
-                research_leader = {
-                    area = engineering
-                    has_trait = "leader_trait_expertise_industry"
-                    has_level > 4
-                }
+            factor = 0
+            OR = {
+                is_at_war = yes
+                recently_lost_war = yes
             }
         }
         modifier = {
@@ -1313,24 +1406,15 @@ tech_supreme_mineral_extraction = {
             AND = {
                 exists = ruler
                 ruler = { leader_of_faction = "imperialist" }
+                has_faction = "imperialist"
+                has_monthly_income = {
+                    resource = minerals
+                    value < 0
+                }
                 research_leader = {
                     area = engineering
                     has_trait = "leader_trait_expertise_industry"
                     has_level > 4
-                }
-            }
-        }
-        modifier = {
-            factor = 1.35
-            AND = {
-                has_monthly_income = {
-                    resource = minerals
-                    value < 50
-                }
-                research_leader = {
-                    area = engineering
-                    has_trait = "leader_trait_expertise_industry"
-                    has_level > 3
                 }
             }
         }
