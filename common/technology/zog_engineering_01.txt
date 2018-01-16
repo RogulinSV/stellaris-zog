@@ -86,7 +86,7 @@ tech_supreme_engineering = {
         }
         modifier = {
             factor = 0
-            years_passed < 100
+            years_passed < 75
         }
         modifier = {
             factor = 1.15
@@ -99,6 +99,7 @@ tech_supreme_engineering = {
             factor = 1.25
             research_leader = {
                 area = engineering
+                has_level > 4
                 has_trait = "leader_trait_expertise_industry"
             }
         }
@@ -123,6 +124,7 @@ tech_supreme_engineering = {
             factor = 1.50
             research_leader = {
                 area = engineering
+                has_level > 3
                 has_trait = "leader_trait_curator"
             }
         }
