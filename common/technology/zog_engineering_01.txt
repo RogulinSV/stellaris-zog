@@ -89,6 +89,13 @@ tech_supreme_engineering = {
             years_passed < 75
         }
         modifier = {
+            factor = 0
+            count_tech_options = {
+                area = engineering
+                count < 20
+            }
+        }
+        modifier = {
             factor = 1.15
             research_leader = {
                 area = engineering
