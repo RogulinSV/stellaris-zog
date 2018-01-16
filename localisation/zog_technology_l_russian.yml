@@ -86,6 +86,8 @@
     tech_advanced_mineral_consumption_desc: "Передовое потребление ресурсов"
     tech_supreme_mineral_consumption: "Совершенное потребление ресурсов"
     tech_supreme_mineral_consumption_desc: "Совершенное потребление ресурсов"
+    tech_advanced_physics: "Передовая физика"
+    tech_advanced_physics_desc: "Передовая физика"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -174,3 +176,5 @@
     tech_advanced_mineral_consumption_prereqfor.desc: "Передовое потребление ресурсов"
     tech_supreme_mineral_consumption_prereqfor.title: "Совершенное потребление ресурсов"
     tech_supreme_mineral_consumption_prereqfor.desc: "Совершенное потребление ресурсов"
+    tech_advanced_physics_prereqfor.title: "Передовая физика"
+    tech_advanced_physics_prereqfor.desc: "Передовая физика"

@@ -86,6 +86,8 @@
     tech_advanced_mineral_consumption_desc: ""
     tech_supreme_mineral_consumption: ""
     tech_supreme_mineral_consumption_desc: ""
+    tech_advanced_physics: ""
+    tech_advanced_physics_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
@@ -174,3 +176,5 @@
     tech_advanced_mineral_consumption_prereqfor.desc: ""
     tech_supreme_mineral_consumption_prereqfor.title: ""
     tech_supreme_mineral_consumption_prereqfor.desc: ""
+    tech_advanced_physics_prereqfor.title: ""
+    tech_advanced_physics_prereqfor.desc: ""

@@ -1,0 +1,48 @@
+###########################
+## Physics / Common
+###########################
+
+tech_advanced_physics = {
+    cost = 700
+    area = physics
+    start_tech = no
+    category = { industry }
+    icon = "tech_advanced_physics"
+    tier = 0
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {}
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_physics_prereqfor.title
+            desc = tech_advanced_physics_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        category_field_manipulation_research_speed_mult = 0.05
+        category_particles_research_speed_mult = 0.05
+        category_computing_research_speed_mult = 0.05
+    }
+
+    weight = 100
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            is_ai = yes
+        }
+        modifier = {
+            factor = 0
+            years_passed < 5
+        }
+    }
+
+    ai_weight = {
+        factor = 0
+    }
+}
