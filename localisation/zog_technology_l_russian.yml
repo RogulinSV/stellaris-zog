@@ -90,8 +90,10 @@
     tech_advanced_physics_desc: "Передовая физика"
     tech_supreme_physics: "Совершенная физика"
     tech_supreme_physics_desc: "Совершенная физика"
-    tech_advanced_energy_weapon_01: "Передовое лазерное вооружение (I)"
-    tech_advanced_energy_weapon_01_desc: "Передовое лазерное вооружение (I)"
+    tech_advanced_energy_weapon_01: "Передовое энергетическое вооружение первого уровня"
+    tech_advanced_energy_weapon_01_desc: "Передовое энергетическое вооружение первого уровня"
+    tech_advanced_energy_weapon_02: "Передовое энергетическое вооружение второго уровня"
+    tech_advanced_energy_weapon_02_desc: "Передовое энергетическое вооружение второго уровня"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -184,5 +186,7 @@
     tech_advanced_physics_prereqfor.desc: "Передовая физика"
     tech_supreme_physics_prereqfor.title: "Совершенная физика"
     tech_supreme_physics_prereqfor.desc: "Совершенная физика"
-    tech_advanced_energy_weapon_01_prereqfor.title: "Передовое лазерное вооружение (I)"
-    tech_advanced_energy_weapon_01_prereqfor.desc: "Передовое лазерное вооружение (I)"
+    tech_advanced_energy_weapon_01_prereqfor.title: "Передовое энергетическое вооружение первого уровня"
+    tech_advanced_energy_weapon_01_prereqfor.desc: "Передовое энергетическое вооружение первого уровня"
+    tech_advanced_energy_weapon_02_prereqfor.title: "Передовое энергетическое вооружение второго уровня"
+    tech_advanced_energy_weapon_02_prereqfor.desc: "Передовое энергетическое вооружение второго уровня"

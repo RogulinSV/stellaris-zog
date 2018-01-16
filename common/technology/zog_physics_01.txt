@@ -150,7 +150,7 @@ tech_advanced_energy_weapon_01 = {
     area = physics
     tier = 1
     category = { particles }
-    icon = "tech_advanced_lasers_01"
+    icon = "tech_advanced_energy_weapon_01"
 
     is_reverse_engineerable = no
     is_rare = no
@@ -170,7 +170,6 @@ tech_advanced_energy_weapon_01 = {
 
     modifier = {
         weapon_type_energy_weapon_damage_mult = 0.10
-        weapon_type_energy_weapon_fire_rate_mult = 0.10
     }
 
     weight = 80
@@ -196,5 +195,60 @@ tech_advanced_energy_weapon_01 = {
 
     ai_weight = {
         factor = 80
+    }
+}
+
+tech_advanced_energy_weapon_02 = {
+    cost = 10000
+    area = physics
+    tier = 1
+    category = { particles }
+    icon = "tech_advanced_energy_weapon_02"
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_energy_weapon_01"
+        "tech_lasers_4"
+        "tech_plasma_1"
+        "tech_disruptors_1"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_energy_weapon_02_prereqfor.title
+            desc = tech_advanced_energy_weapon_02_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        weapon_type_energy_weapon_damage_mult = 0.15
+    }
+
+    weight = 75
+
+    weight_modifier = {
+        modifier = {
+            factor = 1.10
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.30
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = physics
+                has_level > 3
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 75
     }
 }
