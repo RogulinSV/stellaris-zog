@@ -252,3 +252,64 @@ tech_advanced_energy_weapon_02 = {
         factor = 75
     }
 }
+
+tech_advanced_energy_weapon_03 = {
+    cost = 20000
+    area = physics
+    tier = 2
+    category = { particles }
+    icon = "tech_advanced_energy_weapon_03"
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_energy_weapon_02"
+        "tech_lasers_5"
+        "tech_plasma_2"
+        "tech_disruptors_2"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_energy_weapon_03_prereqfor.title
+            desc = tech_advanced_energy_weapon_03_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        weapon_type_energy_weapon_damage_mult = 0.15
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0.80
+            NOR = {
+                has_ethic = "ethic_militarist"
+                has_ethic = "ethic_fanatic_militarist"
+            }
+        }
+        modifier = {
+            factor = 1.10
+            OR = {
+                has_tradition = "tr_domination_adopt"
+                has_tradition = "tr_supremacy_adopt"
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = physics
+                has_level > 4
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}
