@@ -1225,7 +1225,7 @@ tech_advanced_mineral_extraction = {
                 has_faction = "imperialist"
                 has_monthly_income = {
                     resource = minerals
-                    value < 50
+                    value < 100
                 }
                 research_leader = {
                     area = engineering
@@ -1316,7 +1316,7 @@ tech_supreme_mineral_extraction = {
                 has_faction = "imperialist"
                 has_monthly_income = {
                     resource = minerals
-                    value < 10
+                    value < 25
                 }
                 research_leader = {
                     area = engineering
@@ -1409,7 +1409,7 @@ tech_transcendental_mineral_extraction = {
                 has_faction = "imperialist"
                 has_monthly_income = {
                     resource = minerals
-                    value < 0
+                    value < 10
                 }
                 research_leader = {
                     area = engineering
@@ -1466,7 +1466,7 @@ tech_advanced_mineral_consumption = {
             }
         }
         modifier = {
-            factor = 1.25
+            factor = 1.15
             AND = {
                 has_faction = "totalitarian"
                 research_leader = {
@@ -1489,19 +1489,12 @@ tech_advanced_mineral_consumption = {
             }
         }
         modifier = {
-            factor = 1.25
+            factor = 1.50
             AND = {
-                recently_lost_war = yes
-                research_leader = {
-                    area = engineering
-                    has_trait = "leader_trait_expertise_industry"
-                    has_level > 3
+                OR = {
+                    recently_lost_war = yes
+                    is_at_war = yes
                 }
-            }
-        }
-        modifier = {
-            factor = 1.35
-            AND = {
                 has_monthly_income = {
                     resource = minerals
                     value < 100
@@ -1553,37 +1546,19 @@ tech_supreme_mineral_consumption = {
         modifier = {
             factor = 0
             NAND = {
-                has_government = "gov_totalitarian_regime"
-                has_ethic = "ethic_fanatic_authoritarian"
-            }
-        }
-        modifier = {
-            factor = 1.20
-            AND = {
-                has_faction = "totalitarian"
-                research_leader = {
-                    area = engineering
-                    has_trait = "leader_trait_expertise_industry"
-                    has_level > 4
+                has_ascension_perk = "ap_one_vision"
+                OR = {
+                    has_government = "gov_totalitarian_regime"
+                    has_ethic = "ethic_fanatic_authoritarian"
                 }
             }
         }
         modifier = {
-            factor = 1.25
+            factor = 1.20
             AND = {
                 exists = ruler
                 ruler = { leader_of_faction = "totalitarian" }
-                research_leader = {
-                    area = engineering
-                    has_trait = "leader_trait_expertise_industry"
-                    has_level > 4
-                }
-            }
-        }
-        modifier = {
-            factor = 1.20
-            AND = {
-                recently_lost_war = yes
+                has_faction = "totalitarian"
                 research_leader = {
                     area = engineering
                     has_trait = "leader_trait_expertise_industry"
@@ -1594,6 +1569,10 @@ tech_supreme_mineral_consumption = {
         modifier = {
             factor = 1.30
             AND = {
+                OR = {
+                    recently_lost_war = yes
+                    is_at_war = yes
+                }
                 has_monthly_income = {
                     resource = minerals
                     value < 50
