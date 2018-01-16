@@ -508,9 +508,10 @@ tech_advanced_energy_weapon_06 = {
             factor = 0
             NOR = {
                 has_ethic = "ethic_fanatic_militarist"
-                OR = {
+                AND = {
                     has_tradition = "tr_domination_finish"
                     has_tradition = "tr_supremacy_finish"
+                    has_tradition = "tr_discovery_adopt"
                 }
                 OR = {
                     has_ascension_perk = "ap_galactic_force_projection"
@@ -570,9 +571,10 @@ tech_advanced_energy_weapon_07 = {
             factor = 0
             NOR = {
                 has_ethic = "ethic_fanatic_militarist"
-                OR = {
+                AND = {
                     has_tradition = "tr_domination_finish"
                     has_tradition = "tr_supremacy_finish"
+                    has_tradition = "tr_discovery_finish"
                 }
                 AND = {
                     has_ascension_perk = "ap_galactic_force_projection"
@@ -586,6 +588,65 @@ tech_advanced_energy_weapon_07 = {
                         has_trait = "leader_trait_scientist_chosen"
                         has_trait = "leader_trait_curator"
                     }
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 40
+    }
+}
+
+tech_advanced_energy_weapon_08 = {
+    cost = 400000
+    area = physics
+    tier = 4
+    category = { particles }
+    icon = "tech_advanced_energy_weapon_08"
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_advanced_energy_weapon_07"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_energy_weapon_08_prereqfor.title
+            desc = tech_advanced_energy_weapon_08_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        weapon_type_energy_weapon_damage_mult = 2.0
+    }
+
+    weight = 40
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                years_passed > 200
+                has_ethic = "ethic_fanatic_militarist"
+                AND = {
+                    has_tradition = "tr_domination_finish"
+                    has_tradition = "tr_supremacy_finish"
+                    has_tradition = "tr_discovery_finish"
+                }
+                AND = {
+                    has_ascension_perk = "ap_galactic_force_projection"
+                    has_ascension_perk = "ap_defender_of_the_galaxy"
+                    has_ascension_perk = "ap_technological_ascendancy"
+                    has_ascension_perk = "ap_galactic_contender"
+                }
+                AND = {
+                    area = physics
+                    has_level > 4
+                    has_trait = "leader_trait_curator"
                 }
             }
         }

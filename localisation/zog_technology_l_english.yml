@@ -102,6 +102,8 @@
     tech_advanced_energy_weapon_06_desc: ""
     tech_advanced_energy_weapon_07: ""
     tech_advanced_energy_weapon_07_desc: ""
+    tech_advanced_energy_weapon_08: ""
+    tech_advanced_energy_weapon_08_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
@@ -208,3 +210,5 @@
     tech_advanced_energy_weapon_06_prereqfor.desc: ""
     tech_advanced_energy_weapon_07_prereqfor.title: ""
     tech_advanced_energy_weapon_07_prereqfor.desc: ""
+    tech_advanced_energy_weapon_08_prereqfor.title: ""
+    tech_advanced_energy_weapon_08_prereqfor.desc: ""
