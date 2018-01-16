@@ -46,3 +46,97 @@ tech_advanced_physics = {
         factor = 0
     }
 }
+
+tech_supreme_physics = {
+    cost = 40000
+    area = physics
+    start_tech = no
+    category = { industry }
+    icon = "tech_supreme_physics"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_physics"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_supreme_physics_prereqfor.title
+            desc = tech_supreme_physics_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        category_field_manipulation_research_speed_mult = 0.25
+        category_particles_research_speed_mult = 0.25
+        category_computing_research_speed_mult = 0.25
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = physics
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0
+            years_passed < 75
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = physics
+                has_level > 4
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_field_manipulation"
+                    has_trait = "leader_trait_expertise_particles"
+                    has_trait = "leader_trait_expertise_computing"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 1.50
+            has_tradition = "tr_discovery_finish"
+        }
+        modifier = {
+            factor = 1.35
+            OR = {
+                has_ethic = "ethic_egalitarian"
+                has_ethic = "ethic_fanatic_egalitarian"
+            }
+        }
+        modifier = {
+            factor = 1.50
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_curator"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}
