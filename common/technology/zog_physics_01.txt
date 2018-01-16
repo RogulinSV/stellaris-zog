@@ -300,6 +300,13 @@ tech_advanced_energy_weapon_03 = {
             }
         }
         modifier = {
+            factor = 1.30
+            OR = {
+                has_tradition = "tr_domination_finish"
+                has_tradition = "tr_supremacy_finish"
+            }
+        }
+        modifier = {
             factor = 1.20
             research_leader = {
                 area = physics
@@ -307,9 +314,85 @@ tech_advanced_energy_weapon_03 = {
                 has_trait = "leader_trait_expertise_particles"
             }
         }
+        modifier = {
+            factor = 1.15
+            has_technology = "tech_supreme_physics"
+        }
     }
 
     ai_weight = {
         factor = 70
+    }
+}
+
+tech_advanced_energy_weapon_04 = {
+    cost = 40000
+    area = physics
+    tier = 3
+    category = { particles }
+    icon = "tech_advanced_energy_weapon_04"
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_energy_weapon_03"
+        "tech_arc_emitter_1"
+        "tech_plasma_3"
+        "tech_disruptors_3"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_energy_weapon_04_prereqfor.title
+            desc = tech_advanced_energy_weapon_04_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        weapon_type_energy_weapon_damage_mult = 0.18
+    }
+
+    weight = 65
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_ethic = "ethic_militarist"
+                has_ethic = "ethic_fanatic_militarist"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOR = {
+                has_tradition = "tr_domination_adopt"
+                has_tradition = "tr_supremacy_adopt"
+            }
+        }
+        modifier = {
+            factor = 1.30
+            OR = {
+                has_tradition = "tr_domination_finish"
+                has_tradition = "tr_supremacy_finish"
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = physics
+                has_level > 4
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+        modifier = {
+            factor = 1.10
+            has_technology = "tech_supreme_physics"
+        }
+    }
+
+    ai_weight = {
+        factor = 65
     }
 }
