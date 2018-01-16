@@ -416,7 +416,6 @@ tech_advanced_energy_weapon_05 = {
     is_dangerous = yes
 
     prerequisites = {
-        "tech_supreme_physics"
         "tech_advanced_energy_weapon_04"
         "tech_energy_lance_2"
         "tech_arc_emitter_2"
@@ -468,6 +467,10 @@ tech_advanced_energy_weapon_05 = {
                 }
             }
         }
+        modifier = {
+            factor = 1.05
+            has_technology = "tech_supreme_physics"
+        }
     }
 
     ai_weight = {
@@ -475,12 +478,12 @@ tech_advanced_energy_weapon_05 = {
     }
 }
 
-tech_advanced_energy_weapon_06 = {
+tech_supreme_energy_weapon_01 = {
     cost = 120000
     area = physics
     tier = 4
     category = { particles }
-    icon = "tech_advanced_energy_weapon_06"
+    icon = "tech_supreme_energy_weapon_01"
 
     is_reverse_engineerable = no
     is_rare = yes
@@ -488,12 +491,13 @@ tech_advanced_energy_weapon_06 = {
 
     prerequisites = {
         "tech_advanced_energy_weapon_05"
+        "tech_supreme_physics"
     }
 
     prereqfor_desc = {
         feature = {
-            title = tech_advanced_energy_weapon_06_prereqfor.title
-            desc = tech_advanced_energy_weapon_06_prereqfor.desc
+            title = tech_supreme_energy_weapon_01_prereqfor.title
+            desc = tech_supreme_energy_weapon_01_prereqfor.desc
         }
     }
 
@@ -538,25 +542,25 @@ tech_advanced_energy_weapon_06 = {
     }
 }
 
-tech_advanced_energy_weapon_07 = {
+tech_supreme_energy_weapon_02 = {
     cost = 250000
     area = physics
     tier = 4
     category = { particles }
-    icon = "tech_advanced_energy_weapon_07"
+    icon = "tech_supreme_energy_weapon_02"
 
     is_reverse_engineerable = no
     is_rare = yes
     is_dangerous = yes
 
     prerequisites = {
-        "tech_advanced_energy_weapon_06"
+        "tech_supreme_energy_weapon_01"
     }
 
     prereqfor_desc = {
         feature = {
-            title = tech_advanced_energy_weapon_07_prereqfor.title
-            desc = tech_advanced_energy_weapon_07_prereqfor.desc
+            title = tech_supreme_energy_weapon_02_prereqfor.title
+            desc = tech_supreme_energy_weapon_02_prereqfor.desc
         }
     }
 
@@ -598,25 +602,25 @@ tech_advanced_energy_weapon_07 = {
     }
 }
 
-tech_advanced_energy_weapon_08 = {
+tech_supreme_energy_weapon_03 = {
     cost = 400000
     area = physics
     tier = 4
     category = { particles }
-    icon = "tech_advanced_energy_weapon_08"
+    icon = "tech_supreme_energy_weapon_03"
 
     is_reverse_engineerable = no
     is_rare = yes
     is_dangerous = yes
 
     prerequisites = {
-        "tech_advanced_energy_weapon_07"
+        "tech_supreme_energy_weapon_02"
     }
 
     prereqfor_desc = {
         feature = {
-            title = tech_advanced_energy_weapon_08_prereqfor.title
-            desc = tech_advanced_energy_weapon_08_prereqfor.desc
+            title = tech_supreme_energy_weapon_03_prereqfor.title
+            desc = tech_supreme_energy_weapon_03_prereqfor.desc
         }
     }
 
