@@ -98,6 +98,8 @@
     tech_advanced_energy_weapon_03_desc: "Передовое энергетическое вооружение третьего поколения"
     tech_advanced_energy_weapon_04: "Передовое энергетическое вооружение четвёртого поколения"
     tech_advanced_energy_weapon_04_desc: "Передовое энергетическое вооружение четвёртого поколения"
+    tech_advanced_energy_weapon_05: "Передовое энергетическое вооружение пятого поколения"
+    tech_advanced_energy_weapon_05_desc: "Передовое энергетическое вооружение пятого поколения"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -198,3 +200,5 @@
     tech_advanced_energy_weapon_03_prereqfor.desc: "Передовое энергетическое вооружение третьего поколения"
     tech_advanced_energy_weapon_04_prereqfor.title: "Передовое энергетическое вооружение четвёртого поколения"
     tech_advanced_energy_weapon_04_prereqfor.desc: "Передовое энергетическое вооружение четвёртого поколения"
+    tech_advanced_energy_weapon_05_prereqfor.title: "Передовое энергетическое вооружение пятого поколения"
+    tech_advanced_energy_weapon_05_prereqfor.desc: "Передовое энергетическое вооружение пятого поколения"
