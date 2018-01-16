@@ -90,6 +90,8 @@
     tech_advanced_physics_desc: ""
     tech_supreme_physics: ""
     tech_supreme_physics_desc: ""
+    tech_advanced_energy_weapon_01: ""
+    tech_advanced_energy_weapon_01_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
@@ -182,3 +184,5 @@
     tech_advanced_physics_prereqfor.desc: ""
     tech_supreme_physics_prereqfor.title: ""
     tech_supreme_physics_prereqfor.desc: ""
+    tech_advanced_energy_weapon_01_prereqfor.title: ""
+    tech_advanced_energy_weapon_01_prereqfor.desc: ""

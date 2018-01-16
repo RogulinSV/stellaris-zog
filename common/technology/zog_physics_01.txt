@@ -140,3 +140,61 @@ tech_supreme_physics = {
         factor = 70
     }
 }
+
+##############################
+## Physics / Weapons / Lasers
+##############################
+
+tech_advanced_energy_weapon_01 = {
+    cost = 5000
+    area = physics
+    tier = 1
+    category = { particles }
+    icon = "tech_advanced_lasers_01"
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_physics"
+        "tech_lasers_3"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_energy_weapon_01_prereqfor.title
+            desc = tech_advanced_energy_weapon_01_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        weapon_type_energy_weapon_damage_mult = 0.10
+        weapon_type_energy_weapon_fire_rate_mult = 0.10
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.50
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_level > 2
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 80
+    }
+}
