@@ -116,6 +116,8 @@
     tech_supreme_energy_weapon_02_desc: "Совершенное энергетическое вооружение второго поколения"
     tech_supreme_energy_weapon_03: "Совершенное энергетическое вооружение третьего поколения"
     tech_supreme_energy_weapon_03_desc: "Совершенное энергетическое вооружение третьего поколения"
+    tech_advanced_explosive_weapon_01: ""
+    tech_advanced_explosive_weapon_01_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -234,3 +236,5 @@
     tech_supreme_energy_weapon_02_prereqfor.desc: "Совершенное энергетическое вооружение второго поколения"
     tech_supreme_energy_weapon_03_prereqfor.title: "Совершенное энергетическое вооружение третьего поколения"
     tech_supreme_energy_weapon_03_prereqfor.desc: "Совершенное энергетическое вооружение третьего поколения"
+    tech_advanced_explosive_weapon_01_prereqfor.title: ""
+    tech_advanced_explosive_weapon_01_prereqfor.desc: ""
