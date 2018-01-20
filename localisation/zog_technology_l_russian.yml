@@ -120,6 +120,8 @@
     tech_advanced_explosive_weapon_01_desc: "Передовое ракетное вооружение первого поколения"
     tech_advanced_explosive_weapon_02: "Передовое ракетное вооружение второго поколения"
     tech_advanced_explosive_weapon_02_desc: "Передовое ракетное вооружение второго поколения"
+    tech_advanced_explosive_weapon_03: "Передовое ракетное вооружение третьего поколения"
+    tech_advanced_explosive_weapon_03_desc: "Передовое ракетное вооружение третьего поколения"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -242,3 +244,5 @@
     tech_advanced_explosive_weapon_01_prereqfor.desc: "Передовое ракетное вооружение первого поколения"
     tech_advanced_explosive_weapon_02_prereqfor.title: "Передовое ракетное вооружение второго поколения"
     tech_advanced_explosive_weapon_02_prereqfor.desc: "Передовое ракетное вооружение второго поколения"
+    tech_advanced_explosive_weapon_03_prereqfor.title: "Передовое ракетное вооружение третьего поколения"
+    tech_advanced_explosive_weapon_03_prereqfor.desc: "Передовое ракетное вооружение третьего поколения"
