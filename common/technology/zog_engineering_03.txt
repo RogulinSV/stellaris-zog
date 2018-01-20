@@ -526,7 +526,7 @@ tech_transcendental_energy_extraction = {
     cost = 100000
     area = engineering
     start_tech = no
-    category = { industry }
+    category = { field_manipulation }
     icon = "tech_transcendental_energy_extraction"
     tier = 2
 
@@ -604,7 +604,7 @@ tech_infinitum_energy_extraction = {
     cost = 200000
     area = engineering
     start_tech = no
-    category = { industry }
+    category = { field_manipulation }
     icon = "tech_infinitum_energy_extraction"
     tier = 4
 
