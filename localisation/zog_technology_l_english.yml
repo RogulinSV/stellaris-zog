@@ -146,6 +146,8 @@
     tech_advanced_explosive_material_02_desc: ""
     tech_advanced_explosive_material_03: ""
     tech_advanced_explosive_material_03_desc: ""
+    tech_advanced_explosive_material_04: ""
+    tech_advanced_explosive_material_04_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
@@ -296,3 +298,5 @@
     tech_advanced_explosive_material_02_prereqfor.desc: ""
     tech_advanced_explosive_material_03_prereqfor.title: ""
     tech_advanced_explosive_material_03_prereqfor.desc: ""
+    tech_advanced_explosive_material_04_prereqfor.title: ""
+    tech_advanced_explosive_material_04_prereqfor.desc: ""
