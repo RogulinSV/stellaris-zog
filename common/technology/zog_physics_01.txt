@@ -924,7 +924,7 @@ tech_advanced_energy_material_03 = {
     is_dangerous = no
 
     prerequisites = {
-        "tech_advanced_energy_material_03"
+        "tech_advanced_energy_material_02"
         "tech_lasers_5"
         "tech_plasma_2"
         "tech_disruptors_2"
@@ -985,6 +985,85 @@ tech_advanced_energy_material_03 = {
 
     ai_weight = {
         factor = 70
+    }
+}
+
+tech_advanced_energy_material_04 = {
+    cost = 40000
+    area = physics
+    tier = 3
+    category = { materials }
+    icon = "tech_advanced_energy_material_04"
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_energy_material_03"
+        "tech_energy_lance_1"
+        "tech_arc_emitter_1"
+        "tech_plasma_3"
+        "tech_disruptors_3"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_energy_material_04_prereqfor.title
+            desc = tech_advanced_energy_material_04_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        weapon_type_energy_weapon_fire_rate_mult = 0.25
+    }
+
+    weight = 65
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_ethic = "ethic_fanatic_militarist"
+                has_tradition = "tr_supremacy_war_games"
+                research_leader = {
+                    area = physics
+                    has_level > 4
+                    OR = {
+                        has_trait = "leader_trait_expertise_materials"
+                        has_trait = "leader_trait_curator"
+                        has_trait = "leader_trait_scientist_chosen"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_tradition = "tr_supremacy_finish"
+            }
+        }
+        modifier = {
+            factor = 1.20
+            has_ascension_perk = "ap_defender_of_the_galaxy"
+        }
+        modifier = {
+            factor = 1.10
+            AND = {
+                has_technology = "tech_supreme_physics"
+                research_leader = {
+                    area = physics
+                    OR = {
+                        has_trait = "leader_trait_curator"
+                        has_trait = "leader_trait_scientist_chosen"
+                    }
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 65
     }
 }
 
