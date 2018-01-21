@@ -1,0 +1,76 @@
+##############################
+## Physics / Weapons / Kinetic
+##############################
+
+tech_advanced_kinetic_weapon_01 = {
+    cost = 5000
+    area = physics
+    tier = 1
+    category = { field_manipulation }
+    icon = "tech_advanced_kinetic_weapon_01"
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_physics"
+        "tech_mass_drivers_3"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_kinetic_weapon_01_prereqfor.title
+            desc = tech_advanced_kinetic_weapon_01_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        weapon_type_kinetic_weapon_damage_mult = 0.10
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            AND = {
+                OR = {
+                    has_ethic = "ethic_militarist"
+                    has_ethic = "ethic_fanatic_militarist"
+                }
+                research_leader = {
+                    area = physics
+                    has_level > 2
+                    has_trait = "leader_trait_expertise_field_manipulation"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            AND = {
+                has_tradition = "tr_domination_adopt"
+                research_leader = {
+                    area = physics
+                    has_level > 2
+                    has_trait = "leader_trait_expertise_field_manipulation"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.75
+            research_leader = {
+                area = physics
+                has_level > 1
+                OR = {
+                    has_trait = "leader_trait_curator"
+                    has_trait = "leader_trait_scientist_chosen"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 80
+    }
+}
