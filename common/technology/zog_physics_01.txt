@@ -737,12 +737,12 @@ tech_supreme_energy_weapon_03 = {
     }
 }
 
-tech_advanced_energy_capacitor_01 = {
+tech_advanced_energy_material_01 = {
     cost = 5000
     area = physics
     tier = 1
     category = { materials }
-    icon = "tech_advanced_energy_capacitor_01"
+    icon = "tech_advanced_energy_material_01"
 
     is_reverse_engineerable = no
     is_rare = no
@@ -755,8 +755,8 @@ tech_advanced_energy_capacitor_01 = {
 
     prereqfor_desc = {
         feature = {
-            title = tech_advanced_energy_capacitor_01_prereqfor.title
-            desc = tech_advanced_energy_capacitor_01_prereqfor.desc
+            title = tech_advanced_energy_material_01_prereqfor.title
+            desc = tech_advanced_energy_material_01_prereqfor.desc
         }
     }
 
