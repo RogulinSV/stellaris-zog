@@ -150,6 +150,8 @@
     tech_advanced_explosive_material_03_desc: "Передовые ракетные материалы третьего поколения"
     tech_advanced_explosive_material_04: "Передовые ракетные материалы четвёртого поколения"
     tech_advanced_explosive_material_04_desc: "Передовые ракетные материалы четвёртого поколения"
+    tech_advanced_explosive_material_05: "Передовые ракетные материалы пятого поколения"
+    tech_advanced_explosive_material_05_desc: "Передовые ракетные материалы пятого поколения"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -302,3 +304,5 @@
     tech_advanced_explosive_material_03_prereqfor.desc: "Передовые ракетные материалы третьего поколения"
     tech_advanced_explosive_material_04_prereqfor.title: "Передовые ракетные материалы четвёртого поколения"
     tech_advanced_explosive_material_04_prereqfor.desc: "Передовые ракетные материалы четвёртого поколения"
+    tech_advanced_explosive_material_05_prereqfor.title: "Передовые ракетные материалы пятого поколения"
+    tech_advanced_explosive_material_05_prereqfor.desc: "Передовые ракетные материалы пятого поколения"
