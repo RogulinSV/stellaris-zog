@@ -494,9 +494,6 @@ tech_advanced_energy_weapon_05 = {
 
     prerequisites = {
         "tech_advanced_energy_weapon_04"
-        "tech_lasers_5"
-        "tech_plasma_3"
-        "tech_disruptors_3"
         "tech_energy_lance_2"
         "tech_arc_emitter_2"
     }
@@ -897,9 +894,6 @@ tech_advanced_energy_material_05 = {
 
     prerequisites = {
         "tech_advanced_energy_material_04"
-        "tech_lasers_5"
-        "tech_plasma_3"
-        "tech_disruptors_3"
         "tech_energy_lance_2"
         "tech_arc_emitter_2"
     }
