@@ -1419,6 +1419,7 @@ tech_advanced_explosive_weapon_04 = {
 
     prerequisites = {
         "tech_advanced_explosive_weapon_03"
+        "tech_missiles_4"
         "tech_torpedoes_2"
         "tech_swarmer_missiles_1"
         "tech_energy_torpedoes_1"
@@ -1819,6 +1820,7 @@ tech_advanced_explosive_material_04 = {
 
     prerequisites = {
         "tech_advanced_explosive_material_03"
+        "tech_missiles_4"
         "tech_torpedoes_2"
         "tech_swarmer_missiles_1"
         "tech_energy_torpedoes_1"
