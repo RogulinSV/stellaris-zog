@@ -158,6 +158,8 @@
     tech_advanced_kinetic_weapon_02_desc: "Передовое кинетическое вооружение второго поколения"
     tech_advanced_kinetic_weapon_03: "Передовое кинетическое вооружение третьего поколения"
     tech_advanced_kinetic_weapon_03_desc: "Передовое кинетическое вооружение третьего поколения"
+    tech_advanced_kinetic_weapon_04: "Передовое кинетическое вооружение четвёртого поколения"
+    tech_advanced_kinetic_weapon_04_desc: "Передовое кинетическое вооружение четвёртого поколения"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -318,3 +320,5 @@
     tech_advanced_kinetic_weapon_02_prereqfor.desc: "Передовое кинетическое вооружение второго поколения"
     tech_advanced_kinetic_weapon_03_prereqfor.title: "Передовое кинетическое вооружение третьего поколения"
     tech_advanced_kinetic_weapon_03_prereqfor.desc: "Передовое кинетическое вооружение третьего поколения"
+    tech_advanced_kinetic_weapon_04_prereqfor.title: "Передовое кинетическое вооружение четвёртого поколения"
+    tech_advanced_kinetic_weapon_04_prereqfor.desc: "Передовое кинетическое вооружение четвёртого поколения"
