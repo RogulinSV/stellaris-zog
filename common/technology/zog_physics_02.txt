@@ -931,3 +931,67 @@ tech_supreme_kinetic_weapon_02 = {
         factor = 50
     }
 }
+
+tech_supreme_kinetic_weapon_03 = {
+    cost = 400000
+    area = physics
+    tier = 4
+    category = { field_manipulation }
+    icon = "tech_supreme_kinetic_weapon_03"
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_supreme_kinetic_weapon_02"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_supreme_kinetic_weapon_03_prereqfor.title
+            desc = tech_supreme_kinetic_weapon_03_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        weapon_type_kinetic_weapon_damage_mult = 0.40
+        weapon_type_kinetic_weapon_fire_rate_mult = 0.40
+    }
+
+    weight = 50
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_ethic = "ethic_fanatic_militarist"
+                has_tradition = "tr_domination_finish"
+                has_tradition = "tr_supremacy_finish"
+                has_tradition = "tr_discovery_finish"
+                has_ascension_perk = "ap_galactic_contender"
+                has_ascension_perk = "ap_defender_of_the_galaxy"
+                research_leader = {
+                    area = physics
+                    has_level > 4
+                    OR = {
+                        has_trait = "leader_trait_expertise_field_manipulation"
+                        has_trait = "leader_trait_curator"
+                        has_trait = "leader_trait_scientist_chosen"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.60
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 50
+    }
+}
