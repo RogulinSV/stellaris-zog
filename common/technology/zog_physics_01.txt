@@ -1155,7 +1155,7 @@ tech_advanced_explosive_weapon_01 = {
 
     prerequisites = {
         "tech_advanced_physics"
-        "tech_missiles_3"
+        "tech_missiles_1"
         "tech_torpedoes_1"
     }
 
@@ -1229,7 +1229,7 @@ tech_advanced_explosive_weapon_02 = {
 
     prerequisites = {
         "tech_advanced_explosive_weapon_01"
-        "tech_missiles_4"
+        "tech_missiles_2"
         "tech_swarmer_missiles_1"
         "tech_torpedoes_2"
     }
@@ -1242,7 +1242,7 @@ tech_advanced_explosive_weapon_02 = {
     }
 
     modifier = {
-        weapon_type_explosive_weapon_damage_mult = 0.10
+        weapon_type_explosive_weapon_damage_mult = 0.125
     }
 
     weight = 75
@@ -1321,7 +1321,7 @@ tech_advanced_explosive_weapon_02 = {
 tech_advanced_explosive_weapon_03 = {
     cost = 20000
     area = physics
-    tier = 2
+    tier = 1
     category = { rocketry }
     icon = "tech_advanced_explosive_weapon_03"
 
@@ -1331,7 +1331,7 @@ tech_advanced_explosive_weapon_03 = {
 
     prerequisites = {
         "tech_advanced_explosive_weapon_02"
-        "tech_missiles_5"
+        "tech_missiles_3"
         "tech_swarmer_missiles_2"
         "tech_torpedoes_3"
     }
@@ -1344,7 +1344,7 @@ tech_advanced_explosive_weapon_03 = {
     }
 
     modifier = {
-        weapon_type_explosive_weapon_damage_mult = 0.125
+        weapon_type_explosive_weapon_damage_mult = 0.15
     }
 
     weight = 70
@@ -1397,7 +1397,7 @@ tech_advanced_explosive_weapon_03 = {
 tech_advanced_explosive_weapon_04 = {
     cost = 40000
     area = physics
-    tier = 3
+    tier = 1
     category = { rocketry }
     icon = "tech_advanced_explosive_weapon_04"
 
@@ -1407,6 +1407,7 @@ tech_advanced_explosive_weapon_04 = {
 
     prerequisites = {
         "tech_advanced_explosive_weapon_03"
+        "tech_missiles_4"
         "tech_energy_torpedoes_1"
     }
 
@@ -1418,7 +1419,7 @@ tech_advanced_explosive_weapon_04 = {
     }
 
     modifier = {
-        weapon_type_explosive_weapon_damage_mult = 0.15
+        weapon_type_explosive_weapon_damage_mult = 0.175
     }
 
     weight = 65
@@ -1473,7 +1474,7 @@ tech_advanced_explosive_weapon_04 = {
 tech_advanced_explosive_weapon_05 = {
     cost = 80000
     area = physics
-    tier = 4
+    tier = 1
     category = { rocketry }
     icon = "tech_advanced_explosive_weapon_05"
 
@@ -1483,6 +1484,7 @@ tech_advanced_explosive_weapon_05 = {
 
     prerequisites = {
         "tech_advanced_explosive_weapon_04"
+        "tech_missiles_5"
         "tech_energy_torpedoes_2"
     }
 
@@ -1494,7 +1496,7 @@ tech_advanced_explosive_weapon_05 = {
     }
 
     modifier = {
-        weapon_type_explosive_weapon_damage_mult = 0.185
+        weapon_type_explosive_weapon_damage_mult = 0.20
     }
 
     weight = 60
@@ -1540,190 +1542,6 @@ tech_advanced_explosive_weapon_05 = {
     }
 }
 
-tech_supreme_explosive_weapon_01 = {
-    cost = 120000
-    area = physics
-    tier = 4
-    category = { rocketry }
-    icon = "tech_supreme_explosive_weapon_01"
-
-    is_reverse_engineerable = no
-    is_rare = yes
-    is_dangerous = yes
-
-    prerequisites = {
-        "tech_advanced_explosive_weapon_05"
-        "tech_supreme_physics"
-    }
-
-    prereqfor_desc = {
-        feature = {
-            title = tech_supreme_explosive_weapon_01_prereqfor.title
-            desc = tech_supreme_explosive_weapon_01_prereqfor.desc
-        }
-    }
-
-    modifier = {
-        weapon_type_explosive_weapon_damage_mult = 0.25
-    }
-
-    weight = 50
-
-    weight_modifier = {
-        modifier = {
-            factor = 0
-            NOR = {
-                has_ethic = "ethic_fanatic_militarist"
-                has_tradition = "tr_domination_finish"
-                has_tradition = "tr_discovery_science_division"
-                has_ascension_perk = "ap_galactic_contender"
-                research_leader = {
-                    area = physics
-                    has_level > 4
-                    OR = {
-                        has_trait = "leader_trait_expertise_rocketry"
-                        has_trait = "leader_trait_curator"
-                        has_trait = "leader_trait_scientist_chosen"
-                    }
-                }
-            }
-        }
-        modifier = {
-            factor = 0.80
-            research_leader = {
-                area = physics
-                has_trait = "leader_trait_expertise_rocketry"
-            }
-        }
-    }
-
-    ai_weight = {
-        factor = 50
-    }
-}
-
-tech_supreme_explosive_weapon_02 = {
-    cost = 250000
-    area = physics
-    tier = 4
-    category = { rocketry }
-    icon = "tech_supreme_explosive_weapon_02"
-
-    is_reverse_engineerable = no
-    is_rare = yes
-    is_dangerous = yes
-
-    prerequisites = {
-        "tech_supreme_explosive_weapon_01"
-    }
-
-    prereqfor_desc = {
-        feature = {
-            title = tech_supreme_explosive_weapon_02_prereqfor.title
-            desc = tech_supreme_explosive_weapon_02_prereqfor.desc
-        }
-    }
-
-    modifier = {
-        weapon_type_explosive_weapon_damage_mult = 0.30
-    }
-
-    weight = 50
-
-    weight_modifier = {
-        modifier = {
-            factor = 0
-            NOR = {
-                has_ethic = "ethic_fanatic_militarist"
-                has_tradition = "tr_domination_finish"
-                has_tradition = "tr_discovery_polytechnic_education"
-                has_ascension_perk = "ap_galactic_contender"
-                research_leader = {
-                    area = physics
-                    has_level > 4
-                    OR = {
-                        has_trait = "leader_trait_expertise_rocketry"
-                        has_trait = "leader_trait_curator"
-                        has_trait = "leader_trait_scientist_chosen"
-                    }
-                }
-            }
-        }
-        modifier = {
-            factor = 0.70
-            research_leader = {
-                area = physics
-                has_trait = "leader_trait_expertise_rocketry"
-            }
-        }
-    }
-
-    ai_weight = {
-        factor = 50
-    }
-}
-
-tech_supreme_explosive_weapon_03 = {
-    cost = 400000
-    area = physics
-    tier = 4
-    category = { rocketry }
-    icon = "tech_supreme_explosive_weapon_03"
-
-    is_reverse_engineerable = no
-    is_rare = yes
-    is_dangerous = yes
-
-    prerequisites = {
-        "tech_supreme_explosive_weapon_02"
-    }
-
-    prereqfor_desc = {
-        feature = {
-            title = tech_supreme_explosive_weapon_03_prereqfor.title
-            desc = tech_supreme_explosive_weapon_03_prereqfor.desc
-        }
-    }
-
-    modifier = {
-        weapon_type_explosive_weapon_damage_mult = 0.40
-    }
-
-    weight = 50
-
-    weight_modifier = {
-        modifier = {
-            factor = 0
-            NOR = {
-                has_ethic = "ethic_fanatic_militarist"
-                has_tradition = "tr_domination_finish"
-                has_tradition = "tr_discovery_finish"
-                has_ascension_perk = "ap_galactic_contender"
-                research_leader = {
-                    area = physics
-                    has_level > 4
-                    OR = {
-                        has_trait = "leader_trait_expertise_rocketry"
-                        has_trait = "leader_trait_curator"
-                        has_trait = "leader_trait_scientist_chosen"
-                    }
-                }
-            }
-        }
-        modifier = {
-            factor = 0.60
-            research_leader = {
-                area = physics
-                has_trait = "leader_trait_expertise_rocketry"
-            }
-        }
-    }
-
-    ai_weight = {
-        factor = 50
-    }
-}
-
 tech_advanced_explosive_material_01 = {
     cost = 5000
     area = physics
@@ -1737,7 +1555,7 @@ tech_advanced_explosive_material_01 = {
 
     prerequisites = {
         "tech_advanced_physics"
-        "tech_missiles_3"
+        "tech_missiles_1"
         "tech_torpedoes_1"
     }
 
@@ -1749,7 +1567,7 @@ tech_advanced_explosive_material_01 = {
     }
 
     modifier = {
-        weapon_type_explosive_weapon_fire_rate_mult = 0.15
+        weapon_type_explosive_weapon_fire_rate_mult = 0.10
     }
 
     weight = 80
@@ -1811,7 +1629,7 @@ tech_advanced_explosive_material_02 = {
 
     prerequisites = {
         "tech_advanced_explosive_material_01"
-        "tech_missiles_4"
+        "tech_missiles_2"
         "tech_swarmer_missiles_1"
         "tech_torpedoes_2"
     }
@@ -1824,7 +1642,7 @@ tech_advanced_explosive_material_02 = {
     }
 
     modifier = {
-        weapon_type_explosive_weapon_fire_rate_mult = 0.15
+        weapon_type_explosive_weapon_fire_rate_mult = 0.125
     }
 
     weight = 75
@@ -1903,7 +1721,7 @@ tech_advanced_explosive_material_02 = {
 tech_advanced_explosive_material_03 = {
     cost = 20000
     area = physics
-    tier = 2
+    tier = 1
     category = { materials }
     icon = "tech_advanced_explosive_material_03"
 
@@ -1913,7 +1731,7 @@ tech_advanced_explosive_material_03 = {
 
     prerequisites = {
         "tech_advanced_explosive_material_02"
-        "tech_missiles_5"
+        "tech_missiles_3"
         "tech_swarmer_missiles_2"
         "tech_torpedoes_3"
     }
@@ -1926,7 +1744,7 @@ tech_advanced_explosive_material_03 = {
     }
 
     modifier = {
-        weapon_type_explosive_weapon_fire_rate_mult = 0.20
+        weapon_type_explosive_weapon_fire_rate_mult = 0.15
     }
 
     weight = 70
@@ -1979,7 +1797,7 @@ tech_advanced_explosive_material_03 = {
 tech_advanced_explosive_material_04 = {
     cost = 40000
     area = physics
-    tier = 3
+    tier = 1
     category = { materials }
     icon = "tech_advanced_explosive_material_04"
 
@@ -1989,6 +1807,7 @@ tech_advanced_explosive_material_04 = {
 
     prerequisites = {
         "tech_advanced_explosive_material_03"
+        "tech_missiles_4"
         "tech_energy_torpedoes_1"
     }
 
@@ -2000,7 +1819,7 @@ tech_advanced_explosive_material_04 = {
     }
 
     modifier = {
-        weapon_type_explosive_weapon_fire_rate_mult = 0.25
+        weapon_type_explosive_weapon_fire_rate_mult = 0.175
     }
 
     weight = 65
@@ -2055,16 +1874,17 @@ tech_advanced_explosive_material_04 = {
 tech_advanced_explosive_material_05 = {
     cost = 80000
     area = physics
-    tier = 4
+    tier = 1
     category = { materials }
     icon = "tech_advanced_explosive_material_05"
 
     is_reverse_engineerable = no
     is_rare = yes
-    is_dangerous = yes
+    is_dangerous = no
 
     prerequisites = {
         "tech_advanced_explosive_material_04"
+        "tech_missiles_5"
         "tech_energy_torpedoes_2"
     }
 
@@ -2076,7 +1896,7 @@ tech_advanced_explosive_material_05 = {
     }
 
     modifier = {
-        weapon_type_explosive_weapon_fire_rate_mult = 0.30
+        weapon_type_explosive_weapon_fire_rate_mult = 0.20
     }
 
     weight = 60
@@ -2119,5 +1939,199 @@ tech_advanced_explosive_material_05 = {
 
     ai_weight = {
         factor = 60
+    }
+}
+
+tech_supreme_explosive_weapon_01 = {
+    cost = 120000
+    area = physics
+    tier = 4
+    category = { rocketry }
+    icon = "tech_supreme_explosive_weapon_01"
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_advanced_explosive_weapon_05"
+        "tech_advanced_explosive_material_05"
+        "tech_supreme_physics"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_supreme_explosive_weapon_01_prereqfor.title
+            desc = tech_supreme_explosive_weapon_01_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        weapon_type_explosive_weapon_damage_mult = 0.25
+        weapon_type_explosive_weapon_fire_rate_mult = 0.25
+    }
+
+    weight = 50
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_ethic = "ethic_fanatic_militarist"
+                has_tradition = "tr_domination_finish"
+                has_tradition = "tr_supremacy_finish"
+                has_tradition = "tr_discovery_science_division"
+                has_ascension_perk = "ap_galactic_contender"
+                has_ascension_perk = "ap_defender_of_the_galaxy"
+                research_leader = {
+                    area = physics
+                    has_level > 4
+                    OR = {
+                        has_trait = "leader_trait_expertise_rocketry"
+                        has_trait = "leader_trait_curator"
+                        has_trait = "leader_trait_scientist_chosen"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.80
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_rocketry"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 50
+    }
+}
+
+tech_supreme_explosive_weapon_02 = {
+    cost = 250000
+    area = physics
+    tier = 4
+    category = { rocketry }
+    icon = "tech_supreme_explosive_weapon_02"
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_supreme_explosive_weapon_01"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_supreme_explosive_weapon_02_prereqfor.title
+            desc = tech_supreme_explosive_weapon_02_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        weapon_type_explosive_weapon_damage_mult = 0.30
+        weapon_type_explosive_weapon_fire_rate_mult = 0.30
+    }
+
+    weight = 50
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_ethic = "ethic_fanatic_militarist"
+                has_tradition = "tr_domination_finish"
+                has_tradition = "tr_supremacy_finish"
+                has_tradition = "tr_discovery_polytechnic_education"
+                has_ascension_perk = "ap_galactic_contender"
+                has_ascension_perk = "ap_defender_of_the_galaxy"
+                research_leader = {
+                    area = physics
+                    has_level > 4
+                    OR = {
+                        has_trait = "leader_trait_expertise_rocketry"
+                        has_trait = "leader_trait_curator"
+                        has_trait = "leader_trait_scientist_chosen"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.70
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_rocketry"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 50
+    }
+}
+
+tech_supreme_explosive_weapon_03 = {
+    cost = 400000
+    area = physics
+    tier = 4
+    category = { rocketry }
+    icon = "tech_supreme_explosive_weapon_03"
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_supreme_explosive_weapon_02"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_supreme_explosive_weapon_03_prereqfor.title
+            desc = tech_supreme_explosive_weapon_03_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        weapon_type_explosive_weapon_damage_mult = 0.40
+        weapon_type_explosive_weapon_fire_rate_mult = 0.40
+    }
+
+    weight = 50
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_ethic = "ethic_fanatic_militarist"
+                has_tradition = "tr_domination_finish"
+                has_tradition = "tr_supremacy_finish"
+                has_tradition = "tr_discovery_finish"
+                has_ascension_perk = "ap_galactic_contender"
+                has_ascension_perk = "ap_defender_of_the_galaxy"
+                research_leader = {
+                    area = physics
+                    has_level > 4
+                    OR = {
+                        has_trait = "leader_trait_expertise_rocketry"
+                        has_trait = "leader_trait_curator"
+                        has_trait = "leader_trait_scientist_chosen"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.60
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_rocketry"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 50
     }
 }
