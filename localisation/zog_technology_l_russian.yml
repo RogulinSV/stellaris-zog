@@ -170,6 +170,8 @@
     tech_advanced_kinetic_material_03_desc: "Передовые кинетические материалы третьего поколения"
     tech_advanced_kinetic_material_04: "Передовые кинетические материалы четвёртого поколения"
     tech_advanced_kinetic_material_04_desc: "Передовые кинетические материалы четвёртого поколения"
+    tech_advanced_kinetic_material_05: "Передовые кинетические материалы пятого поколения"
+    tech_advanced_kinetic_material_05_desc: "Передовые кинетические материалы пятого поколения"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -342,3 +344,5 @@
     tech_advanced_kinetic_material_03_prereqfor.desc: "Передовые кинетические материалы третьего поколения"
     tech_advanced_kinetic_material_04_prereqfor.title: "Передовые кинетические материалы четвёртого поколения"
     tech_advanced_kinetic_material_04_prereqfor.desc: "Передовые кинетические материалы четвёртого поколения"
+    tech_advanced_kinetic_material_05_prereqfor.title: "Передовые кинетические материалы пятого поколения"
+    tech_advanced_kinetic_material_05_prereqfor.desc: "Передовые кинетические материалы пятого поколения"
