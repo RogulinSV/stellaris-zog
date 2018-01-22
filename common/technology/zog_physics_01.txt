@@ -1170,7 +1170,6 @@ tech_advanced_explosive_weapon_01 = {
     prerequisites = {
         "tech_advanced_physics"
         "tech_missiles_1"
-        "tech_torpedoes_1"
     }
 
     prereqfor_desc = {
@@ -1571,7 +1570,6 @@ tech_advanced_explosive_material_01 = {
     prerequisites = {
         "tech_advanced_physics"
         "tech_missiles_1"
-        "tech_torpedoes_1"
     }
 
     prereqfor_desc = {
