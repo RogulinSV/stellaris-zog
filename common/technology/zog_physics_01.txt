@@ -165,7 +165,9 @@ tech_advanced_energy_weapon_01 = {
 
     prerequisites = {
         "tech_advanced_physics"
-        "tech_lasers_1"
+        "tech_lasers_3"
+        "tech_plasma_1"
+        "tech_disruptors_1"
     }
 
     prereqfor_desc = {
@@ -564,7 +566,9 @@ tech_advanced_energy_material_01 = {
 
     prerequisites = {
         "tech_advanced_physics"
-        "tech_lasers_1"
+        "tech_lasers_3"
+        "tech_plasma_1"
+        "tech_disruptors_1"
     }
 
     prereqfor_desc = {
