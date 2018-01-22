@@ -170,6 +170,8 @@
     tech_advanced_kinetic_material_04_desc: ""
     tech_advanced_kinetic_material_05: ""
     tech_advanced_kinetic_material_05_desc: ""
+    tech_supreme_kinetic_weapon_01: ""
+    tech_supreme_kinetic_weapon_01_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
@@ -344,3 +346,5 @@
     tech_advanced_kinetic_material_04_prereqfor.desc: ""
     tech_advanced_kinetic_material_05_prereqfor.title: ""
     tech_advanced_kinetic_material_05_prereqfor.desc: ""
+    tech_supreme_kinetic_weapon_01_prereqfor.title: ""
+    tech_supreme_kinetic_weapon_01_prereqfor.desc: ""
