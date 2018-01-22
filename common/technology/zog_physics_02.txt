@@ -15,7 +15,8 @@ tech_advanced_kinetic_weapon_01 = {
 
     prerequisites = {
         "tech_advanced_physics"
-        "tech_mass_drivers_1"
+        "tech_mass_drivers_3"
+        "tech_autocannons_1"
     }
 
     prereqfor_desc = {
