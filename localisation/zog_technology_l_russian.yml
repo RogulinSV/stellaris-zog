@@ -154,6 +154,8 @@
     tech_advanced_explosive_material_05_desc: "Передовые ракетные материалы пятого поколения"
     tech_advanced_kinetic_weapon_01: "Передовое кинетическое вооружение первого поколения"
     tech_advanced_kinetic_weapon_01_desc: "Передовое кинетическое вооружение первого поколения"
+    tech_advanced_kinetic_weapon_02: "Передовое кинетическое вооружение второго поколения"
+    tech_advanced_kinetic_weapon_02_desc: "Передовое кинетическое вооружение второго поколения"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -310,3 +312,5 @@
     tech_advanced_explosive_material_05_prereqfor.desc: "Передовые ракетные материалы пятого поколения"
     tech_advanced_kinetic_weapon_01_prereqfor.title: "Передовое кинетическое вооружение первого поколения"
     tech_advanced_kinetic_weapon_01_prereqfor.desc: "Передовое кинетическое вооружение первого поколения"
+    tech_advanced_kinetic_weapon_02_prereqfor.title: "Передовое кинетическое вооружение второго поколения"
+    tech_advanced_kinetic_weapon_02_prereqfor.desc: "Передовое кинетическое вооружение второго поколения"

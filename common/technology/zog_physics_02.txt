@@ -15,7 +15,7 @@ tech_advanced_kinetic_weapon_01 = {
 
     prerequisites = {
         "tech_advanced_physics"
-        "tech_mass_drivers_3"
+        "tech_mass_drivers_1"
     }
 
     prereqfor_desc = {
@@ -72,5 +72,105 @@ tech_advanced_kinetic_weapon_01 = {
 
     ai_weight = {
         factor = 80
+    }
+}
+
+tech_advanced_kinetic_weapon_02 = {
+    cost = 10000
+    area = physics
+    tier = 1
+    category = { field_manipulation }
+    icon = "tech_advanced_kinetic_weapon_02"
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_kinetic_weapon_01"
+        "tech_mass_drivers_2"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_kinetic_weapon_02_prereqfor.title
+            desc = tech_advanced_kinetic_weapon_02_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        weapon_type_kinetic_weapon_damage_mult = 0.125
+    }
+
+    weight = 75
+
+    weight_modifier = {
+        modifier = {
+            factor = 0.50
+            NOR = {
+                has_tradition = "tr_domination_adopt"
+                research_leader = {
+                    area = physics
+                    has_level > 3
+                    OR = {
+                        has_trait = "leader_trait_expertise_field_manipulation"
+                        has_trait = "leader_trait_curator"
+                        has_trait = "leader_trait_scientist_chosen"
+                    }
+                }
+                OR = {
+                    has_ethic = "ethic_militarist"
+                    has_ethic = "ethic_fanatic_militarist"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            AND = {
+                has_ethic = "ethic_fanatic_militarist"
+                research_leader = {
+                    area = physics
+                    has_level > 4
+                    has_trait = "leader_trait_expertise_field_manipulation"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.20
+            AND = {
+                has_ethic = "ethic_fanatic_militarist"
+                research_leader = {
+                    area = physics
+                    has_level > 3
+                    OR = {
+                        has_trait = "leader_trait_curator"
+                        has_trait = "leader_trait_scientist_chosen"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.20
+            AND = {
+                has_tradition = "tr_domination_fleet_levies"
+                research_leader = {
+                    area = physics
+                    has_level > 3
+                    OR = {
+                        has_trait = "leader_trait_expertise_field_manipulation"
+                        has_trait = "leader_trait_curator"
+                        has_trait = "leader_trait_scientist_chosen"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_technology = "tech_supreme_physics"
+        }
+    }
+
+    ai_weight = {
+        factor = 75
     }
 }
