@@ -182,6 +182,8 @@
     tech_advanced_strike_craft_02_desc: ""
     tech_advanced_strike_craft_03: ""
     tech_advanced_strike_craft_03_desc: ""
+    tech_advanced_strike_craft_04: ""
+    tech_advanced_strike_craft_04_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
@@ -368,3 +370,5 @@
     tech_advanced_strike_craft_02_prereqfor.desc: ""
     tech_advanced_strike_craft_03_prereqfor.title: ""
     tech_advanced_strike_craft_03_prereqfor.desc: ""
+    tech_advanced_strike_craft_04_prereqfor.title: ""
+    tech_advanced_strike_craft_04_prereqfor.desc: ""

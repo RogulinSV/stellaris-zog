@@ -802,8 +802,8 @@ tech_advanced_strike_craft_02 = {
     }
 
     modifier = {
-        weapon_type_strike_craft_weapon_damage_mult = 0.10
-        weapon_type_strike_craft_weapon_fire_rate_mult = 0.10
+        weapon_type_strike_craft_weapon_damage_mult = 0.125
+        weapon_type_strike_craft_weapon_fire_rate_mult = 0.125
     }
 
     weight = 75
@@ -859,6 +859,10 @@ tech_advanced_strike_craft_02 = {
             has_tradition = "tr_prosperity_finish"
         }
         modifier = {
+            factor = 1.35
+            has_ascension_perk = "ap_galactic_force_projection"
+        }
+        modifier = {
             factor = 1.08
             has_valid_civic = "civic_warrior_culture"
         }
@@ -877,7 +881,7 @@ tech_advanced_strike_craft_03 = {
     icon = "tech_advanced_strike_craft_03"
 
     is_reverse_engineerable = no
-    is_rare = no
+    is_rare = yes
     is_dangerous = no
 
     prerequisites = {
@@ -892,8 +896,8 @@ tech_advanced_strike_craft_03 = {
     }
 
     modifier = {
-        weapon_type_strike_craft_weapon_damage_mult = 0.10
-        weapon_type_strike_craft_weapon_fire_rate_mult = 0.10
+        weapon_type_strike_craft_weapon_damage_mult = 0.15
+        weapon_type_strike_craft_weapon_fire_rate_mult = 0.15
     }
 
     weight = 70
@@ -945,6 +949,10 @@ tech_advanced_strike_craft_03 = {
             has_tradition = "tr_prosperity_finish"
         }
         modifier = {
+            factor = 1.20
+            has_ascension_perk = "ap_galactic_force_projection"
+        }
+        modifier = {
             factor = 1.05
             has_valid_civic = "civic_warrior_culture"
         }
@@ -952,6 +960,78 @@ tech_advanced_strike_craft_03 = {
 
     ai_weight = {
         factor = 70
+    }
+}
+
+tech_advanced_strike_craft_04 = {
+    cost = 25000
+    area = engineering
+    tier = 3
+    category = { voidcraft }
+    icon = "tech_advanced_strike_craft_04"
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_strike_craft_03"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_strike_craft_04_prereqfor.title
+            desc = tech_advanced_strike_craft_04_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        weapon_type_strike_craft_weapon_damage_mult = 0.20
+        weapon_type_strike_craft_weapon_fire_rate_mult = 0.20
+    }
+
+    weight = 65
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_ethic = "ethic_fanatic_militarist"
+                has_tradition = "tr_prosperity_finish"
+                research_leader = {
+                    area = engineering
+                    has_level > 4
+                    OR = {
+                        has_trait = "leader_trait_expertise_voidcraft"
+                        has_trait = "leader_trait_curator"
+                        has_trait = "leader_trait_scientist_chosen"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_curator"
+                    has_trait = "leader_trait_scientist_chosen"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.10
+            has_ascension_perk = "ap_galactic_force_projection"
+        }
+        modifier = {
+            factor = 1.05
+            has_valid_civic = "civic_distinguished_admiralty"
+        }
+    }
+
+    ai_weight = {
+        factor = 65
     }
 }
 
