@@ -869,6 +869,92 @@ tech_advanced_strike_craft_02 = {
     }
 }
 
+tech_advanced_strike_craft_03 = {
+    cost = 15000
+    area = engineering
+    tier = 2
+    category = { voidcraft }
+    icon = "tech_advanced_strike_craft_03"
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_strike_craft_02"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_strike_craft_03_prereqfor.title
+            desc = tech_advanced_strike_craft_03_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        weapon_type_strike_craft_weapon_damage_mult = 0.10
+        weapon_type_strike_craft_weapon_fire_rate_mult = 0.10
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                OR = {
+                    has_ethic = "ethic_militarist"
+                    has_ethic = "ethic_fanatic_militarist"
+                }
+                OR = {
+                    has_valid_civic = "civic_distinguished_admiralty"
+                    has_tradition = "tr_prosperity_fleet_logistical_corps"
+                }
+                research_leader = {
+                    area = engineering
+                    has_level > 3
+                    OR = {
+                        has_trait = "leader_trait_expertise_voidcraft"
+                        has_trait = "leader_trait_curator"
+                        has_trait = "leader_trait_scientist_chosen"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.12
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.22
+            research_leader = {
+                area = engineering
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_curator"
+                    has_trait = "leader_trait_scientist_chosen"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_tradition = "tr_prosperity_finish"
+        }
+        modifier = {
+            factor = 1.05
+            has_valid_civic = "civic_warrior_culture"
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}
+
 tech_advanced_mineral_consumption = {
     cost = 20000
     area = engineering
