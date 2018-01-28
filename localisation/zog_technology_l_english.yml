@@ -178,6 +178,8 @@
     tech_supreme_kinetic_weapon_03_desc: ""
     tech_advanced_strike_craft_01: ""
     tech_advanced_strike_craft_01_desc: ""
+    tech_advanced_strike_craft_02: ""
+    tech_advanced_strike_craft_02_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
@@ -360,3 +362,5 @@
     tech_supreme_kinetic_weapon_03_prereqfor.desc: ""
     tech_advanced_strike_craft_01_prereqfor.title: ""
     tech_advanced_strike_craft_01_prereqfor.desc: ""
+    tech_advanced_strike_craft_02_prereqfor.title: ""
+    tech_advanced_strike_craft_02_prereqfor.desc: ""

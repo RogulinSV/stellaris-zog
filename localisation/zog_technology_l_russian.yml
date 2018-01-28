@@ -178,8 +178,10 @@
     tech_supreme_kinetic_weapon_02_desc: "Совершенное кинетическое вооружение второго поколения"
     tech_supreme_kinetic_weapon_03: "Совершенное кинетическое вооружение третьего поколения"
     tech_supreme_kinetic_weapon_03_desc: "Совершенное кинетическое вооружение третьего поколения"
-    tech_advanced_strike_craft_01: "Передовое космическое судостроительсво"
-    tech_advanced_strike_craft_01_desc: "Передовое космическое судостроительсво"
+    tech_advanced_strike_craft_01: "Передовое космическое судостроительсво первого поколения"
+    tech_advanced_strike_craft_01_desc: "Передовое космическое судостроительсво первого поколения"
+    tech_advanced_strike_craft_02: "Передовое космическое судостроительсво второго поколения"
+    tech_advanced_strike_craft_02_desc: "Передовое космическое судостроительсво второго поколения"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -360,5 +362,7 @@
     tech_supreme_kinetic_weapon_02_prereqfor.desc: "Совершенное кинетическое вооружение второго поколения"
     tech_supreme_kinetic_weapon_03_prereqfor.title: "Совершенное кинетическое вооружение третьего поколения"
     tech_supreme_kinetic_weapon_03_prereqfor.desc: "Совершенное кинетическое вооружение третьего поколения"
-    tech_advanced_strike_craft_01_prereqfor.title: "Передовое космическое судостроительсво"
-    tech_advanced_strike_craft_01_prereqfor.desc: "Передовое космическое судостроительсво"
+    tech_advanced_strike_craft_01_prereqfor.title: "Передовое космическое судостроительсво первого поколения"
+    tech_advanced_strike_craft_01_prereqfor.desc: "Передовое космическое судостроительсво первого поколения"
+    tech_advanced_strike_craft_02_prereqfor.title: "Передовое космическое судостроительсво второго поколения"
+    tech_advanced_strike_craft_02_prereqfor.desc: "Передовое космическое судостроительсво второго поколения"
