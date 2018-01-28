@@ -113,6 +113,11 @@ edict_length_mult = 0.25
 species_leader_exp_gain = 0.25
 
 building_time_mult = -0.05
+megastructure_build_speed_mult = 0.2
+terraform_speed_mult = 0.2
+terraforming_cost_mult = -0.2
+
+faction_influence_add = 1
  
 ###############################
 # Construction
@@ -153,6 +158,8 @@ shipsize_battleship_build_cost_mult = -0.2
 shipsize_battleship_construction_speed_mult = 0.25
 
 building_mining_network_1_build_cost_mult = -0.15
+hydroponics_farm_build_cost_mult = -0.10
+science_lab_build_cost_mult = -0.25
 
 shipclass_military_station_build_cost_mult = -0.15
 shipclass_military_station_hit_points_mult = 0.25
@@ -291,6 +298,7 @@ pop_growth_req_mult = -0.25
 pop_ethic_shift = -0.20	
 pop_happiness = -0.2
 pop_robot_production_output = 0.2
+pop_robot_build_cost_mult = 0.2
 pop_xenophobia = 0.2
 pop_alien_slavery_tolerance = 1.0
 pop_migration_time = -0.5
