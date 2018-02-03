@@ -1286,3 +1286,71 @@ planet_event = {
         }
     }
 }
+
+##########################################
+### Building "Atlantis City I" events
+##########################################
+
+planet_event = {
+    id = zog_building_events.100
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_building = "building_atlantis_city_01"
+        }
+    }
+
+    immediate = {
+        planet =  {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "atlantis_city_01_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "atlantis_city_01_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "atlantis_city_01_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+planet_event = {
+    id = zog_building_events.101
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_prev_building = "building_atlantis_city_01"
+        }
+    }
+
+    immediate = {
+        planet = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "atlantis_city_01_built"
+                        value > 1
+                    }
+                }
+                change_variable = {
+                    which = "atlantis_city_01_built"
+                    value = -1
+                }
+            }
+        }
+    }
+}

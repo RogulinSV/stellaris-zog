@@ -568,6 +568,8 @@ tech_planetary_construction = {
 #########################################
 
 tech_oceanic_construction = {
+    # Unlocks "Atlantis City I" building
+
     cost = 3000
     area = engineering
     start_tech = no

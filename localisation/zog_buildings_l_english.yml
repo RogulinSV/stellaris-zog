@@ -16,8 +16,11 @@
     building_industrial_city_03a_desc: ""
     building_industrial_city_03b: ""
     building_industrial_city_03b_desc: ""
+    building_atlantis_city_01: ""
+    building_atlantis_city_01_desc: ""
 
     # Building requirements
     requires_colony_indigenous_settlements_5: ""
     requires_colony_indigenous_settlements_10: ""
     requires_colony_indigenous_settlements_15: ""
+    requires_atlantis_city_01_limit: ""

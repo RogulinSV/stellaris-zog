@@ -1131,3 +1131,149 @@ building_industrial_city_03b = {
     ai_special_building = no
     ai_replace = yes
 }
+
+#############################
+## Buildings / Atlantis City
+#############################
+
+building_atlantis_city_01 = {
+    is_listed = yes
+    empire_unique = no
+    planet_unique = no
+    requires_pop = yes
+    event_building = no
+    can_demolish = yes
+    icon = "building_atlantis_city_01"
+    tags = {}
+
+    base_buildtime = 1000
+
+    prerequisites = {
+        "tech_oceanic_construction"
+    }
+
+    upgrades = {
+        "building_atlantis_city_02"
+    }
+
+    show_tech_unlock_if = {
+        NOT = {
+            has_authority = "auth_machine_intelligence"
+        }
+    }
+
+    cost = {
+        minerals = 400
+        energy = 400
+        influence = 5
+    }
+
+    required_resources = {
+        energy = 1
+        minerals = 1
+    }
+
+    produced_resources = {
+        influence = 3
+        society_research = 1
+    }
+
+    produced_resource_trigger = {
+        modifier = {
+            has_technology = "tech_supreme_engineering"
+            resources = {
+                unity = 3
+            }
+        }
+    }
+
+    planet_modifier = {
+        pop_growth_speed = 0.03
+        pop_migration_time = -0.03
+        pop_happiness = -0.01
+        pop_xenophobia = -0.05
+    }
+
+    potential = {
+        owner = {
+            NOT = {
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        planet = {
+            OR = {
+                is_planet_class = pc_ocean
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_tidallylocked
+            }
+        }
+    }
+
+    destroy_if = {
+        OR = {
+            AND = {
+                exists = owner
+                owner = {
+                    has_authority = "auth_machine_intelligence"
+                }
+            }
+            planet = {
+                NAND = {
+                    is_planet_class = pc_ocean
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_tidallylocked
+                }
+            }
+        }
+    }
+
+    allow = {
+        AND = {
+            custom_tooltip = {
+                fail_text = "requires_atlantis_city_01_limit"
+                planet = {
+                    check_variable = {
+                        which = "atlantis_city_01_built"
+                        value < 5
+                    }
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_building_capital_1_or_hab"
+                planet = {
+                    OR = {
+                        has_building = "building_hab_capital"
+                        has_building = "building_capital_1"
+                        has_building = "building_capital_2"
+                        has_building = "building_capital_3"
+                    }
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_colony_indigenous_settlements_5"
+                planet = {
+                    count_pops = {
+                        count > 4
+                        limit = {
+                            is_robot_pop = no
+                            is_enslaved = no
+                            is_being_purged = no
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        is_slave_tile_or_planet = no
+        is_robot_tile_or_planet = no
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+
+    ai_special_building = no
+    ai_replace = yes
+}

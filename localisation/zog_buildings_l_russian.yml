@@ -16,8 +16,11 @@
     building_industrial_city_03a_desc: "Техно-индустриальный город"
     building_industrial_city_03b: "Физико-индустриальный город"
     building_industrial_city_03b_desc: "Физико-индустриальный город"
+    building_atlantis_city_01: "Атлантис-Сити"
+    building_atlantis_city_01_desc: "Атлантис-Сити"
 
     # Building requirements
     requires_colony_indigenous_settlements_5: "§RНа планете требуется хотя бы §Y5 коренных§! колониальных поселений.§!"
     requires_colony_indigenous_settlements_10: "§RНа планете требуется хотя бы §Y10 коренных§! колониальных поселений.§!"
     requires_colony_indigenous_settlements_15: "§RНа планете требуется хотя бы §Y15 коренных§! колониальных поселений.§!"
+    requires_atlantis_city_01_limit: "§RНа планете может быть построено только §Y5 $building_atlantis_city_01§!.§!"
