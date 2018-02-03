@@ -148,6 +148,7 @@ tech_supreme_engineering = {
 
 tech_agglomerate_construction = {
     # Unlocks "Business City I" building
+    # Unlocks "Industrial City I" building
 
     cost = 3000
     area = engineering
