@@ -1,5 +1,5 @@
 #############################
-## Buildingы / Business Cities
+## Buildings / Business City
 #############################
 
 building_business_city_01 = {
