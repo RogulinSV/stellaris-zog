@@ -241,6 +241,8 @@ tech_agglomerate_construction = {
 }
 
 tech_continental_construction = {
+    # Unlocks "Business City II" building
+
     cost = 6000
     area = engineering
     start_tech = no

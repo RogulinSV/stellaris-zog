@@ -2,6 +2,9 @@
     # Buildings
     building_business_city_01: ""
     building_business_city_01_desc: ""
+    building_business_city_02: ""
+    building_business_city_02_desc: ""
 
     # Building requirements
-    requires_colony_none_robot_pops_5: ""
+    requires_colony_indigenous_settlements_5: ""
+    requires_colony_indigenous_settlements_10: ""

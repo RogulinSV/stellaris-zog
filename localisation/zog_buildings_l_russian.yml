@@ -2,6 +2,9 @@
     # Buildings
     building_business_city_01: "Деловой центр"
     building_business_city_01_desc: "Деловой центр"
+    building_business_city_02: "Деловой сектор"
+    building_business_city_02_desc: "Деловой сектор"
 
     # Building requirements
-    requires_colony_none_robot_pops_5: "§RНа планете требуется хотя бы §Y5 не роботизированных§! колониальных поселений.§!"
+    requires_colony_indigenous_settlements_5: "§RНа планете требуется хотя бы §Y5 коренных§! колониальных поселений.§!"
+    requires_colony_indigenous_settlements_10: "§RНа планете требуется хотя бы §Y10 коренных§! колониальных поселений.§!"
