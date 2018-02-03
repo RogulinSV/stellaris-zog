@@ -1,0 +1,7 @@
+﻿l_english:
+    # Buildings
+    building_business_city_01: ""
+    building_business_city_01_desc: ""
+
+    # Building requirements
+    requires_colony_none_robot_pops_5: ""

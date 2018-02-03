@@ -1,0 +1,7 @@
+﻿l_russian:
+    # Buildings
+    building_business_city_01: "Деловой центр"
+    building_business_city_01_desc: "Деловой центр"
+
+    # Building requirements
+    requires_colony_none_robot_pops_5: "§RНа планете требуется хотя бы §Y5 не роботизированных§! колониальных поселений.§!"
