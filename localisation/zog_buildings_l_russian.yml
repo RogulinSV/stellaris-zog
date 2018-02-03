@@ -8,6 +8,10 @@
     building_business_city_03_desc: "Деловой город"
     building_industrial_city_01: "Индустриальный центр"
     building_industrial_city_01_desc: "Индустриальный центр"
+    building_industrial_city_02a: "Техно-индустриальный сектор"
+    building_industrial_city_02a_desc: "Техно-индустриальный сектор"
+    building_industrial_city_02b: "Физико-индустриальный сектор"
+    building_industrial_city_02b_desc: "Физико-индустриальный сектор"
 
     # Building requirements
     requires_colony_indigenous_settlements_5: "§RНа планете требуется хотя бы §Y5 коренных§! колониальных поселений.§!"

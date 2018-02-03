@@ -8,6 +8,10 @@
     building_business_city_03_desc: ""
     building_industrial_city_01: ""
     building_industrial_city_01_desc: ""
+    building_industrial_city_02a: ""
+    building_industrial_city_02a_desc: ""
+    building_industrial_city_02b: ""
+    building_industrial_city_02b_desc: ""
 
     # Building requirements
     requires_colony_indigenous_settlements_5: ""
