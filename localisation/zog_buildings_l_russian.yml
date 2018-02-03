@@ -4,7 +4,10 @@
     building_business_city_01_desc: "Деловой центр"
     building_business_city_02: "Деловой сектор"
     building_business_city_02_desc: "Деловой сектор"
+    building_business_city_03: "Деловой город"
+    building_business_city_03_desc: "Деловой город"
 
     # Building requirements
     requires_colony_indigenous_settlements_5: "§RНа планете требуется хотя бы §Y5 коренных§! колониальных поселений.§!"
     requires_colony_indigenous_settlements_10: "§RНа планете требуется хотя бы §Y10 коренных§! колониальных поселений.§!"
+    requires_colony_indigenous_settlements_15: "§RНа планете требуется хотя бы §Y15 коренных§! колониальных поселений.§!"
