@@ -1191,7 +1191,7 @@ building_atlantis_city_01 = {
         pop_growth_speed = 0.03
         pop_migration_time = -0.03
         pop_happiness = -0.01
-        pop_xenophobia = -0.05
+        pop_xenophobia = -0.03
     }
 
     potential = {
@@ -1230,12 +1230,45 @@ building_atlantis_city_01 = {
     allow = {
         AND = {
             custom_tooltip = {
-                fail_text = "requires_atlantis_city_01_limit"
+                fail_text = "requires_atlantis_city_limit_5"
+                owner = {
+                    OR = {
+                        has_technology = "tech_underwater_construction"
+                        has_technology = "tech_deepwater_construction"
+                    }
+                }
                 planet = {
                     check_variable = {
-                        which = "atlantis_city_01_built"
+                        which = "atlantis_city_built"
                         value < 5
                     }
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_atlantis_city_limit_10"
+                owner = {
+                    has_technology = "tech_deepwater_construction"
+                }
+                planet = {
+                    check_variable = {
+                        which = "atlantis_city_built"
+                        value < 10
+                    }
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_atlantis_city_limit_15"
+                planet = {
+                    check_variable = {
+                        which = "atlantis_city_built"
+                        value < 15
+                    }
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_atlantis_city_not_queued"
+                planet = {
+                    has_planet_flag = "atlantis_city_queued"
                 }
             }
             custom_tooltip = {
@@ -1272,6 +1305,305 @@ building_atlantis_city_01 = {
 
     ai_weight = {
         factor = 70
+    }
+
+    ai_special_building = no
+    ai_replace = yes
+}
+
+building_atlantis_city_02 = {
+    is_listed = no
+    empire_unique = no
+    planet_unique = no
+    requires_pop = yes
+    event_building = no
+    can_demolish = yes
+    icon = "building_atlantis_city_02"
+    tags = {}
+
+    base_buildtime = 2500
+
+    prerequisites = {
+        "tech_underwater_construction"
+    }
+
+    upgrades = {
+        "building_atlantis_city_03"
+    }
+
+    show_tech_unlock_if = {
+        NOT = {
+            has_authority = "auth_machine_intelligence"
+        }
+    }
+
+    cost = {
+        minerals = 900
+        energy = 900
+        influence = 12
+    }
+
+    required_resources = {
+        energy = 3
+        minerals = 2
+    }
+
+    produced_resources = {
+        influence = 6
+        society_research = 2
+    }
+
+    produced_resource_trigger = {
+        modifier = {
+            has_technology = "tech_supreme_engineering"
+            resources = {
+                unity = 6
+            }
+        }
+    }
+
+    planet_modifier = {
+        pop_growth_speed = 0.05
+        pop_migration_time = -0.05
+        pop_happiness = -0.02
+        pop_xenophobia = -0.06
+    }
+
+    potential = {
+        owner = {
+            NOT = {
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        planet = {
+            OR = {
+                is_planet_class = pc_ocean
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_tidallylocked
+            }
+        }
+    }
+
+    destroy_if = {
+        OR = {
+            AND = {
+                exists = owner
+                owner = {
+                    has_authority = "auth_machine_intelligence"
+                }
+            }
+            planet = {
+                NAND = {
+                    is_planet_class = pc_ocean
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_tidallylocked
+                }
+            }
+        }
+    }
+
+    allow = {
+        AND = {
+            custom_tooltip = {
+                fail_text = "requires_atlantis_city_limit_10"
+                owner = {
+                    has_technology = "tech_deepwater_construction"
+                }
+                planet = {
+                    check_variable = {
+                        which = "atlantis_city_built"
+                        value < 10
+                    }
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_atlantis_city_limit_15"
+                planet = {
+                    check_variable = {
+                        which = "atlantis_city_built"
+                        value < 15
+                    }
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_atlantis_city_not_queued"
+                planet = {
+                    has_planet_flag = "atlantis_city_queued"
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_building_capital_2"
+                planet = {
+                    OR = {
+                        has_building = "building_capital_2"
+                        has_building = "building_capital_3"
+                    }
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_colony_indigenous_settlements_10"
+                planet = {
+                    count_pops = {
+                        count > 9
+                        limit = {
+                            is_robot_pop = no
+                            is_enslaved = no
+                            is_being_purged = no
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        is_slave_tile_or_planet = no
+        is_robot_tile_or_planet = no
+    }
+
+    ai_weight = {
+        factor = 85
+    }
+
+    ai_special_building = no
+    ai_replace = yes
+}
+
+building_atlantis_city_03 = {
+    is_listed = no
+    empire_unique = no
+    planet_unique = no
+    requires_pop = yes
+    event_building = no
+    can_demolish = yes
+    icon = "building_atlantis_city_03"
+    tags = {}
+
+    base_buildtime = 5000
+
+    prerequisites = {
+        "tech_deepwater_construction"
+    }
+
+    show_tech_unlock_if = {
+        NOT = {
+            has_authority = "auth_machine_intelligence"
+        }
+    }
+
+    cost = {
+        minerals = 2000
+        energy = 2000
+        influence = 25
+    }
+
+    required_resources = {
+        energy = 3
+        minerals = 2
+    }
+
+    produced_resources = {
+        influence = 10
+        society_research = 5
+    }
+
+    produced_resource_trigger = {
+        modifier = {
+            has_technology = "tech_supreme_engineering"
+            resources = {
+                unity = 10
+            }
+        }
+    }
+
+    planet_modifier = {
+        pop_growth_speed = 0.07
+        pop_migration_time = -0.07
+        pop_happiness = -0.03
+        pop_xenophobia = -0.09
+    }
+
+    potential = {
+        owner = {
+            NOT = {
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        planet = {
+            OR = {
+                is_planet_class = pc_ocean
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_tidallylocked
+            }
+        }
+    }
+
+    destroy_if = {
+        OR = {
+            AND = {
+                exists = owner
+                owner = {
+                    has_authority = "auth_machine_intelligence"
+                }
+            }
+            planet = {
+                NAND = {
+                    is_planet_class = pc_ocean
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_tidallylocked
+                }
+            }
+        }
+    }
+
+    allow = {
+        AND = {
+            custom_tooltip = {
+                fail_text = "requires_atlantis_city_limit_15"
+                planet = {
+                    check_variable = {
+                        which = "atlantis_city_built"
+                        value < 15
+                    }
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_atlantis_city_not_queued"
+                planet = {
+                    has_planet_flag = "atlantis_city_queued"
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_building_capital_3"
+                planet = {
+                    OR = {
+                        has_building = "building_capital_3"
+                    }
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_colony_indigenous_settlements_15"
+                planet = {
+                    count_pops = {
+                        count > 14
+                        limit = {
+                            is_robot_pop = no
+                            is_enslaved = no
+                            is_being_purged = no
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        is_slave_tile_or_planet = no
+        is_robot_tile_or_planet = no
+    }
+
+    ai_weight = {
+        factor = 100
     }
 
     ai_special_building = no

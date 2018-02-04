@@ -647,6 +647,8 @@ tech_oceanic_construction = {
 }
 
 tech_underwater_construction = {
+    # Unlocks "Atlantis City II" building
+
     cost = 6000
     area = engineering
     start_tech = no
@@ -738,6 +740,8 @@ tech_underwater_construction = {
 }
 
 tech_deepwater_construction = {
+    # Unlocks "Atlantis City III" building
+
     cost = 12000
     area = engineering
     start_tech = no

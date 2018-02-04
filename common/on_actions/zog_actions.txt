@@ -25,7 +25,7 @@ on_building_complete = {
         zog_building_events.32
         zog_building_events.42
         zog_building_events.52
-        # Building "Atlantis City I"
+        # Building "Atlantis City I-III"
         zog_building_events.100
     }
 }
@@ -50,7 +50,7 @@ on_building_upgraded = {
         zog_building_events.32
         zog_building_events.42
         zog_building_events.52
-        # Building "Atlantis City I"
+        # Building "Atlantis City I-III"
         zog_building_events.100
     }
 }
@@ -75,7 +75,7 @@ on_building_demolished = {
         zog_building_events.37
         zog_building_events.47
         zog_building_events.57
-        # Building "Atlantis City I"
+        # Building "Atlantis City I-III"
         zog_building_events.101
     }
 }
@@ -100,7 +100,21 @@ on_building_replaced = {
         zog_building_events.37
         zog_building_events.47
         zog_building_events.57
-        # Building "Atlantis City I"
+        # Building "Atlantis City I-III"
         zog_building_events.101
+    }
+}
+
+on_building_queued = {
+    events = {
+        # Building "Atlantis City I-III"
+        zog_building_events.102
+    }
+}
+
+on_building_unqueued = {
+    events = {
+        # Building "Atlantis City I-III"
+        zog_building_events.103
     }
 }

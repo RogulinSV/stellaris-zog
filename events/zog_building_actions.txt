@@ -1288,7 +1288,7 @@ planet_event = {
 }
 
 ##########################################
-### Building "Atlantis City I" events
+### Building "Atlantis City I-III" events
 ##########################################
 
 planet_event = {
@@ -1298,7 +1298,11 @@ planet_event = {
 
     trigger = {
         from = {
-            has_building = "building_atlantis_city_01"
+            OR = {
+                has_building = "building_atlantis_city_01"
+                has_building = "building_atlantis_city_02"
+                has_building = "building_atlantis_city_03"
+            }
         }
     }
 
@@ -1307,20 +1311,26 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "atlantis_city_01_built"
+                        which = "atlantis_city_built"
                         value < 1
                     }
                 }
                 set_variable = {
-                    which = "atlantis_city_01_built"
+                    which = "atlantis_city_built"
                     value = 1
                 }
                 else = {
                     change_variable = {
-                        which = "atlantis_city_01_built"
+                        which = "atlantis_city_built"
                         value = 1
                     }
                 }
+            }
+            if = {
+                limit = {
+                    has_planet_flag = "atlantis_city_queued"
+                }
+                remove_planet_flag = "atlantis_city_queued"
             }
         }
     }
@@ -1333,7 +1343,11 @@ planet_event = {
 
     trigger = {
         from = {
-            has_prev_building = "building_atlantis_city_01"
+            OR = {
+                has_prev_building = "building_atlantis_city_01"
+                has_prev_building = "building_atlantis_city_02"
+                has_prev_building = "building_atlantis_city_03"
+            }
         }
     }
 
@@ -1342,14 +1356,70 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "atlantis_city_01_built"
+                        which = "atlantis_city_built"
                         value > 1
                     }
                 }
                 change_variable = {
-                    which = "atlantis_city_01_built"
+                    which = "atlantis_city_built"
                     value = -1
                 }
+            }
+        }
+    }
+}
+
+planet_event = {
+    id = zog_building_events.102
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            OR = {
+                has_building = "building_atlantis_city_01"
+                has_building = "building_atlantis_city_02"
+                has_building = "building_atlantis_city_03"
+            }
+        }
+    }
+
+    immediate = {
+        planet = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_planet_flag = "atlantis_city_queued"
+                    }
+                }
+                set_planet_flag = "atlantis_city_queued"
+            }
+        }
+    }
+}
+
+planet_event = {
+    id = zog_building_events.102
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            OR = {
+                has_prev_building = "building_atlantis_city_01"
+                has_prev_building = "building_atlantis_city_02"
+                has_prev_building = "building_atlantis_city_03"
+            }
+        }
+    }
+
+    immediate = {
+        planet = {
+            if = {
+                limit = {
+                    has_planet_flag = "atlantis_city_queued"
+                }
+                remove_planet_flag = "atlantis_city_queued"
             }
         }
     }
