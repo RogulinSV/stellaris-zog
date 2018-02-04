@@ -1033,6 +1033,8 @@ tech_desert_construction = {
 }
 
 tech_molten_construction = {
+    # Unlocks "Windmill III" building
+
     cost = 12000
     area = engineering
     start_tech = no

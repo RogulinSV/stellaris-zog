@@ -32,6 +32,8 @@
     building_windmill_01_desc: "Ветряки первого поколения"
     building_windmill_02: "Ветряки второго поколения"
     building_windmill_02_desc: "Ветряки второго поколения"
+    building_windmill_03: "Ветряки третьего поколения"
+    building_windmill_03_desc: "Ветряки третьего поколения"
 
     # Building requirements
     requires_colony_indigenous_settlements_5: "§RНа планете требуется хотя бы §Y5 коренных§! колониальных поселений.§!"

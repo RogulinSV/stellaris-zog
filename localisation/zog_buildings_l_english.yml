@@ -32,6 +32,8 @@
     building_windmill_01_desc: ""
     building_windmill_02: ""
     building_windmill_02_desc: ""
+    building_windmill_03: ""
+    building_windmill_03_desc: ""
 
     # Building requirements
     requires_colony_indigenous_settlements_5: ""
