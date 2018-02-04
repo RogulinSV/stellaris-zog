@@ -38,6 +38,10 @@ building_business_city_01 = {
         energy = 1
     }
 
+    produced_resources = {
+        minerals = 1
+    }
+
     produced_resource_trigger = {
         modifier = {
             has_technology = "tech_supreme_engineering"
@@ -178,6 +182,10 @@ building_business_city_02 = {
         energy = 2
     }
 
+    produced_resources = {
+        minerals = 2
+    }
+
     produced_resource_trigger = {
         modifier = {
             has_technology = "tech_supreme_engineering"
@@ -293,7 +301,7 @@ building_business_city_03 = {
     base_buildtime = 3000
 
     prerequisites = {
-        "tech_intercontinental_construction"
+        "tech_planetary_construction"
     }
 
     show_tech_unlock_if = {
@@ -312,6 +320,10 @@ building_business_city_03 = {
         energy = 4
     }
 
+    produced_resources = {
+        minerals = 10
+    }
+
     produced_resource_trigger = {
         modifier = {
             has_technology = "tech_supreme_engineering"
@@ -319,10 +331,6 @@ building_business_city_03 = {
                 unity = 4
             }
         }
-    }
-
-    produced_resources = {
-        minerals = 10
     }
 
     planet_modifier = {
