@@ -845,6 +845,8 @@ tech_deepwater_construction = {
 #########################################
 
 tech_sandsea_construction = {
+    # Unlocks "Windmill I" building
+
     cost = 3000
     area = engineering
     start_tech = no
