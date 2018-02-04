@@ -148,6 +148,7 @@ tech_supreme_engineering = {
 
 tech_agglomerate_construction = {
     # Unlocks "Business City I" building
+    # Unlocks "Scientific City I" building
 
     cost = 3000
     area = engineering
@@ -242,6 +243,7 @@ tech_agglomerate_construction = {
 
 tech_continental_construction = {
     # Unlocks "Business City II" building
+    # Unlocks "Scientific City II" building
     # Unlocks "Industrial City I" building
 
     cost = 6000
@@ -451,6 +453,7 @@ tech_intercontinental_construction = {
 
 tech_planetary_construction = {
     # Unlocks "Business City III" building
+    # Unlocks "Scientific City III" building
     # Unlocks "Industrial City III" building
 
     cost = 24000
