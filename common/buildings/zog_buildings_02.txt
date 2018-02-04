@@ -331,3 +331,435 @@ building_windmill_03 = {
     ai_special_building = no
     ai_replace = yes
 }
+
+#################################
+## Buildings / Thermal Boreholes
+#################################
+
+building_thermal_borehole_01 = {
+    is_listed = yes
+    empire_unique = no
+    planet_unique = no
+    requires_pop = yes
+    event_building = no
+    can_demolish = yes
+    icon = "building_thermal_borehole_01"
+    tags = {}
+
+    base_buildtime = 1250
+
+    prerequisites = {
+        "tech_desert_construction"
+    }
+
+    upgrades = {
+        "building_thermal_borehole_02"
+    }
+
+    show_tech_unlock_if = {
+        NOT = {
+            has_authority = "auth_machine_intelligence"
+        }
+    }
+
+    cost = {
+        minerals = 1250
+        energy = 1700
+    }
+
+    required_resources = {
+        energy = 3
+    }
+
+    produced_resources = {
+        minerals = 7
+    }
+
+    produced_resource_trigger = {
+        modifier = {
+            AND = {
+                has_technology = "tech_electric_theory"
+                NOT = { has_technology = "tech_electric_science" }
+            }
+            resources = {
+                energy = 3
+            }
+        }
+        modifier = {
+            AND = {
+                has_technology = "tech_electric_science"
+                NOT = { has_technology = "tech_electric_doctrine" }
+            }
+            resources = {
+                energy = 4
+            }
+        }
+        modifier = {
+            AND = {
+                has_technology = "tech_electric_doctrine"
+                NOT = { has_technology = "tech_electric_transcendence" }
+            }
+            resources = {
+                energy = 5
+            }
+        }
+        modifier = {
+            AND = {
+                has_technology = "tech_electric_transcendence"
+                NOT = { has_technology = "tech_electric_infinitum" }
+            }
+            resources = {
+                energy = 6
+            }
+        }
+        modifier = {
+            has_technology = "tech_electric_infinitum"
+            resources = {
+                energy = 7
+            }
+        }
+    }
+
+    planet_modifier = {
+        slave_production_output = 0.05
+        slave_mineral_output = 0.10
+        tile_resource_minerals_mult = 0.10
+    }
+
+    planet_modifier_with_pop_trigger = {
+        key = "building_thermal_borehole_modifier"
+        potential = {
+            always = yes
+        }
+        modifier = {
+            pop_happiness = -0.05
+            pop_environment_tolerance = -0.10
+            pop_robot_production_output = 0.05
+        }
+    }
+
+    country_modifier = {
+        max_minerals = 1000
+    }
+
+    potential = {
+        owner = {
+            NOT = {
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        planet = {
+            OR = {
+                is_planet_class = pc_desert
+                is_planet_class = pc_arid
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_hadesert
+                is_planet_class = pc_sandsea
+            }
+        }
+    }
+
+    destroy_if = {
+        OR = {
+            AND = {
+                exists = owner
+                owner = {
+                    has_authority = "auth_machine_intelligence"
+                }
+            }
+            planet = {
+                NAND = {
+                    is_planet_class = pc_desert
+                    is_planet_class = pc_arid
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_hadesert
+                    is_planet_class = pc_sandsea
+                }
+            }
+        }
+    }
+
+    allow = {
+        AND = {
+            custom_tooltip = {
+                fail_text = "requires_resource_minerals_1"
+                tile = {
+                    has_resource = {
+                        type = minerals
+                        amount > 0
+                    }
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_enslaved_or_robotic_pop"
+                tile = {
+                    OR = {
+                        has_enslaved_pop = yes
+                        has_robotic_pop = yes
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        is_slave_tile_or_planet = yes
+        is_robot_tile_or_planet = yes
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 10
+            tile = {
+                has_resource = {
+                    type = minerals
+                    amount < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 25
+            tile = {
+                has_resource = {
+                    type = minerals
+                    amount = 3
+                }
+            }
+        }
+        modifier = {
+            factor = 100
+            tile = {
+                has_resource = {
+                    type = minerals
+                    amount > 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0.1
+            tile = {
+                has_resource = {
+                    type = energy
+                    amount > 3
+                }
+            }
+        }
+    }
+
+    ai_special_building = no
+    ai_replace = yes
+}
+
+building_thermal_borehole_02 = {
+    is_listed = no
+    empire_unique = no
+    planet_unique = no
+    requires_pop = yes
+    event_building = no
+    can_demolish = yes
+    icon = "building_thermal_borehole_02"
+    tags = {}
+
+    base_buildtime = 2500
+
+    prerequisites = {
+        "tech_molten_construction"
+    }
+
+    show_tech_unlock_if = {
+        NOT = {
+            has_authority = "auth_machine_intelligence"
+        }
+    }
+
+    cost = {
+        minerals = 2500
+        energy = 3500
+    }
+
+    required_resources = {
+        energy = 5
+    }
+
+    produced_resources = {
+        minerals = 15
+    }
+
+    produced_resource_trigger = {
+        modifier = {
+            AND = {
+                has_technology = "tech_electric_theory"
+                NOT = { has_technology = "tech_electric_science" }
+            }
+            resources = {
+                energy = 3
+            }
+        }
+        modifier = {
+            AND = {
+                has_technology = "tech_electric_science"
+                NOT = { has_technology = "tech_electric_doctrine" }
+            }
+            resources = {
+                energy = 6
+            }
+        }
+        modifier = {
+            AND = {
+                has_technology = "tech_electric_doctrine"
+                NOT = { has_technology = "tech_electric_transcendence" }
+            }
+            resources = {
+                energy = 9
+            }
+        }
+        modifier = {
+            AND = {
+                has_technology = "tech_electric_transcendence"
+                NOT = { has_technology = "tech_electric_infinitum" }
+            }
+            resources = {
+                energy = 12
+            }
+        }
+        modifier = {
+            has_technology = "tech_electric_infinitum"
+            resources = {
+                energy = 15
+            }
+        }
+    }
+
+    planet_modifier = {
+        slave_production_output = 0.10
+        slave_mineral_output = 0.15
+        tile_resource_minerals_mult = 0.15
+    }
+
+    planet_modifier_with_pop_trigger = {
+        key = "building_thermal_borehole_modifier"
+        potential = {
+            always = yes
+        }
+        modifier = {
+            pop_happiness = -0.075
+            pop_environment_tolerance = -0.15
+            pop_robot_production_output = 0.15
+        }
+    }
+
+    country_modifier = {
+        max_minerals = 2000
+    }
+
+    potential = {
+        owner = {
+            NOT = {
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        planet = {
+            OR = {
+                is_planet_class = pc_desert
+                is_planet_class = pc_arid
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_hadesert
+                is_planet_class = pc_sandsea
+            }
+        }
+    }
+
+    destroy_if = {
+        OR = {
+            AND = {
+                exists = owner
+                owner = {
+                    has_authority = "auth_machine_intelligence"
+                }
+            }
+            planet = {
+                NAND = {
+                    is_planet_class = pc_desert
+                    is_planet_class = pc_arid
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_hadesert
+                    is_planet_class = pc_sandsea
+                }
+            }
+        }
+    }
+
+    allow = {
+        AND = {
+            custom_tooltip = {
+                fail_text = "requires_resource_minerals_1"
+                tile = {
+                    has_resource = {
+                        type = minerals
+                        amount > 0
+                    }
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_enslaved_or_robotic_pop"
+                tile = {
+                    OR = {
+                        has_enslaved_pop = yes
+                        has_robotic_pop = yes
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        is_slave_tile_or_planet = yes
+        is_robot_tile_or_planet = yes
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 10
+            tile = {
+                has_resource = {
+                    type = minerals
+                    amount < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 25
+            tile = {
+                has_resource = {
+                    type = minerals
+                    amount = 3
+                }
+            }
+        }
+        modifier = {
+            factor = 100
+            tile = {
+                has_resource = {
+                    type = minerals
+                    amount > 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0.1
+            tile = {
+                has_resource = {
+                    type = energy
+                    amount > 3
+                }
+            }
+        }
+    }
+
+    ai_special_building = no
+    ai_replace = yes
+}

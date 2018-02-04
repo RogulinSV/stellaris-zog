@@ -34,12 +34,25 @@
     building_windmill_02_desc: ""
     building_windmill_03: ""
     building_windmill_03_desc: ""
+    building_thermal_borehole_01: ""
+    building_thermal_borehole_01_desc: ""
+    building_thermal_borehole_02: ""
+    building_thermal_borehole_02_desc: ""
 
     # Building requirements
     requires_colony_indigenous_settlements_5: ""
     requires_colony_indigenous_settlements_10: ""
     requires_colony_indigenous_settlements_15: ""
+    requires_resource_minerals_1: ""
+    requires_resource_minerals_2: ""
+    requires_resource_minerals_3: ""
+    requires_resource_minerals_4: ""
+    requires_resource_minerals_5: ""
+    requires_enslaved_or_robotic_pop: ""
     requires_atlantis_city_limit_5: ""
     requires_atlantis_city_limit_10: ""
     requires_atlantis_city_limit_15: ""
     requires_atlantis_city_not_queued: ""
+
+    # Building modifiers
+    building_thermal_borehole_modifier: ""

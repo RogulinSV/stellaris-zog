@@ -1,0 +1,13 @@
+has_enslaved_pop = {
+    AND = {
+        exists = pop
+        pop = { is_enslaved = yes }
+    }
+}
+
+has_robotic_pop = {
+    AND = {
+        exists = pop
+        pop = { is_robot_pop = yes }
+    }
+}
