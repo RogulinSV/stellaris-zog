@@ -446,7 +446,7 @@ building_industrial_city_01 = {
     base_buildtime = 750
 
     prerequisites = {
-        "tech_agglomerate_construction"
+        "tech_continental_construction"
     }
 
     upgrades = {
@@ -591,7 +591,7 @@ building_industrial_city_02a = {
     base_buildtime = 1500
 
     prerequisites = {
-        "tech_continental_construction"
+        "tech_intercontinental_construction"
     }
 
     upgrades = {
@@ -734,7 +734,7 @@ building_industrial_city_02b = {
     base_buildtime = 1500
 
     prerequisites = {
-        "tech_continental_construction"
+        "tech_intercontinental_construction"
     }
 
     upgrades = {
@@ -877,7 +877,7 @@ building_industrial_city_03a = {
     base_buildtime = 3500
 
     prerequisites = {
-        "tech_intercontinental_construction"
+        "tech_planetary_construction"
     }
 
     show_tech_unlock_if = {
@@ -1015,7 +1015,7 @@ building_industrial_city_03b = {
     base_buildtime = 3500
 
     prerequisites = {
-        "tech_intercontinental_construction"
+        "tech_planetary_construction"
     }
 
     show_tech_unlock_if = {
