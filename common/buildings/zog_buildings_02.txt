@@ -33,6 +33,10 @@ building_windmill_01 = {
         energy = 250
     }
 
+    required_resources = {
+        minerals = 1
+    }
+
     produced_resources = {
         energy = 2
     }
@@ -99,12 +103,123 @@ building_windmill_01 = {
     }
 
     ai_allow = {
-        is_slave_tile_or_planet = no
+        is_slave_tile_or_planet = yes
         is_robot_tile_or_planet = no
     }
 
     ai_weight = {
         factor = 65
+    }
+
+    ai_special_building = no
+    ai_replace = yes
+}
+
+building_windmill_02 = {
+    is_listed = no
+    empire_unique = no
+    planet_unique = no
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_windmill_02"
+    tags = {}
+
+    base_buildtime = 950
+
+    prerequisites = {
+        "tech_desert_construction"
+    }
+
+    upgrades = {
+        "building_windmill_03"
+    }
+
+    show_tech_unlock_if = {
+        NOT = {
+            has_authority = "auth_machine_intelligence"
+        }
+    }
+
+    cost = {
+        minerals = 500
+        energy = 500
+    }
+
+    required_resources = {
+        minerals = 2
+    }
+
+    produced_resources = {
+        energy = 4
+    }
+
+    planet_modifier = {
+        planet_colony_development_speed_mult = 0.02
+    }
+
+    potential = {
+        owner = {
+            NOT = {
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        planet = {
+            OR = {
+                is_planet_class = pc_desert
+                is_planet_class = pc_arid
+                is_planet_class = pc_savannah
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_steppe
+                is_planet_class = pc_hadesert
+                is_planet_class = pc_sandsea
+            }
+        }
+    }
+
+    destroy_if = {
+        OR = {
+            AND = {
+                exists = owner
+                owner = {
+                    has_authority = "auth_machine_intelligence"
+                }
+            }
+            planet = {
+                NAND = {
+                    is_planet_class = pc_desert
+                    is_planet_class = pc_arid
+                    is_planet_class = pc_savannah
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_steppe
+                    is_planet_class = pc_hadesert
+                    is_planet_class = pc_sandsea
+                }
+            }
+        }
+    }
+
+    allow = {
+        AND = {
+            custom_tooltip = {
+                fail_text = "requires_building_capital_2"
+                planet = {
+                    OR = {
+                        has_building = "building_capital_2"
+                        has_building = "building_capital_3"
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        is_slave_tile_or_planet = yes
+        is_robot_tile_or_planet = no
+    }
+
+    ai_weight = {
+        factor = 75
     }
 
     ai_special_building = no

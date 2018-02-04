@@ -30,6 +30,8 @@
     building_atlantis_city_03_desc: ""
     building_windmill_01: ""
     building_windmill_01_desc: ""
+    building_windmill_02: ""
+    building_windmill_02_desc: ""
 
     # Building requirements
     requires_colony_indigenous_settlements_5: ""

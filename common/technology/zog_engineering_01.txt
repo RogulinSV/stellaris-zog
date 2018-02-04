@@ -932,6 +932,8 @@ tech_sandsea_construction = {
 }
 
 tech_desert_construction = {
+    # Unlocks "Windmill II" building
+
     cost = 6000
     area = engineering
     start_tech = no
