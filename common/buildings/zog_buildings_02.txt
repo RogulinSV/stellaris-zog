@@ -455,6 +455,7 @@ building_thermal_borehole_01 = {
                 # @depend "Planetary Diversity" (id:819148835)
                 is_planet_class = pc_hadesert
                 is_planet_class = pc_sandsea
+                is_planet_class = pc_geothermal
             }
         }
     }
@@ -474,6 +475,7 @@ building_thermal_borehole_01 = {
                     # @depend "Planetary Diversity" (id:819148835)
                     is_planet_class = pc_hadesert
                     is_planet_class = pc_sandsea
+                    is_planet_class = pc_geothermal
                 }
             }
         }
@@ -667,6 +669,7 @@ building_thermal_borehole_02 = {
                 # @depend "Planetary Diversity" (id:819148835)
                 is_planet_class = pc_hadesert
                 is_planet_class = pc_sandsea
+                is_planet_class = pc_geothermal
             }
         }
     }
@@ -686,6 +689,7 @@ building_thermal_borehole_02 = {
                     # @depend "Planetary Diversity" (id:819148835)
                     is_planet_class = pc_hadesert
                     is_planet_class = pc_sandsea
+                    is_planet_class = pc_geothermal
                 }
             }
         }
