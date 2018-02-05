@@ -306,3 +306,167 @@ tech_advanced_military_station_defence_01 = {
         factor = 80
     }
 }
+
+tech_advanced_military_station_offense_02 = {
+    cost = 7500
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_military_station_offense_02"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_voidcraft"
+        "tech_space_defense_station_2"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_military_station_offense_02_prereqfor.title
+            desc = tech_advanced_military_station_offense_02_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipclass_military_station_damage_mult = 0.15
+        shipsize_military_station_medium_upkeep_mult = -0.25
+        shipsize_military_station_medium_build_cost_mult = -0.25
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NOT = {
+                has_valid_civic = "civic_citizen_service"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_tradition = "tr_supremacy_master_shipwrights"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_tradition = "tr_supremacy_war_games"
+        }
+        modifier = {
+            factor = 1.15
+            has_tradition = "tr_supremacy_finish"
+        }
+        modifier = {
+            factor = 1.05
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.10
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}
+
+tech_advanced_military_station_defence_02 = {
+    cost = 7500
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_military_station_defence_02"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_voidcraft"
+        "tech_space_defense_station_2"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_military_station_defence_02_prereqfor.title
+            desc = tech_advanced_military_station_defence_02_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipclass_military_station_hit_points_mult = 0.15
+        shipsize_military_station_medium_upkeep_mult = -0.25
+        shipsize_military_station_medium_build_cost_mult = -0.25
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NOT = {
+                has_valid_civic = "civic_citizen_service"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_tradition = "tr_supremacy_master_shipwrights"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_tradition = "tr_supremacy_war_games"
+        }
+        modifier = {
+            factor = 1.15
+            has_tradition = "tr_supremacy_finish"
+        }
+        modifier = {
+            factor = 1.05
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.10
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}

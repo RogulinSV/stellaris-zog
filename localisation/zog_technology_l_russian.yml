@@ -204,6 +204,10 @@
     tech_advanced_military_station_offense_01_desc: "Передовая наступательная станция"
     tech_advanced_military_station_defence_01: "Передовая оборонительная станция"
     tech_advanced_military_station_defence_01_desc: "Передовая оборонительная станция"
+    tech_advanced_military_station_offense_02: "Передовая наступательная крепость"
+    tech_advanced_military_station_offense_02_desc: "Передовая наступательная крепость"
+    tech_advanced_military_station_defence_02: "Передовая оборонительная крепость"
+    tech_advanced_military_station_defence_02_desc: "Передовая оборонительная крепость"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -410,3 +414,7 @@
     tech_advanced_military_station_offense_01_prereqfor.desc: "Передовая наступательная станция"
     tech_advanced_military_station_defence_01_prereqfor.title: "Передовая оборонительная станция"
     tech_advanced_military_station_defence_01_prereqfor.desc: "Передовая оборонительная станция"
+    tech_advanced_military_station_offense_02_prereqfor.title: "Передовая наступательная крепость"
+    tech_advanced_military_station_offense_02_prereqfor.desc: "Передовая наступательная крепость"
+    tech_advanced_military_station_defence_02_prereqfor.title: "Передовая оборонительная крепость"
+    tech_advanced_military_station_defence_02_prereqfor.desc: "Передовая оборонительная крепость"
