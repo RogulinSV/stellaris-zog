@@ -196,6 +196,10 @@
     tech_transcendental_planetary_engineering_desc: "Трансцендентное планетарное строительство"
     tech_infinitum_planetary_engineering: "Бесконечное планетарное строительство"
     tech_infinitum_planetary_engineering_desc: "Бесконечное планетарное строительство"
+    tech_advanced_voidcraft: "Передовое строительство звёздного флота"
+    tech_advanced_voidcraft_desc: "Передовое строительство звёздного флота"
+    tech_supreme_voidcraft: "Совершенное строительство звёздного флота"
+    tech_supreme_voidcraft_desc: "Совершенное строительство звёздного флота"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -394,3 +398,7 @@
     tech_transcendental_planetary_engineering_prereqfor.desc: "Трансцендентное планетарное строительство"
     tech_infinitum_planetary_engineering_prereqfor.title: "Бесконечное планетарное строительство"
     tech_infinitum_planetary_engineering_prereqfor.desc: "Бесконечное планетарное строительство"
+    tech_advanced_voidcraft_prereqfor.title: "Передовое строительство звёздного флота"
+    tech_advanced_voidcraft_prereqfor.desc: "Передовое строительство звёздного флота"
+    tech_supreme_voidcraft_prereqfor.title: "Совершенное строительство звёздного флота"
+    tech_supreme_voidcraft_prereqfor.desc: "Совершенное строительство звёздного флота"

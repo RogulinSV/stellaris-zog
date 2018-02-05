@@ -1,0 +1,149 @@
+#####################################
+## Engineering / Voidcraft / Common
+#####################################
+
+tech_advanced_voidcraft = {
+    cost = 700
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_voidcraft"
+    tier = 0
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {}
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_voidcraft_prereqfor.title
+            desc = tech_advanced_voidcraft_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        category_voidcraft_research_speed_mult = 0.05
+        category_military_theory_research_speed_mult = 0.025
+    }
+
+    weight = 100
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            is_ai = yes
+        }
+        modifier = {
+            factor = 0
+            years_passed < 5
+        }
+    }
+
+    ai_weight = {
+        factor = 0
+    }
+}
+
+tech_supreme_voidcraft = {
+    cost = 40000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_supreme_voidcraft"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_voidcraft"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_supreme_voidcraft_prereqfor.title
+            desc = tech_supreme_voidcraft_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        category_voidcraft_research_speed_mult = 0.25
+        category_military_theory_research_speed_mult = 0.125
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0
+            years_passed < 75
+        }
+        modifier = {
+            factor = 0
+            count_tech_options = {
+                area = engineering
+                count < 20
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_tradition = "tr_supremacy_adopt"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_supremacy_finish"
+        }
+        modifier = {
+            factor = 1.10
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.30
+            research_leader = {
+                area = engineering
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_curator"
+                    has_trait = "leader_trait_maniacal"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}
+

@@ -194,6 +194,10 @@
     tech_transcendental_planetary_engineering_desc: ""
     tech_infinitum_planetary_engineering: ""
     tech_infinitum_planetary_engineering_desc: ""
+    tech_advanced_voidcraft: ""
+    tech_advanced_voidcraft_desc: ""
+    tech_supreme_voidcraft: ""
+    tech_supreme_voidcraft_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
@@ -392,3 +396,7 @@
     tech_transcendental_planetary_engineering_prereqfor.desc: ""
     tech_infinitum_planetary_engineering_prereqfor.title: ""
     tech_infinitum_planetary_engineering_prereqfor.desc: ""
+    tech_advanced_voidcraft_prereqfor.title: ""
+    tech_advanced_voidcraft_prereqfor.desc: ""
+    tech_supreme_voidcraft_prereqfor.title: ""
+    tech_supreme_voidcraft_prereqfor.desc: ""
