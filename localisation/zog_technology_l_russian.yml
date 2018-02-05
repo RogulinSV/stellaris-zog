@@ -200,6 +200,10 @@
     tech_advanced_voidcraft_desc: "Передовое строительство звёздного флота"
     tech_supreme_voidcraft: "Совершенное строительство звёздного флота"
     tech_supreme_voidcraft_desc: "Совершенное строительство звёздного флота"
+    tech_advanced_military_station_offense_01: "Передовая наступательная станция"
+    tech_advanced_military_station_offense_01_desc: "Передовая наступательная станция"
+    tech_advanced_military_station_defence_01: "Передовая оборонительная станция"
+    tech_advanced_military_station_defence_01_desc: "Передовая оборонительная станция"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -402,3 +406,7 @@
     tech_advanced_voidcraft_prereqfor.desc: "Передовое строительство звёздного флота"
     tech_supreme_voidcraft_prereqfor.title: "Совершенное строительство звёздного флота"
     tech_supreme_voidcraft_prereqfor.desc: "Совершенное строительство звёздного флота"
+    tech_advanced_military_station_offense_01_prereqfor.title: "Передовая наступательная станция"
+    tech_advanced_military_station_offense_01_prereqfor.desc: "Передовая наступательная станция"
+    tech_advanced_military_station_defence_01_prereqfor.title: "Передовая оборонительная станция"
+    tech_advanced_military_station_defence_01_prereqfor.desc: "Передовая оборонительная станция"
