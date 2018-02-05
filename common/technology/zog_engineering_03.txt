@@ -739,6 +739,10 @@ tech_advanced_planetary_engineering = {
             }
         }
         modifier = {
+            factor = 1.50
+            has_valid_civic = "civic_functional_architecture"
+        }
+        modifier = {
             factor = 1.35
             research_leader = {
                 area = engineering
@@ -749,6 +753,10 @@ tech_advanced_planetary_engineering = {
                     has_trait = "leader_trait_scientist_chosen"
                 }
             }
+        }
+        modifier = {
+            factor = 1.50
+            has_technology = "tech_supreme_engineering"
         }
     }
 
@@ -814,6 +822,10 @@ tech_supreme_planetary_engineering = {
         }
         modifier = {
             factor = 1.25
+            has_valid_civic = "civic_functional_architecture"
+        }
+        modifier = {
+            factor = 1.25
             research_leader = {
                 area = engineering
                 has_level > 3
@@ -823,6 +835,10 @@ tech_supreme_planetary_engineering = {
                     has_trait = "leader_trait_scientist_chosen"
                 }
             }
+        }
+        modifier = {
+            factor = 1.25
+            has_technology = "tech_supreme_engineering"
         }
     }
 
@@ -878,6 +894,7 @@ tech_transcendental_planetary_engineering = {
                 has_ethic = "ethic_fanatic_egalitarian"
                 has_ethic = "ethic_materialist"
                 has_ethic = "ethic_fanatic_materialist"
+                has_valid_civic = "civic_functional_architecture"
             }
         }
         modifier = {
@@ -906,6 +923,10 @@ tech_transcendental_planetary_engineering = {
                     has_trait = "leader_trait_scientist_chosen"
                 }
             }
+        }
+        modifier = {
+            factor = 1.15
+            has_technology = "tech_supreme_engineering"
         }
         modifier = {
             factor = 1.50
