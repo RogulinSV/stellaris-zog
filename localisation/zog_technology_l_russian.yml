@@ -188,6 +188,8 @@
     tech_advanced_strike_craft_04_desc: "Передовое космическое судостроительсво четвёртого поколения"
     tech_advanced_strike_craft_05: "Передовое космическое судостроительсво пятого поколения"
     tech_advanced_strike_craft_05_desc: "Передовое космическое судостроительсво пятого поколения"
+    tech_advanced_planetary_engineering: "Передовое планетарное строительсво"
+    tech_advanced_planetary_engineering_desc: "Передовое планетарное строительсво"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -378,3 +380,5 @@
     tech_advanced_strike_craft_04_prereqfor.desc: "Передовое космическое судостроительсво четвёртого поколения"
     tech_advanced_strike_craft_05_prereqfor.title: "Передовое космическое судостроительсво пятого поколения"
     tech_advanced_strike_craft_05_prereqfor.desc: "Передовое космическое судостроительсво пятого поколения"
+    tech_advanced_planetary_engineering_prereqfor.title: "Передовое планетарное строительсво"
+    tech_advanced_planetary_engineering_prereqfor.desc: "Передовое планетарное строительсво"
