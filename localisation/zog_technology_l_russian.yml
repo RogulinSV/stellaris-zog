@@ -194,6 +194,8 @@
     tech_supreme_planetary_engineering_desc: "Совершенное планетарное строительство"
     tech_transcendental_planetary_engineering: "Трансцендентное планетарное строительство"
     tech_transcendental_planetary_engineering_desc: "Трансцендентное планетарное строительство"
+    tech_infinitum_planetary_engineering: "Бесконечное планетарное строительство"
+    tech_infinitum_planetary_engineering_desc: "Бесконечное планетарное строительство"
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
@@ -390,3 +392,5 @@
     tech_supreme_planetary_engineering_prereqfor.desc: "Совершенное планетарное строительство"
     tech_transcendental_planetary_engineering_prereqfor.title: "Трансцендентное планетарное строительство"
     tech_transcendental_planetary_engineering_prereqfor.desc: "Трансцендентное планетарное строительство"
+    tech_infinitum_planetary_engineering_prereqfor.title: "Бесконечное планетарное строительство"
+    tech_infinitum_planetary_engineering_prereqfor.desc: "Бесконечное планетарное строительство"

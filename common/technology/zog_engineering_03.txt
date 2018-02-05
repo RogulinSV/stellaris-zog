@@ -918,6 +918,89 @@ tech_transcendental_planetary_engineering = {
     }
 }
 
+tech_infinitum_planetary_engineering = {
+    cost = 28000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_infinitum_planetary_engineering"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_transcendental_planetary_engineering"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_infinitum_planetary_engineering_prereqfor.title
+            desc = tech_infinitum_planetary_engineering_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        planet_building_build_speed_mult = 0.50
+        planet_building_cost_mult = -0.50
+        building_time_mult = -0.50
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "any_building_built"
+                value < 100
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                has_ethic = "ethic_fanatic_egalitarian"
+                has_ethic = "ethic_fanatic_materialist"
+                has_valid_civic = "civic_functional_architecture"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_ascension_perk = "ap_master_builders"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_curator"
+                    has_trait = "leader_trait_scientist_chosen"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.50
+            has_ascension_perk = "ap_galactic_wonders"
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}
+
 ########################################
 ## Engineering / Weapons / Strike Craft
 ########################################
