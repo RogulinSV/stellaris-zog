@@ -206,6 +206,10 @@
     tech_advanced_military_station_offense_02_desc: ""
     tech_advanced_military_station_defence_02: ""
     tech_advanced_military_station_defence_02_desc: ""
+    tech_advanced_military_station_offense_03: ""
+    tech_advanced_military_station_offense_03_desc: ""
+    tech_advanced_military_station_defence_03: ""
+    tech_advanced_military_station_defence_03_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
@@ -416,3 +420,7 @@
     tech_advanced_military_station_offense_02_prereqfor.desc: ""
     tech_advanced_military_station_defence_02_prereqfor.title: ""
     tech_advanced_military_station_defence_02_prereqfor.desc: ""
+    tech_advanced_military_station_offense_03_prereqfor.title: ""
+    tech_advanced_military_station_offense_03_prereqfor.desc: ""
+    tech_advanced_military_station_defence_03_prereqfor.title: ""
+    tech_advanced_military_station_defence_03_prereqfor.desc: ""
