@@ -901,7 +901,7 @@ tech_supreme_military_station_defence_02 = {
 
     is_reverse_engineerable = no
     is_rare = yes
-    is_dangerous = no
+    is_dangerous = yes
 
     prerequisites = {
         "tech_supreme_military_station_defence_01"
