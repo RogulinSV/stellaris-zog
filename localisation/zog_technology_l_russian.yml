@@ -226,6 +226,8 @@
     tech_supreme_military_station_defence_03_desc: "Совершенная оборонительный бастион"
     tech_advanced_spaceport_construction_01: "Передовая конструкция звёздного порта"
     tech_advanced_spaceport_construction_01_desc: "Передовая конструкция звёздного порта"
+    tech_advanced_spaceport_construction_02: "Передовая конструкция звёздной гавани"
+    tech_advanced_spaceport_construction_02_desc: "Передовая конструкция звёздной гавани"
     tech_advanced_spaceport_module_01: "Передовые модули звёздного порта"
     tech_advanced_spaceport_module_01_desc: "Передовые модули звёздного порта"
 
@@ -456,5 +458,7 @@
     tech_supreme_military_station_defence_03_prereqfor.desc: "Совершенная оборонительный бастион"
     tech_advanced_spaceport_construction_01_prereqfor.title: "Передовая конструкция звёздного порта"
     tech_advanced_spaceport_construction_01_prereqfor.desc: "Передовая конструкция звёздного порта"
+    tech_advanced_spaceport_construction_02_prereqfor.title: "Передовая конструкция звёздной гавани"
+    tech_advanced_spaceport_construction_02_prereqfor.desc: "Передовая конструкция звёздной гавани"
     tech_advanced_spaceport_module_01_prereqfor.title: "Передовые модули звёздного порта"
     tech_advanced_spaceport_module_01_prereqfor.desc: "Передовые модули звёздного порта"

@@ -1214,6 +1214,104 @@ tech_advanced_spaceport_construction_01 = {
     }
 }
 
+tech_advanced_spaceport_construction_02 = {
+    cost = 10000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_spaceport_construction_02"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_spaceport_construction_01"
+        "tech_spaceport_2"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_spaceport_construction_02_prereqfor.title
+            desc = tech_advanced_spaceport_construction_02_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        spaceport_ship_build_cost_mult = -0.20
+        spaceport_ship_build_time_mult = -0.20
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NAND = {
+                check_variable = {
+                    which = "ship_corvette_built"
+                    value > 49
+                }
+                check_variable = {
+                    which = "ship_destroyer_built"
+                    value > 14
+                }
+                check_variable = {
+                    which = "ship_cruiser_built"
+                    value > 5
+                }
+                check_variable = {
+                    which = "ship_battleship_built"
+                    value > 1
+                }
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NAND = {
+                has_tradition = "tr_prosperity_adopt"
+                has_valid_civic = "civic_distinguished_admiralty"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NAND = {
+                has_tradition = "tr_prosperity_sct"
+                has_valid_civic = "civic_distinguished_admiralty"
+            }
+        }
+        modifier = {
+            factor = 1.12
+            has_tradition = "tr_prosperity_fleet_logistical_corps"
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_prosperity_finish"
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.50
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 80
+    }
+}
+
 tech_advanced_spaceport_module_01 = {
     cost = 5000
     area = engineering
