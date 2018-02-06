@@ -218,6 +218,10 @@
     tech_supreme_military_station_offense_02_desc: ""
     tech_supreme_military_station_defence_02: ""
     tech_supreme_military_station_defence_02_desc: ""
+    tech_advanced_spaceport_construction_01: ""
+    tech_advanced_spaceport_construction_01_desc: ""
+    tech_advanced_spaceport_module_01: ""
+    tech_advanced_spaceport_module_01_desc: ""
 
     # Technology Prerequisites
     tech_advanced_engineering_prereqfor.title: ""
@@ -440,3 +444,7 @@
     tech_supreme_military_station_offense_02_prereqfor.desc: ""
     tech_supreme_military_station_defence_02_prereqfor.title: ""
     tech_supreme_military_station_defence_02_prereqfor.desc: ""
+    tech_advanced_spaceport_construction_01_prereqfor.title: ""
+    tech_advanced_spaceport_construction_01_prereqfor.desc: ""
+    tech_advanced_spaceport_module_01_prereqfor.title: ""
+    tech_advanced_spaceport_module_01_prereqfor.desc: ""

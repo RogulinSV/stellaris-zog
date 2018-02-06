@@ -1114,3 +1114,163 @@ tech_supreme_military_station_defence_03 = {
         factor = 60
     }
 }
+
+#########################################
+## Engineering / Voidcraft / Spaceports
+#########################################
+
+tech_advanced_spaceport_construction_01 = {
+    cost = 5000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_spaceport_construction_01"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_voidcraft"
+        "tech_spaceport_1"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_spaceport_construction_01_prereqfor.title
+            desc = tech_advanced_spaceport_construction_01_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        spaceport_ship_build_cost_mult = -0.15
+        spaceport_ship_build_time_mult = -0.15
+    }
+
+    weight = 90
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NAND = {
+                check_variable = {
+                    which = "ship_corvette_built"
+                    value > 19
+                }
+                check_variable = {
+                    which = "ship_destroyer_built"
+                    value > 9
+                }
+                check_variable = {
+                    which = "ship_cruiser_built"
+                    value > 4
+                }
+                check_variable = {
+                    which = "ship_battleship_built"
+                    value > 0
+                }
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NAND = {
+                has_tradition = "tr_prosperity_adopt"
+                has_valid_civic = "civic_distinguished_admiralty"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_tradition = "tr_prosperity_sct"
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_prosperity_fleet_logistical_corps"
+        }
+        modifier = {
+            factor = 1.50
+            has_tradition = "tr_prosperity_finish"
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.75
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 90
+    }
+}
+
+tech_advanced_spaceport_module_01 = {
+    cost = 5000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_spaceport_module_01"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_voidcraft"
+        "tech_spaceport_1"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_spaceport_module_01_prereqfor.title
+            desc = tech_advanced_spaceport_module_01_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        spaceport_module_cost_mult = -0.15
+    }
+
+    weight = 90
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "spaceport_built"
+                value < 3
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.75
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 90
+    }
+}

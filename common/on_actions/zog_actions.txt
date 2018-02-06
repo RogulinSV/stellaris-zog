@@ -100,3 +100,18 @@ on_building_replaced = {
         zog_building_events.57
     }
 }
+
+on_ship_built = {
+    events = {
+        # Military ship built
+        zog_ship_events.0
+        # Ship "Corvete" built
+        zog_ship_events.1
+        # Ship "Destroyer" built
+        zog_ship_events.2
+        # Ship "Cruiser" built
+        zog_ship_events.3
+        # Ship "Battleship" built
+        zog_ship_events.4
+    }
+}
