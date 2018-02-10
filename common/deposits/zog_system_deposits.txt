@@ -1,0 +1,390 @@
+#####################
+### Energy deposits
+#####################
+
+d_energy_deposit_2 = {
+    resources = { energy = 2 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_energy_deposit_3 = {
+    resources = { energy = 3 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_energy_deposit_5 = {
+    resources = { energy = 5 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_energy_deposit_10 = {
+    resources = { energy = 10 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_energy_deposit_15 = {
+    resources = { energy = 12 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_energy_deposit_25 = {
+    resources = { energy = 25 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_energy_deposit_50 = {
+    resources = { energy = 50 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_energy_deposit_100 = {
+    resources = { energy = 100 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+#######################
+### Minerals deposits
+#######################
+
+d_minerals_deposit_2 = {
+    resources = { minerals = 2 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_minerals_deposit_3 = {
+    resources = { minerals = 3 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_minerals_deposit_5 = {
+    resources = { minerals = 5 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_minerals_deposit_10 = {
+    resources = { minerals = 10 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_minerals_deposit_15 = {
+    resources = { minerals = 15 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_minerals_deposit_25 = {
+    resources = { minerals = 25 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_minerals_deposit_50 = {
+    resources = { minerals = 50 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_minerals_deposit_100 = {
+    resources = { minerals = 100 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+###################
+### Food deposits
+###################
+
+d_food_deposit_2 = {
+    resources = { food = 2 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_food_deposit_3 = {
+    resources = { food = 3 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_food_deposit_5 = {
+    resources = { food = 5 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_food_deposit_10 = {
+    resources = { food = 10 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_food_deposit_15 = {
+    resources = { food = 15 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+########################
+### Influence deposits
+########################
+
+d_influence_deposit_1 = {
+    resources = { influence = 1 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_influence_deposit_2 = {
+    resources = { influence = 2 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_influence_deposit_3 = {
+    resources = { influence = 3 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_influence_deposit_5 = {
+    resources = { influence = 5 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+###############################
+### Physics research deposits
+###############################
+
+d_physics_research_deposit_2 = {
+    resources = { physics_research = 2 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_physics_research_deposit_3 = {
+    resources = { physics_research = 3 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_physics_research_deposit_5 = {
+    resources = { physics_research = 5 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_physics_research_deposit_10 = {
+    resources = { physics_research = 10 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+###############################
+### Society research deposits
+###############################
+
+d_society_research_deposit_2 = {
+    resources = { society_research = 2 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_society_research_deposit_3 = {
+    resources = { society_research = 3 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_society_research_deposit_5 = {
+    resources = { society_research = 5 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_society_research_deposit_10 = {
+    resources = { society_research = 10 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+###################################
+### Engineering research deposits
+###################################
+
+d_engineering_research_deposit_2 = {
+    resources = { engineering_research = 2 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_engineering_research_deposit_3 = {
+    resources = { engineering_research = 3 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_engineering_research_deposit_5 = {
+    resources = { engineering_research = 5 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_engineering_research_deposit_10 = {
+    resources = { engineering_research = 10 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+###############################################
+### Engineering and physics research deposits
+###############################################
+
+d_science_deposit_10 = {
+    resources = {
+        engineering_research = 10
+        physics_research = 10
+    }
+    station = shipclass_research_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_science_deposit_15 = {
+    resources = {
+        engineering_research = 15
+        physics_research = 15
+    }
+    station = shipclass_research_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_science_deposit_50 = {
+    resources = {
+        engineering_research = 50
+        physics_research = 50
+    }
+    station = shipclass_research_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+####################
+### Unity deposits
+####################
+
+d_unity_deposit_1 = {
+    resources = { unity = 1 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_unity_deposit_2 = {
+    resources = { unity = 2 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_unity_deposit_3 = {
+    resources = { unity = 3 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_unity_deposit_5 = {
+    resources = { unity = 5 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+###################
+### Xeno deposits
+###################
+
+d_riggan_deposit_1 = {
+    resources = {
+        sr_riggan = 1
+        energy = 30
+        minerals = 30
+    }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_xuran_deposit_1 = {
+    resources = {
+        sr_xuran = 1
+        unity = 10
+        influence = 10
+    }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_muutagan_deposit_1 = {
+    resources = {
+        sr_muutagan = 1
+        engineering_research = 30
+        physics_research = 30
+        society_research = 30
+    }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}

@@ -1,0 +1,202 @@
+create_crystal_fleet_01 = {
+    random_system_planet = {
+        limit = { is_star = no }
+        event_target:crystal_country = {
+            create_fleet = {
+                name = "NAME_Sapphire_Lurkers"
+                effect = {
+                    set_owner = event_target:crystal_country
+                    while = {
+                        count = 10
+                        create_ship = {
+                            name = ""
+                            design = "NAME_Large_Crystal_Entity_Blue"
+                        }
+                    }
+                    while = {
+                        count = 30
+                        create_ship = {
+                            name = ""
+                            design = "NAME_Small_Crystal_Entity_Blue"
+                        }
+                    }
+                    set_location = PREVPREV
+                    set_fleet_stance = aggressive
+                    set_aggro_range_measure_from = self
+                    set_aggro_range = 150
+                }
+            }
+        }
+    }
+}
+
+create_cloud_fleet_01 = {
+    random_system_planet = {
+        limit = { is_star = yes }
+        event_target:cloud_country = {
+            create_fleet = {
+                name = "NAME_Void_Cloud"
+                effect = {
+                    set_owner = event_target:cloud_country
+                    while = {
+                        count = 15
+                        create_ship = {
+                            name = ""
+                            design = "NAME_Cloud_Entity"
+                        }
+                    }
+                    set_location = PREVPREV
+                    set_fleet_stance = aggressive
+                    set_aggro_range_measure_from = self
+                    set_aggro_range = 500
+                }
+            }
+        }
+    }
+}
+
+create_amoeba_fleet_01 = {
+    random_system_planet = {
+        limit = { is_star = no }
+        event_target:amoeba_country = {
+            create_fleet = {
+                name = "NAME_Space_Amoeba"
+                effect = {
+                    set_owner = event_target:amoeba_country
+                    while = {
+                        count = 30
+                        create_ship = {
+                            name = ""
+                            design = "NAME_Small_Space_Organism_Zebra"
+                        }
+                    }
+                    while = {
+                        count = 10
+                        create_ship = {
+                            name = ""
+                            design = "NAME_Large_Space_Organism_Zebra"
+                        }
+                    }
+                    set_formation_scale = 4.0
+                    set_location = PREVPREV
+                    set_fleet_stance = aggressive
+                    set_aggro_range_measure_from = self
+                    set_aggro_range = 100
+                }
+            }
+        }
+    }
+}
+
+create_drone_fleet_01 = {
+    random_system_planet = {
+        limit = { 
+            has_deposit_for = shipclass_mining_station
+            is_star = no
+            NOT = { is_planet_class = pc_gas_giant }
+        }
+        event_target:drone_country = {
+            save_event_target_as = mining_drones
+            create_fleet = {
+                name = "NAME_Ancient_Mining_Drones"
+                effect = {
+                    set_owner = event_target:drone_country
+                    while = {
+                        count = 20
+                        create_ship = {
+                            name = ""
+                            design = "NAME_Ancient_Mining_Drone"
+                        }
+                    }
+                    while = {
+                        count = 50
+                        create_ship = {
+                            name = ""
+                            design = "NAME_Ancient_Combat_Drone"
+                        }
+                    }
+                    set_location = PREVPREV
+                    set_fleet_stance = aggressive
+                    set_aggro_range_measure_from = return_point
+                    set_aggro_range = 150
+                    queue_actions = {
+                        repeat = {
+                            wait = {
+                                duration = 999
+                                random = 10
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        create_mining_station = {
+            owner = event_target:mining_drones
+        }
+    }
+}
+
+create_pirate_fleet_01 = {
+    random_system_planet = {
+        event_target:pirate_country = {
+            create_fleet = {
+                name = "NAME_Pirate_Fleet"
+                effect = {
+                    set_owner = event_target:pirate_country
+                    while = {
+                        count = 10
+                        create_ship = {
+                            name = random
+                            design = NAME_Reaver
+                            graphical_culture = "pirate_01"
+                        }
+                    }
+                    while = {
+                        count = 10
+                        create_ship = {
+                            name = random
+                            design = NAME_Hunter
+                            graphical_culture = "pirate_01"
+                        }
+                    }
+                    while = {
+                        count = 10
+                        create_ship = {
+                            name = random
+                            design = NAME_Vagabond
+                            graphical_culture = "pirate_01"
+                        }
+                    }
+                    while = {
+                        count = 10
+                        create_ship = {
+                            name = random
+                            design = "NAME_Corsair"
+                            graphical_culture = "pirate_01"
+                        }
+                    }
+                    while = {
+                        count = 10
+                        create_ship = {
+                            name = random
+                            design = "NAME_Marauder"
+                            graphical_culture = "pirate_01"
+                        }
+                    }
+                    while = {
+                        count = 10
+                        create_ship = {
+                            name = random
+                            design = "NAME_Black_Earl"
+                            graphical_culture = "pirate_01"
+                        }
+                    }
+                    set_location = prevprev
+                    set_fleet_stance = aggressive
+                    set_aggro_range_measure_from = self
+                    set_aggro_range = 150
+                }
+            }
+        }
+    }
+}

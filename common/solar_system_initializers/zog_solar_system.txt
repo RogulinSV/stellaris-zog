@@ -1,0 +1,636 @@
+@distance = 50
+@base_moon_distance = 10
+@star_moon_distance = 20
+@bstar_moon_distance = 35
+@habitable_planet_max_size = 25
+@habitable_planet_mod_size = 20
+@habitable_planet_min_size = 15
+@celestial_min_size = 10
+@celestial_mod_size = 15
+@celestial_max_size = 20
+@gas_giant_min_size = 25
+@gas_giant_mod_size = 30
+@gas_giant_max_size = 40
+
+#######################
+### Edem Solar System
+#######################
+
+edem_system = {
+    name = "NAME_Edem"
+    class = sc_rg
+    asteroids_distance = 130
+    flags = {
+        "empire_home_system"
+        "star_system_edem"
+    }
+
+    usage = custom_empire
+    max_instances = 1
+
+    planet = {
+        name = "NAME_Edem"
+        class = pc_rg_star
+        orbit_distance = 0
+        orbit_angle = 1
+        size = 30
+        has_ring = no
+
+        init_effect = {
+            star_set_random_resources_01 = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Sedna"
+        class = pc_molten
+        orbit_distance = 40
+        orbit_angle = { min = 15 max = 45 }
+        size = @celestial_max_size
+        has_ring = no
+
+        init_effect = {
+            celestial_set_random_resources_01 = yes
+        }
+
+        moon = {
+            name = "NAME_Brute"
+            class = random_asteroid
+            orbit_distance = 8
+            orbit_angle = { min = 100 max = 300 }
+            size = 2
+
+            init_effect = {
+                asteroid_set_random_resources_01 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Cassius"
+            class = random_asteroid
+            orbit_distance = 4
+            orbit_angle = { min = 10 max = 50 }
+            size = 1
+
+            init_effect = {
+                asteroid_set_random_resources_01 = yes
+            }
+        }
+    }
+
+    planet = {
+        name = "NAME_Selena"
+        class = pc_nova_gas
+        orbit_distance = 20
+        orbit_angle = { min = 100 max = 170 }
+        size = @gas_giant_min_size
+        has_ring = yes
+
+        init_effect = {
+            celestial_set_random_resources_02 = yes
+        }
+
+        moon = {
+            name = "NAME_Caliban"
+            class = pc_nova
+            size = @celestial_min_size
+            orbit_distance = 15
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                celestial_set_random_resources_01 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Desdemona"
+            class = pc_nova
+            size = @celestial_min_size
+            orbit_distance = 8
+            orbit_angle = { min = 50 max = 300 }
+            has_ring = no
+
+            init_effect = {
+                celestial_set_random_resources_01 = yes
+            }
+        }
+    }
+
+    planet = {
+        name = "NAME_Edem"
+        class = pc_gaia
+        orbit_distance = 20
+        orbit_angle = { min = 70 max = 250 }
+        size = @habitable_planet_max_size
+        starting_planet = yes
+        has_ring = no
+        entity = "continental_planet_earth_entity"
+        tile_blockers = none
+        modifiers = none
+        anomaly = none
+
+        init_effect = {
+            set_planet_flag = "planet_edem"
+            every_tile = {
+                limit = { has_building = no has_pop = no }
+                set_blocker = "tb_failing_infrastructure"
+                set_deposit = d_null_deposit
+            }
+            random_tile = {
+                limit = { has_building = no num_adjacent_tiles > 3 }
+                remove_blocker = yes
+                set_building = "building_capital_1"
+                set_deposit = d_energy_deposit_5
+                random_neighboring_tile = {
+                    limit = { has_building = no }
+                    remove_blocker = yes
+                    set_building = "building_hydroponics_farm_1"
+                    set_deposit = d_food_deposit_5
+                }
+                random_neighboring_tile = {
+                    limit = { has_building = no }
+                    remove_blocker = yes
+                    set_building = "building_hydroponics_farm_1"
+                    set_deposit = d_food_deposit_5
+                }
+            }
+            while = {
+                count = 2
+                random_tile = {
+                    limit = { has_building = no has_blocker = yes }
+                    remove_blocker = yes
+                    set_building = "building_mining_network_1"
+                    set_deposit = d_minerals_deposit_5
+                }
+            }
+            while = {
+                count = 2
+                random_tile = {
+                    limit = { has_building = no has_blocker = yes }
+                    remove_blocker = yes
+                    set_building = "building_power_plant_1"
+                    set_deposit = d_energy_deposit_5
+                }
+            }
+            while = {
+                count = 6
+                random_tile = {
+                    limit = { has_building = no has_blocker = yes }
+                    set_blocker = "tb_decrepit_dwellings"
+                }
+            }
+            while = {
+                count = 4
+                random_tile = {
+                    limit = { has_building = no has_blocker = yes }
+                    set_blocker = "tb_yawata"
+                }
+            }
+        }
+
+        moon = {
+            name = "NAME_Limbo"
+            class = pc_barren_cold
+            size = 5
+            orbit_distance = 8
+            orbit_angle = { min = 5 max = 355 }
+            has_ring = no
+            entity = "cold_barren_planet_luna_entity"
+
+            init_effect = {
+                celestial_set_random_resources_01 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Agamemnon"
+            class = pc_barren
+            size = @habitable_planet_min_size
+            orbit_distance = 15
+            orbit_angle = { min = 5 max = 355 }
+            has_ring = no
+
+            init_effect = {
+                celestial_set_random_resources_01 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Oberon"
+            class = random_asteroid
+            orbit_distance = 4
+            orbit_angle = { min = 5 max = 355 }
+            size = 1
+
+            init_effect = {
+                asteroid_set_random_resources_01 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Mimas"
+            class = random_asteroid
+            orbit_distance = 2
+            orbit_angle = { min = 5 max = 355 }
+            size = 2
+
+            init_effect = {
+                asteroid_set_random_resources_01 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Ophelia"
+            class = pc_methane
+            size = @habitable_planet_max_size
+            orbit_distance = 8
+            orbit_angle = { min = 5 max = 355 }
+            has_ring = yes
+            tile_blockers = none
+            modifiers = none
+            anomaly = none
+
+            init_effect = {
+                celestial_set_random_resources_03 = yes
+                planet_set_random_blockers_01 = yes
+                planet_set_random_resources_02 = yes
+            }
+        }
+    }
+
+    planet = {
+        name = "NAME_Icarus"
+        class = pc_gaia
+        orbit_distance = 20
+        orbit_angle = { min = 40 max = 300 }
+        size = @habitable_planet_max_size
+        has_ring = no
+        entity = "barren_planet_mars_entity"
+        tile_blockers = none
+        modifiers = none
+        anomaly = none
+
+        init_effect = {
+            add_modifier = {
+                modifier = "gaia_world"
+                days = -1
+            }
+            add_modifier = {
+                modifier = "ancient_automation"
+                days = -1
+            }
+            add_modifier = {
+                modifier = "ancient_factory"
+                days = -1
+            }
+            add_modifier = {
+                modifier = "alien_writing"
+                days = -1
+            }
+            planet_set_random_blockers_01 = yes
+            planet_set_random_resources_04 = yes
+        }
+
+        moon = {
+            name = "NAME_Minos"
+            class = pc_barren
+            size = @celestial_min_size
+            orbit_distance = 13
+            orbit_angle = { min = 5 max = 355 }
+            has_ring = no
+
+            init_effect = {
+                celestial_set_random_resources_01 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Daedalus"
+            class = random_asteroid
+            orbit_distance = 5
+            orbit_angle = { min = 5 max = 355 }
+            size = 1
+
+            init_effect = {
+                asteroid_set_random_resources_01 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Waist"
+            class = random_asteroid
+            orbit_distance = 1
+            orbit_angle = { min = 5 max = 355 }
+            size = 1
+
+            init_effect = {
+                asteroid_set_random_resources_01 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Helicon"
+            class = pc_ammonia
+            size = @celestial_min_size
+            orbit_distance = 10
+            orbit_angle = { min = 5 max = 355 }
+            has_ring = no
+            tile_blockers = none
+            modifiers = none
+            anomaly = none
+
+            init_effect = {
+                celestial_set_random_resources_03 = yes
+                planet_set_random_blockers_01 = yes
+                planet_set_random_resources_03 = yes
+            }
+        }
+    }
+
+    planet = {
+        name = "NAME_Eris"
+        class = pc_geothermal
+        orbit_distance = 20
+        orbit_angle = { min = 5 max = 355 }
+        size = @habitable_planet_max_size
+        has_ring = yes
+        tile_blockers = none
+        anomaly = none
+
+        init_effect = {
+            planet_set_random_blockers_01 = yes
+            planet_set_random_resources_02 = yes
+        }
+
+        change_orbit = 10
+
+        moon = {
+            name = "NAME_Alpha"
+            count = 6
+            class = random_asteroid
+            orbit_distance = 1.8
+            orbit_angle = { min = -270 max = 270 }
+            size = 1
+
+            init_effect = {
+                asteroid_set_random_resources_01 = yes
+            }
+        }
+    }
+
+    planet = {
+        name = "NAME_Kronos"
+        class = pc_gas_giant
+        orbit_distance = 12
+        orbit_angle = { min = 100 max = 300 }
+        size = @gas_giant_max_size
+        has_ring = no
+
+        init_effect = {
+            celestial_set_random_resources_02 = yes
+        }
+
+        change_orbit = 14
+
+        moon = {
+            name = "NAME_Gamma"
+            count = 6
+            class = random_asteroid
+            orbit_distance = 1.9
+            orbit_angle = { min = -270 max = 270 }
+            size = 1
+
+            init_effect = {
+                asteroid_set_random_resources_01 = yes
+            }
+        }
+    }
+
+    planet = {
+        name = "NAME_Proteus"
+        class = pc_tropical
+        orbit_distance = 12
+        orbit_angle = { min = 100 max = 300 }
+        size = @habitable_planet_max_size
+        has_ring = no
+        tile_blockers = none
+        anomaly = none
+
+        init_effect = {
+            planet_set_random_blockers_01 = yes
+            planet_set_random_resources_05 = yes
+        }
+
+        change_orbit = 10
+
+        moon = {
+            name = "NAME_Omega"
+            count = 6
+            class = random_asteroid
+            orbit_distance = 1.8
+            orbit_angle = { min = -270 max = 270 }
+            size = 1
+
+            init_effect = {
+                asteroid_set_random_resources_01 = yes
+            }
+        }
+    }
+
+    planet = {
+        name = "NAME_Hydra"
+        class = pc_gas_giant
+        orbit_distance = 10
+        orbit_angle = { min = 100 max = 300 }
+        size = @gas_giant_mod_size
+        has_ring = yes
+
+        init_effect = {
+            celestial_set_random_resources_02 = yes
+        }
+
+        change_orbit = 10
+
+        moon = {
+            name = "NAME_Beta"
+            count = 6
+            class = random_asteroid
+            orbit_distance = 1.9
+            orbit_angle = { min = -270 max = 270 }
+            size = 1
+
+            init_effect = {
+                asteroid_set_random_resources_01 = yes
+            }
+        }
+    }
+
+    planet = {
+        name = "NAME_Himalia"
+        class = pc_gas_giant
+        orbit_distance = 30
+        orbit_angle = { min = 5 max = 355 }
+        size = @gas_giant_max_size
+        has_ring = no
+        entity = "gas_giant_jupiter_entity"
+
+        init_effect = {
+            celestial_set_random_resources_02 = yes
+        }
+
+        change_orbit = 15
+
+        moon = {
+            name = "NAME_Ananque"
+            class = pc_toxic
+            size = { min = @celestial_min_size max = @celestial_max_size }
+            orbit_distance = 13
+            orbit_angle = { min = 5 max = 355 }
+            has_ring = no
+            tile_blockers = none
+            modifiers = none
+            anomaly = none
+
+            init_effect = {
+                celestial_set_random_resources_03 = yes
+                planet_set_random_blockers_01 = yes
+                planet_set_random_resources_05 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Yapet"
+            class = pc_barren_cold
+            size = { min = @celestial_min_size max = @celestial_mod_size }
+            orbit_distance = 4
+            orbit_angle = { min = 20 max = 330 }
+            has_ring = no
+
+            init_effect = {
+                celestial_set_random_resources_01 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Tethys"
+            class = pc_barren_cold
+            size = { min = @celestial_min_size max = @celestial_mod_size }
+            orbit_distance = 4
+            orbit_angle = { min = 20 max = 330 }
+            has_ring = no
+
+            init_effect = {
+                celestial_set_random_resources_01 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Epimetheus"
+            class = pc_toxic
+            size = { min = @celestial_min_size max = @celestial_max_size }
+            orbit_distance = 3
+            orbit_angle = { min = 20 max = 330 }
+            has_ring = no
+            tile_blockers = none
+            modifiers = none
+            anomaly = none
+
+            init_effect = {
+                celestial_set_random_resources_03 = yes
+                planet_set_random_blockers_01 = yes
+                planet_set_random_resources_03 = yes
+            }
+        }
+    }
+
+    planet = {
+        name = "NAME_Rhea"
+        class = pc_frozen_desert
+        orbit_distance = 20
+        orbit_angle = { min = 100 max = 250 }
+        size = @habitable_planet_max_size
+        has_ring = yes
+        tile_blockers = none
+
+        init_effect = {
+            planet_set_random_blockers_01 = yes
+            planet_set_random_resources_06 = yes
+        }
+
+        moon = {
+            name = "NAME_Prospero"
+            class = pc_glacial
+            size = { min = @habitable_planet_min_size max = @habitable_planet_mod_size }
+            orbit_distance = 19
+            orbit_angle = { min = 5 max = 355 }
+            has_ring = no
+            tile_blockers = none
+
+            init_effect = {
+                planet_set_random_blockers_01 = yes
+                planet_set_random_resources_06 = yes
+            }
+        }
+    }
+
+    planet = {
+        name = "NAME_Cordelia"
+        class = pc_arctic
+        orbit_distance = 20
+        orbit_angle = { min = 50 max = 250 }
+        size = @habitable_planet_max_size
+        has_ring = yes
+        tile_blockers = none
+
+        init_effect = {
+            planet_set_random_blockers_01 = yes
+            planet_set_random_resources_07 = yes
+        }
+
+        moon = {
+            name = "NAME_Sigma"
+            count = 8
+            class = random_asteroid
+            orbit_distance = { min = 1.2 max = 2.2 }
+            orbit_angle = { min = -270 max = 270 }
+            size = { min = 1 max = 3 }
+
+            init_effect = {
+                asteroid_set_random_resources_01 = yes
+            }
+        }
+    }
+
+    planet = {
+        name = "NAME_Perdita"
+        class = pc_gas_giant
+        orbit_distance = 20
+        orbit_angle = { min = 50 max = 250 }
+        size = @gas_giant_mod_size
+        has_ring = yes
+        entity = "gas_giant_02_entity"
+
+        init_effect = {
+            celestial_set_random_resources_02 = yes
+        }
+
+        change_orbit = 8
+
+        moon = {
+            name = "NAME_Galimede"
+            class = pc_antarctic
+            size = @habitable_planet_min_size
+            orbit_distance = 7
+            orbit_angle = { min = 5 max = 350 }
+            has_ring = yes
+            tile_blockers = none
+
+            init_effect = {
+                planet_set_random_blockers_01 = yes
+                planet_set_random_resources_07 = yes
+            }
+        }
+    }
+}
+

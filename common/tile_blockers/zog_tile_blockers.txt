@@ -1,0 +1,15 @@
+tb_yawata = {
+    picture = tb_yawata_01
+    time = 400
+
+    cost = {
+        energy = 600
+        minerals = 400
+    }
+
+    spawn_chance = {
+        modifier = {
+            add = 0
+        }
+    }
+}
