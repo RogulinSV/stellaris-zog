@@ -1,8 +1,8 @@
 namespace = zog_building_events
 
-#############################################
+################################################
 ### Buildings & Spaceport modules yearly event
-#############################################
+################################################
 
 event = {
     id = zog_building_events.0
@@ -32,6 +32,34 @@ event = {
                 value = 0
             }
             set_variable = {
+                which = "spaceport_built"
+                value = 0
+            }
+            set_variable = {
+                which = "spaceport_1_built"
+                value = 0
+            }
+            set_variable = {
+                which = "spaceport_2_built"
+                value = 0
+            }
+            set_variable = {
+                which = "spaceport_3_built"
+                value = 0
+            }
+            set_variable = {
+                which = "spaceport_4_built"
+                value = 0
+            }
+            set_variable = {
+                which = "spaceport_5_built"
+                value = 0
+            }
+            set_variable = {
+                which = "spaceport_6_built"
+                value = 0
+            }
+            set_variable = {
                 which = "hydroponics_module_built"
                 value = 0
             }
@@ -41,55 +69,230 @@ event = {
             }
 
             every_owned_planet = {
-                ### Spaceport module "Hydroponics farm" counting
+                ### Spaceport counting
                 if = {
                     limit = {
                         has_spaceport = yes
-                        has_spaceport_module = "hydroponic_farms"
                     }
                     owner = {
                         if = {
                             limit = {
                                 check_variable = {
-                                    which = "hydroponics_module_built"
+                                    which = "spaceport_built"
                                     value < 1
                                 }
                             }
                             set_variable = {
-                                which = "hydroponics_module_built"
+                                which = "spaceport_built"
                                 value = 1
                             }
                             else = {
                                 change_variable = {
-                                    which = "hydroponics_module_built"
+                                    which = "spaceport_built"
                                     value = 1
                                 }
                             }
                         }
                     }
-                }
-                ### Spaceport module "Solar panel" counting
-                if = {
-                    limit = {
-                        has_spaceport = yes
-                        has_spaceport_module = "solar_panel_network"
-                    }
-                    owner = {
-                        if = {
-                            limit = {
-                                check_variable = {
-                                    which = "solar_panel_module_built"
-                                    value < 1
+                    ### Spaceport-I counting
+                    if = {
+                        limit = { num_spaceport_modules = 1 }
+                        owner = {
+                            if = {
+                                limit = {
+                                    check_variable = {
+                                        which = "spaceport_1_built"
+                                        value < 1
+                                    }
+                                }
+                                set_variable = {
+                                    which = "spaceport_1_built"
+                                    value = 1
+                                }
+                                else = {
+                                    change_variable = {
+                                        which = "spaceport_1_built"
+                                        value = 1
+                                    }
                                 }
                             }
-                            set_variable = {
-                                which = "solar_panel_module_built"
-                                value = 1
+                        }
+                        ### Spaceport-II counting
+                        else = {
+                            if = {
+                                limit = { num_spaceport_modules = 2 }
+                                owner = {
+                                    if = {
+                                        limit = {
+                                            check_variable = {
+                                                which = "spaceport_2_built"
+                                                value < 1
+                                            }
+                                        }
+                                        set_variable = {
+                                            which = "spaceport_2_built"
+                                            value = 1
+                                        }
+                                        else = {
+                                            change_variable = {
+                                                which = "spaceport_2_built"
+                                                value = 1
+                                            }
+                                        }
+                                    }
+                                }
+                                ### Spaceport-III counting
+                                else = {
+                                    if = {
+                                        limit = { num_spaceport_modules = 3 }
+                                        owner = {
+                                            if = {
+                                                limit = {
+                                                    check_variable = {
+                                                        which = "spaceport_3_built"
+                                                        value < 1
+                                                    }
+                                                }
+                                                set_variable = {
+                                                    which = "spaceport_3_built"
+                                                    value = 1
+                                                }
+                                                else = {
+                                                    change_variable = {
+                                                        which = "spaceport_3_built"
+                                                        value = 1
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        ### Spaceport-IV counting
+                                        else = {
+                                            if = {
+                                                limit = { num_spaceport_modules = 4 }
+                                                owner = {
+                                                    if = {
+                                                        limit = {
+                                                            check_variable = {
+                                                                which = "spaceport_4_built"
+                                                                value < 1
+                                                            }
+                                                        }
+                                                        set_variable = {
+                                                            which = "spaceport_4_built"
+                                                            value = 1
+                                                        }
+                                                        else = {
+                                                            change_variable = {
+                                                                which = "spaceport_4_built"
+                                                                value = 1
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                ### Spaceport-V counting
+                                                else = {
+                                                    if = {
+                                                        limit = { num_spaceport_modules = 5 }
+                                                        owner = {
+                                                            if = {
+                                                                limit = {
+                                                                    check_variable = {
+                                                                        which = "spaceport_5_built"
+                                                                        value < 1
+                                                                    }
+                                                                }
+                                                                set_variable = {
+                                                                    which = "spaceport_5_built"
+                                                                    value = 1
+                                                                }
+                                                                else = {
+                                                                    change_variable = {
+                                                                        which = "spaceport_5_built"
+                                                                        value = 1
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        ### Spaceport-VI counting
+                                                        else = {
+                                                            if = {
+                                                                limit = { num_spaceport_modules = 6 }
+                                                                owner = {
+                                                                    if = {
+                                                                        limit = {
+                                                                            check_variable = {
+                                                                                which = "spaceport_6_built"
+                                                                                value < 1
+                                                                            }
+                                                                        }
+                                                                        set_variable = {
+                                                                            which = "spaceport_6_built"
+                                                                            value = 1
+                                                                        }
+                                                                        else = {
+                                                                            change_variable = {
+                                                                                which = "spaceport_6_built"
+                                                                                value = 1
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
-                            else = {
-                                change_variable = {
+                        }
+                    }
+
+                    ### Spaceport module "Hydroponics farm" counting
+                    if = {
+                        limit = { has_spaceport_module = "hydroponic_farms" }
+                        owner = {
+                            if = {
+                                limit = {
+                                    check_variable = {
+                                        which = "hydroponics_module_built"
+                                        value < 1
+                                    }
+                                }
+                                set_variable = {
+                                    which = "hydroponics_module_built"
+                                    value = 1
+                                }
+                                else = {
+                                    change_variable = {
+                                        which = "hydroponics_module_built"
+                                        value = 1
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    ### Spaceport module "Solar panel" counting
+                    if = {
+                        limit = { has_spaceport_module = "solar_panel_network" }
+                        owner = {
+                            if = {
+                                limit = {
+                                    check_variable = {
+                                        which = "solar_panel_module_built"
+                                        value < 1
+                                    }
+                                }
+                                set_variable = {
                                     which = "solar_panel_module_built"
                                     value = 1
+                                }
+                                else = {
+                                    change_variable = {
+                                        which = "solar_panel_module_built"
+                                        value = 1
+                                    }
                                 }
                             }
                         }
@@ -97,169 +300,229 @@ event = {
                 }
 
                 every_tile = {
-                    ### Building "Hydroponics farm" counting
                     if = {
                         limit = {
+                            has_building = yes
                             OR = {
                                 has_building = "building_hydroponics_farm_1"
                                 has_building = "building_hydroponics_farm_2"
                                 has_building = "building_hydroponics_farm_3"
                                 has_building = "building_hydroponics_farm_4"
                                 has_building = "building_hydroponics_farm_5"
-                            }
-                        }
-                        prev = {
-                            owner = {
-                                if = {
-                                    limit = {
-                                        check_variable = {
-                                            which = "hydroponics_farm_built"
-                                            value < 1
-                                        }
-                                    }
-                                    set_variable = {
-                                        which = "hydroponics_farm_built"
-                                        value = 1
-                                    }
-                                    else = {
-                                        change_variable = {
-                                            which = "hydroponics_farm_built"
-                                            value = 1
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    ### Building "Mining network" counting
-                    if = {
-                        limit = {
-                            OR = {
                                 has_building = "building_mining_network_1"
                                 has_building = "building_mining_network_2"
                                 has_building = "building_mining_network_3"
                                 has_building = "building_mining_network_4"
                                 has_building = "building_mining_network_5"
-                            }
-                        }
-                        prev = {
-                            owner = {
-                                if = {
-                                    limit = {
-                                        check_variable = {
-                                            which = "mining_network_built"
-                                            value < 1
-                                        }
-                                    }
-                                    set_variable = {
-                                        which = "mining_network_built"
-                                        value = 1
-                                    }
-                                    else = {
-                                        change_variable = {
-                                            which = "mining_network_built"
-                                            value = 1
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    ### Building "Mineral processing plant" counting
-                    if = {
-                        limit = {
-                            OR = {
                                 has_building = "building_mineral_processing_plant_1"
                                 has_building = "building_mineral_processing_plant_2"
-                            }
-                        }
-                        prev = {
-                            owner = {
-                                if = {
-                                    limit = {
-                                        check_variable = {
-                                            which = "mineral_processing_plant_built"
-                                            value < 1
-                                        }
-                                    }
-                                    set_variable = {
-                                        which = "mineral_processing_plant_built"
-                                        value = 1
-                                    }
-                                    else = {
-                                        change_variable = {
-                                            which = "mineral_processing_plant_built"
-                                            value = 1
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    ### Building "Power plant" counting
-                    if = {
-                        limit = {
-                            OR = {
                                 has_building = "building_power_plant_1"
                                 has_building = "building_power_plant_2"
                                 has_building = "building_power_plant_3"
                                 has_building = "building_power_plant_4"
                                 has_building = "building_power_plant_5"
+                                has_building = "building_power_hub_1"
+                                has_building = "building_power_hub_2"
                             }
                         }
-                        prev = {
-                            owner = {
-                                if = {
-                                    limit = {
-                                        check_variable = {
-                                            which = "power_plant_built"
-                                            value < 1
+
+                        ### Building "Hydroponics farm" counting
+                        if = {
+                            limit = {
+                                OR = {
+                                    has_building = "building_hydroponics_farm_1"
+                                    has_building = "building_hydroponics_farm_2"
+                                    has_building = "building_hydroponics_farm_3"
+                                    has_building = "building_hydroponics_farm_4"
+                                    has_building = "building_hydroponics_farm_5"
+                                }
+                            }
+                            prev = {
+                                owner = {
+                                    if = {
+                                        limit = {
+                                            check_variable = {
+                                                which = "hydroponics_farm_built"
+                                                value < 1
+                                            }
+                                        }
+                                        set_variable = {
+                                            which = "hydroponics_farm_built"
+                                            value = 1
+                                        }
+                                        else = {
+                                            change_variable = {
+                                                which = "hydroponics_farm_built"
+                                                value = 1
+                                            }
                                         }
                                     }
-                                    set_variable = {
-                                        which = "power_plant_built"
-                                        value = 1
+                                }
+                            }
+                        }
+                        ### Building "Mining network" counting
+                        if = {
+                            limit = {
+                                OR = {
+                                    has_building = "building_mining_network_1"
+                                    has_building = "building_mining_network_2"
+                                    has_building = "building_mining_network_3"
+                                    has_building = "building_mining_network_4"
+                                    has_building = "building_mining_network_5"
+                                }
+                            }
+                            prev = {
+                                owner = {
+                                    if = {
+                                        limit = {
+                                            check_variable = {
+                                                which = "mining_network_built"
+                                                value < 1
+                                            }
+                                        }
+                                        set_variable = {
+                                            which = "mining_network_built"
+                                            value = 1
+                                        }
+                                        else = {
+                                            change_variable = {
+                                                which = "mining_network_built"
+                                                value = 1
+                                            }
+                                        }
                                     }
-                                    else = {
-                                        change_variable = {
+                                }
+                            }
+                        }
+                        ### Building "Mineral processing plant" counting
+                        if = {
+                            limit = {
+                                OR = {
+                                    has_building = "building_mineral_processing_plant_1"
+                                    has_building = "building_mineral_processing_plant_2"
+                                }
+                            }
+                            prev = {
+                                owner = {
+                                    if = {
+                                        limit = {
+                                            check_variable = {
+                                                which = "mineral_processing_plant_built"
+                                                value < 1
+                                            }
+                                        }
+                                        set_variable = {
+                                            which = "mineral_processing_plant_built"
+                                            value = 1
+                                        }
+                                        else = {
+                                            change_variable = {
+                                                which = "mineral_processing_plant_built"
+                                                value = 1
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        ### Building "Power plant" counting
+                        if = {
+                            limit = {
+                                OR = {
+                                    has_building = "building_power_plant_1"
+                                    has_building = "building_power_plant_2"
+                                    has_building = "building_power_plant_3"
+                                    has_building = "building_power_plant_4"
+                                    has_building = "building_power_plant_5"
+                                }
+                            }
+                            prev = {
+                                owner = {
+                                    if = {
+                                        limit = {
+                                            check_variable = {
+                                                which = "power_plant_built"
+                                                value < 1
+                                            }
+                                        }
+                                        set_variable = {
                                             which = "power_plant_built"
                                             value = 1
+                                        }
+                                        else = {
+                                            change_variable = {
+                                                which = "power_plant_built"
+                                                value = 1
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        ### Building "Power hub" counting
+                        if = {
+                            limit = {
+                                OR = {
+                                    has_building = "building_power_hub_1"
+                                    has_building = "building_power_hub_2"
+                                }
+                            }
+                            prev = {
+                                owner = {
+                                    if = {
+                                        limit = {
+                                            check_variable = {
+                                                which = "power_hub_built"
+                                                value < 1
+                                            }
+                                        }
+                                        set_variable = {
+                                            which = "power_hub_built"
+                                            value = 1
+                                        }
+                                        else = {
+                                            change_variable = {
+                                                which = "power_hub_built"
+                                                value = 1
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
                     }
-                    ### Building "Power hub" counting
-                    if = {
-                        limit = {
-                            OR = {
-                                has_building = "building_power_hub_1"
-                                has_building = "building_power_hub_2"
-                            }
-                        }
-                        prev = {
-                            owner = {
-                                if = {
-                                    limit = {
-                                        check_variable = {
-                                            which = "power_hub_built"
-                                            value < 1
-                                        }
-                                    }
-                                    set_variable = {
-                                        which = "power_hub_built"
-                                        value = 1
-                                    }
-                                    else = {
-                                        change_variable = {
-                                            which = "power_hub_built"
-                                            value = 1
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                }
+            }
+        }
+    }
+}
+
+##########################
+### Any buildings events
+##########################
+
+event = {
+    id = zog_building_events.1
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "any_building_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "any_building_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "any_building_built"
+                        value = 1
                     }
                 }
             }

@@ -680,6 +680,348 @@ tech_infinitum_energy_extraction = {
     }
 }
 
+##########################################
+## Engineering / Speed
+##########################################
+
+tech_advanced_planetary_engineering = {
+    cost = 3500
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_advanced_planetary_engineering"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_engineering"
+        "tech_assembly_pattern"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_planetary_engineering_prereqfor.title
+            desc = tech_advanced_planetary_engineering_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        planet_building_build_speed_mult = 0.10
+        planet_building_cost_mult = -0.10
+        building_time_mult = -0.10
+    }
+
+    weight = 90
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "any_building_built"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 1.25
+            OR = {
+                has_ethic = "ethic_egalitarian"
+                has_ethic = "ethic_fanatic_egalitarian"
+            }
+        }
+        modifier = {
+            factor = 1.35
+            OR = {
+                has_ethic = "ethic_materialist"
+                has_ethic = "ethic_fanatic_materialist"
+            }
+        }
+        modifier = {
+            factor = 1.50
+            has_valid_civic = "civic_functional_architecture"
+        }
+        modifier = {
+            factor = 1.35
+            research_leader = {
+                area = engineering
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_curator"
+                    has_trait = "leader_trait_scientist_chosen"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.50
+            has_technology = "tech_supreme_engineering"
+        }
+    }
+
+    ai_weight = {
+        factor = 90
+    }
+}
+
+tech_supreme_planetary_engineering = {
+    cost = 7000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_supreme_planetary_engineering"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_planetary_engineering"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_supreme_planetary_engineering_prereqfor.title
+            desc = tech_supreme_planetary_engineering_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        planet_building_build_speed_mult = 0.15
+        planet_building_cost_mult = -0.15
+        building_time_mult = -0.15
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "any_building_built"
+                value < 25
+            }
+        }
+        modifier = {
+            factor = 1.10
+            has_ethic = "ethic_egalitarian"
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_fanatic_egalitarian"
+        }
+        modifier = {
+            factor = 1.10
+            has_ethic = "ethic_materialist"
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_fanatic_materialist"
+        }
+        modifier = {
+            factor = 1.25
+            has_valid_civic = "civic_functional_architecture"
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_curator"
+                    has_trait = "leader_trait_scientist_chosen"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_technology = "tech_supreme_engineering"
+        }
+    }
+
+    ai_weight = {
+        factor = 80
+    }
+}
+
+tech_transcendental_planetary_engineering = {
+    cost = 14000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_transcendental_planetary_engineering"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_supreme_planetary_engineering"
+        "tech_construction_templates"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_transcendental_planetary_engineering_prereqfor.title
+            desc = tech_transcendental_planetary_engineering_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        planet_building_build_speed_mult = 0.25
+        planet_building_cost_mult = -0.25
+        building_time_mult = -0.25
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "any_building_built"
+                value < 50
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NAND = {
+                has_ethic = "ethic_egalitarian"
+                has_ethic = "ethic_fanatic_egalitarian"
+                has_ethic = "ethic_materialist"
+                has_ethic = "ethic_fanatic_materialist"
+                has_valid_civic = "civic_functional_architecture"
+            }
+        }
+        modifier = {
+            factor = 1.10
+            has_ethic = "ethic_fanatic_egalitarian"
+        }
+        modifier = {
+            factor = 1.10
+            has_ethic = "ethic_fanatic_materialist"
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_curator"
+                    has_trait = "leader_trait_scientist_chosen"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_technology = "tech_supreme_engineering"
+        }
+        modifier = {
+            factor = 1.50
+            has_ascension_perk = "ap_master_builders"
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}
+
+tech_infinitum_planetary_engineering = {
+    cost = 28000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_infinitum_planetary_engineering"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_transcendental_planetary_engineering"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_infinitum_planetary_engineering_prereqfor.title
+            desc = tech_infinitum_planetary_engineering_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        planet_building_build_speed_mult = 0.50
+        planet_building_cost_mult = -0.50
+        building_time_mult = -0.50
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "any_building_built"
+                value < 100
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                has_ethic = "ethic_fanatic_egalitarian"
+                has_ethic = "ethic_fanatic_materialist"
+                has_valid_civic = "civic_functional_architecture"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_ascension_perk = "ap_master_builders"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_curator"
+                    has_trait = "leader_trait_scientist_chosen"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.50
+            has_ascension_perk = "ap_galactic_wonders"
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}
+
 ########################################
 ## Engineering / Weapons / Strike Craft
 ########################################

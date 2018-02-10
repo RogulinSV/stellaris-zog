@@ -1,0 +1,1374 @@
+#####################################
+## Engineering / Voidcraft / Common
+#####################################
+
+tech_advanced_voidcraft = {
+    cost = 700
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_voidcraft"
+    tier = 0
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {}
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_voidcraft_prereqfor.title
+            desc = tech_advanced_voidcraft_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        category_voidcraft_research_speed_mult = 0.05
+        category_military_theory_research_speed_mult = 0.025
+    }
+
+    weight = 100
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            is_ai = yes
+        }
+        modifier = {
+            factor = 0
+            years_passed < 5
+        }
+    }
+
+    ai_weight = {
+        factor = 0
+    }
+}
+
+tech_supreme_voidcraft = {
+    cost = 40000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_supreme_voidcraft"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_voidcraft"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_supreme_voidcraft_prereqfor.title
+            desc = tech_supreme_voidcraft_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        category_voidcraft_research_speed_mult = 0.25
+        category_military_theory_research_speed_mult = 0.125
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0
+            years_passed < 75
+        }
+        modifier = {
+            factor = 0
+            count_tech_options = {
+                area = engineering
+                count < 20
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_tradition = "tr_supremacy_adopt"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_supremacy_finish"
+        }
+        modifier = {
+            factor = 1.10
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.30
+            research_leader = {
+                area = engineering
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_curator"
+                    has_trait = "leader_trait_maniacal"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}
+
+################################################
+## Engineering / Voidcraft / Military Stations
+################################################
+
+tech_advanced_military_station_offense_01 = {
+    cost = 2500
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_military_station_offense_01"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_voidcraft"
+        "tech_space_defense_station_1"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_military_station_offense_01_prereqfor.title
+            desc = tech_advanced_military_station_offense_01_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipclass_military_station_damage_mult = 0.15
+        shipsize_military_station_small_upkeep_mult = -0.25
+        shipsize_military_station_small_build_cost_mult = -0.25
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_tradition = "tr_supremacy_adopt"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_tradition = "tr_supremacy_master_shipwrights"
+        }
+        modifier = {
+            factor = 1.15
+            has_tradition = "tr_supremacy_war_games"
+        }
+        modifier = {
+            factor = 1.30
+            has_tradition = "tr_supremacy_finish"
+        }
+        modifier = {
+            factor = 1.10
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_valid_civic = "civic_citizen_service"
+        }
+    }
+
+    ai_weight = {
+        factor = 80
+    }
+}
+
+tech_advanced_military_station_defence_01 = {
+    cost = 2500
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_military_station_defence_01"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_voidcraft"
+        "tech_space_defense_station_1"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_military_station_defence_01_prereqfor.title
+            desc = tech_advanced_military_station_defence_01_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipclass_military_station_hit_points_mult = 0.15
+        shipsize_military_station_small_upkeep_mult = -0.25
+        shipsize_military_station_small_build_cost_mult = -0.25
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_tradition = "tr_supremacy_adopt"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_tradition = "tr_supremacy_master_shipwrights"
+        }
+        modifier = {
+            factor = 1.15
+            has_tradition = "tr_supremacy_war_games"
+        }
+        modifier = {
+            factor = 1.30
+            has_tradition = "tr_supremacy_finish"
+        }
+        modifier = {
+            factor = 1.10
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_valid_civic = "civic_citizen_service"
+        }
+    }
+
+    ai_weight = {
+        factor = 80
+    }
+}
+
+tech_advanced_military_station_offense_02 = {
+    cost = 7500
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_military_station_offense_02"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_voidcraft"
+        "tech_space_defense_station_2"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_military_station_offense_02_prereqfor.title
+            desc = tech_advanced_military_station_offense_02_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipclass_military_station_damage_mult = 0.15
+        shipsize_military_station_medium_upkeep_mult = -0.25
+        shipsize_military_station_medium_build_cost_mult = -0.25
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NOT = {
+                has_valid_civic = "civic_citizen_service"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_tradition = "tr_supremacy_master_shipwrights"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_tradition = "tr_supremacy_war_games"
+        }
+        modifier = {
+            factor = 1.15
+            has_tradition = "tr_supremacy_finish"
+        }
+        modifier = {
+            factor = 1.05
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.10
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}
+
+tech_advanced_military_station_defence_02 = {
+    cost = 7500
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_military_station_defence_02"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_voidcraft"
+        "tech_space_defense_station_2"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_military_station_defence_02_prereqfor.title
+            desc = tech_advanced_military_station_defence_02_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipclass_military_station_hit_points_mult = 0.15
+        shipsize_military_station_medium_upkeep_mult = -0.25
+        shipsize_military_station_medium_build_cost_mult = -0.25
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NOT = {
+                has_valid_civic = "civic_citizen_service"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_tradition = "tr_supremacy_master_shipwrights"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_tradition = "tr_supremacy_war_games"
+        }
+        modifier = {
+            factor = 1.15
+            has_tradition = "tr_supremacy_finish"
+        }
+        modifier = {
+            factor = 1.05
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.10
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}
+
+tech_advanced_military_station_offense_03 = {
+    cost = 15000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_military_station_offense_03"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_voidcraft"
+        "tech_space_defense_station_3"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_military_station_offense_03_prereqfor.title
+            desc = tech_advanced_military_station_offense_03_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipclass_military_station_damage_mult = 0.15
+        shipsize_military_station_large_upkeep_mult = -0.25
+        shipsize_military_station_large_build_cost_mult = -0.25
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_master_shipwrights"
+            }
+        }
+        modifier = {
+            factor = 0.80
+            NOT = {
+                has_valid_civic = "civic_citizen_service"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_tradition = "tr_supremacy_war_games"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NAND = {
+                has_ethic = "ethic_militarist"
+                has_ethic = "ethic_fanatic_militarist"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_tradition = "tr_supremacy_finish"
+        }
+        modifier = {
+            factor = 1.05
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}
+
+tech_advanced_military_station_defence_03 = {
+    cost = 15000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_military_station_defence_03"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_voidcraft"
+        "tech_space_defense_station_3"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_military_station_defence_03_prereqfor.title
+            desc = tech_advanced_military_station_defence_03_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipclass_military_station_hit_points_mult = 0.15
+        shipsize_military_station_large_upkeep_mult = -0.25
+        shipsize_military_station_large_build_cost_mult = -0.25
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_master_shipwrights"
+            }
+        }
+        modifier = {
+            factor = 0.80
+            NOT = {
+                has_valid_civic = "civic_citizen_service"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_tradition = "tr_supremacy_war_games"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NAND = {
+                has_ethic = "ethic_militarist"
+                has_ethic = "ethic_fanatic_militarist"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_tradition = "tr_supremacy_finish"
+        }
+        modifier = {
+            factor = 1.05
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}
+
+tech_supreme_military_station_offense_01 = {
+    cost = 30000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_supreme_military_station_offense_01"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_military_station_offense_01"
+        "tech_advanced_military_station_offense_02"
+        "tech_advanced_military_station_offense_03"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_supreme_military_station_offense_01_prereqfor.title
+            desc = tech_supreme_military_station_offense_01_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipclass_military_station_damage_mult = 0.30
+        shipclass_military_station_build_cost_mult = 0.15
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_war_games"
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                has_ethic = "ethic_militarist"
+                has_ethic = "ethic_fanatic_militarist"
+            }
+        }
+        modifier = {
+            factor = 0.85
+            research_leader = {
+                area = engineering
+                NOT = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.85
+            research_leader = {
+                area = engineering
+                has_level < 4
+            }
+        }
+        modifier = {
+            factor = 0.80
+            NOT = {
+                has_valid_civic = "civic_citizen_service"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_tradition = "tr_supremacy_finish"
+            }
+        }
+        modifier = {
+            factor = 1.35
+            has_ascension_perk = "ap_voidborn"
+        }
+        modifier = {
+            factor = 1.25
+            has_ascension_perk = "ap_galactic_force_projection"
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}
+
+tech_supreme_military_station_defence_01 = {
+    cost = 30000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_supreme_military_station_defence_01"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_military_station_defence_01"
+        "tech_advanced_military_station_defence_02"
+        "tech_advanced_military_station_defence_03"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_supreme_military_station_defence_01_prereqfor.title
+            desc = tech_supreme_military_station_defence_01_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipclass_military_station_hit_points_mult = 0.30
+        shipclass_military_station_build_cost_mult = 0.15
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_war_games"
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                has_ethic = "ethic_militarist"
+                has_ethic = "ethic_fanatic_militarist"
+            }
+        }
+        modifier = {
+            factor = 0.85
+            research_leader = {
+                area = engineering
+                NOT = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.85
+            research_leader = {
+                area = engineering
+                has_level < 4
+            }
+        }
+        modifier = {
+            factor = 0.80
+            NOT = {
+                has_valid_civic = "civic_citizen_service"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_tradition = "tr_supremacy_finish"
+            }
+        }
+        modifier = {
+            factor = 1.35
+            has_ascension_perk = "ap_voidborn"
+        }
+        modifier = {
+            factor = 1.25
+            has_ascension_perk = "ap_galactic_force_projection"
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}
+
+tech_supreme_military_station_offense_02 = {
+    cost = 50000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_supreme_military_station_offense_02"
+    tier = 3
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_supreme_military_station_offense_01"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_supreme_military_station_offense_02_prereqfor.title
+            desc = tech_supreme_military_station_offense_02_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipclass_military_station_damage_mult = 0.30
+        shipclass_military_station_build_cost_mult = 0.15
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ethic = "ethic_fanatic_militarist"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            research_leader = {
+                area = engineering
+                NOT = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 5
+            }
+        }
+        modifier = {
+            factor = 0.80
+            NOT = {
+                has_valid_civic = "civic_citizen_service"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_ascension_perk = "ap_voidborn"
+        }
+        modifier = {
+            factor = 1.10
+            has_ascension_perk = "ap_galactic_force_projection"
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}
+
+tech_supreme_military_station_defence_02 = {
+    cost = 50000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_supreme_military_station_defence_02"
+    tier = 3
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_supreme_military_station_defence_01"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_supreme_military_station_defence_02_prereqfor.title
+            desc = tech_supreme_military_station_defence_02_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipclass_military_station_hit_points_mult = 0.30
+        shipclass_military_station_build_cost_mult = 0.15
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ethic = "ethic_fanatic_militarist"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            research_leader = {
+                area = engineering
+                NOT = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 5
+            }
+        }
+        modifier = {
+            factor = 0.80
+            NOT = {
+                has_valid_civic = "civic_citizen_service"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_ascension_perk = "ap_voidborn"
+        }
+        modifier = {
+            factor = 1.10
+            has_ascension_perk = "ap_galactic_force_projection"
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}
+
+tech_supreme_military_station_offense_03 = {
+    cost = 100000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_supreme_military_station_offense_03"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_supreme_military_station_offense_02"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_supreme_military_station_offense_03_prereqfor.title
+            desc = tech_supreme_military_station_offense_03_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipclass_military_station_damage_mult = 0.30
+        shipclass_military_station_build_cost_mult = 0.15
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_supremacy_finish"
+                has_ethic = "ethic_fanatic_militarist"
+                research_leader = {
+                    area = engineering
+                    NOR = {
+                        has_trait = "leader_trait_expertise_voidcraft"
+                        has_level > 4
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                has_valid_civic = "civic_citizen_service"
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                has_ascension_perk = "ap_voidborn"
+                has_ascension_perk = "ap_galactic_force_projection"
+            }
+        }
+        modifier = {
+            factor = 0.85
+            NOR = {
+                has_ascension_perk = "ap_voidborn"
+                has_ascension_perk = "ap_galactic_force_projection"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}
+
+tech_supreme_military_station_defence_03 = {
+    cost = 100000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_supreme_military_station_defence_03"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_supreme_military_station_defence_02"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_supreme_military_station_defence_03_prereqfor.title
+            desc = tech_supreme_military_station_defence_03_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipclass_military_station_hit_points_mult = 0.30
+        shipclass_military_station_build_cost_mult = 0.15
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_supremacy_finish"
+                has_ethic = "ethic_fanatic_militarist"
+                research_leader = {
+                    area = engineering
+                    NOR = {
+                        has_trait = "leader_trait_expertise_voidcraft"
+                        has_level > 4
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                has_valid_civic = "civic_citizen_service"
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                has_ascension_perk = "ap_voidborn"
+                has_ascension_perk = "ap_galactic_force_projection"
+            }
+        }
+        modifier = {
+            factor = 0.85
+            NOR = {
+                has_ascension_perk = "ap_voidborn"
+                has_ascension_perk = "ap_galactic_force_projection"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}
+
+#########################################
+## Engineering / Voidcraft / Spaceports
+#########################################
+
+tech_advanced_spaceport_construction_01 = {
+    cost = 5000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_spaceport_construction_01"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_voidcraft"
+        "tech_spaceport_1"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_spaceport_construction_01_prereqfor.title
+            desc = tech_advanced_spaceport_construction_01_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        spaceport_ship_build_cost_mult = -0.15
+        spaceport_ship_build_time_mult = -0.15
+    }
+
+    weight = 90
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NAND = {
+                check_variable = {
+                    which = "ship_corvette_built"
+                    value > 19
+                }
+                check_variable = {
+                    which = "ship_destroyer_built"
+                    value > 9
+                }
+                check_variable = {
+                    which = "ship_cruiser_built"
+                    value > 4
+                }
+                check_variable = {
+                    which = "ship_battleship_built"
+                    value > 0
+                }
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NAND = {
+                has_tradition = "tr_prosperity_adopt"
+                has_valid_civic = "civic_distinguished_admiralty"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_tradition = "tr_prosperity_sct"
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_prosperity_fleet_logistical_corps"
+        }
+        modifier = {
+            factor = 1.50
+            has_tradition = "tr_prosperity_finish"
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.75
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 90
+    }
+}
+
+tech_advanced_spaceport_construction_02 = {
+    cost = 10000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_spaceport_construction_02"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_spaceport_construction_01"
+        "tech_spaceport_2"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_spaceport_construction_02_prereqfor.title
+            desc = tech_advanced_spaceport_construction_02_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        spaceport_ship_build_cost_mult = -0.20
+        spaceport_ship_build_time_mult = -0.20
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NAND = {
+                check_variable = {
+                    which = "ship_corvette_built"
+                    value > 49
+                }
+                check_variable = {
+                    which = "ship_destroyer_built"
+                    value > 14
+                }
+                check_variable = {
+                    which = "ship_cruiser_built"
+                    value > 5
+                }
+                check_variable = {
+                    which = "ship_battleship_built"
+                    value > 1
+                }
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NAND = {
+                has_tradition = "tr_prosperity_adopt"
+                has_valid_civic = "civic_distinguished_admiralty"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NAND = {
+                has_tradition = "tr_prosperity_sct"
+                has_valid_civic = "civic_distinguished_admiralty"
+            }
+        }
+        modifier = {
+            factor = 1.12
+            has_tradition = "tr_prosperity_fleet_logistical_corps"
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_prosperity_finish"
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.50
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 80
+    }
+}
+
+tech_advanced_spaceport_module_01 = {
+    cost = 5000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_spaceport_module_01"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_voidcraft"
+        "tech_spaceport_1"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_spaceport_module_01_prereqfor.title
+            desc = tech_advanced_spaceport_module_01_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        spaceport_module_cost_mult = -0.15
+    }
+
+    weight = 90
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "spaceport_built"
+                value < 3
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.75
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 90
+    }
+}
