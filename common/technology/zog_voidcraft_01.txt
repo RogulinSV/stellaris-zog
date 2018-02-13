@@ -1788,3 +1788,334 @@ tech_advanced_spaceport_module_01 = {
         factor = 90
     }
 }
+
+tech_advanced_spaceport_module_02 = {
+    cost = 10000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_spaceport_module_02"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_spaceport_module_01"
+        "tech_spaceport_2"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_spaceport_module_02_prereqfor.title
+            desc = tech_advanced_spaceport_module_02_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        spaceport_module_cost_mult = -0.20
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "spaceport_built"
+                value < 5
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.50
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 80
+    }
+}
+
+tech_advanced_spaceport_module_03 = {
+    cost = 15000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_spaceport_module_03"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_spaceport_module_02"
+        "tech_spaceport_3"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_spaceport_module_03_prereqfor.title
+            desc = tech_advanced_spaceport_module_03_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        spaceport_module_cost_mult = -0.25
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "spaceport_built"
+                value < 8
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}
+
+tech_advanced_spaceport_module_04 = {
+    cost = 25000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_spaceport_module_04"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_spaceport_module_03"
+        "tech_spaceport_4"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_spaceport_module_04_prereqfor.title
+            desc = tech_advanced_spaceport_module_04_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        spaceport_module_cost_mult = -0.30
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "spaceport_built"
+                value < 12
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.10
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}
+
+tech_advanced_spaceport_module_05 = {
+    cost = 50000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_spaceport_module_05"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_spaceport_module_04"
+        "tech_spaceport_5"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_spaceport_module_05_prereqfor.title
+            desc = tech_advanced_spaceport_module_05_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        spaceport_module_cost_mult = -0.40
+    }
+
+    weight = 55
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "spaceport_built"
+                value < 17
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = engineering
+                has_level < 5
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.50
+            research_leader = {
+                area = engineering
+                NAND = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                has_technology = "tech_supreme_voidcraft"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 55
+    }
+}
+
+tech_advanced_spaceport_module_06 = {
+    cost = 90000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_spaceport_module_06"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_advanced_spaceport_module_05"
+        "tech_spaceport_6"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_spaceport_module_06_prereqfor.title
+            desc = tech_advanced_spaceport_module_06_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        spaceport_module_cost_mult = -0.50
+    }
+
+    weight = 50
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "spaceport_built"
+                value < 23
+            }
+        }
+        modifier = {
+            factor = 0.50
+            research_leader = {
+                area = engineering
+                has_level < 5
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                NAND = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_technology = "tech_supreme_voidcraft"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 50
+    }
+}
