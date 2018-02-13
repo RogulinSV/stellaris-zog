@@ -228,6 +228,8 @@
     tech_advanced_spaceport_construction_01_desc: "Передовая конструкция звёздного порта"
     tech_advanced_spaceport_construction_02: "Передовая конструкция звёздной гавани"
     tech_advanced_spaceport_construction_02_desc: "Передовая конструкция звёздной гавани"
+    tech_advanced_spaceport_construction_03: "Передовая конструкция звёздной верфи"
+    tech_advanced_spaceport_construction_03_desc: "Передовая конструкция звёздной верфи"
     tech_advanced_spaceport_module_01: "Передовые модули звёздного порта"
     tech_advanced_spaceport_module_01_desc: "Передовые модули звёздного порта"
 
@@ -460,5 +462,7 @@
     tech_advanced_spaceport_construction_01_prereqfor.desc: "Передовая конструкция звёздного порта"
     tech_advanced_spaceport_construction_02_prereqfor.title: "Передовая конструкция звёздной гавани"
     tech_advanced_spaceport_construction_02_prereqfor.desc: "Передовая конструкция звёздной гавани"
+    tech_advanced_spaceport_construction_03_prereqfor.title: "Передовая конструкция звёздной верфи"
+    tech_advanced_spaceport_construction_03_prereqfor.desc: "Передовая конструкция звёздной верфи"
     tech_advanced_spaceport_module_01_prereqfor.title: "Передовые модули звёздного порта"
     tech_advanced_spaceport_module_01_prereqfor.desc: "Передовые модули звёздного порта"

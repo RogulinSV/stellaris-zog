@@ -222,6 +222,8 @@
     tech_advanced_spaceport_construction_01_desc: ""
     tech_advanced_spaceport_construction_02: ""
     tech_advanced_spaceport_construction_02_desc: ""
+    tech_advanced_spaceport_construction_03: ""
+    tech_advanced_spaceport_construction_03_desc: ""
     tech_advanced_spaceport_module_01: ""
     tech_advanced_spaceport_module_01_desc: ""
 
@@ -450,5 +452,7 @@
     tech_advanced_spaceport_construction_01_prereqfor.desc: ""
     tech_advanced_spaceport_construction_02_prereqfor.title: ""
     tech_advanced_spaceport_construction_02_prereqfor.desc: ""
+    tech_advanced_spaceport_construction_03_prereqfor.title: ""
+    tech_advanced_spaceport_construction_03_prereqfor.desc: ""
     tech_advanced_spaceport_module_01_prereqfor.title: ""
     tech_advanced_spaceport_module_01_prereqfor.desc: ""
