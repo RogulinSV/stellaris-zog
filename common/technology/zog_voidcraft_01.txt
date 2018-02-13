@@ -1228,7 +1228,7 @@ tech_advanced_spaceport_construction_02 = {
 
     prerequisites = {
         "tech_advanced_spaceport_construction_01"
-        "tech_spaceport_2"
+        "tech_spaceport_3"
     }
 
     prereqfor_desc = {
@@ -1326,7 +1326,7 @@ tech_advanced_spaceport_construction_03 = {
 
     prerequisites = {
         "tech_advanced_spaceport_construction_02"
-        "tech_spaceport_3"
+        "tech_spaceport_5"
     }
 
     prereqfor_desc = {
@@ -1426,7 +1426,7 @@ tech_advanced_spaceport_construction_04 = {
 
     prerequisites = {
         "tech_advanced_spaceport_construction_03"
-        "tech_spaceport_4"
+        "tech_spaceport_6"
     }
 
     prereqfor_desc = {
