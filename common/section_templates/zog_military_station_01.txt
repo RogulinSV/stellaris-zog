@@ -370,6 +370,10 @@ ship_section_template = {
     cost = 850
 }
 
+###########################################################
+### Section Templates / Small and Medium Military Station
+###########################################################
+
 ship_section_template = {
     key = "MILITARY_STATION_SMALL_ADVANCED_MID_04"
     ship_size = military_station_small
@@ -744,6 +748,10 @@ ship_section_template = {
     cost = 1100
 }
 
+#################################################
+### Section Templates / Medium Military Station
+#################################################
+
 ship_section_template = {
     key = "MILITARY_STATION_MEDIUM_ADVANCED_MID_01"
     ship_size = military_station_medium
@@ -1115,6 +1123,10 @@ ship_section_template = {
     cost = 1400
 }
 
+###########################################################
+### Section Templates / Medium and Large Military Station
+###########################################################
+
 ship_section_template = {
     key = "MILITARY_STATION_MEDIUM_ADVANCED_MID_04"
     ship_size = military_station_medium
@@ -1241,6 +1253,10 @@ ship_section_template = {
 
     cost = 1800
 }
+
+################################################
+### Section Templates / Large Military Station
+################################################
 
 ship_section_template = {
     key = "MILITARY_STATION_LARGE_ADVANCED_MID_01"
