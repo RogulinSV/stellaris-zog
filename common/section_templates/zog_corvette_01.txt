@@ -1,0 +1,412 @@
+##################################
+### Section Templates / Corvette
+##################################
+
+ship_section_template = {
+    key = "CORVETTE_ADVANCED_MID_01"
+    ship_size = corvette
+    fits_on_slot = mid
+    entity = "corvette_S5_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_advanced_corvette_construction"
+    }
+
+    ai_weight = {
+        factor = 100
+    }
+
+    component_slot = {
+        name = "SMALL_GUN_01"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_02"
+    }
+    component_slot = {
+        name = "SMALL_GUN_03"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_03"
+    }
+    component_slot = {
+        name = "SMALL_GUN_04"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_04"
+    }
+    component_slot = {
+        name = "SMALL_GUN_05"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_05"
+    }
+
+    small_utility_slots = 5
+    medium_utility_slots = 2
+    aux_utility_slots = 2
+
+    cost = 150
+}
+
+ship_section_template = {
+    key = "CORVETTE_ADVANCED_MID_02"
+    ship_size = corvette
+    fits_on_slot = mid
+    entity = "corvette_S3T2_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_advanced_corvette_construction"
+        "tech_torpedoes_1"
+    }
+
+    ai_weight = {
+        factor = 50
+    }
+
+    component_slot = {
+        name = "SMALL_GUN_01"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_02"
+    }
+    component_slot = {
+        name = "SMALL_GUN_03"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_03"
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+
+    small_utility_slots = 5
+    medium_utility_slots = 2
+    aux_utility_slots = 2
+
+    cost = 150
+}
+
+ship_section_template = {
+    key = "CORVETTE_SUPREME_MID_01"
+    ship_size = corvette
+    fits_on_slot = mid
+    entity = "corvette_S6_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_supreme_corvette_construction"
+    }
+
+    ship_modifier = {
+        ship_weapon_damage = 0.05
+        ship_accuracy_add = 3
+        ship_fire_rate_mult = 0.05
+        ship_weapon_range_mult = 0.10
+    }
+
+    ai_weight = {
+        factor = 100
+    }
+
+    component_slot = {
+        name = "SMALL_GUN_01"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_02"
+    }
+    component_slot = {
+        name = "SMALL_GUN_03"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_03"
+    }
+    component_slot = {
+        name = "SMALL_GUN_04"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_04"
+    }
+    component_slot = {
+        name = "SMALL_GUN_05"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_05"
+    }
+    component_slot = {
+        name = "SMALL_GUN_06"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_06"
+    }
+
+    small_utility_slots = 5
+    medium_utility_slots = 2
+    aux_utility_slots = 2
+
+    cost = 170
+}
+
+ship_section_template = {
+    key = "CORVETTE_SUPREME_MID_02"
+    ship_size = corvette
+    fits_on_slot = mid
+    entity = "corvette_S3T3_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_supreme_corvette_construction"
+        "tech_torpedoes_2"
+    }
+
+    ship_modifier = {
+        ship_weapon_damage = 0.05
+        ship_accuracy_add = 3
+        ship_fire_rate_mult = 0.05
+        ship_weapon_range_mult = 0.10
+    }
+
+    ai_weight = {
+        factor = 50
+    }
+
+    component_slot = {
+        name = "SMALL_GUN_01"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_02"
+    }
+    component_slot = {
+        name = "SMALL_GUN_03"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_03"
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "TORPEDO_03"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_03"
+    }
+
+    small_utility_slots = 5
+    medium_utility_slots = 2
+    aux_utility_slots = 2
+
+    cost = 170
+}
+
+ship_section_template = {
+    key = "CORVETTE_TRANSCENDENTAL_MID_01"
+    ship_size = corvette
+    fits_on_slot = mid
+    entity = "corvette_S6M3_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_transcendental_corvette_construction"
+    }
+
+    ship_modifier = {
+        ship_weapon_damage = 0.15
+        ship_accuracy_add = 5
+        ship_fire_rate_mult = 0.10
+        ship_weapon_range_mult = 0.20
+    }
+
+    ai_weight = {
+        factor = 100
+    }
+
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_02"
+    }
+    component_slot = {
+        name = "SMALL_GUN_03"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_03"
+    }
+    component_slot = {
+        name = "SMALL_GUN_04"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_04"
+    }
+    component_slot = {
+        name = "SMALL_GUN_05"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_05"
+    }
+    component_slot = {
+        name = "SMALL_GUN_06"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_06"
+    }
+
+    small_utility_slots = 6
+    medium_utility_slots = 3
+    aux_utility_slots = 2
+
+    cost = 250
+}
+
+ship_section_template = {
+    key = "CORVETTE_TRANSCENDENTAL_MID_02"
+    ship_size = corvette
+    fits_on_slot = mid
+    entity = "corvette_S3T3M3_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_transcendental_corvette_construction"
+        "tech_torpedoes_3"
+    }
+
+    ship_modifier = {
+        ship_weapon_damage = 0.15
+        ship_accuracy_add = 5
+        ship_fire_rate_mult = 0.10
+        ship_weapon_range_mult = 0.20
+    }
+
+    ai_weight = {
+        factor = 75
+    }
+
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "TORPEDO_03"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_02"
+    }
+    component_slot = {
+        name = "SMALL_GUN_03"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_03"
+    }
+
+    small_utility_slots = 6
+    medium_utility_slots = 3
+    aux_utility_slots = 2
+
+    cost = 270
+}

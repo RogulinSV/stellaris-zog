@@ -3,6 +3,9 @@
 ############################################
 
 tech_advanced_corvette_construction = {
+    # Unlocks "CORVETTE_ADVANCED_MID_01" section template
+    # Unlocks "CORVETTE_ADVANCED_MID_02" section template
+
     cost = 2500
     area = engineering
     start_tech = no
@@ -20,7 +23,7 @@ tech_advanced_corvette_construction = {
     }
 
     prereqfor_desc = {
-        feature = {
+        component = {
             title = tech_advanced_corvette_construction_prereqfor.title
             desc = tech_advanced_corvette_construction_prereqfor.desc
         }
@@ -85,6 +88,9 @@ tech_advanced_corvette_construction = {
 }
 
 tech_supreme_corvette_construction = {
+    # Unlocks "CORVETTE_SUPREME_MID_01" section template
+    # Unlocks "CORVETTE_SUPREME_MID_02" section template
+
     cost = 5000
     area = engineering
     start_tech = no
@@ -101,7 +107,7 @@ tech_supreme_corvette_construction = {
     }
 
     prereqfor_desc = {
-        feature = {
+        component = {
             title = tech_supreme_corvette_construction_prereqfor.title
             desc = tech_supreme_corvette_construction_prereqfor.desc
         }
@@ -158,6 +164,9 @@ tech_supreme_corvette_construction = {
 }
 
 tech_transcendental_corvette_construction = {
+    # Unlocks "CORVETTE_TRANSCENDENTAL_MID_01" section template
+    # Unlocks "CORVETTE_TRANSCENDENTAL_MID_02" section template
+
     cost = 10000
     area = engineering
     start_tech = no
@@ -174,7 +183,7 @@ tech_transcendental_corvette_construction = {
     }
 
     prereqfor_desc = {
-        feature = {
+        component = {
             title = tech_transcendental_corvette_construction_prereqfor.title
             desc = tech_transcendental_corvette_construction_prereqfor.desc
         }
