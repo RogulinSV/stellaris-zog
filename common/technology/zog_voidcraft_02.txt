@@ -83,3 +83,76 @@ tech_advanced_corvette_construction = {
         factor = 90
     }
 }
+
+tech_supreme_corvette_construction = {
+    cost = 5000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_corvette_construction"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_corvette_construction"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_supreme_corvette_construction_prereqfor.title
+            desc = tech_supreme_corvette_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipsize_corvette_build_cost_mult = -0.15
+        shipsize_corvette_construction_speed_mult = 0.20
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "ship_corvette_built"
+                value < 30
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.50
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 80
+    }
+}
