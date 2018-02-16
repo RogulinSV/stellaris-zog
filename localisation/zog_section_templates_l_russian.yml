@@ -6,7 +6,7 @@
     CORVETTE_SUPREME_MID_02: "Совершенная секция «Завет»"
     CORVETTE_TRANSCENDENTAL_MID_01: "Трансцендентная секция «Прометей»"
     CORVETTE_TRANSCENDENTAL_MID_02: "Трансцендентная секция «Завет»"
-    # Small military station Sections
+    # Military Station Sections
     MILITARY_STATION_SMALL_ADVANCED_MID_01: "Передовая универсальная cекция «Прометей»"
     MILITARY_STATION_SMALL_ADVANCED_MID_02: "Передовая универсальная cекция «Завет»"
     MILITARY_STATION_SMALL_ADVANCED_MID_03: "Передовая универсальная cекция «Возрождение»"
@@ -16,3 +16,8 @@
     MILITARY_STATION_MEDIUM_ADVANCED_MID_01: "Передовая универсальная cекция «Атлас»"
     MILITARY_STATION_MEDIUM_ADVANCED_MID_02: "Передовая универсальная cекция «Вангелия»"
     MILITARY_STATION_MEDIUM_ADVANCED_MID_03: "Передовая универсальная cекция «Реформация»"
+    MILITARY_STATION_MEDIUM_ADVANCED_MID_04: "Передовая универсальная cекция «Пегас»"
+    MILITARY_STATION_LARGE_ADVANCED_MID_01: "Передовая универсальная cекция «Гидра»"
+    MILITARY_STATION_LARGE_ADVANCED_MID_02: "Передовая универсальная cекция «Феникс»"
+    MILITARY_STATION_LARGE_ADVANCED_MID_03: "Передовая универсальная cекция «Инферно»"
+    MILITARY_STATION_LARGE_ADVANCED_MID_04: "Передовая универсальная cекция «Апокалипсис»"

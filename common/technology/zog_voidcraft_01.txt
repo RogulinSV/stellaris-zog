@@ -485,6 +485,10 @@ tech_advanced_military_station_defence_02 = {
 }
 
 tech_advanced_military_station_offense_03 = {
+    # Unlocks "MILITARY_STATION_MEDIUM_ADVANCED_MID_04" section template
+    # Unlocks "MILITARY_STATION_LARGE_ADVANCED_MID_01" section template
+    # Unlocks "MILITARY_STATION_LARGE_ADVANCED_MID_02" section template
+
     cost = 15000
     area = engineering
     start_tech = no
@@ -502,7 +506,7 @@ tech_advanced_military_station_offense_03 = {
     }
 
     prereqfor_desc = {
-        feature = {
+        component = {
             title = tech_advanced_military_station_offense_03_prereqfor.title
             desc = tech_advanced_military_station_offense_03_prereqfor.desc
         }
@@ -566,6 +570,9 @@ tech_advanced_military_station_offense_03 = {
 }
 
 tech_advanced_military_station_defence_03 = {
+    # Unlocks "MILITARY_STATION_LARGE_ADVANCED_MID_03" section template
+    # Unlocks "MILITARY_STATION_LARGE_ADVANCED_MID_04" section template
+
     cost = 15000
     area = engineering
     start_tech = no
@@ -583,7 +590,7 @@ tech_advanced_military_station_defence_03 = {
     }
 
     prereqfor_desc = {
-        feature = {
+        component = {
             title = tech_advanced_military_station_defence_03_prereqfor.title
             desc = tech_advanced_military_station_defence_03_prereqfor.desc
         }
