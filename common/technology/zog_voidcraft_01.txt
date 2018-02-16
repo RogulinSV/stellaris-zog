@@ -152,6 +152,8 @@ tech_supreme_voidcraft = {
 ################################################
 
 tech_advanced_military_station_offense_01 = {
+    # Unlocks "MILITARY_STATION_SMALL_ADVANCED_MID_01" section template
+
     cost = 2500
     area = engineering
     start_tech = no
@@ -169,7 +171,7 @@ tech_advanced_military_station_offense_01 = {
     }
 
     prereqfor_desc = {
-        feature = {
+        component = {
             title = tech_advanced_military_station_offense_01_prereqfor.title
             desc = tech_advanced_military_station_offense_01_prereqfor.desc
         }
@@ -230,6 +232,9 @@ tech_advanced_military_station_offense_01 = {
 }
 
 tech_advanced_military_station_defence_01 = {
+    # Unlocks "MILITARY_STATION_SMALL_ADVANCED_MID_02" section template
+    # Unlocks "MILITARY_STATION_SMALL_ADVANCED_MID_03" section template
+
     cost = 2500
     area = engineering
     start_tech = no
@@ -247,7 +252,7 @@ tech_advanced_military_station_defence_01 = {
     }
 
     prereqfor_desc = {
-        feature = {
+        component = {
             title = tech_advanced_military_station_defence_01_prereqfor.title
             desc = tech_advanced_military_station_defence_01_prereqfor.desc
         }

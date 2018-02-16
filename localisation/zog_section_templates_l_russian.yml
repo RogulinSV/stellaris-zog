@@ -6,3 +6,7 @@
     CORVETTE_SUPREME_MID_02: "Совершенная секция «Завет»"
     CORVETTE_TRANSCENDENTAL_MID_01: "Трансцендентная секция «Прометей»"
     CORVETTE_TRANSCENDENTAL_MID_02: "Трансцендентная секция «Завет»"
+    # Small military station Sections
+    MILITARY_STATION_SMALL_ADVANCED_MID_01: "Передовая универсальная cекция «Прометей»"
+    MILITARY_STATION_SMALL_ADVANCED_MID_02: "Передовая универсальная cекция «Завет»"
+    MILITARY_STATION_SMALL_ADVANCED_MID_03: "Передовая универсальная cекция «Возрождение»"
