@@ -743,3 +743,374 @@ ship_section_template = {
 
     cost = 1100
 }
+
+ship_section_template = {
+    key = "MILITARY_STATION_MEDIUM_ADVANCED_MID_01"
+    ship_size = military_station_medium
+    fits_on_slot = "north"
+    fits_on_slot = "west"
+    fits_on_slot = "east"
+    fits_on_slot = "south"
+    entity = "military_station_medium_M9S6_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_advanced_military_station_offense_02"
+    }
+
+    ai_weight = {
+        factor = 100
+    }
+
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_03"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_04"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_04"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_05"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_05"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_06"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_06"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_07"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_07"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_08"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_08"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_09"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_09"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_02"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "SMALL_GUN_03"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_03"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "SMALL_GUN_04"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_04"
+    }
+    component_slot = {
+        name = "SMALL_GUN_05"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_05"
+    }
+    component_slot = {
+        name = "SMALL_GUN_06"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_06"
+        is_side_slot = no
+    }
+
+    small_utility_slots = 3
+    medium_utility_slots = 9
+    aux_utility_slots = 3
+
+    cost = 1350
+}
+
+ship_section_template = {
+    key = "MILITARY_STATION_MEDIUM_ADVANCED_MID_02"
+    ship_size = military_station_medium
+    fits_on_slot = "north"
+    fits_on_slot = "west"
+    fits_on_slot = "east"
+    fits_on_slot = "south"
+    entity = "military_station_medium_M9T6_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_advanced_military_station_defence_02"
+        "tech_torpedoes_2"
+    }
+
+    ai_weight = {
+        factor = 75
+    }
+
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_03"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_04"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_04"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_05"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_05"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_06"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_06"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_07"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_07"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_08"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_08"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_09"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_09"
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "TORPEDO_03"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_03"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "TORPEDO_04"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_04"
+    }
+    component_slot = {
+        name = "TORPEDO_05"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_05"
+    }
+    component_slot = {
+        name = "TORPEDO_06"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_06"
+        is_side_slot = no
+    }
+
+    small_utility_slots = 3
+    medium_utility_slots = 9
+    aux_utility_slots = 3
+
+    cost = 1500
+}
+
+ship_section_template = {
+    key = "MILITARY_STATION_MEDIUM_ADVANCED_MID_03"
+    ship_size = military_station_medium
+    fits_on_slot = "north"
+    fits_on_slot = "west"
+    fits_on_slot = "east"
+    fits_on_slot = "south"
+    entity = "military_station_medium_M9P6_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_advanced_military_station_defence_02"
+        "tech_pd_tracking_2"
+    }
+
+    ai_weight = {
+        factor = 75
+    }
+
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_03"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_04"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_04"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_05"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_05"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_06"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_06"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_07"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_07"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_08"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_08"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_09"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_09"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_10"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_10"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_11"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_11"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_12"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_12"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_13"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_13"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_14"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_14"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_15"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_15"
+        is_side_slot = no
+    }
+
+    small_utility_slots = 3
+    medium_utility_slots = 9
+    aux_utility_slots = 3
+
+    cost = 1400
+}
