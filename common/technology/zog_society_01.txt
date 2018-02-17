@@ -341,3 +341,88 @@ tech_tb_desert_worms = {
         }
     }
 }
+
+tech_tb_desert_wormholes = {
+    cost = 2500
+    area = society
+    start_tech = no
+    category = { new_worlds }
+    icon = "tech_tb_desert_wormholes"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_tb_desert_worms"
+    }
+
+    weight_groups = {
+        tile_blockers
+    }
+    mod_weight_if_group_picked = {
+        tile_blockers = 0.15
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_tb_desert_wormholes_prereqfor.title
+            desc = tech_tb_desert_wormholes_prereqfor.desc
+        }
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 3
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet =  {
+                    any_tile = {
+                        has_blocker = "tb_desert_wormholes"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 3
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet =  {
+                    any_tile = {
+                        has_blocker = "tb_desert_wormholes"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 3
+        }
+    }
+}
