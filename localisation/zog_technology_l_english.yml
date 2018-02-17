@@ -1,5 +1,7 @@
 ﻿l_english:
     # Technology
+    tech_tb_desert_worms: ""
+    tech_tb_desert_worms_desc: ""
     tech_advanced_engineering: ""
     tech_advanced_engineering_desc: ""
     tech_supreme_engineering: ""
@@ -326,6 +328,8 @@
     tech_infinitum_leader_cap_desc: ""
 
     # Technology Prerequisites
+    tech_tb_desert_worms_prereqfor.title: ""
+    tech_tb_desert_worms_prereqfor.desc: ""
     tech_advanced_engineering_prereqfor.title: ""
     tech_advanced_engineering_prereqfor.desc: ""
     tech_supreme_engineering_prereqfor.title: ""

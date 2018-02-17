@@ -1,5 +1,7 @@
 ﻿l_russian:
     # Technology
+    tech_tb_desert_worms: "Промысел песчаных червей"
+    tech_tb_desert_worms_desc: "Промысел песчаных червей"
     tech_advanced_engineering: "Передовые инженерные работы"
     tech_advanced_engineering_desc: "Передовые инженерные работы"
     tech_supreme_engineering: "Совершенные инженерные работы"
@@ -332,6 +334,8 @@
     tech_infinitum_leader_cap_desc: "Бесконечные лидеры империи"
 
     # Technology Prerequisites
+    tech_tb_desert_worms_prereqfor.title: "Промысел песчаных червей"
+    tech_tb_desert_worms_prereqfor.desc: "Промысел песчаных червей"
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
     tech_advanced_engineering_prereqfor.desc: "Передовые инженерные работы"
     tech_supreme_engineering_prereqfor.title: "Совершенные инженерные работы"
