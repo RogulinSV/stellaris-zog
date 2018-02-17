@@ -2,6 +2,8 @@
     # Technology
     tech_tb_lava_floods: ""
     tech_tb_lava_floods_desc: ""
+    tech_tb_lava_rivers: ""
+    tech_tb_lava_rivers_desc: ""
     tech_tb_desert_worms: ""
     tech_tb_desert_worms_desc: ""
     tech_advanced_engineering: ""
@@ -332,6 +334,8 @@
     # Technology Prerequisites
     tech_tb_lava_floods_prereqfor.title: ""
     tech_tb_lava_floods_prereqfor.desc: ""
+    tech_tb_lava_rivers_prereqfor.title: ""
+    tech_tb_lava_rivers_prereqfor.desc: ""
     tech_tb_desert_worms_prereqfor.title: ""
     tech_tb_desert_worms_prereqfor.desc: ""
     tech_advanced_engineering_prereqfor.title: ""

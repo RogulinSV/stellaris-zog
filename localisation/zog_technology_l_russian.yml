@@ -2,6 +2,8 @@
     # Technology
     tech_tb_lava_floods: "Управление лавовыми потоками"
     tech_tb_lava_floods_desc: "Управление лавовыми потоками"
+    tech_tb_lava_rivers: "Управление лавовыми реками"
+    tech_tb_lava_rivers_desc: "Управление лавовыми реками"
     tech_tb_desert_worms: "Промысел песчаных червей"
     tech_tb_desert_worms_desc: "Промысел песчаных червей"
     tech_advanced_engineering: "Передовые инженерные работы"
@@ -338,6 +340,8 @@
     # Technology Prerequisites
     tech_tb_lava_floods_prereqfor.title: "Управление лавовыми потоками"
     tech_tb_lava_floods_prereqfor.desc: "Управление лавовыми потоками"
+    tech_tb_lava_rivers_prereqfor.title: "Управление лавовыми реками"
+    tech_tb_lava_rivers_prereqfor.desc: "Управление лавовыми реками"
     tech_tb_desert_worms_prereqfor.title: "Промысел песчаных червей"
     tech_tb_desert_worms_prereqfor.desc: "Промысел песчаных червей"
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
