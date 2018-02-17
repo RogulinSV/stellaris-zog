@@ -2651,7 +2651,7 @@ planet_event = {
 }
 
 planet_event = {
-    id = zog_building_events.102
+    id = zog_building_events.103
     hide_window = yes
     is_triggered_only = yes
 
