@@ -113,5 +113,19 @@ on_ship_built = {
         zog_ship_events.3
         # Ship "Battleship" built
         zog_ship_events.4
+        # Ship "LightCarrier" built
+        zog_ship_events.5
+        # Ship "StrikeCruiser" built
+        zog_ship_events.6
+        # Ship "Battlecruiser" built
+        zog_ship_events.7
+        # Ship "Carrier" built
+        zog_ship_events.8
+        # Ship "Dreadnought" built
+        zog_ship_events.9
+        # Ship "Superdreadnought" built
+        zog_ship_events.10
+        # Ship "Flagship" built
+        zog_ship_events.11
     }
 }

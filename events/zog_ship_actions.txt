@@ -15,6 +15,14 @@ ship_event = {
             is_ship_size = "destroyer"
             is_ship_size = "cruiser"
             is_ship_size = "battleship"
+            # @depend "New Ship Classes & More" (id:683230077)
+            is_ship_size = "LightCarrier"
+            is_ship_size = "StrikeCruiser"
+            is_ship_size = "Battlecruiser"
+            is_ship_size = "Carrier"
+            is_ship_size = "Dreadnought"
+            is_ship_size = "Superdreadnought"
+            is_ship_size = "Flagship"
         }
     }
 
@@ -166,6 +174,238 @@ ship_event = {
                 else = {
                     change_variable = {
                         which = "ship_battleship_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+# @depend "New Ship Classes & More" (id:683230077)
+ship_event = {
+    id = zog_ship_events.5
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ship_size = "LightCarrier"
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "ship_light_carrier_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "ship_light_carrier_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "ship_light_carrier_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = zog_ship_events.6
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ship_size = "StrikeCruiser"
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "ship_strike_cruiser_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "ship_strike_cruiser_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "ship_strike_cruiser_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = zog_ship_events.7
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ship_size = "Battlecruiser"
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "ship_battlecruiser_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "ship_battlecruiser_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "ship_battlecruiser_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = zog_ship_events.8
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ship_size = "Carrier"
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "ship_carrier_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "ship_carrier_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "ship_carrier_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = zog_ship_events.9
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ship_size = "Dreadnought"
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "ship_dreadnought_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "ship_dreadnought_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "ship_dreadnought_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = zog_ship_events.10
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ship_size = "Superdreadnought"
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "ship_superdreadnought_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "ship_superdreadnought_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "ship_superdreadnought_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = zog_ship_events.11
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ship_size = "Flagship"
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "ship_flagship_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "ship_flagship_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "ship_flagship_built"
                         value = 1
                     }
                 }
