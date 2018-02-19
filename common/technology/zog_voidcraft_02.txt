@@ -492,3 +492,246 @@ tech_transcendental_destroyer_construction = {
         factor = 70
     }
 }
+
+#############################################
+## Engineering / Voidcraft / Cruiser Ship
+#############################################
+
+tech_advanced_cruiser_construction = {
+    cost = 2500
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_cruiser_construction"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_voidcraft"
+        "tech_spaceport_5"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_advanced_cruiser_construction_prereqfor.title
+            desc = tech_advanced_cruiser_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipsize_cruiser_build_cost_mult = -0.10
+        shipsize_cruiser_construction_speed_mult = 0.15
+    }
+
+    weight = 90
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "ship_cruiser_built"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 1.30
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.50
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.30
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.75
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 90
+    }
+}
+
+tech_supreme_cruiser_construction = {
+    cost = 5000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_supreme_cruiser_construction"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_cruiser_construction"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_supreme_cruiser_construction_prereqfor.title
+            desc = tech_supreme_cruiser_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipsize_cruiser_build_cost_mult = -0.15
+        shipsize_cruiser_construction_speed_mult = 0.20
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "ship_cruiser_built"
+                value < 25
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.50
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 80
+    }
+}
+
+tech_transcendental_cruiser_construction = {
+    cost = 10000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_transcendental_cruiser_construction"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_supreme_cruiser_construction"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_transcendental_cruiser_construction_prereqfor.title
+            desc = tech_transcendental_cruiser_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipsize_cruiser_build_cost_mult = -0.25
+        shipsize_cruiser_construction_speed_mult = 0.30
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "ship_cruiser_built"
+                value < 40
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.50
+            research_leader = {
+                area = engineering
+                has_level = 3
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_voidcraft"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}
