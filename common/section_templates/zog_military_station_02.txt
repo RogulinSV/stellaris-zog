@@ -644,3 +644,140 @@ ship_section_template = {
 
     cost = 2700
 }
+
+###########################################################
+### Section Templates / Large and X-Large Military Station
+###########################################################
+
+ship_section_template = {
+    key = "MILITARY_STATION_LARGE_SUPREME_MID_05"
+    ship_size = military_station_large
+    # @depend "New Ship Classes & More" (id:683230077)
+    ship_size = military_station_xlarge
+    fits_on_slot = "north"
+    fits_on_slot = "west"
+    fits_on_slot = "east"
+    fits_on_slot = "south"
+    entity = "military_station_large_L15_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_supreme_military_station_offense_02"
+        "tech_strike_craft_3"
+    }
+
+    ai_weight = {
+        factor = 100
+    }
+
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        slot_size = large
+        slot_type = strike_craft
+        rotation = 90
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_02"
+        slot_size = large
+        slot_type = strike_craft
+        rotation = -90
+        locatorname = "small_gun_02"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_03"
+        slot_size = large
+        slot_type = strike_craft
+        rotation = 90
+        locatorname = "small_gun_03"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_04"
+        slot_size = large
+        slot_type = strike_craft
+        rotation = -90
+        locatorname = "small_gun_04"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_05"
+        slot_size = large
+        slot_type = strike_craft
+        rotation = 90
+        locatorname = "small_gun_05"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_06"
+        slot_size = large
+        slot_type = strike_craft
+        rotation = -90
+        locatorname = "small_gun_06"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_07"
+        slot_size = large
+        slot_type = strike_craft
+        rotation = 90
+        locatorname = "small_gun_07"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_08"
+        slot_size = large
+        slot_type = strike_craft
+        rotation = -90
+        locatorname = "small_gun_08"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_09"
+        slot_size = large
+        slot_type = strike_craft
+        rotation = 90
+        locatorname = "small_gun_09"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_10"
+        slot_size = large
+        slot_type = strike_craft
+        rotation = -90
+        locatorname = "small_gun_10"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_11"
+        slot_size = large
+        slot_type = strike_craft
+        rotation = 90
+        locatorname = "small_gun_11"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_12"
+        slot_size = large
+        slot_type = strike_craft
+        rotation = -90
+        locatorname = "small_gun_12"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_13"
+        slot_size = large
+        slot_type = strike_craft
+        rotation = 90
+        locatorname = "small_gun_13"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_14"
+        slot_size = large
+        slot_type = strike_craft
+        rotation = -90
+        locatorname = "small_gun_14"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_15"
+        slot_size = large
+        slot_type = strike_craft
+        rotation = 90
+        locatorname = "small_gun_15"
+    }
+
+    large_utility_slots = 10
+    aux_utility_slots = 5
+
+    cost = 4000
+}

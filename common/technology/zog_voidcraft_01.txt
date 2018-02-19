@@ -839,6 +839,8 @@ tech_supreme_military_station_defence_01 = {
 }
 
 tech_supreme_military_station_offense_02 = {
+    # Unlocks "MILITARY_STATION_LARGE_SUPREME_MID_05" section template
+
     cost = 50000
     area = engineering
     start_tech = no
