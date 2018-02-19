@@ -664,6 +664,8 @@ ship_section_template = {
     prerequisites = {
         "tech_supreme_military_station_offense_02"
         "tech_strike_craft_3"
+        # @depend "New Ship Classes & More" (id:683230077)
+        "tech_battle_fortress_1"
     }
 
     ai_weight = {
@@ -780,4 +782,647 @@ ship_section_template = {
     aux_utility_slots = 5
 
     cost = 4000
+}
+
+###################################################
+### Section Templates / X-Large Military Station
+###################################################
+
+ship_section_template = {
+    key = "MILITARY_STATION_XLARGE_ADVANCED_MID_01"
+    # @depend "New Ship Classes & More" (id:683230077)
+    ship_size = military_station_xlarge
+    fits_on_slot = "north"
+    fits_on_slot = "west"
+    fits_on_slot = "east"
+    fits_on_slot = "south"
+    entity = "military_station_xlarge_X4L5T6_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_advanced_military_station_defence_03"
+        "tech_energy_lance_2"
+        "tech_arc_emitter_2"
+        "tech_energy_torpedoes_2"
+        # @depend "New Ship Classes & More" (id:683230077)
+        "tech_battle_fortress_1"
+    }
+
+    ai_weight = {
+        factor = 75
+    }
+
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_02"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_02"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_03"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_03"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_04"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_04"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_03"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "LARGE_GUN_04"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_04"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "LARGE_GUN_05"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_05"
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "TORPEDO_03"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_03"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "TORPEDO_04"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_04"
+    }
+    component_slot = {
+        name = "TORPEDO_05"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_05"
+    }
+    component_slot = {
+        name = "TORPEDO_06"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_06"
+        is_side_slot = no
+    }
+
+    large_utility_slots = 9
+    aux_utility_slots = 6
+
+    cost = 3400
+}
+
+ship_section_template = {
+    key = "MILITARY_STATION_XLARGE_ADVANCED_MID_02"
+    # @depend "New Ship Classes & More" (id:683230077)
+    ship_size = military_station_xlarge
+    fits_on_slot = "north"
+    fits_on_slot = "west"
+    fits_on_slot = "east"
+    fits_on_slot = "south"
+    entity = "military_station_xlarge_X4L5P6_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_advanced_military_station_defence_03"
+        "tech_energy_lance_2"
+        "tech_arc_emitter_2"
+        "tech_pd_tracking_2"
+        # @depend "New Ship Classes & More" (id:683230077)
+        "tech_battle_fortress_1"
+    }
+
+    ai_weight = {
+        factor = 80
+    }
+
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_02"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_02"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_03"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_03"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_04"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_04"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_03"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "LARGE_GUN_04"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_04"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "LARGE_GUN_05"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_05"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_03"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_04"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_04"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_05"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_05"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_06"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_06"
+        is_side_slot = no
+    }
+
+    large_utility_slots = 9
+    aux_utility_slots = 6
+
+    cost = 3200
+}
+
+ship_section_template = {
+    key = "MILITARY_STATION_XLARGE_SUPREME_MID_01"
+    # @depend "New Ship Classes & More" (id:683230077)
+    ship_size = military_station_xlarge
+    fits_on_slot = "north"
+    fits_on_slot = "west"
+    fits_on_slot = "east"
+    fits_on_slot = "south"
+    entity = "military_station_xlarge_X6L9_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_supreme_military_station_offense_01"
+        "tech_energy_lance_2"
+        "tech_arc_emitter_2"
+        # @depend "New Ship Classes & More" (id:683230077)
+        "tech_battle_fortress_1"
+    }
+
+    ai_weight = {
+        factor = 100
+    }
+
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_02"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_02"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_03"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_03"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_04"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_04"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_05"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_05"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_06"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_06"
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_01"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_02"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_03"
+    }
+    component_slot = {
+        name = "LARGE_GUN_04"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_04"
+    }
+    component_slot = {
+        name = "LARGE_GUN_05"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_05"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "LARGE_GUN_06"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_06"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "LARGE_GUN_07"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_07"
+    }
+    component_slot = {
+        name = "LARGE_GUN_08"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_08"
+    }
+    component_slot = {
+        name = "LARGE_GUN_09"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_09"
+        is_side_slot = no
+    }
+
+    large_utility_slots = 9
+    aux_utility_slots = 6
+
+    cost = 3600
+}
+
+ship_section_template = {
+    key = "MILITARY_STATION_XLARGE_SUPREME_MID_02"
+    # @depend "New Ship Classes & More" (id:683230077)
+    ship_size = military_station_xlarge
+    fits_on_slot = "north"
+    fits_on_slot = "west"
+    fits_on_slot = "east"
+    fits_on_slot = "south"
+    entity = "military_station_xlarge_X3T12_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_supreme_military_station_defence_01"
+        "tech_energy_lance_2"
+        "tech_arc_emitter_2"
+        "tech_energy_torpedoes_2"
+        # @depend "New Ship Classes & More" (id:683230077)
+        "tech_battle_fortress_1"
+    }
+
+    ai_weight = {
+        factor = 90
+    }
+
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_02"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_02"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_03"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_03"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "TORPEDO_03"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "TORPEDO_04"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_04"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "TORPEDO_05"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_05"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "TORPEDO_06"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_06"
+    }
+    component_slot = {
+        name = "TORPEDO_07"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_07"
+    }
+    component_slot = {
+        name = "TORPEDO_08"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_08"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "TORPEDO_09"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_09"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "TORPEDO_10"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_10"
+    }
+    component_slot = {
+        name = "TORPEDO_11"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_11"
+    }
+    component_slot = {
+        name = "TORPEDO_12"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_12"
+        is_side_slot = no
+    }
+
+    large_utility_slots = 9
+    aux_utility_slots = 6
+
+    cost = 3800
+}
+
+ship_section_template = {
+    key = "MILITARY_STATION_XLARGE_SUPREME_MID_03"
+    # @depend "New Ship Classes & More" (id:683230077)
+    ship_size = military_station_xlarge
+    fits_on_slot = "north"
+    fits_on_slot = "west"
+    fits_on_slot = "east"
+    fits_on_slot = "south"
+    entity = "military_station_xlarge_X3P12_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_supreme_military_station_defence_01"
+        "tech_energy_lance_2"
+        "tech_arc_emitter_2"
+        "tech_pd_tracking_3"
+        # @depend "New Ship Classes & More" (id:683230077)
+        "tech_battle_fortress_1"
+    }
+
+    ai_weight = {
+        factor = 90
+    }
+
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_02"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_02"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_03"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_03"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_04"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_04"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_05"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_05"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_06"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_06"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_07"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_07"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_08"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_08"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_09"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_09"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_10"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_10"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_11"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_11"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_12"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "medium_gun_12"
+        is_side_slot = no
+    }
+
+    large_utility_slots = 9
+    aux_utility_slots = 6
+
+    cost = 3700
 }
