@@ -255,6 +255,13 @@ tech_transcendental_corvette_construction = {
 #############################################
 
 tech_advanced_destroyer_construction = {
+    # Unlocks "DESTROYER_ADVANCED_BOW_01" section template
+    # Unlocks "DESTROYER_ADVANCED_BOW_02" section template
+    # Unlocks "DESTROYER_ADVANCED_BOW_03" section template
+    # Unlocks "DESTROYER_ADVANCED_STERN_01" section template
+    # Unlocks "DESTROYER_ADVANCED_STERN_02" section template
+    # Unlocks "DESTROYER_ADVANCED_STERN_03" section template
+
     cost = 2500
     area = engineering
     start_tech = no

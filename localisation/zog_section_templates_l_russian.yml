@@ -6,6 +6,13 @@
     CORVETTE_SUPREME_MID_02: "Совершенная секция «Завет»"
     CORVETTE_TRANSCENDENTAL_MID_01: "Трансцендентная секция «Прометей»"
     CORVETTE_TRANSCENDENTAL_MID_02: "Трансцендентная секция «Завет»"
+    # Destroyer Sections
+    DESTROYER_ADVANCED_BOW_01: "Передовая носовая cекция «Прометей»"
+    DESTROYER_ADVANCED_BOW_02: "Передовая носовая cекция «Завет»"
+    DESTROYER_ADVANCED_BOW_03: "Передовая носовая cекция «Возрождение»"
+    DESTROYER_ADVANCED_STERN_01: "Передовая кормовая cекция «Прометей»"
+    DESTROYER_ADVANCED_STERN_02: "Передовая кормовая cекция «Завет»"
+    DESTROYER_ADVANCED_STERN_03: "Передовая кормовая cекция «Возрождение»"
     # Military Station Sections
     MILITARY_STATION_SMALL_ADVANCED_MID_01: "Передовая cекция «Прометей»"
     MILITARY_STATION_SMALL_ADVANCED_MID_02: "Передовая cекция «Завет»"
