@@ -13,6 +13,13 @@
     DESTROYER_ADVANCED_STERN_01: "Передовая кормовая cекция «Прометей»"
     DESTROYER_ADVANCED_STERN_02: "Передовая кормовая cекция «Завет»"
     DESTROYER_ADVANCED_STERN_03: "Передовая кормовая cекция «Возрождение»"
+    DESTROYER_SUPREME_BOW_01: "Совершенная носовая секция «Прометей»"
+    DESTROYER_SUPREME_BOW_02: "Совершенная носовая секция «Завет»"
+    DESTROYER_SUPREME_BOW_03: "Совершенная носовая секция «Возрождение»"
+    DESTROYER_SUPREME_STERN_01: "Совершенная кормовая cекция «Прометей»"
+    DESTROYER_SUPREME_STERN_02: "Совершенная кормовая cекция «Завет»"
+    DESTROYER_SUPREME_STERN_03: "Совершенная кормовая cекция «Возрождение»"
+    DESTROYER_SUPREME_STERN_04: "Совершенная кормовая cекция «Откровение»"
     # Military Station Sections
     MILITARY_STATION_SMALL_ADVANCED_MID_01: "Передовая cекция «Прометей»"
     MILITARY_STATION_SMALL_ADVANCED_MID_02: "Передовая cекция «Завет»"

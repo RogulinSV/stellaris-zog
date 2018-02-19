@@ -344,6 +344,14 @@ tech_advanced_destroyer_construction = {
 }
 
 tech_supreme_destroyer_construction = {
+    # Unlocks "DESTROYER_SUPREME_BOW_01" section template
+    # Unlocks "DESTROYER_SUPREME_BOW_02" section template
+    # Unlocks "DESTROYER_SUPREME_BOW_03" section template
+    # Unlocks "DESTROYER_SUPREME_STERN_01" section template
+    # Unlocks "DESTROYER_SUPREME_STERN_02" section template
+    # Unlocks "DESTROYER_SUPREME_STERN_03" section template
+    # Unlocks "DESTROYER_SUPREME_STERN_04" section template
+
     cost = 5000
     area = engineering
     start_tech = no
