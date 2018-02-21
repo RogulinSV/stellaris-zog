@@ -29,6 +29,18 @@
     DESTROYER_TRANSCENDENTAL_STERN_03: "Трансцендентная кормовая cекция «Возрождение»"
     DESTROYER_TRANSCENDENTAL_STERN_04: "Трансцендентная кормовая cекция «Откровение»"
     DESTROYER_TRANSCENDENTAL_STERN_05: "Трансцендентная кормовая cекция «Атлас»"
+    # Cruiser Sections
+    CRUISER_ADVANCED_BOW_01: "Передовая носовая cекция «Прометей»"
+    CRUISER_ADVANCED_BOW_02: "Передовая носовая cекция «Завет»"
+    CRUISER_ADVANCED_BOW_03: "Передовая носовая cекция «Возрождение»"
+    CRUISER_ADVANCED_BOW_04: "Передовая носовая cекция «Откровение»"
+    CRUISER_ADVANCED_MID_01: "Передовая палубная cекция «Прометей»"
+    CRUISER_ADVANCED_MID_02: "Передовая палубная cекция «Завет»"
+    CRUISER_ADVANCED_MID_03: "Передовая палубная cекция «Возрождение»"
+    CRUISER_ADVANCED_MID_04: "Передовая палубная cекция «Откровение»"
+    CRUISER_ADVANCED_STERN_01: "Передовая кормовая cекция «Прометей»"
+    CRUISER_ADVANCED_STERN_02: "Передовая кормовая cекция «Завет»"
+    CRUISER_ADVANCED_STERN_03: "Передовая кормовая cекция «Феникс»"
     # Military Station Sections
     MILITARY_STATION_SMALL_ADVANCED_MID_01: "Передовая cекция «Прометей»"
     MILITARY_STATION_SMALL_ADVANCED_MID_02: "Передовая cекция «Завет»"
