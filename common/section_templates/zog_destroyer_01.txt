@@ -11,7 +11,7 @@ ship_section_template = {
     ship_size = destroyer
     fits_on_slot = bow
     entity = "destroyer_M4S3_entity"
-    icon = "GFX_ship_part_core_stern"
+    icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
         "tech_advanced_destroyer_construction"
@@ -76,7 +76,7 @@ ship_section_template = {
     ship_size = destroyer
     fits_on_slot = bow
     entity = "destroyer_M3T3_entity"
-    icon = "GFX_ship_part_core_stern"
+    icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
         "tech_advanced_destroyer_construction"
@@ -136,7 +136,7 @@ ship_section_template = {
     ship_size = destroyer
     fits_on_slot = bow
     entity = "destroyer_S7_entity"
-    icon = "GFX_ship_part_core_stern"
+    icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
         "tech_advanced_destroyer_construction"
@@ -405,7 +405,7 @@ ship_section_template = {
     ship_size = destroyer
     fits_on_slot = bow
     entity = "destroyer_M5S3_entity"
-    icon = "GFX_ship_part_core_stern"
+    icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
         "tech_supreme_destroyer_construction"
@@ -476,7 +476,7 @@ ship_section_template = {
     ship_size = destroyer
     fits_on_slot = bow
     entity = "destroyer_M3T4_entity"
-    icon = "GFX_ship_part_core_stern"
+    icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
         "tech_supreme_destroyer_construction"
@@ -542,7 +542,7 @@ ship_section_template = {
     ship_size = destroyer
     fits_on_slot = bow
     entity = "destroyer_S3T5_entity"
-    icon = "GFX_ship_part_core_stern"
+    icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
         "tech_supreme_destroyer_construction"
