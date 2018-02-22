@@ -742,7 +742,7 @@ ship_section_template = {
 ship_section_template = {
     key = "CRUISER_SUPREME_STERN_01"
     ship_size = cruiser
-    fits_on_slot = mid
+    fits_on_slot = stern
     entity = "cruiser_L4P9_entity"
     icon = "GFX_ship_part_core_stern"
 
@@ -845,7 +845,7 @@ ship_section_template = {
 ship_section_template = {
     key = "CRUISER_SUPREME_STERN_02"
     ship_size = cruiser
-    fits_on_slot = mid
+    fits_on_slot = stern
     entity = "cruiser_L3M3P6_entity"
     icon = "GFX_ship_part_core_stern"
 
@@ -942,7 +942,7 @@ ship_section_template = {
 ship_section_template = {
     key = "CRUISER_SUPREME_STERN_03"
     ship_size = cruiser
-    fits_on_slot = mid
+    fits_on_slot = stern
     entity = "cruiser_L6M3_entity"
     icon = "GFX_ship_part_core_stern"
 
