@@ -617,6 +617,18 @@ tech_advanced_cruiser_construction = {
 }
 
 tech_supreme_cruiser_construction = {
+    # Unlocks "CRUISER_SUPREME_BOW_01" section template
+    # Unlocks "CRUISER_SUPREME_BOW_02" section template
+    # Unlocks "CRUISER_SUPREME_BOW_03" section template
+    # Unlocks "CRUISER_SUPREME_BOW_04" section template
+    # Unlocks "CRUISER_SUPREME_BOW_05" section template
+    # Unlocks "CRUISER_SUPREME_MID_01" section template
+    # Unlocks "CRUISER_SUPREME_MID_02" section template
+    # Unlocks "CRUISER_SUPREME_MID_03" section template
+    # Unlocks "CRUISER_SUPREME_STERN_01" section template
+    # Unlocks "CRUISER_SUPREME_STERN_02" section template
+    # Unlocks "CRUISER_SUPREME_STERN_03" section template
+
     cost = 5000
     area = engineering
     start_tech = no
