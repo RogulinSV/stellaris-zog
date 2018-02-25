@@ -1,16 +1,21 @@
-@distance = 50
-@base_moon_distance = 10
-@star_moon_distance = 20
-@bstar_moon_distance = 35
 @habitable_planet_max_size = 25
 @habitable_planet_mod_size = 20
 @habitable_planet_min_size = 15
 @celestial_min_size = 10
 @celestial_mod_size = 15
 @celestial_max_size = 20
+@asteroid_min_size = 1
+@asteroid_max_size = 2
 @gas_giant_min_size = 25
 @gas_giant_mod_size = 30
 @gas_giant_max_size = 40
+@moon_1x_distance = 20
+@moon_2x_distance = 40
+@star_min_size = 20
+@star_mod_size = 30
+@star_max_size = 40
+@neighbor_system_min_distance = 30
+@neighbor_system_max_distance = 100
 
 #######################
 ### Edem Solar System
@@ -18,7 +23,7 @@
 
 edem_system = {
     name = "NAME_Edem"
-    class = sc_rg
+    class = "rl_standard_stars"
     asteroids_distance = 130
     flags = {
         "empire_home_system"
@@ -30,11 +35,11 @@ edem_system = {
 
     planet = {
         name = "NAME_Edem"
-        class = pc_rg_star
+        class = star
         orbit_distance = 0
         orbit_angle = 1
-        size = 30
-        has_ring = no
+        size = { min = @star_mod_size max = @star_max_size }
+        has_ring = yes
 
         init_effect = {
             star_set_random_resources_01 = yes
@@ -42,59 +47,25 @@ edem_system = {
     }
 
     planet = {
-        name = "NAME_Sedna"
-        class = pc_molten
-        orbit_distance = 40
-        orbit_angle = { min = 15 max = 45 }
-        size = @celestial_max_size
-        has_ring = no
-
-        init_effect = {
-            celestial_set_random_resources_01 = yes
-        }
-
-        moon = {
-            name = "NAME_Brute"
-            class = random_asteroid
-            orbit_distance = 8
-            orbit_angle = { min = 100 max = 300 }
-            size = 2
-
-            init_effect = {
-                asteroid_set_random_resources_01 = yes
-            }
-        }
-
-        moon = {
-            name = "NAME_Cassius"
-            class = random_asteroid
-            orbit_distance = 4
-            orbit_angle = { min = 10 max = 50 }
-            size = 1
-
-            init_effect = {
-                asteroid_set_random_resources_01 = yes
-            }
-        }
-    }
-
-    planet = {
         name = "NAME_Selena"
-        class = pc_nova_gas
-        orbit_distance = 20
-        orbit_angle = { min = 100 max = 170 }
-        size = @gas_giant_min_size
+        class = pc_desert
+        orbit_distance = 60
+        orbit_angle = { min = 10 max = 350 }
+        size = { min = @habitable_planet_mod_size max = @habitable_planet_max_size }
         has_ring = yes
 
         init_effect = {
-            celestial_set_random_resources_02 = yes
+            planet_set_random_blockers_01 = yes
+            planet_set_random_resources_01 = yes
         }
+
+        change_orbit = @moon_1x_distance
 
         moon = {
             name = "NAME_Caliban"
-            class = pc_nova
+            class = pc_molten
             size = @celestial_min_size
-            orbit_distance = 15
+            orbit_distance = 0
             orbit_angle = { min = 10 max = 350 }
             has_ring = no
 
@@ -105,9 +76,9 @@ edem_system = {
 
         moon = {
             name = "NAME_Desdemona"
-            class = pc_nova
+            class = pc_molten
             size = @celestial_min_size
-            orbit_distance = 8
+            orbit_distance = 5
             orbit_angle = { min = 50 max = 300 }
             has_ring = no
 
@@ -119,19 +90,20 @@ edem_system = {
 
     planet = {
         name = "NAME_Edem"
-        class = pc_gaia
-        orbit_distance = 20
-        orbit_angle = { min = 70 max = 250 }
+        class = "rl_habitable_normal"
+        orbit_distance = 30
+        orbit_angle = { min = 90 max = 270 }
         size = @habitable_planet_max_size
         starting_planet = yes
         has_ring = no
-        entity = "continental_planet_earth_entity"
         tile_blockers = none
         modifiers = none
         anomaly = none
 
         init_effect = {
             set_planet_flag = "planet_edem"
+            set_name = "NAME_Edem"
+
             every_tile = {
                 limit = { has_building = no has_pop = no }
                 set_blocker = "tb_failing_infrastructure"
@@ -173,30 +145,17 @@ edem_system = {
                     set_deposit = d_energy_deposit_5
                 }
             }
-            while = {
-                count = 6
-                random_tile = {
-                    limit = { has_building = no has_blocker = yes }
-                    set_blocker = "tb_decrepit_dwellings"
-                }
-            }
-            while = {
-                count = 4
-                random_tile = {
-                    limit = { has_building = no has_blocker = yes }
-                    set_blocker = "tb_yawata"
-                }
-            }
         }
+
+        change_orbit = @moon_1x_distance
 
         moon = {
             name = "NAME_Limbo"
-            class = pc_barren_cold
-            size = 5
-            orbit_distance = 8
+            class = pc_barren
+            size = @celestial_min_size
+            orbit_distance = 0
             orbit_angle = { min = 5 max = 355 }
             has_ring = no
-            entity = "cold_barren_planet_luna_entity"
 
             init_effect = {
                 celestial_set_random_resources_01 = yes
@@ -206,8 +165,8 @@ edem_system = {
         moon = {
             name = "NAME_Agamemnon"
             class = pc_barren
-            size = @habitable_planet_min_size
-            orbit_distance = 15
+            size = @celestial_min_size
+            orbit_distance = 9
             orbit_angle = { min = 5 max = 355 }
             has_ring = no
 
@@ -221,7 +180,7 @@ edem_system = {
             class = random_asteroid
             orbit_distance = 4
             orbit_angle = { min = 5 max = 355 }
-            size = 1
+            size = @asteroid_min_size
 
             init_effect = {
                 asteroid_set_random_resources_01 = yes
@@ -231,9 +190,9 @@ edem_system = {
         moon = {
             name = "NAME_Mimas"
             class = random_asteroid
-            orbit_distance = 2
+            orbit_distance = 3
             orbit_angle = { min = 5 max = 355 }
-            size = 2
+            size = @asteroid_min_size
 
             init_effect = {
                 asteroid_set_random_resources_01 = yes
@@ -242,19 +201,14 @@ edem_system = {
 
         moon = {
             name = "NAME_Ophelia"
-            class = pc_methane
-            size = @habitable_planet_max_size
-            orbit_distance = 8
+            class = pc_toxic
+            size = { min = @celestial_min_size max = @celestial_mod_size }
+            orbit_distance = 6
             orbit_angle = { min = 5 max = 355 }
             has_ring = yes
-            tile_blockers = none
-            modifiers = none
-            anomaly = none
 
             init_effect = {
                 celestial_set_random_resources_03 = yes
-                planet_set_random_blockers_01 = yes
-                planet_set_random_resources_02 = yes
             }
         }
     }
@@ -262,11 +216,10 @@ edem_system = {
     planet = {
         name = "NAME_Icarus"
         class = pc_gaia
-        orbit_distance = 20
-        orbit_angle = { min = 40 max = 300 }
+        orbit_distance = 35
+        orbit_angle = { min = 90 max = 270 }
         size = @habitable_planet_max_size
         has_ring = no
-        entity = "barren_planet_mars_entity"
         tile_blockers = none
         modifiers = none
         anomaly = none
@@ -292,11 +245,13 @@ edem_system = {
             planet_set_random_resources_04 = yes
         }
 
+        change_orbit = @moon_1x_distance
+
         moon = {
             name = "NAME_Minos"
             class = pc_barren
             size = @celestial_min_size
-            orbit_distance = 13
+            orbit_distance = 0
             orbit_angle = { min = 5 max = 355 }
             has_ring = no
 
@@ -310,7 +265,7 @@ edem_system = {
             class = random_asteroid
             orbit_distance = 5
             orbit_angle = { min = 5 max = 355 }
-            size = 1
+            size = @asteroid_min_size
 
             init_effect = {
                 asteroid_set_random_resources_01 = yes
@@ -320,9 +275,9 @@ edem_system = {
         moon = {
             name = "NAME_Waist"
             class = random_asteroid
-            orbit_distance = 1
+            orbit_distance = 2
             orbit_angle = { min = 5 max = 355 }
-            size = 1
+            size = @asteroid_min_size
 
             init_effect = {
                 asteroid_set_random_resources_01 = yes
@@ -331,31 +286,27 @@ edem_system = {
 
         moon = {
             name = "NAME_Helicon"
-            class = pc_ammonia
-            size = @celestial_min_size
+            class = pc_toxic
+            size = @celestial_max_size
             orbit_distance = 10
             orbit_angle = { min = 5 max = 355 }
             has_ring = no
-            tile_blockers = none
-            modifiers = none
-            anomaly = none
 
             init_effect = {
                 celestial_set_random_resources_03 = yes
-                planet_set_random_blockers_01 = yes
-                planet_set_random_resources_03 = yes
             }
         }
     }
 
     planet = {
         name = "NAME_Eris"
-        class = pc_geothermal
-        orbit_distance = 20
-        orbit_angle = { min = 5 max = 355 }
+        class = pc_tropical
+        orbit_distance = 30
+        orbit_angle = { min = 90 max = 270 }
         size = @habitable_planet_max_size
         has_ring = yes
         tile_blockers = none
+        modifiers = none
         anomaly = none
 
         init_effect = {
@@ -363,7 +314,7 @@ edem_system = {
             planet_set_random_resources_02 = yes
         }
 
-        change_orbit = 10
+        change_orbit = @moon_1x_distance
 
         moon = {
             name = "NAME_Alpha"
@@ -371,7 +322,7 @@ edem_system = {
             class = random_asteroid
             orbit_distance = 1.8
             orbit_angle = { min = -270 max = 270 }
-            size = 1
+            size = @asteroid_min_size
 
             init_effect = {
                 asteroid_set_random_resources_01 = yes
@@ -382,16 +333,16 @@ edem_system = {
     planet = {
         name = "NAME_Kronos"
         class = pc_gas_giant
-        orbit_distance = 12
-        orbit_angle = { min = 100 max = 300 }
-        size = @gas_giant_max_size
-        has_ring = no
+        orbit_distance = 30
+        orbit_angle = { min = 130 max = 230 }
+        size = { min = @gas_giant_min_size max = @gas_giant_max_size }
+        has_ring = yes
 
         init_effect = {
             celestial_set_random_resources_02 = yes
         }
 
-        change_orbit = 14
+        change_orbit = @moon_1x_distance
 
         moon = {
             name = "NAME_Gamma"
@@ -399,66 +350,7 @@ edem_system = {
             class = random_asteroid
             orbit_distance = 1.9
             orbit_angle = { min = -270 max = 270 }
-            size = 1
-
-            init_effect = {
-                asteroid_set_random_resources_01 = yes
-            }
-        }
-    }
-
-    planet = {
-        name = "NAME_Proteus"
-        class = pc_tropical
-        orbit_distance = 12
-        orbit_angle = { min = 100 max = 300 }
-        size = @habitable_planet_max_size
-        has_ring = no
-        tile_blockers = none
-        anomaly = none
-
-        init_effect = {
-            planet_set_random_blockers_01 = yes
-            planet_set_random_resources_05 = yes
-        }
-
-        change_orbit = 10
-
-        moon = {
-            name = "NAME_Omega"
-            count = 6
-            class = random_asteroid
-            orbit_distance = 1.8
-            orbit_angle = { min = -270 max = 270 }
-            size = 1
-
-            init_effect = {
-                asteroid_set_random_resources_01 = yes
-            }
-        }
-    }
-
-    planet = {
-        name = "NAME_Hydra"
-        class = pc_gas_giant
-        orbit_distance = 10
-        orbit_angle = { min = 100 max = 300 }
-        size = @gas_giant_mod_size
-        has_ring = yes
-
-        init_effect = {
-            celestial_set_random_resources_02 = yes
-        }
-
-        change_orbit = 10
-
-        moon = {
-            name = "NAME_Beta"
-            count = 6
-            class = random_asteroid
-            orbit_distance = 1.9
-            orbit_angle = { min = -270 max = 270 }
-            size = 1
+            size = @asteroid_min_size
 
             init_effect = {
                 asteroid_set_random_resources_01 = yes
@@ -470,32 +362,26 @@ edem_system = {
         name = "NAME_Himalia"
         class = pc_gas_giant
         orbit_distance = 30
-        orbit_angle = { min = 5 max = 355 }
-        size = @gas_giant_max_size
+        orbit_angle = { min = 100 max = 260 }
+        size = { min = @gas_giant_min_size max = @gas_giant_max_size }
         has_ring = no
-        entity = "gas_giant_jupiter_entity"
 
         init_effect = {
             celestial_set_random_resources_02 = yes
         }
 
-        change_orbit = 15
+        change_orbit = @moon_1x_distance
 
         moon = {
             name = "NAME_Ananque"
-            class = pc_toxic
-            size = { min = @celestial_min_size max = @celestial_max_size }
-            orbit_distance = 13
+            class = pc_barren_cold
+            size = { min = @celestial_min_size max = @celestial_mod_size }
+            orbit_distance = 0
             orbit_angle = { min = 5 max = 355 }
             has_ring = no
-            tile_blockers = none
-            modifiers = none
-            anomaly = none
 
             init_effect = {
-                celestial_set_random_resources_03 = yes
-                planet_set_random_blockers_01 = yes
-                planet_set_random_resources_05 = yes
+                celestial_set_random_resources_01 = yes
             }
         }
 
@@ -503,7 +389,7 @@ edem_system = {
             name = "NAME_Yapet"
             class = pc_barren_cold
             size = { min = @celestial_min_size max = @celestial_mod_size }
-            orbit_distance = 4
+            orbit_distance = 10
             orbit_angle = { min = 20 max = 330 }
             has_ring = no
 
@@ -516,7 +402,7 @@ edem_system = {
             name = "NAME_Tethys"
             class = pc_barren_cold
             size = { min = @celestial_min_size max = @celestial_mod_size }
-            orbit_distance = 4
+            orbit_distance = 10
             orbit_angle = { min = 20 max = 330 }
             has_ring = no
 
@@ -527,66 +413,59 @@ edem_system = {
 
         moon = {
             name = "NAME_Epimetheus"
-            class = pc_toxic
-            size = { min = @celestial_min_size max = @celestial_max_size }
-            orbit_distance = 3
+            class = pc_barren_cold
+            size = { min = @celestial_min_size max = @celestial_mod_size }
+            orbit_distance = 10
             orbit_angle = { min = 20 max = 330 }
-            has_ring = no
-            tile_blockers = none
-            modifiers = none
-            anomaly = none
+            has_ring = yes
 
             init_effect = {
-                celestial_set_random_resources_03 = yes
-                planet_set_random_blockers_01 = yes
-                planet_set_random_resources_03 = yes
+                celestial_set_random_resources_01 = yes
             }
         }
     }
 
     planet = {
         name = "NAME_Rhea"
-        class = pc_frozen_desert
-        orbit_distance = 20
-        orbit_angle = { min = 100 max = 250 }
-        size = @habitable_planet_max_size
+        class = pc_frozen
+        orbit_distance = 25
+        orbit_angle = { min = 100 max = 260 }
+        size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
         has_ring = yes
-        tile_blockers = none
 
         init_effect = {
-            planet_set_random_blockers_01 = yes
-            planet_set_random_resources_06 = yes
+            celestial_set_random_resources_01 = yes
         }
+
+        change_orbit = @moon_1x_distance
 
         moon = {
             name = "NAME_Prospero"
-            class = pc_glacial
+            class = pc_frozen
             size = { min = @habitable_planet_min_size max = @habitable_planet_mod_size }
-            orbit_distance = 19
+            orbit_distance = 0
             orbit_angle = { min = 5 max = 355 }
             has_ring = no
-            tile_blockers = none
 
             init_effect = {
-                planet_set_random_blockers_01 = yes
-                planet_set_random_resources_06 = yes
+                celestial_set_random_resources_01 = yes
             }
         }
     }
 
     planet = {
         name = "NAME_Cordelia"
-        class = pc_arctic
-        orbit_distance = 20
-        orbit_angle = { min = 50 max = 250 }
-        size = @habitable_planet_max_size
+        class = pc_frozen
+        orbit_distance = 25
+        orbit_angle = { min = 90 max = 270 }
+        size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
         has_ring = yes
-        tile_blockers = none
 
         init_effect = {
-            planet_set_random_blockers_01 = yes
-            planet_set_random_resources_07 = yes
+            celestial_set_random_resources_01 = yes
         }
+
+        change_orbit = @moon_1x_distance
 
         moon = {
             name = "NAME_Sigma"
@@ -594,7 +473,7 @@ edem_system = {
             class = random_asteroid
             orbit_distance = { min = 1.2 max = 2.2 }
             orbit_angle = { min = -270 max = 270 }
-            size = { min = 1 max = 3 }
+            size = { min = @asteroid_min_size max = @asteroid_max_size }
 
             init_effect = {
                 asteroid_set_random_resources_01 = yes
@@ -602,29 +481,212 @@ edem_system = {
         }
     }
 
+    neighbor_system = {
+        distance = { min = @neighbor_system_min_distance max = @neighbor_system_max_distance }
+        initializer = "edem_neighbor_system_01"
+    }
+    neighbor_system = {
+        distance = { min = @neighbor_system_min_distance max = @neighbor_system_max_distance }
+        initializer = "edem_neighbor_system_02"
+    }
+}
+
+edem_neighbor_system_01 = {
+    name = "NAME_Sirius"
+    class = "rl_standard_stars"
+    asteroids_distance = 190
+
     planet = {
-        name = "NAME_Perdita"
-        class = pc_gas_giant
-        orbit_distance = 20
-        orbit_angle = { min = 50 max = 250 }
-        size = @gas_giant_mod_size
+        class = none
+        orbit_distance = 0
+        orbit_angle = 1
+    }
+
+    planet = {
+        name = "NAME_Sirius_A"
+        count = 1
+        class = star
+        orbit_distance = 110
+        orbit_angle = { min = 10 max = 350 }
+        size = @star_mod_size
         has_ring = yes
-        entity = "gas_giant_02_entity"
 
         init_effect = {
-            celestial_set_random_resources_02 = yes
+            star_set_random_resources_02 = yes
         }
 
-        change_orbit = 8
+        change_orbit = @moon_2x_distance
 
         moon = {
-            name = "NAME_Galimede"
-            class = pc_antarctic
-            size = @habitable_planet_min_size
-            orbit_distance = 7
-            orbit_angle = { min = 5 max = 350 }
+            name = "NAME_Lindvorm"
+            class = pc_molten
+            orbit_distance = 0
+            orbit_angle = { min = 10 max = 350 }
+            size = { min = @celestial_min_size max = @celestial_mod_size }
+            has_ring = no
+
+            init_effect = {
+                celestial_set_random_resources_01 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Naga"
+            class = pc_toxic
+            orbit_distance = 10
+            orbit_angle = { min = 50 max = 310 }
+            size = { min = @celestial_min_size max = @celestial_mod_size }
+            has_ring = no
+
+            init_effect = {
+                celestial_set_random_resources_03 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Marduk"
+            class = pc_desert
+            orbit_distance = 8
+            orbit_angle = { min = 50 max = 310 }
+            size = { min = @habitable_planet_mod_size max = @habitable_planet_max_size }
+            has_ring = no
+
+            init_effect = {
+                planet_set_random_blockers_01 = yes
+                planet_set_random_resources_02 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Serapis"
+            class = pc_ocean
+            orbit_distance = 10
+            orbit_angle = { min = 50 max = 310 }
+            size = { min = @habitable_planet_mod_size max = @habitable_planet_max_size }
+            has_ring = no
+
+            init_effect = {
+                planet_set_random_blockers_01 = yes
+                planet_set_random_resources_05 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Ooroboros"
+            class = pc_gas_giant
+            orbit_distance = 12
+            orbit_angle = { min = 90 max = 270 }
+            size = { min = @gas_giant_min_size max = @gas_giant_mod_size }
             has_ring = yes
-            tile_blockers = none
+
+            init_effect = {
+                celestial_set_random_resources_02 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Plotinus"
+            class = pc_frozen
+            orbit_distance = 12
+            orbit_angle = { min = 90 max = 270 }
+            size = { min = @celestial_min_size max = @celestial_max_size }
+            has_ring = yes
+
+            init_effect = {
+                celestial_set_random_resources_01 = yes
+            }
+        }
+    }
+
+    planet = {
+        name = "NAME_Sirius_B"
+        count = 1
+        class = star
+        orbit_distance = 1
+        orbit_angle = { min = 170 max = 190 }
+        size = @star_mod_size
+        has_ring = yes
+
+        init_effect = {
+            star_set_random_resources_03 = yes
+        }
+
+        change_orbit = @moon_2x_distance
+
+        moon = {
+            name = "NAME_Catalyst"
+            class = pc_molten
+            orbit_distance = 0
+            orbit_angle = { min = 10 max = 350 }
+            size = { min = @celestial_min_size max = @celestial_mod_size }
+            has_ring = yes
+
+            init_effect = {
+                celestial_set_random_resources_01 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Verdun"
+            class = pc_barren
+            orbit_distance = 8
+            orbit_angle = { min = 50 max = 310 }
+            size = { min = @celestial_min_size max = @celestial_mod_size }
+            has_ring = yes
+
+            init_effect = {
+                celestial_set_random_resources_01 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Khivim"
+            class = pc_gas_giant
+            orbit_distance = 12
+            orbit_angle = { min = 90 max = 270 }
+            size = { min = @gas_giant_min_size max = @gas_giant_mod_size }
+            has_ring = yes
+
+            init_effect = {
+                celestial_set_random_resources_02 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Alhambra"
+            class = pc_tundra
+            orbit_distance = 10
+            orbit_angle = { min = 50 max = 310 }
+            size = { min = @habitable_planet_mod_size max = @habitable_planet_max_size }
+            has_ring = no
+
+            init_effect = {
+                planet_set_random_blockers_01 = yes
+                planet_set_random_resources_06 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Pericles"
+            class = pc_arctic
+            orbit_distance = 9
+            orbit_angle = { min = 50 max = 310 }
+            size = { min = @habitable_planet_mod_size max = @habitable_planet_max_size }
+            has_ring = no
+
+            init_effect = {
+                planet_set_random_blockers_01 = yes
+                planet_set_random_resources_07 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Elysium"
+            class = pc_arctic
+            orbit_distance = 12
+            orbit_angle = { min = 90 max = 270 }
+            size = { min = @habitable_planet_mod_size max = @habitable_planet_max_size }
+            has_ring = yes
 
             init_effect = {
                 planet_set_random_blockers_01 = yes
@@ -634,3 +696,191 @@ edem_system = {
     }
 }
 
+edem_neighbor_system_02 = {
+    name = "NAME_Procyon"
+    class = "rl_standard_stars"
+    asteroids_distance = 80
+
+    planet = {
+        name = "NAME_Procyon"
+        class = star
+        orbit_distance = 0
+        orbit_angle = 1
+        size = { min = @star_mod_size max = @star_max_size }
+        has_ring = yes
+
+        init_effect = {
+            star_set_random_resources_03 = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Barsoom"
+        class = pc_desert
+        orbit_distance = 70
+        orbit_angle = { min = 10 max = 350 }
+        size = { min = @habitable_planet_mod_size max = @habitable_planet_max_size }
+        has_ring = yes
+
+        init_effect = {
+            planet_set_random_blockers_01 = yes
+            planet_set_random_resources_02 = yes
+        }
+
+        change_orbit = @moon_1x_distance
+
+        moon = {
+            count = 7
+            name = "NAME_Asteroid_Alpha"
+            class = random_asteroid
+            orbit_distance = { min = 1.5 max = 2 }
+            orbit_angle = { min = 10 max = 350 }
+            size = @asteroid_min_size
+
+            init_effect = {
+                asteroid_set_random_resources_01 = yes
+            }
+        }
+    }
+
+    planet = {
+        name = "NAME_Cagliostro"
+        class = pc_tropical
+        orbit_distance = 30
+        orbit_angle = { min = 90 max = 270 }
+        size = { min = @habitable_planet_mod_size max = @habitable_planet_max_size }
+        has_ring = yes
+
+        init_effect = {
+            planet_set_random_blockers_01 = yes
+            planet_set_random_resources_03 = yes
+        }
+
+        change_orbit = @moon_1x_distance
+
+        moon = {
+            count = 7
+            name = "NAME_Asteroid_Beta"
+            class = random_asteroid
+            orbit_distance = { min = 1.5 max = 2 }
+            orbit_angle = { min = 10 max = 350 }
+            size = @asteroid_min_size
+
+            init_effect = {
+                asteroid_set_random_resources_01 = yes
+            }
+        }
+    }
+
+    planet = {
+        name = "NAME_Lucium"
+        class = pc_continental
+        orbit_distance = 30
+        orbit_angle = { min = 90 max = 270 }
+        size = { min = @habitable_planet_mod_size max = @habitable_planet_max_size }
+        has_ring = no
+
+        init_effect = {
+            planet_set_random_blockers_01 = yes
+            planet_set_random_resources_04 = yes
+        }
+
+        change_orbit = @moon_2x_distance
+
+        moon = {
+            name = "NAME_Coleida"
+            class = pc_ocean
+            size = { min = @habitable_planet_mod_size max = @habitable_planet_max_size }
+            orbit_distance = 0
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                planet_set_random_blockers_01 = yes
+                planet_set_random_resources_05 = yes
+            }
+        }
+
+        change_orbit = @moon_1x_distance
+
+        moon = {
+            count = 5
+            name = "NAME_Asteroid_Gamma"
+            class = random_asteroid
+            orbit_distance = { min = 1.5 max = 2 }
+            orbit_angle = { min = 10 max = 350 }
+            size = @asteroid_min_size
+
+            init_effect = {
+                asteroid_set_random_resources_01 = yes
+            }
+        }
+    }
+
+    planet = {
+        name = "NAME_Crina"
+        class = pc_gas_giant
+        orbit_distance = 40
+        orbit_angle = { min = 90 max = 270 }
+        size = { min = @gas_giant_min_size max = @gas_giant_max_size }
+        has_ring = yes
+
+        init_effect = {
+            celestial_set_random_resources_02 = yes
+        }
+
+        change_orbit = @moon_1x_distance
+
+        moon = {
+            name = "NAME_Satellite_Alpha"
+            class = "rl_unhabitable_planets"
+            orbit_distance = 0
+            orbit_angle = { min = 90 max = 270 }
+            size = { min = @celestial_min_size max = @celestial_mod_size }
+            has_ring = no
+
+            init_effect = {
+                celestial_set_random_resources_01 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Satellite_Beta"
+            class = "rl_unhabitable_planets"
+            orbit_distance = { min = 5 max = 9 }
+            orbit_angle = { min = 90 max = 270 }
+            size = { min = @celestial_min_size max = @celestial_mod_size }
+            has_ring = yes
+
+            init_effect = {
+                celestial_set_random_resources_02 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Satellite_Gamma"
+            class = "rl_unhabitable_planets"
+            orbit_distance = { min = 5 max = 9 }
+            orbit_angle = { min = 90 max = 270 }
+            size = { min = @celestial_min_size max = @celestial_mod_size }
+            has_ring = yes
+
+            init_effect = {
+                celestial_set_random_resources_03 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Satellite_Delta"
+            class = "rl_unhabitable_planets"
+            orbit_distance = { min = 5 max = 9 }
+            orbit_angle = { min = 90 max = 270 }
+            size = { min = @celestial_min_size max = @celestial_mod_size }
+            has_ring = no
+
+            init_effect = {
+                celestial_set_random_resources_01 = yes
+            }
+        }
+    }
+}

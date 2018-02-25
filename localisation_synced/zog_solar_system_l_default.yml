@@ -5,9 +5,6 @@
     # Edem system planets
     NAME_Edem: "Эдем"
     NAME_Limbo: "Лимб"
-    NAME_Brute: "Брут"
-    NAME_Cassius: "Кассий"
-    NAME_Sedna: "Седна"
     NAME_Selena: "Селена"
     NAME_Caliban: "Калибан"
     NAME_Desdemona: "Дездемона"
@@ -22,8 +19,6 @@
     NAME_Helicon: "Геликон"
     NAME_Eris: "Эрида"
     NAME_Kronos: "Кронос"
-    NAME_Proteus: "Протей"
-    NAME_Hydra: "Гидра"
     NAME_Himalia: "Гималия"
     NAME_Ananque: "Ананке"
     NAME_Yapet: "Япет"
@@ -32,9 +27,7 @@
     NAME_Rhea: "Рея"
     NAME_Prospero: "Просперо"
     NAME_Cordelia: "Корделия"
-    NAME_Perdita: "Пердита"
     # ...
-    NAME_Galimede: "Галимеда"
     NAME_Alhambra: "Альгамбра"
     NAME_Pericles: "Перикл"
     NAME_Psi_I: "Пси I"
