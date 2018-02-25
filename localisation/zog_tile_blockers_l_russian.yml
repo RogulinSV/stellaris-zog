@@ -1,3 +1,11 @@
 ﻿l_russian:
-    tb_yawata: "Покинутый город"
-    tb_yawata_desc: "Покинутый город"
+    tb_lava_floods: "Лавовые потоки"
+    tb_lava_floods_desc: "Лавовые потоки"
+    tb_lava_rivers: "Лавовые реки"
+    tb_lava_rivers_desc: "Лавовые реки"
+    tb_scorched_desert: "Выжженная пустыня"
+    tb_scorched_desert_desc: "Выжженная пустыня"
+    tb_desert_worms: "Песчаные черви"
+    tb_desert_worms_desc: "Песчаные черви"
+    tb_desert_wormholes: "Песчаные червоточины"
+    tb_desert_wormholes_desc: "Песчаные червоточины"

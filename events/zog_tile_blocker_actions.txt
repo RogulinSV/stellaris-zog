@@ -1,0 +1,678 @@
+namespace = zog_tile_blocker_events
+
+#########################################
+### Tile blocker events
+#########################################
+
+event = {
+    id = zog_tile_blocker_events.0
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        every_country = {
+            random_list = {
+                2 = {
+                    country_event = { id = zog_tile_blocker_events.10 days = 30 }
+                }
+                2 = {
+                    country_event = { id = zog_tile_blocker_events.10 days = 60 }
+                }
+                2 = {
+                    country_event = { id = zog_tile_blocker_events.10 days = 90 }
+                }
+                2 = {
+                    country_event = { id = zog_tile_blocker_events.10 days = 120 }
+                }
+                2 = {
+                    country_event = { id = zog_tile_blocker_events.10 days = 240 }
+                }
+                # 10
+                2 = {
+                    country_event = { id = zog_tile_blocker_events.10 days = 360 }
+                }
+                2 = {
+                    country_event = { id = zog_tile_blocker_events.10 days = 480 }
+                }
+                2 = {
+                    country_event = { id = zog_tile_blocker_events.10 days = 600 }
+                }
+                2 = {
+                    country_event = { id = zog_tile_blocker_events.10 days = 720 }
+                }
+                2 = {
+                    country_event = { id = zog_tile_blocker_events.10 days = 840 }
+                }
+                # 20
+                2 = {
+                    country_event = { id = zog_tile_blocker_events.10 days = 960 }
+                }
+                78 = {}
+            }
+        }
+    }
+}
+
+################################################
+### Events Group: Attack of the "Desert worms"
+################################################
+
+#########################################
+### Event: "Desert worms" appearance
+#########################################
+
+country_event = {
+    id = zog_tile_blocker_events.10
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = {
+            has_country_flag = "desert_war_ended"
+        }
+    }
+
+    immediate = {
+        random_owned_planet = {
+            limit = {
+                is_capital = no
+                OR = {
+                    is_planet_class = pc_desert
+                    is_planet_class = pc_arid
+                    is_planet_class = pc_savannah
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_steppe
+                    is_planet_class = pc_hadesert
+                    is_planet_class = pc_sandsea
+                    is_planet_class = pc_desertislands
+                }
+                OR = {
+                    has_modifier = "dangerous_wildlife"
+                    has_modifier = "titanic_life"
+                }
+                NAND = {
+                    has_blocker = "tb_desert_worms"
+                    has_blocker = "tb_desert_wormholes"
+                    has_planet_flag = "desert_war_ended"
+                }
+            }
+
+            random_tile = {
+                limit = {
+                    has_blocker = no
+                }
+
+                if = {
+                    limit = {
+                        has_pop = yes
+                    }
+                    kill_pop = yes
+                }
+                if = {
+                    limit = {
+                        OR = {
+                            has_building = yes
+                            has_building_construction = yes
+                        }
+                    }
+                    remove_building = yes
+                }
+
+                random_list = {
+                    35 = {
+                        set_blocker = "tb_desert_worms"
+                        prev = {
+                            planet_event = { id = zog_tile_blocker_events.101 }
+                        }
+                    }
+                    65 = {
+                        set_blocker = "tb_desert_wormholes"
+                        prev = {
+                            planet_event = { id = zog_tile_blocker_events.101 }
+                            planet_event = { id = zog_tile_blocker_events.12 days = 30 }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#########################################
+### Event: "Desert worms" moving on
+#########################################
+
+planet_event = {
+    id = zog_tile_blocker_events.11
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        # "Planet" scope
+        has_blocker = "tb_desert_worms"
+        owner = {
+            NOT = {
+                has_technology = "tech_supreme_desert_warriors"
+            }
+        }
+        # "Tile" scope
+        from = {}
+    }
+
+    immediate = {
+        planet = {
+            random_tile = {
+                limit = {
+                    has_blocker = "tb_desert_worms"
+                }
+                remove_blocker = yes
+                set_blocker = "tb_desert_wormholes"
+
+                random_neighboring_tile = {
+                    limit = {
+                        has_blocker = no
+                    }
+                    if = {
+                        limit = {
+                            has_pop = yes
+                        }
+                        kill_pop = yes
+                    }
+                    if = {
+                        limit = {
+                            has_building = yes
+                        }
+                        if = {
+                            limit = {
+                                is_ruined = no
+                            }
+                            remove_building = yes
+
+                            else = {
+                                set_ruined = yes
+                            }
+                        }
+                    }
+                    if = {
+                        limit = {
+                            has_building_construction = yes
+                        }
+                        remove_building = yes
+                    }
+                    set_blocker = "tb_desert_worms"
+                }
+
+                prev = {
+                    planet_event = { id = zog_tile_blocker_events.101 }
+                    planet_event = { id = zog_tile_blocker_events.12 days = 30 }
+                }
+            }
+        }
+    }
+}
+
+##################################################
+### Event: Repeated attack of the "Desert worms"
+##################################################
+
+planet_event = {
+    id = zog_tile_blocker_events.12
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        # "Planet" scope
+        has_blocker = "tb_desert_wormholes"
+        owner = {
+            NOT = {
+                has_technology = "tech_advanced_desert_warriors"
+            }
+        }
+        # "Tile" scope
+        from = {}
+    }
+
+    immediate = {
+        planet = {
+            random_tile = {
+                limit = {
+                    has_blocker = "tb_desert_wormholes"
+                }
+                remove_blocker = yes
+                set_blocker = "tb_desert_worms"
+
+                every_neighboring_tile = {
+                    limit = {
+                        OR = {
+                            AND = {
+                                has_building = yes
+                                is_ruined = yes
+                            }
+                            AND = {
+                                has_building_construction = yes
+                            }
+                        }
+                    }
+                    remove_building = yes
+                }
+                every_neighboring_tile = {
+                    limit = {
+                        has_building = yes
+                        is_ruined = no
+                    }
+                    set_ruined = yes
+                }
+
+                prev = {
+                    planet_event = { id = zog_tile_blocker_events.100 }
+                }
+            }
+        }
+    }
+}
+
+##############################################
+### Event: "Desert worms" destruction alert
+##############################################
+
+planet_event = {
+    id = zog_tile_blocker_events.101
+    title = zog_tile_blocker_events.101.title
+    desc = zog_tile_blocker_events.101.desc
+    picture = GFX_evt_desert_worms
+    show_sound = event_red_alert
+    is_triggered_only = yes
+    location = from
+
+    trigger = {
+        # "Planet" scope
+        # "Tile" scope
+        from = {}
+    }
+
+    option = {
+        name = zog_tile_blocker_events.101.a
+        custom_tooltip = zog_tile_blocker_events.101.a.tooltip
+        ai_chance = {
+            factor = 80
+        }
+    }
+    option = {
+        name = zog_tile_blocker_events.101.b
+        custom_tooltip = zog_tile_blocker_events.101.b.tooltip
+        trigger = {
+            NOT = {
+                has_planet_flag = "desert_war_began"
+            }
+            owner = {
+                NAND = {
+                    has_technology = "tech_advanced_desert_warriors"
+                    has_technology = "tech_supreme_desert_warriors"
+                }
+            }
+        }
+        ai_chance = {
+            factor = 20
+        }
+        hidden_effect = {
+            owner = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_country_flag = "desert_war_began"
+                        }
+                    }
+                    set_country_flag = "desert_war_began"
+                }
+            }
+            set_planet_flag = "desert_war_began"
+            random_list = {
+                10 = {
+                    planet_event = { id = zog_tile_blocker_events.102 days = 180 }
+                }
+                70 = {
+                    planet_event = { id = zog_tile_blocker_events.103 days = 90 }
+                }
+                20 = {
+                    planet_event = { id = zog_tile_blocker_events.104 days = 45 }
+                }
+            }
+        }
+    }
+    option = {
+        name = zog_tile_blocker_events.101.c
+        custom_tooltip = zog_tile_blocker_events.101.c.tooltip
+        trigger = {
+            NOT = {
+                has_planet_flag = "desert_war_began"
+            }
+            owner = {
+                has_technology = "tech_advanced_desert_warriors"
+                NOT = {
+                    has_technology = "tech_supreme_desert_warriors"
+                }
+            }
+        }
+        ai_chance = {
+            factor = 20
+        }
+        hidden_effect = {
+            owner = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_country_flag = "desert_war_began"
+                        }
+                    }
+                    set_country_flag = "desert_war_began"
+                }
+            }
+            set_planet_flag = "desert_war_began"
+            random_list = {
+                25 = {
+                    planet_event = { id = zog_tile_blocker_events.102 days = 120 }
+                }
+                60 = {
+                    planet_event = { id = zog_tile_blocker_events.103 days = 60 }
+                }
+                15 = {
+                    planet_event = { id = zog_tile_blocker_events.104 days = 30 }
+                }
+            }
+        }
+    }
+    option = {
+        name = zog_tile_blocker_events.101.d
+        custom_tooltip = zog_tile_blocker_events.101.d.tooltip
+        trigger = {
+            NOT = {
+                has_planet_flag = "desert_war_began"
+            }
+            owner = {
+                has_technology = "tech_supreme_desert_warriors"
+            }
+        }
+        ai_chance = {
+            factor = 20
+        }
+        hidden_effect = {
+            owner = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_country_flag = "desert_war_began"
+                        }
+                    }
+                    set_country_flag = "desert_war_began"
+                }
+            }
+            set_planet_flag = "desert_war_began"
+            random_list = {
+                40 = {
+                    planet_event = { id = zog_tile_blocker_events.102 days = 60 }
+                }
+                55 = {
+                    planet_event = { id = zog_tile_blocker_events.103 days = 30 }
+                }
+                5 = {
+                    planet_event = { id = zog_tile_blocker_events.104 days = 15 }
+                }
+            }
+        }
+    }
+}
+
+####################################################
+### Event: "Desert war" with "Desert worms" is won
+####################################################
+
+planet_event = {
+    id = zog_tile_blocker_events.102
+    title = zog_tile_blocker_events.102.title
+    desc = zog_tile_blocker_events.102.desc
+    picture = GFX_evt_desert_war_winner
+    show_sound = event_ground_battle
+    is_triggered_only = yes
+    location = from
+
+    trigger = {
+        # "Planet" scope
+        has_planet_flag = "desert_war_began"
+        # "Tile" scope
+        from = {}
+    }
+
+    immediate = {
+        remove_planet_flag = "desert_war_began"
+        set_planet_flag = "desert_war_ended"
+        every_tile = {
+            limit = {
+                OR = {
+                    has_blocker = "tb_desert_worms"
+                    has_blocker = "tb_desert_wormholes"
+                }
+            }
+            remove_blocker = yes
+        }
+        owner = {
+            random_list = {
+                20 = {
+                    if = {
+                        limit = {
+                            NOT = {
+                                has_technology = "tech_advanced_desert_warriors"
+                            }
+                        }
+                        add_research_option = "tech_advanced_desert_warriors"
+                        add_tech_progress = {
+                            tech = "tech_advanced_desert_warriors"
+                            progress = 0.25
+                        }
+                        add_minerals = 1000
+
+                        else = {
+                            if = {
+                                limit = {
+                                    NOT = {
+                                        has_technology = "tech_supreme_desert_warriors"
+                                    }
+                                }
+                                add_research_option = "tech_supreme_desert_warriors"
+                                add_tech_progress = {
+                                    tech = "tech_supreme_desert_warriors"
+                                    progress = 0.25
+                                }
+                                add_minerals = 2000
+
+                                else = {
+                                    if = {
+                                        limit = {
+                                            NOT = {
+                                                has_country_flag = "desert_war_ended"
+                                            }
+                                        }
+                                        remove_country_flag = "desert_war_began"
+                                        set_country_flag = "desert_war_ended"
+                                    }
+                                    add_minerals = 3000
+                                }
+                            }
+                        }
+                    }
+                }
+                80 = {
+                    add_minerals = 1000
+                }
+            }
+        }
+    }
+
+    option = {
+        name = zog_tile_blocker_events.102.a
+        custom_tooltip = zog_tile_blocker_events.102.a.tooltip
+        ai_chance = {
+            factor = 100
+        }
+    }
+}
+
+####################################################
+### Event: "Desert war" with "Desert worms" is lost
+####################################################
+
+planet_event = {
+    id = zog_tile_blocker_events.103
+    title = zog_tile_blocker_events.103.title
+    desc = zog_tile_blocker_events.103.desc
+    picture = GFX_evt_desert_war_looser
+    show_sound = event_ground_battle
+    is_triggered_only = yes
+    location = from
+
+    trigger = {
+        # "Planet" scope
+        has_planet_flag = "desert_war_began"
+        # "Tile" scope
+        from = {}
+    }
+
+    immediate = {
+        planet = {
+            remove_planet_flag = "desert_war_began"
+
+            while = {
+                count = 2
+                random_tile = {
+                    limit = {
+                        has_blocker = no
+                    }
+                    set_blocker = "tb_desert_worms"
+
+                    every_neighboring_tile = {
+                        limit = {
+                            OR = {
+                                AND = {
+                                    has_building = yes
+                                    is_ruined = yes
+                                }
+                                AND = {
+                                    has_building_construction = yes
+                                }
+                            }
+                        }
+                        remove_building = yes
+                    }
+                    every_neighboring_tile = {
+                        limit = {
+                            has_building = yes
+                            is_ruined = no
+                        }
+                        set_ruined = yes
+                    }
+                }
+            }
+            while = {
+                count = 5
+                random_planet_army = {
+                    remove_army = yes
+                }
+            }
+        }
+    }
+
+    option = {
+        name = zog_tile_blocker_events.103.a
+        custom_tooltip = zog_tile_blocker_events.103.a.tooltip
+        ai_chance = {
+            factor = 100
+        }
+    }
+}
+
+####################################################
+### Event: "Desert war" with "Desert worms" is lost
+####################################################
+
+planet_event = {
+    id = zog_tile_blocker_events.104
+    title = zog_tile_blocker_events.104.title
+    desc = zog_tile_blocker_events.104.desc
+    picture = GFX_evt_desert_war_looser
+    show_sound = event_ground_battle
+    is_triggered_only = yes
+    location = from
+
+    trigger = {
+        # "Planet" scope
+        has_planet_flag = "desert_war_began"
+        # "Tile" scope
+        from = {}
+    }
+
+    immediate = {
+        planet = {
+            remove_planet_flag = "desert_war_began"
+
+            while = {
+                count = 2
+                random_tile = {
+                    limit = {
+                        has_blocker = no
+                    }
+                    set_blocker = "tb_desert_worms"
+
+                    every_neighboring_tile = {
+                        limit = {
+                            has_blocker = no
+                        }
+                        if = {
+                            limit = {
+                                has_pop = yes
+                            }
+                            kill_pop = yes
+                        }
+                        if = {
+                            limit = {
+                                OR = {
+                                    has_building = yes
+                                    has_building_construction = yes
+                                }
+                            }
+                            remove_building = yes
+                        }
+                    }
+                }
+            }
+            every_planet_army = {
+                remove_army = yes
+            }
+        }
+    }
+
+    option = {
+        name = zog_tile_blocker_events.104.a
+        custom_tooltip = zog_tile_blocker_events.104.a.tooltip
+        ai_chance = {
+            factor = 100
+        }
+    }
+}
+
+planet_event = {
+    id = zog_tile_blocker_events.100
+    title = zog_tile_blocker_events.100.title
+    desc = zog_tile_blocker_events.100.desc
+    picture = GFX_evt_desert_worms
+    show_sound = event_red_alert
+    is_triggered_only = yes
+    location = from
+
+    option = {
+        name = zog_tile_blocker_events.100.a
+        custom_tooltip = zog_tile_blocker_events.100.a.tooltip
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {}
+    }
+}

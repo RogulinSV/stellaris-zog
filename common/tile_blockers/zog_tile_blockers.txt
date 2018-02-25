@@ -1,15 +1,428 @@
-tb_yawata = {
-    picture = tb_yawata_01
-    time = 400
+tb_lava_floods = {
+    time = 600
 
     cost = {
         energy = 600
-        minerals = 400
+        minerals = 300
     }
 
     spawn_chance = {
         modifier = {
-            add = 0
+            factor = 0
+            planet = {
+                NAND = {
+                    is_planet_class = pc_desert
+                    is_planet_class = pc_arid
+                    is_planet_class = pc_savannah
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_steppe
+                    is_planet_class = pc_geothermal
+                    is_planet_class = pc_methane
+                }
+            }
+        }
+        modifier = {
+            add = 10
+            planet = {
+                is_planet_class = pc_desert
+            }
+        }
+        modifier = {
+            add = 4
+            planet = {
+                OR = {
+                    is_planet_class = pc_savannah
+                    is_planet_class = pc_arid
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_steppe
+                }
+            }
+        }
+        modifier = {
+            add = 15
+            planet = {
+                OR = {
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_geothermal
+                    is_planet_class = pc_methane
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            planet = {
+                has_modifier = "strong_magnetic_field"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            planet = {
+                NOT = {
+                    has_modifier = "unstable_tectonics"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            planet = {
+                is_moon = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_tb_lava_floods"
+    }
+}
+
+tb_lava_rivers = {
+    time = 1100
+
+    cost = {
+        energy = 750
+        minerals = 450
+    }
+
+    spawn_chance = {
+        modifier = {
+            factor = 0
+            planet = {
+                NAND = {
+                    is_planet_class = pc_desert
+                    is_planet_class = pc_arid
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_geothermal
+                    is_planet_class = pc_methane
+                }
+            }
+        }
+        modifier = {
+            add = 3
+            planet = {
+                is_planet_class = pc_arid
+            }
+        }
+        modifier = {
+            add = 6
+            planet = {
+                OR = {
+                    is_planet_class = pc_desert
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_geothermal
+                    is_planet_class = pc_methane
+                }
+            }
+        }
+        modifier = {
+            factor = 1.05
+            planet = {
+                has_modifier = "strong_magnetic_field"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            planet = {
+                NOT = {
+                    has_modifier = "unstable_tectonics"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.10
+            planet = {
+                is_moon = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_tb_lava_rivers"
+    }
+}
+
+tb_scorched_desert = {
+    time = 900
+
+    cost = {
+        energy = 550
+        minerals = 250
+    }
+
+    spawn_chance = {
+        modifier = {
+            factor = 0
+            planet = {
+                NAND = {
+                    is_planet_class = pc_desert
+                    is_planet_class = pc_arid
+                    is_planet_class = pc_savannah
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_steppe
+                    is_planet_class = pc_hadesert
+                    is_planet_class = pc_sandsea
+                    is_planet_class = pc_desertislands
+                    is_planet_class = pc_mesa
+                }
+            }
+        }
+        modifier = {
+            add = 2
+            planet = {
+                OR = {
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_steppe
+                    is_planet_class = pc_sandsea
+                    is_planet_class = pc_desertislands
+                }
+            }
+        }
+        modifier = {
+            add = 3
+            planet = {
+                OR = {
+                    is_planet_class = pc_arid
+                    is_planet_class = pc_savannah
+                }
+            }
+        }
+        modifier = {
+            add = 6
+            planet = {
+                OR = {
+                    is_planet_class = pc_desert
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_hadesert
+                    is_planet_class = pc_mesa
+                }
+            }
+        }
+        modifier = {
+            factor = 0.90
+            planet = {
+                NOT = {
+                    has_modifier = "chthonian_planet"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            planet = {
+                has_modifier = "asteroid_impacts"
+            }
+        }
+        modifier = {
+            factor = 0.80
+            planet = {
+                has_modifier = "asteroid_belt"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            planet = {
+                is_moon = yes
+            }
+        }
+        modifier = {
+            factor = 0.85
+            planet = {
+                has_moon = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_tb_scorched_desert"
+    }
+}
+
+tb_desert_worms = {
+    time = 14
+
+    cost = {
+        energy = 6
+        minerals = 12
+    }
+
+    spawn_chance = {
+        modifier = {
+            factor = 0
+            planet = {
+                NAND = {
+                    is_capital = yes
+                    is_planet_class = pc_desert
+                    is_planet_class = pc_arid
+                    is_planet_class = pc_savannah
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_steppe
+                    is_planet_class = pc_hadesert
+                    is_planet_class = pc_sandsea
+                    is_planet_class = pc_desertislands
+                }
+            }
+        }
+        modifier = {
+            add = 1
+            planet = {
+                OR = {
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_steppe
+                    is_planet_class = pc_sandsea
+                    is_planet_class = pc_desertislands
+                }
+            }
+        }
+        modifier = {
+            add = 2
+            planet = {
+                OR = {
+                    is_planet_class = pc_arid
+                    is_planet_class = pc_savannah
+                }
+            }
+        }
+        modifier = {
+            add = 4
+            planet = {
+                OR = {
+                    is_planet_class = pc_desert
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_hadesert
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            planet = {
+                NAND = {
+                    has_modifier = "dangerous_wildlife"
+                    has_modifier = "titanic_life"
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_tb_desert_worms"
+    }
+}
+
+tb_desert_wormholes = {
+    time = 1600
+
+    cost = {
+        energy = 1500
+        minerals = 1200
+    }
+
+    spawn_chance = {
+        modifier = {
+            factor = 0
+            planet = {
+                NAND = {
+                    is_capital = yes
+                    is_planet_class = pc_desert
+                    is_planet_class = pc_arid
+                    is_planet_class = pc_savannah
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_steppe
+                    is_planet_class = pc_hadesert
+                    is_planet_class = pc_sandsea
+                    is_planet_class = pc_desertislands
+                }
+            }
+        }
+        modifier = {
+            add = 1
+            planet = {
+                OR = {
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_steppe
+                    is_planet_class = pc_sandsea
+                    is_planet_class = pc_desertislands
+                }
+            }
+        }
+        modifier = {
+            add = 2
+            planet = {
+                OR = {
+                    is_planet_class = pc_arid
+                    is_planet_class = pc_savannah
+                }
+            }
+        }
+        modifier = {
+            add = 4
+            planet = {
+                OR = {
+                    is_planet_class = pc_desert
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_hadesert
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            planet = {
+                NAND = {
+                    has_modifier = "dangerous_wildlife"
+                    has_modifier = "titanic_life"
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_tb_desert_wormholes"
+    }
+}
+
+tb_ancient_monuments = {
+    time = 2000
+
+    cost = {
+        energy = 1500
+        minerals = 300
+    }
+
+    spawn_chance = {
+        modifier = {
+            factor = 0
+            planet = {
+                NAND = {
+                    is_planet_class = pc_desert
+                    is_planet_class = pc_arid
+                    is_planet_class = pc_savannah
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_steppe
+                    is_planet_class = pc_hadesert
+                    is_planet_class = pc_sandsea
+                    is_planet_class = pc_desertislands
+                }
+            }
+        }
+        modifier = {
+            add = 1
+            planet = {
+                OR = {
+                    is_planet_class = pc_desert
+                    is_planet_class = pc_arid
+                    is_planet_class = pc_savannah
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_steppe
+                    is_planet_class = pc_sandsea
+                    is_planet_class = pc_hadesert
+                    is_planet_class = pc_desertislands
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            planet = {
+                NOT = {
+                    has_modifier = "ancient_forgeworld"
+                }
+            }
         }
     }
 }
