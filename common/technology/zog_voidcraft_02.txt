@@ -888,6 +888,19 @@ tech_infinitum_cruiser_construction = {
 #############################################
 
 tech_advanced_battleship_construction = {
+    # Unlocks "BATTLESHIP_ADVANCED_BOW_01" section template
+    # Unlocks "BATTLESHIP_ADVANCED_BOW_02" section template
+    # Unlocks "BATTLESHIP_ADVANCED_BOW_03" section template
+    # Unlocks "BATTLESHIP_ADVANCED_BOW_04" section template
+    # Unlocks "BATTLESHIP_ADVANCED_BOW_05" section template
+    # Unlocks "BATTLESHIP_ADVANCED_MID_01" section template
+    # Unlocks "BATTLESHIP_ADVANCED_MID_02" section template
+    # Unlocks "BATTLESHIP_ADVANCED_MID_03" section template
+    # Unlocks "BATTLESHIP_ADVANCED_STERN_01" section template
+    # Unlocks "BATTLESHIP_ADVANCED_STERN_02" section template
+    # Unlocks "BATTLESHIP_ADVANCED_STERN_03" section template
+    # Unlocks "BATTLESHIP_ADVANCED_STERN_04" section template
+
     cost = 2500
     area = engineering
     start_tech = no
