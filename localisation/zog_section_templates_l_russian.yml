@@ -63,6 +63,13 @@
     CRUISER_TRANSCENDENTAL_STERN_01: "Трансцендентная кормовая cекция «Прометей»"
     CRUISER_TRANSCENDENTAL_STERN_02: "Трансцендентная кормовая cекция «Феникс»"
     CRUISER_TRANSCENDENTAL_STERN_03: "Трансцендентная кормовая cекция «Вангелия»"
+    CRUISER_INFINITUM_BOW_01: "Бесконечная носовая секция «Калиостро»"
+    CRUISER_INFINITUM_BOW_02: "Бесконечная носовая секция «Метеора»"
+    CRUISER_INFINITUM_MID_01: "Бесконечная палубная cекция «Сияние»"
+    CRUISER_INFINITUM_MID_02: "Бесконечная палубная cекция «Апокалипсис»"
+    CRUISER_INFINITUM_STERN_01: "Бесконечная кормовая cекция «Затмение»"
+    CRUISER_INFINITUM_STERN_02: "Бесконечная кормовая cекция «Инферно»"
+    CRUISER_INFINITUM_STERN_03: "Бесконечная кормовая cекция «Апокалипсис»"
     # Military Station Sections
     MILITARY_STATION_SMALL_ADVANCED_MID_01: "Передовая cекция «Прометей»"
     MILITARY_STATION_SMALL_ADVANCED_MID_02: "Передовая cекция «Завет»"

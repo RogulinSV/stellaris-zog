@@ -798,6 +798,14 @@ tech_transcendental_cruiser_construction = {
 }
 
 tech_infinitum_cruiser_construction = {
+    # Unlocks "CRUISER_INFINITUM_BOW_01" section template
+    # Unlocks "CRUISER_INFINITUM_BOW_02" section template
+    # Unlocks "CRUISER_INFINITUM_MID_01" section template
+    # Unlocks "CRUISER_INFINITUM_MID_02" section template
+    # Unlocks "CRUISER_INFINITUM_STERN_01" section template
+    # Unlocks "CRUISER_INFINITUM_STERN_02" section template
+    # Unlocks "CRUISER_INFINITUM_STERN_03" section template
+
     cost = 30000
     area = engineering
     start_tech = no
