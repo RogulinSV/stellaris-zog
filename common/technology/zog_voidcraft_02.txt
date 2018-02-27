@@ -250,6 +250,84 @@ tech_transcendental_corvette_construction = {
     }
 }
 
+tech_infinitum_corvette_construction = {
+    cost = 30000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_infinitum_corvette_construction"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_transcendental_corvette_construction"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_infinitum_corvette_construction_prereqfor.title
+            desc = tech_infinitum_corvette_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipsize_corvette_build_cost_mult = -0.30
+        shipsize_corvette_construction_speed_mult = 0.30
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "ship_corvette_built"
+                value < 120
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ethic = "ethic_fanatic_militarist"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 4
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = engineering
+                has_level = 4
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_voidcraft"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ascension_perk = "ap_voidborn"
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}
+
 #############################################
 ## Engineering / Voidcraft / Destroyer Ship
 #############################################
