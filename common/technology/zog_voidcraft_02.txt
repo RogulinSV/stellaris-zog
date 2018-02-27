@@ -983,6 +983,16 @@ tech_advanced_battleship_construction = {
 }
 
 tech_supreme_battleship_construction = {
+    # Unlocks "BATTLESHIP_SUPREME_BOW_01" section template
+    # Unlocks "BATTLESHIP_SUPREME_BOW_02" section template
+    # Unlocks "BATTLESHIP_SUPREME_BOW_03" section template
+    # Unlocks "BATTLESHIP_SUPREME_MID_01" section template
+    # Unlocks "BATTLESHIP_SUPREME_MID_02" section template
+    # Unlocks "BATTLESHIP_SUPREME_MID_03" section template
+    # Unlocks "BATTLESHIP_SUPREME_STERN_01" section template
+    # Unlocks "BATTLESHIP_SUPREME_STERN_02" section template
+    # Unlocks "BATTLESHIP_SUPREME_STERN_03" section template
+
     cost = 5000
     area = engineering
     start_tech = no
