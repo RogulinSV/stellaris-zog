@@ -1161,3 +1161,81 @@ tech_transcendental_battleship_construction = {
         factor = 70
     }
 }
+
+tech_infinitum_battleship_construction = {
+    cost = 30000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_infinitum_battleship_construction"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_transcendental_battleship_construction"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_infinitum_battleship_construction_prereqfor.title
+            desc = tech_infinitum_battleship_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipsize_battleship_build_cost_mult = -0.30
+        shipsize_battleship_construction_speed_mult = 0.30
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "ship_battleship_built"
+                value < 50
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ethic = "ethic_fanatic_militarist"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 4
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = engineering
+                has_level = 4
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_voidcraft"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ascension_perk = "ap_voidborn"
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}
