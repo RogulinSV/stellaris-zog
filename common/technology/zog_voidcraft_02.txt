@@ -1066,6 +1066,19 @@ tech_supreme_battleship_construction = {
 }
 
 tech_transcendental_battleship_construction = {
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_BOW_01" section template
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_BOW_02" section template
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_BOW_03" section template
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_BOW_04" section template
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_MID_01" section template
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_MID_02" section template
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_MID_03" section template
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_MID_04" section template
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_STERN_01" section template
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_STERN_02" section template
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_STERN_03" section template
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_STERN_04" section template
+
     cost = 10000
     area = engineering
     start_tech = no
