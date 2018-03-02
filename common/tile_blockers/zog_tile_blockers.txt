@@ -476,6 +476,65 @@ tb_impenetrable_forests = {
     }
 }
 
+tb_wastelands = {
+    time = 2200
+
+    cost = {
+        energy = 700
+        minerals = 500
+    }
+
+    spawn_chance = {
+        modifier = {
+            factor = 0
+            planet = {
+                NAND = {
+                    is_planet_class = pc_continental
+                    is_planet_class = pc_arid
+                    is_planet_class = pc_savannah
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_sandsea
+                }
+            }
+        }
+        modifier = {
+            add = 2
+            planet = {
+                OR = {
+                    is_planet_class = pc_continental
+                }
+            }
+        }
+        modifier = {
+            add = 5
+            planet = {
+                OR = {
+                    is_planet_class = pc_arid
+                    is_planet_class = pc_savannah
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_sandsea
+                }
+            }
+        }
+        modifier = {
+            factor = 1.30
+            planet = {
+                has_modifier = "wild_storms"
+            }
+        }
+        modifier = {
+            factor = 1.50
+            planet = {
+                has_modifier = "bleak_planet"
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_tb_wastelands"
+    }
+}
+
 tb_ancient_monuments = {
     time = 2000
 
