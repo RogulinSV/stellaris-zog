@@ -179,7 +179,8 @@ tech_advanced_military_station_offense_01 = {
 
     modifier = {
         shipclass_military_station_damage_mult = 0.15
-        shipsize_military_station_small_upkeep_mult = -0.25
+        shipclass_military_station_build_cost_mult = -0.15
+        shipsize_military_station_small_build_speed_mult = 0.25
         shipsize_military_station_small_build_cost_mult = -0.25
     }
 
@@ -259,9 +260,9 @@ tech_advanced_military_station_defence_01 = {
     }
 
     modifier = {
-        shipclass_military_station_hit_points_mult = 0.15
-        shipsize_military_station_small_upkeep_mult = -0.25
-        shipsize_military_station_small_build_cost_mult = -0.25
+        shipclass_military_station_hull_mult = 0.15
+        shipsize_military_station_small_hull_add = 1000
+        shipsize_military_station_small_hull_mult = 0.25
     }
 
     weight = 80
@@ -341,7 +342,8 @@ tech_advanced_military_station_offense_02 = {
 
     modifier = {
         shipclass_military_station_damage_mult = 0.15
-        shipsize_military_station_medium_upkeep_mult = -0.25
+        shipclass_military_station_build_cost_mult = -0.15
+        shipsize_military_station_medium_build_speed_mult = 0.25
         shipsize_military_station_medium_build_cost_mult = -0.25
     }
 
@@ -427,9 +429,9 @@ tech_advanced_military_station_defence_02 = {
     }
 
     modifier = {
-        shipclass_military_station_hit_points_mult = 0.15
-        shipsize_military_station_medium_upkeep_mult = -0.25
-        shipsize_military_station_medium_build_cost_mult = -0.25
+        shipclass_military_station_hull_mult = 0.15
+        shipsize_military_station_medium_hull_add = 1000
+        shipsize_military_station_medium_hull_mult = 0.25
     }
 
     weight = 70
@@ -514,7 +516,8 @@ tech_advanced_military_station_offense_03 = {
 
     modifier = {
         shipclass_military_station_damage_mult = 0.15
-        shipsize_military_station_large_upkeep_mult = -0.25
+        shipclass_military_station_build_cost_mult = -0.15
+        shipsize_military_station_large_build_speed_mult = 0.25
         shipsize_military_station_large_build_cost_mult = -0.25
     }
 
@@ -599,9 +602,9 @@ tech_advanced_military_station_defence_03 = {
     }
 
     modifier = {
-        shipclass_military_station_hit_points_mult = 0.15
-        shipsize_military_station_large_upkeep_mult = -0.25
-        shipsize_military_station_large_build_cost_mult = -0.25
+        shipclass_military_station_hull_mult = 0.15
+        shipsize_military_station_large_hull_add = 1000
+        shipsize_military_station_large_hull_mult = 0.25
     }
 
     weight = 60
@@ -780,7 +783,7 @@ tech_supreme_military_station_defence_01 = {
     }
 
     modifier = {
-        shipclass_military_station_hit_points_mult = 0.30
+        shipclass_military_station_hull_mult = 0.30
         shipclass_military_station_build_cost_mult = 0.15
     }
 
@@ -952,7 +955,7 @@ tech_supreme_military_station_defence_02 = {
     }
 
     modifier = {
-        shipclass_military_station_hit_points_mult = 0.30
+        shipclass_military_station_hull_mult = 0.30
         shipclass_military_station_build_cost_mult = 0.15
     }
 
@@ -1109,7 +1112,7 @@ tech_supreme_military_station_defence_03 = {
     }
 
     modifier = {
-        shipclass_military_station_hit_points_mult = 0.30
+        shipclass_military_station_hull_mult = 0.30
         shipclass_military_station_build_cost_mult = 0.15
     }
 
