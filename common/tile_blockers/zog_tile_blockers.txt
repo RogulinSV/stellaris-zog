@@ -377,6 +377,105 @@ tb_desert_wormholes = {
     }
 }
 
+tb_impenetrable_forests = {
+    time = 400
+
+    cost = {
+        energy = 300
+        minerals = 150
+    }
+
+    spawn_chance = {
+        modifier = {
+            factor = 0
+            planet = {
+                NAND = {
+                    is_planet_class = pc_continental
+                    is_planet_class = pc_alpine
+                    is_planet_class = pc_tropical
+                    is_planet_class = pc_gaia
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_cascadian
+                    is_planet_class = pc_mangrove
+                    is_planet_class = pc_oasis
+                    is_planet_class = pc_hajungle
+                }
+            }
+        }
+        modifier = {
+            add = 3
+            planet = {
+                OR = {
+                    is_planet_class = pc_gaia
+                    is_planet_class = pc_alpine
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_cascadian
+                    is_planet_class = pc_oasis
+                }
+            }
+        }
+        modifier = {
+            add = 9
+            planet = {
+                OR = {
+                    is_planet_class = pc_tropical
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_mangrove
+                    is_planet_class = pc_hajungle
+                }
+            }
+        }
+        modifier = {
+            add = 17
+            planet = {
+                OR = {
+                    is_planet_class = pc_continental
+                }
+            }
+        }
+        modifier = {
+            factor = 1.30
+            planet = {
+                has_modifier = "natural_beauty"
+            }
+        }
+        modifier = {
+            factor = 2.55
+            planet = {
+                has_modifier = "lush_planet"
+            }
+        }
+        modifier = {
+            factor = 0.25
+            planet = {
+                has_modifier = "bleak_planet"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            planet = {
+                has_modifier = "asteroid_impacts"
+            }
+        }
+        modifier = {
+            factor = 0.85
+            planet = {
+                is_moon = yes
+            }
+        }
+        modifier = {
+            factor = 1.15
+            planet = {
+                has_moon = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_tb_impenetrable_forests"
+    }
+}
+
 tb_ancient_monuments = {
     time = 2000
 
