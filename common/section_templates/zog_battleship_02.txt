@@ -849,7 +849,7 @@ ship_section_template = {
     key = "BATTLESHIP_SUPREME_STERN_02"
     ship_size = battleship
     fits_on_slot = stern
-    entity = "battleship_stern_L5S10_entity"
+    entity = "battleship_stern_L5P10_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {

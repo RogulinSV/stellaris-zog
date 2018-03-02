@@ -10,7 +10,7 @@ ship_section_template = {
     key = "CRUISER_INFINITUM_BOW_01"
     ship_size = cruiser
     fits_on_slot = bow
-    entity = "cruiser_X5L5T5_entity"
+    entity = "cruiser_bow_X5L5T5_entity"
     icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
@@ -21,7 +21,22 @@ ship_section_template = {
     }
 
     ai_weight = {
-        factor = 100
+        weight = 100
+        modifier = {
+            factor = 1.0
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 0.8
+            is_preferred_weapons = "weapon_type_explosive"
+        }
+        modifier = {
+            factor = 0.1
+            NAND = {
+                is_preferred_weapons = "weapon_type_energy"
+                is_preferred_weapons = "weapon_type_explosive"
+            }
+        }
     }
 
     component_slot = {
@@ -126,7 +141,7 @@ ship_section_template = {
     key = "CRUISER_INFINITUM_BOW_02"
     ship_size = cruiser
     fits_on_slot = bow
-    entity = "cruiser_L5T10_entity"
+    entity = "cruiser_bow_L5T10_entity"
     icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
@@ -136,7 +151,22 @@ ship_section_template = {
     }
 
     ai_weight = {
-        factor = 85
+        weight = 100
+        modifier = {
+            factor = 0.8
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 1.0
+            is_preferred_weapons = "weapon_type_explosive"
+        }
+        modifier = {
+            factor = 0.1
+            NAND = {
+                is_preferred_weapons = "weapon_type_energy"
+                is_preferred_weapons = "weapon_type_explosive"
+            }
+        }
     }
 
     component_slot = {
@@ -245,7 +275,7 @@ ship_section_template = {
     key = "CRUISER_INFINITUM_MID_01"
     ship_size = cruiser
     fits_on_slot = mid
-    entity = "cruiser_X5L5M5_entity"
+    entity = "cruiser_mid_X5L5M5_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -254,7 +284,17 @@ ship_section_template = {
     }
 
     ai_weight = {
-        factor = 100
+        weight = 100
+        modifier = {
+            factor = 1.0
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 0.1
+            NOT = {
+                is_preferred_weapons = "weapon_type_energy"
+            }
+        }
     }
 
     component_slot = {
@@ -359,7 +399,7 @@ ship_section_template = {
     key = "CRUISER_INFINITUM_MID_02"
     ship_size = cruiser
     fits_on_slot = mid
-    entity = "cruiser_M15_entity"
+    entity = "cruiser_mid_M15_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -367,7 +407,17 @@ ship_section_template = {
     }
 
     ai_weight = {
-        factor = 75
+        weight = 100
+        modifier = {
+            factor = 0.75
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 0.1
+            NOT = {
+                is_preferred_weapons = "weapon_type_energy"
+            }
+        }
     }
 
     component_slot = {
@@ -476,7 +526,7 @@ ship_section_template = {
     key = "CRUISER_INFINITUM_STERN_01"
     ship_size = cruiser
     fits_on_slot = stern
-    entity = "cruiser_X5P10_entity"
+    entity = "cruiser_stern_X5P10_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {
@@ -487,7 +537,22 @@ ship_section_template = {
     }
 
     ai_weight = {
-        factor = 75
+        weight = 100
+        modifier = {
+            factor = 1.0
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 1.0
+            is_preferred_weapons = "weapon_type_kinetic"
+        }
+        modifier = {
+            factor = 0.1
+            NAND = {
+                is_preferred_weapons = "weapon_type_energy"
+                is_preferred_weapons = "weapon_type_kinetic"
+            }
+        }
     }
 
     component_slot = {
@@ -592,7 +657,7 @@ ship_section_template = {
     key = "CRUISER_INFINITUM_STERN_02"
     ship_size = cruiser
     fits_on_slot = stern
-    entity = "cruiser_X5L10_entity"
+    entity = "cruiser_stern_X5W10_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {
@@ -717,7 +782,7 @@ ship_section_template = {
     key = "CRUISER_INFINITUM_STERN_03"
     ship_size = cruiser
     fits_on_slot = stern
-    entity = "cruiser_M15_entity"
+    entity = "cruiser_stern_M15_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {
@@ -725,7 +790,17 @@ ship_section_template = {
     }
 
     ai_weight = {
-        factor = 75
+        weight = 100
+        modifier = {
+            factor = 0.70
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 0.1
+            NOT = {
+                is_preferred_weapons = "weapon_type_energy"
+            }
+        }
     }
 
     component_slot = {

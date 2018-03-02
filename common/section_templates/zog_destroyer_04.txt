@@ -1,0 +1,540 @@
+###################################
+### Section Templates / Destroyer
+###################################
+
+######################
+### Bow / Infinitum
+######################
+
+ship_section_template = {
+    key = "DESTROYER_INFINITUM_BOW_01"
+    ship_size = destroyer
+    fits_on_slot = bow
+    entity = "destroyer_bow_X1L2M3S3_entity"
+    icon = "GFX_ship_part_core_bow"
+
+    prerequisites = {
+        "tech_infinitum_destroyer_construction"
+        "tech_energy_lance_2"
+    }
+
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 1.0
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 0.1
+            NOT = { is_preferred_weapons = "weapon_type_energy" }
+        }
+    }
+
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_02"
+    }
+    component_slot = {
+        name = "SMALL_GUN_03"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_03"
+    }
+
+    small_utility_slots = 1
+    medium_utility_slots = 5
+    aux_utility_slots = 3
+
+    cost = 550
+}
+
+ship_section_template = {
+    key = "DESTROYER_INFINITUM_BOW_02"
+    ship_size = destroyer
+    fits_on_slot = bow
+    entity = "destroyer_bow_X1L2T3S3_entity"
+    icon = "GFX_ship_part_core_bow"
+
+    prerequisites = {
+        "tech_infinitum_destroyer_construction"
+        "tech_energy_lance_2"
+        "tech_energy_torpedoes_2"
+    }
+
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 0.9
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 0.75
+            is_preferred_weapons = "weapon_type_explosive"
+        }
+        modifier = {
+            factor = 0.1
+            NAND = {
+                is_preferred_weapons = "weapon_type_energy"
+                is_preferred_weapons = "weapon_type_explosive"
+            }
+        }
+    }
+
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "TORPEDO_03"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_02"
+    }
+    component_slot = {
+        name = "SMALL_GUN_03"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_03"
+    }
+
+    small_utility_slots = 1
+    medium_utility_slots = 5
+    aux_utility_slots = 3
+
+    cost = 550
+}
+
+ship_section_template = {
+    key = "DESTROYER_INFINITUM_BOW_03"
+    ship_size = destroyer
+    fits_on_slot = bow
+    entity = "destroyer_bow_X1L2T5_entity"
+    icon = "GFX_ship_part_core_bow"
+
+    prerequisites = {
+        "tech_infinitum_destroyer_construction"
+        "tech_energy_lance_2"
+        "tech_energy_torpedoes_2"
+    }
+
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 0.85
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 1.0
+            is_preferred_weapons = "weapon_type_explosive"
+        }
+        modifier = {
+            factor = 0.1
+            NAND = {
+                is_preferred_weapons = "weapon_type_energy"
+                is_preferred_weapons = "weapon_type_explosive"
+            }
+        }
+    }
+
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "TORPEDO_03"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "TORPEDO_04"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_04"
+    }
+    component_slot = {
+        name = "TORPEDO_05"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_05"
+    }
+
+    small_utility_slots = 1
+    medium_utility_slots = 5
+    aux_utility_slots = 3
+
+    cost = 550
+}
+
+########################
+### Stern / Infinitum
+########################
+
+ship_section_template = {
+    key = "DESTROYER_INFINITUM_STERN_01"
+    ship_size = destroyer
+    fits_on_slot = stern
+    entity = "destroyer_stern_X1L2M3S3_entity"
+    icon = "GFX_ship_part_core_stern"
+
+    prerequisites = {
+        "tech_infinitum_destroyer_construction"
+        "tech_energy_lance_2"
+    }
+
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 1.0
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 0.1
+            NOT = { is_preferred_weapons = "weapon_type_energy" }
+        }
+    }
+
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_02"
+    }
+    component_slot = {
+        name = "SMALL_GUN_03"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_03"
+    }
+
+    small_utility_slots = 1
+    medium_utility_slots = 5
+    aux_utility_slots = 3
+
+    cost = 550
+}
+
+ship_section_template = {
+    key = "DESTROYER_INFINITUM_STERN_02"
+    ship_size = destroyer
+    fits_on_slot = stern
+    entity = "destroyer_stern_X1L2M5_entity"
+    icon = "GFX_ship_part_core_stern"
+
+    prerequisites = {
+        "tech_infinitum_destroyer_construction"
+        "tech_energy_lance_2"
+    }
+
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 1.0
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 0.1
+            NOT = { is_preferred_weapons = "weapon_type_energy" }
+        }
+    }
+
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_04"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_04"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_05"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_05"
+    }
+
+    small_utility_slots = 1
+    medium_utility_slots = 5
+    aux_utility_slots = 3
+
+    cost = 570
+}
+
+ship_section_template = {
+    key = "DESTROYER_INFINITUM_STERN_03"
+    ship_size = destroyer
+    fits_on_slot = stern
+    entity = "destroyer_stern_X1L2M3P3_entity"
+    icon = "GFX_ship_part_core_stern"
+
+    prerequisites = {
+        "tech_infinitum_destroyer_construction"
+        "tech_energy_lance_2"
+        "tech_pd_tracking_3"
+        "tech_flak_batteries_2"
+    }
+
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 1.0
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 0.8
+            is_preferred_weapons = "weapon_type_kinetic"
+        }
+        modifier = {
+            factor = 0.1
+            NAND = {
+                is_preferred_weapons = "weapon_type_energy"
+                is_preferred_weapons = "weapon_type_kinetic"
+            }
+        }
+    }
+
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "small_gun_02"
+    }
+    component_slot = {
+        name = "SMALL_GUN_03"
+        slot_size = point_defence
+        slot_type = weapon
+        locatorname = "small_gun_03"
+    }
+
+    small_utility_slots = 1
+    medium_utility_slots = 5
+    aux_utility_slots = 3
+
+    cost = 550
+}

@@ -1,0 +1,105 @@
+##################################
+### Section Templates / Corvette
+##################################
+
+######################
+### Mid / Infinitum
+######################
+
+ship_section_template = {
+    key = "CORVETTE_INFINITUM_MID_01"
+    ship_size = corvette
+    fits_on_slot = mid
+    entity = "corvette_mid_X1L2_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_infinitum_corvette_construction"
+        "tech_energy_lance_2"
+    }
+
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 1.0
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 0.50
+            NOT = { is_preferred_weapons = "weapon_type_energy" }
+        }
+    }
+
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        slot_size = extra_large
+        slot_type = weapon
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_02"
+    }
+
+    medium_utility_slots = 3
+    aux_utility_slots = 3
+
+    cost = 500
+}
+
+ship_section_template = {
+    key = "CORVETTE_INFINITUM_MID_02"
+    ship_size = corvette
+    fits_on_slot = mid
+    entity = "corvette_mid_L3_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_infinitum_corvette_construction"
+        "tech_energy_lance_2"
+    }
+
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 0.90
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 0.50
+            NOT = { is_preferred_weapons = "weapon_type_energy" }
+        }
+    }
+
+    component_slot = {
+        name = "LARGE_GUN_01"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "large_gun_03"
+    }
+
+    medium_utility_slots = 3
+    aux_utility_slots = 3
+
+    cost = 450
+}

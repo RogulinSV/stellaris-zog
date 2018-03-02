@@ -6,6 +6,8 @@
     CORVETTE_SUPREME_MID_02: "Совершенная секция «Завет»"
     CORVETTE_TRANSCENDENTAL_MID_01: "Трансцендентная секция «Прометей»"
     CORVETTE_TRANSCENDENTAL_MID_02: "Трансцендентная секция «Завет»"
+    CORVETTE_INFINITUM_MID_01: "Бесконечная секция «Глаз Агамотто»"
+    CORVETTE_INFINITUM_MID_02: "Бесконечная секция «Амулет Агамотто»"
     # Destroyer Sections
     DESTROYER_ADVANCED_BOW_01: "Передовая носовая cекция «Прометей»"
     DESTROYER_ADVANCED_BOW_02: "Передовая носовая cекция «Завет»"
@@ -29,6 +31,12 @@
     DESTROYER_TRANSCENDENTAL_STERN_03: "Трансцендентная кормовая cекция «Возрождение»"
     DESTROYER_TRANSCENDENTAL_STERN_04: "Трансцендентная кормовая cекция «Откровение»"
     DESTROYER_TRANSCENDENTAL_STERN_05: "Трансцендентная кормовая cекция «Атлас»"
+    DESTROYER_INFINITUM_BOW_01: "Бесконечная носовая секция «Глаз Агамотто»"
+    DESTROYER_INFINITUM_BOW_02: "Бесконечная носовая секция «Амулет Агамотто»"
+    DESTROYER_INFINITUM_BOW_03: "Бесконечная носовая секция «Амулет Дормамму»"
+    DESTROYER_INFINITUM_STERN_01: "Бесконечная кормовая секция «Глаз Агамотто»"
+    DESTROYER_INFINITUM_STERN_02: "Бесконечная кормовая секция «Амулет Агамотто»"
+    DESTROYER_INFINITUM_STERN_03: "Бесконечная кормовая секция «Амулет Дормамму»"
     # Cruiser Sections
     CRUISER_ADVANCED_BOW_01: "Передовая носовая cекция «Прометей»"
     CRUISER_ADVANCED_BOW_02: "Передовая носовая cекция «Завет»"

@@ -20,7 +20,15 @@ ship_section_template = {
     }
 
     ai_weight = {
-        factor = 100
+        weight = 100
+        modifier = {
+            factor = 1.0
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 0.1
+            NOT = { is_preferred_weapons = "weapon_type_energy" }
+        }
     }
 
     component_slot = {
@@ -138,7 +146,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_large_X6L9_entity"
+    entity = "military_station_large_X6L5W4_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -149,7 +157,15 @@ ship_section_template = {
     }
 
     ai_weight = {
-        factor = 100
+        weight = 100
+        modifier = {
+            factor = 1.0
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 0.9
+            NOT = { is_preferred_weapons = "weapon_type_energy" }
+        }
     }
 
     component_slot = {
@@ -265,7 +281,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_large_X5L10_entity"
+    entity = "military_station_large_X5W10_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -406,7 +422,22 @@ ship_section_template = {
     }
 
     ai_weight = {
-        factor = 75
+        weight = 100
+        modifier = {
+            factor = 1.0
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 1.0
+            is_preferred_weapons = "weapon_type_explosive"
+        }
+        modifier = {
+            factor = 0.1
+            NAND = {
+                is_preferred_weapons = "weapon_type_energy"
+                is_preferred_weapons = "weapon_type_explosive"
+            }
+        }
     }
 
     component_slot = {
@@ -531,7 +562,22 @@ ship_section_template = {
     }
 
     ai_weight = {
-        factor = 50
+        weight = 100
+        modifier = {
+            factor = 1.0
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 1.0
+            is_preferred_weapons = "weapon_type_kinetic"
+        }
+        modifier = {
+            factor = 0.1
+            NAND = {
+                is_preferred_weapons = "weapon_type_energy"
+                is_preferred_weapons = "weapon_type_kinetic"
+            }
+        }
     }
 
     component_slot = {
@@ -658,7 +704,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_large_L15_entity"
+    entity = "military_station_large_W15_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -809,7 +855,22 @@ ship_section_template = {
     }
 
     ai_weight = {
-        factor = 75
+        weight = 100
+        modifier = {
+            factor = 0.95
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 0.95
+            is_preferred_weapons = "weapon_type_explosive"
+        }
+        modifier = {
+            factor = 0.1
+            NAND = {
+                is_preferred_weapons = "weapon_type_energy"
+                is_preferred_weapons = "weapon_type_explosive"
+            }
+        }
     }
 
     component_slot = {
@@ -937,7 +998,22 @@ ship_section_template = {
     }
 
     ai_weight = {
-        factor = 80
+        weight = 100
+        modifier = {
+            factor = 0.9
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 0.8
+            is_preferred_weapons = "weapon_type_kinetic"
+        }
+        modifier = {
+            factor = 0.1
+            NAND = {
+                is_preferred_weapons = "weapon_type_energy"
+                is_preferred_weapons = "weapon_type_kinetic"
+            }
+        }
     }
 
     component_slot = {
@@ -1064,7 +1140,15 @@ ship_section_template = {
     }
 
     ai_weight = {
-        factor = 100
+        weight = 100
+        modifier = {
+            factor = 1.0
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 0.1
+            NOT = { is_preferred_weapons = "weapon_type_energy" }
+        }
     }
 
     component_slot = {
@@ -1192,7 +1276,22 @@ ship_section_template = {
     }
 
     ai_weight = {
-        factor = 90
+        weight = 100
+        modifier = {
+            factor = 0.6
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 1.0
+            is_preferred_weapons = "weapon_type_explosive"
+        }
+        modifier = {
+            factor = 0.1
+            NAND = {
+                is_preferred_weapons = "weapon_type_energy"
+                is_preferred_weapons = "weapon_type_explosive"
+            }
+        }
     }
 
     component_slot = {
@@ -1320,7 +1419,22 @@ ship_section_template = {
     }
 
     ai_weight = {
-        factor = 90
+        weight = 100
+        modifier = {
+            factor = 0.6
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 1.0
+            is_preferred_weapons = "weapon_type_kinetic"
+        }
+        modifier = {
+            factor = 0.1
+            NAND = {
+                is_preferred_weapons = "weapon_type_energy"
+                is_preferred_weapons = "weapon_type_kinetic"
+            }
+        }
     }
 
     component_slot = {
