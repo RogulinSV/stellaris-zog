@@ -535,6 +535,79 @@ tb_wastelands = {
     }
 }
 
+tb_humants = {
+    time = 1000
+
+    cost = {
+        energy = 200
+        minerals = 500
+    }
+
+    spawn_chance = {
+        modifier = {
+            factor = 0
+            planet = {
+                NAND = {
+                    is_planet_class = pc_continental
+                    is_planet_class = pc_tropical
+                    is_planet_class = pc_alpine
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_geothermal
+                    is_planet_class = pc_cascadian
+                    is_planet_class = pc_mangrove
+                    is_planet_class = pc_mesa
+                    is_planet_class = pc_oasis
+                    is_planet_class = pc_hajungle
+                }
+            }
+        }
+        modifier = {
+            add = 2
+            planet = {
+                OR = {
+                    is_planet_class = pc_continental
+                    is_planet_class = pc_alpine
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_geothermal
+                    is_planet_class = pc_cascadian
+                    is_planet_class = pc_mesa
+                }
+            }
+        }
+        modifier = {
+            add = 6
+            planet = {
+                OR = {
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_sandsea
+                    is_planet_class = pc_oasis
+                }
+            }
+        }
+        modifier = {
+            add = 12
+            planet = {
+                OR = {
+                    is_planet_class = pc_tropical
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_mangrove
+                    is_planet_class = pc_hajungle
+                }
+            }
+        }
+        modifier = {
+            factor = 1.75
+            planet = {
+                has_modifier = "dangerous_wildlife"
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_tb_humants"
+    }
+}
+
 tb_ancient_monuments = {
     time = 2000
 
