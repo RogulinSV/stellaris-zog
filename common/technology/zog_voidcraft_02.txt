@@ -19,7 +19,7 @@ tech_advanced_corvette_construction = {
 
     prerequisites = {
         "tech_advanced_voidcraft"
-        "tech_spaceport_2"
+        "tech_corvettes"
     }
 
     prereqfor_desc = {
@@ -353,7 +353,7 @@ tech_advanced_destroyer_construction = {
 
     prerequisites = {
         "tech_advanced_voidcraft"
-        "tech_spaceport_3"
+        "tech_destroyers"
     }
 
     prereqfor_desc = {
@@ -704,7 +704,7 @@ tech_advanced_cruiser_construction = {
 
     prerequisites = {
         "tech_advanced_voidcraft"
-        "tech_spaceport_5"
+        "tech_cruisers"
     }
 
     prereqfor_desc = {
@@ -1070,7 +1070,7 @@ tech_advanced_battleship_construction = {
 
     prerequisites = {
         "tech_advanced_voidcraft"
-        "tech_spaceport_6"
+        "tech_battleships"
     }
 
     prereqfor_desc = {
