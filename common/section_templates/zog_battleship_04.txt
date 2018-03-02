@@ -129,7 +129,7 @@ ship_section_template = {
 }
 
 ship_section_template = {
-    key = "BATTLESHIP_TRANSCENDENTAL_BOW_02"
+    key = "BATTLESHIP_INFINITUM_BOW_02"
     ship_size = battleship
     fits_on_slot = bow
     entity = "battleship_bow_L9S6_entity"
@@ -250,7 +250,7 @@ ship_section_template = {
 }
 
 ship_section_template = {
-    key = "BATTLESHIP_TRANSCENDENTAL_BOW_03"
+    key = "BATTLESHIP_INFINITUM_BOW_03"
     ship_size = battleship
     fits_on_slot = bow
     entity = "battleship_bow_L4T10_entity"
@@ -373,7 +373,7 @@ ship_section_template = {
 }
 
 ship_section_template = {
-    key = "BATTLESHIP_TRANSCENDENTAL_BOW_04"
+    key = "BATTLESHIP_INFINITUM_BOW_04"
     ship_size = battleship
     fits_on_slot = bow
     entity = "battleship_bow_X1L2T10_entity"
@@ -488,7 +488,7 @@ ship_section_template = {
 ###########################
 
 ship_section_template = {
-    key = "BATTLESHIP_TRANSCENDENTAL_MID_01"
+    key = "BATTLESHIP_INFINITUM_MID_01"
     ship_size = battleship
     fits_on_slot = mid
     entity = "battleship_mid_X2L6M7_entity"
@@ -610,7 +610,7 @@ ship_section_template = {
 }
 
 ship_section_template = {
-    key = "BATTLESHIP_TRANSCENDENTAL_MID_02"
+    key = "BATTLESHIP_INFINITUM_MID_02"
     ship_size = battleship
     fits_on_slot = mid
     entity = "battleship_mid_L9S6_entity"
@@ -731,7 +731,7 @@ ship_section_template = {
 }
 
 ship_section_template = {
-    key = "BATTLESHIP_TRANSCENDENTAL_MID_03"
+    key = "BATTLESHIP_INFINITUM_MID_03"
     ship_size = battleship
     fits_on_slot = mid
     entity = "battleship_mid_L5T6P4_entity"
@@ -862,7 +862,7 @@ ship_section_template = {
 }
 
 ship_section_template = {
-    key = "BATTLESHIP_TRANSCENDENTAL_MID_04"
+    key = "BATTLESHIP_INFINITUM_MID_04"
     ship_size = battleship
     fits_on_slot = mid
     entity = "battleship_mid_X1L2M3T6P3_entity"
@@ -1003,7 +1003,7 @@ ship_section_template = {
 #############################
 
 ship_section_template = {
-    key = "BATTLESHIP_TRANSCENDENTAL_STERN_01"
+    key = "BATTLESHIP_INFINITUM_STERN_01"
     ship_size = battleship
     fits_on_slot = stern
     entity = "battleship_stern_X2L6M7_entity"
@@ -1125,7 +1125,7 @@ ship_section_template = {
 }
 
 ship_section_template = {
-    key = "BATTLESHIP_TRANSCENDENTAL_STERN_02"
+    key = "BATTLESHIP_INFINITUM_STERN_02"
     ship_size = battleship
     fits_on_slot = stern
     entity = "battleship_stern_X1L2M3P9_entity"
@@ -1255,7 +1255,7 @@ ship_section_template = {
 }
 
 ship_section_template = {
-    key = "BATTLESHIP_TRANSCENDENTAL_STERN_03"
+    key = "BATTLESHIP_INFINITUM_STERN_03"
     ship_size = battleship
     fits_on_slot = stern
     entity = "battleship_stern_X1L2M3W6_entity"
@@ -1358,7 +1358,7 @@ ship_section_template = {
 }
 
 ship_section_template = {
-    key = "BATTLESHIP_TRANSCENDENTAL_STERN_04"
+    key = "BATTLESHIP_INFINITUM_STERN_04"
     ship_size = battleship
     fits_on_slot = stern
     entity = "battleship_stern_X3W6P3_entity"
