@@ -598,6 +598,97 @@ tech_tb_wastelands = {
 }
 
 ########################################
+### Society / Life forms assimilation
+########################################
+
+tech_forced_assimilation = {
+    cost = 5000
+    area = society
+    start_tech = no
+    category = { new_worlds }
+    icon = "tech_forced_assimilation"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_alien_life_studies"
+        "tech_colonization_3"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_forced_assimilation_prereqfor.title
+            desc = tech_forced_assimilation_prereqfor.desc
+        }
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            OR = {
+                has_ethic = "ethic_xenophile"
+                has_ethic = "ethic_fanatic_xenophile"
+            }
+        }
+        modifier = {
+            factor = 1.45
+            has_ethic = "ethic_xenophobe"
+        }
+        modifier = {
+            factor = 1.75
+            has_ethic = "ethic_fanatic_xenophobe"
+        }
+        modifier = {
+            factor = 1.30
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_maniacal"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+        modifier = {
+            factor = 1.10
+            OR = {
+                has_valid_civic = "civic_imperial_cult"
+                has_valid_civic = "civic_slaver_guilds"
+                has_valid_civic = "civic_fanatic_purifiers"
+            }
+        }
+        modifier = {
+            factor = 0
+            has_valid_civic = "civic_beacon_of_liberty"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            OR = {
+                has_ethic = "ethic_xenophile"
+                has_ethic = "ethic_fanatic_xenophile"
+            }
+        }
+        modifier = {
+            factor = 0
+            has_valid_civic = "civic_beacon_of_liberty"
+        }
+    }
+}
+
+########################################
 ### Society / "Desert Warriors" forces
 ########################################
 
