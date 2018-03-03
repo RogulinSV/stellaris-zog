@@ -315,8 +315,8 @@ tb_desert_wormholes = {
     time = 900
 
     cost = {
-        energy = 1500
-        minerals = 1200
+        energy = 700
+        minerals = 300
     }
 
     spawn_chance = {
