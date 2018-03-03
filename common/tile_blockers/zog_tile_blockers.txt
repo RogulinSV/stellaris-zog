@@ -664,7 +664,6 @@ tb_humants = {
             planet = {
                 OR = {
                     # @depend "Planetary Diversity" (id:819148835)
-                    is_planet_class = pc_sandsea
                     is_planet_class = pc_oasis
                 }
             }
@@ -690,6 +689,86 @@ tb_humants = {
 
     prerequisites = {
         "tech_tb_humants"
+    }
+}
+
+tb_dendro_cocoons = {
+    time = 700
+
+    cost = {
+        energy = 300
+        minerals = 300
+    }
+
+    spawn_chance = {
+        modifier = {
+            factor = 0
+            planet = {
+                NAND = {
+                    is_planet_class = pc_continental
+                    is_planet_class = pc_tropical
+                    is_planet_class = pc_alpine
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_geothermal
+                    is_planet_class = pc_cascadian
+                    is_planet_class = pc_mangrove
+                    is_planet_class = pc_mesa
+                    is_planet_class = pc_oasis
+                    is_planet_class = pc_hajungle
+                }
+            }
+        }
+        modifier = {
+            add = 2
+            planet = {
+                OR = {
+                    is_planet_class = pc_continental
+                    is_planet_class = pc_alpine
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_geothermal
+                    is_planet_class = pc_cascadian
+                    is_planet_class = pc_mesa
+                }
+            }
+        }
+        modifier = {
+            add = 3
+            planet = {
+                OR = {
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_oasis
+                }
+            }
+        }
+        modifier = {
+            add = 5
+            planet = {
+                OR = {
+                    is_planet_class = pc_tropical
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_mangrove
+                    is_planet_class = pc_hajungle
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            planet = {
+                NOT = {
+                    has_modifier = "low_gravity"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.35
+            planet = {
+                has_modifier = "irradiated_planet"
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_tb_dendro_cocoons"
     }
 }
 
