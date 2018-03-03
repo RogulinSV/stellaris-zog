@@ -476,6 +476,86 @@ tb_impenetrable_forests = {
     }
 }
 
+tb_carbon_forests = {
+    time = 600
+
+    cost = {
+        energy = 200
+        minerals = 100
+    }
+
+    spawn_chance = {
+        modifier = {
+            factor = 0
+            planet = {
+                NAND = {
+                    is_planet_class = pc_continental
+                    is_planet_class = pc_arid
+                    is_planet_class = pc_savannah
+                    is_planet_class = pc_gaia
+                    is_planet_class = pc_tropical
+                    is_planet_class = pc_alpine
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_steppe
+                    is_planet_class = pc_geothermal
+                    is_planet_class = pc_cascadian
+                    is_planet_class = pc_mangrove
+                    is_planet_class = pc_mesa
+                    is_planet_class = pc_oasis
+                    is_planet_class = pc_hajungle
+                }
+            }
+        }
+        modifier = {
+            add = 15
+            planet = {
+                OR = {
+                    is_planet_class = pc_continental
+                    is_planet_class = pc_arid
+                    is_planet_class = pc_savannah
+                    is_planet_class = pc_tropical
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_steppe
+                    is_planet_class = pc_cascadian
+                    is_planet_class = pc_mangrove
+                    is_planet_class = pc_hajungle
+                }
+            }
+        }
+        modifier = {
+            add = 7
+            planet = {
+                OR = {
+                    is_planet_class = pc_gaia
+                    is_planet_class = pc_alpine
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_geothermal
+                    is_planet_class = pc_mesa
+                    is_planet_class = pc_oasis
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            planet = {
+                NOT = {
+                    has_modifier = "carbon_world"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            planet = {
+                has_modifier = "bleak_planet"
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_tb_carbon_forests"
+    }
+}
+
 tb_wastelands = {
     time = 2200
 
