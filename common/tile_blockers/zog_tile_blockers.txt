@@ -236,11 +236,11 @@ tb_scorched_desert = {
 }
 
 tb_desert_worms = {
-    time = 14
+    time = 1400
 
     cost = {
-        energy = 6
-        minerals = 12
+        energy = 640
+        minerals = 520
     }
 
     spawn_chance = {
@@ -293,10 +293,15 @@ tb_desert_worms = {
         modifier = {
             factor = 0
             planet = {
-                NAND = {
-                    has_modifier = "dangerous_wildlife"
+                NOT = {
                     has_modifier = "titanic_life"
                 }
+            }
+        }
+        modifier = {
+            factor = 2.25
+            planet = {
+                has_modifier = "dangerous_wildlife"
             }
         }
     }
@@ -307,7 +312,7 @@ tb_desert_worms = {
 }
 
 tb_desert_wormholes = {
-    time = 1600
+    time = 900
 
     cost = {
         energy = 1500
