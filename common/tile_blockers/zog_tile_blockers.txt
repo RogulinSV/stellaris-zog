@@ -772,6 +772,222 @@ tb_dendro_cocoons = {
     }
 }
 
+tb_underground_creatures = {
+    time = 1000
+
+    cost = {
+        energy = 500
+        minerals = 300
+    }
+
+    spawn_chance = {
+        modifier = {
+            factor = 0
+            planet = {
+                NAND = {
+                    is_planet_class = pc_continental
+                    is_planet_class = pc_desert
+                    is_planet_class = pc_arid
+                    is_planet_class = pc_tundra
+                    is_planet_class = pc_savannah
+                    is_planet_class = pc_tropical
+                    is_planet_class = pc_alpine
+                    is_planet_class = pc_gaia
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_steppe
+                    is_planet_class = pc_hadesert
+                    is_planet_class = pc_sandsea
+                    is_planet_class = pc_geothermal
+                    is_planet_class = pc_cascadian
+                    is_planet_class = pc_mangrove
+                    is_planet_class = pc_desertislands
+                    is_planet_class = pc_mesa
+                    is_planet_class = pc_oasis
+                    is_planet_class = pc_hajungle
+                }
+            }
+        }
+        modifier = {
+            add = 5
+            planet = {
+                OR = {
+                    is_planet_class = pc_continental
+                    is_planet_class = pc_desert
+                    is_planet_class = pc_arid
+                    is_planet_class = pc_tundra
+                    is_planet_class = pc_savannah
+                    is_planet_class = pc_tropical
+                    is_planet_class = pc_alpine
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_steppe
+                    is_planet_class = pc_hadesert
+                    is_planet_class = pc_sandsea
+                    is_planet_class = pc_geothermal
+                    is_planet_class = pc_cascadian
+                    is_planet_class = pc_mangrove
+                    is_planet_class = pc_desertislands
+                    is_planet_class = pc_mesa
+                    is_planet_class = pc_oasis
+                    is_planet_class = pc_hajungle
+                }
+            }
+        }
+        modifier = {
+            add = 20
+            planet = {
+                OR = {
+                    is_planet_class = pc_gaia
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            planet = {
+                has_modifier = "unstable_tectonics"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            planet = {
+                has_modifier = "mineral_poor"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            planet = {
+                has_modifier = "dangerous_wildlife"
+            }
+        }
+        modifier = {
+            factor = 1.75
+            planet = {
+                has_modifier = "mineral_rich"
+            }
+        }
+        modifier = {
+            factor = 2.0
+            planet = {
+                has_modifier = "ultra_rich"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            planet = {
+                has_modifier = "bleak_planet"
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_tb_underground_creatures"
+    }
+}
+
+tb_terrain_creatures = {
+    time = 700
+
+    cost = {
+        energy = 200
+        minerals = 500
+    }
+
+    spawn_chance = {
+        modifier = {
+            factor = 0
+            planet = {
+                NAND = {
+                    is_planet_class = pc_continental
+                    is_planet_class = pc_desert
+                    is_planet_class = pc_arid
+                    is_planet_class = pc_tundra
+                    is_planet_class = pc_savannah
+                    is_planet_class = pc_tropical
+                    is_planet_class = pc_alpine
+                    is_planet_class = pc_gaia
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_steppe
+                    is_planet_class = pc_hadesert
+                    is_planet_class = pc_sandsea
+                    is_planet_class = pc_geothermal
+                    is_planet_class = pc_cascadian
+                    is_planet_class = pc_mangrove
+                    is_planet_class = pc_desertislands
+                    is_planet_class = pc_mesa
+                    is_planet_class = pc_oasis
+                    is_planet_class = pc_hajungle
+                }
+            }
+        }
+        modifier = {
+            add = 5
+            planet = {
+                OR = {
+                    is_planet_class = pc_continental
+                    is_planet_class = pc_desert
+                    is_planet_class = pc_arid
+                    is_planet_class = pc_tundra
+                    is_planet_class = pc_savannah
+                    is_planet_class = pc_tropical
+                    is_planet_class = pc_alpine
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_steppe
+                    is_planet_class = pc_hadesert
+                    is_planet_class = pc_sandsea
+                    is_planet_class = pc_geothermal
+                    is_planet_class = pc_cascadian
+                    is_planet_class = pc_mangrove
+                    is_planet_class = pc_desertislands
+                    is_planet_class = pc_mesa
+                    is_planet_class = pc_oasis
+                    is_planet_class = pc_hajungle
+                }
+            }
+        }
+        modifier = {
+            add = 20
+            planet = {
+                OR = {
+                    is_planet_class = pc_gaia
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            planet = {
+                has_modifier = "asteroid_impacts"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            planet = {
+                has_modifier = "hazardous_weather"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            planet = {
+                has_modifier = "wild_storms"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            planet = {
+                has_modifier = "lush_planet"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            planet = {
+                has_modifier = "dangerous_wildlife"
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_tb_terrain_creatures"
+    }
+}
+
 tb_ancient_monuments = {
     time = 2000
 
