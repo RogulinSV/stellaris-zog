@@ -15,6 +15,7 @@ ship_event = {
             is_ship_size = "destroyer"
             is_ship_size = "cruiser"
             is_ship_size = "battleship"
+            is_ship_size = "titan"
             # @depend "New Ship Classes & More" (id:683230077)
             is_ship_size = "LightCarrier"
             is_ship_size = "StrikeCruiser"
@@ -42,6 +43,108 @@ ship_event = {
                 else = {
                     change_variable = {
                         which = "ship_military_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = zog_ship_events.10
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        OR = {
+            is_ship_size = "constructor"
+            is_ship_size = "science"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "ship_civilian_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "ship_civilian_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "ship_civilian_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = zog_ship_events.11
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ship_size = "colonizer"
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "ship_colonizer_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "ship_colonizer_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "ship_colonizer_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = zog_ship_events.15
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ship_size = "transport"
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "ship_transport_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "ship_transport_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "ship_transport_built"
                         value = 1
                     }
                 }
@@ -182,9 +285,42 @@ ship_event = {
     }
 }
 
-# @depend "New Ship Classes & More" (id:683230077)
 ship_event = {
     id = zog_ship_events.5
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ship_size = "titan"
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "ship_titan_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "ship_titan_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "ship_titan_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+# @depend "New Ship Classes & More" (id:683230077)
+ship_event = {
+    id = zog_ship_events.20
     hide_window = yes
     is_triggered_only = yes
 
@@ -217,7 +353,7 @@ ship_event = {
 }
 
 ship_event = {
-    id = zog_ship_events.6
+    id = zog_ship_events.21
     hide_window = yes
     is_triggered_only = yes
 
@@ -250,7 +386,7 @@ ship_event = {
 }
 
 ship_event = {
-    id = zog_ship_events.7
+    id = zog_ship_events.22
     hide_window = yes
     is_triggered_only = yes
 
@@ -283,7 +419,7 @@ ship_event = {
 }
 
 ship_event = {
-    id = zog_ship_events.8
+    id = zog_ship_events.23
     hide_window = yes
     is_triggered_only = yes
 
@@ -316,7 +452,7 @@ ship_event = {
 }
 
 ship_event = {
-    id = zog_ship_events.9
+    id = zog_ship_events.24
     hide_window = yes
     is_triggered_only = yes
 
@@ -349,7 +485,7 @@ ship_event = {
 }
 
 ship_event = {
-    id = zog_ship_events.10
+    id = zog_ship_events.25
     hide_window = yes
     is_triggered_only = yes
 
@@ -382,7 +518,7 @@ ship_event = {
 }
 
 ship_event = {
-    id = zog_ship_events.11
+    id = zog_ship_events.26
     hide_window = yes
     is_triggered_only = yes
 

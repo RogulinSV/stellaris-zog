@@ -1,6 +1,6 @@
 on_yearly_pulse = {
     events = {
-        # Buildings & Spaceport modules
+        # Buildings & Starport modules
         zog_building_events.0
     }
 }
@@ -57,6 +57,8 @@ on_building_upgraded = {
 
 on_building_demolished = {
     events = {
+        # Any buildings events
+        zog_building_events.2
         # Building "Hydroponics farm"
         zog_building_events.11
         zog_building_events.21
@@ -80,6 +82,8 @@ on_building_demolished = {
 
 on_building_replaced = {
     events = {
+        # Any buildings events
+        zog_building_events.2
         # Building "Hydroponics farm"
         zog_building_events.11
         zog_building_events.21
@@ -113,19 +117,27 @@ on_ship_built = {
         zog_ship_events.3
         # Ship "Battleship" built
         zog_ship_events.4
-        # Ship "LightCarrier" built
+        # Ship "Titan" built
         zog_ship_events.5
-        # Ship "StrikeCruiser" built
-        zog_ship_events.6
-        # Ship "Battlecruiser" built
-        zog_ship_events.7
-        # Ship "Carrier" built
-        zog_ship_events.8
-        # Ship "Dreadnought" built
-        zog_ship_events.9
-        # Ship "Superdreadnought" built
+        # Civilian ship built
         zog_ship_events.10
-        # Ship "Flagship" built
+        # Ship "Colonizer" built
         zog_ship_events.11
+        # Ship "Transport" built
+        zog_ship_events.15
+        # Ship "LightCarrier" built
+        zog_ship_events.20
+        # Ship "StrikeCruiser" built
+        zog_ship_events.21
+        # Ship "Battlecruiser" built
+        zog_ship_events.22
+        # Ship "Carrier" built
+        zog_ship_events.23
+        # Ship "Dreadnought" built
+        zog_ship_events.24
+        # Ship "Superdreadnought" built
+        zog_ship_events.25
+        # Ship "Flagship" built
+        zog_ship_events.26
     }
 }

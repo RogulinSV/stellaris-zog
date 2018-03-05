@@ -1,7 +1,7 @@
 namespace = zog_building_events
 
 ################################################
-### Buildings & Spaceport modules yearly event
+### Buildings & Starport modules yearly event
 ################################################
 
 event = {
@@ -12,290 +12,1376 @@ event = {
     immediate = {
         every_country = {
             set_variable = {
-                which = "hydroponics_farm_built"
+                which = "planet_building_hydroponics_farm_built"
                 value = 0
             }
             set_variable = {
-                which = "mining_network_built"
+                which = "planet_building_mining_network_built"
                 value = 0
             }
             set_variable = {
-                which = "mineral_processing_plant_built"
+                which = "planet_building_mineral_processing_plant_built"
                 value = 0
             }
             set_variable = {
-                which = "power_plant_built"
+                which = "planet_building_power_plant_built"
                 value = 0
             }
             set_variable = {
-                which = "power_hub_built"
+                which = "planet_building_power_hub_built"
+                value = 0
+            }
+
+            # Stargbase module counters
+            set_variable = {
+                which = "starbase_module_built"
                 value = 0
             }
             set_variable = {
-                which = "spaceport_built"
+                which = "starbase_module_shipyard_built"
                 value = 0
             }
             set_variable = {
-                which = "spaceport_1_built"
+                which = "starbase_module_anchorage_built"
                 value = 0
             }
             set_variable = {
-                which = "spaceport_2_built"
+                which = "starbase_module_gun_battery_built"
                 value = 0
             }
             set_variable = {
-                which = "spaceport_3_built"
+                which = "starbase_module_missile_battery_built"
                 value = 0
             }
             set_variable = {
-                which = "spaceport_4_built"
+                which = "starbase_module_hangar_bay_built"
                 value = 0
             }
             set_variable = {
-                which = "spaceport_5_built"
+                which = "starbase_module_trading_hub_built"
+                value = 0
+            }
+            # Stargbase building counters
+            set_variable = {
+                which = "starbase_building_built"
                 value = 0
             }
             set_variable = {
-                which = "spaceport_6_built"
+                which = "starbase_building_crew_quarters_built"
                 value = 0
             }
             set_variable = {
-                which = "hydroponics_module_built"
+                which = "starbase_building_hydroponics_bay_built"
                 value = 0
             }
             set_variable = {
-                which = "solar_panel_module_built"
+                which = "starbase_building_resource_silo_built"
                 value = 0
+            }
+            set_variable = {
+                which = "starbase_building_nebula_refinery_built"
+                value = 0
+            }
+            set_variable = {
+                which = "starbase_building_listening_post_built"
+                value = 0
+            }
+            set_variable = {
+                which = "starbase_building_offworld_trading_company_built"
+                value = 0
+            }
+            set_variable = {
+                which = "starbase_building_fleet_academy_built"
+                value = 0
+            }
+            set_variable = {
+                which = "starbase_building_naval_logistics_office_built"
+                value = 0
+            }
+            set_variable = {
+                which = "starbase_building_titan_yards_built"
+                value = 0
+            }
+            set_variable = {
+                which = "starbase_building_colossus_yards_built"
+                value = 0
+            }
+            set_variable = {
+                which = "starbase_building_black_hole_observatory_built"
+                value = 0
+            }
+            set_variable = {
+                which = "starbase_building_target_uplink_computer_built"
+                value = 0
+            }
+            set_variable = {
+                which = "starbase_building_defense_grid_built"
+                value = 0
+            }
+            set_variable = {
+                which = "starbase_building_deep_space_black_site_built"
+                value = 0
+            }
+            set_variable = {
+                which = "starbase_building_curator_think_tank_built"
+                value = 0
+            }
+            set_variable = {
+                which = "starbase_building_art_college_built"
+                value = 0
+            }
+            set_variable = {
+                which = "starbase_building_communications_jammer_built"
+                value = 0
+            }
+            set_variable = {
+                which = "starbase_building_disruption_field_built"
+                value = 0
+            }
+            set_variable = {
+                which = "starbase_building_warp_fluctuator_built"
+                value = 0
+            }
+            set_variable = {
+                which = "starbase_building_command_center_built"
+                value = 0
+            }
+
+            every_owned_starbase = {
+                # Starbase "Shipyard" module
+                if = {
+                    limit = {
+                        has_starbase_module = "shipyard"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_module_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_module_shipyard_built"
+                            value = 1
+                        }
+                    }
+                    if = {
+                        limit = {
+                            count_starbase_modules = {
+                                type = "shipyard"
+                                count = 2
+                            }
+                        }
+                        owner = {
+                            change_variable = {
+                                which = "starbase_module_shipyard_built"
+                                value = 1
+                            }
+                        }
+                        else = {
+                            if = {
+                                limit = {
+                                    count_starbase_modules = {
+                                        type = "shipyard"
+                                        count = 3
+                                    }
+                                }
+                                owner = {
+                                    change_variable = {
+                                        which = "starbase_module_shipyard_built"
+                                        value = 2
+                                    }
+                                }
+                                else = {
+                                    if = {
+                                        limit = {
+                                            count_starbase_modules = {
+                                                type = "shipyard"
+                                                count = 4
+                                            }
+                                        }
+                                        owner = {
+                                            change_variable = {
+                                                which = "starbase_module_shipyard_built"
+                                                value = 3
+                                            }
+                                        }
+                                        else = {
+                                            if = {
+                                                limit = {
+                                                    count_starbase_modules = {
+                                                        type = "shipyard"
+                                                        count = 5
+                                                    }
+                                                }
+                                                owner = {
+                                                    change_variable = {
+                                                        which = "starbase_module_shipyard_built"
+                                                        value = 4
+                                                    }
+                                                }
+                                                else = {
+                                                    if = {
+                                                        limit = {
+                                                            count_starbase_modules = {
+                                                                type = "shipyard"
+                                                                count = 6
+                                                            }
+                                                        }
+                                                        owner = {
+                                                            change_variable = {
+                                                                which = "starbase_module_shipyard_built"
+                                                                value = 5
+                                                            }
+                                                        }
+                                                        else = {
+                                                            if = {
+                                                                limit = {
+                                                                    count_starbase_modules = {
+                                                                        type = "shipyard"
+                                                                        count = 7
+                                                                    }
+                                                                }
+                                                                owner = {
+                                                                    change_variable = {
+                                                                        which = "starbase_module_shipyard_built"
+                                                                        value = 6
+                                                                    }
+                                                                }
+                                                                else = {
+                                                                    if = {
+                                                                        limit = {
+                                                                            count_starbase_modules = {
+                                                                                type = "shipyard"
+                                                                                count = 8
+                                                                            }
+                                                                        }
+                                                                        owner = {
+                                                                            change_variable = {
+                                                                                which = "starbase_module_shipyard_built"
+                                                                                value = 7
+                                                                            }
+                                                                        }
+                                                                        else = {
+                                                                            if = {
+                                                                                limit = {
+                                                                                    count_starbase_modules = {
+                                                                                        type = "shipyard"
+                                                                                        count = 9
+                                                                                    }
+                                                                                }
+                                                                                owner = {
+                                                                                    change_variable = {
+                                                                                        which = "starbase_module_shipyard_built"
+                                                                                        value = 8
+                                                                                    }
+                                                                                }
+                                                                                else = {
+                                                                                    owner = {
+                                                                                        change_variable = {
+                                                                                            which = "starbase_module_shipyard_built"
+                                                                                            value = 9
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                # Starbase "Anchorage" module
+                if = {
+                    limit = {
+                        has_starbase_module = "anchorage"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_module_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_module_anchorage_built"
+                            value = 1
+                        }
+                    }
+                    if = {
+                        limit = {
+                            count_starbase_modules = {
+                                type = "anchorage"
+                                count = 2
+                            }
+                        }
+                        owner = {
+                            change_variable = {
+                                which = "starbase_module_anchorage_built"
+                                value = 1
+                            }
+                        }
+                        else = {
+                            if = {
+                                limit = {
+                                    count_starbase_modules = {
+                                        type = "anchorage"
+                                        count = 3
+                                    }
+                                }
+                                owner = {
+                                    change_variable = {
+                                        which = "starbase_module_anchorage_built"
+                                        value = 2
+                                    }
+                                }
+                                else = {
+                                    if = {
+                                        limit = {
+                                            count_starbase_modules = {
+                                                type = "anchorage"
+                                                count = 4
+                                            }
+                                        }
+                                        owner = {
+                                            change_variable = {
+                                                which = "starbase_module_anchorage_built"
+                                                value = 3
+                                            }
+                                        }
+                                        else = {
+                                            if = {
+                                                limit = {
+                                                    count_starbase_modules = {
+                                                        type = "anchorage"
+                                                        count = 5
+                                                    }
+                                                }
+                                                owner = {
+                                                    change_variable = {
+                                                        which = "starbase_module_anchorage_built"
+                                                        value = 4
+                                                    }
+                                                }
+                                                else = {
+                                                    if = {
+                                                        limit = {
+                                                            count_starbase_modules = {
+                                                                type = "anchorage"
+                                                                count = 6
+                                                            }
+                                                        }
+                                                        owner = {
+                                                            change_variable = {
+                                                                which = "starbase_module_anchorage_built"
+                                                                value = 5
+                                                            }
+                                                        }
+                                                        else = {
+                                                            if = {
+                                                                limit = {
+                                                                    count_starbase_modules = {
+                                                                        type = "anchorage"
+                                                                        count = 7
+                                                                    }
+                                                                }
+                                                                owner = {
+                                                                    change_variable = {
+                                                                        which = "starbase_module_anchorage_built"
+                                                                        value = 6
+                                                                    }
+                                                                }
+                                                                else = {
+                                                                    if = {
+                                                                        limit = {
+                                                                            count_starbase_modules = {
+                                                                                type = "anchorage"
+                                                                                count = 8
+                                                                            }
+                                                                        }
+                                                                        owner = {
+                                                                            change_variable = {
+                                                                                which = "starbase_module_anchorage_built"
+                                                                                value = 7
+                                                                            }
+                                                                        }
+                                                                        else = {
+                                                                            if = {
+                                                                                limit = {
+                                                                                    count_starbase_modules = {
+                                                                                        type = "anchorage"
+                                                                                        count = 9
+                                                                                    }
+                                                                                }
+                                                                                owner = {
+                                                                                    change_variable = {
+                                                                                        which = "starbase_module_anchorage_built"
+                                                                                        value = 8
+                                                                                    }
+                                                                                }
+                                                                                else = {
+                                                                                    change_variable = {
+                                                                                        which = "starbase_module_anchorage_built"
+                                                                                        value = 9
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                # Starbase "Gun battery" module
+                if = {
+                    limit = {
+                        has_starbase_module = "gun_battery"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_module_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_module_gun_battery_built"
+                            value = 1
+                        }
+                    }
+                    if = {
+                        limit = {
+                            count_starbase_modules = {
+                                type = "gun_battery"
+                                count = 2
+                            }
+                        }
+                        owner = {
+                            change_variable = {
+                                which = "starbase_module_gun_battery_built"
+                                value = 1
+                            }
+                        }
+                        else = {
+                            if = {
+                                limit = {
+                                    count_starbase_modules = {
+                                        type = "gun_battery"
+                                        count = 3
+                                    }
+                                }
+                                owner = {
+                                    change_variable = {
+                                        which = "starbase_module_gun_battery_built"
+                                        value = 2
+                                    }
+                                }
+                                else = {
+                                    if = {
+                                        limit = {
+                                            count_starbase_modules = {
+                                                type = "gun_battery"
+                                                count = 4
+                                            }
+                                        }
+                                        owner = {
+                                            change_variable = {
+                                                which = "starbase_module_gun_battery_built"
+                                                value = 3
+                                            }
+                                        }
+                                        else = {
+                                            if = {
+                                                limit = {
+                                                    count_starbase_modules = {
+                                                        type = "gun_battery"
+                                                        count = 5
+                                                    }
+                                                }
+                                                owner = {
+                                                    change_variable = {
+                                                        which = "starbase_module_gun_battery_built"
+                                                        value = 4
+                                                    }
+                                                }
+                                                else = {
+                                                    if = {
+                                                        limit = {
+                                                            count_starbase_modules = {
+                                                                type = "gun_battery"
+                                                                count = 6
+                                                            }
+                                                        }
+                                                        owner = {
+                                                            change_variable = {
+                                                                which = "starbase_module_gun_battery_built"
+                                                                value = 5
+                                                            }
+                                                        }
+                                                        else = {
+                                                            if = {
+                                                                limit = {
+                                                                    count_starbase_modules = {
+                                                                        type = "gun_battery"
+                                                                        count = 7
+                                                                    }
+                                                                }
+                                                                owner = {
+                                                                    change_variable = {
+                                                                        which = "starbase_module_gun_battery_built"
+                                                                        value = 6
+                                                                    }
+                                                                }
+                                                                else = {
+                                                                    if = {
+                                                                        limit = {
+                                                                            count_starbase_modules = {
+                                                                                type = "gun_battery"
+                                                                                count = 8
+                                                                            }
+                                                                        }
+                                                                        owner = {
+                                                                            change_variable = {
+                                                                                which = "starbase_module_gun_battery_built"
+                                                                                value = 7
+                                                                            }
+                                                                        }
+                                                                        else = {
+                                                                            if = {
+                                                                                limit = {
+                                                                                    count_starbase_modules = {
+                                                                                        type = "gun_battery"
+                                                                                        count = 9
+                                                                                    }
+                                                                                }
+                                                                                owner = {
+                                                                                    change_variable = {
+                                                                                        which = "starbase_module_gun_battery_built"
+                                                                                        value = 8
+                                                                                    }
+                                                                                }
+                                                                                else = {
+                                                                                    change_variable = {
+                                                                                        which = "starbase_module_gun_battery_built"
+                                                                                        value = 9
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                # Starbase "Missile battery" module
+                if = {
+                    limit = {
+                        has_starbase_module = "missile_battery"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_module_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_module_missile_battery_built"
+                            value = 1
+                        }
+                    }
+                    if = {
+                        limit = {
+                            count_starbase_modules = {
+                                type = "missile_battery"
+                                count = 2
+                            }
+                        }
+                        owner = {
+                            change_variable = {
+                                which = "starbase_module_missile_battery_built"
+                                value = 1
+                            }
+                        }
+                        else = {
+                            if = {
+                                limit = {
+                                    count_starbase_modules = {
+                                        type = "missile_battery"
+                                        count = 3
+                                    }
+                                }
+                                owner = {
+                                    change_variable = {
+                                        which = "starbase_module_missile_battery_built"
+                                        value = 2
+                                    }
+                                }
+                                else = {
+                                    if = {
+                                        limit = {
+                                            count_starbase_modules = {
+                                                type = "missile_battery"
+                                                count = 4
+                                            }
+                                        }
+                                        owner = {
+                                            change_variable = {
+                                                which = "starbase_module_missile_battery_built"
+                                                value = 3
+                                            }
+                                        }
+                                        else = {
+                                            if = {
+                                                limit = {
+                                                    count_starbase_modules = {
+                                                        type = "missile_battery"
+                                                        count = 5
+                                                    }
+                                                }
+                                                owner = {
+                                                    change_variable = {
+                                                        which = "starbase_module_missile_battery_built"
+                                                        value = 4
+                                                    }
+                                                }
+                                                else = {
+                                                    if = {
+                                                        limit = {
+                                                            count_starbase_modules = {
+                                                                type = "missile_battery"
+                                                                count = 6
+                                                            }
+                                                        }
+                                                        owner = {
+                                                            change_variable = {
+                                                                which = "starbase_module_missile_battery_built"
+                                                                value = 5
+                                                            }
+                                                        }
+                                                        else = {
+                                                            if = {
+                                                                limit = {
+                                                                    count_starbase_modules = {
+                                                                        type = "missile_battery"
+                                                                        count = 7
+                                                                    }
+                                                                }
+                                                                owner = {
+                                                                    change_variable = {
+                                                                        which = "starbase_module_missile_battery_built"
+                                                                        value = 6
+                                                                    }
+                                                                }
+                                                                else = {
+                                                                    if = {
+                                                                        limit = {
+                                                                            count_starbase_modules = {
+                                                                                type = "missile_battery"
+                                                                                count = 8
+                                                                            }
+                                                                        }
+                                                                        owner = {
+                                                                            change_variable = {
+                                                                                which = "starbase_module_missile_battery_built"
+                                                                                value = 7
+                                                                            }
+                                                                        }
+                                                                        else = {
+                                                                            if = {
+                                                                                limit = {
+                                                                                    count_starbase_modules = {
+                                                                                        type = "missile_battery"
+                                                                                        count = 9
+                                                                                    }
+                                                                                }
+                                                                                owner = {
+                                                                                    change_variable = {
+                                                                                        which = "starbase_module_missile_battery_built"
+                                                                                        value = 8
+                                                                                    }
+                                                                                }
+                                                                                else = {
+                                                                                    change_variable = {
+                                                                                        which = "starbase_module_missile_battery_built"
+                                                                                        value = 9
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                # Starbase "Hangar bay" module
+                if = {
+                    limit = {
+                        has_starbase_module = "hangar_bay"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_module_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_module_hangar_bay_built"
+                            value = 1
+                        }
+                    }
+                    if = {
+                        limit = {
+                            count_starbase_modules = {
+                                type = "hangar_bay"
+                                count = 2
+                            }
+                        }
+                        owner = {
+                            change_variable = {
+                                which = "starbase_module_hangar_bay_built"
+                                value = 1
+                            }
+                        }
+                        else = {
+                            if = {
+                                limit = {
+                                    count_starbase_modules = {
+                                        type = "hangar_bay"
+                                        count = 3
+                                    }
+                                }
+                                owner = {
+                                    change_variable = {
+                                        which = "starbase_module_hangar_bay_built"
+                                        value = 2
+                                    }
+                                }
+                                else = {
+                                    if = {
+                                        limit = {
+                                            count_starbase_modules = {
+                                                type = "hangar_bay"
+                                                count = 4
+                                            }
+                                        }
+                                        owner = {
+                                            change_variable = {
+                                                which = "starbase_module_hangar_bay_built"
+                                                value = 3
+                                            }
+                                        }
+                                        else = {
+                                            if = {
+                                                limit = {
+                                                    count_starbase_modules = {
+                                                        type = "hangar_bay"
+                                                        count = 5
+                                                    }
+                                                }
+                                                owner = {
+                                                    change_variable = {
+                                                        which = "starbase_module_hangar_bay_built"
+                                                        value = 4
+                                                    }
+                                                }
+                                                else = {
+                                                    if = {
+                                                        limit = {
+                                                            count_starbase_modules = {
+                                                                type = "hangar_bay"
+                                                                count = 6
+                                                            }
+                                                        }
+                                                        owner = {
+                                                            change_variable = {
+                                                                which = "starbase_module_hangar_bay_built"
+                                                                value = 5
+                                                            }
+                                                        }
+                                                        else = {
+                                                            if = {
+                                                                limit = {
+                                                                    count_starbase_modules = {
+                                                                        type = "hangar_bay"
+                                                                        count = 7
+                                                                    }
+                                                                }
+                                                                owner = {
+                                                                    change_variable = {
+                                                                        which = "starbase_module_hangar_bay_built"
+                                                                        value = 6
+                                                                    }
+                                                                }
+                                                                else = {
+                                                                    if = {
+                                                                        limit = {
+                                                                            count_starbase_modules = {
+                                                                                type = "hangar_bay"
+                                                                                count = 8
+                                                                            }
+                                                                        }
+                                                                        owner = {
+                                                                            change_variable = {
+                                                                                which = "starbase_module_hangar_bay_built"
+                                                                                value = 7
+                                                                            }
+                                                                        }
+                                                                        else = {
+                                                                            if = {
+                                                                                limit = {
+                                                                                    count_starbase_modules = {
+                                                                                        type = "hangar_bay"
+                                                                                        count = 9
+                                                                                    }
+                                                                                }
+                                                                                owner = {
+                                                                                    change_variable = {
+                                                                                        which = "starbase_module_hangar_bay_built"
+                                                                                        value = 8
+                                                                                    }
+                                                                                }
+                                                                                else = {
+                                                                                    change_variable = {
+                                                                                        which = "starbase_module_hangar_bay_built"
+                                                                                        value = 9
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                # Starbase "Trading hub" module
+                if = {
+                    limit = {
+                        has_starbase_module = "trading_hub"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_module_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_module_trading_hub_built"
+                            value = 1
+                        }
+                    }
+                    if = {
+                        limit = {
+                            count_starbase_modules = {
+                                type = "trading_hub"
+                                count = 2
+                            }
+                        }
+                        owner = {
+                            change_variable = {
+                                which = "starbase_module_trading_hub_built"
+                                value = 1
+                            }
+                        }
+                        else = {
+                            if = {
+                                limit = {
+                                    count_starbase_modules = {
+                                        type = "trading_hub"
+                                        count = 3
+                                    }
+                                }
+                                owner = {
+                                    change_variable = {
+                                        which = "starbase_module_trading_hub_built"
+                                        value = 2
+                                    }
+                                }
+                                else = {
+                                    if = {
+                                        limit = {
+                                            count_starbase_modules = {
+                                                type = "trading_hub"
+                                                count = 4
+                                            }
+                                        }
+                                        owner = {
+                                            change_variable = {
+                                                which = "starbase_module_trading_hub_built"
+                                                value = 3
+                                            }
+                                        }
+                                        else = {
+                                            if = {
+                                                limit = {
+                                                    count_starbase_modules = {
+                                                        type = "trading_hub"
+                                                        count = 5
+                                                    }
+                                                }
+                                                owner = {
+                                                    change_variable = {
+                                                        which = "starbase_module_trading_hub_built"
+                                                        value = 4
+                                                    }
+                                                }
+                                                else = {
+                                                    if = {
+                                                        limit = {
+                                                            count_starbase_modules = {
+                                                                type = "trading_hub"
+                                                                count = 6
+                                                            }
+                                                        }
+                                                        owner = {
+                                                            change_variable = {
+                                                                which = "starbase_module_trading_hub_built"
+                                                                value = 5
+                                                            }
+                                                        }
+                                                        else = {
+                                                            if = {
+                                                                limit = {
+                                                                    count_starbase_modules = {
+                                                                        type = "trading_hub"
+                                                                        count = 7
+                                                                    }
+                                                                }
+                                                                owner = {
+                                                                    change_variable = {
+                                                                        which = "starbase_module_trading_hub_built"
+                                                                        value = 6
+                                                                    }
+                                                                }
+                                                                else = {
+                                                                    if = {
+                                                                        limit = {
+                                                                            count_starbase_modules = {
+                                                                                type = "trading_hub"
+                                                                                count = 8
+                                                                            }
+                                                                        }
+                                                                        owner = {
+                                                                            change_variable = {
+                                                                                which = "starbase_module_trading_hub_built"
+                                                                                value = 7
+                                                                            }
+                                                                        }
+                                                                        else = {
+                                                                            if = {
+                                                                                limit = {
+                                                                                    count_starbase_modules = {
+                                                                                        type = "trading_hub"
+                                                                                        count = 9
+                                                                                    }
+                                                                                }
+                                                                                owner = {
+                                                                                    change_variable = {
+                                                                                        which = "starbase_module_trading_hub_built"
+                                                                                        value = 8
+                                                                                    }
+                                                                                }
+                                                                                else = {
+                                                                                    change_variable = {
+                                                                                        which = "starbase_module_trading_hub_built"
+                                                                                        value = 9
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                # Starbase "Crew quarters" building
+                if = {
+                    limit = {
+                        has_starbase_building = "crew_quarters"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_building_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_building_crew_quarters_built"
+                            value = 1
+                        }
+                    }
+                }
+                # Starbase "Hydroponics bay" building
+                if = {
+                    limit = {
+                        has_starbase_building = "hydroponics_bay"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_building_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_building_hydroponics_bay_built"
+                            value = 1
+                        }
+                    }
+                }
+                # Starbase "Resource silo" building
+                if = {
+                    limit = {
+                        has_starbase_building = "resource_silo"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_building_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_building_resource_silo_built"
+                            value = 1
+                        }
+                    }
+                }
+                # Starbase "Nebula refinery" building
+                if = {
+                    limit = {
+                        has_starbase_building = "nebula_refinery"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_building_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_building_nebula_refinery_built"
+                            value = 1
+                        }
+                    }
+                }
+                # Starbase "Listening post" building
+                if = {
+                    limit = {
+                        has_starbase_building = "listening_post"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_building_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_building_listening_post_built"
+                            value = 1
+                        }
+                    }
+                }
+                # Starbase "Offworld trading company" building
+                if = {
+                    limit = {
+                        has_starbase_building = "offworld_trading_company"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_building_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_building_offworld_trading_company_built"
+                            value = 1
+                        }
+                    }
+                }
+                # Starbase "Fleet academy" building
+                if = {
+                    limit = {
+                        has_starbase_building = "fleet_academy"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_building_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_building_fleet_academy_built"
+                            value = 1
+                        }
+                    }
+                }
+                # Starbase "Naval logistics office" building
+                if = {
+                    limit = {
+                        has_starbase_building = "naval_logistics_office"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_building_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_building_naval_logistics_office_built"
+                            value = 1
+                        }
+                    }
+                }
+                # Starbase "Titan yards" building
+                if = {
+                    limit = {
+                        has_starbase_building = "titan_yards"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_building_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_building_titan_yards_built"
+                            value = 1
+                        }
+                    }
+                }
+                # Starbase "Colossus yards" building
+                if = {
+                    limit = {
+                        has_starbase_building = "colossus_yards"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_building_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_building_colossus_yards_built"
+                            value = 1
+                        }
+                    }
+                }
+                # Starbase "Black hole observatory" building
+                if = {
+                    limit = {
+                        has_starbase_building = "black_hole_observatory"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_building_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_building_black_hole_observatory_built"
+                            value = 1
+                        }
+                    }
+                }
+                # Starbase "Target uplink computer" building
+                if = {
+                    limit = {
+                        has_starbase_building = "target_uplink_computer"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_building_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_building_target_uplink_computer_built"
+                            value = 1
+                        }
+                    }
+                }
+                # Starbase "Defense grid" building
+                if = {
+                    limit = {
+                        has_starbase_building = "defense_grid"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_building_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_building_defense_grid_built"
+                            value = 1
+                        }
+                    }
+                }
+                # Starbase "Deep space black site" building
+                if = {
+                    limit = {
+                        has_starbase_building = "deep_space_black_site"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_building_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_building_deep_space_black_site_built"
+                            value = 1
+                        }
+                    }
+                }
+                # Starbase "Curator think tank" building
+                if = {
+                    limit = {
+                        has_starbase_building = "curator_think_tank"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_building_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_building_curator_think_tank_built"
+                            value = 1
+                        }
+                    }
+                }
+                # Starbase "Art college" building
+                if = {
+                    limit = {
+                        has_starbase_building = "art_college"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_building_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_building_art_college_built"
+                            value = 1
+                        }
+                    }
+                }
+                # Starbase "Communications jammer" building
+                if = {
+                    limit = {
+                        has_starbase_building = "communications_jammer"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_building_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_building_communications_jammer_built"
+                            value = 1
+                        }
+                    }
+                }
+                # Starbase "Disruption field" building
+                if = {
+                    limit = {
+                        has_starbase_building = "disruption_field"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_building_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_building_disruption_field_built"
+                            value = 1
+                        }
+                    }
+                }
+                # Starbase "Warp fluctuator" building
+                if = {
+                    limit = {
+                        has_starbase_building = "warp_fluctuator"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_building_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_building_warp_fluctuator_built"
+                            value = 1
+                        }
+                    }
+                }
+                # Starbase "Command center" building
+                if = {
+                    limit = {
+                        has_starbase_building = "command_center"
+                    }
+                    owner = {
+                        change_variable = {
+                            which = "starbase_building_built"
+                            value = 1
+                        }
+                        change_variable = {
+                            which = "starbase_building_command_center_built"
+                            value = 1
+                        }
+                    }
+                }
             }
 
             every_owned_planet = {
-                ### Spaceport counting
-                if = {
-                    limit = {
-                        has_spaceport = yes
-                    }
-                    owner = {
-                        if = {
-                            limit = {
-                                check_variable = {
-                                    which = "spaceport_built"
-                                    value < 1
-                                }
-                            }
-                            set_variable = {
-                                which = "spaceport_built"
-                                value = 1
-                            }
-                            else = {
-                                change_variable = {
-                                    which = "spaceport_built"
-                                    value = 1
-                                }
-                            }
-                        }
-                    }
-                    ### Spaceport-I counting
-                    if = {
-                        limit = { num_spaceport_modules = 1 }
-                        owner = {
-                            if = {
-                                limit = {
-                                    check_variable = {
-                                        which = "spaceport_1_built"
-                                        value < 1
-                                    }
-                                }
-                                set_variable = {
-                                    which = "spaceport_1_built"
-                                    value = 1
-                                }
-                                else = {
-                                    change_variable = {
-                                        which = "spaceport_1_built"
-                                        value = 1
-                                    }
-                                }
-                            }
-                        }
-                        ### Spaceport-II counting
-                        else = {
-                            if = {
-                                limit = { num_spaceport_modules = 2 }
-                                owner = {
-                                    if = {
-                                        limit = {
-                                            check_variable = {
-                                                which = "spaceport_2_built"
-                                                value < 1
-                                            }
-                                        }
-                                        set_variable = {
-                                            which = "spaceport_2_built"
-                                            value = 1
-                                        }
-                                        else = {
-                                            change_variable = {
-                                                which = "spaceport_2_built"
-                                                value = 1
-                                            }
-                                        }
-                                    }
-                                }
-                                ### Spaceport-III counting
-                                else = {
-                                    if = {
-                                        limit = { num_spaceport_modules = 3 }
-                                        owner = {
-                                            if = {
-                                                limit = {
-                                                    check_variable = {
-                                                        which = "spaceport_3_built"
-                                                        value < 1
-                                                    }
-                                                }
-                                                set_variable = {
-                                                    which = "spaceport_3_built"
-                                                    value = 1
-                                                }
-                                                else = {
-                                                    change_variable = {
-                                                        which = "spaceport_3_built"
-                                                        value = 1
-                                                    }
-                                                }
-                                            }
-                                        }
-                                        ### Spaceport-IV counting
-                                        else = {
-                                            if = {
-                                                limit = { num_spaceport_modules = 4 }
-                                                owner = {
-                                                    if = {
-                                                        limit = {
-                                                            check_variable = {
-                                                                which = "spaceport_4_built"
-                                                                value < 1
-                                                            }
-                                                        }
-                                                        set_variable = {
-                                                            which = "spaceport_4_built"
-                                                            value = 1
-                                                        }
-                                                        else = {
-                                                            change_variable = {
-                                                                which = "spaceport_4_built"
-                                                                value = 1
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                                ### Spaceport-V counting
-                                                else = {
-                                                    if = {
-                                                        limit = { num_spaceport_modules = 5 }
-                                                        owner = {
-                                                            if = {
-                                                                limit = {
-                                                                    check_variable = {
-                                                                        which = "spaceport_5_built"
-                                                                        value < 1
-                                                                    }
-                                                                }
-                                                                set_variable = {
-                                                                    which = "spaceport_5_built"
-                                                                    value = 1
-                                                                }
-                                                                else = {
-                                                                    change_variable = {
-                                                                        which = "spaceport_5_built"
-                                                                        value = 1
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                        ### Spaceport-VI counting
-                                                        else = {
-                                                            if = {
-                                                                limit = { num_spaceport_modules = 6 }
-                                                                owner = {
-                                                                    if = {
-                                                                        limit = {
-                                                                            check_variable = {
-                                                                                which = "spaceport_6_built"
-                                                                                value < 1
-                                                                            }
-                                                                        }
-                                                                        set_variable = {
-                                                                            which = "spaceport_6_built"
-                                                                            value = 1
-                                                                        }
-                                                                        else = {
-                                                                            change_variable = {
-                                                                                which = "spaceport_6_built"
-                                                                                value = 1
-                                                                            }
-                                                                        }
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    ### Spaceport module "Hydroponics farm" counting
-                    if = {
-                        limit = { has_spaceport_module = "hydroponic_farms" }
-                        owner = {
-                            if = {
-                                limit = {
-                                    check_variable = {
-                                        which = "hydroponics_module_built"
-                                        value < 1
-                                    }
-                                }
-                                set_variable = {
-                                    which = "hydroponics_module_built"
-                                    value = 1
-                                }
-                                else = {
-                                    change_variable = {
-                                        which = "hydroponics_module_built"
-                                        value = 1
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    ### Spaceport module "Solar panel" counting
-                    if = {
-                        limit = { has_spaceport_module = "solar_panel_network" }
-                        owner = {
-                            if = {
-                                limit = {
-                                    check_variable = {
-                                        which = "solar_panel_module_built"
-                                        value < 1
-                                    }
-                                }
-                                set_variable = {
-                                    which = "solar_panel_module_built"
-                                    value = 1
-                                }
-                                else = {
-                                    change_variable = {
-                                        which = "solar_panel_module_built"
-                                        value = 1
-                                    }
-                                }
-                            }
-                        }
+                limit = {
+                    OR = {
+                        has_building = "planet_building_hydroponics_farm_1_built"
+                        has_building = "building_hydroponics_farm_2"
+                        has_building = "building_hydroponics_farm_3"
+                        has_building = "building_hydroponics_farm_4"
+                        has_building = "building_hydroponics_farm_5"
+                        has_building = "building_mining_network_1"
+                        has_building = "building_mining_network_2"
+                        has_building = "building_mining_network_3"
+                        has_building = "building_mining_network_4"
+                        has_building = "building_mining_network_5"
+                        has_building = "building_mineral_processing_plant_1"
+                        has_building = "building_mineral_processing_plant_2"
+                        has_building = "building_power_plant_1"
+                        has_building = "building_power_plant_2"
+                        has_building = "building_power_plant_3"
+                        has_building = "building_power_plant_4"
+                        has_building = "building_power_plant_5"
+                        has_building = "building_power_hub_1"
+                        has_building = "building_power_hub_2"
                     }
                 }
 
@@ -303,34 +1389,13 @@ event = {
                     if = {
                         limit = {
                             has_building = yes
-                            OR = {
-                                has_building = "building_hydroponics_farm_1"
-                                has_building = "building_hydroponics_farm_2"
-                                has_building = "building_hydroponics_farm_3"
-                                has_building = "building_hydroponics_farm_4"
-                                has_building = "building_hydroponics_farm_5"
-                                has_building = "building_mining_network_1"
-                                has_building = "building_mining_network_2"
-                                has_building = "building_mining_network_3"
-                                has_building = "building_mining_network_4"
-                                has_building = "building_mining_network_5"
-                                has_building = "building_mineral_processing_plant_1"
-                                has_building = "building_mineral_processing_plant_2"
-                                has_building = "building_power_plant_1"
-                                has_building = "building_power_plant_2"
-                                has_building = "building_power_plant_3"
-                                has_building = "building_power_plant_4"
-                                has_building = "building_power_plant_5"
-                                has_building = "building_power_hub_1"
-                                has_building = "building_power_hub_2"
-                            }
                         }
 
                         ### Building "Hydroponics farm" counting
                         if = {
                             limit = {
                                 OR = {
-                                    has_building = "building_hydroponics_farm_1"
+                                    has_building = "planet_building_hydroponics_farm_1_built"
                                     has_building = "building_hydroponics_farm_2"
                                     has_building = "building_hydroponics_farm_3"
                                     has_building = "building_hydroponics_farm_4"
@@ -339,23 +1404,9 @@ event = {
                             }
                             prev = {
                                 owner = {
-                                    if = {
-                                        limit = {
-                                            check_variable = {
-                                                which = "hydroponics_farm_built"
-                                                value < 1
-                                            }
-                                        }
-                                        set_variable = {
-                                            which = "hydroponics_farm_built"
-                                            value = 1
-                                        }
-                                        else = {
-                                            change_variable = {
-                                                which = "hydroponics_farm_built"
-                                                value = 1
-                                            }
-                                        }
+                                    change_variable = {
+                                        which = "planet_building_hydroponics_farm_built"
+                                        value = 1
                                     }
                                 }
                             }
@@ -373,23 +1424,9 @@ event = {
                             }
                             prev = {
                                 owner = {
-                                    if = {
-                                        limit = {
-                                            check_variable = {
-                                                which = "mining_network_built"
-                                                value < 1
-                                            }
-                                        }
-                                        set_variable = {
-                                            which = "mining_network_built"
-                                            value = 1
-                                        }
-                                        else = {
-                                            change_variable = {
-                                                which = "mining_network_built"
-                                                value = 1
-                                            }
-                                        }
+                                    change_variable = {
+                                        which = "planet_building_mining_network_built"
+                                        value = 1
                                     }
                                 }
                             }
@@ -404,23 +1441,9 @@ event = {
                             }
                             prev = {
                                 owner = {
-                                    if = {
-                                        limit = {
-                                            check_variable = {
-                                                which = "mineral_processing_plant_built"
-                                                value < 1
-                                            }
-                                        }
-                                        set_variable = {
-                                            which = "mineral_processing_plant_built"
-                                            value = 1
-                                        }
-                                        else = {
-                                            change_variable = {
-                                                which = "mineral_processing_plant_built"
-                                                value = 1
-                                            }
-                                        }
+                                    change_variable = {
+                                        which = "planet_building_mineral_processing_plant_built"
+                                        value = 1
                                     }
                                 }
                             }
@@ -438,23 +1461,9 @@ event = {
                             }
                             prev = {
                                 owner = {
-                                    if = {
-                                        limit = {
-                                            check_variable = {
-                                                which = "power_plant_built"
-                                                value < 1
-                                            }
-                                        }
-                                        set_variable = {
-                                            which = "power_plant_built"
-                                            value = 1
-                                        }
-                                        else = {
-                                            change_variable = {
-                                                which = "power_plant_built"
-                                                value = 1
-                                            }
-                                        }
+                                    change_variable = {
+                                        which = "planet_building_power_plant_built"
+                                        value = 1
                                     }
                                 }
                             }
@@ -469,23 +1478,9 @@ event = {
                             }
                             prev = {
                                 owner = {
-                                    if = {
-                                        limit = {
-                                            check_variable = {
-                                                which = "power_hub_built"
-                                                value < 1
-                                            }
-                                        }
-                                        set_variable = {
-                                            which = "power_hub_built"
-                                            value = 1
-                                        }
-                                        else = {
-                                            change_variable = {
-                                                which = "power_hub_built"
-                                                value = 1
-                                            }
-                                        }
+                                    change_variable = {
+                                        which = "planet_building_power_hub_built"
+                                        value = 1
                                     }
                                 }
                             }
@@ -511,19 +1506,42 @@ event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "any_building_built"
+                        which = "planet_building_built"
                         value < 1
                     }
                 }
                 set_variable = {
-                    which = "any_building_built"
+                    which = "planet_building_built"
                     value = 1
                 }
                 else = {
                     change_variable = {
-                        which = "any_building_built"
+                        which = "planet_building_built"
                         value = 1
                     }
+                }
+            }
+        }
+    }
+}
+
+event = {
+    id = zog_building_events.2
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "planet_building_built"
+                        value > 1
+                    }
+                }
+                change_variable = {
+                    which = "planet_building_built"
+                    value = -1
                 }
             }
         }
@@ -550,17 +1568,17 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "hydroponics_farm_1_built"
+                        which = "planet_building_hydroponics_farm_1_built"
                         value < 1
                     }
                 }
                 set_variable = {
-                    which = "hydroponics_farm_1_built"
+                    which = "planet_building_hydroponics_farm_1_built"
                     value = 1
                 }
                 else = {
                     change_variable = {
-                        which = "hydroponics_farm_1_built"
+                        which = "planet_building_hydroponics_farm_1_built"
                         value = 1
                     }
                 }
@@ -585,12 +1603,12 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "hydroponics_farm_1_built"
+                        which = "planet_building_hydroponics_farm_1_built"
                         value > 1
                     }
                 }
                 change_variable = {
-                    which = "hydroponics_farm_1_built"
+                    which = "planet_building_hydroponics_farm_1_built"
                     value = -1
                 }
             }
@@ -618,17 +1636,17 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "hydroponics_farm_2_built"
+                        which = "planet_building_hydroponics_farm_2_built"
                         value < 1
                     }
                 }
                 set_variable = {
-                    which = "hydroponics_farm_2_built"
+                    which = "planet_building_hydroponics_farm_2_built"
                     value = 1
                 }
                 else = {
                     change_variable = {
-                        which = "hydroponics_farm_2_built"
+                        which = "planet_building_hydroponics_farm_2_built"
                         value = 1
                     }
                 }
@@ -653,12 +1671,12 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "hydroponics_farm_2_built"
+                        which = "planet_building_hydroponics_farm_2_built"
                         value > 1
                     }
                 }
                 change_variable = {
-                    which = "hydroponics_farm_2_built"
+                    which = "planet_building_hydroponics_farm_2_built"
                     value = -1
                 }
             }
@@ -686,17 +1704,17 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "hydroponics_farm_3_built"
+                        which = "planet_building_hydroponics_farm_3_built"
                         value < 1
                     }
                 }
                 set_variable = {
-                    which = "hydroponics_farm_3_built"
+                    which = "planet_building_hydroponics_farm_3_built"
                     value = 1
                 }
                 else = {
                     change_variable = {
-                        which = "hydroponics_farm_3_built"
+                        which = "planet_building_hydroponics_farm_3_built"
                         value = 1
                     }
                 }
@@ -721,12 +1739,12 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "hydroponics_farm_3_built"
+                        which = "planet_building_hydroponics_farm_3_built"
                         value > 1
                     }
                 }
                 change_variable = {
-                    which = "hydroponics_farm_3_built"
+                    which = "planet_building_hydroponics_farm_3_built"
                     value = -1
                 }
             }
@@ -754,17 +1772,17 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "hydroponics_farm_4_built"
+                        which = "planet_building_hydroponics_farm_4_built"
                         value < 1
                     }
                 }
                 set_variable = {
-                    which = "hydroponics_farm_4_built"
+                    which = "planet_building_hydroponics_farm_4_built"
                     value = 1
                 }
                 else = {
                     change_variable = {
-                        which = "hydroponics_farm_4_built"
+                        which = "planet_building_hydroponics_farm_4_built"
                         value = 1
                     }
                 }
@@ -789,12 +1807,12 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "hydroponics_farm_4_built"
+                        which = "planet_building_hydroponics_farm_4_built"
                         value > 1
                     }
                 }
                 change_variable = {
-                    which = "hydroponics_farm_4_built"
+                    which = "planet_building_hydroponics_farm_4_built"
                     value = -1
                 }
             }
@@ -822,17 +1840,17 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "hydroponics_farm_5_built"
+                        which = "planet_building_hydroponics_farm_5_built"
                         value < 1
                     }
                 }
                 set_variable = {
-                    which = "hydroponics_farm_5_built"
+                    which = "planet_building_hydroponics_farm_5_built"
                     value = 1
                 }
                 else = {
                     change_variable = {
-                        which = "hydroponics_farm_5_built"
+                        which = "planet_building_hydroponics_farm_5_built"
                         value = 1
                     }
                 }
@@ -857,12 +1875,12 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "hydroponics_farm_5_built"
+                        which = "planet_building_hydroponics_farm_5_built"
                         value > 1
                     }
                 }
                 change_variable = {
-                    which = "hydroponics_farm_5_built"
+                    which = "planet_building_hydroponics_farm_5_built"
                     value = -1
                 }
             }
@@ -890,17 +1908,17 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "mining_network_1_built"
+                        which = "planet_building_mining_network_1_built"
                         value < 1
                     }
                 }
                 set_variable = {
-                    which = "mining_network_1_built"
+                    which = "planet_building_mining_network_1_built"
                     value = 1
                 }
                 else = {
                     change_variable = {
-                        which = "mining_network_1_built"
+                        which = "planet_building_mining_network_1_built"
                         value = 1
                     }
                 }
@@ -925,12 +1943,12 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "mining_network_1_built"
+                        which = "planet_building_mining_network_1_built"
                         value > 1
                     }
                 }
                 change_variable = {
-                    which = "mining_network_1_built"
+                    which = "planet_building_mining_network_1_built"
                     value = -1
                 }
             }
@@ -958,17 +1976,17 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "mining_network_2_built"
+                        which = "planet_building_mining_network_2_built"
                         value < 1
                     }
                 }
                 set_variable = {
-                    which = "mining_network_2_built"
+                    which = "planet_building_mining_network_2_built"
                     value = 1
                 }
                 else = {
                     change_variable = {
-                        which = "mining_network_2_built"
+                        which = "planet_building_mining_network_2_built"
                         value = 1
                     }
                 }
@@ -993,12 +2011,12 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "mining_network_2_built"
+                        which = "planet_building_mining_network_2_built"
                         value > 1
                     }
                 }
                 change_variable = {
-                    which = "mining_network_2_built"
+                    which = "planet_building_mining_network_2_built"
                     value = -1
                 }
             }
@@ -1026,17 +2044,17 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "mining_network_3_built"
+                        which = "planet_building_mining_network_3_built"
                         value < 1
                     }
                 }
                 set_variable = {
-                    which = "mining_network_3_built"
+                    which = "planet_building_mining_network_3_built"
                     value = 1
                 }
                 else = {
                     change_variable = {
-                        which = "mining_network_3_built"
+                        which = "planet_building_mining_network_3_built"
                         value = 1
                     }
                 }
@@ -1061,12 +2079,12 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "mining_network_3_built"
+                        which = "planet_building_mining_network_3_built"
                         value > 1
                     }
                 }
                 change_variable = {
-                    which = "mining_network_3_built"
+                    which = "planet_building_mining_network_3_built"
                     value = -1
                 }
             }
@@ -1094,17 +2112,17 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "mining_network_4_built"
+                        which = "planet_building_mining_network_4_built"
                         value < 1
                     }
                 }
                 set_variable = {
-                    which = "mining_network_4_built"
+                    which = "planet_building_mining_network_4_built"
                     value = 1
                 }
                 else = {
                     change_variable = {
-                        which = "mining_network_4_built"
+                        which = "planet_building_mining_network_4_built"
                         value = 1
                     }
                 }
@@ -1129,12 +2147,12 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "mining_network_4_built"
+                        which = "planet_building_mining_network_4_built"
                         value > 1
                     }
                 }
                 change_variable = {
-                    which = "mining_network_4_built"
+                    which = "planet_building_mining_network_4_built"
                     value = -1
                 }
             }
@@ -1162,17 +2180,17 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "mining_network_5_built"
+                        which = "planet_building_mining_network_5_built"
                         value < 1
                     }
                 }
                 set_variable = {
-                    which = "mining_network_5_built"
+                    which = "planet_building_mining_network_5_built"
                     value = 1
                 }
                 else = {
                     change_variable = {
-                        which = "mining_network_5_built"
+                        which = "planet_building_mining_network_5_built"
                         value = 1
                     }
                 }
@@ -1197,12 +2215,12 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "mining_network_5_built"
+                        which = "planet_building_mining_network_5_built"
                         value > 1
                     }
                 }
                 change_variable = {
-                    which = "mining_network_5_built"
+                    which = "planet_building_mining_network_5_built"
                     value = -1
                 }
             }
@@ -1230,17 +2248,17 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "power_plant_1_built"
+                        which = "planet_building_power_plant_1_built"
                         value < 1
                     }
                 }
                 set_variable = {
-                    which = "power_plant_1_built"
+                    which = "planet_building_power_plant_1_built"
                     value = 1
                 }
                 else = {
                     change_variable = {
-                        which = "power_plant_1_built"
+                        which = "planet_building_power_plant_1_built"
                         value = 1
                     }
                 }
@@ -1265,12 +2283,12 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "power_plant_1_built"
+                        which = "planet_building_power_plant_1_built"
                         value > 1
                     }
                 }
                 change_variable = {
-                    which = "power_plant_1_built"
+                    which = "planet_building_power_plant_1_built"
                     value = -1
                 }
             }
@@ -1298,17 +2316,17 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "power_plant_2_built"
+                        which = "planet_building_power_plant_2_built"
                         value < 1
                     }
                 }
                 set_variable = {
-                    which = "power_plant_2_built"
+                    which = "planet_building_power_plant_2_built"
                     value = 1
                 }
                 else = {
                     change_variable = {
-                        which = "power_plant_2_built"
+                        which = "planet_building_power_plant_2_built"
                         value = 1
                     }
                 }
@@ -1333,12 +2351,12 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "power_plant_2_built"
+                        which = "planet_building_power_plant_2_built"
                         value > 1
                     }
                 }
                 change_variable = {
-                    which = "power_plant_2_built"
+                    which = "planet_building_power_plant_2_built"
                     value = -1
                 }
             }
@@ -1366,17 +2384,17 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "power_plant_3_built"
+                        which = "planet_building_power_plant_3_built"
                         value < 1
                     }
                 }
                 set_variable = {
-                    which = "power_plant_3_built"
+                    which = "planet_building_power_plant_3_built"
                     value = 1
                 }
                 else = {
                     change_variable = {
-                        which = "power_plant_3_built"
+                        which = "planet_building_power_plant_3_built"
                         value = 1
                     }
                 }
@@ -1401,12 +2419,12 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "power_plant_3_built"
+                        which = "planet_building_power_plant_3_built"
                         value > 1
                     }
                 }
                 change_variable = {
-                    which = "power_plant_3_built"
+                    which = "planet_building_power_plant_3_built"
                     value = -1
                 }
             }
@@ -1434,17 +2452,17 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "power_plant_4_built"
+                        which = "planet_building_power_plant_4_built"
                         value < 1
                     }
                 }
                 set_variable = {
-                    which = "power_plant_4_built"
+                    which = "planet_building_power_plant_4_built"
                     value = 1
                 }
                 else = {
                     change_variable = {
-                        which = "power_plant_4_built"
+                        which = "planet_building_power_plant_4_built"
                         value = 1
                     }
                 }
@@ -1469,12 +2487,12 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "power_plant_4_built"
+                        which = "planet_building_power_plant_4_built"
                         value > 1
                     }
                 }
                 change_variable = {
-                    which = "power_plant_4_built"
+                    which = "planet_building_power_plant_4_built"
                     value = -1
                 }
             }
@@ -1502,17 +2520,17 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "power_plant_5_built"
+                        which = "planet_building_power_plant_5_built"
                         value < 1
                     }
                 }
                 set_variable = {
-                    which = "power_plant_5_built"
+                    which = "planet_building_power_plant_5_built"
                     value = 1
                 }
                 else = {
                     change_variable = {
-                        which = "power_plant_5_built"
+                        which = "planet_building_power_plant_5_built"
                         value = 1
                     }
                 }
@@ -1537,12 +2555,12 @@ planet_event = {
             if = {
                 limit = {
                     check_variable = {
-                        which = "power_plant_5_built"
+                        which = "planet_building_power_plant_5_built"
                         value > 1
                     }
                 }
                 change_variable = {
-                    which = "power_plant_5_built"
+                    which = "planet_building_power_plant_5_built"
                     value = -1
                 }
             }

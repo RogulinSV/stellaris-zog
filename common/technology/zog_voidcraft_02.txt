@@ -1,16 +1,17 @@
-############################################
-## Engineering / Voidcraft / Corvette Ship
-############################################
+#########################################
+## Engineering / Voidcraft / Starbases
+#########################################
 
-tech_advanced_corvette_construction = {
-    # Unlocks "CORVETTE_ADVANCED_MID_01" section template
-    # Unlocks "CORVETTE_ADVANCED_MID_02" section template
+#######################
+### Starbase Offense
+#######################
 
-    cost = 2500
+tech_advanced_starbase_offense_01 = {
+    cost = 7500
     area = engineering
     start_tech = no
     category = { voidcraft }
-    icon = "tech_advanced_corvette_construction"
+    icon = "tech_advanced_starbase_offense_01"
     tier = 1
 
     is_reverse_engineerable = no
@@ -19,19 +20,23 @@ tech_advanced_corvette_construction = {
 
     prerequisites = {
         "tech_advanced_voidcraft"
-        "tech_corvettes"
+        "tech_starbase_1"
     }
 
     prereqfor_desc = {
-        component = {
-            title = tech_advanced_corvette_construction_prereqfor.title
-            desc = tech_advanced_corvette_construction_prereqfor.desc
+        feature = {
+            title = tech_advanced_starbase_offense_01_prereqfor.title
+            desc = tech_advanced_starbase_offense_01_prereqfor.desc
         }
     }
 
     modifier = {
-        shipsize_corvette_build_cost_mult = -0.10
-        shipsize_corvette_construction_speed_mult = 0.15
+        starbase_shipyard_build_cost_mult = -0.10
+        starbase_shipyard_build_speed_mult = 0.10
+        starbase_shipyard_build_time_mult = -0.10
+        starbase_shipyard_capacity_add = 1
+        shipclass_starbase_damage_mult = 0.10
+        shipclass_starbase_hull_mult = 0.10
     }
 
     weight = 90
@@ -39,41 +44,74 @@ tech_advanced_corvette_construction = {
     weight_modifier = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "ship_corvette_built"
-                value < 15
+            NAND = {
+                check_variable = {
+                    which = "ship_corvette_built"
+                    value > 19
+                }
+                check_variable = {
+                    which = "ship_destroyer_built"
+                    value > 4
+                }
+                check_variable = {
+                    which = "ship_cruiser_built"
+                    value > 0
+                }
+                check_variable = {
+                    which = "ship_battleship_built"
+                    value > 0
+                }
+                check_variable = {
+                    which = "ship_titan_built"
+                    value > 0
+                }
             }
         }
         modifier = {
-            factor = 1.30
-            has_ethic = "ethic_militarist"
+            factor = 0
+            NOT = {
+                check_variable = {
+                    which = "starbase_module_shipyard_built"
+                    value > 2
+                }
+            }
         }
         modifier = {
-            factor = 1.50
-            has_ethic = "ethic_fanatic_militarist"
+            factor = 0
+            NAND = {
+                has_tradition = "tr_domination_adopt"
+                has_valid_civic = "civic_distinguished_admiralty"
+            }
         }
         modifier = {
-            factor = 1.10
+            factor = 0.75
+            NAND = {
+                has_tradition = "tr_domination_star_lords"
+                has_valid_civic = "civic_distinguished_admiralty"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_tradition = "tr_domination_fleet_levies"
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_domination_finish"
+        }
+        modifier = {
+            factor = 1.75
+            has_ascension_perk = "ap_voidborn"
+        }
+        modifier = {
+            factor = 1.25
             research_leader = {
                 area = engineering
                 has_level > 2
-                has_trait = "leader_trait_expertise_voidcraft"
-            }
-        }
-        modifier = {
-            factor = 1.20
-            research_leader = {
-                area = engineering
-                has_level > 3
-                has_trait = "leader_trait_expertise_voidcraft"
-            }
-        }
-        modifier = {
-            factor = 1.30
-            research_leader = {
-                area = engineering
-                has_level > 4
-                has_trait = "leader_trait_expertise_voidcraft"
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
             }
         }
         modifier = {
@@ -87,35 +125,37 @@ tech_advanced_corvette_construction = {
     }
 }
 
-tech_supreme_corvette_construction = {
-    # Unlocks "CORVETTE_SUPREME_MID_01" section template
-    # Unlocks "CORVETTE_SUPREME_MID_02" section template
-
-    cost = 5000
+tech_advanced_starbase_offense_02 = {
+    cost = 15000
     area = engineering
     start_tech = no
     category = { voidcraft }
-    icon = "tech_advanced_corvette_construction"
-    tier = 2
+    icon = "tech_advanced_starbase_offense_02"
+    tier = 1
 
     is_reverse_engineerable = no
     is_rare = no
     is_dangerous = no
 
     prerequisites = {
-        "tech_advanced_corvette_construction"
+        "tech_advanced_starbase_offense_01"
+        "tech_starbase_2"
     }
 
     prereqfor_desc = {
-        component = {
-            title = tech_supreme_corvette_construction_prereqfor.title
-            desc = tech_supreme_corvette_construction_prereqfor.desc
+        feature = {
+            title = tech_advanced_starbase_offense_02_prereqfor.title
+            desc = tech_advanced_starbase_offense_02_prereqfor.desc
         }
     }
 
     modifier = {
-        shipsize_corvette_build_cost_mult = -0.15
-        shipsize_corvette_construction_speed_mult = 0.20
+        starbase_shipyard_build_cost_mult = -0.15
+        starbase_shipyard_build_speed_mult = 0.15
+        starbase_shipyard_build_time_mult = -0.15
+        starbase_shipyard_capacity_add = 3
+        shipclass_starbase_damage_mult = 0.15
+        shipclass_starbase_hull_mult = 0.15
     }
 
     weight = 80
@@ -123,33 +163,70 @@ tech_supreme_corvette_construction = {
     weight_modifier = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "ship_corvette_built"
-                value < 30
+            NAND = {
+                check_variable = {
+                    which = "ship_corvette_built"
+                    value > 49
+                }
+                check_variable = {
+                    which = "ship_destroyer_built"
+                    value > 9
+                }
+                check_variable = {
+                    which = "ship_cruiser_built"
+                    value > 4
+                }
+                check_variable = {
+                    which = "ship_battleship_built"
+                    value > 0
+                }
+                check_variable = {
+                    which = "ship_titan_built"
+                    value > 0
+                }
             }
         }
         modifier = {
-            factor = 1.15
-            has_ethic = "ethic_militarist"
+            factor = 0
+            NOT = {
+                check_variable = {
+                    which = "starbase_module_shipyard_built"
+                    value > 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                has_tradition = "tr_domination_star_lords"
+                has_valid_civic = "civic_distinguished_admiralty"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NAND = {
+                has_tradition = "tr_domination_fleet_levies"
+                has_valid_civic = "civic_distinguished_admiralty"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_tradition = "tr_domination_finish"
+        }
+        modifier = {
+            factor = 1.50
+            has_ascension_perk = "ap_voidborn"
         }
         modifier = {
             factor = 1.25
-            has_ethic = "ethic_fanatic_militarist"
-        }
-        modifier = {
-            factor = 1.10
             research_leader = {
                 area = engineering
                 has_level > 3
-                has_trait = "leader_trait_expertise_voidcraft"
-            }
-        }
-        modifier = {
-            factor = 1.20
-            research_leader = {
-                area = engineering
-                has_level > 4
-                has_trait = "leader_trait_expertise_voidcraft"
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
             }
         }
         modifier = {
@@ -163,35 +240,37 @@ tech_supreme_corvette_construction = {
     }
 }
 
-tech_transcendental_corvette_construction = {
-    # Unlocks "CORVETTE_TRANSCENDENTAL_MID_01" section template
-    # Unlocks "CORVETTE_TRANSCENDENTAL_MID_02" section template
-
-    cost = 10000
+tech_advanced_starbase_offense_03 = {
+    cost = 25000
     area = engineering
     start_tech = no
     category = { voidcraft }
-    icon = "tech_transcendental_corvette_construction"
-    tier = 2
+    icon = "tech_advanced_starbase_offense_03"
+    tier = 1
 
     is_reverse_engineerable = no
-    is_rare = yes
+    is_rare = no
     is_dangerous = no
 
     prerequisites = {
-        "tech_supreme_corvette_construction"
+        "tech_advanced_starbase_offense_02"
+        "tech_starbase_3"
     }
 
     prereqfor_desc = {
-        component = {
-            title = tech_transcendental_corvette_construction_prereqfor.title
-            desc = tech_transcendental_corvette_construction_prereqfor.desc
+        feature = {
+            title = tech_advanced_starbase_offense_03_prereqfor.title
+            desc = tech_advanced_starbase_offense_03_prereqfor.desc
         }
     }
 
     modifier = {
-        shipsize_corvette_build_cost_mult = -0.25
-        shipsize_corvette_construction_speed_mult = 0.30
+        starbase_shipyard_build_cost_mult = -0.20
+        starbase_shipyard_build_speed_mult = 0.20
+        starbase_shipyard_build_time_mult = -0.20
+        starbase_shipyard_capacity_add = 5
+        shipclass_starbase_damage_mult = 0.20
+        shipclass_starbase_hull_mult = 0.20
     }
 
     weight = 70
@@ -199,44 +278,80 @@ tech_transcendental_corvette_construction = {
     weight_modifier = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "ship_corvette_built"
-                value < 50
-            }
-        }
-        modifier = {
-            factor = 1.15
-            has_ethic = "ethic_fanatic_militarist"
-        }
-        modifier = {
-            factor = 0
-            research_leader = {
-                area = engineering
-                has_level < 3
-            }
-        }
-        modifier = {
-            factor = 0.50
-            research_leader = {
-                area = engineering
-                has_level = 3
-            }
-        }
-        modifier = {
-            factor = 0.75
-            NOT = {
-                research_leader = {
-                    area = engineering
-                    has_trait = "leader_trait_expertise_voidcraft"
+            NAND = {
+                check_variable = {
+                    which = "ship_corvette_built"
+                    value > 99
+                }
+                check_variable = {
+                    which = "ship_destroyer_built"
+                    value > 19
+                }
+                check_variable = {
+                    which = "ship_cruiser_built"
+                    value > 9
+                }
+                check_variable = {
+                    which = "ship_battleship_built"
+                    value > 3
+                }
+                check_variable = {
+                    which = "ship_titan_built"
+                    value > 0
                 }
             }
         }
         modifier = {
-            factor = 1.15
+            factor = 0
+            NOT = {
+                check_variable = {
+                    which = "starbase_module_shipyard_built"
+                    value > 8
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                has_tradition = "tr_domination_fleet_levies"
+                has_valid_civic = "civic_distinguished_admiralty"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NAND = {
+                has_tradition = "tr_domination_finish"
+                has_valid_civic = "civic_distinguished_admiralty"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ascension_perk = "ap_voidborn"
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = engineering
+                OR = {
+                    has_level < 3
+                    NAND = {
+                        has_trait = "leader_trait_expertise_voidcraft"
+                        has_trait = "leader_trait_scientist_chosen"
+                        has_trait = "leader_trait_curator"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
             research_leader = {
                 area = engineering
                 has_level > 4
-                has_trait = "leader_trait_expertise_voidcraft"
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
             }
         }
         modifier = {
@@ -250,32 +365,37 @@ tech_transcendental_corvette_construction = {
     }
 }
 
-tech_infinitum_corvette_construction = {
-    cost = 30000
+tech_advanced_starbase_offense_04 = {
+    cost = 40000
     area = engineering
     start_tech = no
     category = { voidcraft }
-    icon = "tech_infinitum_corvette_construction"
-    tier = 4
+    icon = "tech_advanced_starbase_offense_04"
+    tier = 2
 
     is_reverse_engineerable = no
     is_rare = yes
-    is_dangerous = yes
+    is_dangerous = no
 
     prerequisites = {
-        "tech_transcendental_corvette_construction"
+        "tech_advanced_starbase_offense_03"
+        "tech_starbase_4"
     }
 
     prereqfor_desc = {
-        component = {
-            title = tech_infinitum_corvette_construction_prereqfor.title
-            desc = tech_infinitum_corvette_construction_prereqfor.desc
+        feature = {
+            title = tech_advanced_starbase_offense_04_prereqfor.title
+            desc = tech_advanced_starbase_offense_04_prereqfor.desc
         }
     }
 
     modifier = {
-        shipsize_corvette_build_cost_mult = -0.30
-        shipsize_corvette_construction_speed_mult = 0.30
+        starbase_shipyard_build_cost_mult = -0.25
+        starbase_shipyard_build_speed_mult = 0.25
+        starbase_shipyard_build_time_mult = -0.25
+        starbase_shipyard_capacity_add = 7
+        shipclass_starbase_damage_mult = 0.25
+        shipclass_starbase_hull_mult = 0.25
     }
 
     weight = 60
@@ -283,22 +403,63 @@ tech_infinitum_corvette_construction = {
     weight_modifier = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "ship_corvette_built"
-                value < 120
+            NAND = {
+                check_variable = {
+                    which = "ship_corvette_built"
+                    value > 199
+                }
+                check_variable = {
+                    which = "ship_destroyer_built"
+                    value > 49
+                }
+                check_variable = {
+                    which = "ship_cruiser_built"
+                    value > 19
+                }
+                check_variable = {
+                    which = "ship_battleship_built"
+                    value > 9
+                }
+                check_variable = {
+                    which = "ship_titan_built"
+                    value > 0
+                }
             }
         }
         modifier = {
             factor = 0
             NOT = {
-                has_ethic = "ethic_fanatic_militarist"
+                check_variable = {
+                    which = "starbase_module_shipyard_built"
+                    value > 11
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                has_tradition = "tr_domination_finish"
+                has_valid_civic = "civic_distinguished_admiralty"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                has_ascension_perk = "ap_voidborn"
             }
         }
         modifier = {
             factor = 0
             research_leader = {
                 area = engineering
-                has_level < 4
+                OR = {
+                    has_level < 3
+                    NAND = {
+                        has_trait = "leader_trait_expertise_voidcraft"
+                        has_trait = "leader_trait_scientist_chosen"
+                        has_trait = "leader_trait_curator"
+                    }
+                }
             }
         }
         modifier = {
@@ -309,17 +470,17 @@ tech_infinitum_corvette_construction = {
             }
         }
         modifier = {
-            factor = 0
-            NOT = {
-                research_leader = {
-                    area = engineering
-                    has_trait = "leader_trait_expertise_voidcraft"
-                }
+            factor = 1.05
+            research_leader = {
+                area = engineering
+                has_level > 4
             }
         }
         modifier = {
-            factor = 1.25
-            has_ascension_perk = "ap_voidborn"
+            factor = 0.75
+            NOT = {
+                has_technology = "tech_supreme_voidcraft"
+            }
         }
     }
 
@@ -328,23 +489,125 @@ tech_infinitum_corvette_construction = {
     }
 }
 
-#############################################
-## Engineering / Voidcraft / Destroyer Ship
-#############################################
-
-tech_advanced_destroyer_construction = {
-    # Unlocks "DESTROYER_ADVANCED_BOW_01" section template
-    # Unlocks "DESTROYER_ADVANCED_BOW_02" section template
-    # Unlocks "DESTROYER_ADVANCED_BOW_03" section template
-    # Unlocks "DESTROYER_ADVANCED_STERN_01" section template
-    # Unlocks "DESTROYER_ADVANCED_STERN_02" section template
-    # Unlocks "DESTROYER_ADVANCED_STERN_03" section template
-
-    cost = 2500
+tech_advanced_starbase_offense_05 = {
+    cost = 60000
     area = engineering
     start_tech = no
     category = { voidcraft }
-    icon = "tech_advanced_destroyer_construction"
+    icon = "tech_advanced_starbase_offense_05"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_advanced_starbase_offense_04"
+        "tech_starbase_5"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_starbase_offense_05_prereqfor.title
+            desc = tech_advanced_starbase_offense_05_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        starbase_shipyard_build_cost_mult = -0.30
+        starbase_shipyard_build_speed_mult = 0.30
+        starbase_shipyard_build_time_mult = -0.30
+        starbase_shipyard_capacity_add = 10
+        shipclass_starbase_damage_mult = 0.30
+        shipclass_starbase_hull_mult = 0.30
+    }
+
+    weight = 50
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NAND = {
+                check_variable = {
+                    which = "ship_corvette_built"
+                    value > 499
+                }
+                check_variable = {
+                    which = "ship_destroyer_built"
+                    value > 99
+                }
+                check_variable = {
+                    which = "ship_cruiser_built"
+                    value > 49
+                }
+                check_variable = {
+                    which = "ship_battleship_built"
+                    value > 19
+                }
+                check_variable = {
+                    which = "ship_titan_built"
+                    value > 0
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                check_variable = {
+                    which = "starbase_module_shipyard_built"
+                    value > 14
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_domination_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_voidborn"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                OR = {
+                    has_level < 4
+                    NAND = {
+                        has_trait = "leader_trait_expertise_voidcraft"
+                        has_trait = "leader_trait_scientist_chosen"
+                        has_trait = "leader_trait_curator"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_technology = "tech_supreme_voidcraft"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 50
+    }
+}
+
+#######################
+### Starbase Defence
+#######################
+
+tech_advanced_starbase_defence_01 = {
+    cost = 7500
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_starbase_defence_01"
     tier = 1
 
     is_reverse_engineerable = no
@@ -353,19 +616,23 @@ tech_advanced_destroyer_construction = {
 
     prerequisites = {
         "tech_advanced_voidcraft"
-        "tech_destroyers"
+        "tech_starbase_1"
     }
 
     prereqfor_desc = {
-        component = {
-            title = tech_advanced_destroyer_construction_prereqfor.title
-            desc = tech_advanced_destroyer_construction_prereqfor.desc
+        feature = {
+            title = tech_advanced_starbase_defence_01_prereqfor.title
+            desc = tech_advanced_starbase_defence_01_prereqfor.desc
         }
     }
 
     modifier = {
-        shipsize_destroyer_build_cost_mult = -0.10
-        shipsize_destroyer_construction_speed_mult = 0.15
+        starbase_defense_platform_capacity_add = 1
+        starbase_defensive_war_ship_build_speed_mult = 0.10
+        shipsize_starbase_outpost_build_cost_mult = -0.10
+        country_starbase_capacity_add = 1
+        country_starbase_upkeep_mult = -0.10
+        country_starbase_influence_cost_mult = -0.10
     }
 
     weight = 90
@@ -373,41 +640,78 @@ tech_advanced_destroyer_construction = {
     weight_modifier = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "ship_destroyer_built"
-                value < 12
+            NAND = {
+                count_starbase_sizes = {
+                    starbase_size = "starbase_outpost"
+                    count > 5
+                }
+                count_starbase_sizes = {
+                    starbase_size = "starbase_starport"
+                    count > 1
+                }
+                count_starbase_sizes = {
+                    starbase_size = "starbase_starhold"
+                    count > 0
+                }
+                count_starbase_sizes = {
+                    starbase_size = "starbase_starfortress"
+                    count > 0
+                }
+                count_starbase_sizes = {
+                    starbase_size = "starbase_citadel"
+                    count > 0
+                }
             }
         }
         modifier = {
-            factor = 1.30
-            has_ethic = "ethic_militarist"
+            factor = 0
+            NAND = {
+                check_variable = {
+                    which = "starbase_module_gun_battery_built"
+                    value > 2
+                }
+                check_variable = {
+                    which = "starbase_module_missile_battery_built"
+                    value > 2
+                }
+            }
         }
         modifier = {
-            factor = 1.50
-            has_ethic = "ethic_fanatic_militarist"
+            factor = 0
+            NAND = {
+                has_tradition = "tr_supremacy_adopt"
+                has_valid_civic = "civic_distinguished_admiralty"
+            }
         }
         modifier = {
-            factor = 1.10
+            factor = 0.75
+            NAND = {
+                has_tradition = "tr_supremacy_master_shipwrights"
+                has_valid_civic = "civic_distinguished_admiralty"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_tradition = "tr_supremacy_great_game"
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_supremacy_finish"
+        }
+        modifier = {
+            factor = 1.75
+            has_ascension_perk = "ap_eternal_vigilance"
+        }
+        modifier = {
+            factor = 1.25
             research_leader = {
                 area = engineering
                 has_level > 2
-                has_trait = "leader_trait_expertise_voidcraft"
-            }
-        }
-        modifier = {
-            factor = 1.20
-            research_leader = {
-                area = engineering
-                has_level > 3
-                has_trait = "leader_trait_expertise_voidcraft"
-            }
-        }
-        modifier = {
-            factor = 1.30
-            research_leader = {
-                area = engineering
-                has_level > 4
-                has_trait = "leader_trait_expertise_voidcraft"
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
             }
         }
         modifier = {
@@ -421,40 +725,37 @@ tech_advanced_destroyer_construction = {
     }
 }
 
-tech_supreme_destroyer_construction = {
-    # Unlocks "DESTROYER_SUPREME_BOW_01" section template
-    # Unlocks "DESTROYER_SUPREME_BOW_02" section template
-    # Unlocks "DESTROYER_SUPREME_BOW_03" section template
-    # Unlocks "DESTROYER_SUPREME_STERN_01" section template
-    # Unlocks "DESTROYER_SUPREME_STERN_02" section template
-    # Unlocks "DESTROYER_SUPREME_STERN_03" section template
-    # Unlocks "DESTROYER_SUPREME_STERN_04" section template
-
-    cost = 5000
+tech_advanced_starbase_defence_02 = {
+    cost = 15000
     area = engineering
     start_tech = no
     category = { voidcraft }
-    icon = "tech_supreme_destroyer_construction"
-    tier = 2
+    icon = "tech_advanced_starbase_defence_02"
+    tier = 1
 
     is_reverse_engineerable = no
     is_rare = no
     is_dangerous = no
 
     prerequisites = {
-        "tech_advanced_destroyer_construction"
+        "tech_advanced_starbase_defence_01"
+        "tech_starbase_2"
     }
 
     prereqfor_desc = {
-        component = {
-            title = tech_supreme_destroyer_construction_prereqfor.title
-            desc = tech_supreme_destroyer_construction_prereqfor.desc
+        feature = {
+            title = tech_advanced_starbase_defence_02_prereqfor.title
+            desc = tech_advanced_starbase_defence_02_prereqfor.desc
         }
     }
 
     modifier = {
-        shipsize_destroyer_build_cost_mult = -0.15
-        shipsize_destroyer_construction_speed_mult = 0.20
+        starbase_defense_platform_capacity_add = 2
+        starbase_defensive_war_ship_build_speed_mult = 0.15
+        shipsize_starbase_outpost_build_cost_mult = -0.15
+        country_starbase_capacity_add = 2
+        country_starbase_upkeep_mult = -0.15
+        country_starbase_influence_cost_mult = -0.15
     }
 
     weight = 80
@@ -462,33 +763,74 @@ tech_supreme_destroyer_construction = {
     weight_modifier = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "ship_destroyer_built"
-                value < 30
+            NAND = {
+                count_starbase_sizes = {
+                    starbase_size = "starbase_outpost"
+                    count > 11
+                }
+                count_starbase_sizes = {
+                    starbase_size = "starbase_starport"
+                    count > 5
+                }
+                count_starbase_sizes = {
+                    starbase_size = "starbase_starhold"
+                    count > 0
+                }
+                count_starbase_sizes = {
+                    starbase_size = "starbase_starfortress"
+                    count > 0
+                }
+                count_starbase_sizes = {
+                    starbase_size = "starbase_citadel"
+                    count > 0
+                }
             }
         }
         modifier = {
-            factor = 1.15
-            has_ethic = "ethic_militarist"
+            factor = 0
+            NAND = {
+                check_variable = {
+                    which = "starbase_module_gun_battery_built"
+                    value > 5
+                }
+                check_variable = {
+                    which = "starbase_module_missile_battery_built"
+                    value > 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                has_tradition = "tr_supremacy_master_shipwrights"
+                has_valid_civic = "civic_distinguished_admiralty"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NAND = {
+                has_tradition = "tr_supremacy_great_game"
+                has_valid_civic = "civic_distinguished_admiralty"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_tradition = "tr_supremacy_finish"
+        }
+        modifier = {
+            factor = 1.50
+            has_ascension_perk = "ap_eternal_vigilance"
         }
         modifier = {
             factor = 1.25
-            has_ethic = "ethic_fanatic_militarist"
-        }
-        modifier = {
-            factor = 1.10
             research_leader = {
                 area = engineering
                 has_level > 3
-                has_trait = "leader_trait_expertise_voidcraft"
-            }
-        }
-        modifier = {
-            factor = 1.20
-            research_leader = {
-                area = engineering
-                has_level > 4
-                has_trait = "leader_trait_expertise_voidcraft"
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
             }
         }
         modifier = {
@@ -502,42 +844,37 @@ tech_supreme_destroyer_construction = {
     }
 }
 
-tech_transcendental_destroyer_construction = {
-    # Unlocks "DESTROYER_TRANSCENDENTAL_BOW_01" section template
-    # Unlocks "DESTROYER_TRANSCENDENTAL_BOW_02" section template
-    # Unlocks "DESTROYER_TRANSCENDENTAL_BOW_03" section template
-    # Unlocks "DESTROYER_TRANSCENDENTAL_BOW_04" section template
-    # Unlocks "DESTROYER_TRANSCENDENTAL_STERN_01" section template
-    # Unlocks "DESTROYER_TRANSCENDENTAL_STERN_02" section template
-    # Unlocks "DESTROYER_TRANSCENDENTAL_STERN_03" section template
-    # Unlocks "DESTROYER_TRANSCENDENTAL_STERN_04" section template
-    # Unlocks "DESTROYER_TRANSCENDENTAL_STERN_05" section template
-
-    cost = 10000
+tech_advanced_starbase_defence_03 = {
+    cost = 25000
     area = engineering
     start_tech = no
     category = { voidcraft }
-    icon = "tech_transcendental_destroyer_construction"
-    tier = 2
+    icon = "tech_advanced_starbase_defence_03"
+    tier = 1
 
     is_reverse_engineerable = no
-    is_rare = yes
+    is_rare = no
     is_dangerous = no
 
     prerequisites = {
-        "tech_supreme_destroyer_construction"
+        "tech_advanced_starbase_defence_02"
+        "tech_starbase_3"
     }
 
     prereqfor_desc = {
-        component = {
-            title = tech_transcendental_destroyer_construction_prereqfor.title
-            desc = tech_transcendental_destroyer_construction_prereqfor.desc
+        feature = {
+            title = tech_advanced_starbase_defence_03_prereqfor.title
+            desc = tech_advanced_starbase_defence_03_prereqfor.desc
         }
     }
 
     modifier = {
-        shipsize_destroyer_build_cost_mult = -0.25
-        shipsize_destroyer_construction_speed_mult = 0.30
+        starbase_defense_platform_capacity_add = 3
+        starbase_defensive_war_ship_build_speed_mult = 0.20
+        shipsize_starbase_outpost_build_cost_mult = -0.20
+        country_starbase_capacity_add = 3
+        country_starbase_upkeep_mult = -0.20
+        country_starbase_influence_cost_mult = -0.20
     }
 
     weight = 70
@@ -545,44 +882,84 @@ tech_transcendental_destroyer_construction = {
     weight_modifier = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "ship_destroyer_built"
-                value < 50
-            }
-        }
-        modifier = {
-            factor = 1.15
-            has_ethic = "ethic_fanatic_militarist"
-        }
-        modifier = {
-            factor = 0
-            research_leader = {
-                area = engineering
-                has_level < 3
-            }
-        }
-        modifier = {
-            factor = 0.50
-            research_leader = {
-                area = engineering
-                has_level = 3
-            }
-        }
-        modifier = {
-            factor = 0.75
-            NOT = {
-                research_leader = {
-                    area = engineering
-                    has_trait = "leader_trait_expertise_voidcraft"
+            NAND = {
+                count_starbase_sizes = {
+                    starbase_size = "starbase_outpost"
+                    count > 17
+                }
+                count_starbase_sizes = {
+                    starbase_size = "starbase_starport"
+                    count > 11
+                }
+                count_starbase_sizes = {
+                    starbase_size = "starbase_starhold"
+                    count > 5
+                }
+                count_starbase_sizes = {
+                    starbase_size = "starbase_starfortress"
+                    count > 0
+                }
+                count_starbase_sizes = {
+                    starbase_size = "starbase_citadel"
+                    count > 0
                 }
             }
         }
         modifier = {
-            factor = 1.15
+            factor = 0
+            NAND = {
+                check_variable = {
+                    which = "starbase_module_gun_battery_built"
+                    value > 8
+                }
+                check_variable = {
+                    which = "starbase_module_missile_battery_built"
+                    value > 8
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                has_tradition = "tr_supremacy_great_game"
+                has_valid_civic = "civic_distinguished_admiralty"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NAND = {
+                has_tradition = "tr_supremacy_finish"
+                has_valid_civic = "civic_distinguished_admiralty"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ascension_perk = "ap_eternal_vigilance"
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = engineering
+                OR = {
+                    has_level < 3
+                    NAND = {
+                        has_trait = "leader_trait_expertise_voidcraft"
+                        has_trait = "leader_trait_scientist_chosen"
+                        has_trait = "leader_trait_curator"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
             research_leader = {
                 area = engineering
                 has_level > 4
-                has_trait = "leader_trait_expertise_voidcraft"
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
             }
         }
         modifier = {
@@ -596,32 +973,37 @@ tech_transcendental_destroyer_construction = {
     }
 }
 
-tech_infinitum_destroyer_construction = {
-    cost = 30000
+tech_advanced_starbase_defence_04 = {
+    cost = 40000
     area = engineering
     start_tech = no
     category = { voidcraft }
-    icon = "tech_infinitum_destroyer_construction"
-    tier = 4
+    icon = "tech_advanced_starbase_defence_04"
+    tier = 2
 
     is_reverse_engineerable = no
     is_rare = yes
-    is_dangerous = yes
+    is_dangerous = no
 
     prerequisites = {
-        "tech_transcendental_destroyer_construction"
+        "tech_advanced_starbase_defence_03"
+        "tech_starbase_4"
     }
 
     prereqfor_desc = {
-        component = {
-            title = tech_infinitum_destroyer_construction_prereqfor.title
-            desc = tech_infinitum_destroyer_construction_prereqfor.desc
+        feature = {
+            title = tech_advanced_starbase_defence_04_prereqfor.title
+            desc = tech_advanced_starbase_defence_04_prereqfor.desc
         }
     }
 
     modifier = {
-        shipsize_destroyer_build_cost_mult = -0.30
-        shipsize_destroyer_construction_speed_mult = 0.30
+        starbase_defense_platform_capacity_add = 4
+        starbase_defensive_war_ship_build_speed_mult = 0.25
+        shipsize_starbase_outpost_build_cost_mult = -0.25
+        country_starbase_capacity_add = 4
+        country_starbase_upkeep_mult = -0.25
+        country_starbase_influence_cost_mult = -0.25
     }
 
     weight = 60
@@ -629,22 +1011,67 @@ tech_infinitum_destroyer_construction = {
     weight_modifier = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "ship_destroyer_built"
-                value < 80
+            NAND = {
+                count_starbase_sizes = {
+                    starbase_size = "starbase_outpost"
+                    count > 23
+                }
+                count_starbase_sizes = {
+                    starbase_size = "starbase_starport"
+                    count > 17
+                }
+                count_starbase_sizes = {
+                    starbase_size = "starbase_starhold"
+                    count > 11
+                }
+                count_starbase_sizes = {
+                    starbase_size = "starbase_starfortress"
+                    count > 5
+                }
+                count_starbase_sizes = {
+                    starbase_size = "starbase_citadel"
+                    count > 0
+                }
             }
         }
         modifier = {
             factor = 0
+            NAND = {
+                check_variable = {
+                    which = "starbase_module_gun_battery_built"
+                    value > 11
+                }
+                check_variable = {
+                    which = "starbase_module_missile_battery_built"
+                    value > 11
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                has_tradition = "tr_supremacy_finish"
+                has_valid_civic = "civic_distinguished_admiralty"
+            }
+        }
+        modifier = {
+            factor = 0.75
             NOT = {
-                has_ethic = "ethic_fanatic_militarist"
+                has_ascension_perk = "ap_eternal_vigilance"
             }
         }
         modifier = {
             factor = 0
             research_leader = {
                 area = engineering
-                has_level < 4
+                OR = {
+                    has_level < 3
+                    NAND = {
+                        has_trait = "leader_trait_expertise_voidcraft"
+                        has_trait = "leader_trait_scientist_chosen"
+                        has_trait = "leader_trait_curator"
+                    }
+                }
             }
         }
         modifier = {
@@ -655,17 +1082,17 @@ tech_infinitum_destroyer_construction = {
             }
         }
         modifier = {
-            factor = 0
-            NOT = {
-                research_leader = {
-                    area = engineering
-                    has_trait = "leader_trait_expertise_voidcraft"
-                }
+            factor = 1.05
+            research_leader = {
+                area = engineering
+                has_level > 4
             }
         }
         modifier = {
-            factor = 1.25
-            has_ascension_perk = "ap_voidborn"
+            factor = 0.75
+            NOT = {
+                has_technology = "tech_supreme_voidcraft"
+            }
         }
     }
 
@@ -674,28 +1101,129 @@ tech_infinitum_destroyer_construction = {
     }
 }
 
-#############################################
-## Engineering / Voidcraft / Cruiser Ship
-#############################################
-
-tech_advanced_cruiser_construction = {
-    # Unlocks "CRUISER_ADVANCED_BOW_01" section template
-    # Unlocks "CRUISER_ADVANCED_BOW_02" section template
-    # Unlocks "CRUISER_ADVANCED_BOW_03" section template
-    # Unlocks "CRUISER_ADVANCED_BOW_04" section template
-    # Unlocks "CRUISER_ADVANCED_MID_01" section template
-    # Unlocks "CRUISER_ADVANCED_MID_02" section template
-    # Unlocks "CRUISER_ADVANCED_MID_03" section template
-    # Unlocks "CRUISER_ADVANCED_MID_04" section template
-    # Unlocks "CRUISER_ADVANCED_STERN_01" section template
-    # Unlocks "CRUISER_ADVANCED_STERN_02" section template
-    # Unlocks "CRUISER_ADVANCED_STERN_03" section template
-
-    cost = 2500
+tech_advanced_starbase_defence_05 = {
+    cost = 60000
     area = engineering
     start_tech = no
     category = { voidcraft }
-    icon = "tech_advanced_cruiser_construction"
+    icon = "tech_advanced_starbase_defence_05"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_advanced_starbase_defence_04"
+        "tech_starbase_5"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_starbase_defence_05_prereqfor.title
+            desc = tech_advanced_starbase_defence_05_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        starbase_defense_platform_capacity_add = 5
+        starbase_defensive_war_ship_build_speed_mult = 0.30
+        shipsize_starbase_outpost_build_cost_mult = -0.30
+        country_starbase_capacity_add = 5
+        country_starbase_upkeep_mult = -0.30
+        country_starbase_influence_cost_mult = -0.30
+    }
+
+    weight = 50
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NAND = {
+                count_starbase_sizes = {
+                    starbase_size = "starbase_outpost"
+                    count > 29
+                }
+                count_starbase_sizes = {
+                    starbase_size = "starbase_starport"
+                    count > 23
+                }
+                count_starbase_sizes = {
+                    starbase_size = "starbase_starhold"
+                    count > 17
+                }
+                count_starbase_sizes = {
+                    starbase_size = "starbase_starfortress"
+                    count > 11
+                }
+                count_starbase_sizes = {
+                    starbase_size = "starbase_citadel"
+                    count > 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                check_variable = {
+                    which = "starbase_module_gun_battery_built"
+                    value > 14
+                }
+                check_variable = {
+                    which = "starbase_module_missile_battery_built"
+                    value > 14
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_eternal_vigilance"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                OR = {
+                    has_level < 4
+                    NAND = {
+                        has_trait = "leader_trait_expertise_voidcraft"
+                        has_trait = "leader_trait_scientist_chosen"
+                        has_trait = "leader_trait_curator"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_technology = "tech_supreme_voidcraft"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 50
+    }
+}
+
+############################
+### Starbase Construction
+############################
+
+tech_advanced_starbase_construction_01 = {
+    cost = 5000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_starbase_construction_01"
     tier = 1
 
     is_reverse_engineerable = no
@@ -704,19 +1232,530 @@ tech_advanced_cruiser_construction = {
 
     prerequisites = {
         "tech_advanced_voidcraft"
-        "tech_cruisers"
+        "tech_starbase_1"
     }
 
     prereqfor_desc = {
-        component = {
-            title = tech_advanced_cruiser_construction_prereqfor.title
-            desc = tech_advanced_cruiser_construction_prereqfor.desc
+        feature = {
+            title = tech_advanced_starbase_construction_01_prereqfor.title
+            desc = tech_advanced_starbase_construction_01_prereqfor.desc
         }
     }
 
     modifier = {
-        shipsize_cruiser_build_cost_mult = -0.10
-        shipsize_cruiser_construction_speed_mult = 0.15
+        starbase_upgrade_speed_mult = 0.10
+        starbase_upgrade_cost_mult = -0.10
+    }
+
+    weight = 90
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                check_variable = {
+                    which = "ship_civilian_built"
+                    value > 5
+                }
+                check_variable = {
+                    which = "ship_colonizer_built"
+                    value > 2
+                }
+                check_variable = {
+                    which = "ship_transport_built"
+                    value > 9
+                }
+                check_variable = {
+                    which = "ship_military_built"
+                    value > 15
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                has_tradition = "tr_expansion_adopt"
+                has_valid_civic = "civic_mechanists"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NAND = {
+                has_tradition = "tr_expansion_reach_for_the_stars"
+                has_valid_civic = "civic_mechanists"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_tradition = "tr_expansion_galactic_ambition"
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_expansion_finish"
+        }
+        modifier = {
+            factor = 1.75
+            has_ascension_perk = "ap_galactic_wonders"
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.75
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 90
+    }
+}
+
+tech_advanced_starbase_construction_02 = {
+    cost = 10000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_starbase_construction_02"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_starbase_construction_01"
+        "tech_starbase_2"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_starbase_construction_02_prereqfor.title
+            desc = tech_advanced_starbase_construction_02_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        starbase_upgrade_speed_mult = 0.15
+        starbase_upgrade_cost_mult = -0.15
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                check_variable = {
+                    which = "ship_civilian_built"
+                    value > 6
+                }
+                check_variable = {
+                    which = "ship_colonizer_built"
+                    value > 5
+                }
+                check_variable = {
+                    which = "ship_transport_built"
+                    value > 15
+                }
+                check_variable = {
+                    which = "ship_military_built"
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                has_tradition = "tr_expansion_reach_for_the_stars"
+                has_valid_civic = "civic_mechanists"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NAND = {
+                has_tradition = "tr_expansion_galactic_ambition"
+                has_valid_civic = "civic_mechanists"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_tradition = "tr_expansion_finish"
+        }
+        modifier = {
+            factor = 1.50
+            has_ascension_perk = "ap_galactic_wonders"
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.50
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 80
+    }
+}
+
+tech_advanced_starbase_construction_03 = {
+    cost = 15000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_starbase_construction_03"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_starbase_construction_02"
+        "tech_starbase_3"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_starbase_construction_03_prereqfor.title
+            desc = tech_advanced_starbase_construction_03_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        starbase_upgrade_speed_mult = 0.20
+        starbase_upgrade_cost_mult = -0.20
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                check_variable = {
+                    which = "ship_civilian_built"
+                    value > 7
+                }
+                check_variable = {
+                    which = "ship_colonizer_built"
+                    value > 7
+                }
+                check_variable = {
+                    which = "ship_transport_built"
+                    value > 19
+                }
+                check_variable = {
+                    which = "ship_military_built"
+                    value > 30
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                has_tradition = "tr_expansion_galactic_ambition"
+                has_valid_civic = "civic_mechanists"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NAND = {
+                has_tradition = "tr_expansion_finish"
+                has_valid_civic = "civic_mechanists"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ascension_perk = "ap_galactic_wonders"
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = engineering
+                OR = {
+                    has_level < 3
+                    NAND = {
+                        has_trait = "leader_trait_expertise_voidcraft"
+                        has_trait = "leader_trait_scientist_chosen"
+                        has_trait = "leader_trait_curator"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}
+
+tech_advanced_starbase_construction_04 = {
+    cost = 30000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_starbase_construction_04"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_starbase_construction_03"
+        "tech_starbase_4"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_starbase_construction_04_prereqfor.title
+            desc = tech_advanced_starbase_construction_04_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        starbase_upgrade_speed_mult = 0.25
+        starbase_upgrade_cost_mult = -0.25
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                check_variable = {
+                    which = "ship_civilian_built"
+                    value > 8
+                }
+                check_variable = {
+                    which = "ship_colonizer_built"
+                    value > 9
+                }
+                check_variable = {
+                    which = "ship_transport_built"
+                    value > 24
+                }
+                check_variable = {
+                    which = "ship_military_built"
+                    value > 45
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                has_tradition = "tr_expansion_finish"
+                has_valid_civic = "civic_mechanists"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                has_ascension_perk = "ap_galactic_wonders"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                OR = {
+                    has_level < 3
+                    NAND = {
+                        has_trait = "leader_trait_expertise_voidcraft"
+                        has_trait = "leader_trait_scientist_chosen"
+                        has_trait = "leader_trait_curator"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = engineering
+                has_level = 4
+            }
+        }
+        modifier = {
+            factor = 1.05
+            research_leader = {
+                area = engineering
+                has_level > 4
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                has_technology = "tech_supreme_voidcraft"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}
+
+tech_advanced_starbase_construction_05 = {
+    cost = 50000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_starbase_construction_05"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_advanced_starbase_construction_04"
+        "tech_starbase_5"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_starbase_construction_05_prereqfor.title
+            desc = tech_advanced_starbase_construction_05_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        starbase_upgrade_speed_mult = 0.30
+        starbase_upgrade_cost_mult = -0.30
+    }
+
+    weight = 50
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                check_variable = {
+                    which = "ship_civilian_built"
+                    value > 9
+                }
+                check_variable = {
+                    which = "ship_colonizer_built"
+                    value > 11
+                }
+                check_variable = {
+                    which = "ship_transport_built"
+                    value > 29
+                }
+                check_variable = {
+                    which = "ship_military_built"
+                    value > 75
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_galactic_wonders"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                OR = {
+                    has_level < 4
+                    NAND = {
+                        has_trait = "leader_trait_expertise_voidcraft"
+                        has_trait = "leader_trait_scientist_chosen"
+                        has_trait = "leader_trait_curator"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_technology = "tech_supreme_voidcraft"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 50
+    }
+}
+
+#######################
+### Starbase Modules
+#######################
+
+tech_advanced_starbase_module_01 = {
+    cost = 5000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_starbase_module_01"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_voidcraft"
+        "tech_starbase_1"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_starbase_module_01_prereqfor.title
+            desc = tech_advanced_starbase_module_01_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        starbase_module_build_cost_mult = -0.10
+        starbase_module_capacity_add = 1
     }
 
     weight = 90
@@ -725,125 +1764,130 @@ tech_advanced_cruiser_construction = {
         modifier = {
             factor = 0
             check_variable = {
-                which = "ship_cruiser_built"
+                which = "starbase_module_built"
+                value < 6
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                has_tradition = "tr_prosperity_adopt"
+                has_valid_civic = "civic_functional_architecture"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NAND = {
+                has_tradition = "tr_prosperity_sct"
+                has_valid_civic = "civic_functional_architecture"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_tradition = "tr_prosperity_administrative_operations"
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_prosperity_finish"
+        }
+        modifier = {
+            factor = 1.75
+            has_ascension_perk = "ap_master_builders"
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.75
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 90
+    }
+}
+
+tech_advanced_starbase_module_02 = {
+    cost = 10000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_starbase_module_02"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_starbase_module_01"
+        "tech_starbase_2"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_starbase_module_02_prereqfor.title
+            desc = tech_advanced_starbase_module_02_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        starbase_module_build_cost_mult = -0.15
+        starbase_module_capacity_add = 1
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "starbase_module_built"
                 value < 10
             }
         }
         modifier = {
-            factor = 1.30
-            has_ethic = "ethic_militarist"
+            factor = 0
+            NAND = {
+                has_tradition = "tr_prosperity_sct"
+                has_valid_civic = "civic_functional_architecture"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NAND = {
+                has_tradition = "tr_prosperity_administrative_operations"
+                has_valid_civic = "civic_functional_architecture"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_tradition = "tr_prosperity_finish"
         }
         modifier = {
             factor = 1.50
-            has_ethic = "ethic_fanatic_militarist"
-        }
-        modifier = {
-            factor = 1.10
-            research_leader = {
-                area = engineering
-                has_level > 2
-                has_trait = "leader_trait_expertise_voidcraft"
-            }
-        }
-        modifier = {
-            factor = 1.20
-            research_leader = {
-                area = engineering
-                has_level > 3
-                has_trait = "leader_trait_expertise_voidcraft"
-            }
-        }
-        modifier = {
-            factor = 1.30
-            research_leader = {
-                area = engineering
-                has_level > 4
-                has_trait = "leader_trait_expertise_voidcraft"
-            }
-        }
-        modifier = {
-            factor = 1.75
-            has_technology = "tech_supreme_voidcraft"
-        }
-    }
-
-    ai_weight = {
-        factor = 90
-    }
-}
-
-tech_supreme_cruiser_construction = {
-    # Unlocks "CRUISER_SUPREME_BOW_01" section template
-    # Unlocks "CRUISER_SUPREME_BOW_02" section template
-    # Unlocks "CRUISER_SUPREME_BOW_03" section template
-    # Unlocks "CRUISER_SUPREME_BOW_04" section template
-    # Unlocks "CRUISER_SUPREME_BOW_05" section template
-    # Unlocks "CRUISER_SUPREME_MID_01" section template
-    # Unlocks "CRUISER_SUPREME_MID_02" section template
-    # Unlocks "CRUISER_SUPREME_MID_03" section template
-    # Unlocks "CRUISER_SUPREME_STERN_01" section template
-    # Unlocks "CRUISER_SUPREME_STERN_02" section template
-    # Unlocks "CRUISER_SUPREME_STERN_03" section template
-
-    cost = 5000
-    area = engineering
-    start_tech = no
-    category = { voidcraft }
-    icon = "tech_supreme_cruiser_construction"
-    tier = 2
-
-    is_reverse_engineerable = no
-    is_rare = no
-    is_dangerous = no
-
-    prerequisites = {
-        "tech_advanced_cruiser_construction"
-    }
-
-    prereqfor_desc = {
-        component = {
-            title = tech_supreme_cruiser_construction_prereqfor.title
-            desc = tech_supreme_cruiser_construction_prereqfor.desc
-        }
-    }
-
-    modifier = {
-        shipsize_cruiser_build_cost_mult = -0.15
-        shipsize_cruiser_construction_speed_mult = 0.20
-    }
-
-    weight = 80
-
-    weight_modifier = {
-        modifier = {
-            factor = 0
-            check_variable = {
-                which = "ship_cruiser_built"
-                value < 25
-            }
-        }
-        modifier = {
-            factor = 1.15
-            has_ethic = "ethic_militarist"
+            has_ascension_perk = "ap_master_builders"
         }
         modifier = {
             factor = 1.25
-            has_ethic = "ethic_fanatic_militarist"
-        }
-        modifier = {
-            factor = 1.10
             research_leader = {
                 area = engineering
                 has_level > 3
-                has_trait = "leader_trait_expertise_voidcraft"
-            }
-        }
-        modifier = {
-            factor = 1.20
-            research_leader = {
-                area = engineering
-                has_level > 4
-                has_trait = "leader_trait_expertise_voidcraft"
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
             }
         }
         modifier = {
@@ -857,44 +1901,33 @@ tech_supreme_cruiser_construction = {
     }
 }
 
-tech_transcendental_cruiser_construction = {
-    # Unlocks "CRUISER_TRANSCENDENTAL_BOW_01" section template
-    # Unlocks "CRUISER_TRANSCENDENTAL_BOW_02" section template
-    # Unlocks "CRUISER_TRANSCENDENTAL_BOW_03" section template
-    # Unlocks "CRUISER_TRANSCENDENTAL_BOW_04" section template
-    # Unlocks "CRUISER_TRANSCENDENTAL_BOW_05" section template
-    # Unlocks "CRUISER_TRANSCENDENTAL_MID_01" section template
-    # Unlocks "CRUISER_TRANSCENDENTAL_MID_02" section template
-    # Unlocks "CRUISER_TRANSCENDENTAL_MID_03" section template
-    # Unlocks "CRUISER_TRANSCENDENTAL_STERN_01" section template
-    # Unlocks "CRUISER_TRANSCENDENTAL_STERN_02" section template
-    # Unlocks "CRUISER_TRANSCENDENTAL_STERN_03" section template
-
-    cost = 10000
+tech_advanced_starbase_module_03 = {
+    cost = 15000
     area = engineering
     start_tech = no
     category = { voidcraft }
-    icon = "tech_transcendental_cruiser_construction"
-    tier = 2
+    icon = "tech_advanced_starbase_module_03"
+    tier = 1
 
     is_reverse_engineerable = no
-    is_rare = yes
+    is_rare = no
     is_dangerous = no
 
     prerequisites = {
-        "tech_supreme_cruiser_construction"
+        "tech_advanced_starbase_module_02"
+        "tech_modular_engineering"
     }
 
     prereqfor_desc = {
-        component = {
-            title = tech_transcendental_cruiser_construction_prereqfor.title
-            desc = tech_transcendental_cruiser_construction_prereqfor.desc
+        feature = {
+            title = tech_advanced_starbase_module_03_prereqfor.title
+            desc = tech_advanced_starbase_module_03_prereqfor.desc
         }
     }
 
     modifier = {
-        shipsize_cruiser_build_cost_mult = -0.25
-        shipsize_cruiser_construction_speed_mult = 0.30
+        starbase_module_build_cost_mult = -0.20
+        starbase_module_capacity_add = 2
     }
 
     weight = 70
@@ -903,43 +1936,52 @@ tech_transcendental_cruiser_construction = {
         modifier = {
             factor = 0
             check_variable = {
-                which = "ship_cruiser_built"
-                value < 40
+                which = "starbase_module_built"
+                value < 20
             }
         }
         modifier = {
-            factor = 1.15
-            has_ethic = "ethic_fanatic_militarist"
-        }
-        modifier = {
             factor = 0
-            research_leader = {
-                area = engineering
-                has_level < 3
+            NAND = {
+                has_tradition = "tr_prosperity_administrative_operations"
+                has_valid_civic = "civic_functional_architecture"
             }
         }
         modifier = {
             factor = 0.50
-            research_leader = {
-                area = engineering
-                has_level = 3
+            NAND = {
+                has_tradition = "tr_prosperity_finish"
+                has_valid_civic = "civic_functional_architecture"
             }
         }
         modifier = {
+            factor = 1.25
+            has_ascension_perk = "ap_master_builders"
+        }
+        modifier = {
             factor = 0.75
-            NOT = {
-                research_leader = {
-                    area = engineering
-                    has_trait = "leader_trait_expertise_voidcraft"
+            research_leader = {
+                area = engineering
+                OR = {
+                    has_level < 3
+                    NAND = {
+                        has_trait = "leader_trait_expertise_voidcraft"
+                        has_trait = "leader_trait_scientist_chosen"
+                        has_trait = "leader_trait_curator"
+                    }
                 }
             }
         }
         modifier = {
-            factor = 1.15
+            factor = 1.25
             research_leader = {
                 area = engineering
                 has_level > 4
-                has_trait = "leader_trait_expertise_voidcraft"
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
             }
         }
         modifier = {
@@ -953,40 +1995,33 @@ tech_transcendental_cruiser_construction = {
     }
 }
 
-tech_infinitum_cruiser_construction = {
-    # Unlocks "CRUISER_INFINITUM_BOW_01" section template
-    # Unlocks "CRUISER_INFINITUM_BOW_02" section template
-    # Unlocks "CRUISER_INFINITUM_MID_01" section template
-    # Unlocks "CRUISER_INFINITUM_MID_02" section template
-    # Unlocks "CRUISER_INFINITUM_STERN_01" section template
-    # Unlocks "CRUISER_INFINITUM_STERN_02" section template
-    # Unlocks "CRUISER_INFINITUM_STERN_03" section template
-
-    cost = 30000
+tech_advanced_starbase_module_04 = {
+    cost = 25000
     area = engineering
     start_tech = no
     category = { voidcraft }
-    icon = "tech_infinitum_cruiser_construction"
-    tier = 4
+    icon = "tech_advanced_starbase_module_04"
+    tier = 1
 
     is_reverse_engineerable = no
     is_rare = yes
-    is_dangerous = yes
+    is_dangerous = no
 
     prerequisites = {
-        "tech_transcendental_cruiser_construction"
+        "tech_advanced_starbase_module_03"
+        "tech_space_defense_station_improvement"
     }
 
     prereqfor_desc = {
-        component = {
-            title = tech_infinitum_cruiser_construction_prereqfor.title
-            desc = tech_infinitum_cruiser_construction_prereqfor.desc
+        feature = {
+            title = tech_advanced_starbase_module_04_prereqfor.title
+            desc = tech_advanced_starbase_module_04_prereqfor.desc
         }
     }
 
     modifier = {
-        shipsize_cruiser_build_cost_mult = -0.30
-        shipsize_cruiser_construction_speed_mult = 0.30
+        starbase_module_build_cost_mult = -0.25
+        starbase_module_capacity_add = 2
     }
 
     weight = 60
@@ -995,21 +2030,35 @@ tech_infinitum_cruiser_construction = {
         modifier = {
             factor = 0
             check_variable = {
-                which = "ship_cruiser_built"
-                value < 60
+                which = "starbase_module_built"
+                value < 30
             }
         }
         modifier = {
             factor = 0
+            NAND = {
+                has_tradition = "tr_prosperity_finish"
+                has_valid_civic = "civic_functional_architecture"
+            }
+        }
+        modifier = {
+            factor = 0.75
             NOT = {
-                has_ethic = "ethic_fanatic_militarist"
+                has_ascension_perk = "ap_master_builders"
             }
         }
         modifier = {
             factor = 0
             research_leader = {
                 area = engineering
-                has_level < 4
+                OR = {
+                    has_level < 3
+                    NAND = {
+                        has_trait = "leader_trait_expertise_voidcraft"
+                        has_trait = "leader_trait_scientist_chosen"
+                        has_trait = "leader_trait_curator"
+                    }
+                }
             }
         }
         modifier = {
@@ -1020,17 +2069,17 @@ tech_infinitum_cruiser_construction = {
             }
         }
         modifier = {
-            factor = 0
-            NOT = {
-                research_leader = {
-                    area = engineering
-                    has_trait = "leader_trait_expertise_voidcraft"
-                }
+            factor = 1.05
+            research_leader = {
+                area = engineering
+                has_level > 4
             }
         }
         modifier = {
-            factor = 1.25
-            has_ascension_perk = "ap_voidborn"
+            factor = 0.75
+            NOT = {
+                has_technology = "tech_supreme_voidcraft"
+            }
         }
     }
 
@@ -1039,29 +2088,95 @@ tech_infinitum_cruiser_construction = {
     }
 }
 
-#############################################
-## Engineering / Voidcraft / Battleship Ship
-#############################################
-
-tech_advanced_battleship_construction = {
-    # Unlocks "BATTLESHIP_ADVANCED_BOW_01" section template
-    # Unlocks "BATTLESHIP_ADVANCED_BOW_02" section template
-    # Unlocks "BATTLESHIP_ADVANCED_BOW_03" section template
-    # Unlocks "BATTLESHIP_ADVANCED_BOW_04" section template
-    # Unlocks "BATTLESHIP_ADVANCED_BOW_05" section template
-    # Unlocks "BATTLESHIP_ADVANCED_MID_01" section template
-    # Unlocks "BATTLESHIP_ADVANCED_MID_02" section template
-    # Unlocks "BATTLESHIP_ADVANCED_MID_03" section template
-    # Unlocks "BATTLESHIP_ADVANCED_STERN_01" section template
-    # Unlocks "BATTLESHIP_ADVANCED_STERN_02" section template
-    # Unlocks "BATTLESHIP_ADVANCED_STERN_03" section template
-    # Unlocks "BATTLESHIP_ADVANCED_STERN_04" section template
-
-    cost = 2500
+tech_advanced_starbase_module_05 = {
+    cost = 30000
     area = engineering
     start_tech = no
     category = { voidcraft }
-    icon = "tech_advanced_battleship_construction"
+    icon = "tech_advanced_starbase_module_05"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_advanced_starbase_module_04"
+        "tech_starbase_5"
+        "tech_space_defense_station_improvement"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_starbase_module_05_prereqfor.title
+            desc = tech_advanced_starbase_module_05_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        starbase_module_build_cost_mult = -0.30
+        starbase_module_capacity_add = 3
+    }
+
+    weight = 50
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "starbase_module_built"
+                value < 50
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_master_builders"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                OR = {
+                    has_level < 4
+                    NAND = {
+                        has_trait = "leader_trait_expertise_voidcraft"
+                        has_trait = "leader_trait_scientist_chosen"
+                        has_trait = "leader_trait_curator"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_technology = "tech_supreme_voidcraft"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 50
+    }
+}
+
+#########################
+### Starbase Buildings
+#########################
+
+tech_advanced_starbase_building_01 = {
+    cost = 5000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_starbase_building_01"
     tier = 1
 
     is_reverse_engineerable = no
@@ -1070,19 +2185,19 @@ tech_advanced_battleship_construction = {
 
     prerequisites = {
         "tech_advanced_voidcraft"
-        "tech_battleships"
+        "tech_starbase_1"
     }
 
     prereqfor_desc = {
-        component = {
-            title = tech_advanced_battleship_construction_prereqfor.title
-            desc = tech_advanced_battleship_construction_prereqfor.desc
+        feature = {
+            title = tech_advanced_starbase_building_01_prereqfor.title
+            desc = tech_advanced_starbase_building_01_prereqfor.desc
         }
     }
 
     modifier = {
-        shipsize_battleship_build_cost_mult = -0.10
-        shipsize_battleship_construction_speed_mult = 0.15
+        starbase_building_build_cost_mult = -0.10
+        starbase_building_capacity_add = 1
     }
 
     weight = 90
@@ -1091,40 +2206,46 @@ tech_advanced_battleship_construction = {
         modifier = {
             factor = 0
             check_variable = {
-                which = "ship_battleship_built"
-                value < 8
+                which = "starbase_building_built"
+                value < 3
             }
         }
         modifier = {
-            factor = 1.30
-            has_ethic = "ethic_militarist"
+            factor = 0
+            NAND = {
+                has_tradition = "tr_prosperity_adopt"
+                has_valid_civic = "civic_functional_architecture"
+            }
         }
         modifier = {
-            factor = 1.50
-            has_ethic = "ethic_fanatic_militarist"
+            factor = 0.75
+            NAND = {
+                has_tradition = "tr_prosperity_sct"
+                has_valid_civic = "civic_functional_architecture"
+            }
         }
         modifier = {
-            factor = 1.10
+            factor = 1.05
+            has_tradition = "tr_prosperity_administrative_operations"
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_prosperity_finish"
+        }
+        modifier = {
+            factor = 1.75
+            has_ascension_perk = "ap_master_builders"
+        }
+        modifier = {
+            factor = 1.25
             research_leader = {
                 area = engineering
                 has_level > 2
-                has_trait = "leader_trait_expertise_voidcraft"
-            }
-        }
-        modifier = {
-            factor = 1.20
-            research_leader = {
-                area = engineering
-                has_level > 3
-                has_trait = "leader_trait_expertise_voidcraft"
-            }
-        }
-        modifier = {
-            factor = 1.30
-            research_leader = {
-                area = engineering
-                has_level > 4
-                has_trait = "leader_trait_expertise_voidcraft"
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
             }
         }
         modifier = {
@@ -1138,42 +2259,33 @@ tech_advanced_battleship_construction = {
     }
 }
 
-tech_supreme_battleship_construction = {
-    # Unlocks "BATTLESHIP_SUPREME_BOW_01" section template
-    # Unlocks "BATTLESHIP_SUPREME_BOW_02" section template
-    # Unlocks "BATTLESHIP_SUPREME_BOW_03" section template
-    # Unlocks "BATTLESHIP_SUPREME_MID_01" section template
-    # Unlocks "BATTLESHIP_SUPREME_MID_02" section template
-    # Unlocks "BATTLESHIP_SUPREME_MID_03" section template
-    # Unlocks "BATTLESHIP_SUPREME_STERN_01" section template
-    # Unlocks "BATTLESHIP_SUPREME_STERN_02" section template
-    # Unlocks "BATTLESHIP_SUPREME_STERN_03" section template
-
-    cost = 5000
+tech_advanced_starbase_building_02 = {
+    cost = 10000
     area = engineering
     start_tech = no
     category = { voidcraft }
-    icon = "tech_supreme_battleship_construction"
-    tier = 2
+    icon = "tech_advanced_starbase_building_02"
+    tier = 1
 
     is_reverse_engineerable = no
     is_rare = no
     is_dangerous = no
 
     prerequisites = {
-        "tech_advanced_battleship_construction"
+        "tech_advanced_starbase_building_01"
+        "tech_starbase_2"
     }
 
     prereqfor_desc = {
-        component = {
-            title = tech_supreme_battleship_construction_prereqfor.title
-            desc = tech_supreme_battleship_construction_prereqfor.desc
+        feature = {
+            title = tech_advanced_starbase_building_02_prereqfor.title
+            desc = tech_advanced_starbase_building_02_prereqfor.desc
         }
     }
 
     modifier = {
-        shipsize_battleship_build_cost_mult = -0.15
-        shipsize_battleship_construction_speed_mult = 0.20
+        starbase_building_build_cost_mult = -0.15
+        starbase_building_capacity_add = 1
     }
 
     weight = 80
@@ -1182,32 +2294,42 @@ tech_supreme_battleship_construction = {
         modifier = {
             factor = 0
             check_variable = {
-                which = "ship_battleship_built"
-                value < 20
+                which = "starbase_building_built"
+                value < 6
             }
         }
         modifier = {
-            factor = 1.15
-            has_ethic = "ethic_militarist"
+            factor = 0
+            NAND = {
+                has_tradition = "tr_prosperity_sct"
+                has_valid_civic = "civic_functional_architecture"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NAND = {
+                has_tradition = "tr_prosperity_administrative_operations"
+                has_valid_civic = "civic_functional_architecture"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_tradition = "tr_prosperity_finish"
+        }
+        modifier = {
+            factor = 1.50
+            has_ascension_perk = "ap_master_builders"
         }
         modifier = {
             factor = 1.25
-            has_ethic = "ethic_fanatic_militarist"
-        }
-        modifier = {
-            factor = 1.10
             research_leader = {
                 area = engineering
                 has_level > 3
-                has_trait = "leader_trait_expertise_voidcraft"
-            }
-        }
-        modifier = {
-            factor = 1.20
-            research_leader = {
-                area = engineering
-                has_level > 4
-                has_trait = "leader_trait_expertise_voidcraft"
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
             }
         }
         modifier = {
@@ -1221,45 +2343,33 @@ tech_supreme_battleship_construction = {
     }
 }
 
-tech_transcendental_battleship_construction = {
-    # Unlocks "BATTLESHIP_TRANSCENDENTAL_BOW_01" section template
-    # Unlocks "BATTLESHIP_TRANSCENDENTAL_BOW_02" section template
-    # Unlocks "BATTLESHIP_TRANSCENDENTAL_BOW_03" section template
-    # Unlocks "BATTLESHIP_TRANSCENDENTAL_BOW_04" section template
-    # Unlocks "BATTLESHIP_TRANSCENDENTAL_MID_01" section template
-    # Unlocks "BATTLESHIP_TRANSCENDENTAL_MID_02" section template
-    # Unlocks "BATTLESHIP_TRANSCENDENTAL_MID_03" section template
-    # Unlocks "BATTLESHIP_TRANSCENDENTAL_MID_04" section template
-    # Unlocks "BATTLESHIP_TRANSCENDENTAL_STERN_01" section template
-    # Unlocks "BATTLESHIP_TRANSCENDENTAL_STERN_02" section template
-    # Unlocks "BATTLESHIP_TRANSCENDENTAL_STERN_03" section template
-    # Unlocks "BATTLESHIP_TRANSCENDENTAL_STERN_04" section template
-
-    cost = 10000
+tech_advanced_starbase_building_03 = {
+    cost = 15000
     area = engineering
     start_tech = no
     category = { voidcraft }
-    icon = "tech_transcendental_battleship_construction"
-    tier = 2
+    icon = "tech_advanced_starbase_building_03"
+    tier = 1
 
     is_reverse_engineerable = no
-    is_rare = yes
+    is_rare = no
     is_dangerous = no
 
     prerequisites = {
-        "tech_supreme_battleship_construction"
+        "tech_advanced_starbase_building_02"
+        "tech_modular_engineering"
     }
 
     prereqfor_desc = {
-        component = {
-            title = tech_transcendental_battleship_construction_prereqfor.title
-            desc = tech_transcendental_battleship_construction_prereqfor.desc
+        feature = {
+            title = tech_advanced_starbase_building_03_prereqfor.title
+            desc = tech_advanced_starbase_building_03_prereqfor.desc
         }
     }
 
     modifier = {
-        shipsize_battleship_build_cost_mult = -0.25
-        shipsize_battleship_construction_speed_mult = 0.30
+        starbase_building_build_cost_mult = -0.20
+        starbase_building_capacity_add = 2
     }
 
     weight = 70
@@ -1268,43 +2378,52 @@ tech_transcendental_battleship_construction = {
         modifier = {
             factor = 0
             check_variable = {
-                which = "ship_battleship_built"
-                value < 30
+                which = "starbase_building_built"
+                value < 12
             }
         }
         modifier = {
-            factor = 1.15
-            has_ethic = "ethic_fanatic_militarist"
-        }
-        modifier = {
             factor = 0
-            research_leader = {
-                area = engineering
-                has_level < 3
+            NAND = {
+                has_tradition = "tr_prosperity_administrative_operations"
+                has_valid_civic = "civic_functional_architecture"
             }
         }
         modifier = {
             factor = 0.50
-            research_leader = {
-                area = engineering
-                has_level = 3
+            NAND = {
+                has_tradition = "tr_prosperity_finish"
+                has_valid_civic = "civic_functional_architecture"
             }
         }
         modifier = {
+            factor = 1.25
+            has_ascension_perk = "ap_master_builders"
+        }
+        modifier = {
             factor = 0.75
-            NOT = {
-                research_leader = {
-                    area = engineering
-                    has_trait = "leader_trait_expertise_voidcraft"
+            research_leader = {
+                area = engineering
+                OR = {
+                    has_level < 3
+                    NAND = {
+                        has_trait = "leader_trait_expertise_voidcraft"
+                        has_trait = "leader_trait_scientist_chosen"
+                        has_trait = "leader_trait_curator"
+                    }
                 }
             }
         }
         modifier = {
-            factor = 1.15
+            factor = 1.25
             research_leader = {
                 area = engineering
                 has_level > 4
-                has_trait = "leader_trait_expertise_voidcraft"
+                OR = {
+                    has_trait = "leader_trait_expertise_voidcraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
             }
         }
         modifier = {
@@ -1318,32 +2437,33 @@ tech_transcendental_battleship_construction = {
     }
 }
 
-tech_infinitum_battleship_construction = {
-    cost = 30000
+tech_advanced_starbase_building_04 = {
+    cost = 25000
     area = engineering
     start_tech = no
     category = { voidcraft }
-    icon = "tech_infinitum_battleship_construction"
-    tier = 4
+    icon = "tech_advanced_starbase_building_04"
+    tier = 1
 
     is_reverse_engineerable = no
     is_rare = yes
-    is_dangerous = yes
+    is_dangerous = no
 
     prerequisites = {
-        "tech_transcendental_battleship_construction"
+        "tech_advanced_starbase_building_03"
+        "tech_space_defense_station_improvement"
     }
 
     prereqfor_desc = {
-        component = {
-            title = tech_infinitum_battleship_construction_prereqfor.title
-            desc = tech_infinitum_battleship_construction_prereqfor.desc
+        feature = {
+            title = tech_advanced_starbase_building_04_prereqfor.title
+            desc = tech_advanced_starbase_building_04_prereqfor.desc
         }
     }
 
     modifier = {
-        shipsize_battleship_build_cost_mult = -0.30
-        shipsize_battleship_construction_speed_mult = 0.30
+        starbase_building_build_cost_mult = -0.25
+        starbase_building_capacity_add = 2
     }
 
     weight = 60
@@ -1352,21 +2472,35 @@ tech_infinitum_battleship_construction = {
         modifier = {
             factor = 0
             check_variable = {
-                which = "ship_battleship_built"
-                value < 50
+                which = "starbase_building_built"
+                value < 20
             }
         }
         modifier = {
             factor = 0
+            NAND = {
+                has_tradition = "tr_prosperity_finish"
+                has_valid_civic = "civic_functional_architecture"
+            }
+        }
+        modifier = {
+            factor = 0.75
             NOT = {
-                has_ethic = "ethic_fanatic_militarist"
+                has_ascension_perk = "ap_master_builders"
             }
         }
         modifier = {
             factor = 0
             research_leader = {
                 area = engineering
-                has_level < 4
+                OR = {
+                    has_level < 3
+                    NAND = {
+                        has_trait = "leader_trait_expertise_voidcraft"
+                        has_trait = "leader_trait_scientist_chosen"
+                        has_trait = "leader_trait_curator"
+                    }
+                }
             }
         }
         modifier = {
@@ -1377,21 +2511,100 @@ tech_infinitum_battleship_construction = {
             }
         }
         modifier = {
-            factor = 0
-            NOT = {
-                research_leader = {
-                    area = engineering
-                    has_trait = "leader_trait_expertise_voidcraft"
-                }
+            factor = 1.05
+            research_leader = {
+                area = engineering
+                has_level > 4
             }
         }
         modifier = {
-            factor = 1.25
-            has_ascension_perk = "ap_voidborn"
+            factor = 0.75
+            NOT = {
+                has_technology = "tech_supreme_voidcraft"
+            }
         }
     }
 
     ai_weight = {
         factor = 60
+    }
+}
+
+tech_advanced_starbase_building_05 = {
+    cost = 30000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_starbase_building_05"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_advanced_starbase_building_04"
+        "tech_starbase_5"
+        "tech_space_defense_station_improvement"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_starbase_building_05_prereqfor.title
+            desc = tech_advanced_starbase_building_05_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        starbase_building_build_cost_mult = -0.30
+        starbase_building_capacity_add = 3
+    }
+
+    weight = 50
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "starbase_building_built"
+                value < 30
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_master_builders"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                OR = {
+                    has_level < 4
+                    NAND = {
+                        has_trait = "leader_trait_expertise_voidcraft"
+                        has_trait = "leader_trait_scientist_chosen"
+                        has_trait = "leader_trait_curator"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_technology = "tech_supreme_voidcraft"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 50
     }
 }
