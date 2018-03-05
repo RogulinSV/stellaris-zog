@@ -23,3 +23,5 @@
     tb_underground_creatures_desc:0 "Подземные твари"
     tb_terrain_creatures:0 "£blocker  Наземные твари"
     tb_terrain_creatures_desc:0 "Наземные твари"
+    tb_hazardous_storms:0 "£blocker  Разрушительные шторма"
+    tb_hazardous_storms_desc:0 "Разрушительные шторма"
