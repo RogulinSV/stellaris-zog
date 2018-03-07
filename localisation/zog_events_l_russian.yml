@@ -30,3 +30,12 @@
     zog_tile_blocker_events.100.desc:0 "На планете [From.GetName] зафиксирована атака песчаных червей."
     zog_tile_blocker_events.100.a:0 "Это катастрофа!.."
     zog_tile_blocker_events.100.a.tooltip:0 "Колония на планете [From.GetName] атакована песчаными червями."
+    # "Hazardous storms" yearly pulse
+    zog_tile_blocker_events.200.title:0 "Штормовое предупреждение"
+    zog_tile_blocker_events.200.desc:0 "На планете [From.GetName] зафиксирован разрушительный атмосферный шторм"
+    zog_tile_blocker_events.200.a:0 "Будем восстанавливать пострадавшую колонию"
+    zog_tile_blocker_events.200.a.tooltip:0 "Колония разрушена, но некоторые колонисты выжили"
+    zog_tile_blocker_events.200.b:0 "Будем молиться по погибшим колонистам"
+    zog_tile_blocker_events.200.b.tooltip:0 "Колония разрушена, выживших колонистов не осталось"
+    zog_tile_blocker_events.200.c:0 "Начать операцию по спасению колонистов (£minerals 500)"
+    zog_tile_blocker_events.200.c.tooltip:0 "Колония разрушена, но некоторых колонистов ещё можно спасти"

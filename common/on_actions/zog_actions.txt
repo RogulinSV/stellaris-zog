@@ -2,12 +2,14 @@ on_yearly_pulse = {
     events = {
         # Buildings & Starport modules
         zog_building_events.0
+        # Tile blocker "Hazardous storms" yearly pulse
+        zog_tile_blocker_events.2
     }
 }
 
 on_decade_pulse = {
     events = {
-        # Spawn of the "Desert worms" event
+        # Tile blocker "Desert worms" decade pulse
         zog_tile_blocker_events.0
     }
 }
