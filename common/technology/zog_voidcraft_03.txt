@@ -1,0 +1,1397 @@
+############################################
+## Engineering / Voidcraft / Corvette Ship
+############################################
+
+tech_advanced_corvette_construction = {
+    # Unlocks "CORVETTE_ADVANCED_MID_01" section template
+    # Unlocks "CORVETTE_ADVANCED_MID_02" section template
+
+    cost = 2500
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_corvette_construction"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_voidcraft"
+        "tech_corvettes"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_advanced_corvette_construction_prereqfor.title
+            desc = tech_advanced_corvette_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipsize_corvette_build_cost_mult = -0.10
+        shipsize_corvette_construction_speed_mult = 0.15
+    }
+
+    weight = 90
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "ship_corvette_built"
+                value < 15
+            }
+        }
+        modifier = {
+            factor = 1.30
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.50
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.30
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.75
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 90
+    }
+}
+
+tech_supreme_corvette_construction = {
+    # Unlocks "CORVETTE_SUPREME_MID_01" section template
+    # Unlocks "CORVETTE_SUPREME_MID_02" section template
+
+    cost = 5000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_corvette_construction"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_corvette_construction"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_supreme_corvette_construction_prereqfor.title
+            desc = tech_supreme_corvette_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipsize_corvette_build_cost_mult = -0.15
+        shipsize_corvette_construction_speed_mult = 0.20
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "ship_corvette_built"
+                value < 30
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.50
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 80
+    }
+}
+
+tech_transcendental_corvette_construction = {
+    # Unlocks "CORVETTE_TRANSCENDENTAL_MID_01" section template
+    # Unlocks "CORVETTE_TRANSCENDENTAL_MID_02" section template
+
+    cost = 10000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_transcendental_corvette_construction"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_supreme_corvette_construction"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_transcendental_corvette_construction_prereqfor.title
+            desc = tech_transcendental_corvette_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipsize_corvette_build_cost_mult = -0.25
+        shipsize_corvette_construction_speed_mult = 0.30
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "ship_corvette_built"
+                value < 50
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.50
+            research_leader = {
+                area = engineering
+                has_level = 3
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_voidcraft"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}
+
+tech_infinitum_corvette_construction = {
+    cost = 30000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_infinitum_corvette_construction"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_transcendental_corvette_construction"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_infinitum_corvette_construction_prereqfor.title
+            desc = tech_infinitum_corvette_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipsize_corvette_build_cost_mult = -0.30
+        shipsize_corvette_construction_speed_mult = 0.30
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "ship_corvette_built"
+                value < 120
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ethic = "ethic_fanatic_militarist"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 4
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = engineering
+                has_level = 4
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_voidcraft"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ascension_perk = "ap_voidborn"
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}
+
+#############################################
+## Engineering / Voidcraft / Destroyer Ship
+#############################################
+
+tech_advanced_destroyer_construction = {
+    # Unlocks "DESTROYER_ADVANCED_BOW_01" section template
+    # Unlocks "DESTROYER_ADVANCED_BOW_02" section template
+    # Unlocks "DESTROYER_ADVANCED_BOW_03" section template
+    # Unlocks "DESTROYER_ADVANCED_STERN_01" section template
+    # Unlocks "DESTROYER_ADVANCED_STERN_02" section template
+    # Unlocks "DESTROYER_ADVANCED_STERN_03" section template
+
+    cost = 2500
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_destroyer_construction"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_voidcraft"
+        "tech_destroyers"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_advanced_destroyer_construction_prereqfor.title
+            desc = tech_advanced_destroyer_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipsize_destroyer_build_cost_mult = -0.10
+        shipsize_destroyer_construction_speed_mult = 0.15
+    }
+
+    weight = 90
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "ship_destroyer_built"
+                value < 12
+            }
+        }
+        modifier = {
+            factor = 1.30
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.50
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.30
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.75
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 90
+    }
+}
+
+tech_supreme_destroyer_construction = {
+    # Unlocks "DESTROYER_SUPREME_BOW_01" section template
+    # Unlocks "DESTROYER_SUPREME_BOW_02" section template
+    # Unlocks "DESTROYER_SUPREME_BOW_03" section template
+    # Unlocks "DESTROYER_SUPREME_STERN_01" section template
+    # Unlocks "DESTROYER_SUPREME_STERN_02" section template
+    # Unlocks "DESTROYER_SUPREME_STERN_03" section template
+    # Unlocks "DESTROYER_SUPREME_STERN_04" section template
+
+    cost = 5000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_supreme_destroyer_construction"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_destroyer_construction"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_supreme_destroyer_construction_prereqfor.title
+            desc = tech_supreme_destroyer_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipsize_destroyer_build_cost_mult = -0.15
+        shipsize_destroyer_construction_speed_mult = 0.20
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "ship_destroyer_built"
+                value < 30
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.50
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 80
+    }
+}
+
+tech_transcendental_destroyer_construction = {
+    # Unlocks "DESTROYER_TRANSCENDENTAL_BOW_01" section template
+    # Unlocks "DESTROYER_TRANSCENDENTAL_BOW_02" section template
+    # Unlocks "DESTROYER_TRANSCENDENTAL_BOW_03" section template
+    # Unlocks "DESTROYER_TRANSCENDENTAL_BOW_04" section template
+    # Unlocks "DESTROYER_TRANSCENDENTAL_STERN_01" section template
+    # Unlocks "DESTROYER_TRANSCENDENTAL_STERN_02" section template
+    # Unlocks "DESTROYER_TRANSCENDENTAL_STERN_03" section template
+    # Unlocks "DESTROYER_TRANSCENDENTAL_STERN_04" section template
+    # Unlocks "DESTROYER_TRANSCENDENTAL_STERN_05" section template
+
+    cost = 10000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_transcendental_destroyer_construction"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_supreme_destroyer_construction"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_transcendental_destroyer_construction_prereqfor.title
+            desc = tech_transcendental_destroyer_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipsize_destroyer_build_cost_mult = -0.25
+        shipsize_destroyer_construction_speed_mult = 0.30
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "ship_destroyer_built"
+                value < 50
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.50
+            research_leader = {
+                area = engineering
+                has_level = 3
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_voidcraft"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}
+
+tech_infinitum_destroyer_construction = {
+    cost = 30000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_infinitum_destroyer_construction"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_transcendental_destroyer_construction"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_infinitum_destroyer_construction_prereqfor.title
+            desc = tech_infinitum_destroyer_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipsize_destroyer_build_cost_mult = -0.30
+        shipsize_destroyer_construction_speed_mult = 0.30
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "ship_destroyer_built"
+                value < 80
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ethic = "ethic_fanatic_militarist"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 4
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = engineering
+                has_level = 4
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_voidcraft"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ascension_perk = "ap_voidborn"
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}
+
+#############################################
+## Engineering / Voidcraft / Cruiser Ship
+#############################################
+
+tech_advanced_cruiser_construction = {
+    # Unlocks "CRUISER_ADVANCED_BOW_01" section template
+    # Unlocks "CRUISER_ADVANCED_BOW_02" section template
+    # Unlocks "CRUISER_ADVANCED_BOW_03" section template
+    # Unlocks "CRUISER_ADVANCED_BOW_04" section template
+    # Unlocks "CRUISER_ADVANCED_MID_01" section template
+    # Unlocks "CRUISER_ADVANCED_MID_02" section template
+    # Unlocks "CRUISER_ADVANCED_MID_03" section template
+    # Unlocks "CRUISER_ADVANCED_MID_04" section template
+    # Unlocks "CRUISER_ADVANCED_STERN_01" section template
+    # Unlocks "CRUISER_ADVANCED_STERN_02" section template
+    # Unlocks "CRUISER_ADVANCED_STERN_03" section template
+
+    cost = 2500
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_cruiser_construction"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_voidcraft"
+        "tech_cruisers"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_advanced_cruiser_construction_prereqfor.title
+            desc = tech_advanced_cruiser_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipsize_cruiser_build_cost_mult = -0.10
+        shipsize_cruiser_construction_speed_mult = 0.15
+    }
+
+    weight = 90
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "ship_cruiser_built"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 1.30
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.50
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.30
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.75
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 90
+    }
+}
+
+tech_supreme_cruiser_construction = {
+    # Unlocks "CRUISER_SUPREME_BOW_01" section template
+    # Unlocks "CRUISER_SUPREME_BOW_02" section template
+    # Unlocks "CRUISER_SUPREME_BOW_03" section template
+    # Unlocks "CRUISER_SUPREME_BOW_04" section template
+    # Unlocks "CRUISER_SUPREME_BOW_05" section template
+    # Unlocks "CRUISER_SUPREME_MID_01" section template
+    # Unlocks "CRUISER_SUPREME_MID_02" section template
+    # Unlocks "CRUISER_SUPREME_MID_03" section template
+    # Unlocks "CRUISER_SUPREME_STERN_01" section template
+    # Unlocks "CRUISER_SUPREME_STERN_02" section template
+    # Unlocks "CRUISER_SUPREME_STERN_03" section template
+
+    cost = 5000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_supreme_cruiser_construction"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_cruiser_construction"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_supreme_cruiser_construction_prereqfor.title
+            desc = tech_supreme_cruiser_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipsize_cruiser_build_cost_mult = -0.15
+        shipsize_cruiser_construction_speed_mult = 0.20
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "ship_cruiser_built"
+                value < 25
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.50
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 80
+    }
+}
+
+tech_transcendental_cruiser_construction = {
+    # Unlocks "CRUISER_TRANSCENDENTAL_BOW_01" section template
+    # Unlocks "CRUISER_TRANSCENDENTAL_BOW_02" section template
+    # Unlocks "CRUISER_TRANSCENDENTAL_BOW_03" section template
+    # Unlocks "CRUISER_TRANSCENDENTAL_BOW_04" section template
+    # Unlocks "CRUISER_TRANSCENDENTAL_BOW_05" section template
+    # Unlocks "CRUISER_TRANSCENDENTAL_MID_01" section template
+    # Unlocks "CRUISER_TRANSCENDENTAL_MID_02" section template
+    # Unlocks "CRUISER_TRANSCENDENTAL_MID_03" section template
+    # Unlocks "CRUISER_TRANSCENDENTAL_STERN_01" section template
+    # Unlocks "CRUISER_TRANSCENDENTAL_STERN_02" section template
+    # Unlocks "CRUISER_TRANSCENDENTAL_STERN_03" section template
+
+    cost = 10000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_transcendental_cruiser_construction"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_supreme_cruiser_construction"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_transcendental_cruiser_construction_prereqfor.title
+            desc = tech_transcendental_cruiser_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipsize_cruiser_build_cost_mult = -0.25
+        shipsize_cruiser_construction_speed_mult = 0.30
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "ship_cruiser_built"
+                value < 40
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.50
+            research_leader = {
+                area = engineering
+                has_level = 3
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_voidcraft"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}
+
+tech_infinitum_cruiser_construction = {
+    # Unlocks "CRUISER_INFINITUM_BOW_01" section template
+    # Unlocks "CRUISER_INFINITUM_BOW_02" section template
+    # Unlocks "CRUISER_INFINITUM_MID_01" section template
+    # Unlocks "CRUISER_INFINITUM_MID_02" section template
+    # Unlocks "CRUISER_INFINITUM_STERN_01" section template
+    # Unlocks "CRUISER_INFINITUM_STERN_02" section template
+    # Unlocks "CRUISER_INFINITUM_STERN_03" section template
+
+    cost = 30000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_infinitum_cruiser_construction"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_transcendental_cruiser_construction"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_infinitum_cruiser_construction_prereqfor.title
+            desc = tech_infinitum_cruiser_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipsize_cruiser_build_cost_mult = -0.30
+        shipsize_cruiser_construction_speed_mult = 0.30
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "ship_cruiser_built"
+                value < 60
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ethic = "ethic_fanatic_militarist"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 4
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = engineering
+                has_level = 4
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_voidcraft"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ascension_perk = "ap_voidborn"
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}
+
+#############################################
+## Engineering / Voidcraft / Battleship Ship
+#############################################
+
+tech_advanced_battleship_construction = {
+    # Unlocks "BATTLESHIP_ADVANCED_BOW_01" section template
+    # Unlocks "BATTLESHIP_ADVANCED_BOW_02" section template
+    # Unlocks "BATTLESHIP_ADVANCED_BOW_03" section template
+    # Unlocks "BATTLESHIP_ADVANCED_BOW_04" section template
+    # Unlocks "BATTLESHIP_ADVANCED_BOW_05" section template
+    # Unlocks "BATTLESHIP_ADVANCED_MID_01" section template
+    # Unlocks "BATTLESHIP_ADVANCED_MID_02" section template
+    # Unlocks "BATTLESHIP_ADVANCED_MID_03" section template
+    # Unlocks "BATTLESHIP_ADVANCED_STERN_01" section template
+    # Unlocks "BATTLESHIP_ADVANCED_STERN_02" section template
+    # Unlocks "BATTLESHIP_ADVANCED_STERN_03" section template
+    # Unlocks "BATTLESHIP_ADVANCED_STERN_04" section template
+
+    cost = 2500
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_battleship_construction"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_voidcraft"
+        "tech_battleships"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_advanced_battleship_construction_prereqfor.title
+            desc = tech_advanced_battleship_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipsize_battleship_build_cost_mult = -0.10
+        shipsize_battleship_construction_speed_mult = 0.15
+    }
+
+    weight = 90
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "ship_battleship_built"
+                value < 8
+            }
+        }
+        modifier = {
+            factor = 1.30
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.50
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.30
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.75
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 90
+    }
+}
+
+tech_supreme_battleship_construction = {
+    # Unlocks "BATTLESHIP_SUPREME_BOW_01" section template
+    # Unlocks "BATTLESHIP_SUPREME_BOW_02" section template
+    # Unlocks "BATTLESHIP_SUPREME_BOW_03" section template
+    # Unlocks "BATTLESHIP_SUPREME_MID_01" section template
+    # Unlocks "BATTLESHIP_SUPREME_MID_02" section template
+    # Unlocks "BATTLESHIP_SUPREME_MID_03" section template
+    # Unlocks "BATTLESHIP_SUPREME_STERN_01" section template
+    # Unlocks "BATTLESHIP_SUPREME_STERN_02" section template
+    # Unlocks "BATTLESHIP_SUPREME_STERN_03" section template
+
+    cost = 5000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_supreme_battleship_construction"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_battleship_construction"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_supreme_battleship_construction_prereqfor.title
+            desc = tech_supreme_battleship_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipsize_battleship_build_cost_mult = -0.15
+        shipsize_battleship_construction_speed_mult = 0.20
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "ship_battleship_built"
+                value < 20
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.50
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 80
+    }
+}
+
+tech_transcendental_battleship_construction = {
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_BOW_01" section template
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_BOW_02" section template
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_BOW_03" section template
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_BOW_04" section template
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_MID_01" section template
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_MID_02" section template
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_MID_03" section template
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_MID_04" section template
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_STERN_01" section template
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_STERN_02" section template
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_STERN_03" section template
+    # Unlocks "BATTLESHIP_TRANSCENDENTAL_STERN_04" section template
+
+    cost = 10000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_transcendental_battleship_construction"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_supreme_battleship_construction"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_transcendental_battleship_construction_prereqfor.title
+            desc = tech_transcendental_battleship_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipsize_battleship_build_cost_mult = -0.25
+        shipsize_battleship_construction_speed_mult = 0.30
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "ship_battleship_built"
+                value < 30
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.50
+            research_leader = {
+                area = engineering
+                has_level = 3
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_voidcraft"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_technology = "tech_supreme_voidcraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}
+
+tech_infinitum_battleship_construction = {
+    cost = 30000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_infinitum_battleship_construction"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_transcendental_battleship_construction"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_infinitum_battleship_construction_prereqfor.title
+            desc = tech_infinitum_battleship_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        shipsize_battleship_build_cost_mult = -0.30
+        shipsize_battleship_construction_speed_mult = 0.30
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "ship_battleship_built"
+                value < 50
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ethic = "ethic_fanatic_militarist"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 4
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = engineering
+                has_level = 4
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_voidcraft"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ascension_perk = "ap_voidborn"
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}

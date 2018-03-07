@@ -1,0 +1,991 @@
+#####################################
+## Society / Statecraft / Common
+#####################################
+
+tech_advanced_statecraft = {
+    cost = 700
+    area = society
+    start_tech = no
+    category = { statecraft }
+    icon = "tech_advanced_statecraft"
+    tier = 0
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {}
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_statecraft_prereqfor.title
+            desc = tech_advanced_statecraft_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        category_statecraft_research_speed_mult = 0.05
+    }
+
+    weight = 100
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            is_ai = yes
+        }
+        modifier = {
+            factor = 0
+            years_passed < 5
+        }
+    }
+
+    ai_weight = {
+        factor = 0
+    }
+}
+
+tech_supreme_statecraft = {
+    cost = 40000
+    area = society
+    start_tech = no
+    category = { statecraft }
+    icon = "tech_supreme_statecraft"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_statecraft"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_supreme_statecraft_prereqfor.title
+            desc = tech_supreme_statecraft_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        category_statecraft_research_speed_mult = 0.25
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0
+            years_passed < 50
+        }
+        modifier = {
+            factor = 0
+            count_tech_options = {
+                area = society
+                count < 10
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.25
+            NOR = {
+                has_tradition = "tr_expansion_colonization_fever"
+                has_tradition = "tr_expansion_reach_for_the_stars"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOR = {
+                has_tradition = "tr_expansion_a_new_life"
+                has_tradition = "tr_expansion_galactic_ambition"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                has_tradition = "tr_expansion_finish"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_materialist"
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_fanatic_materialist"
+        }
+        modifier = {
+            factor = 1.30
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_curator"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}
+
+###################################
+## Society / Statecraft / Markets
+###################################
+
+tech_advanced_galactic_markets = {
+    cost = 5000
+    area = society
+    start_tech = no
+    category = { statecraft }
+    icon = "tech_advanced_galactic_markets"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_statecraft"
+        "tech_galactic_markets"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_galactic_markets_prereqfor.title
+            desc = tech_advanced_galactic_markets_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        country_trade_attractiveness = 0.15
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            num_communications < 5
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 5
+        }
+        modifier = {
+            factor = 1.40
+            has_government = "gov_megacorporation"
+        }
+        modifier = {
+            factor = 1.30
+            has_government = "gov_trade_league"
+        }
+        modifier = {
+            factor = 1.20
+            has_government = "gov_citizen_republic"
+        }
+        modifier = {
+            factor = 1.10
+            has_government = "gov_citizen_stratocracy"
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = society
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.75
+            has_technology = "tech_supreme_statecraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 80
+    }
+}
+
+tech_supreme_galactic_markets = {
+    cost = 15000
+    area = society
+    start_tech = no
+    category = { statecraft }
+    icon = "tech_supreme_galactic_markets"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_galactic_markets"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_supreme_galactic_markets_prereqfor.title
+            desc = tech_supreme_galactic_markets_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        country_trade_attractiveness = 0.30
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            num_communications < 6
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 12
+        }
+        modifier = {
+            factor = 1.25
+            has_government = "gov_megacorporation"
+        }
+        modifier = {
+            factor = 1.15
+            has_government = "gov_trade_league"
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.50
+            has_technology = "tech_supreme_statecraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}
+
+################################
+## Society / Statecraft / Caps
+################################
+
+tech_advanced_stellar_cap = {
+    cost = 6250
+    area = society
+    start_tech = no
+    category = { statecraft }
+    icon = "tech_advanced_stellar_cap"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_statecraft"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_stellar_cap_prereqfor.title
+            desc = tech_advanced_stellar_cap_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        country_sector_cap_add = 1
+        country_core_sector_system_cap = 1
+        edict_influence_cost = -0.10
+        #faction_influence_add = 1
+        #pop_resettlement_cost_mult = -0.15
+        #pop_robot_production_output = 0.05
+        #tradition_cost_num_colonies_mult = -0.20
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            sectors < 2
+        }
+        modifier = {
+            factor = 2.0
+            sectors_over_limit > 0
+        }
+        modifier = {
+            factor = 1.75
+            num_owned_planets > 10
+        }
+        modifier = {
+            factor = 1.30
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = society
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_technology = "tech_supreme_statecraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 80
+    }
+}
+
+tech_supreme_stellar_cap = {
+    cost = 12500
+    area = society
+    start_tech = no
+    category = { statecraft }
+    icon = "tech_supreme_stellar_cap"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_stellar_cap"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_supreme_stellar_cap_prereqfor.title
+            desc = tech_supreme_stellar_cap_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        country_sector_cap_add = 2
+        country_core_sector_system_cap = 2
+        edict_influence_cost = -0.20
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            sectors < 4
+        }
+        modifier = {
+            factor = 1.50
+            sectors_over_limit > 0
+        }
+        modifier = {
+            factor = 1.75
+            num_owned_planets > 15
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_technology = "tech_supreme_statecraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}
+
+tech_transcendental_stellar_cap = {
+    cost = 25000
+    area = society
+    start_tech = no
+    category = { statecraft }
+    icon = "tech_transcendental_stellar_cap"
+    tier = 3
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_supreme_stellar_cap"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_transcendental_stellar_cap_prereqfor.title
+            desc = tech_transcendental_stellar_cap_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        country_sector_cap_add = 3
+        country_core_sector_system_cap = 3
+        edict_influence_cost = -0.30
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            sectors < 6
+        }
+        modifier = {
+            factor = 1.25
+            sectors_over_limit > 0
+        }
+        modifier = {
+            factor = 1.75
+            num_owned_planets > 20
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = society
+                has_level < 4
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = society
+                NAND = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.01
+            has_technology = "tech_supreme_statecraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}
+
+tech_infinitum_stellar_cap = {
+    cost = 50000
+    area = society
+    start_tech = no
+    category = { statecraft }
+    icon = "tech_infinitum_stellar_cap"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_transcendental_stellar_cap"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_infinitum_stellar_cap_prereqfor.title
+            desc = tech_infinitum_stellar_cap_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        country_sector_cap_add = 5
+        country_core_sector_system_cap = 5
+        edict_influence_cost = -0.50
+    }
+
+    weight = 50
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            sectors < 8
+        }
+        modifier = {
+            factor = 1.75
+            num_owned_planets > 29
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                NAND = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                has_technology = "tech_supreme_statecraft"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 50
+    }
+}
+
+tech_advanced_leader_cap = {
+    cost = 6250
+    area = society
+    start_tech = no
+    category = { statecraft }
+    icon = "tech_advanced_leader_cap"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_statecraft"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_leader_cap_prereqfor.title
+            desc = tech_advanced_leader_cap_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        country_leader_cap = 2
+        country_leader_pool_size = 1
+        leader_influence_cost = -0.10
+        #faction_influence_add = 1
+        #pop_resettlement_cost_mult = -0.15
+        #pop_robot_production_output = 0.05
+        #tradition_cost_num_colonies_mult = -0.20
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            num_ships < 10
+        }
+        modifier = {
+            factor = 1.75
+            num_fleets > 2
+        }
+        modifier = {
+            factor = 1.30
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = society
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_technology = "tech_supreme_statecraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 80
+    }
+}
+
+tech_supreme_leader_cap = {
+    cost = 12500
+    area = society
+    start_tech = no
+    category = { statecraft }
+    icon = "tech_supreme_leader_cap"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_statecraft"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_supreme_leader_cap_prereqfor.title
+            desc = tech_supreme_leader_cap_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        country_leader_cap = 3
+        country_leader_pool_size = 2
+        leader_influence_cost = -0.20
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            num_ships < 20
+        }
+        modifier = {
+            factor = 1.75
+            num_fleets > 3
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_technology = "tech_supreme_statecraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}
+
+tech_transcendental_leader_cap = {
+    cost = 25000
+    area = society
+    start_tech = no
+    category = { statecraft }
+    icon = "tech_transcendental_leader_cap"
+    tier = 3
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_supreme_leader_cap"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_transcendental_leader_cap_prereqfor.title
+            desc = tech_transcendental_leader_cap_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        country_leader_cap = 4
+        country_leader_pool_size = 3
+        leader_influence_cost = -0.30
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            num_ships < 30
+        }
+        modifier = {
+            factor = 1.75
+            num_fleets > 4
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = society
+                has_level < 4
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = society
+                NAND = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.01
+            has_technology = "tech_supreme_statecraft"
+        }
+    }
+
+    ai_weight = {
+        factor = 60
+    }
+}
+
+tech_infinitum_leader_cap = {
+    cost = 50000
+    area = society
+    start_tech = no
+    category = { statecraft }
+    icon = "tech_infinitum_leader_cap"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_transcendental_leader_cap"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_infinitum_leader_cap_prereqfor.title
+            desc = tech_infinitum_leader_cap_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        country_leader_cap = 6
+        country_leader_pool_size = 5
+        leader_influence_cost = -0.50
+    }
+
+    weight = 50
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            num_ships < 40
+        }
+        modifier = {
+            factor = 1.75
+            num_fleets > 5
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                NAND = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                has_technology = "tech_supreme_statecraft"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 50
+    }
+}

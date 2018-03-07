@@ -152,6 +152,8 @@ tech_supreme_voidcraft = {
 ################################################
 
 tech_advanced_military_station_offense_01 = {
+    # Unlocks "MILITARY_STATION_SMALL_ADVANCED_MID_01" section template
+
     cost = 2500
     area = engineering
     start_tech = no
@@ -169,7 +171,7 @@ tech_advanced_military_station_offense_01 = {
     }
 
     prereqfor_desc = {
-        feature = {
+        component = {
             title = tech_advanced_military_station_offense_01_prereqfor.title
             desc = tech_advanced_military_station_offense_01_prereqfor.desc
         }
@@ -177,7 +179,8 @@ tech_advanced_military_station_offense_01 = {
 
     modifier = {
         shipclass_military_station_damage_mult = 0.15
-        shipsize_military_station_small_upkeep_mult = -0.25
+        shipclass_military_station_build_cost_mult = -0.15
+        shipsize_military_station_small_build_speed_mult = 0.25
         shipsize_military_station_small_build_cost_mult = -0.25
     }
 
@@ -230,6 +233,9 @@ tech_advanced_military_station_offense_01 = {
 }
 
 tech_advanced_military_station_defence_01 = {
+    # Unlocks "MILITARY_STATION_SMALL_ADVANCED_MID_02" section template
+    # Unlocks "MILITARY_STATION_SMALL_ADVANCED_MID_03" section template
+
     cost = 2500
     area = engineering
     start_tech = no
@@ -247,16 +253,16 @@ tech_advanced_military_station_defence_01 = {
     }
 
     prereqfor_desc = {
-        feature = {
+        component = {
             title = tech_advanced_military_station_defence_01_prereqfor.title
             desc = tech_advanced_military_station_defence_01_prereqfor.desc
         }
     }
 
     modifier = {
-        shipclass_military_station_hit_points_mult = 0.15
-        shipsize_military_station_small_upkeep_mult = -0.25
-        shipsize_military_station_small_build_cost_mult = -0.25
+        shipclass_military_station_hull_mult = 0.15
+        shipsize_military_station_small_hull_add = 1000
+        shipsize_military_station_small_hull_mult = 0.25
     }
 
     weight = 80
@@ -308,6 +314,9 @@ tech_advanced_military_station_defence_01 = {
 }
 
 tech_advanced_military_station_offense_02 = {
+    # Unlocks "MILITARY_STATION_SMALL_ADVANCED_MID_04" section template
+    # Unlocks "MILITARY_STATION_MEDIUM_ADVANCED_MID_01" section template
+
     cost = 7500
     area = engineering
     start_tech = no
@@ -325,7 +334,7 @@ tech_advanced_military_station_offense_02 = {
     }
 
     prereqfor_desc = {
-        feature = {
+        component = {
             title = tech_advanced_military_station_offense_02_prereqfor.title
             desc = tech_advanced_military_station_offense_02_prereqfor.desc
         }
@@ -333,7 +342,8 @@ tech_advanced_military_station_offense_02 = {
 
     modifier = {
         shipclass_military_station_damage_mult = 0.15
-        shipsize_military_station_medium_upkeep_mult = -0.25
+        shipclass_military_station_build_cost_mult = -0.15
+        shipsize_military_station_medium_build_speed_mult = 0.25
         shipsize_military_station_medium_build_cost_mult = -0.25
     }
 
@@ -390,6 +400,11 @@ tech_advanced_military_station_offense_02 = {
 }
 
 tech_advanced_military_station_defence_02 = {
+    # Unlocks "MILITARY_STATION_SMALL_ADVANCED_MID_05" section template
+    # Unlocks "MILITARY_STATION_SMALL_ADVANCED_MID_06" section template
+    # Unlocks "MILITARY_STATION_MEDIUM_ADVANCED_MID_02" section template
+    # Unlocks "MILITARY_STATION_MEDIUM_ADVANCED_MID_03" section template
+
     cost = 7500
     area = engineering
     start_tech = no
@@ -407,16 +422,16 @@ tech_advanced_military_station_defence_02 = {
     }
 
     prereqfor_desc = {
-        feature = {
+        component = {
             title = tech_advanced_military_station_defence_02_prereqfor.title
             desc = tech_advanced_military_station_defence_02_prereqfor.desc
         }
     }
 
     modifier = {
-        shipclass_military_station_hit_points_mult = 0.15
-        shipsize_military_station_medium_upkeep_mult = -0.25
-        shipsize_military_station_medium_build_cost_mult = -0.25
+        shipclass_military_station_hull_mult = 0.15
+        shipsize_military_station_medium_hull_add = 1000
+        shipsize_military_station_medium_hull_mult = 0.25
     }
 
     weight = 70
@@ -472,6 +487,10 @@ tech_advanced_military_station_defence_02 = {
 }
 
 tech_advanced_military_station_offense_03 = {
+    # Unlocks "MILITARY_STATION_MEDIUM_ADVANCED_MID_04" section template
+    # Unlocks "MILITARY_STATION_LARGE_ADVANCED_MID_01" section template
+    # Unlocks "MILITARY_STATION_LARGE_ADVANCED_MID_02" section template
+
     cost = 15000
     area = engineering
     start_tech = no
@@ -489,7 +508,7 @@ tech_advanced_military_station_offense_03 = {
     }
 
     prereqfor_desc = {
-        feature = {
+        component = {
             title = tech_advanced_military_station_offense_03_prereqfor.title
             desc = tech_advanced_military_station_offense_03_prereqfor.desc
         }
@@ -497,7 +516,8 @@ tech_advanced_military_station_offense_03 = {
 
     modifier = {
         shipclass_military_station_damage_mult = 0.15
-        shipsize_military_station_large_upkeep_mult = -0.25
+        shipclass_military_station_build_cost_mult = -0.15
+        shipsize_military_station_large_build_speed_mult = 0.25
         shipsize_military_station_large_build_cost_mult = -0.25
     }
 
@@ -553,6 +573,11 @@ tech_advanced_military_station_offense_03 = {
 }
 
 tech_advanced_military_station_defence_03 = {
+    # Unlocks "MILITARY_STATION_LARGE_ADVANCED_MID_03" section template
+    # Unlocks "MILITARY_STATION_LARGE_ADVANCED_MID_04" section template
+    # Unlocks "MILITARY_STATION_XLARGE_ADVANCED_MID_01" section template
+    # Unlocks "MILITARY_STATION_XLARGE_ADVANCED_MID_02" section template
+
     cost = 15000
     area = engineering
     start_tech = no
@@ -570,16 +595,16 @@ tech_advanced_military_station_defence_03 = {
     }
 
     prereqfor_desc = {
-        feature = {
+        component = {
             title = tech_advanced_military_station_defence_03_prereqfor.title
             desc = tech_advanced_military_station_defence_03_prereqfor.desc
         }
     }
 
     modifier = {
-        shipclass_military_station_hit_points_mult = 0.15
-        shipsize_military_station_large_upkeep_mult = -0.25
-        shipsize_military_station_large_build_cost_mult = -0.25
+        shipclass_military_station_hull_mult = 0.15
+        shipsize_military_station_large_hull_add = 1000
+        shipsize_military_station_large_hull_mult = 0.25
     }
 
     weight = 60
@@ -634,6 +659,11 @@ tech_advanced_military_station_defence_03 = {
 }
 
 tech_supreme_military_station_offense_01 = {
+    # Unlocks "MILITARY_STATION_MEDIUM_SUPREME_MID_01" section template
+    # Unlocks "MILITARY_STATION_LARGE_SUPREME_MID_01" section template
+    # Unlocks "MILITARY_STATION_LARGE_SUPREME_MID_02" section template
+    # Unlocks "MILITARY_STATION_XLARGE_SUPREME_MID_01" section template
+
     cost = 30000
     area = engineering
     start_tech = no
@@ -652,7 +682,7 @@ tech_supreme_military_station_offense_01 = {
     }
 
     prereqfor_desc = {
-        feature = {
+        component = {
             title = tech_supreme_military_station_offense_01_prereqfor.title
             desc = tech_supreme_military_station_offense_01_prereqfor.desc
         }
@@ -723,6 +753,11 @@ tech_supreme_military_station_offense_01 = {
 }
 
 tech_supreme_military_station_defence_01 = {
+    # Unlocks "MILITARY_STATION_LARGE_SUPREME_MID_03" section template
+    # Unlocks "MILITARY_STATION_LARGE_SUPREME_MID_04" section template
+    # Unlocks "MILITARY_STATION_XLARGE_SUPREME_MID_02" section template
+    # Unlocks "MILITARY_STATION_XLARGE_SUPREME_MID_03" section template
+
     cost = 30000
     area = engineering
     start_tech = no
@@ -741,14 +776,14 @@ tech_supreme_military_station_defence_01 = {
     }
 
     prereqfor_desc = {
-        feature = {
+        component = {
             title = tech_supreme_military_station_defence_01_prereqfor.title
             desc = tech_supreme_military_station_defence_01_prereqfor.desc
         }
     }
 
     modifier = {
-        shipclass_military_station_hit_points_mult = 0.30
+        shipclass_military_station_hull_mult = 0.30
         shipclass_military_station_build_cost_mult = 0.15
     }
 
@@ -812,6 +847,8 @@ tech_supreme_military_station_defence_01 = {
 }
 
 tech_supreme_military_station_offense_02 = {
+    # Unlocks "MILITARY_STATION_LARGE_SUPREME_MID_05" section template
+
     cost = 50000
     area = engineering
     start_tech = no
@@ -828,7 +865,7 @@ tech_supreme_military_station_offense_02 = {
     }
 
     prereqfor_desc = {
-        feature = {
+        component = {
             title = tech_supreme_military_station_offense_02_prereqfor.title
             desc = tech_supreme_military_station_offense_02_prereqfor.desc
         }
@@ -892,6 +929,9 @@ tech_supreme_military_station_offense_02 = {
 }
 
 tech_supreme_military_station_defence_02 = {
+    # Unlocks "MILITARY_STATION_EVERY_TRANSCENDENTAL_MID_02" section template
+    # Unlocks "MILITARY_STATION_EVERY_TRANSCENDENTAL_MID_03" section template
+
     cost = 50000
     area = engineering
     start_tech = no
@@ -908,14 +948,14 @@ tech_supreme_military_station_defence_02 = {
     }
 
     prereqfor_desc = {
-        feature = {
+        component = {
             title = tech_supreme_military_station_defence_02_prereqfor.title
             desc = tech_supreme_military_station_defence_02_prereqfor.desc
         }
     }
 
     modifier = {
-        shipclass_military_station_hit_points_mult = 0.30
+        shipclass_military_station_hull_mult = 0.30
         shipclass_military_station_build_cost_mult = 0.15
     }
 
@@ -972,6 +1012,8 @@ tech_supreme_military_station_defence_02 = {
 }
 
 tech_supreme_military_station_offense_03 = {
+    # Unlocks "MILITARY_STATION_EVERY_TRANSCENDENTAL_MID_01" section template
+
     cost = 100000
     area = engineering
     start_tech = no
@@ -988,7 +1030,7 @@ tech_supreme_military_station_offense_03 = {
     }
 
     prereqfor_desc = {
-        feature = {
+        component = {
             title = tech_supreme_military_station_offense_03_prereqfor.title
             desc = tech_supreme_military_station_offense_03_prereqfor.desc
         }
@@ -1044,6 +1086,9 @@ tech_supreme_military_station_offense_03 = {
 }
 
 tech_supreme_military_station_defence_03 = {
+    # Unlocks "MILITARY_STATION_EVERY_TRANSCENDENTAL_MID_04" section template
+    # Unlocks "MILITARY_STATION_EVERY_TRANSCENDENTAL_MID_05" section template
+
     cost = 100000
     area = engineering
     start_tech = no
@@ -1060,14 +1105,14 @@ tech_supreme_military_station_defence_03 = {
     }
 
     prereqfor_desc = {
-        feature = {
+        component = {
             title = tech_supreme_military_station_defence_03_prereqfor.title
             desc = tech_supreme_military_station_defence_03_prereqfor.desc
         }
     }
 
     modifier = {
-        shipclass_military_station_hit_points_mult = 0.30
+        shipclass_military_station_hull_mult = 0.30
         shipclass_military_station_build_cost_mult = 0.15
     }
 
@@ -1112,263 +1157,5 @@ tech_supreme_military_station_defence_03 = {
 
     ai_weight = {
         factor = 60
-    }
-}
-
-#########################################
-## Engineering / Voidcraft / Spaceports
-#########################################
-
-tech_advanced_spaceport_construction_01 = {
-    cost = 5000
-    area = engineering
-    start_tech = no
-    category = { voidcraft }
-    icon = "tech_advanced_spaceport_construction_01"
-    tier = 1
-
-    is_reverse_engineerable = no
-    is_rare = no
-    is_dangerous = no
-
-    prerequisites = {
-        "tech_advanced_voidcraft"
-        "tech_spaceport_1"
-    }
-
-    prereqfor_desc = {
-        feature = {
-            title = tech_advanced_spaceport_construction_01_prereqfor.title
-            desc = tech_advanced_spaceport_construction_01_prereqfor.desc
-        }
-    }
-
-    modifier = {
-        spaceport_ship_build_cost_mult = -0.15
-        spaceport_ship_build_time_mult = -0.15
-    }
-
-    weight = 90
-
-    weight_modifier = {
-        modifier = {
-            factor = 0
-            NAND = {
-                check_variable = {
-                    which = "ship_corvette_built"
-                    value > 19
-                }
-                check_variable = {
-                    which = "ship_destroyer_built"
-                    value > 9
-                }
-                check_variable = {
-                    which = "ship_cruiser_built"
-                    value > 4
-                }
-                check_variable = {
-                    which = "ship_battleship_built"
-                    value > 0
-                }
-            }
-        }
-        modifier = {
-            factor = 0.75
-            NAND = {
-                has_tradition = "tr_prosperity_adopt"
-                has_valid_civic = "civic_distinguished_admiralty"
-            }
-        }
-        modifier = {
-            factor = 1.05
-            has_tradition = "tr_prosperity_sct"
-        }
-        modifier = {
-            factor = 1.25
-            has_tradition = "tr_prosperity_fleet_logistical_corps"
-        }
-        modifier = {
-            factor = 1.50
-            has_tradition = "tr_prosperity_finish"
-        }
-        modifier = {
-            factor = 1.25
-            research_leader = {
-                area = engineering
-                has_level > 2
-                OR = {
-                    has_trait = "leader_trait_expertise_voidcraft"
-                    has_trait = "leader_trait_scientist_chosen"
-                    has_trait = "leader_trait_curator"
-                }
-            }
-        }
-        modifier = {
-            factor = 1.75
-            has_technology = "tech_supreme_voidcraft"
-        }
-    }
-
-    ai_weight = {
-        factor = 90
-    }
-}
-
-tech_advanced_spaceport_construction_02 = {
-    cost = 10000
-    area = engineering
-    start_tech = no
-    category = { voidcraft }
-    icon = "tech_advanced_spaceport_construction_02"
-    tier = 1
-
-    is_reverse_engineerable = no
-    is_rare = no
-    is_dangerous = no
-
-    prerequisites = {
-        "tech_advanced_spaceport_construction_01"
-        "tech_spaceport_2"
-    }
-
-    prereqfor_desc = {
-        feature = {
-            title = tech_advanced_spaceport_construction_02_prereqfor.title
-            desc = tech_advanced_spaceport_construction_02_prereqfor.desc
-        }
-    }
-
-    modifier = {
-        spaceport_ship_build_cost_mult = -0.20
-        spaceport_ship_build_time_mult = -0.20
-    }
-
-    weight = 80
-
-    weight_modifier = {
-        modifier = {
-            factor = 0
-            NAND = {
-                check_variable = {
-                    which = "ship_corvette_built"
-                    value > 49
-                }
-                check_variable = {
-                    which = "ship_destroyer_built"
-                    value > 14
-                }
-                check_variable = {
-                    which = "ship_cruiser_built"
-                    value > 5
-                }
-                check_variable = {
-                    which = "ship_battleship_built"
-                    value > 1
-                }
-            }
-        }
-        modifier = {
-            factor = 0.50
-            NAND = {
-                has_tradition = "tr_prosperity_adopt"
-                has_valid_civic = "civic_distinguished_admiralty"
-            }
-        }
-        modifier = {
-            factor = 0.75
-            NAND = {
-                has_tradition = "tr_prosperity_sct"
-                has_valid_civic = "civic_distinguished_admiralty"
-            }
-        }
-        modifier = {
-            factor = 1.12
-            has_tradition = "tr_prosperity_fleet_logistical_corps"
-        }
-        modifier = {
-            factor = 1.25
-            has_tradition = "tr_prosperity_finish"
-        }
-        modifier = {
-            factor = 1.25
-            research_leader = {
-                area = engineering
-                has_level > 3
-                OR = {
-                    has_trait = "leader_trait_expertise_voidcraft"
-                    has_trait = "leader_trait_scientist_chosen"
-                    has_trait = "leader_trait_curator"
-                }
-            }
-        }
-        modifier = {
-            factor = 1.50
-            has_technology = "tech_supreme_voidcraft"
-        }
-    }
-
-    ai_weight = {
-        factor = 80
-    }
-}
-
-tech_advanced_spaceport_module_01 = {
-    cost = 5000
-    area = engineering
-    start_tech = no
-    category = { voidcraft }
-    icon = "tech_advanced_spaceport_module_01"
-    tier = 1
-
-    is_reverse_engineerable = no
-    is_rare = no
-    is_dangerous = no
-
-    prerequisites = {
-        "tech_advanced_voidcraft"
-        "tech_spaceport_1"
-    }
-
-    prereqfor_desc = {
-        feature = {
-            title = tech_advanced_spaceport_module_01_prereqfor.title
-            desc = tech_advanced_spaceport_module_01_prereqfor.desc
-        }
-    }
-
-    modifier = {
-        spaceport_module_cost_mult = -0.15
-    }
-
-    weight = 90
-
-    weight_modifier = {
-        modifier = {
-            factor = 0
-            check_variable = {
-                which = "spaceport_built"
-                value < 3
-            }
-        }
-        modifier = {
-            factor = 1.25
-            research_leader = {
-                area = engineering
-                has_level > 2
-                OR = {
-                    has_trait = "leader_trait_expertise_voidcraft"
-                    has_trait = "leader_trait_scientist_chosen"
-                    has_trait = "leader_trait_curator"
-                }
-            }
-        }
-        modifier = {
-            factor = 1.75
-            has_technology = "tech_supreme_voidcraft"
-        }
-    }
-
-    ai_weight = {
-        factor = 90
     }
 }
