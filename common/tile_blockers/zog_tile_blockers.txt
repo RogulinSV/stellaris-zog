@@ -692,6 +692,94 @@ tb_humants = {
     }
 }
 
+tb_eyemans = {
+    time = 1000
+
+    cost = {
+        energy = 200
+        minerals = 500
+    }
+
+    adjacency_bonus = {
+        tile_building_resource_society_research_add = 1
+    }
+
+    spawn_chance = {
+        modifier = {
+            factor = 0
+            planet = {
+                NAND = {
+                    is_planet_class = pc_continental
+                    is_planet_class = pc_tropical
+                    is_planet_class = pc_gaia
+                    is_planet_class = pc_ocean
+                    is_planet_class = pc_tundra
+                    is_planet_class = pc_savannah
+                    is_planet_class = pc_nuked
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_steppe
+                    is_planet_class = pc_cascadian
+                    is_planet_class = pc_mangrove
+                    is_planet_class = pc_mesa
+                    is_planet_class = pc_oasis
+                    is_planet_class = pc_hajungle
+                }
+            }
+        }
+        modifier = {
+            add = 1
+            planet = {
+                OR = {
+                    is_planet_class = pc_continental
+                    is_planet_class = pc_ocean
+                    is_planet_class = pc_tundra
+                    is_planet_class = pc_tropical
+                    is_planet_class = pc_gaia
+                    is_planet_class = pc_savannah
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_cascadian
+                    is_planet_class = pc_mesa
+                    is_planet_class = pc_oasis
+                    is_planet_class = pc_mangrove
+                    is_planet_class = pc_hajungle
+                    is_planet_class = pc_steppe
+                }
+            }
+        }
+        modifier = {
+            add = 6
+            planet = {
+                is_planet_class = pc_nuked
+            }
+        }
+        modifier = {
+            factor = 0.50
+            planet = {
+                has_modifier = "dangerous_wildlife"
+            }
+        }
+        modifier = {
+            factor = 0.25
+            planet = {
+                has_modifier = "wild_storms"
+            }
+        }
+        modifier = {
+            factor = 0
+            planet = {
+                NAND = {
+                    has_modifier = "irradiated_planet"
+                    is_planet_class = pc_nuked
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_tb_eyemans"
+    }
+}
+
 tb_dendro_cocoons = {
     time = 700
 

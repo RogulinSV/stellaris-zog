@@ -17,6 +17,8 @@
     tb_wastelands_desc:0 "Бесплодная земля"
     tb_humants:0 "£blocker  Колония жнецов"
     tb_humants_desc:0 "Колония жнецов"
+    tb_eyemans: 0 "£blocker  Колония лупоглазиков"
+    tb_eyemans_desc: 0 "Колония лупоглазиков"
     tb_dendro_cocoons:0 "£blocker  Дендрококоны"
     tb_dendro_cocoons_desc:0 "Дендрококоны"
     tb_underground_creatures:0 "£blocker  Подземные твари"
