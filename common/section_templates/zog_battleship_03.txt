@@ -10,7 +10,7 @@ ship_section_template = {
     key = "BATTLESHIP_TRANSCENDENTAL_BOW_01"
     ship_size = battleship
     fits_on_slot = bow
-    entity = "battleship_bow_X2L6M7_entity"
+    entity = "battleship_bow_XL1_entity"
     icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
@@ -132,7 +132,7 @@ ship_section_template = {
     key = "BATTLESHIP_TRANSCENDENTAL_BOW_02"
     ship_size = battleship
     fits_on_slot = bow
-    entity = "battleship_bow_L9S6_entity"
+    entity = "battleship_bow_XL1_entity"
     icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
@@ -253,7 +253,7 @@ ship_section_template = {
     key = "BATTLESHIP_TRANSCENDENTAL_BOW_03"
     ship_size = battleship
     fits_on_slot = bow
-    entity = "battleship_bow_L4T10_entity"
+    entity = "battleship_bow_XL1_entity"
     icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
@@ -369,7 +369,7 @@ ship_section_template = {
     key = "BATTLESHIP_TRANSCENDENTAL_BOW_04"
     ship_size = battleship
     fits_on_slot = bow
-    entity = "battleship_bow_X1L2T10_entity"
+    entity = "battleship_bow_XL1_entity"
     icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
@@ -484,7 +484,7 @@ ship_section_template = {
     key = "BATTLESHIP_TRANSCENDENTAL_MID_01"
     ship_size = battleship
     fits_on_slot = mid
-    entity = "battleship_mid_X2L6M7_entity"
+    entity = "battleship_mid_L3_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -606,7 +606,7 @@ ship_section_template = {
     key = "BATTLESHIP_TRANSCENDENTAL_MID_02"
     ship_size = battleship
     fits_on_slot = mid
-    entity = "battleship_mid_L9S6_entity"
+    entity = "battleship_mid_L3_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -727,7 +727,7 @@ ship_section_template = {
     key = "BATTLESHIP_TRANSCENDENTAL_MID_03"
     ship_size = battleship
     fits_on_slot = mid
-    entity = "battleship_mid_L5T6P4_entity"
+    entity = "battleship_mid_L3_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -857,7 +857,7 @@ ship_section_template = {
     key = "BATTLESHIP_TRANSCENDENTAL_MID_04"
     ship_size = battleship
     fits_on_slot = mid
-    entity = "battleship_mid_X1L2M3T6P3_entity"
+    entity = "battleship_mid_L3_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -978,7 +978,7 @@ ship_section_template = {
     key = "BATTLESHIP_TRANSCENDENTAL_STERN_01"
     ship_size = battleship
     fits_on_slot = stern
-    entity = "battleship_stern_X2L6M7_entity"
+    entity = "battleship_stern_L1_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {
@@ -1100,7 +1100,7 @@ ship_section_template = {
     key = "BATTLESHIP_TRANSCENDENTAL_STERN_02"
     ship_size = battleship
     fits_on_slot = stern
-    entity = "battleship_stern_X1L2M3P9_entity"
+    entity = "battleship_stern_L1_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {
@@ -1230,7 +1230,7 @@ ship_section_template = {
     key = "BATTLESHIP_TRANSCENDENTAL_STERN_03"
     ship_size = battleship
     fits_on_slot = stern
-    entity = "battleship_stern_X1L2M3W6_entity"
+    entity = "battleship_stern_L1_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {
@@ -1333,7 +1333,7 @@ ship_section_template = {
     key = "BATTLESHIP_TRANSCENDENTAL_STERN_04"
     ship_size = battleship
     fits_on_slot = stern
-    entity = "battleship_stern_X3W6P3_entity"
+    entity = "battleship_stern_L1_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {

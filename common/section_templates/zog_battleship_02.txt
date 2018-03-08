@@ -10,7 +10,7 @@ ship_section_template = {
     key = "BATTLESHIP_SUPREME_BOW_01"
     ship_size = battleship
     fits_on_slot = bow
-    entity = "battleship_bow_L5M6S4_entity"
+    entity = "battleship_bow_XL1_entity"
     icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
@@ -131,7 +131,7 @@ ship_section_template = {
     key = "BATTLESHIP_SUPREME_BOW_02"
     ship_size = battleship
     fits_on_slot = bow
-    entity = "battleship_bow_L5M8_entity"
+    entity = "battleship_bow_XL1_entity"
     icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
@@ -240,7 +240,7 @@ ship_section_template = {
     key = "BATTLESHIP_SUPREME_BOW_03"
     ship_size = battleship
     fits_on_slot = bow
-    entity = "battleship_bow_L5T8_entity"
+    entity = "battleship_bow_XL1_entity"
     icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
@@ -354,7 +354,7 @@ ship_section_template = {
     key = "BATTLESHIP_SUPREME_MID_01"
     ship_size = battleship
     fits_on_slot = mid
-    entity = "battleship_mid_L5M6S4_entity"
+    entity = "battleship_mid_L3_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -475,7 +475,7 @@ ship_section_template = {
     key = "BATTLESHIP_SUPREME_MID_02"
     ship_size = battleship
     fits_on_slot = mid
-    entity = "battleship_mid_L5S10_entity"
+    entity = "battleship_mid_L3_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -596,7 +596,7 @@ ship_section_template = {
     key = "BATTLESHIP_SUPREME_MID_03"
     ship_size = battleship
     fits_on_slot = mid
-    entity = "battleship_mid_L5M5T5_entity"
+    entity = "battleship_mid_L3_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -728,7 +728,7 @@ ship_section_template = {
     key = "BATTLESHIP_SUPREME_STERN_01"
     ship_size = battleship
     fits_on_slot = stern
-    entity = "battleship_stern_L5M6S4_entity"
+    entity = "battleship_stern_L1_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {
@@ -849,7 +849,7 @@ ship_section_template = {
     key = "BATTLESHIP_SUPREME_STERN_02"
     ship_size = battleship
     fits_on_slot = stern
-    entity = "battleship_stern_L5P10_entity"
+    entity = "battleship_stern_L1_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {
@@ -972,7 +972,7 @@ ship_section_template = {
     key = "BATTLESHIP_SUPREME_STERN_03"
     ship_size = battleship
     fits_on_slot = stern
-    entity = "battleship_stern_L10_entity"
+    entity = "battleship_stern_L1_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {
