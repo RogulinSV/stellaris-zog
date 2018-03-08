@@ -10,7 +10,7 @@ ship_section_template = {
     key = "DESTROYER_TRANSCENDENTAL_BOW_01"
     ship_size = destroyer
     fits_on_slot = bow
-    entity = "destroyer_bow_M6S4_entity"
+    entity = "destroyer_bow_L1_entity"
     icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
@@ -101,7 +101,7 @@ ship_section_template = {
     key = "DESTROYER_TRANSCENDENTAL_BOW_02"
     ship_size = destroyer
     fits_on_slot = bow
-    entity = "destroyer_bow_M3S2T5_entity"
+    entity = "destroyer_bow_L1_entity"
     icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
@@ -200,7 +200,7 @@ ship_section_template = {
     key = "DESTROYER_TRANSCENDENTAL_BOW_03"
     ship_size = destroyer
     fits_on_slot = bow
-    entity = "destroyer_bow_S4T6_entity"
+    entity = "destroyer_bow_L1_entity"
     icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
@@ -299,7 +299,7 @@ ship_section_template = {
     key = "DESTROYER_TRANSCENDENTAL_BOW_04"
     ship_size = destroyer
     fits_on_slot = bow
-    entity = "destroyer_bow_M3T6_entity"
+    entity = "destroyer_bow_L1_entity"
     icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
@@ -396,7 +396,7 @@ ship_section_template = {
     key = "DESTROYER_TRANSCENDENTAL_STERN_01"
     ship_size = destroyer
     fits_on_slot = stern
-    entity = "destroyer_stern_M6S4_entity"
+    entity = "destroyer_stern_M1_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {
@@ -487,7 +487,7 @@ ship_section_template = {
     key = "DESTROYER_TRANSCENDENTAL_STERN_02"
     ship_size = destroyer
     fits_on_slot = stern
-    entity = "destroyer_stern_M6P4_entity"
+    entity = "destroyer_stern_M1_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {
@@ -586,7 +586,7 @@ ship_section_template = {
     key = "DESTROYER_TRANSCENDENTAL_STERN_03"
     ship_size = destroyer
     fits_on_slot = stern
-    entity = "destroyer_stern_M3S3P6_entity"
+    entity = "destroyer_stern_M1_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {
@@ -697,7 +697,7 @@ ship_section_template = {
     key = "DESTROYER_TRANSCENDENTAL_STERN_04"
     ship_size = destroyer
     fits_on_slot = stern
-    entity = "destroyer_stern_M3P9_entity"
+    entity = "destroyer_stern_M1_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {
@@ -808,7 +808,7 @@ ship_section_template = {
     key = "DESTROYER_TRANSCENDENTAL_STERN_05"
     ship_size = destroyer
     fits_on_slot = stern
-    entity = "destroyer_stern_M4S8_entity"
+    entity = "destroyer_stern_M1_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {

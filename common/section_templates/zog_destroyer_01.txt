@@ -10,7 +10,7 @@ ship_section_template = {
     key = "DESTROYER_ADVANCED_BOW_01"
     ship_size = destroyer
     fits_on_slot = bow
-    entity = "destroyer_bow_M4S3_entity"
+    entity = "destroyer_bow_L1_entity"
     icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
@@ -83,7 +83,7 @@ ship_section_template = {
     key = "DESTROYER_ADVANCED_BOW_02"
     ship_size = destroyer
     fits_on_slot = bow
-    entity = "destroyer_bow_M3T3_entity"
+    entity = "destroyer_bow_L1_entity"
     icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
@@ -158,7 +158,7 @@ ship_section_template = {
     key = "DESTROYER_ADVANCED_BOW_03"
     ship_size = destroyer
     fits_on_slot = bow
-    entity = "destroyer_bow_S7_entity"
+    entity = "destroyer_bow_L1_entity"
     icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
@@ -235,7 +235,7 @@ ship_section_template = {
     key = "DESTROYER_ADVANCED_STERN_01"
     ship_size = destroyer
     fits_on_slot = stern
-    entity = "destroyer_stern_M4S3_entity"
+    entity = "destroyer_stern_M1_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {
@@ -308,7 +308,7 @@ ship_section_template = {
     key = "DESTROYER_ADVANCED_STERN_02"
     ship_size = destroyer
     fits_on_slot = stern
-    entity = "destroyer_stern_M4P3_entity"
+    entity = "destroyer_stern_M1_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {
@@ -389,7 +389,7 @@ ship_section_template = {
     key = "DESTROYER_ADVANCED_STERN_03"
     ship_size = destroyer
     fits_on_slot = stern
-    entity = "destroyer_stern_S7_entity"
+    entity = "destroyer_stern_M1_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {
