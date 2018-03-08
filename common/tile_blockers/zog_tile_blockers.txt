@@ -1159,152 +1159,38 @@ tb_hazardous_storms = {
         }
         modifier = {
             factor = 0
-            AND = {
+            planet = {
                 planet_size < 11
-                OR = {
-                    is_planet_class = pc_continental
-                    is_planet_class = pc_desert
-                    is_planet_class = pc_arid
-                    is_planet_class = pc_tundra
-                    is_planet_class = pc_savannah
-                    is_planet_class = pc_alpine
-                    is_planet_class = pc_ocean
-                    # @depend "Planetary Diversity" (id:819148835)
-                    is_planet_class = pc_steppe
-                    is_planet_class = pc_hadesert
-                    is_planet_class = pc_sandsea
-                    is_planet_class = pc_cascadian
-                    is_planet_class = pc_desertislands
-                    is_planet_class = pc_mesa
-                    is_planet_class = pc_frozen_desert
-                    is_planet_class = pc_hothouse
-                    is_planet_class = pc_tidallylocked
-                }
             }
         }
         modifier = {
             add = 1
-            AND = {
+            planet = {
                 planet_size < 16
-                OR = {
-                    is_planet_class = pc_continental
-                    is_planet_class = pc_desert
-                    is_planet_class = pc_arid
-                    is_planet_class = pc_tundra
-                    is_planet_class = pc_savannah
-                    is_planet_class = pc_alpine
-                    is_planet_class = pc_ocean
-                    # @depend "Planetary Diversity" (id:819148835)
-                    is_planet_class = pc_steppe
-                    is_planet_class = pc_hadesert
-                    is_planet_class = pc_sandsea
-                    is_planet_class = pc_cascadian
-                    is_planet_class = pc_desertislands
-                    is_planet_class = pc_mesa
-                    is_planet_class = pc_frozen_desert
-                    is_planet_class = pc_hothouse
-                    is_planet_class = pc_tidallylocked
-                }
             }
         }
         modifier = {
             add = 2
-            AND = {
+            planet = {
                 planet_size < 21
-                OR = {
-                    is_planet_class = pc_continental
-                    is_planet_class = pc_desert
-                    is_planet_class = pc_arid
-                    is_planet_class = pc_tundra
-                    is_planet_class = pc_savannah
-                    is_planet_class = pc_alpine
-                    is_planet_class = pc_ocean
-                    # @depend "Planetary Diversity" (id:819148835)
-                    is_planet_class = pc_steppe
-                    is_planet_class = pc_hadesert
-                    is_planet_class = pc_sandsea
-                    is_planet_class = pc_cascadian
-                    is_planet_class = pc_desertislands
-                    is_planet_class = pc_mesa
-                    is_planet_class = pc_frozen_desert
-                    is_planet_class = pc_hothouse
-                    is_planet_class = pc_tidallylocked
-                }
             }
         }
         modifier = {
             add = 3
-            AND = {
+            planet = {
                 planet_size < 23
-                OR = {
-                    is_planet_class = pc_continental
-                    is_planet_class = pc_desert
-                    is_planet_class = pc_arid
-                    is_planet_class = pc_tundra
-                    is_planet_class = pc_savannah
-                    is_planet_class = pc_alpine
-                    is_planet_class = pc_ocean
-                    # @depend "Planetary Diversity" (id:819148835)
-                    is_planet_class = pc_steppe
-                    is_planet_class = pc_hadesert
-                    is_planet_class = pc_sandsea
-                    is_planet_class = pc_cascadian
-                    is_planet_class = pc_desertislands
-                    is_planet_class = pc_mesa
-                    is_planet_class = pc_frozen_desert
-                    is_planet_class = pc_hothouse
-                    is_planet_class = pc_tidallylocked
-                }
             }
         }
         modifier = {
             add = 4
-            AND = {
+            planet = {
                 planet_size < 25
-                OR = {
-                    is_planet_class = pc_continental
-                    is_planet_class = pc_desert
-                    is_planet_class = pc_arid
-                    is_planet_class = pc_tundra
-                    is_planet_class = pc_savannah
-                    is_planet_class = pc_alpine
-                    is_planet_class = pc_ocean
-                    # @depend "Planetary Diversity" (id:819148835)
-                    is_planet_class = pc_steppe
-                    is_planet_class = pc_hadesert
-                    is_planet_class = pc_sandsea
-                    is_planet_class = pc_cascadian
-                    is_planet_class = pc_desertislands
-                    is_planet_class = pc_mesa
-                    is_planet_class = pc_frozen_desert
-                    is_planet_class = pc_hothouse
-                    is_planet_class = pc_tidallylocked
-                }
             }
         }
         modifier = {
             add = 5
-            AND = {
+            planet = {
                 planet_size = 25
-                OR = {
-                    is_planet_class = pc_continental
-                    is_planet_class = pc_desert
-                    is_planet_class = pc_arid
-                    is_planet_class = pc_tundra
-                    is_planet_class = pc_savannah
-                    is_planet_class = pc_alpine
-                    is_planet_class = pc_ocean
-                    # @depend "Planetary Diversity" (id:819148835)
-                    is_planet_class = pc_steppe
-                    is_planet_class = pc_hadesert
-                    is_planet_class = pc_sandsea
-                    is_planet_class = pc_cascadian
-                    is_planet_class = pc_desertislands
-                    is_planet_class = pc_mesa
-                    is_planet_class = pc_frozen_desert
-                    is_planet_class = pc_hothouse
-                    is_planet_class = pc_tidallylocked
-                }
             }
         }
         modifier = {

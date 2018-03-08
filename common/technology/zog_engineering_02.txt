@@ -218,7 +218,6 @@ tech_hydroponics_theory = {
 
     modifier = {
         hydroponics_farm_build_cost_mult = -0.10
-        building_hydroponics_farm_1_build_cost_mult = -0.50
     }
 
     weight = 100
@@ -282,7 +281,6 @@ tech_hydroponics_science = {
 
     modifier = {
         hydroponics_farm_build_cost_mult = -0.10
-        building_hydroponics_farm_2_build_cost_mult = -0.50
     }
 
     weight = 90
@@ -347,7 +345,6 @@ tech_hydroponics_doctrine = {
 
     modifier = {
         hydroponics_farm_build_cost_mult = -0.15
-        building_hydroponics_farm_3_build_cost_mult = -0.50
     }
 
     weight = 80
@@ -415,7 +412,6 @@ tech_hydroponics_transcendence = {
 
     modifier = {
         hydroponics_farm_build_cost_mult = -0.20
-        building_hydroponics_farm_4_build_cost_mult = -0.50
     }
 
     weight = 70
@@ -482,7 +478,6 @@ tech_hydroponics_infinitum = {
 
     modifier = {
         hydroponics_farm_build_cost_mult = -0.25
-        building_hydroponics_farm_5_build_cost_mult = -0.50
     }
 
     weight = 60
