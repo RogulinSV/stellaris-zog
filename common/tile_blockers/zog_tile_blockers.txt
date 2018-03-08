@@ -1368,6 +1368,72 @@ tb_eternal_ice = {
     }
 }
 
+tb_maelstroms = {
+    time = 2400
+
+    cost = {
+        energy = 2000
+        minerals = 2000
+    }
+
+    spawn_chance = {
+        modifier = {
+            factor = 0
+            planet = {
+                NAND = {
+                    is_planet_class = pc_ocean
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_tidallylocked
+                }
+            }
+        }
+        modifier = {
+            add = 3
+            planet = {
+                OR = {
+                    is_planet_class = pc_ocean
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_tidallylocked
+                }
+            }
+        }
+        modifier = {
+            factor = 2.50
+            planet = {
+                has_modifier = "hazardous_weather"
+            }
+        }
+        modifier = {
+            factor = 2.0
+            planet = {
+                has_modifier = "unstable_tectonics"
+            }
+        }
+        modifier = {
+            factor = 1.50
+            planet = {
+                has_modifier = "extensive_moon_system"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            planet = {
+                has_moon = yes
+            }
+        }
+        modifier = {
+            factor = 1.15
+            planet = {
+                is_moon = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_tb_maelstroms"
+    }
+}
+
 tb_ancient_monuments = {
     time = 2000
 
