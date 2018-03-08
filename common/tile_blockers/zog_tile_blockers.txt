@@ -1198,6 +1198,88 @@ tb_hazardous_storms = {
     }
 }
 
+tb_eternal_ice = {
+    time = 1500
+
+    cost = {
+        energy = 2000
+        minerals = 500
+    }
+
+    spawn_chance = {
+        modifier = {
+            factor = 0
+            planet = {
+                NAND = {
+                    is_planet_class = pc_arctic
+                    is_planet_class = pc_tundra
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_frozen
+                    is_planet_class = pc_glacial
+                    is_planet_class = pc_geothermal
+                    is_planet_class = pc_frozen_desert
+                    is_planet_class = pc_antarctic
+                    is_planet_class = pc_subarctic
+                }
+            }
+        }
+        modifier = {
+            add = 1
+            planet = {
+                OR = {
+                    is_planet_class = pc_tundra
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_frozen_desert
+                    is_planet_class = pc_geothermal
+                }
+            }
+        }
+        modifier = {
+            add = 7
+            planet = {
+                OR = {
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_frozen
+                    is_planet_class = pc_subarctic
+                }
+            }
+        }
+        modifier = {
+            add = 14
+            planet = {
+                OR = {
+                    is_planet_class = pc_arctic
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_glacial
+                    is_planet_class = pc_antarctic
+                }
+            }
+        }
+        modifier = {
+            factor = 1.55
+            planet = {
+                has_modifier = "hazardous_weather"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            planet = {
+                has_modifier = "unstable_tectonics"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            planet = {
+                has_modifier = "strong_magnetic_field"
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_tb_eternal_ice"
+    }
+}
+
 tb_ancient_monuments = {
     time = 2000
 

@@ -25,3 +25,5 @@
     tb_terrain_creatures_desc:0 "Наземные твари"
     tb_hazardous_storms:0 "£blocker  Разрушительные шторма"
     tb_hazardous_storms_desc:0 "Разрушительные шторма"
+    tb_eternal_ice:0 "£blocker  Вечные льды"
+    tb_eternal_ice_desc:0 "Вечные льды"
