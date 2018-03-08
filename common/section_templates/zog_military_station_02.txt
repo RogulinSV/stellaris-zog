@@ -10,7 +10,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_medium_X6L9_entity"
+    entity = "military_station_section_medium_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -146,7 +146,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_large_X6L5W4_entity"
+    entity = "military_station_section_heavy_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -281,7 +281,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_large_X5W10_entity"
+    entity = "military_station_section_heavy_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -411,7 +411,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_large_X6T9_entity"
+    entity = "military_station_section_heavy_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -551,7 +551,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_large_X6P9_entity"
+    entity = "military_station_section_heavy_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -704,7 +704,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_large_W15_entity"
+    entity = "military_station_section_heavy_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -842,7 +842,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_xlarge_X4L5T6_entity"
+    entity = "military_station_section_heavy_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -985,7 +985,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_xlarge_X4L5P6_entity"
+    entity = "military_station_section_heavy_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -1128,7 +1128,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_xlarge_X6L9_entity"
+    entity = "military_station_section_heavy_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -1263,7 +1263,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_xlarge_X3T12_entity"
+    entity = "military_station_section_heavy_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -1406,7 +1406,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_xlarge_X3P12_entity"
+    entity = "military_station_section_heavy_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {

@@ -9,7 +9,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_small_S15_entity"
+    entity = "military_station_section_light_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -139,7 +139,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_small_S9T6_entity"
+    entity = "military_station_section_light_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -277,7 +277,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_small_S9P6_entity"
+    entity = "military_station_section_light_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -420,7 +420,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_small_S9M6_entity"
+    entity = "military_station_section_light_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -552,7 +552,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_small_S3T6M6_entity"
+    entity = "military_station_section_light_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -692,7 +692,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_small_S3P6M6_entity"
+    entity = "military_station_section_light_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -835,7 +835,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_medium_M9S6_entity"
+    entity = "military_station_section_medium_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -966,7 +966,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_medium_M9T6_entity"
+    entity = "military_station_section_medium_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -1105,7 +1105,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_medium_M9P6_entity"
+    entity = "military_station_section_medium_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -1249,7 +1249,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_medium_M10W5_entity"
+    entity = "military_station_section_medium_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -1379,7 +1379,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_large_L5W10_entity"
+    entity = "military_station_section_heavy_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -1508,7 +1508,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_large_L15_entity"
+    entity = "military_station_section_heavy_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -1639,7 +1639,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_large_L9T6_entity"
+    entity = "military_station_section_heavy_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -1778,7 +1778,7 @@ ship_section_template = {
     fits_on_slot = "west"
     fits_on_slot = "east"
     fits_on_slot = "south"
-    entity = "military_station_large_L9P6_entity"
+    entity = "military_station_section_heavy_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
