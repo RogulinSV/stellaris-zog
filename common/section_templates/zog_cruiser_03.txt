@@ -10,7 +10,7 @@ ship_section_template = {
     key = "CRUISER_TRANSCENDENTAL_BOW_01"
     ship_size = cruiser
     fits_on_slot = bow
-    entity = "cruiser_bow_L6M6_entity"
+    entity = "cruiser_bow_M2_entity"
     icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
@@ -113,7 +113,7 @@ ship_section_template = {
     key = "CRUISER_TRANSCENDENTAL_BOW_02"
     ship_size = cruiser
     fits_on_slot = bow
-    entity = "cruiser_bow_L9_entity"
+    entity = "cruiser_bow_M2_entity"
     icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
@@ -198,7 +198,7 @@ ship_section_template = {
     key = "CRUISER_TRANSCENDENTAL_BOW_03"
     ship_size = cruiser
     fits_on_slot = bow
-    entity = "cruiser_bow_X3L3M3_entity"
+    entity = "cruiser_bow_M2_entity"
     icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
@@ -284,7 +284,7 @@ ship_section_template = {
     key = "CRUISER_TRANSCENDENTAL_BOW_04"
     ship_size = cruiser
     fits_on_slot = bow
-    entity = "cruiser_bow_L3T8_entity"
+    entity = "cruiser_bow_M2_entity"
     icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
@@ -389,7 +389,7 @@ ship_section_template = {
     key = "CRUISER_TRANSCENDENTAL_BOW_05"
     ship_size = cruiser
     fits_on_slot = bow
-    entity = "cruiser_bow_T10_entity"
+    entity = "cruiser_bow_M2_entity"
     icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
@@ -488,7 +488,7 @@ ship_section_template = {
     key = "CRUISER_TRANSCENDENTAL_MID_01"
     ship_size = cruiser
     fits_on_slot = mid
-    entity = "cruiser_mid_L6M6_entity"
+    entity = "cruiser_mid_M3_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -591,7 +591,7 @@ ship_section_template = {
     key = "CRUISER_TRANSCENDENTAL_MID_02"
     ship_size = cruiser
     fits_on_slot = mid
-    entity = "cruiser_mid_M10_entity"
+    entity = "cruiser_mid_M3_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -682,7 +682,7 @@ ship_section_template = {
     key = "CRUISER_TRANSCENDENTAL_MID_03"
     ship_size = cruiser
     fits_on_slot = mid
-    entity = "cruiser_mid_L4T5P5_entity"
+    entity = "cruiser_mid_M3_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -816,7 +816,7 @@ ship_section_template = {
     key = "CRUISER_TRANSCENDENTAL_STERN_01"
     ship_size = cruiser
     fits_on_slot = stern
-    entity = "cruiser_stern_X3P10_entity"
+    entity = "cruiser_stern_M1_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {
@@ -935,7 +935,7 @@ ship_section_template = {
     key = "CRUISER_TRANSCENDENTAL_STERN_02"
     ship_size = cruiser
     fits_on_slot = stern
-    entity = "cruiser_stern_X3W9_entity"
+    entity = "cruiser_stern_M1_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {
@@ -1041,7 +1041,7 @@ ship_section_template = {
     key = "CRUISER_TRANSCENDENTAL_STERN_03"
     ship_size = cruiser
     fits_on_slot = stern
-    entity = "cruiser_stern_M10_entity"
+    entity = "cruiser_stern_M1_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {

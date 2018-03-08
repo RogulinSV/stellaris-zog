@@ -10,7 +10,7 @@ ship_section_template = {
     key = "CRUISER_INFINITUM_BOW_01"
     ship_size = cruiser
     fits_on_slot = bow
-    entity = "cruiser_bow_X5L5T5_entity"
+    entity = "cruiser_bow_M2_entity"
     icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
@@ -141,7 +141,7 @@ ship_section_template = {
     key = "CRUISER_INFINITUM_BOW_02"
     ship_size = cruiser
     fits_on_slot = bow
-    entity = "cruiser_bow_L5T10_entity"
+    entity = "cruiser_bow_M2_entity"
     icon = "GFX_ship_part_core_bow"
 
     prerequisites = {
@@ -275,7 +275,7 @@ ship_section_template = {
     key = "CRUISER_INFINITUM_MID_01"
     ship_size = cruiser
     fits_on_slot = mid
-    entity = "cruiser_mid_X5L5M5_entity"
+    entity = "cruiser_mid_M3_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -399,7 +399,7 @@ ship_section_template = {
     key = "CRUISER_INFINITUM_MID_02"
     ship_size = cruiser
     fits_on_slot = mid
-    entity = "cruiser_mid_M15_entity"
+    entity = "cruiser_mid_M3_entity"
     icon = "GFX_ship_part_core_mid"
 
     prerequisites = {
@@ -526,7 +526,7 @@ ship_section_template = {
     key = "CRUISER_INFINITUM_STERN_01"
     ship_size = cruiser
     fits_on_slot = stern
-    entity = "cruiser_stern_X5P10_entity"
+    entity = "cruiser_stern_M1_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {
@@ -657,7 +657,7 @@ ship_section_template = {
     key = "CRUISER_INFINITUM_STERN_02"
     ship_size = cruiser
     fits_on_slot = stern
-    entity = "cruiser_stern_X5W10_entity"
+    entity = "cruiser_stern_M1_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {
@@ -782,7 +782,7 @@ ship_section_template = {
     key = "CRUISER_INFINITUM_STERN_03"
     ship_size = cruiser
     fits_on_slot = stern
-    entity = "cruiser_stern_M15_entity"
+    entity = "cruiser_stern_M1_entity"
     icon = "GFX_ship_part_core_stern"
 
     prerequisites = {
