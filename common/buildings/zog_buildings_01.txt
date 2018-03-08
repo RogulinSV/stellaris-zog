@@ -53,7 +53,8 @@ building_business_city_01 = {
 
     planet_modifier = {
         pop_growth_speed = 0.02
-        pop_migration_time = -0.02
+        planet_migration_all_pull = 0.02
+        planet_migration_xeno_pull = 0.02
         pop_happiness = -0.01
     }
 
@@ -142,7 +143,6 @@ building_business_city_01 = {
         factor = 50
     }
 
-    ai_special_building = no
     ai_replace = yes
 }
 
@@ -197,7 +197,8 @@ building_business_city_02 = {
 
     planet_modifier = {
         pop_growth_speed = 0.04
-        pop_migration_time = -0.04
+        planet_migration_all_pull = 0.04
+        planet_migration_xeno_pull = 0.04
         pop_happiness = -0.02
     }
 
@@ -284,7 +285,6 @@ building_business_city_02 = {
         factor = 70
     }
 
-    ai_special_building = no
     ai_replace = yes
 }
 
@@ -335,7 +335,8 @@ building_business_city_03 = {
 
     planet_modifier = {
         pop_growth_speed = 0.06
-        pop_migration_time = -0.06
+        planet_migration_all_pull = 0.06
+        planet_migration_xeno_pull = 0.06
         pop_happiness = -0.04
     }
 
@@ -425,7 +426,6 @@ building_business_city_03 = {
         factor = 85
     }
 
-    ai_special_building = no
     ai_replace = yes
 }
 
@@ -478,7 +478,8 @@ building_scientific_city_01 = {
 
     planet_modifier = {
         pop_growth_speed = 0.02
-        pop_migration_time = -0.02
+        planet_migration_all_pull = 0.02
+        planet_migration_xeno_pull = 0.02
         pop_happiness = -0.01
     }
 
@@ -567,7 +568,6 @@ building_scientific_city_01 = {
         factor = 50
     }
 
-    ai_special_building = no
     ai_replace = yes
 }
 
@@ -616,7 +616,8 @@ building_scientific_city_02 = {
 
     planet_modifier = {
         pop_growth_speed = 0.04
-        pop_migration_time = -0.04
+        planet_migration_all_pull = 0.04
+        planet_migration_xeno_pull = 0.04
         pop_happiness = -0.02
     }
 
@@ -703,7 +704,6 @@ building_scientific_city_02 = {
         factor = 70
     }
 
-    ai_special_building = no
     ai_replace = yes
 }
 
@@ -748,7 +748,8 @@ building_scientific_city_03 = {
 
     planet_modifier = {
         pop_growth_speed = 0.06
-        pop_migration_time = -0.06
+        planet_migration_all_pull = 0.06
+        planet_migration_xeno_pull = 0.06
         pop_happiness = -0.04
     }
 
@@ -840,7 +841,6 @@ building_scientific_city_03 = {
         factor = 85
     }
 
-    ai_special_building = no
     ai_replace = yes
 }
 
@@ -900,7 +900,8 @@ building_industrial_city_01 = {
 
     planet_modifier = {
         pop_growth_speed = 0.02
-        pop_migration_time = -0.02
+        planet_migration_all_pull = 0.02
+        planet_migration_xeno_pull = 0.02
         pop_happiness = -0.01
     }
 
@@ -989,7 +990,6 @@ building_industrial_city_01 = {
         factor = 50
     }
 
-    ai_special_building = no
     ai_replace = yes
 }
 
@@ -1045,7 +1045,8 @@ building_industrial_city_02a = {
 
     planet_modifier = {
         pop_growth_speed = 0.03
-        pop_migration_time = -0.03
+        planet_migration_all_pull = 0.03
+        planet_migration_xeno_pull = 0.03
         pop_happiness = -0.02
     }
 
@@ -1132,7 +1133,6 @@ building_industrial_city_02a = {
         factor = 75
     }
 
-    ai_special_building = no
     ai_replace = yes
 }
 
@@ -1188,7 +1188,8 @@ building_industrial_city_02b = {
 
     planet_modifier = {
         pop_growth_speed = 0.03
-        pop_migration_time = -0.03
+        planet_migration_all_pull = 0.03
+        planet_migration_xeno_pull = 0.03
         pop_happiness = -0.02
     }
 
@@ -1275,7 +1276,6 @@ building_industrial_city_02b = {
         factor = 75
     }
 
-    ai_special_building = no
     ai_replace = yes
 }
 
@@ -1327,7 +1327,8 @@ building_industrial_city_03a = {
 
     planet_modifier = {
         pop_growth_speed = 0.04
-        pop_migration_time = -0.04
+        planet_migration_all_pull = 0.04
+        planet_migration_xeno_pull = 0.04
         pop_happiness = -0.04
     }
 
@@ -1413,7 +1414,6 @@ building_industrial_city_03a = {
         factor = 90
     }
 
-    ai_special_building = no
     ai_replace = yes
 }
 
@@ -1465,7 +1465,8 @@ building_industrial_city_03b = {
 
     planet_modifier = {
         pop_growth_speed = 0.04
-        pop_migration_time = -0.04
+        planet_migration_all_pull = 0.04
+        planet_migration_xeno_pull = 0.04
         pop_happiness = -0.04
     }
 
@@ -1551,7 +1552,6 @@ building_industrial_city_03b = {
         factor = 90
     }
 
-    ai_special_building = no
     ai_replace = yes
 }
 
@@ -1612,9 +1612,9 @@ building_atlantis_city_01 = {
 
     planet_modifier = {
         pop_growth_speed = 0.03
-        pop_migration_time = -0.03
+        planet_migration_all_pull = 0.03
+        planet_migration_xeno_pull = 0.03
         pop_happiness = -0.01
-        pop_xenophobia = -0.03
     }
 
     potential = {
@@ -1730,7 +1730,6 @@ building_atlantis_city_01 = {
         factor = 70
     }
 
-    ai_special_building = no
     ai_replace = yes
 }
 
@@ -1787,9 +1786,9 @@ building_atlantis_city_02 = {
 
     planet_modifier = {
         pop_growth_speed = 0.05
-        pop_migration_time = -0.05
+        planet_migration_all_pull = 0.05
+        planet_migration_xeno_pull = 0.05
         pop_happiness = -0.02
-        pop_xenophobia = -0.06
     }
 
     potential = {
@@ -1888,7 +1887,6 @@ building_atlantis_city_02 = {
         factor = 85
     }
 
-    ai_special_building = no
     ai_replace = yes
 }
 
@@ -1941,9 +1939,9 @@ building_atlantis_city_03 = {
 
     planet_modifier = {
         pop_growth_speed = 0.07
-        pop_migration_time = -0.07
+        planet_migration_all_pull = 0.07
+        planet_migration_xeno_pull = 0.07
         pop_happiness = -0.03
-        pop_xenophobia = -0.09
     }
 
     potential = {
@@ -2029,6 +2027,5 @@ building_atlantis_city_03 = {
         factor = 100
     }
 
-    ai_special_building = no
     ai_replace = yes
 }

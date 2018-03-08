@@ -111,7 +111,6 @@ building_windmill_01 = {
         factor = 65
     }
 
-    ai_special_building = no
     ai_replace = yes
 }
 
@@ -222,7 +221,6 @@ building_windmill_02 = {
         factor = 75
     }
 
-    ai_special_building = no
     ai_replace = yes
 }
 
@@ -328,7 +326,6 @@ building_windmill_03 = {
         factor = 80
     }
 
-    ai_special_building = no
     ai_replace = yes
 }
 
@@ -421,8 +418,8 @@ building_thermal_borehole_01 = {
     }
 
     planet_modifier = {
-        slave_production_output = 0.05
         slave_mineral_output = 0.10
+        slave_food_output = 0.05
         tile_resource_minerals_mult = 0.10
     }
 
@@ -550,7 +547,6 @@ building_thermal_borehole_01 = {
         }
     }
 
-    ai_special_building = no
     ai_replace = yes
 }
 
@@ -635,8 +631,8 @@ building_thermal_borehole_02 = {
     }
 
     planet_modifier = {
-        slave_production_output = 0.10
         slave_mineral_output = 0.15
+        slave_food_output = 0.10
         tile_resource_minerals_mult = 0.15
     }
 
@@ -764,6 +760,5 @@ building_thermal_borehole_02 = {
         }
     }
 
-    ai_special_building = no
     ai_replace = yes
 }
