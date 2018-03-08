@@ -1076,6 +1076,54 @@ tb_terrain_creatures = {
     }
 }
 
+tb_underwater_creatures = {
+    time = 700
+
+    cost = {
+        energy = 200
+        minerals = 500
+    }
+
+    spawn_chance = {
+        modifier = {
+            factor = 0
+            planet = {
+                NAND = {
+                    is_planet_class = pc_ocean
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_tidallylocked
+                }
+            }
+        }
+        modifier = {
+            add = 10
+            planet = {
+                OR = {
+                    is_planet_class = pc_ocean
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_tidallylocked
+                }
+            }
+        }
+        modifier = {
+            factor = 0.75
+            planet = {
+                has_modifier = "asteroid_impacts"
+            }
+        }
+        modifier = {
+            factor = 2.0
+            planet = {
+                has_modifier = "dangerous_wildlife"
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_tb_underwater_creatures"
+    }
+}
+
 tb_hazardous_storms = {
     time = 3600
 
