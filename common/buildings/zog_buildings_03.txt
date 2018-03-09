@@ -1,0 +1,819 @@
+#############################################
+## Building / Resources "Galkatite" / Mine
+#############################################
+
+building_sr_galkatite_mine = {
+    is_listed = yes
+    empire_unique = no
+    planet_unique = no
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_sr_galkatite_mine"
+    tags = {}
+
+    base_buildtime = 450
+
+    prerequisites = {
+        "tech_mining_galkatite"
+    }
+
+    upgrades = {
+        "building_sr_galkatite_factory_01"
+    }
+
+    cost = {
+        minerals = 200
+        energy = 150
+    }
+
+    required_resources = {
+        energy = 1
+    }
+
+    potential = {
+        planet = {
+            OR = {
+                is_planet_class = pc_gaia
+                is_planet_class = pc_continental
+                is_planet_class = pc_machine
+                is_planet_class = pc_tropical
+                is_planet_class = pc_ocean
+                is_planet_class = pc_arid
+                is_planet_class = pc_desert
+                is_planet_class = pc_tundra
+                is_planet_class = pc_alpine
+                is_planet_class = pc_savannah
+                is_planet_class = pc_mangrove
+                is_planet_class = pc_arctic
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_sandsea
+                is_planet_class = pc_oasis
+                is_planet_class = pc_mesa
+                is_planet_class = pc_hajungle
+                is_planet_class = pc_desertislands
+                is_planet_class = pc_swamp
+                is_planet_class = pc_cascadian
+                is_planet_class = pc_geothermal
+                is_planet_class = pc_frozen_desert
+                is_planet_class = pc_steppe
+                is_planet_class = pc_hadesert
+                is_planet_class = pc_subarctic
+                is_planet_class = pc_glacial
+                is_planet_class = pc_antarctic
+                is_planet_class = pc_irradiated
+            }
+        }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = { has_authority = auth_machine_intelligence }
+                }
+            }
+            AND = {
+                custom_tooltip = {
+                    fail_text = "requires_building_capital_1_or_hab"
+                    planet = {
+                        OR = {
+                            has_building = "building_hab_capital"
+                            has_building = "building_capital_1"
+                            has_building = "building_capital_2"
+                            has_building = "building_capital_3"
+                        }
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_galkatite_1"
+                    tile = {
+                        has_resource = {
+                            type = sr_galkatite
+                            amount > 0
+                        }
+                    }
+                }
+            }
+            else = {
+                AND = {
+                    custom_tooltip = {
+                        fail_text = "requires_building_capital_1_or_hab"
+                        planet = {
+                            OR = {
+                                has_building = "building_hab_capital"
+                                has_building = "building_machine_capital_1"
+                                has_building = "building_machine_capital_2"
+                                has_building = "building_machine_capital_3"
+                            }
+                        }
+                    }
+                    custom_tooltip = {
+                        fail_text = "requires_resource_galkatite_1"
+                        tile = {
+                            has_resource = {
+                                type = sr_galkatite
+                                amount > 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        always = yes
+    }
+
+    ai_weight = {
+        weight = 10
+    }
+
+    ai_replace = yes
+}
+
+################################################
+## Building / Resources "Galkatite" / Factory
+################################################
+
+building_sr_galkatite_factory_01 = {
+    is_listed = no
+    empire_unique = no
+    planet_unique = no
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_sr_galkatite_factory_01"
+    tags = {}
+
+    base_buildtime = 720
+
+    prerequisites = {
+        "tech_mining_galkatite"
+        "tech_mining_theory"
+    }
+
+    upgrades = {
+        "building_sr_galkatite_factory_02"
+    }
+
+    cost = {
+        minerals = 350
+        energy = 300
+    }
+
+    required_resources = {
+        energy = 1
+    }
+
+    produced_resources = {
+        sr_galkatite = 1
+        minerals = 1
+    }
+
+    country_modifier = {
+        max_minerals = 100
+    }
+
+    potential = {
+        planet = {
+            OR = {
+                is_planet_class = pc_gaia
+                is_planet_class = pc_continental
+                is_planet_class = pc_machine
+                is_planet_class = pc_tropical
+                is_planet_class = pc_ocean
+                is_planet_class = pc_arid
+                is_planet_class = pc_desert
+                is_planet_class = pc_tundra
+                is_planet_class = pc_alpine
+                is_planet_class = pc_savannah
+                is_planet_class = pc_mangrove
+                is_planet_class = pc_arctic
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_sandsea
+                is_planet_class = pc_oasis
+                is_planet_class = pc_mesa
+                is_planet_class = pc_hajungle
+                is_planet_class = pc_desertislands
+                is_planet_class = pc_swamp
+                is_planet_class = pc_cascadian
+                is_planet_class = pc_geothermal
+                is_planet_class = pc_frozen_desert
+                is_planet_class = pc_steppe
+                is_planet_class = pc_hadesert
+                is_planet_class = pc_subarctic
+                is_planet_class = pc_glacial
+                is_planet_class = pc_antarctic
+                is_planet_class = pc_irradiated
+            }
+        }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = { has_authority = auth_machine_intelligence }
+                }
+            }
+            AND = {
+                custom_tooltip = {
+                    fail_text = "requires_building_capital_1"
+                    planet = {
+                        OR = {
+                            has_building = "building_capital_1"
+                            has_building = "building_capital_2"
+                            has_building = "building_capital_3"
+                        }
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_galkatite_1"
+                    tile = {
+                        has_resource = {
+                            type = sr_galkatite
+                            amount > 0
+                        }
+                    }
+                }
+            }
+            else = {
+                AND = {
+                    custom_tooltip = {
+                        fail_text = "requires_building_capital_1"
+                        planet = {
+                            OR = {
+                                has_building = "building_machine_capital_1"
+                                has_building = "building_machine_capital_2"
+                                has_building = "building_machine_capital_3"
+                            }
+                        }
+                    }
+                    custom_tooltip = {
+                        fail_text = "requires_resource_galkatite_1"
+                        tile = {
+                            has_resource = {
+                                type = sr_galkatite
+                                amount > 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        always = yes
+    }
+
+    ai_weight = {
+        weight = 10
+    }
+
+    ai_replace = yes
+}
+
+building_sr_galkatite_factory_02 = {
+    is_listed = no
+    empire_unique = no
+    planet_unique = no
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_sr_galkatite_factory_02"
+    tags = {}
+
+    base_buildtime = 900
+
+    prerequisites = {
+        "tech_mining_galkatite"
+        "tech_mining_science"
+    }
+
+    upgrades = {
+        "building_sr_galkatite_factory_03"
+    }
+
+    cost = {
+        minerals = 700
+        energy = 600
+    }
+
+    required_resources = {
+        energy = 2
+    }
+
+    produced_resources = {
+        sr_galkatite = 2
+        minerals = 3
+    }
+
+    country_modifier = {
+        max_minerals = 200
+    }
+
+    potential = {
+        planet = {
+            OR = {
+                is_planet_class = pc_gaia
+                is_planet_class = pc_continental
+                is_planet_class = pc_machine
+                is_planet_class = pc_tropical
+                is_planet_class = pc_ocean
+                is_planet_class = pc_arid
+                is_planet_class = pc_desert
+                is_planet_class = pc_tundra
+                is_planet_class = pc_alpine
+                is_planet_class = pc_savannah
+                is_planet_class = pc_mangrove
+                is_planet_class = pc_arctic
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_sandsea
+                is_planet_class = pc_oasis
+                is_planet_class = pc_mesa
+                is_planet_class = pc_hajungle
+                is_planet_class = pc_desertislands
+                is_planet_class = pc_swamp
+                is_planet_class = pc_cascadian
+                is_planet_class = pc_geothermal
+                is_planet_class = pc_frozen_desert
+                is_planet_class = pc_steppe
+                is_planet_class = pc_hadesert
+                is_planet_class = pc_subarctic
+                is_planet_class = pc_glacial
+                is_planet_class = pc_antarctic
+                is_planet_class = pc_irradiated
+            }
+        }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = { has_authority = auth_machine_intelligence }
+                }
+            }
+            AND = {
+                custom_tooltip = {
+                    fail_text = "requires_building_capital_1"
+                    planet = {
+                        OR = {
+                            has_building = "building_capital_1"
+                            has_building = "building_capital_2"
+                            has_building = "building_capital_3"
+                        }
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_galkatite_1"
+                    tile = {
+                        has_resource = {
+                            type = sr_galkatite
+                            amount > 0
+                        }
+                    }
+                }
+            }
+            else = {
+                AND = {
+                    custom_tooltip = {
+                        fail_text = "requires_building_capital_1"
+                        planet = {
+                            OR = {
+                                has_building = "building_machine_capital_1"
+                                has_building = "building_machine_capital_2"
+                                has_building = "building_machine_capital_3"
+                            }
+                        }
+                    }
+                    custom_tooltip = {
+                        fail_text = "requires_resource_galkatite_1"
+                        tile = {
+                            has_resource = {
+                                type = sr_galkatite
+                                amount > 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        always = yes
+    }
+
+    ai_weight = {
+        weight = 20
+    }
+
+    ai_replace = yes
+}
+
+building_sr_galkatite_factory_03 = {
+    is_listed = no
+    empire_unique = no
+    planet_unique = no
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_sr_galkatite_factory_03"
+    tags = {}
+
+    base_buildtime = 1080
+
+    prerequisites = {
+        "tech_mining_galkatite"
+        "tech_mining_doctrine"
+    }
+
+    upgrades = {
+        "building_sr_galkatite_factory_04"
+    }
+
+    cost = {
+        minerals = 1050
+        energy = 900
+    }
+
+    required_resources = {
+        energy = 3
+    }
+
+    produced_resources = {
+        sr_galkatite = 3
+        minerals = 5
+    }
+
+    country_modifier = {
+        max_minerals = 300
+    }
+
+    potential = {
+        planet = {
+            OR = {
+                is_planet_class = pc_gaia
+                is_planet_class = pc_continental
+                is_planet_class = pc_machine
+                is_planet_class = pc_tropical
+                is_planet_class = pc_ocean
+                is_planet_class = pc_arid
+                is_planet_class = pc_desert
+                is_planet_class = pc_tundra
+                is_planet_class = pc_alpine
+                is_planet_class = pc_savannah
+                is_planet_class = pc_mangrove
+                is_planet_class = pc_arctic
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_sandsea
+                is_planet_class = pc_oasis
+                is_planet_class = pc_mesa
+                is_planet_class = pc_hajungle
+                is_planet_class = pc_desertislands
+                is_planet_class = pc_swamp
+                is_planet_class = pc_cascadian
+                is_planet_class = pc_geothermal
+                is_planet_class = pc_frozen_desert
+                is_planet_class = pc_steppe
+                is_planet_class = pc_hadesert
+                is_planet_class = pc_subarctic
+                is_planet_class = pc_glacial
+                is_planet_class = pc_antarctic
+                is_planet_class = pc_irradiated
+            }
+        }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = { has_authority = auth_machine_intelligence }
+                }
+            }
+            AND = {
+                custom_tooltip = {
+                    fail_text = "requires_building_capital_2"
+                    planet = {
+                        OR = {
+                            has_building = "building_capital_2"
+                            has_building = "building_capital_3"
+                        }
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_galkatite_1"
+                    tile = {
+                        has_resource = {
+                            type = sr_galkatite
+                            amount > 0
+                        }
+                    }
+                }
+            }
+            else = {
+                AND = {
+                    custom_tooltip = {
+                        fail_text = "requires_building_capital_2"
+                        planet = {
+                            OR = {
+                                has_building = "building_machine_capital_2"
+                                has_building = "building_machine_capital_3"
+                            }
+                        }
+                    }
+                    custom_tooltip = {
+                        fail_text = "requires_resource_galkatite_1"
+                        tile = {
+                            has_resource = {
+                                type = sr_galkatite
+                                amount > 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        always = yes
+    }
+
+    ai_weight = {
+        weight = 30
+    }
+
+    ai_replace = yes
+}
+
+building_sr_galkatite_factory_04 = {
+    is_listed = yes
+    empire_unique = no
+    planet_unique = no
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_sr_galkatite_factory_04"
+    tags = {}
+
+    base_buildtime = 1260
+
+    prerequisites = {
+        "tech_mining_galkatite"
+        "tech_mining_transcendence"
+    }
+
+    upgrades = {
+        "building_sr_galkatite_factory_05"
+    }
+
+    cost = {
+        minerals = 1400
+        energy = 1200
+    }
+
+    required_resources = {
+        energy = 4
+    }
+
+    produced_resources = {
+        sr_galkatite = 4
+        minerals = 8
+    }
+
+    country_modifier = {
+        max_minerals = 400
+    }
+
+    potential = {
+        planet = {
+            OR = {
+                is_planet_class = pc_gaia
+                is_planet_class = pc_continental
+                is_planet_class = pc_machine
+                is_planet_class = pc_tropical
+                is_planet_class = pc_ocean
+                is_planet_class = pc_arid
+                is_planet_class = pc_desert
+                is_planet_class = pc_tundra
+                is_planet_class = pc_alpine
+                is_planet_class = pc_savannah
+                is_planet_class = pc_mangrove
+                is_planet_class = pc_arctic
+                is_planet_class = pc_ringworld_habitable
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_sandsea
+                is_planet_class = pc_oasis
+                is_planet_class = pc_mesa
+                is_planet_class = pc_hajungle
+                is_planet_class = pc_desertislands
+                is_planet_class = pc_swamp
+                is_planet_class = pc_cascadian
+                is_planet_class = pc_geothermal
+                is_planet_class = pc_frozen_desert
+                is_planet_class = pc_steppe
+                is_planet_class = pc_hadesert
+                is_planet_class = pc_subarctic
+                is_planet_class = pc_glacial
+                is_planet_class = pc_antarctic
+                is_planet_class = pc_irradiated
+            }
+        }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = { has_authority = auth_machine_intelligence }
+                }
+            }
+            AND = {
+                custom_tooltip = {
+                    fail_text = "requires_building_capital_2"
+                    planet = {
+                        OR = {
+                            has_building = "building_capital_2"
+                            has_building = "building_capital_3"
+                        }
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_galkatite_1"
+                    tile = {
+                        has_resource = {
+                            type = sr_galkatite
+                            amount > 0
+                        }
+                    }
+                }
+            }
+            else = {
+                AND = {
+                    custom_tooltip = {
+                        fail_text = "requires_building_capital_2"
+                        planet = {
+                            OR = {
+                                has_building = "building_machine_capital_2"
+                                has_building = "building_machine_capital_3"
+                            }
+                        }
+                    }
+                    custom_tooltip = {
+                        fail_text = "requires_resource_galkatite_1"
+                        tile = {
+                            has_resource = {
+                                type = sr_galkatite
+                                amount > 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        always = yes
+    }
+
+    ai_weight = {
+        weight = 40
+    }
+
+    ai_replace = yes
+}
+
+building_sr_galkatite_factory_05 = {
+    is_listed = no
+    empire_unique = no
+    planet_unique = no
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_sr_galkatite_factory_05"
+    tags = {}
+
+    base_buildtime = 1440
+
+    prerequisites = {
+        "tech_mining_galkatite"
+        "tech_mining_infinitum"
+    }
+
+    cost = {
+        minerals = 1800
+        energy = 1500
+    }
+
+    required_resources = {
+        energy = 5
+    }
+
+    produced_resources = {
+        sr_galkatite = 5
+        minerals = 13
+    }
+
+    country_modifier = {
+        max_minerals = 500
+    }
+
+    potential = {
+        planet = {
+            OR = {
+                is_planet_class = pc_gaia
+                is_planet_class = pc_continental
+                is_planet_class = pc_machine
+                is_planet_class = pc_tropical
+                is_planet_class = pc_ocean
+                is_planet_class = pc_arid
+                is_planet_class = pc_desert
+                is_planet_class = pc_tundra
+                is_planet_class = pc_alpine
+                is_planet_class = pc_savannah
+                is_planet_class = pc_mangrove
+                is_planet_class = pc_arctic
+                is_planet_class = pc_ringworld_habitable
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_sandsea
+                is_planet_class = pc_oasis
+                is_planet_class = pc_mesa
+                is_planet_class = pc_hajungle
+                is_planet_class = pc_desertislands
+                is_planet_class = pc_swamp
+                is_planet_class = pc_cascadian
+                is_planet_class = pc_geothermal
+                is_planet_class = pc_frozen_desert
+                is_planet_class = pc_steppe
+                is_planet_class = pc_hadesert
+                is_planet_class = pc_subarctic
+                is_planet_class = pc_glacial
+                is_planet_class = pc_antarctic
+                is_planet_class = pc_irradiated
+            }
+        }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = { has_authority = auth_machine_intelligence }
+                }
+            }
+            AND = {
+                custom_tooltip = {
+                    fail_text = "requires_building_capital_3"
+                    planet = {
+                         has_building = "building_capital_3"
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_galkatite_1"
+                    tile = {
+                        has_resource = {
+                            type = sr_galkatite
+                            amount > 0
+                        }
+                    }
+                }
+            }
+            else = {
+                AND = {
+                    custom_tooltip = {
+                        fail_text = "requires_building_capital_3"
+                        planet = {
+                            has_building = "building_machine_capital_3"
+                        }
+                    }
+                    custom_tooltip = {
+                        fail_text = "requires_resource_galkatite_1"
+                        tile = {
+                            has_resource = {
+                                type = sr_galkatite
+                                amount > 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        always = yes
+    }
+
+    ai_weight = {
+        weight = 50
+    }
+
+    ai_replace = yes
+}

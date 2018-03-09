@@ -15,6 +15,19 @@ sr_xithricite = {
     }
 }
 
+sr_galkatite = {
+    AI_category = strategic_resource
+    prerequisites = { "tech_mining_galkatite" }
+    tradable = yes
+    is_rare = yes
+    is_planet_local = yes
+
+    modifier = {
+        max_minerals = 1000
+        tile_resource_minerals_mult = 0.10
+    }
+}
+
 #########################
 ### Category: Minerals
 #########################

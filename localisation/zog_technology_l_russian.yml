@@ -43,6 +43,8 @@
     # Strategic resource technologies
     tech_mining_xithricite: "Промышленная добыча Хитрициновой руды"
     tech_mining_xithricite_desc: "Промышленная добыча Хитрициновой руды"
+    tech_mining_galkatite: "Промышленная добыча Галкатитовых кристаллов"
+    tech_mining_galkatite_desc: "Промышленная добыча Галкатитовых кристаллов"
     # Engineering technologies
     tech_advanced_engineering: "Передовые инженерные работы"
     tech_advanced_engineering_desc: "Передовые инженерные работы"
@@ -419,6 +421,8 @@
     # Strategic resource technology prerequisites
     tech_mining_xithricite_prereqfor.title: "Промышленная добыча Хитрициновой руды"
     tech_mining_xithricite_prereqfor.desc: "Промышленная добыча Хитрициновой руды"
+    tech_mining_galkatite_prereqfor.title: "Промышленная добыча Галкатитовых кристаллов"
+    tech_mining_galkatite_prereqfor.desc: "Промышленная добыча Галкатитовых кристаллов"
     # Engineering technology prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
     tech_advanced_engineering_prereqfor.desc: "Передовые инженерные работы"

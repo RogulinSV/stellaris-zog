@@ -6,10 +6,10 @@ tech_mining_xithricite = {
     start_tech = no
     category = { materials }
     icon = "tech_mining_xithricite"
-    tier = 2
+    tier = 1
 
     is_reverse_engineerable = no
-    is_rare = no
+    is_rare = yes
     is_dangerous = no
 
     prerequisites = {
@@ -29,7 +29,7 @@ tech_mining_xithricite = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NOR = {
+            OR = {
                 check_variable = {
                     which = "planet_building_power_plant_built"
                     value < 10
@@ -50,8 +50,8 @@ tech_mining_xithricite = {
             }
         }
         modifier = {
-            factor = 0.75
-            NAND = {
+            factor = 1.50
+            OR = {
                 has_government = "gov_megacorporation"
                 has_government = "gov_trade_league"
             }
@@ -95,7 +95,7 @@ tech_mining_xithricite = {
     ai_weight = {
         modifier = {
             factor = 0
-            NOR = {
+            OR = {
                 check_variable = {
                     which = "planet_building_power_plant_built"
                     value < 10
@@ -116,8 +116,83 @@ tech_mining_xithricite = {
             }
         }
         modifier = {
-            factor = 0.75
-            NAND = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 2
+            }
+        }
+    }
+}
+
+tech_mining_galkatite = {
+    # Unlocks "Galkatite" strategic resource
+    # Unlocks "Galkatite Mine I" building
+
+    cost = 5000
+    area = engineering
+    start_tech = no
+    category = { materials }
+    icon = "tech_mining_galkatite"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_mineral_processing_2"
+        "tech_sensors_2"
+    }
+
+    prereqfor_desc = {
+        custom = {
+            title = tech_mining_galkatite_prereqfor.title
+            desc = tech_mining_galkatite_prereqfor.desc
+        }
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            OR = {
+                check_variable = {
+                    which = "planet_building_mining_network_built"
+                    value < 20
+                }
+                check_variable = {
+                    which = "planet_building_mineral_processing_plant_built"
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    any_tile = {
+                        has_resource = {
+                            type = sr_galkatite
+                            amount > 0
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_materials"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.75
+            OR = {
                 has_government = "gov_megacorporation"
                 has_government = "gov_trade_league"
             }
@@ -127,6 +202,71 @@ tech_mining_xithricite = {
             research_leader = {
                 area = engineering
                 has_level < 2
+            }
+        }
+        modifier = {
+            factor = 1.30
+            research_leader = {
+                area = engineering
+                has_level > 4
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 3
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 2
+            }
+        }
+        modifier = {
+            factor = 2.0
+            any_neighbor_country = {
+                has_technology = "tech_mining_galkatite"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            OR = {
+                check_variable = {
+                    which = "planet_building_mining_network_built"
+                    value < 20
+                }
+                check_variable = {
+                    which = "planet_building_mineral_processing_plant_built"
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    any_tile = {
+                        has_resource = {
+                            type = sr_galkatite
+                            amount > 0
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_materials"
+                }
             }
         }
     }

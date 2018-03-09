@@ -43,6 +43,8 @@
     # Strategic resource technologies
     tech_mining_xithricite: ""
     tech_mining_xithricite_desc: ""
+    tech_mining_galkatite: ""
+    tech_mining_galkatite_desc: ""
     # Engineering technologies
     tech_advanced_engineering: ""
     tech_advanced_engineering_desc: ""
@@ -413,6 +415,8 @@
     # Strategic resource technology prerequisites
     tech_mining_xithricite_prereqfor.title: ""
     tech_mining_xithricite_prereqfor.desc: ""
+    tech_mining_galkatite_prereqfor.title: ""
+    tech_mining_galkatite_prereqfor.desc: ""
     # Engineering technology prerequisites
     tech_advanced_engineering_prereqfor.title: ""
     tech_advanced_engineering_prereqfor.desc: ""

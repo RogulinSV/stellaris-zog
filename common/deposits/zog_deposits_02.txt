@@ -51,3 +51,99 @@ d_xithricite_deposit_2 = {
     drop_weight = { weight = 0 }
     orbital_weight = { weight = 0 }
 }
+
+d_galkatite_deposit = {
+    resources = {
+        sr_galkatite = 1
+    }
+    is_orbital_slot = no
+
+    station = shipclass_mining_station
+    orbital_weight = { weight = 0 }
+
+    drop_weight = {
+        weight = 0
+        modifier = {
+            weight = 0.1
+            planet = {
+                OR = {
+                    is_planet_class = pc_gaia
+                    is_planet_class = pc_continental
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_tropical
+                    is_planet_class = pc_ocean
+                    is_planet_class = pc_arid
+                    is_planet_class = pc_desert
+                    is_planet_class = pc_tundra
+                    is_planet_class = pc_alpine
+                    is_planet_class = pc_savannah
+                    is_planet_class = pc_mangrove
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_sandsea
+                    is_planet_class = pc_oasis
+                    is_planet_class = pc_mesa
+                    is_planet_class = pc_hajungle
+                    is_planet_class = pc_desertislands
+                    is_planet_class = pc_swamp
+                    is_planet_class = pc_cascadian
+                    is_planet_class = pc_geothermal
+                    is_planet_class = pc_frozen_desert
+                    is_planet_class = pc_steppe
+                    is_planet_class = pc_hadesert
+                }
+            }
+        }
+        modifier = {
+            weight = 0.2
+            planet = {
+                OR = {
+                    is_planet_class = pc_arctic
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_subarctic
+                    is_planet_class = pc_glacial
+                    is_planet_class = pc_antarctic
+                }
+            }
+        }
+        modifier = {
+            weight = 0.3
+            planet = {
+                OR = {
+                    is_planet_class = pc_ringworld_habitable
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_irradiated
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            planet = {
+                has_modifier = "mineral_rich"
+            }
+        }
+        modifier = {
+            factor = 2.0
+            planet = {
+                has_modifier = "ultra_rich"
+            }
+        }
+        modifier = {
+            factor = 0
+            planet = {
+                AND = {
+                    has_owner = yes
+                    NOT = {
+                        is_planet_class = pc_ringworld_habitable
+                    }
+                }
+            }
+        }
+    }
+}
+
+d_galkatite_deposit_2 = {
+    resources = { sr_galkatite = 2 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
