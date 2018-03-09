@@ -31,6 +31,10 @@ building_sr_galkatite_mine = {
         energy = 1
     }
 
+    produced_resources = {
+        minerals = 1
+    }
+
     potential = {
         planet = {
             OR = {
@@ -168,8 +172,7 @@ building_sr_galkatite_factory_01 = {
     }
 
     produced_resources = {
-        sr_galkatite = 1
-        minerals = 1
+        minerals = 2
     }
 
     country_modifier = {
@@ -307,7 +310,6 @@ building_sr_galkatite_factory_02 = {
     }
 
     produced_resources = {
-        sr_galkatite = 2
         minerals = 3
     }
 
@@ -446,7 +448,6 @@ building_sr_galkatite_factory_03 = {
     }
 
     produced_resources = {
-        sr_galkatite = 3
         minerals = 5
     }
 
@@ -583,7 +584,6 @@ building_sr_galkatite_factory_04 = {
     }
 
     produced_resources = {
-        sr_galkatite = 4
         minerals = 8
     }
 
@@ -717,8 +717,7 @@ building_sr_galkatite_factory_05 = {
     }
 
     produced_resources = {
-        sr_galkatite = 5
-        minerals = 13
+        minerals = 12
     }
 
     country_modifier = {
