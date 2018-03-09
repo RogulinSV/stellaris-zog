@@ -11,6 +11,7 @@ event = {
 
     immediate = {
         every_country = {
+            # Planet building counters
             set_variable = {
                 which = "planet_building_hydroponics_farm_built"
                 value = 0
@@ -32,7 +33,7 @@ event = {
                 value = 0
             }
 
-            # Stargbase module counters
+            # Starbase module counters
             set_variable = {
                 which = "starbase_module_built"
                 value = 0
@@ -61,7 +62,7 @@ event = {
                 which = "starbase_module_trading_hub_built"
                 value = 0
             }
-            # Stargbase building counters
+            # Starbase building counters
             set_variable = {
                 which = "starbase_building_built"
                 value = 0
