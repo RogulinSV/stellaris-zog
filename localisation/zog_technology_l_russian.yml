@@ -1,5 +1,5 @@
 ﻿l_russian:
-    # Technology
+    # Tile blocker technologies
     tech_tb_lava_floods: "Управление лавовыми потоками"
     tech_tb_lava_floods_desc: "Управление лавовыми потоками"
     tech_tb_lava_rivers: "Управление лавовыми реками"
@@ -40,6 +40,10 @@
     tech_advanced_desert_warriors_desc: "Войны пустыни"
     tech_supreme_desert_warriors: "Элитные войны пустыни"
     tech_supreme_desert_warriors_desc: "Элитные войны пустыни"
+    # Strategic resource technologies
+    tech_mining_xithricite: "Промышленная добыча Хитрициновой руды"
+    tech_mining_xithricite_desc: "Промышленная добыча Хитрициновой руды"
+    # Engineering technologies
     tech_advanced_engineering: "Передовые инженерные работы"
     tech_advanced_engineering_desc: "Передовые инженерные работы"
     tech_supreme_engineering: "Совершенные инженерные работы"
@@ -371,7 +375,7 @@
     tech_infinitum_leader_cap: "Бесконечные лидеры империи"
     tech_infinitum_leader_cap_desc: "Бесконечные лидеры империи"
 
-    # Technology Prerequisites
+    # Tile blocker technology prerequisites
     tech_tb_lava_floods_prereqfor.title: "Управление лавовыми потоками"
     tech_tb_lava_floods_prereqfor.desc: "Управление лавовыми потоками"
     tech_tb_lava_rivers_prereqfor.title: "Управление лавовыми реками"
@@ -412,6 +416,10 @@
     tech_advanced_desert_warriors_prereqfor.desc: "Войны пустыни"
     tech_supreme_desert_warriors_prereqfor.title: "Элитные войны пустыни"
     tech_supreme_desert_warriors_prereqfor.desc: "Элитные войны пустыни"
+    # Strategic resource technology prerequisites
+    tech_mining_xithricite_prereqfor.title: "Промышленная добыча Хитрициновой руды"
+    tech_mining_xithricite_prereqfor.desc: "Промышленная добыча Хитрициновой руды"
+    # Engineering technology prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
     tech_advanced_engineering_prereqfor.desc: "Передовые инженерные работы"
     tech_supreme_engineering_prereqfor.title: "Совершенные инженерные работы"

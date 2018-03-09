@@ -1,0 +1,133 @@
+tech_mining_xithricite = {
+    # Unlocks "Xithricite" strategic resource
+
+    cost = 3000
+    area = engineering
+    start_tech = no
+    category = { materials }
+    icon = "tech_mining_xithricite"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_mineral_processing_2"
+        "tech_sensors_2"
+    }
+
+    prereqfor_desc = {
+        custom = {
+            title = tech_mining_xithricite_prereqfor.title
+            desc = tech_mining_xithricite_prereqfor.desc
+        }
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                check_variable = {
+                    which = "planet_building_power_plant_built"
+                    value < 10
+                }
+                check_variable = {
+                    which = "planet_building_power_hub_built"
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_materials"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NAND = {
+                has_government = "gov_megacorporation"
+                has_government = "gov_trade_league"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 2
+            }
+        }
+        modifier = {
+            factor = 1.30
+            research_leader = {
+                area = engineering
+                has_level > 4
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 3
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 2
+            }
+        }
+        modifier = {
+            factor = 2.0
+            any_neighbor_country = {
+                has_technology = "tech_mining_xithricite"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOR = {
+                check_variable = {
+                    which = "planet_building_power_plant_built"
+                    value < 10
+                }
+                check_variable = {
+                    which = "planet_building_power_hub_built"
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_materials"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NAND = {
+                has_government = "gov_megacorporation"
+                has_government = "gov_trade_league"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 2
+            }
+        }
+    }
+}

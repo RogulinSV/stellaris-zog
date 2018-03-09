@@ -1,5 +1,5 @@
 ﻿l_english:
-    # Technology
+    # Tile blocker technologies
     tech_tb_lava_floods: ""
     tech_tb_lava_floods_desc: ""
     tech_tb_lava_rivers: ""
@@ -40,6 +40,10 @@
     tech_advanced_desert_warriors_desc: ""
     tech_supreme_desert_warriors: ""
     tech_supreme_desert_warriors_desc: ""
+    # Strategic resource technologies
+    tech_mining_xithricite: ""
+    tech_mining_xithricite_desc: ""
+    # Engineering technologies
     tech_advanced_engineering: ""
     tech_advanced_engineering_desc: ""
     tech_supreme_engineering: ""
@@ -365,7 +369,7 @@
     tech_infinitum_leader_cap: ""
     tech_infinitum_leader_cap_desc: ""
 
-    # Technology Prerequisites
+    # Tile blocker technology prerequisites
     tech_tb_lava_floods_prereqfor.title: ""
     tech_tb_lava_floods_prereqfor.desc: ""
     tech_tb_lava_rivers_prereqfor.title: ""
@@ -406,6 +410,10 @@
     tech_advanced_desert_warriors_prereqfor.desc: ""
     tech_supreme_desert_warriors_prereqfor.title: ""
     tech_supreme_desert_warriors_prereqfor.desc: ""
+    # Strategic resource technology prerequisites
+    tech_mining_xithricite_prereqfor.title: ""
+    tech_mining_xithricite_prereqfor.desc: ""
+    # Engineering technology prerequisites
     tech_advanced_engineering_prereqfor.title: ""
     tech_advanced_engineering_prereqfor.desc: ""
     tech_supreme_engineering_prereqfor.title: ""

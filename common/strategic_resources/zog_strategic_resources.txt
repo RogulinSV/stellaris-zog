@@ -1,0 +1,20 @@
+####################################
+### Category: Strategic resources
+####################################
+
+sr_xithricite = {
+    AI_category = strategic_resource
+    prerequisites = { "tech_mining_xithricite" }
+    tradable = yes
+    is_rare = yes
+    is_global = yes
+
+    modifier = {
+        max_energy = 5000
+        tile_resource_energy_mult = 0.10
+    }
+}
+
+#########################
+### Category: Minerals
+#########################

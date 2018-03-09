@@ -1,0 +1,53 @@
+d_xithricite_deposit = {
+    resources = {
+        sr_xithricite = 1
+    }
+    is_orbital_slot = yes
+
+    station = shipclass_mining_station
+    orbital_weight = { weight = 10 }
+
+    drop_weight = {
+        weight = 0
+        modifier = {
+            weight = 0.1
+            planet = {
+                OR = {
+                    is_planet_class = pc_barren
+                    is_planet_class = pc_barren_cold
+                    is_planet_class = pc_molten
+                }
+            }
+        }
+        modifier = {
+            weight = 0.5
+            planet = {
+                OR = {
+                    is_planet_class = pc_toxic
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_methane
+                    is_planet_class = pc_ammonia
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            planet = {
+                is_inside_nebula = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            planet = {
+                has_owner = yes
+            }
+        }
+    }
+}
+
+d_xithricite_deposit_2 = {
+    resources = { sr_xithricite = 2 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
