@@ -646,3 +646,160 @@ tech_mining_cobaltium = {
         }
     }
 }
+
+tech_mining_glitterium = {
+    # Unlocks "Glitterium" resource
+    # Unlocks "Glitterium Mine" building
+
+    cost = 8000
+    area = engineering
+    start_tech = no
+    category = { materials }
+    icon = "tech_mining_glitterium"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_sensors_1"
+    }
+
+    prereqfor_desc = {
+        custom = {
+            title = tech_mining_glitterium_prereqfor.title
+            desc = tech_mining_glitterium_prereqfor.desc
+        }
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            OR = {
+                check_variable = {
+                    which = "starbase_building_offworld_trading_company_built"
+                    value < 2
+                }
+                check_variable = {
+                    which = "starbase_building_naval_logistics_office_built"
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    any_tile = {
+                        has_resource = {
+                            type = sr_glitterium
+                            amount > 0
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_materials"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            OR = {
+                has_government = "gov_military_dictatorship"
+                has_government = "gov_martial_dictatorship"
+            }
+        }
+        modifier = {
+            factor = 1.50
+            OR = {
+                has_government = "gov_star_empire"
+                has_government = "gov_martial_empire"
+            }
+        }
+        modifier = {
+            factor = 1.75
+            has_government = "gov_war_council"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 2
+            }
+        }
+        modifier = {
+            factor = 1.30
+            research_leader = {
+                area = engineering
+                has_level > 4
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 3
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 2
+            }
+        }
+        modifier = {
+            factor = 2.0
+            any_neighbor_country = {
+                has_technology = "tech_mining_glitterium"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            OR = {
+                check_variable = {
+                    which = "starbase_building_offworld_trading_company_built"
+                    value < 2
+                }
+                check_variable = {
+                    which = "starbase_building_naval_logistics_office_built"
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    any_tile = {
+                        has_resource = {
+                            type = sr_glitterium
+                            amount > 0
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_materials"
+                }
+            }
+        }
+    }
+}

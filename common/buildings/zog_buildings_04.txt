@@ -1,0 +1,753 @@
+################################################
+### Building / Resources "Glitterium" / Mine
+################################################
+
+building_sr_glitterium_mine = {
+    is_listed = yes
+    empire_unique = no
+    planet_unique = no
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_sr_glitterium_mine"
+    tags = {}
+
+    base_buildtime = 550
+
+    prerequisites = {
+        "tech_mining_glitterium"
+    }
+
+    upgrades = {
+        "building_sr_glitterium_factory_01"
+    }
+
+    cost = {
+        minerals = 200
+        energy = 300
+    }
+
+    required_resources = {
+        minerals = 1
+    }
+
+    produced_resources = {
+        energy = 1
+    }
+
+    potential = {
+        planet = {
+            OR = {
+                is_planet_class = pc_tundra
+                is_planet_class = pc_arctic
+                is_planet_class = pc_alpine
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_geothermal
+                is_planet_class = pc_subarctic
+                is_planet_class = pc_glacial
+                is_planet_class = pc_frozen_desert
+                is_planet_class = pc_steppe
+                is_planet_class = pc_antarctic
+            }
+        }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = { has_authority = auth_machine_intelligence }
+                }
+            }
+            AND = {
+                custom_tooltip = {
+                    fail_text = "requires_building_capital_1_or_hab"
+                    planet = {
+                        OR = {
+                            has_building = "building_hab_capital"
+                            has_building = "building_capital_1"
+                            has_building = "building_capital_2"
+                            has_building = "building_capital_3"
+                        }
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_glitterium_1"
+                    tile = {
+                        has_resource = {
+                            type = sr_glitterium
+                            amount > 0
+                        }
+                    }
+                }
+            }
+            else = {
+                AND = {
+                    custom_tooltip = {
+                        fail_text = "requires_building_capital_1_or_hab"
+                        planet = {
+                            OR = {
+                                has_building = "building_hab_capital"
+                                has_building = "building_machine_capital_1"
+                                has_building = "building_machine_capital_2"
+                                has_building = "building_machine_capital_3"
+                            }
+                        }
+                    }
+                    custom_tooltip = {
+                        fail_text = "requires_resource_glitterium_1"
+                        tile = {
+                            has_resource = {
+                                type = sr_glitterium
+                                amount > 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        always = yes
+    }
+
+    ai_weight = {
+        weight = 10
+    }
+
+    ai_replace = yes
+}
+
+###################################################
+### Building / Resources "Glitterium" / Factory
+###################################################
+
+building_sr_glitterium_factory_01 = {
+    is_listed = no
+    empire_unique = no
+    planet_unique = no
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_sr_glitterium_factory_01"
+    tags = {}
+
+    base_buildtime = 810
+
+    prerequisites = {
+        "tech_mining_glitterium"
+        "tech_mining_theory"
+    }
+
+    upgrades = {
+        "building_sr_glitterium_factory_02"
+    }
+
+    cost = {
+        minerals = 400
+        energy = 550
+    }
+
+    required_resources = {
+        minerals = 1
+    }
+
+    produced_resources = {
+        energy = 2
+    }
+
+    produced_resource_trigger = {
+        modifier = {
+            has_technology = "tech_electric_theory"
+            resources = {
+                energy = 3
+            }
+        }
+    }
+
+    country_modifier = {
+        max_energy = 100
+    }
+
+    potential = {
+        planet = {
+            OR = {
+                is_planet_class = pc_tundra
+                is_planet_class = pc_arctic
+                is_planet_class = pc_alpine
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_geothermal
+                is_planet_class = pc_subarctic
+                is_planet_class = pc_glacial
+                is_planet_class = pc_frozen_desert
+                is_planet_class = pc_steppe
+                is_planet_class = pc_antarctic
+            }
+        }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = { has_authority = auth_machine_intelligence }
+                }
+            }
+            AND = {
+                custom_tooltip = {
+                    fail_text = "requires_building_capital_1"
+                    planet = {
+                        OR = {
+                            has_building = "building_capital_1"
+                            has_building = "building_capital_2"
+                            has_building = "building_capital_3"
+                        }
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_glitterium_1"
+                    tile = {
+                        has_resource = {
+                            type = sr_glitterium
+                            amount > 0
+                        }
+                    }
+                }
+            }
+            else = {
+                AND = {
+                    custom_tooltip = {
+                        fail_text = "requires_building_capital_1"
+                        planet = {
+                            OR = {
+                                has_building = "building_machine_capital_1"
+                                has_building = "building_machine_capital_2"
+                                has_building = "building_machine_capital_3"
+                            }
+                        }
+                    }
+                    custom_tooltip = {
+                        fail_text = "requires_resource_glitterium_1"
+                        tile = {
+                            has_resource = {
+                                type = sr_glitterium
+                                amount > 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        always = yes
+    }
+
+    ai_weight = {
+        weight = 10
+    }
+
+    ai_replace = yes
+}
+
+building_sr_glitterium_factory_02 = {
+    is_listed = no
+    empire_unique = no
+    planet_unique = no
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_sr_glitterium_factory_02"
+    tags = {}
+
+    base_buildtime = 1010
+
+    prerequisites = {
+        "tech_mining_glitterium"
+        "tech_mining_science"
+    }
+
+    upgrades = {
+        "building_sr_glitterium_factory_03"
+    }
+
+    cost = {
+        minerals = 600
+        energy = 850
+    }
+
+    required_resources = {
+        minerals = 2
+    }
+
+    produced_resources = {
+        energy = 3
+    }
+
+    produced_resource_trigger = {
+        modifier = {
+            has_technology = "tech_electric_science"
+            resources = {
+                energy = 4
+            }
+        }
+    }
+
+    country_modifier = {
+        max_energy = 200
+    }
+
+    potential = {
+        planet = {
+            OR = {
+                is_planet_class = pc_tundra
+                is_planet_class = pc_arctic
+                is_planet_class = pc_alpine
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_geothermal
+                is_planet_class = pc_subarctic
+                is_planet_class = pc_glacial
+                is_planet_class = pc_frozen_desert
+                is_planet_class = pc_steppe
+                is_planet_class = pc_antarctic
+            }
+        }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = { has_authority = auth_machine_intelligence }
+                }
+            }
+            AND = {
+                custom_tooltip = {
+                    fail_text = "requires_building_capital_1"
+                    planet = {
+                        OR = {
+                            has_building = "building_capital_1"
+                            has_building = "building_capital_2"
+                            has_building = "building_capital_3"
+                        }
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_glitterium_1"
+                    tile = {
+                        has_resource = {
+                            type = sr_glitterium
+                            amount > 0
+                        }
+                    }
+                }
+            }
+            else = {
+                AND = {
+                    custom_tooltip = {
+                        fail_text = "requires_building_capital_1"
+                        planet = {
+                            OR = {
+                                has_building = "building_machine_capital_1"
+                                has_building = "building_machine_capital_2"
+                                has_building = "building_machine_capital_3"
+                            }
+                        }
+                    }
+                    custom_tooltip = {
+                        fail_text = "requires_resource_glitterium_1"
+                        tile = {
+                            has_resource = {
+                                type = sr_glitterium
+                                amount > 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        always = yes
+    }
+
+    ai_weight = {
+        weight = 20
+    }
+
+    ai_replace = yes
+}
+
+building_sr_glitterium_factory_03 = {
+    is_listed = no
+    empire_unique = no
+    planet_unique = no
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_sr_glitterium_factory_03"
+    tags = {}
+
+    base_buildtime = 1210
+
+    prerequisites = {
+        "tech_mining_glitterium"
+        "tech_mining_doctrine"
+    }
+
+    upgrades = {
+        "building_sr_glitterium_factory_04"
+    }
+
+    cost = {
+        minerals = 900
+        energy = 1250
+    }
+
+    required_resources = {
+        minerals = 3
+    }
+
+    produced_resources = {
+        energy = 4
+    }
+
+    produced_resource_trigger = {
+        modifier = {
+            has_technology = "tech_electric_doctrine"
+            resources = {
+                energy = 6
+            }
+        }
+    }
+
+    country_modifier = {
+        max_energy = 300
+    }
+
+    potential = {
+        planet = {
+            OR = {
+                is_planet_class = pc_tundra
+                is_planet_class = pc_arctic
+                is_planet_class = pc_alpine
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_geothermal
+                is_planet_class = pc_subarctic
+                is_planet_class = pc_glacial
+                is_planet_class = pc_frozen_desert
+                is_planet_class = pc_steppe
+                is_planet_class = pc_antarctic
+            }
+        }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = { has_authority = auth_machine_intelligence }
+                }
+            }
+            AND = {
+                custom_tooltip = {
+                    fail_text = "requires_building_capital_2"
+                    planet = {
+                        OR = {
+                            has_building = "building_capital_2"
+                            has_building = "building_capital_3"
+                        }
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_glitterium_1"
+                    tile = {
+                        has_resource = {
+                            type = sr_glitterium
+                            amount > 0
+                        }
+                    }
+                }
+            }
+            else = {
+                AND = {
+                    custom_tooltip = {
+                        fail_text = "requires_building_capital_2"
+                        planet = {
+                            OR = {
+                                has_building = "building_machine_capital_2"
+                                has_building = "building_machine_capital_3"
+                            }
+                        }
+                    }
+                    custom_tooltip = {
+                        fail_text = "requires_resource_glitterium_1"
+                        tile = {
+                            has_resource = {
+                                type = sr_glitterium
+                                amount > 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        always = yes
+    }
+
+    ai_weight = {
+        weight = 30
+    }
+
+    ai_replace = yes
+}
+
+building_sr_glitterium_factory_04 = {
+    is_listed = no
+    empire_unique = no
+    planet_unique = no
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_sr_glitterium_factory_04"
+    tags = {}
+
+    base_buildtime = 1510
+
+    prerequisites = {
+        "tech_mining_glitterium"
+        "tech_mining_transcendence"
+    }
+
+    upgrades = {
+        "building_sr_glitterium_factory_05"
+    }
+
+    cost = {
+        minerals = 1300
+        energy = 1750
+    }
+
+    required_resources = {
+        minerals = 4
+    }
+
+    produced_resources = {
+        energy = 6
+    }
+
+    produced_resource_trigger = {
+        modifier = {
+            has_technology = "tech_electric_transcendence"
+            resources = {
+                energy = 9
+            }
+        }
+    }
+
+    country_modifier = {
+        max_energy = 400
+    }
+
+    potential = {
+        planet = {
+            OR = {
+                is_planet_class = pc_tundra
+                is_planet_class = pc_arctic
+                is_planet_class = pc_alpine
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_geothermal
+                is_planet_class = pc_subarctic
+                is_planet_class = pc_glacial
+                is_planet_class = pc_frozen_desert
+                is_planet_class = pc_steppe
+                is_planet_class = pc_antarctic
+            }
+        }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = { has_authority = auth_machine_intelligence }
+                }
+            }
+            AND = {
+                custom_tooltip = {
+                    fail_text = "requires_building_capital_2"
+                    planet = {
+                        OR = {
+                            has_building = "building_capital_2"
+                            has_building = "building_capital_3"
+                        }
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_glitterium_1"
+                    tile = {
+                        has_resource = {
+                            type = sr_glitterium
+                            amount > 0
+                        }
+                    }
+                }
+            }
+            else = {
+                AND = {
+                    custom_tooltip = {
+                        fail_text = "requires_building_capital_2"
+                        planet = {
+                            OR = {
+                                has_building = "building_machine_capital_2"
+                                has_building = "building_machine_capital_3"
+                            }
+                        }
+                    }
+                    custom_tooltip = {
+                        fail_text = "requires_resource_glitterium_1"
+                        tile = {
+                            has_resource = {
+                                type = sr_glitterium
+                                amount > 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        always = yes
+    }
+
+    ai_weight = {
+        weight = 40
+    }
+
+    ai_replace = yes
+}
+
+building_sr_glitterium_factory_05 = {
+    is_listed = no
+    empire_unique = no
+    planet_unique = no
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_sr_glitterium_factory_05"
+    tags = {}
+
+    base_buildtime = 1710
+
+    prerequisites = {
+        "tech_mining_glitterium"
+        "tech_mining_infinitum"
+    }
+
+    cost = {
+        minerals = 1500
+        energy = 2250
+    }
+
+    required_resources = {
+        minerals = 5
+    }
+
+    produced_resources = {
+        energy = 9
+    }
+
+    produced_resource_trigger = {
+        modifier = {
+            has_technology = "tech_electric_infinitum"
+            resources = {
+                energy = 15
+            }
+        }
+    }
+
+    country_modifier = {
+        max_energy = 500
+    }
+
+    potential = {
+        planet = {
+            OR = {
+                is_planet_class = pc_tundra
+                is_planet_class = pc_arctic
+                is_planet_class = pc_alpine
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_geothermal
+                is_planet_class = pc_subarctic
+                is_planet_class = pc_glacial
+                is_planet_class = pc_frozen_desert
+                is_planet_class = pc_steppe
+                is_planet_class = pc_antarctic
+            }
+        }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = { has_authority = auth_machine_intelligence }
+                }
+            }
+            AND = {
+                custom_tooltip = {
+                    fail_text = "requires_building_capital_3"
+                    planet = {
+                         has_building = "building_capital_3"
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_glitterium_1"
+                    tile = {
+                        has_resource = {
+                            type = sr_glitterium
+                            amount > 0
+                        }
+                    }
+                }
+            }
+            else = {
+                AND = {
+                    custom_tooltip = {
+                        fail_text = "requires_building_capital_3"
+                        planet = {
+                             has_building = "building_machine_capital_3"
+                        }
+                    }
+                    custom_tooltip = {
+                        fail_text = "requires_resource_glitterium_1"
+                        tile = {
+                            has_resource = {
+                                type = sr_glitterium
+                                amount > 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        always = yes
+    }
+
+    ai_weight = {
+        weight = 50
+    }
+
+    ai_replace = yes
+}

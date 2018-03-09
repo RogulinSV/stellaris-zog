@@ -62,6 +62,18 @@
     building_sr_greenaurium_factory_04_desc: ""
     building_sr_greenaurium_factory_05: ""
     building_sr_greenaurium_factory_05_desc: ""
+    building_sr_glitterium_mine: ""
+    building_sr_glitterium_mine_desc: ""
+    building_sr_glitterium_factory_01: ""
+    building_sr_glitterium_factory_01_desc: ""
+    building_sr_glitterium_factory_01: ""
+    building_sr_glitterium_factory_01_desc: ""
+    building_sr_glitterium_factory_02: ""
+    building_sr_glitterium_factory_02_desc: ""
+    building_sr_glitterium_factory_03: ""
+    building_sr_glitterium_factory_03_desc: ""
+    building_sr_glitterium_factory_04: ""
+    building_sr_glitterium_factory_05_desc: ""
 
     # Building requirements
     requires_colony_indigenous_settlements_5: ""

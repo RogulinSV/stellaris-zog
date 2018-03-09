@@ -90,3 +90,16 @@ sr_cobaltium = {
         shipsize_battleship_build_cost_mult = -0.05
     }
 }
+
+sr_glitterium = {
+    AI_category = minerals
+    prerequisites = { "tech_mining_glitterium" }
+    tradable = yes
+    is_rare = yes
+    is_planet_local = yes
+    collect_if_wrong_building = no
+
+    modifier = {
+        weapon_type_explosive_weapon_damage_mult = 0.10
+    }
+}
