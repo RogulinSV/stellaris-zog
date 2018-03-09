@@ -147,3 +147,67 @@ d_galkatite_deposit_2 = {
     drop_weight = { weight = 0 }
     orbital_weight = { weight = 0 }
 }
+
+d_greenaurium_deposit = {
+    resources = {
+        sr_greenaurium = 1
+    }
+    is_orbital_slot = no
+
+    station = shipclass_mining_station
+    orbital_weight = { weight = 0 }
+
+    drop_weight = {
+        weight = 0
+        modifier = {
+            weight = 0.1
+            planet = {
+                OR = {
+                    is_planet_class = pc_arctic
+                    # @depend "Planetary Diversity" (id:819148835)
+                    is_planet_class = pc_subarctic
+                    is_planet_class = pc_glacial
+                    is_planet_class = pc_antarctic
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            planet = {
+                has_modifier = "mineral_rich"
+            }
+        }
+        modifier = {
+            factor = 1.55
+            planet = {
+                has_modifier = "ultra_rich"
+            }
+        }
+        modifier = {
+            factor = 2.05
+            planet = {
+                has_modifier = "asteroid_impacts"
+            }
+        }
+        modifier = {
+            factor = 0
+            planet = {
+                has_owner = yes
+            }
+        }
+    }
+}
+
+d_greenaurium_deposit_2 = {
+    resources = { sr_greenaurium = 2 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_refined_greenaurium_deposit = {
+    resources = { sr_refined_greenaurium = 0 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}

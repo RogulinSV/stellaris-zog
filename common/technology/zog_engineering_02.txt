@@ -856,6 +856,7 @@ tech_electric_infinitum = {
 
 tech_mining_theory = {
     # Unlocks "Galkatite Factory I" building
+    # Unlocks "Greenaurium Factory I" building
 
     cost = 1000
     area = engineering
@@ -921,6 +922,7 @@ tech_mining_theory = {
 
 tech_mining_science = {
     # Unlocks "Galkatite Factory II" building
+    # Unlocks "Greenaurium Factory II" building
 
     cost = 2500
     area = engineering
@@ -986,6 +988,7 @@ tech_mining_science = {
 
 tech_mining_doctrine = {
     # Unlocks "Galkatite Factory III" building
+    # Unlocks "Greenaurium Factory III" building
 
     cost = 5000
     area = engineering
@@ -1051,6 +1054,7 @@ tech_mining_doctrine = {
 
 tech_mining_transcendence = {
     # Unlocks "Galkatite Factory IV" building
+    # Unlocks "Greenaurium Factory IV" building
 
     cost = 10000
     area = engineering
@@ -1116,6 +1120,7 @@ tech_mining_transcendence = {
 
 tech_mining_infinitum = {
     # Unlocks "Galkatite Factory V" building
+    # Unlocks "Greenaurium Factory V" building
 
     cost = 20000
     area = engineering

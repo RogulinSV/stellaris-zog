@@ -1,6 +1,6 @@
-#############################################
-## Building / Resources "Galkatite" / Mine
-#############################################
+##############################################
+### Building / Resources "Galkatite" / Mine
+##############################################
 
 building_sr_galkatite_mine = {
     is_listed = yes
@@ -137,9 +137,9 @@ building_sr_galkatite_mine = {
     ai_replace = yes
 }
 
-################################################
-## Building / Resources "Galkatite" / Factory
-################################################
+#################################################
+### Building / Resources "Galkatite" / Factory
+#################################################
 
 building_sr_galkatite_factory_01 = {
     is_listed = no
@@ -797,6 +797,752 @@ building_sr_galkatite_factory_05 = {
                         tile = {
                             has_resource = {
                                 type = sr_galkatite
+                                amount > 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        always = yes
+    }
+
+    ai_weight = {
+        weight = 50
+    }
+
+    ai_replace = yes
+}
+
+################################################
+### Building / Resources "Greenaurium" / Mine
+################################################
+
+building_sr_greenaurium_mine = {
+    is_listed = yes
+    empire_unique = no
+    planet_unique = no
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_sr_greenaurium_mine"
+    tags = {}
+
+    base_buildtime = 550
+
+    prerequisites = {
+        "tech_mining_greenaurium"
+    }
+
+    upgrades = {
+        "building_sr_greenaurium_factory_01"
+    }
+
+    cost = {
+        minerals = 300
+        energy = 200
+    }
+
+    required_resources = {
+        energy = 1
+    }
+
+    produced_resources = {
+        minerals = 1
+    }
+
+    potential = {
+        planet = {
+            OR = {
+                is_planet_class = pc_arctic
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_subarctic
+                is_planet_class = pc_glacial
+                is_planet_class = pc_antarctic
+            }
+        }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = { has_authority = auth_machine_intelligence }
+                }
+            }
+            AND = {
+                custom_tooltip = {
+                    fail_text = "requires_building_capital_1_or_hab"
+                    planet = {
+                        OR = {
+                            has_building = "building_hab_capital"
+                            has_building = "building_capital_1"
+                            has_building = "building_capital_2"
+                            has_building = "building_capital_3"
+                        }
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_greenaurium_1"
+                    tile = {
+                        has_resource = {
+                            type = sr_greenaurium
+                            amount > 0
+                        }
+                    }
+                }
+            }
+            else = {
+                AND = {
+                    custom_tooltip = {
+                        fail_text = "requires_building_capital_1_or_hab"
+                        planet = {
+                            OR = {
+                                has_building = "building_hab_capital"
+                                has_building = "building_machine_capital_1"
+                                has_building = "building_machine_capital_2"
+                                has_building = "building_machine_capital_3"
+                            }
+                        }
+                    }
+                    custom_tooltip = {
+                        fail_text = "requires_resource_greenaurium_1"
+                        tile = {
+                            has_resource = {
+                                type = sr_greenaurium
+                                amount > 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        always = yes
+    }
+
+    ai_weight = {
+        weight = 10
+    }
+
+    ai_replace = yes
+}
+
+###################################################
+### Building / Resources "Greenaurium" / Factory
+###################################################
+
+building_sr_greenaurium_factory_01 = {
+    is_listed = no
+    empire_unique = no
+    planet_unique = no
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_sr_greenaurium_factory_01"
+    tags = {}
+
+    base_buildtime = 810
+
+    prerequisites = {
+        "tech_mining_greenaurium"
+        "tech_mining_theory"
+    }
+
+    upgrades = {
+        "building_sr_greenaurium_factory_02"
+    }
+
+    cost = {
+        minerals = 550
+        energy = 400
+    }
+
+    required_resources = {
+        energy = 1
+    }
+
+    produced_resources = {
+        minerals = 2
+    }
+
+    produced_resource_trigger = {
+        modifier = {
+            has_technology = "tech_mineral_processing_1"
+            resources = {
+                sr_refined_greenaurium = 1
+            }
+        }
+    }
+
+    country_modifier = {
+        max_minerals = 100
+    }
+
+    potential = {
+        planet = {
+            OR = {
+                is_planet_class = pc_arctic
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_subarctic
+                is_planet_class = pc_glacial
+                is_planet_class = pc_antarctic
+            }
+        }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = { has_authority = auth_machine_intelligence }
+                }
+            }
+            AND = {
+                custom_tooltip = {
+                    fail_text = "requires_building_capital_1"
+                    planet = {
+                        OR = {
+                            has_building = "building_capital_1"
+                            has_building = "building_capital_2"
+                            has_building = "building_capital_3"
+                        }
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_greenaurium_1"
+                    tile = {
+                        has_resource = {
+                            type = sr_greenaurium
+                            amount > 0
+                        }
+                    }
+                }
+            }
+            else = {
+                AND = {
+                    custom_tooltip = {
+                        fail_text = "requires_building_capital_1"
+                        planet = {
+                            OR = {
+                                has_building = "building_machine_capital_1"
+                                has_building = "building_machine_capital_2"
+                                has_building = "building_machine_capital_3"
+                            }
+                        }
+                    }
+                    custom_tooltip = {
+                        fail_text = "requires_resource_greenaurium_1"
+                        tile = {
+                            has_resource = {
+                                type = sr_greenaurium
+                                amount > 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        always = yes
+    }
+
+    ai_weight = {
+        weight = 10
+    }
+
+    ai_replace = yes
+}
+
+building_sr_greenaurium_factory_02 = {
+    is_listed = no
+    empire_unique = no
+    planet_unique = no
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_sr_greenaurium_factory_02"
+    tags = {}
+
+    base_buildtime = 1050
+
+    prerequisites = {
+        "tech_mining_greenaurium"
+        "tech_mining_science"
+    }
+
+    upgrades = {
+        "building_sr_greenaurium_factory_03"
+    }
+
+    cost = {
+        minerals = 800
+        energy = 500
+    }
+
+    required_resources = {
+        energy = 2
+    }
+
+    produced_resources = {
+        minerals = 3
+    }
+
+    produced_resource_trigger = {
+        modifier = {
+            has_technology = "tech_mineral_processing_1"
+            resources = {
+                sr_refined_greenaurium = 1
+            }
+        }
+    }
+
+    country_modifier = {
+        max_minerals = 200
+    }
+
+    potential = {
+        planet = {
+            OR = {
+                is_planet_class = pc_arctic
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_subarctic
+                is_planet_class = pc_glacial
+                is_planet_class = pc_antarctic
+            }
+        }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = { has_authority = auth_machine_intelligence }
+                }
+            }
+            AND = {
+                custom_tooltip = {
+                    fail_text = "requires_building_capital_1"
+                    planet = {
+                        OR = {
+                            has_building = "building_capital_1"
+                            has_building = "building_capital_2"
+                            has_building = "building_capital_3"
+                        }
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_greenaurium_1"
+                    tile = {
+                        has_resource = {
+                            type = sr_greenaurium
+                            amount > 0
+                        }
+                    }
+                }
+            }
+            else = {
+                AND = {
+                    custom_tooltip = {
+                        fail_text = "requires_building_capital_1"
+                        planet = {
+                            OR = {
+                                has_building = "building_machine_capital_1"
+                                has_building = "building_machine_capital_2"
+                                has_building = "building_machine_capital_3"
+                            }
+                        }
+                    }
+                    custom_tooltip = {
+                        fail_text = "requires_resource_greenaurium_1"
+                        tile = {
+                            has_resource = {
+                                type = sr_greenaurium
+                                amount > 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        always = yes
+    }
+
+    ai_weight = {
+        weight = 20
+    }
+
+    ai_replace = yes
+}
+
+building_sr_greenaurium_factory_03 = {
+    is_listed = no
+    empire_unique = no
+    planet_unique = no
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_sr_greenaurium_factory_03"
+    tags = {}
+
+    base_buildtime = 1300
+
+    prerequisites = {
+        "tech_mining_greenaurium"
+        "tech_mining_doctrine"
+    }
+
+    upgrades = {
+        "building_sr_greenaurium_factory_04"
+    }
+
+    cost = {
+        minerals = 1200
+        energy = 700
+    }
+
+    required_resources = {
+        energy = 3
+    }
+
+    produced_resources = {
+        minerals = 4
+    }
+
+    produced_resource_trigger = {
+        modifier = {
+            has_technology = "tech_mineral_processing_1"
+            resources = {
+                sr_refined_greenaurium = 1
+            }
+        }
+    }
+
+    country_modifier = {
+        max_minerals = 300
+    }
+
+    potential = {
+        planet = {
+            OR = {
+                is_planet_class = pc_arctic
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_subarctic
+                is_planet_class = pc_glacial
+                is_planet_class = pc_antarctic
+            }
+        }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = { has_authority = auth_machine_intelligence }
+                }
+            }
+            AND = {
+                custom_tooltip = {
+                    fail_text = "requires_building_capital_2"
+                    planet = {
+                        OR = {
+                            has_building = "building_capital_2"
+                            has_building = "building_capital_3"
+                        }
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_greenaurium_1"
+                    tile = {
+                        has_resource = {
+                            type = sr_greenaurium
+                            amount > 0
+                        }
+                    }
+                }
+            }
+            else = {
+                AND = {
+                    custom_tooltip = {
+                        fail_text = "requires_building_capital_2"
+                        planet = {
+                            OR = {
+                                has_building = "building_machine_capital_2"
+                                has_building = "building_machine_capital_3"
+                            }
+                        }
+                    }
+                    custom_tooltip = {
+                        fail_text = "requires_resource_greenaurium_1"
+                        tile = {
+                            has_resource = {
+                                type = sr_greenaurium
+                                amount > 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        always = yes
+    }
+
+    ai_weight = {
+        weight = 30
+    }
+
+    ai_replace = yes
+}
+
+building_sr_greenaurium_factory_04 = {
+    is_listed = no
+    empire_unique = no
+    planet_unique = no
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_sr_greenaurium_factory_04"
+    tags = {}
+
+    base_buildtime = 1500
+
+    prerequisites = {
+        "tech_mining_greenaurium"
+        "tech_mining_transcendence"
+    }
+
+    upgrades = {
+        "building_sr_greenaurium_factory_05"
+    }
+
+    cost = {
+        minerals = 1500
+        energy = 1000
+    }
+
+    required_resources = {
+        energy = 4
+    }
+
+    produced_resources = {
+        minerals = 5
+    }
+
+    produced_resource_trigger = {
+        modifier = {
+            AND = {
+                has_technology = "tech_mineral_processing_1"
+                NOT = {
+                    has_technology = "tech_mineral_processing_2"
+                }
+            }
+            resources = {
+                sr_refined_greenaurium = 1
+            }
+        }
+        modifier = {
+            has_technology = "tech_mineral_processing_2"
+            resources = {
+                sr_refined_greenaurium = 2
+            }
+        }
+    }
+
+    country_modifier = {
+        max_minerals = 400
+    }
+
+    potential = {
+        planet = {
+            OR = {
+                is_planet_class = pc_arctic
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_subarctic
+                is_planet_class = pc_glacial
+                is_planet_class = pc_antarctic
+            }
+        }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = { has_authority = auth_machine_intelligence }
+                }
+            }
+            AND = {
+                custom_tooltip = {
+                    fail_text = "requires_building_capital_2"
+                    planet = {
+                        OR = {
+                            has_building = "building_capital_2"
+                            has_building = "building_capital_3"
+                        }
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_greenaurium_1"
+                    tile = {
+                        has_resource = {
+                            type = sr_greenaurium
+                            amount > 0
+                        }
+                    }
+                }
+            }
+            else = {
+                AND = {
+                    custom_tooltip = {
+                        fail_text = "requires_building_capital_2"
+                        planet = {
+                            OR = {
+                                has_building = "building_machine_capital_2"
+                                has_building = "building_machine_capital_3"
+                            }
+                        }
+                    }
+                    custom_tooltip = {
+                        fail_text = "requires_resource_greenaurium_1"
+                        tile = {
+                            has_resource = {
+                                type = sr_greenaurium
+                                amount > 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        always = yes
+    }
+
+    ai_weight = {
+        weight = 40
+    }
+
+    ai_replace = yes
+}
+
+building_sr_greenaurium_factory_05 = {
+    is_listed = no
+    empire_unique = no
+    planet_unique = no
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_sr_greenaurium_factory_05"
+    tags = {}
+
+    base_buildtime = 1800
+
+    prerequisites = {
+        "tech_mining_greenaurium"
+        "tech_mining_infinitum"
+    }
+
+    cost = {
+        minerals = 1800
+        energy = 1400
+    }
+
+    required_resources = {
+        energy = 5
+    }
+
+    produced_resources = {
+        minerals = 6
+    }
+
+    produced_resource_trigger = {
+        modifier = {
+            AND = {
+                has_technology = "tech_mineral_processing_1"
+                NOT = {
+                    has_technology = "tech_mineral_processing_2"
+                }
+            }
+            resources = {
+                sr_refined_greenaurium = 1
+            }
+        }
+        modifier = {
+            has_technology = "tech_mineral_processing_2"
+            resources = {
+                sr_refined_greenaurium = 2
+            }
+        }
+    }
+
+    country_modifier = {
+        max_minerals = 500
+    }
+
+    potential = {
+        planet = {
+            OR = {
+                is_planet_class = pc_arctic
+                # @depend "Planetary Diversity" (id:819148835)
+                is_planet_class = pc_subarctic
+                is_planet_class = pc_glacial
+                is_planet_class = pc_antarctic
+            }
+        }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = { has_authority = auth_machine_intelligence }
+                }
+            }
+            AND = {
+                custom_tooltip = {
+                    fail_text = "requires_building_capital_3"
+                    planet = {
+                        has_building = "building_capital_3"
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_greenaurium_1"
+                    tile = {
+                        has_resource = {
+                            type = sr_greenaurium
+                            amount > 0
+                        }
+                    }
+                }
+            }
+            else = {
+                AND = {
+                    custom_tooltip = {
+                        fail_text = "requires_building_capital_3"
+                        planet = {
+                            has_building = "building_machine_capital_3"
+                        }
+                    }
+                    custom_tooltip = {
+                        fail_text = "requires_resource_greenaurium_1"
+                        tile = {
+                            has_resource = {
+                                type = sr_greenaurium
                                 amount > 0
                             }
                         }

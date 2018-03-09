@@ -21,6 +21,7 @@ sr_galkatite = {
     tradable = yes
     is_rare = yes
     is_planet_local = yes
+    collect_if_wrong_building = no
 
     modifier = {
         max_minerals = 1000
@@ -31,3 +32,28 @@ sr_galkatite = {
 #########################
 ### Category: Minerals
 #########################
+
+sr_greenaurium = {
+    AI_category = minerals
+    prerequisites = { "tech_mining_greenaurium" }
+    tradable = yes
+    is_rare = yes
+    is_planet_local = yes
+    collect_if_wrong_building = no
+
+    modifier = {
+        weapon_type_energy_weapon_damage_mult = 0.05
+    }
+}
+
+sr_refined_greenaurium = {
+    AI_category = minerals
+    tradable = yes
+    is_rare = no
+    is_planet_local = no
+    is_global = no
+
+    modifier = {
+        weapon_type_energy_weapon_damage_mult = 0.15
+    }
+}

@@ -45,6 +45,8 @@
     tech_mining_xithricite_desc: "Промышленная добыча Хитрициновой руды"
     tech_mining_galkatite: "Промышленная добыча Галкатитовых кристаллов"
     tech_mining_galkatite_desc: "Промышленная добыча Галкатитовых кристаллов"
+    tech_mining_greenaurium: "Промышленное выращивание Гринариумной руды"
+    tech_mining_greenaurium_desc: "Промышленное выращивание Гринариумной руды"
     # Engineering technologies
     tech_advanced_engineering: "Передовые инженерные работы"
     tech_advanced_engineering_desc: "Передовые инженерные работы"
@@ -423,6 +425,8 @@
     tech_mining_xithricite_prereqfor.desc: "Промышленная добыча Хитрициновой руды"
     tech_mining_galkatite_prereqfor.title: "Промышленная добыча Галкатитовых кристаллов"
     tech_mining_galkatite_prereqfor.desc: "Промышленная добыча Галкатитовых кристаллов"
+    tech_mining_greenaurium_prereqfor.title: "Промышленное выращивание Гринариумной руды"
+    tech_mining_greenaurium_prereqfor.desc: "Промышленное выращивание Гринариумной руды"
     # Engineering technology prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
     tech_advanced_engineering_prereqfor.desc: "Передовые инженерные работы"
