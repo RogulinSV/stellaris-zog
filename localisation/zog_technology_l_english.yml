@@ -47,6 +47,10 @@
     tech_mining_galkatite_desc: ""
     tech_mining_greenaurium: ""
     tech_mining_greenaurium_desc: ""
+    tech_mining_admilium: ""
+    tech_mining_admilium_desc: ""
+    tech_mining_cobaltium: ""
+    tech_mining_cobaltium_desc: ""
     # Engineering technologies
     tech_advanced_engineering: ""
     tech_advanced_engineering_desc: ""
@@ -421,6 +425,10 @@
     tech_mining_galkatite_prereqfor.desc: ""
     tech_mining_greenaurium_prereqfor.title: ""
     tech_mining_greenaurium_prereqfor.desc: ""
+    tech_mining_admilium_prereqfor.title: ""
+    tech_mining_admilium_prereqfor.desc: ""
+    tech_mining_cobaltium_prereqfor.title: ""
+    tech_mining_cobaltium_prereqfor.desc: ""
     # Engineering technology prerequisites
     tech_advanced_engineering_prereqfor.title: ""
     tech_advanced_engineering_prereqfor.desc: ""

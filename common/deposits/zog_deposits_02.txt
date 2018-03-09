@@ -20,7 +20,7 @@ d_xithricite_deposit = {
             }
         }
         modifier = {
-            weight = 0.5
+            weight = 0.2
             planet = {
                 OR = {
                     is_planet_class = pc_toxic
@@ -207,6 +207,92 @@ d_greenaurium_deposit_2 = {
 
 d_refined_greenaurium_deposit = {
     resources = { sr_refined_greenaurium = 0 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_admilium_deposit = {
+    resources = {
+        sr_admilium = 1
+    }
+    is_orbital_slot = yes
+
+    station = shipclass_mining_station
+    orbital_weight = { weight = 10 }
+
+    drop_weight = {
+        weight = 0
+        modifier = {
+            weight = 0.1
+            planet = {
+                OR = {
+                    is_planet_class = pc_barren
+                    is_planet_class = pc_barren_cold
+                    is_planet_class = pc_asteroid
+                }
+            }
+        }
+        modifier = {
+            weight = 0.3
+            planet = {
+                is_planet_class = pc_crystal_asteroid
+            }
+        }
+        modifier = {
+            factor = 0
+            planet = {
+                has_owner = yes
+            }
+        }
+    }
+}
+
+d_admilium_deposit_2 = {
+    resources = { sr_admilium = 2 }
+    station = shipclass_mining_station
+    drop_weight = { weight = 0 }
+    orbital_weight = { weight = 0 }
+}
+
+d_cobaltium_deposit = {
+    resources = {
+        sr_cobaltium = 1
+    }
+    is_orbital_slot = yes
+
+    station = shipclass_mining_station
+    orbital_weight = { weight = 10 }
+
+    drop_weight = {
+        weight = 0
+        modifier = {
+            weight = 0.1
+            planet = {
+                OR = {
+                    is_planet_class = pc_barren
+                    is_planet_class = pc_barren_cold
+                    is_planet_class = pc_asteroid
+                }
+            }
+        }
+        modifier = {
+            weight = 0.3
+            planet = {
+                is_planet_class = pc_crystal_asteroid
+            }
+        }
+        modifier = {
+            factor = 0
+            planet = {
+                has_owner = yes
+            }
+        }
+    }
+}
+
+d_cobaltium_deposit_2 = {
+    resources = { sr_cobaltium = 2 }
     station = shipclass_mining_station
     drop_weight = { weight = 0 }
     orbital_weight = { weight = 0 }

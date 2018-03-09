@@ -47,6 +47,10 @@
     tech_mining_galkatite_desc: "Промышленная добыча Галкатитовых кристаллов"
     tech_mining_greenaurium: "Промышленное выращивание Гринариумной руды"
     tech_mining_greenaurium_desc: "Промышленное выращивание Гринариумной руды"
+    tech_mining_admilium: "Промышленная добыча Адмилиумных камней"
+    tech_mining_admilium_desc: "Промышленная добыча Адмилиумных камней"
+    tech_mining_cobaltium: "Промышленная добыча Кобалтиумных камней"
+    tech_mining_cobaltium_desc: "Промышленная добыча Кобалтиумных камней"
     # Engineering technologies
     tech_advanced_engineering: "Передовые инженерные работы"
     tech_advanced_engineering_desc: "Передовые инженерные работы"
@@ -427,6 +431,10 @@
     tech_mining_galkatite_prereqfor.desc: "Промышленная добыча Галкатитовых кристаллов"
     tech_mining_greenaurium_prereqfor.title: "Промышленное выращивание Гринариумной руды"
     tech_mining_greenaurium_prereqfor.desc: "Промышленное выращивание Гринариумной руды"
+    tech_mining_admilium_prereqfor.title: "Промышленная добыча Адмилиумных камней"
+    tech_mining_admilium_prereqfor.desc: "Промышленная добыча Адмилиумных камней"
+    tech_mining_cobaltium_prereqfor.title: "Промышленная добыча Кобалтиумных камней"
+    tech_mining_cobaltium_prereqfor.desc: "Промышленная добыча Кобалтиумных камней"
     # Engineering technology prerequisites
     tech_advanced_engineering_prereqfor.title: "Передовые инженерные работы"
     tech_advanced_engineering_prereqfor.desc: "Передовые инженерные работы"
