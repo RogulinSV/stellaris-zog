@@ -48,7 +48,7 @@ edem_system = {
 
     planet = {
         name = "NAME_Selena"
-        class = pc_desert
+        class = pc_crystal # pc_desert
         orbit_distance = 60
         orbit_angle = { min = 10 max = 350 }
         size = { min = @habitable_planet_mod_size max = @habitable_planet_max_size }
@@ -63,7 +63,7 @@ edem_system = {
 
         moon = {
             name = "NAME_Caliban"
-            class = pc_molten
+            class = pc_dwarf # pc_molten
             size = @celestial_min_size
             orbit_distance = 0
             orbit_angle = { min = 10 max = 350 }

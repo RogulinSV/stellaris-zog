@@ -1,9 +1,9 @@
 ######################
-### Tiberium planet
+### Crystal planet
 ######################
 
 terraform_link = {
-    from = "pc_tiberium"
+    from = "pc_crystal"
     to = "pc_continental"
 
     energy = 16000
@@ -19,7 +19,7 @@ terraform_link = {
 }
 
 terraform_link = {
-    from = "pc_tiberium"
+    from = "pc_crystal"
     to = "pc_tropical"
 
     energy = 18000
@@ -35,7 +35,7 @@ terraform_link = {
 }
 
 terraform_link = {
-    from = "pc_tiberium"
+    from = "pc_crystal"
     to = "pc_tundra"
 
     energy = 12000
@@ -51,7 +51,7 @@ terraform_link = {
 }
 
 terraform_link = {
-    from = "pc_tiberium"
+    from = "pc_crystal"
     to = "pc_arid"
 
     energy = 12000
@@ -67,7 +67,7 @@ terraform_link = {
 }
 
 terraform_link = {
-    from = "pc_tiberium"
+    from = "pc_crystal"
     to = "pc_savannah"
 
     energy = 13000
@@ -84,7 +84,7 @@ terraform_link = {
 
 terraform_link = {
     from = "pc_continental"
-    to = "pc_tiberium"
+    to = "pc_crystal"
 
     energy = 20000
     duration = 6000
@@ -106,7 +106,7 @@ terraform_link = {
 
 terraform_link = {
     from = "pc_tropical"
-    to = "pc_tiberium"
+    to = "pc_crystal"
 
     energy = 20000
     duration = 6000

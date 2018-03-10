@@ -2,12 +2,12 @@
 
 @planet_standard_scale = 11
 @planet_chance_of_ring = 0.25
-@tiberium_planet_max_size = 25
-@tiberium_planet_min_size = 16
-@tiberium_moon_max_size = 20
-@tiberium_moon_min_size = 13
-@tiberium_spawn_odds = 0.2
-@tiberium_production_spawn_chance = 0.85
+@crystal_planet_max_size = 25
+@crystal_planet_min_size = 16
+@crystal_moon_max_size = 20
+@crystal_moon_min_size = 13
+@crystal_spawn_odds = 0.2
+@crystal_production_spawn_chance = 0.85
 @dwarf_planet_max_size = 16
 @dwarf_planet_min_size = 9
 @dwarf_moon_max_size = 13
@@ -15,8 +15,8 @@
 @dwarf_spawn_odds = 3
 @dwarf_production_spawn_chance = 0.75
 
-pc_tiberium = {
-    entity = "tiberium_planet"
+pc_crystal = {
+    entity = "crystal_planet"
     entity_scale = @planet_standard_scale
     icon_frame = 11
 
@@ -27,15 +27,15 @@ pc_tiberium = {
     min_distance_from_sun = 0
     max_distance_from_sun = 1000
 
-    spawn_odds = @tiberium_spawn_odds
+    spawn_odds = @crystal_spawn_odds
     extra_orbit_size = 0
     extra_planet_count = 0
     chance_of_ring = @planet_chance_of_ring
-    production_spawn_chance = @tiberium_production_spawn_chance
+    production_spawn_chance = @crystal_production_spawn_chance
     can_be_moon = no
 
-    planet_size = { min = @tiberium_planet_min_size max = @tiberium_planet_max_size }
-    moon_size = { min = @tiberium_moon_min_size max = @tiberium_moon_max_size }
+    planet_size = { min = @crystal_planet_min_size max = @crystal_planet_max_size }
+    moon_size = { min = @crystal_moon_min_size max = @crystal_moon_max_size }
 
     colonizable = no
 }
