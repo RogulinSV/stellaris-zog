@@ -23,8 +23,8 @@ sr_galkatite = {
     collect_if_wrong_building = no
 
     modifier = {
-        max_minerals = 1000
-        tile_resource_minerals_mult = 0.10
+        max_minerals = 5000
+        tile_resource_minerals_mult = 1.0
     }
 }
 
@@ -65,11 +65,8 @@ sr_admilium = {
     is_global = yes
 
     modifier = {
-        shipsize_colonizer_build_speed_mult = 0.16
-        shipsize_corvette_build_speed_mult = 0.13
-        shipsize_destroyer_build_speed_mult = 0.10
-        shipsize_cruiser_build_speed_mult = 0.08
-        shipsize_battleship_build_speed_mult = 0.05
+        ship_interstellar_speed_mult = 0.10
+        ship_speed_mult = 0.10
     }
 }
 
@@ -81,13 +78,8 @@ sr_cobaltium = {
     is_global = yes
 
     modifier = {
-        shipsize_colonizer_build_cost_mult = -0.16
-        shipsize_constructor_build_cost_mult = -0.16
-        shipsize_science_build_cost_mult = -0.16
-        shipsize_corvette_build_cost_mult = -0.13
-        shipsize_destroyer_build_cost_mult = -0.10
-        shipsize_cruiser_build_cost_mult = -0.08
-        shipsize_battleship_build_cost_mult = -0.05
+        ship_shield_mult = 0.10
+        ship_shield_regen_add_perc = 0.05
     }
 }
 
