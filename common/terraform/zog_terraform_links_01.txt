@@ -639,3 +639,453 @@ terraform_link = {
         weight = 0
     }
 }
+
+#########################
+### Trans-Terraforming
+#########################
+
+terraform_link = {
+    from = "pc_methane_habitable"
+    to = "pc_crystal_habitable"
+
+    energy = 20000
+    duration = 6000
+
+    condition = {
+        AND = {
+            has_technology = "tech_methane_climate_adaptation"
+            has_technology = "tech_crystal_climate_adaptation"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_carbon_habitable"
+    to = "pc_crystal_habitable"
+
+    energy = 20000
+    duration = 6000
+
+    condition = {
+        AND = {
+            has_technology = "tech_carbon_climate_adaptation"
+            has_technology = "tech_crystal_climate_adaptation"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_carbon_warm_habitable"
+    to = "pc_crystal_habitable"
+
+    energy = 20000
+    duration = 6000
+
+    condition = {
+        AND = {
+            has_technology = "tech_carbon_climate_adaptation"
+            has_technology = "tech_crystal_climate_adaptation"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_habitable"
+    to = "pc_crystal_habitable"
+
+    energy = 20000
+    duration = 6000
+
+    condition = {
+        AND = {
+            has_technology = "tech_nitrogen_climate_adaptation"
+            has_technology = "tech_crystal_climate_adaptation"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_warm_habitable"
+    to = "pc_crystal_habitable"
+
+    energy = 20000
+    duration = 6000
+
+    condition = {
+        AND = {
+            has_technology = "tech_nitrogen_climate_adaptation"
+            has_technology = "tech_crystal_climate_adaptation"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_cold_habitable"
+    to = "pc_crystal_habitable"
+
+    energy = 20000
+    duration = 6000
+
+    condition = {
+        AND = {
+            has_technology = "tech_nitrogen_climate_adaptation"
+            has_technology = "tech_crystal_climate_adaptation"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_sulfuric_habitable"
+    to = "pc_crystal_habitable"
+
+    energy = 20000
+    duration = 6000
+
+    condition = {
+        AND = {
+            has_technology = "tech_sulfuric_climate_adaptation"
+            has_technology = "tech_crystal_climate_adaptation"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_sulfuric_warm_habitable"
+    to = "pc_crystal_habitable"
+
+    energy = 20000
+    duration = 6000
+
+    condition = {
+        AND = {
+            has_technology = "tech_sulfuric_climate_adaptation"
+            has_technology = "tech_crystal_climate_adaptation"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_sulfuric_cold_habitable"
+    to = "pc_crystal_habitable"
+
+    energy = 20000
+    duration = 6000
+
+    condition = {
+        AND = {
+            has_technology = "tech_sulfuric_climate_adaptation"
+            has_technology = "tech_crystal_climate_adaptation"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_montane_habitable"
+    to = "pc_crystal_habitable"
+
+    energy = 20000
+    duration = 6000
+
+    condition = {
+        AND = {
+            has_technology = "tech_montane_climate_adaptation"
+            has_technology = "tech_crystal_climate_adaptation"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_montane_warm_habitable"
+    to = "pc_crystal_habitable"
+
+    energy = 20000
+    duration = 6000
+
+    condition = {
+        AND = {
+            has_technology = "tech_montane_climate_adaptation"
+            has_technology = "tech_crystal_climate_adaptation"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_montane_cold_habitable"
+    to = "pc_crystal_habitable"
+
+    energy = 20000
+    duration = 6000
+
+    condition = {
+        AND = {
+            has_technology = "tech_montane_climate_adaptation"
+            has_technology = "tech_crystal_climate_adaptation"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_flatvacuum_cold_habitable"
+    to = "pc_crystal_habitable"
+
+    energy = 20000
+    duration = 6000
+
+    condition = {
+        AND = {
+            has_technology = "tech_flatvacuum_climate_adaptation"
+            has_technology = "tech_crystal_climate_adaptation"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_flatvacuum_warm_habitable"
+    to = "pc_crystal_habitable"
+
+    energy = 20000
+    duration = 6000
+
+    condition = {
+        AND = {
+            has_technology = "tech_flatvacuum_climate_adaptation"
+            has_technology = "tech_crystal_climate_adaptation"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_subtropical"
+    to = "pc_crystal_habitable"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    condition = {
+        AND = {
+            has_technology = "tech_subtropical_climate_adaptation"
+            has_technology = "tech_crystal_climate_adaptation"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_subsavannah"
+    to = "pc_crystal_habitable"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    condition = {
+        AND = {
+            has_technology = "tech_subsavannah_climate_adaptation"
+            has_technology = "tech_crystal_climate_adaptation"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_subtundra"
+    to = "pc_crystal_habitable"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    condition = {
+        AND = {
+            has_technology = "tech_subtundra_climate_adaptation"
+            has_technology = "tech_crystal_climate_adaptation"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_subcontinental"
+    to = "pc_crystal_habitable"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    condition = {
+        AND = {
+            has_technology = "tech_subcontinental_climate_adaptation"
+            has_technology = "tech_crystal_climate_adaptation"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_floatislands"
+    to = "pc_crystal_habitable"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    condition = {
+        AND = {
+            has_technology = "tech_floatislands_climate_adaptation"
+            has_technology = "tech_crystal_climate_adaptation"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_exogarden"
+    to = "pc_crystal_habitable"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    condition = {
+        AND = {
+            has_technology = "tech_exogarden_climate_adaptation"
+            has_technology = "tech_crystal_climate_adaptation"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_xenovalley"
+    to = "pc_crystal_habitable"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    condition = {
+        AND = {
+            has_technology = "tech_xenovalley_climate_adaptation"
+            has_technology = "tech_crystal_climate_adaptation"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_geoprairie"
+    to = "pc_crystal_habitable"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    condition = {
+        AND = {
+            has_technology = "tech_geoprairie_climate_adaptation"
+            has_technology = "tech_crystal_climate_adaptation"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_magmatic"
+    to = "pc_crystal_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        AND = {
+            has_technology = "tech_magmatic_climate_adaptation"
+            has_technology = "tech_crystal_climate_adaptation"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
