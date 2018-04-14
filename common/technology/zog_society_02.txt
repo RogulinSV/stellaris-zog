@@ -1,0 +1,1221 @@
+############################
+## Society / Tile Blockers
+############################
+
+tech_crystal_climate_adaptation = {
+    cost = 20000
+    area = society
+    start_tech = no
+    category = { new_worlds }
+    icon = "tech_crystal_climate_adaptation"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_climate_restoration"
+        "tech_ecological_adaptation"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_crystal_climate_adaptation_prereqfor.title
+            desc = tech_crystal_climate_adaptation_prereqfor.desc
+        }
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 3.0
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOT = {
+                    is_planet_class = pc_crystal_habitable
+                }
+            }
+        }
+        modifier = {
+            factor = 2.0
+            ideal_planet_class = pc_crystal_habitable
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 3
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOT = {
+                    is_planet_class = pc_crystal_habitable
+                }
+            }
+        }
+    }
+}
+
+tech_methane_climate_adaptation = {
+    cost = 20000
+    area = society
+    start_tech = no
+    category = { new_worlds }
+    icon = "tech_methane_climate_adaptation"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_climate_restoration"
+        "tech_ecological_adaptation"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_methane_climate_adaptation_prereqfor.title
+            desc = tech_methane_climate_adaptation_prereqfor.desc
+        }
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 3.0
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOT = {
+                    is_planet_class = pc_methane_habitable
+                }
+            }
+        }
+        modifier = {
+            factor = 2.0
+            ideal_planet_class = pc_methane_habitable
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 3
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOT = {
+                    is_planet_class = pc_methane_habitable
+                }
+            }
+        }
+    }
+}
+
+tech_carbon_climate_adaptation = {
+    cost = 20000
+    area = society
+    start_tech = no
+    category = { new_worlds }
+    icon = "tech_carbon_climate_adaptation"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_climate_restoration"
+        "tech_ecological_adaptation"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_carbon_climate_adaptation_prereqfor.title
+            desc = tech_carbon_climate_adaptation_prereqfor.desc
+        }
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 3.0
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NAND = {
+                    is_planet_class = pc_carbon_habitable
+                    is_planet_class = pc_carbon_warm_habitable
+                }
+            }
+        }
+        modifier = {
+            factor = 2.0
+            OR = {
+                ideal_planet_class = pc_methane_habitable
+                ideal_planet_class = pc_carbon_warm_habitable
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 3
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NAND = {
+                    is_planet_class = pc_carbon_habitable
+                    is_planet_class = pc_carbon_warm_habitable
+                }
+            }
+        }
+    }
+}
+
+tech_nitrogen_climate_adaptation = {
+    cost = 20000
+    area = society
+    start_tech = no
+    category = { new_worlds }
+    icon = "tech_nitrogen_climate_adaptation"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_climate_restoration"
+        "tech_ecological_adaptation"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_nitrogen_climate_adaptation_prereqfor.title
+            desc = tech_nitrogen_climate_adaptation_prereqfor.desc
+        }
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 3.0
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NAND = {
+                    is_planet_class = pc_nitrogen_habitable
+                    is_planet_class = pc_nitrogen_warm_habitable
+                    is_planet_class = pc_nitrogen_cold_habitable
+                }
+            }
+        }
+        modifier = {
+            factor = 2.0
+            OR = {
+                ideal_planet_class = pc_nitrogen_habitable
+                ideal_planet_class = pc_nitrogen_warm_habitable
+                ideal_planet_class = pc_nitrogen_cold_habitable
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 3
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NAND = {
+                    is_planet_class = pc_nitrogen_habitable
+                    is_planet_class = pc_nitrogen_warm_habitable
+                    is_planet_class = pc_nitrogen_cold_habitable
+                }
+            }
+        }
+    }
+}
+
+tech_sulfuric_climate_adaptation = {
+    cost = 20000
+    area = society
+    start_tech = no
+    category = { new_worlds }
+    icon = "tech_sulfuric_climate_adaptation"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_climate_restoration"
+        "tech_ecological_adaptation"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_sulfuric_climate_adaptation_prereqfor.title
+            desc = tech_sulfuric_climate_adaptation_prereqfor.desc
+        }
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 3.0
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NAND = {
+                    is_planet_class = pc_sulfuric_habitable
+                    is_planet_class = pc_sulfuric_warm_habitable
+                    is_planet_class = pc_sulfuric_cold_habitable
+                }
+            }
+        }
+        modifier = {
+            factor = 2.0
+            OR = {
+                ideal_planet_class = pc_sulfuric_habitable
+                ideal_planet_class = pc_sulfuric_warm_habitable
+                ideal_planet_class = pc_sulfuric_cold_habitable
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 3
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NAND = {
+                    is_planet_class = pc_sulfuric_habitable
+                    is_planet_class = pc_sulfuric_warm_habitable
+                    is_planet_class = pc_sulfuric_cold_habitable
+                }
+            }
+        }
+    }
+}
+
+tech_montane_climate_adaptation = {
+    cost = 20000
+    area = society
+    start_tech = no
+    category = { new_worlds }
+    icon = "tech_montane_climate_adaptation"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_climate_restoration"
+        "tech_ecological_adaptation"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_montane_climate_adaptation_prereqfor.title
+            desc = tech_montane_climate_adaptation_prereqfor.desc
+        }
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 3.0
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NAND = {
+                    is_planet_class = pc_montane_habitable
+                    is_planet_class = pc_montane_warm_habitable
+                    is_planet_class = pc_montane_cold_habitable
+                }
+            }
+        }
+        modifier = {
+            factor = 2.0
+            OR = {
+                ideal_planet_class = pc_montane_habitable
+                ideal_planet_class = pc_montane_warm_habitable
+                ideal_planet_class = pc_montane_cold_habitable
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 3
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NAND = {
+                    is_planet_class = pc_montane_habitable
+                    is_planet_class = pc_montane_warm_habitable
+                    is_planet_class = pc_montane_cold_habitable
+                }
+            }
+        }
+    }
+}
+
+tech_flatvacuum_climate_adaptation = {
+    cost = 20000
+    area = society
+    start_tech = no
+    category = { new_worlds }
+    icon = "tech_flatvacuum_climate_adaptation"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_climate_restoration"
+        "tech_ecological_adaptation"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_flatvacuum_climate_adaptation_prereqfor.title
+            desc = tech_flatvacuum_climate_adaptation_prereqfor.desc
+        }
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 3.0
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NAND = {
+                    is_planet_class = pc_flatvacuum_warm_habitable
+                    is_planet_class = pc_flatvacuum_cold_habitable
+                }
+            }
+        }
+        modifier = {
+            factor = 2.0
+            OR = {
+                ideal_planet_class = pc_flatvacuum_warm_habitable
+                ideal_planet_class = pc_flatvacuum_cold_habitable
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 3
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NAND = {
+                    is_planet_class = pc_flatvacuum_warm_habitable
+                    is_planet_class = pc_flatvacuum_cold_habitable
+                }
+            }
+        }
+    }
+}
+
+tech_subtropical_climate_adaptation = {
+    cost = 35000
+    area = society
+    start_tech = no
+    category = { new_worlds }
+    icon = "tech_subtropical_climate_adaptation"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_climate_restoration"
+        "tech_ecological_adaptation"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_subtropical_climate_adaptation_prereqfor.title
+            desc = tech_subtropical_climate_adaptation_prereqfor.desc
+        }
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_mastery_of_nature"
+            }
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOT = {
+                    is_planet_class = pc_subtropical
+                }
+            }
+        }
+        modifier = {
+            factor = 1.75
+            ideal_planet_class = pc_subtropical
+        }
+        modifier = {
+            factor = 1.35
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_mastery_of_nature"
+            }
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOT = {
+                    is_planet_class = pc_subtropical
+                }
+            }
+        }
+    }
+}
+
+tech_subsavannah_climate_adaptation = {
+    cost = 35000
+    area = society
+    start_tech = no
+    category = { new_worlds }
+    icon = "tech_subsavannah_climate_adaptation"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_climate_restoration"
+        "tech_ecological_adaptation"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_subsavannah_climate_adaptation_prereqfor.title
+            desc = tech_subsavannah_climate_adaptation_prereqfor.desc
+        }
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_mastery_of_nature"
+            }
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOT = {
+                    is_planet_class = pc_subsavannah
+                }
+            }
+        }
+        modifier = {
+            factor = 1.75
+            ideal_planet_class = pc_subsavannah
+        }
+        modifier = {
+            factor = 1.35
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_mastery_of_nature"
+            }
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOT = {
+                    is_planet_class = pc_subsavannah
+                }
+            }
+        }
+    }
+}
+
+tech_subtundra_climate_adaptation = {
+    cost = 30000
+    area = society
+    start_tech = no
+    category = { new_worlds }
+    icon = "tech_subtundra_climate_adaptation"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_climate_restoration"
+        "tech_ecological_adaptation"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_subtundra_climate_adaptation_prereqfor.title
+            desc = tech_subtundra_climate_adaptation_prereqfor.desc
+        }
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_mastery_of_nature"
+            }
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOT = {
+                    is_planet_class = pc_subtundra
+                }
+            }
+        }
+        modifier = {
+            factor = 1.75
+            ideal_planet_class = pc_subtundra
+        }
+        modifier = {
+            factor = 1.35
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_mastery_of_nature"
+            }
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOT = {
+                    is_planet_class = pc_subtundra
+                }
+            }
+        }
+    }
+}
+
+tech_subcontinental_climate_adaptation = {
+    cost = 35000
+    area = society
+    start_tech = no
+    category = { new_worlds }
+    icon = "tech_subcontinental_climate_adaptation"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_climate_restoration"
+        "tech_ecological_adaptation"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_subcontinental_climate_adaptation_prereqfor.title
+            desc = tech_subcontinental_climate_adaptation_prereqfor.desc
+        }
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_mastery_of_nature"
+            }
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOT = {
+                    is_planet_class = pc_subcontinental
+                }
+            }
+        }
+        modifier = {
+            factor = 1.75
+            ideal_planet_class = pc_subcontinental
+        }
+        modifier = {
+            factor = 1.35
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_mastery_of_nature"
+            }
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOT = {
+                    is_planet_class = pc_subcontinental
+                }
+            }
+        }
+    }
+}
+
+tech_floatislands_climate_adaptation = {
+    cost = 30000
+    area = society
+    start_tech = no
+    category = { new_worlds }
+    icon = "tech_floatislands_climate_adaptation"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_climate_restoration"
+        "tech_ecological_adaptation"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_floatislands_climate_adaptation_prereqfor.title
+            desc = tech_floatislands_climate_adaptation_prereqfor.desc
+        }
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_mastery_of_nature"
+            }
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOT = {
+                    is_planet_class = pc_floatislands
+                }
+            }
+        }
+        modifier = {
+            factor = 1.75
+            ideal_planet_class = pc_floatislands
+        }
+        modifier = {
+            factor = 1.35
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_mastery_of_nature"
+            }
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOT = {
+                    is_planet_class = pc_floatislands
+                }
+            }
+        }
+    }
+}
+
+tech_exogarden_climate_adaptation = {
+    cost = 50000
+    area = society
+    start_tech = no
+    category = { new_worlds }
+    icon = "tech_exogarden_climate_adaptation"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_climate_restoration"
+        "tech_ecological_adaptation"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_exogarden_climate_adaptation_prereqfor.title
+            desc = tech_exogarden_climate_adaptation_prereqfor.desc
+        }
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_mastery_of_nature"
+            }
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOT = {
+                    is_planet_class = pc_exogarden
+                }
+            }
+        }
+        modifier = {
+            factor = 1.55
+            ideal_planet_class = pc_exogarden
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = society
+                NOT = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_mastery_of_nature"
+            }
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOT = {
+                    is_planet_class = pc_exogarden
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = society
+                NOT = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                }
+            }
+        }
+    }
+}
+
+tech_xenovalley_climate_adaptation = {
+    cost = 35000
+    area = society
+    start_tech = no
+    category = { new_worlds }
+    icon = "tech_xenovalley_climate_adaptation"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_climate_restoration"
+        "tech_ecological_adaptation"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_xenovalley_climate_adaptation_prereqfor.title
+            desc = tech_xenovalley_climate_adaptation_prereqfor.desc
+        }
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_mastery_of_nature"
+            }
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOT = {
+                    is_planet_class = pc_xenovalley
+                }
+            }
+        }
+        modifier = {
+            factor = 1.75
+            ideal_planet_class = pc_xenovalley
+        }
+        modifier = {
+            factor = 1.35
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_mastery_of_nature"
+            }
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOT = {
+                    is_planet_class = pc_xenovalley
+                }
+            }
+        }
+    }
+}
+
+tech_geoprairie_climate_adaptation = {
+    cost = 35000
+    area = society
+    start_tech = no
+    category = { new_worlds }
+    icon = "tech_geoprairie_climate_adaptation"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_climate_restoration"
+        "tech_ecological_adaptation"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_geoprairie_climate_adaptation_prereqfor.title
+            desc = tech_geoprairie_climate_adaptation_prereqfor.desc
+        }
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_mastery_of_nature"
+            }
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOT = {
+                    is_planet_class = pc_geoprairie
+                }
+            }
+        }
+        modifier = {
+            factor = 1.75
+            ideal_planet_class = pc_geoprairie
+        }
+        modifier = {
+            factor = 1.35
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_mastery_of_nature"
+            }
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOT = {
+                    is_planet_class = pc_geoprairie
+                }
+            }
+        }
+    }
+}
+
+tech_magmatic_climate_adaptation = {
+    cost = 20000
+    area = society
+    start_tech = no
+    category = { new_worlds }
+    icon = "tech_magmatic_climate_adaptation"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_climate_restoration"
+        "tech_ecological_adaptation"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_magmatic_climate_adaptation_prereqfor.title
+            desc = tech_magmatic_climate_adaptation_prereqfor.desc
+        }
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 3.0
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOT = {
+                    is_planet_class = pc_magmatic
+                }
+            }
+        }
+        modifier = {
+            factor = 2.0
+            ideal_planet_class = pc_magmatic
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 3
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            any_planet_within_border = {
+                NOT = {
+                    is_planet_class = pc_magmatic
+                }
+            }
+        }
+    }
+}
