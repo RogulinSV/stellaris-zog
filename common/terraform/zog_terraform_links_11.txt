@@ -1,0 +1,553 @@
+############################
+### Subcontinental planet
+############################
+
+##########
+### From
+##########
+
+terraform_link = {
+    from = "pc_subcontinental"
+    to = "pc_continental"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_ecological_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_subcontinental"
+    to = "pc_tropical"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_ecological_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_subcontinental"
+    to = "pc_tundra"
+
+    energy = 30000
+    minerals = 5500
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_subcontinental"
+    to = "pc_arid"
+
+    energy = 30000
+    minerals = 5500
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_subcontinental"
+    to = "pc_desert"
+
+    energy = 30000
+    minerals = 5500
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_subcontinental"
+    to = "pc_arctic"
+
+    energy = 30000
+    minerals = 4000
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_subcontinental"
+    to = "pc_ocean"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_subcontinental"
+    to = "pc_savannah"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_subcontinental"
+    to = "pc_alpine"
+
+    energy = 30000
+    minerals = 4000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_subcontinental"
+    to = "pc_gaia"
+
+    energy = 30000
+    minerals = 15000
+    duration = 10000
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_climate_restoration"
+        has_technology = "tech_ecological_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_subcontinental"
+    to = "pc_machine"
+
+    energy = 30000
+    duration = 10000
+
+    potential = {
+        has_ascension_perk = "ap_machine_worlds"
+    }
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 20
+        modifier = {
+            factor = 0
+            from = {
+                any_owned_pop = {
+                    NOR = {
+                        has_trait = trait_machine_unit
+                        has_trait = trait_mechanical
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            from = {
+                is_colony = no
+            }
+        }
+    }
+}
+
+##########
+### To
+##########
+
+terraform_link = {
+    from = "pc_continental"
+    to = "pc_subcontinental"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_subcontinental_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_tropical"
+    to = "pc_subcontinental"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_subcontinental_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_tundra"
+    to = "pc_subcontinental"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_subcontinental_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_arid"
+    to = "pc_subcontinental"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_subcontinental_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_desert"
+    to = "pc_subcontinental"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_subcontinental_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_arctic"
+    to = "pc_subcontinental"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_subcontinental_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_ocean"
+    to = "pc_subcontinental"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_subcontinental_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_savannah"
+    to = "pc_subcontinental"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_subcontinental_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_alpine"
+    to = "pc_subcontinental"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_subcontinental_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_gaia"
+    to = "pc_subcontinental"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_subcontinental_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_barren"
+    to = "pc_subcontinental"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    potential = {
+        from = {
+            AND = {
+                planet_size > 14
+                planet_size < 26
+            }
+        }
+    }
+
+    condition = {
+        has_technology = "tech_subcontinental_climate_adaptation"
+    }
+
+    effect = {
+        from = {
+            reroll_deposits = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_barren_cold"
+    to = "pc_subcontinental"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    potential = {
+        from = {
+            AND = {
+                planet_size > 14
+                planet_size < 26
+            }
+        }
+    }
+
+    condition = {
+        has_technology = "tech_subcontinental_climate_adaptation"
+    }
+
+    effect = {
+        from = {
+            reroll_deposits = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_toxic"
+    to = "pc_subcontinental"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    potential = {
+        from = {
+            AND = {
+                planet_size > 14
+                planet_size < 26
+            }
+        }
+    }
+
+    condition = {
+        has_technology = "tech_subcontinental_climate_adaptation"
+    }
+
+    effect = {
+        from = {
+            reroll_deposits = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_frozen"
+    to = "pc_subcontinental"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    potential = {
+        from = {
+            AND = {
+                planet_size > 14
+                planet_size < 26
+            }
+        }
+    }
+
+    condition = {
+        has_technology = "tech_subcontinental_climate_adaptation"
+    }
+
+    effect = {
+        from = {
+            reroll_deposits = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_molten"
+    to = "pc_subcontinental"
+
+    energy = 30000
+    minerals = 7500
+    duration = 7200
+
+    potential = {
+        from = {
+            AND = {
+                planet_size > 14
+                planet_size < 26
+            }
+        }
+    }
+
+    condition = {
+        has_technology = "tech_subcontinental_climate_adaptation"
+    }
+
+    effect = {
+        from = {
+            reroll_deposits = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}

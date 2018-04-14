@@ -1,0 +1,1887 @@
+###############################
+### Nitrogen Habitable planet
+###############################
+
+##########
+### From
+##########
+
+terraform_link = {
+    from = "pc_nitrogen_habitable"
+    to = "pc_continental"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_ecological_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_habitable"
+    to = "pc_tropical"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_ecological_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_habitable"
+    to = "pc_tundra"
+
+    energy = 20000
+    minerals = 3000
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_habitable"
+    to = "pc_arid"
+
+    energy = 20000
+    minerals = 3000
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_habitable"
+    to = "pc_desert"
+
+    energy = 20000
+    minerals = 3000
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_habitable"
+    to = "pc_arctic"
+
+    energy = 20000
+    minerals = 2000
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_habitable"
+    to = "pc_ocean"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_habitable"
+    to = "pc_savannah"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_habitable"
+    to = "pc_alpine"
+
+    energy = 20000
+    minerals = 4000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_habitable"
+    to = "pc_gaia"
+
+    energy = 30000
+    minerals = 15000
+    duration = 10000
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_climate_restoration"
+        has_technology = "tech_ecological_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_habitable"
+    to = "pc_machine"
+
+    energy = 20000
+    duration = 10000
+
+    potential = {
+        has_ascension_perk = "ap_machine_worlds"
+    }
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 20
+        modifier = {
+            factor = 0
+            from = {
+                any_owned_pop = {
+                    NOR = {
+                        has_trait = trait_machine_unit
+                        has_trait = trait_mechanical
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            from = {
+                is_colony = no
+            }
+        }
+    }
+}
+
+##########
+### To
+##########
+
+terraform_link = {
+    from = "pc_nitrogen_uninhabitable"
+    to = "pc_nitrogen_habitable"
+
+    energy = 20000
+    duration = 6000
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_continental"
+    to = "pc_nitrogen_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_tropical"
+    to = "pc_nitrogen_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_tundra"
+    to = "pc_nitrogen_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_arid"
+    to = "pc_nitrogen_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_desert"
+    to = "pc_nitrogen_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_arctic"
+    to = "pc_nitrogen_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_ocean"
+    to = "pc_nitrogen_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_savannah"
+    to = "pc_nitrogen_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_alpine"
+    to = "pc_nitrogen_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_gaia"
+    to = "pc_nitrogen_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_barren"
+    to = "pc_nitrogen_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    potential = {
+        from = {
+            AND = {
+                planet_size > 14
+                planet_size < 26
+            }
+        }
+    }
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    effect = {
+        from = {
+            reroll_deposits = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_barren_cold"
+    to = "pc_nitrogen_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    potential = {
+        from = {
+            AND = {
+                planet_size > 14
+                planet_size < 26
+            }
+        }
+    }
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    effect = {
+        from = {
+            reroll_deposits = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_toxic"
+    to = "pc_nitrogen_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    potential = {
+        from = {
+            AND = {
+                planet_size > 14
+                planet_size < 26
+            }
+        }
+    }
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    effect = {
+        from = {
+            reroll_deposits = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_frozen"
+    to = "pc_nitrogen_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    potential = {
+        from = {
+            AND = {
+                planet_size > 14
+                planet_size < 26
+            }
+        }
+    }
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    effect = {
+        from = {
+            reroll_deposits = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_molten"
+    to = "pc_nitrogen_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    potential = {
+        from = {
+            AND = {
+                planet_size > 14
+                planet_size < 26
+            }
+        }
+    }
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    effect = {
+        from = {
+            reroll_deposits = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+###################################
+### Nitrogen Uninhabitable planet
+###################################
+
+##########
+### From
+##########
+
+terraform_link = {
+    from = "pc_nitrogen_uninhabitable"
+    to = "pc_barren"
+
+    energy = 5000
+    duration = 1800
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_uninhabitable"
+    to = "pc_barren_cold"
+
+    energy = 5000
+    duration = 1800
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_uninhabitable"
+    to = "pc_frozen"
+
+    energy = 5000
+    duration = 1800
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_uninhabitable"
+    to = "pc_molten"
+
+    energy = 5000
+    duration = 1800
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+###################################
+### Nitrogen Warm Habitable planet
+###################################
+
+##########
+### From
+##########
+
+terraform_link = {
+    from = "pc_nitrogen_warm_habitable"
+    to = "pc_continental"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_ecological_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_warm_habitable"
+    to = "pc_tropical"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_ecological_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_warm_habitable"
+    to = "pc_tundra"
+
+    energy = 20000
+    minerals = 3000
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_warm_habitable"
+    to = "pc_arid"
+
+    energy = 20000
+    minerals = 3000
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_warm_habitable"
+    to = "pc_desert"
+
+    energy = 20000
+    minerals = 3000
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_warm_habitable"
+    to = "pc_arctic"
+
+    energy = 20000
+    minerals = 2000
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_warm_habitable"
+    to = "pc_ocean"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_warm_habitable"
+    to = "pc_savannah"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_warm_habitable"
+    to = "pc_alpine"
+
+    energy = 20000
+    minerals = 4000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_warm_habitable"
+    to = "pc_gaia"
+
+    energy = 30000
+    minerals = 15000
+    duration = 10000
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_climate_restoration"
+        has_technology = "tech_ecological_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_warm_habitable"
+    to = "pc_machine"
+
+    energy = 20000
+    duration = 10000
+
+    potential = {
+        has_ascension_perk = "ap_machine_worlds"
+    }
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 20
+        modifier = {
+            factor = 0
+            from = {
+                any_owned_pop = {
+                    NOR = {
+                        has_trait = trait_machine_unit
+                        has_trait = trait_mechanical
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            from = {
+                is_colony = no
+            }
+        }
+    }
+}
+
+##########
+### To
+##########
+
+terraform_link = {
+    from = "pc_nitrogen_uninhabitable"
+    to = "pc_nitrogen_warm_habitable"
+
+    energy = 20000
+    duration = 6000
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_continental"
+    to = "pc_nitrogen_warm_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_tropical"
+    to = "pc_nitrogen_warm_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_tundra"
+    to = "pc_nitrogen_warm_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_arid"
+    to = "pc_nitrogen_warm_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_desert"
+    to = "pc_nitrogen_warm_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_arctic"
+    to = "pc_nitrogen_warm_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_ocean"
+    to = "pc_nitrogen_warm_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_savannah"
+    to = "pc_nitrogen_warm_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_alpine"
+    to = "pc_nitrogen_warm_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_gaia"
+    to = "pc_nitrogen_warm_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_barren"
+    to = "pc_nitrogen_warm_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    potential = {
+        from = {
+            AND = {
+                planet_size > 14
+                planet_size < 26
+            }
+        }
+    }
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    effect = {
+        from = {
+            reroll_deposits = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_barren_cold"
+    to = "pc_nitrogen_warm_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    potential = {
+        from = {
+            AND = {
+                planet_size > 14
+                planet_size < 26
+            }
+        }
+    }
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    effect = {
+        from = {
+            reroll_deposits = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_toxic"
+    to = "pc_nitrogen_warm_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    potential = {
+        from = {
+            AND = {
+                planet_size > 14
+                planet_size < 26
+            }
+        }
+    }
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    effect = {
+        from = {
+            reroll_deposits = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_frozen"
+    to = "pc_nitrogen_warm_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    potential = {
+        from = {
+            AND = {
+                planet_size > 14
+                planet_size < 26
+            }
+        }
+    }
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    effect = {
+        from = {
+            reroll_deposits = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_molten"
+    to = "pc_nitrogen_warm_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    potential = {
+        from = {
+            AND = {
+                planet_size > 14
+                planet_size < 26
+            }
+        }
+    }
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    effect = {
+        from = {
+            reroll_deposits = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+###################################
+### Nitrogen Cold Habitable planet
+###################################
+
+##########
+### From
+##########
+
+terraform_link = {
+    from = "pc_nitrogen_cold_habitable"
+    to = "pc_continental"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_ecological_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_cold_habitable"
+    to = "pc_tropical"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_ecological_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_cold_habitable"
+    to = "pc_tundra"
+
+    energy = 20000
+    minerals = 3000
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_cold_habitable"
+    to = "pc_arid"
+
+    energy = 20000
+    minerals = 3000
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_cold_habitable"
+    to = "pc_desert"
+
+    energy = 20000
+    minerals = 3000
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_cold_habitable"
+    to = "pc_arctic"
+
+    energy = 20000
+    minerals = 2000
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_cold_habitable"
+    to = "pc_ocean"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_cold_habitable"
+    to = "pc_savannah"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_cold_habitable"
+    to = "pc_alpine"
+
+    energy = 20000
+    minerals = 4000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_cold_habitable"
+    to = "pc_gaia"
+
+    energy = 30000
+    minerals = 15000
+    duration = 10000
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_climate_restoration"
+        has_technology = "tech_ecological_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_cold_habitable"
+    to = "pc_machine"
+
+    energy = 20000
+    duration = 10000
+
+    potential = {
+        has_ascension_perk = "ap_machine_worlds"
+    }
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 20
+        modifier = {
+            factor = 0
+            from = {
+                any_owned_pop = {
+                    NOR = {
+                        has_trait = trait_machine_unit
+                        has_trait = trait_mechanical
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            from = {
+                is_colony = no
+            }
+        }
+    }
+}
+
+##########
+### To
+##########
+
+terraform_link = {
+    from = "pc_nitrogen_uninhabitable"
+    to = "pc_nitrogen_cold_habitable"
+
+    energy = 20000
+    duration = 6000
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_continental"
+    to = "pc_nitrogen_cold_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_tropical"
+    to = "pc_nitrogen_cold_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_tundra"
+    to = "pc_nitrogen_cold_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_arid"
+    to = "pc_nitrogen_cold_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_desert"
+    to = "pc_nitrogen_cold_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_arctic"
+    to = "pc_nitrogen_cold_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_ocean"
+    to = "pc_nitrogen_cold_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_savannah"
+    to = "pc_nitrogen_cold_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_alpine"
+    to = "pc_nitrogen_cold_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_gaia"
+    to = "pc_nitrogen_cold_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_barren"
+    to = "pc_nitrogen_cold_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    potential = {
+        from = {
+            AND = {
+                planet_size > 14
+                planet_size < 26
+            }
+        }
+    }
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    effect = {
+        from = {
+            reroll_deposits = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_barren_cold"
+    to = "pc_nitrogen_cold_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    potential = {
+        from = {
+            AND = {
+                planet_size > 14
+                planet_size < 26
+            }
+        }
+    }
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    effect = {
+        from = {
+            reroll_deposits = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_toxic"
+    to = "pc_nitrogen_cold_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    potential = {
+        from = {
+            AND = {
+                planet_size > 14
+                planet_size < 26
+            }
+        }
+    }
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    effect = {
+        from = {
+            reroll_deposits = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_frozen"
+    to = "pc_nitrogen_cold_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    potential = {
+        from = {
+            AND = {
+                planet_size > 14
+                planet_size < 26
+            }
+        }
+    }
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    effect = {
+        from = {
+            reroll_deposits = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_molten"
+    to = "pc_nitrogen_cold_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    potential = {
+        from = {
+            AND = {
+                planet_size > 14
+                planet_size < 26
+            }
+        }
+    }
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    effect = {
+        from = {
+            reroll_deposits = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+#####################
+### Self-Transform
+#####################
+
+terraform_link = {
+    from = "pc_nitrogen_habitable"
+    to = "pc_nitrogen_warm_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_warm_habitable"
+    to = "pc_nitrogen_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_habitable"
+    to = "pc_nitrogen_cold_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_cold_habitable"
+    to = "pc_nitrogen_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_warm_habitable"
+    to = "pc_nitrogen_cold_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogen_cold_habitable"
+    to = "pc_nitrogen_warm_habitable"
+
+    energy = 20000
+    minerals = 5000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_nitrogen_climate_adaptation"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
