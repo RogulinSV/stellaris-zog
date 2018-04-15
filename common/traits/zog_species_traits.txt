@@ -1,0 +1,383 @@
+trait_crystal_species = {
+    icon = "gfx/interface/icons/traits/trait_crystal_species.dds"
+
+    cost = 1
+    initial = yes
+    randomized = no
+    modification = no
+    advanced_trait = no
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = {}
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_CRYSTAL_SPECIES_EFFECT
+
+    modifier = {
+        pc_crystal_habitable_habitability = 0.5
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_methane_species = {
+    icon = "gfx/interface/icons/traits/trait_methane_species.dds"
+
+    cost = 1
+    initial = yes
+    randomized = no
+    modification = no
+    advanced_trait = no
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = {}
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_METHANE_SPECIES_EFFECT
+
+    modifier = {
+        pc_methane_habitable_habitability = 0.5
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_carbon_species = {
+    icon = "gfx/interface/icons/traits/trait_carbon_species.dds"
+
+    cost = 1
+    initial = yes
+    randomized = no
+    modification = no
+    advanced_trait = no
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = { "trait_carbon_warm_species" }
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_CARBON_SPECIES_EFFECT
+
+    modifier = {
+        pc_carbon_habitable_habitability = 0.5
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_carbon_warm_species = {
+    icon = "gfx/interface/icons/traits/trait_carbon_warm_species.dds"
+
+    cost = 1
+    initial = yes
+    randomized = no
+    modification = no
+    advanced_trait = no
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = { "trait_carbon_species" }
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_CARBON_SPECIES_EFFECT
+
+    modifier = {
+        pc_carbon_warm_habitable_habitability = 0.5
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_nitrogen_species = {
+    icon = "gfx/interface/icons/traits/trait_nitrogen_species.dds"
+
+    cost = 1
+    initial = yes
+    randomized = no
+    modification = no
+    advanced_trait = no
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = { "trait_nitrogen_warm_species" "trait_nitrogen_cold_species" }
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_NITROGEN_SPECIES_EFFECT
+
+    modifier = {
+        pc_nitrogen_habitable_habitability = 0.5
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_nitrogen_cold_species = {
+    icon = "gfx/interface/icons/traits/trait_nitrogen_cold_species.dds"
+
+    cost = 1
+    initial = yes
+    randomized = no
+    modification = no
+    advanced_trait = no
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = { "trait_nitrogen_species" "trait_nitrogen_warm_species" }
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_NITROGEN_SPECIES_EFFECT
+
+    modifier = {
+        pc_nitrogen_cold_habitable_habitability = 0.5
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_nitrogen_warm_species = {
+    icon = "gfx/interface/icons/traits/trait_nitrogen_warm_species.dds"
+
+    cost = 1
+    initial = yes
+    randomized = no
+    modification = no
+    advanced_trait = no
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = { "trait_nitrogen_species" "trait_nitrogen_cold_species" }
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_NITROGEN_SPECIES_EFFECT
+
+    modifier = {
+        pc_nitrogen_warm_habitable_habitability = 0.5
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_sulfuric_species = {
+    icon = "gfx/interface/icons/traits/trait_sulfuric_species.dds"
+
+    cost = 1
+    initial = yes
+    randomized = no
+    modification = no
+    advanced_trait = no
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = { "trait_sulfuric_warm_species" "trait_sulfuric_cold_species" }
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_SULFURIC_SPECIES_EFFECT
+
+    modifier = {
+        pc_sulfuric_habitable_habitability = 0.5
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_sulfuric_cold_species = {
+    icon = "gfx/interface/icons/traits/trait_sulfuric_cold_species.dds"
+
+    cost = 1
+    initial = yes
+    randomized = no
+    modification = no
+    advanced_trait = no
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = { "trait_sulfuric_species" "trait_sulfuric_warm_species" }
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_SULFURIC_SPECIES_EFFECT
+
+    modifier = {
+        pc_sulfuric_cold_habitable_habitability = 0.5
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_sulfuric_warm_species = {
+    icon = "gfx/interface/icons/traits/trait_sulfuric_warm_species.dds"
+
+    cost = 1
+    initial = yes
+    randomized = no
+    modification = no
+    advanced_trait = no
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = { "trait_sulfuric_species" "trait_sulfuric_cold_species" }
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_SULFURIC_SPECIES_EFFECT
+
+    modifier = {
+        pc_sulfuric_warm_habitable_habitability = 0.5
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_montane_species = {
+    icon = "gfx/interface/icons/traits/trait_montane_species.dds"
+
+    cost = 1
+    initial = yes
+    randomized = no
+    modification = no
+    advanced_trait = no
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = { "trait_montane_warm_species" "trait_montane_cold_species" }
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_MONTANE_SPECIES_EFFECT
+
+    modifier = {
+        pc_montane_habitable_habitability = 0.5
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_montane_cold_species = {
+    icon = "gfx/interface/icons/traits/trait_montane_cold_species.dds"
+
+    cost = 1
+    initial = yes
+    randomized = no
+    modification = no
+    advanced_trait = no
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = { "trait_montane_species" "trait_montane_warm_species" }
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_MONTANE_SPECIES_EFFECT
+
+    modifier = {
+        pc_montane_cold_habitable_habitability = 0.5
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_montane_warm_species = {
+    icon = "gfx/interface/icons/traits/trait_montane_warm_species.dds"
+
+    cost = 1
+    initial = yes
+    randomized = no
+    modification = no
+    advanced_trait = no
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = { "trait_montane_species" "trait_montane_cold_species" }
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_MONTANE_SPECIES_EFFECT
+
+    modifier = {
+        pc_montane_warm_habitable_habitability = 0.5
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_flatvacuum_cold_species = {
+    icon = "gfx/interface/icons/traits/trait_flatvacuum_cold_species.dds"
+
+    cost = 1
+    initial = yes
+    randomized = no
+    modification = no
+    advanced_trait = no
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = { "trait_flatvacuum_warm_species" }
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_FLATVACUUM_SPECIES_EFFECT
+
+    modifier = {
+        pc_flatvacuum_cold_habitable_habitability = 0.5
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_flatvacuum_warm_species = {
+    icon = "gfx/interface/icons/traits/trait_flatvacuum_warm_species.dds"
+
+    cost = 1
+    initial = yes
+    randomized = no
+    modification = no
+    advanced_trait = no
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = { "trait_flatvacuum_cold_species" }
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_FLATVACUUM_SPECIES_EFFECT
+
+    modifier = {
+        pc_flatvacuum_warm_habitable_habitability = 0.5
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_magmatic_species = {
+    icon = "gfx/interface/icons/traits/trait_magmatic_species.dds"
+
+    cost = 1
+    initial = yes
+    randomized = no
+    modification = no
+    advanced_trait = no
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = {}
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_MAGMATIC_SPECIES_EFFECT
+
+    modifier = {
+        pc_magmatic_habitability = 0.5
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
