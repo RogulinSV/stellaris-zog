@@ -11,7 +11,6 @@ terraform_link = {
     to = "pc_continental"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -28,7 +27,6 @@ terraform_link = {
     to = "pc_tropical"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -45,7 +43,6 @@ terraform_link = {
     to = "pc_tundra"
 
     energy = 30000
-    minerals = 5500
     duration = 3600
 
     condition = {
@@ -62,7 +59,6 @@ terraform_link = {
     to = "pc_arid"
 
     energy = 30000
-    minerals = 5500
     duration = 3600
 
     condition = {
@@ -79,7 +75,6 @@ terraform_link = {
     to = "pc_desert"
 
     energy = 30000
-    minerals = 5500
     duration = 3600
 
     condition = {
@@ -96,7 +91,6 @@ terraform_link = {
     to = "pc_arctic"
 
     energy = 30000
-    minerals = 4000
     duration = 3600
 
     condition = {
@@ -113,7 +107,6 @@ terraform_link = {
     to = "pc_ocean"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -130,7 +123,6 @@ terraform_link = {
     to = "pc_savannah"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -147,7 +139,6 @@ terraform_link = {
     to = "pc_alpine"
 
     energy = 30000
-    minerals = 4000
     duration = 7200
 
     condition = {
@@ -164,7 +155,6 @@ terraform_link = {
     to = "pc_gaia"
 
     energy = 30000
-    minerals = 15000
     duration = 10000
 
     potential = {
@@ -227,7 +217,6 @@ terraform_link = {
     to = "pc_subtundra"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -244,7 +233,6 @@ terraform_link = {
     to = "pc_subtundra"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -261,7 +249,6 @@ terraform_link = {
     to = "pc_subtundra"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -278,7 +265,6 @@ terraform_link = {
     to = "pc_subtundra"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -295,7 +281,6 @@ terraform_link = {
     to = "pc_subtundra"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -312,7 +297,6 @@ terraform_link = {
     to = "pc_subtundra"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -329,7 +313,6 @@ terraform_link = {
     to = "pc_subtundra"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -346,7 +329,6 @@ terraform_link = {
     to = "pc_subtundra"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -363,7 +345,6 @@ terraform_link = {
     to = "pc_subtundra"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -380,7 +361,6 @@ terraform_link = {
     to = "pc_subtundra"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -397,7 +377,6 @@ terraform_link = {
     to = "pc_subtundra"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     potential = {
@@ -429,7 +408,6 @@ terraform_link = {
     to = "pc_subtundra"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     potential = {
@@ -461,7 +439,6 @@ terraform_link = {
     to = "pc_subtundra"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     potential = {
@@ -493,7 +470,6 @@ terraform_link = {
     to = "pc_subtundra"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     potential = {
@@ -525,7 +501,6 @@ terraform_link = {
     to = "pc_subtundra"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     potential = {
@@ -846,7 +821,6 @@ terraform_link = {
     to = "pc_subtundra"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -866,7 +840,6 @@ terraform_link = {
     to = "pc_subtundra"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -886,7 +859,6 @@ terraform_link = {
     to = "pc_subtundra"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -906,7 +878,6 @@ terraform_link = {
     to = "pc_subtundra"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -926,7 +897,6 @@ terraform_link = {
     to = "pc_subtundra"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -946,7 +916,6 @@ terraform_link = {
     to = "pc_subtundra"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -966,7 +935,6 @@ terraform_link = {
     to = "pc_subtundra"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -986,7 +954,6 @@ terraform_link = {
     to = "pc_subtundra"
 
     energy = 20000
-    minerals = 5000
     duration = 7200
 
     condition = {

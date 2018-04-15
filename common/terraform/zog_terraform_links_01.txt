@@ -11,7 +11,6 @@ terraform_link = {
     to = "pc_continental"
 
     energy = 20000
-    minerals = 5000
     duration = 7200
 
     condition = {
@@ -28,7 +27,6 @@ terraform_link = {
     to = "pc_tropical"
 
     energy = 20000
-    minerals = 5000
     duration = 7200
 
     condition = {
@@ -45,7 +43,6 @@ terraform_link = {
     to = "pc_tundra"
 
     energy = 20000
-    minerals = 3000
     duration = 3600
 
     condition = {
@@ -62,7 +59,6 @@ terraform_link = {
     to = "pc_arid"
 
     energy = 20000
-    minerals = 3000
     duration = 3600
 
     condition = {
@@ -79,7 +75,6 @@ terraform_link = {
     to = "pc_desert"
 
     energy = 20000
-    minerals = 3000
     duration = 3600
 
     condition = {
@@ -96,7 +91,6 @@ terraform_link = {
     to = "pc_arctic"
 
     energy = 20000
-    minerals = 2000
     duration = 3600
 
     condition = {
@@ -113,7 +107,6 @@ terraform_link = {
     to = "pc_ocean"
 
     energy = 20000
-    minerals = 5000
     duration = 7200
 
     condition = {
@@ -130,7 +123,6 @@ terraform_link = {
     to = "pc_savannah"
 
     energy = 20000
-    minerals = 5000
     duration = 7200
 
     condition = {
@@ -147,7 +139,6 @@ terraform_link = {
     to = "pc_alpine"
 
     energy = 20000
-    minerals = 4000
     duration = 7200
 
     condition = {
@@ -164,7 +155,6 @@ terraform_link = {
     to = "pc_gaia"
 
     energy = 30000
-    minerals = 15000
     duration = 10000
 
     potential = {
@@ -243,7 +233,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 20000
-    minerals = 5000
     duration = 7200
 
     condition = {
@@ -260,7 +249,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 20000
-    minerals = 5000
     duration = 7200
 
     condition = {
@@ -277,7 +265,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 20000
-    minerals = 5000
     duration = 7200
 
     condition = {
@@ -294,7 +281,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 20000
-    minerals = 5000
     duration = 7200
 
     condition = {
@@ -311,7 +297,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 20000
-    minerals = 5000
     duration = 7200
 
     condition = {
@@ -328,7 +313,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 20000
-    minerals = 5000
     duration = 7200
 
     condition = {
@@ -345,7 +329,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 20000
-    minerals = 5000
     duration = 7200
 
     condition = {
@@ -362,7 +345,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 20000
-    minerals = 5000
     duration = 7200
 
     condition = {
@@ -379,7 +361,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 20000
-    minerals = 5000
     duration = 7200
 
     condition = {
@@ -396,7 +377,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 20000
-    minerals = 5000
     duration = 7200
 
     condition = {
@@ -413,7 +393,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 20000
-    minerals = 5000
     duration = 7200
 
     potential = {
@@ -445,7 +424,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 20000
-    minerals = 5000
     duration = 7200
 
     potential = {
@@ -477,7 +455,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 20000
-    minerals = 5000
     duration = 7200
 
     potential = {
@@ -509,7 +486,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 20000
-    minerals = 5000
     duration = 7200
 
     potential = {
@@ -541,7 +517,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 20000
-    minerals = 5000
     duration = 7200
 
     potential = {
@@ -915,7 +890,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -935,7 +909,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -955,7 +928,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -975,7 +947,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -995,7 +966,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -1015,7 +985,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -1035,7 +1004,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -1055,7 +1023,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 30000
-    minerals = 7500
     duration = 7200
 
     condition = {
@@ -1075,7 +1042,6 @@ terraform_link = {
     to = "pc_crystal_habitable"
 
     energy = 20000
-    minerals = 5000
     duration = 7200
 
     condition = {
