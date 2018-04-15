@@ -60,9 +60,9 @@ pc_crystal_habitable = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @habitable_planet_survey_factor
 }
 
@@ -149,9 +149,9 @@ pc_methane_habitable = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @habitable_planet_survey_factor
 }
 
@@ -238,9 +238,9 @@ pc_carbon_habitable = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @habitable_planet_survey_factor
 }
 
@@ -272,9 +272,9 @@ pc_carbon_warm_habitable = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @habitable_planet_survey_factor
 }
 
@@ -361,9 +361,9 @@ pc_nitrogen_habitable = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @habitable_planet_survey_factor
 }
 
@@ -395,9 +395,9 @@ pc_nitrogen_cold_habitable = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @habitable_planet_survey_factor
 }
 
@@ -429,9 +429,9 @@ pc_nitrogen_warm_habitable = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @habitable_planet_survey_factor
 }
 
@@ -518,9 +518,9 @@ pc_sulfuric_habitable = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @habitable_planet_survey_factor
 }
 
@@ -552,9 +552,9 @@ pc_sulfuric_cold_habitable = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @habitable_planet_survey_factor
 }
 
@@ -586,9 +586,9 @@ pc_sulfuric_warm_habitable = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @habitable_planet_survey_factor
 }
 
@@ -675,9 +675,9 @@ pc_montane_habitable = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @habitable_planet_survey_factor
 }
 
@@ -709,9 +709,9 @@ pc_montane_cold_habitable = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @habitable_planet_survey_factor
 }
 
@@ -743,9 +743,9 @@ pc_montane_warm_habitable = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @habitable_planet_survey_factor
 }
 
@@ -804,9 +804,9 @@ pc_flatvacuum_cold_habitable = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @habitable_planet_survey_factor
 }
 
@@ -838,9 +838,9 @@ pc_flatvacuum_warm_habitable = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @habitable_planet_survey_factor
 }
 
@@ -876,9 +876,9 @@ pc_subtropical = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @habitable_planet_survey_factor
 }
 
@@ -918,9 +918,9 @@ pc_subsavannah = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @habitable_planet_survey_factor
 }
 
@@ -960,9 +960,9 @@ pc_subtundra = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @habitable_planet_survey_factor
 }
 
@@ -1003,9 +1003,9 @@ pc_subcontinental = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @habitable_planet_survey_factor
 }
 
@@ -1046,9 +1046,9 @@ pc_floatislands = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @habitable_planet_survey_factor
 }
 
@@ -1084,9 +1084,9 @@ pc_exogarden = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @special_planet_survey_factor
 }
 
@@ -1122,9 +1122,9 @@ pc_xenovalley = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @habitable_planet_survey_factor
 }
 
@@ -1160,9 +1160,9 @@ pc_geoprairie = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @habitable_planet_survey_factor
 }
 
@@ -1202,9 +1202,9 @@ pc_magmatic = {
     can_be_moon = yes
     starting_planet = no
     orbit_lines = yes
-    show_city = yes
+    show_city = no
     can_be_invaded = yes
-    show_health_bar_in_planet_view = yes
+    show_health_bar_in_planet_view = no
     survey_time_factor = @special_planet_survey_factor
 }
 
