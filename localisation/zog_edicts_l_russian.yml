@@ -1,0 +1,7 @@
+﻿l_russian:
+    edict_space_monsters_repression:0 "Сдерживание космических монстров"
+    edict_space_monsters_repression_desc:0 "Военная программа сдерживания космических монстров"
+    edict_space_monsters_extermination:0 "Истребление космических монстров"
+    edict_space_monsters_extermination_desc:0 "Патриотическая программа тотального истребления космических монстров"
+    edict_space_monsters_coexistence:0 "Сосуществование с космическими монстрами"
+    edict_space_monsters_coexistence_desc:0 "Научная программа сосуществования с космическими монстрами"
