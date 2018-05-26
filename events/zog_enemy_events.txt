@@ -1,0 +1,1261 @@
+namespace = zog_enemy_event
+
+########################################
+### "On Crystal fleet defeated" event
+########################################
+
+country_event = {
+    id = zog_enemy_event.1
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_country_type = crystal
+    }
+
+    immediate = {
+        from = {
+            if = {
+                limit = { check_variable = { which = "space_monsters_defeated" value < 1 } }
+                set_variable = { which = "space_monsters_defeated" value = 1 }
+                else = { change_variable = { which = "space_monsters_defeated" value = 1 } }
+            }
+            if = {
+                limit = { check_variable = { which = "crystal_space_monsters_defeated" value < 1 } }
+                set_variable = { which = "crystal_space_monsters_defeated" value = 1 }
+                else = { change_variable = { which = "crystal_space_monsters_defeated" value = 1 } }
+            }
+        }
+    }
+}
+
+############################################
+### "On Space Cloud fleet defeated" event
+############################################
+
+country_event = {
+    id = zog_enemy_event.2
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_country_type = cloud
+    }
+
+    immediate = {
+        from = {
+            if = {
+                limit = { check_variable = { which = "space_monsters_defeated" value < 1 } }
+                set_variable = { which = "space_monsters_defeated" value = 1 }
+                else = { change_variable = { which = "space_monsters_defeated" value = 1 } }
+            }
+            if = {
+                limit = { check_variable = { which = "cloud_space_monsters_defeated" value < 1 } }
+                set_variable = { which = "cloud_space_monsters_defeated" value = 1 }
+                else = { change_variable = { which = "cloud_space_monsters_defeated" value = 1 } }
+            }
+        }
+    }
+}
+
+############################################
+### "On Space Amoeba fleet defeated" event
+############################################
+
+country_event = {
+    id = zog_enemy_event.3
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_country_type = amoeba
+    }
+
+    immediate = {
+        from = {
+            if = {
+                limit = { check_variable = { which = "space_monsters_defeated" value < 1 } }
+                set_variable = { which = "space_monsters_defeated" value = 1 }
+                else = { change_variable = { which = "space_monsters_defeated" value = 1 } }
+            }
+            if = {
+                limit = { check_variable = { which = "amoeba_space_monsters_defeated" value < 1 } }
+                set_variable = { which = "amoeba_space_monsters_defeated" value = 1 }
+                else = { change_variable = { which = "amoeba_space_monsters_defeated" value = 1 } }
+            }
+        }
+    }
+}
+
+#######################################################
+### "Space monsters appearance" five-year pulse event
+#######################################################
+
+event = {
+    id = zog_enemy_event.10
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {}
+
+    immediate = {
+        every_country = {
+            limit = {
+                OR = {
+                    is_country_type = default
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                    is_country_type = ai_empire
+                    is_country_type = cybrex_empire
+                }
+                NOR = {
+                    has_edict = "space_monsters_repression"
+                    has_edict = "space_monsters_extermination"
+                    has_edict = "space_monsters_coexistence"
+                }
+            }
+
+            # Event target
+            save_event_target_as = "space_monsters_target_country"
+
+            set_variable = { which = "star_systems_within_border" value = 0 }
+            every_system_within_border = {
+                prev = {
+                    change_variable = { which = "star_systems_within_border" value = 1 }
+                }
+            }
+
+            random_planet_within_border = {
+                limit = {
+                    solar_system = {
+                        starbase = {
+                            has_starbase_size = starbase_outpost
+                        }
+                    }
+                    OR = {
+                        not_colonized_planet = yes
+                        is_uninhabitable_planet = yes
+                        is_gas_giant_planet = yes
+                        is_star = yes
+                    }
+                    NOT = {
+                        has_planet_flag = "space_monsters_spawn"
+                    }
+                }
+
+                # Event target
+                save_event_target_as = "space_monsters_target_planet"
+
+                random_list = {
+                    5 = {
+                        planet_event = { id = zog_enemy_event.15 days = 7 }
+                        prev = { country_event = { id = zog_enemy_event.20 days = 7 } }
+                    }
+                    5 = {
+                        planet_event = { id = zog_enemy_event.15 days = 13 }
+                        prev = { country_event = { id = zog_enemy_event.20 days = 13 } }
+                    }
+                    5 = {
+                        planet_event = { id = zog_enemy_event.15 days = 19 }
+                        prev = { country_event = { id = zog_enemy_event.20 days = 19 } }
+                    }
+                    5 = {
+                        planet_event = { id = zog_enemy_event.15 days = 26 }
+                        prev = { country_event = { id = zog_enemy_event.20 days = 26 } }
+                    }
+                    5 = {
+                        planet_event = { id = zog_enemy_event.15 days = 37 }
+                        prev = { country_event = { id = zog_enemy_event.20 days = 37 } }
+                    }
+                    5 = {
+                        planet_event = { id = zog_enemy_event.15 days = 49 }
+                        prev = { country_event = { id = zog_enemy_event.20 days = 49 } }
+                    }
+                    5 = {
+                        planet_event = { id = zog_enemy_event.15 days = 63 }
+                        prev = { country_event = { id = zog_enemy_event.20 days = 63 } }
+                    }
+                    5 = {
+                        planet_event = { id = zog_enemy_event.15 days = 78 }
+                        prev = { country_event = { id = zog_enemy_event.20 days = 78 } }
+                    }
+                    5 = {
+                        planet_event = { id = zog_enemy_event.15 days = 91 }
+                        prev = { country_event = { id = zog_enemy_event.20 days = 91 } }
+                    }
+                    5 = {
+                        planet_event = { id = zog_enemy_event.15 days = 117 }
+                        prev = { country_event = { id = zog_enemy_event.20 days = 117 } }
+                    }
+                    5 = {
+                        planet_event = { id = zog_enemy_event.15 days = 134 }
+                        prev = { country_event = { id = zog_enemy_event.20 days = 134 } }
+                    }
+                    5 = {
+                        planet_event = { id = zog_enemy_event.15 days = 167 }
+                        prev = { country_event = { id = zog_enemy_event.20 days = 167 } }
+                    }
+                    5 = {
+                        planet_event = { id = zog_enemy_event.15 days = 188 }
+                        prev = { country_event = { id = zog_enemy_event.20 days = 188 } }
+                    }
+                    5 = {
+                        planet_event = { id = zog_enemy_event.15 days = 199 }
+                        prev = { country_event = { id = zog_enemy_event.20 days = 199 } }
+                    }
+                    5 = {
+                        planet_event = { id = zog_enemy_event.15 days = 221 }
+                        prev = { country_event = { id = zog_enemy_event.20 days = 221 } }
+                    }
+                    5 = {
+                        planet_event = { id = zog_enemy_event.15 days = 236 }
+                        prev = { country_event = { id = zog_enemy_event.20 days = 236 } }
+                    }
+                    5 = {
+                        planet_event = { id = zog_enemy_event.15 days = 260 }
+                        prev = { country_event = { id = zog_enemy_event.20 days = 260 } }
+                    }
+                    5 = {
+                        planet_event = { id = zog_enemy_event.15 days = 284 }
+                        prev = { country_event = { id = zog_enemy_event.20 days = 284 } }
+                    }
+                    5 = {
+                        planet_event = { id = zog_enemy_event.15 days = 301 }
+                        prev = { country_event = { id = zog_enemy_event.20 days = 301 } }
+                    }
+                    5 = {
+                        planet_event = { id = zog_enemy_event.15 days = 323 }
+                        prev = { country_event = { id = zog_enemy_event.20 days = 323 } }
+                    }
+                }
+                set_timed_planet_flag = { flag = "space_monsters_spawn" days = 360 }
+
+                if = {
+                    limit = {
+                        prev = { is_militarist = yes }
+                    }
+                    enable_special_project = {
+                        name = "ZOG_PROJECT_SPACE_MONSTERS_A"
+                        location = this
+                        owner = prev
+                    }
+                    else = {
+                        if = {
+                            limit = {
+                                prev = { is_spiritualist = yes }
+                            }
+                            enable_special_project = {
+                                name = "ZOG_PROJECT_SPACE_MONSTERS_B"
+                                location = this
+                                owner = prev
+                            }
+                            else = {
+                                if = {
+                                    limit = {
+                                        prev = { is_technocratic_regime = yes }
+                                    }
+                                    enable_special_project = {
+                                        name = "ZOG_PROJECT_SPACE_MONSTERS_C"
+                                        location = this
+                                        owner = prev
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                while = {
+                    limit = {
+                        prev = {
+                            check_variable = { which = "star_systems_within_border" value > 10 }
+                        }
+                    }
+                    prev = {
+                        change_variable = { which = "star_systems_within_border" value = -10 }
+                    }
+
+                    solar_system = {
+                        closest_system = {
+                            limit = {
+                                OR = {
+                                    AND = {
+                                        has_owner = no
+                                        is_pirate_system = no
+                                    }
+                                    AND = {
+                                        owner = { is_same_value = prevprevprev }
+                                        starbase = {
+                                            has_starbase_size = starbase_outpost
+                                        }
+                                    }
+                                }
+                                any_planet = {
+                                    OR = {
+                                        not_colonized_planet = yes
+                                        is_uninhabitable_planet = yes
+                                        is_gas_giant_planet = yes
+                                        is_star = yes
+                                    }
+                                    NOT = {
+                                        has_planet_flag = "space_monsters_spawn"
+                                    }
+                                }
+                            }
+                            min_steps = 1
+                            max_steps = 10
+
+                            # Event target
+                            save_event_target_as = "space_monsters_target_system"
+
+                            random_system_planet = {
+                                limit = {
+                                    OR = {
+                                        not_colonized_planet = yes
+                                        is_uninhabitable_planet = yes
+                                        is_gas_giant_planet = yes
+                                        is_star = yes
+                                    }
+                                    NOT = {
+                                        has_planet_flag = "space_monsters_spawn"
+                                    }
+                                }
+
+                                # Event target
+                                save_event_target_as = "space_monsters_target_planet"
+
+                                random_list = {
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 343 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 343 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 343 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 358 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 358 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 358 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 368 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 368 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 368 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 374 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 374 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 374 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 385 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 385 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 385 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 396 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 396 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 396 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 407 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 407 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 407 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 418 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 418 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 418 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 435 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 435 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 435 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 451 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 451 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 451 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 467 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 467 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 467 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 482 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 482 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 482 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 491 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 491 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 491 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 505 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 505 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 505 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 521 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 521 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 521 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 538 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 538 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 538 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 559 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 559 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 559 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 578 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 578 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 578 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 599 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 599 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 599 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 618 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 618 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 618 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 641 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 641 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 641 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 663 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 663 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 663 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 687 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 687 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 687 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 702 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 702 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 702 } }
+                                            }
+                                        }
+                                    }
+                                    4 = {
+                                        planet_event = { id = zog_enemy_event.15 days = 716 }
+                                        if = {
+                                            limit = { prev = { has_owner = yes } }
+                                            prevprevprevprev = { country_event = { id = zog_enemy_event.21 days = 716 } }
+                                            else = {
+                                                prevprevprevprev = { country_event = { id = zog_enemy_event.22 days = 716 } }
+                                            }
+                                        }
+                                    }
+                                }
+                                set_timed_planet_flag = { flag = "space_monsters_spawn" days = 720 }
+                            } # random_system_planet
+                        } # closest_system
+                    } # solar_system
+
+                    prev = {
+                        if = {
+                            limit = {
+                                NOT = {
+                                    has_country_flag = "space_monsters_spawn_alert"
+                                }
+                            }
+                            set_timed_country_flag = {
+                                flag = "space_monsters_spawn_alert"
+                                days = 10
+                            }
+                        }
+                    }
+                } # while
+            }
+
+            set_variable = { which = "star_systems_within_border" value = 0 }
+        }
+    }
+}
+
+###################################
+### "Spawn space monsters" event
+###################################
+
+planet_event = {
+    id = zog_enemy_event.15
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        exists = event_target:space_monsters_target_country
+        has_planet_flag = "space_monsters_spawn"
+    }
+
+    immediate = {
+        event_target:space_monsters_target_country = {
+            switch = {
+                trigger = fleet_power
+                1499999 > {
+                    prev = {
+                        random_list = {
+                            33 = { create_planet_crystal_fleet_15 = yes }
+                            34 = { create_planet_cloud_fleet_15 = yes }
+                            33 = { create_planet_amoeba_fleet_15 = yes }
+                        }
+                    }
+                }
+                999999 > {
+                    prev = {
+                        random_list = {
+                            33 = { create_planet_crystal_fleet_14 = yes }
+                            34 = { create_planet_cloud_fleet_14 = yes }
+                            33 = { create_planet_amoeba_fleet_14 = yes }
+                        }
+                    }
+                }
+                499999 > {
+                    prev = {
+                        random_list = {
+                            33 = { create_planet_crystal_fleet_13 = yes }
+                            34 = { create_planet_cloud_fleet_13 = yes }
+                            33 = { create_planet_amoeba_fleet_13 = yes }
+                        }
+                    }
+                }
+                99999 > {
+                    prev = {
+                        random_list = {
+                            33 = { create_planet_crystal_fleet_12 = yes }
+                            34 = { create_planet_cloud_fleet_12 = yes }
+                            33 = { create_planet_amoeba_fleet_12 = yes }
+                        }
+                    }
+                }
+                49999 > {
+                    prev = {
+                        random_list = {
+                            33 = { create_planet_crystal_fleet_11 = yes }
+                            34 = { create_planet_cloud_fleet_11 = yes }
+                            33 = { create_planet_amoeba_fleet_11 = yes }
+                        }
+                    }
+                }
+                24999 > {
+                    prev = {
+                        random_list = {
+                            33 = { create_planet_crystal_fleet_10 = yes }
+                            34 = { create_planet_cloud_fleet_10 = yes }
+                            33 = { create_planet_amoeba_fleet_10 = yes }
+                        }
+                    }
+                }
+                14999 > {
+                    prev = {
+                        random_list = {
+                            33 = { create_planet_crystal_fleet_09 = yes }
+                            34 = { create_planet_cloud_fleet_09 = yes }
+                            33 = { create_planet_amoeba_fleet_09 = yes }
+                        }
+                    }
+                }
+                9999 > {
+                    prev = {
+                        random_list = {
+                            33 = { create_planet_crystal_fleet_08 = yes }
+                            34 = { create_planet_cloud_fleet_08 = yes }
+                            33 = { create_planet_amoeba_fleet_08 = yes }
+                        }
+                    }
+                }
+                7999 > {
+                    prev = {
+                        random_list = {
+                            33 = { create_planet_crystal_fleet_07 = yes }
+                            34 = { create_planet_cloud_fleet_07 = yes }
+                            33 = { create_planet_amoeba_fleet_07 = yes }
+                        }
+                    }
+                }
+                5999 > {
+                    prev = {
+                        random_list = {
+                            33 = { create_planet_crystal_fleet_06 = yes }
+                            34 = { create_planet_cloud_fleet_06 = yes }
+                            33 = { create_planet_amoeba_fleet_06 = yes }
+                        }
+                    }
+                }
+                3999 > {
+                    prev = {
+                        random_list = {
+                            33 = { create_planet_crystal_fleet_05 = yes }
+                            34 = { create_planet_cloud_fleet_05 = yes }
+                            33 = { create_planet_amoeba_fleet_05 = yes }
+                        }
+                    }
+                }
+                2999 > {
+                    prev = {
+                        random_list = {
+                            33 = { create_planet_crystal_fleet_04 = yes }
+                            34 = { create_planet_cloud_fleet_04 = yes }
+                            33 = { create_planet_amoeba_fleet_04 = yes }
+                        }
+                    }
+                }
+                1999 > {
+                    prev = {
+                        random_list = {
+                            33 = { create_planet_crystal_fleet_03 = yes }
+                            34 = { create_planet_cloud_fleet_03 = yes }
+                            33 = { create_planet_amoeba_fleet_03 = yes }
+                        }
+                    }
+                }
+                999 > {
+                    prev = {
+                        random_list = {
+                            33 = { create_planet_crystal_fleet_02 = yes }
+                            34 = { create_planet_cloud_fleet_02 = yes }
+                            33 = { create_planet_amoeba_fleet_02 = yes }
+                        }
+                    }
+                }
+                0 > {
+                    prev = {
+                        random_list = {
+                            33 = { create_planet_crystal_fleet_01 = yes }
+                            34 = { create_planet_cloud_fleet_01 = yes }
+                            33 = { create_planet_amoeba_fleet_01 = yes }
+                        }
+                    }
+                }
+            }
+
+            if = {
+                limit = {
+                    has_special_project = "ZOG_PROJECT_SPACE_MONSTERS_A"
+                }
+                abort_special_project = {
+                    type = "ZOG_PROJECT_SPACE_MONSTERS_A"
+                    location = prev
+                }
+                else = {
+                    if = {
+                        limit = {
+                            has_special_project = "ZOG_PROJECT_SPACE_MONSTERS_B"
+                        }
+                        abort_special_project = {
+                            type = "ZOG_PROJECT_SPACE_MONSTERS_B"
+                            location = prev
+                        }
+                        else = {
+                            if = {
+                                limit = {
+                                    has_special_project = "ZOG_PROJECT_SPACE_MONSTERS_C"
+                                }
+                                abort_special_project = {
+                                    type = "ZOG_PROJECT_SPACE_MONSTERS_C"
+                                    location = prev
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+##################################################
+### "Space monsters spawned" notification event
+##################################################
+
+country_event = {
+    id = zog_enemy_event.20
+    title = zog_enemy_event.20.title
+    desc = zog_enemy_event.20.desc
+    picture = GFX_evt_space_monsters_appearance_a
+    show_sound = event_mystic_reveal
+    is_triggered_only = yes
+    location = event_target:space_monsters_target_planet
+
+    trigger = {
+        exists = event_target:space_monsters_target_planet
+        event_target:space_monsters_target_planet = {
+            # has_owner = yes
+            # owner = { is_same_value = event_target:space_monsters_target_country }
+            # is_controlled_by = event_target:space_monsters_target_country
+            has_planet_flag = "space_monsters_spawn"
+        }
+    }
+
+    immediate = {}
+
+    option = {
+        name = zog_enemy_event.20.a
+        custom_tooltip = zog_enemy_event.20.a.tooltip
+        trigger = {}
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {}
+    }
+}
+
+##################################################
+### "Space monsters spawned" notification event
+##################################################
+
+country_event = {
+    id = zog_enemy_event.21
+    title = zog_enemy_event.21.title
+    desc = zog_enemy_event.21.desc
+    picture = GFX_evt_space_monsters_appearance_b
+    show_sound = event_mystic_reveal
+    is_triggered_only = yes
+    location = event_target:space_monsters_target_planet
+
+    trigger = {
+        exists = event_target:space_monsters_target_planet
+        event_target:space_monsters_target_planet = {
+            has_planet_flag = "space_monsters_spawn"
+        }
+        NOT = { has_country_flag = "space_monsters_spawn_alert" }
+    }
+
+    immediate = {}
+
+    option = {
+        name = zog_enemy_event.21.a
+        custom_tooltip = zog_enemy_event.21.a.tooltip
+        trigger = {}
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {}
+    }
+}
+
+##################################################
+### "Space monsters spawned" notification event
+##################################################
+
+country_event = {
+    id = zog_enemy_event.22
+    title = zog_enemy_event.22.title
+    desc = zog_enemy_event.22.desc
+    picture = GFX_evt_space_monsters_appearance_c
+    show_sound = event_mystic_reveal
+    is_triggered_only = yes
+    location = event_target:space_monsters_target_system
+
+    trigger = {
+        exists = event_target:space_monsters_target_system
+        NOT = { has_country_flag = "space_monsters_spawn_alert" }
+    }
+
+    immediate = {}
+
+    option = {
+        name = zog_enemy_event.22.a
+        custom_tooltip = zog_enemy_event.22.a.tooltip
+        trigger = {}
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {}
+    }
+}
+
+# This: Империя Землян
+# Root: Империя Землян
+# From: ISS Cockatrice
+# FromFrom: Antares Ia
+country_event = {
+    id = zog_enemy_event.30
+    title = zog_enemy_event.30.title
+    desc = zog_enemy_event.30.desc
+    picture = GFX_evt_space_monsters_suppressed_a
+    show_sound = event_mystic_reveal
+    is_triggered_only = yes
+    location = fromfrom
+
+    immediate = {}
+
+    option = {
+        name = zog_enemy_event.30.a
+        custom_tooltip = zog_enemy_event.30.a.tooltip
+        trigger = {
+            from = { exists = leader }
+        }
+        ai_chance = {
+            factor = 90
+        }
+        hidden_effect = {
+            from = {
+                leader = {
+                    add_experience = 500
+                    add_random_leader_trait = yes
+                    set_leader_flag = "leader_cognizant_of_truth"
+                }
+            }
+        }
+    }
+    option = {
+        name = zog_enemy_event.30.b
+        custom_tooltip = zog_enemy_event.30.b.tooltip
+        trigger = {
+            free_leader_slots > 0
+        }
+        ai_chance = {
+            factor = 75
+        }
+        hidden_effect = {
+            create_leader = {
+                type = admiral
+                species = root
+                name = random
+                leader_age_min = 34
+                leader_age_max = 45
+                skill = 5
+                immortal = no
+                event_leader = yes
+            }
+            last_created_leader = {
+                add_random_leader_trait = yes
+                set_leader_flag = "leader_cognizant_of_truth"
+            }
+            #from = {
+            #    assign_leader = last_created_leader
+            #}
+        }
+    }
+    option = {
+        name = zog_enemy_event.30.c
+        custom_tooltip = zog_enemy_event.30.c.tooltip
+        trigger = {}
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {
+            add_monthly_resource_mult = {
+                resource = minerals
+                value = 5
+                min = 500
+                max = 5000
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+                min = 5
+                max = 100
+            }
+        }
+    }
+    option = {
+        name = zog_enemy_event.30.d
+        custom_tooltip = zog_enemy_event.30.d.tooltip
+        trigger = {}
+        ai_chance = {
+            factor = 100
+        }
+        add_minerals = 2000
+        add_unity = 300
+    }
+}
+
+country_event = {
+    id = zog_enemy_event.31
+    title = zog_enemy_event.31.title
+    desc = zog_enemy_event.31.desc
+    picture = GFX_evt_space_monsters_suppressed_b
+    show_sound = event_mystic_reveal
+    is_triggered_only = yes
+    location = fromfrom
+
+    immediate = {}
+
+    option = {
+        name = zog_enemy_event.31.a
+        custom_tooltip = zog_enemy_event.31.a.tooltip
+        trigger = {
+            from = { exists = leader }
+        }
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {
+            from = {
+                leader = {
+                    add_experience = 500
+                    add_random_leader_trait = yes
+                    set_leader_flag = "leader_cognizant_of_truth"
+                }
+            }
+        }
+    }
+    option = {
+        name = zog_enemy_event.31.b
+        custom_tooltip = zog_enemy_event.31.b.tooltip
+        trigger = {
+            free_leader_slots > 0
+        }
+        ai_chance = {
+            factor = 75
+        }
+        hidden_effect = {
+            create_leader = {
+                type = general
+                species = root
+                name = random
+                leader_age_min = 34
+                leader_age_max = 45
+                skill = 5
+                immortal = no
+                event_leader = yes
+            }
+            last_created_leader = {
+                add_random_leader_trait = yes
+                set_leader_flag = "leader_cognizant_of_truth"
+            }
+        }
+    }
+    option = {
+        name = zog_enemy_event.31.c
+        custom_tooltip = zog_enemy_event.31.c.tooltip
+        trigger = {}
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {
+            add_monthly_resource_mult = {
+                resource = minerals
+                value = 5
+                min = 500
+                max = 5000
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value = 1
+                min = 5
+                max = 100
+            }
+        }
+    }
+    option = {
+        name = zog_enemy_event.31.d
+        custom_tooltip = zog_enemy_event.31.d.tooltip
+        trigger = {}
+        ai_chance = {
+            factor = 100
+        }
+        add_minerals = 2000
+        add_influence = 300
+    }
+}
+
+country_event = {
+    id = zog_enemy_event.32
+    title = zog_enemy_event.32.title
+    desc = zog_enemy_event.32.desc
+    picture = GFX_evt_space_monsters_suppressed_c
+    show_sound = event_mystic_reveal
+    is_triggered_only = yes
+    location = fromfrom
+
+    immediate = {}
+
+    option = {
+        name = zog_enemy_event.32.a
+        custom_tooltip = zog_enemy_event.32.a.tooltip
+        trigger = {
+            from = { exists = leader }
+        }
+        ai_chance = {
+            factor = 90
+        }
+        hidden_effect = {
+            from = {
+                leader = {
+                    add_experience = 500
+                    add_random_leader_trait = yes
+                    set_leader_flag = "leader_cognizant_of_truth"
+                }
+            }
+        }
+    }
+    option = {
+        name = zog_enemy_event.32.b
+        custom_tooltip = zog_enemy_event.32.b.tooltip
+        trigger = {
+            free_leader_slots > 0
+        }
+        ai_chance = {
+            factor = 75
+        }
+        hidden_effect = {
+            create_leader = {
+                type = scientist
+                species = root
+                name = random
+                leader_age_min = 34
+                leader_age_max = 45
+                skill = 5
+                immortal = no
+                event_leader = yes
+            }
+            last_created_leader = {
+                add_random_leader_trait = yes
+                set_leader_flag = "leader_cognizant_of_truth"
+            }
+        }
+    }
+    option = {
+        name = zog_enemy_event.32.c
+        custom_tooltip = zog_enemy_event.32.c.tooltip
+        trigger = {}
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                min = 5
+                max = 100
+            }
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = 1
+                min = 5
+                max = 100
+            }
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = 1
+                min = 5
+                max = 100
+            }
+        }
+    }
+    option = {
+        name = zog_enemy_event.32.d
+        custom_tooltip = zog_enemy_event.32.d.tooltip
+        trigger = {
+            NAND = {
+                has_technology = "tech_space_monsters"
+                has_technology = "tech_crystal_space_monsters"
+                has_technology = "tech_cloud_space_monsters"
+                has_technology = "tech_amoeba_space_monsters"
+            }
+        }
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {
+            if = {
+                limit = {
+                    has_tech_option = "tech_space_monsters"
+                }
+                add_tech_progress = {
+                    tech = "tech_space_monsters"
+                    progress = 0.20
+                }
+                break = yes
+                else = {
+                    if = {
+                        limit = {
+                            NOT = { has_technology = "tech_space_monsters" }
+                        }
+                        add_research_option = "tech_space_monsters"
+                        # give_technology = { tech = "tech_space_monsters" }
+                        break = yes
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    has_tech_option = "tech_crystal_space_monsters"
+                }
+                add_tech_progress = {
+                    tech = "tech_crystal_space_monsters"
+                    progress = 0.20
+                }
+                break = yes
+                else = {
+                    if = {
+                        limit = {
+                            NOT = { has_technology = "tech_crystal_space_monsters" }
+                        }
+                        add_research_option = "tech_crystal_space_monsters"
+                        break = yes
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    has_tech_option = "tech_cloud_space_monsters"
+                }
+                add_tech_progress = {
+                    tech = "tech_cloud_space_monsters"
+                    progress = 0.20
+                }
+                break = yes
+                else = {
+                    if = {
+                        limit = {
+                            NOT = { has_technology = "tech_cloud_space_monsters" }
+                        }
+                        add_research_option = "tech_cloud_space_monsters"
+                        break = yes
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    has_tech_option = "tech_amoeba_space_monsters"
+                }
+                add_tech_progress = {
+                    tech = "tech_amoeba_space_monsters"
+                    progress = 0.20
+                }
+                break = yes
+                else = {
+                    if = {
+                        limit = {
+                            NOT = { has_technology = "tech_amoeba_space_monsters" }
+                        }
+                        add_research_option = "tech_amoeba_space_monsters"
+                        break = yes
+                    }
+                }
+            }
+        }
+    }
+}
