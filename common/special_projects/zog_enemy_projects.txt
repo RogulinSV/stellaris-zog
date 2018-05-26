@@ -1,0 +1,108 @@
+special_project = {
+    key = "ZOG_PROJECT_SPACE_MONSTERS_A"
+    cost = 1000
+    timelimit = 330
+    tech_department = society_technology
+    picture = GFX_evt_space_monsters_suppression_a
+    icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_military = 19
+        leader = admiral
+    }
+
+    abort_trigger = {
+        fromfrom = {
+            NOT = { has_planet_flag = "space_monsters_spawn" }
+        }
+    }
+
+    on_success = {
+        root.owner = {
+            every_planet_within_border = {
+                limit = {
+                    has_planet_flag = "space_monsters_spawn"
+                }
+                remove_planet_flag = "space_monsters_spawn"
+            }
+            country_event = { id = zog_enemy_event.30 days = 10 random = 8 }
+        }
+    }
+
+    on_fail = {}
+}
+
+special_project = {
+    key = "ZOG_PROJECT_SPACE_MONSTERS_B"
+    cost = 1000
+    timelimit = 330
+    tech_department = engineering_technology
+    picture = GFX_evt_space_monsters_suppression_b
+    icon = "gfx/interface/icons/situation_log/situation_log_combat.dds"
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_transport = 10
+        leader = general
+    }
+
+    abort_trigger = {
+        fromfrom = {
+            NOT = { has_planet_flag = "space_monsters_spawn" }
+        }
+    }
+
+    on_success = {
+        root.owner = {
+            every_planet_within_border = {
+                limit = {
+                    has_planet_flag = "space_monsters_spawn"
+                }
+                remove_planet_flag = "space_monsters_spawn"
+            }
+            country_event = { id = zog_enemy_event.31 days = 10 random = 8 }
+        }
+    }
+
+    on_fail = {}
+}
+
+special_project = {
+    key = "ZOG_PROJECT_SPACE_MONSTERS_C"
+    cost = 1000
+    timelimit = 330
+    tech_department = physics_technology
+    picture = GFX_evt_space_monsters_suppression_c
+    icon = "gfx/interface/icons/situation_log/situation_log_scanning_beam.dds"
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+        skill = 3
+    }
+
+    abort_trigger = {
+        fromfrom = {
+            NOT = { has_planet_flag = "space_monsters_spawn" }
+        }
+    }
+
+    on_success = {
+        root.owner = {
+            every_planet_within_border = {
+                limit = {
+                    has_planet_flag = "space_monsters_spawn"
+                }
+                remove_planet_flag = "space_monsters_spawn"
+            }
+            country_event = { id = zog_enemy_event.32 days = 10 random = 8 }
+        }
+    }
+
+    on_fail = {}
+}
