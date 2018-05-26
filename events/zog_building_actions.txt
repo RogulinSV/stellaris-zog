@@ -2569,6 +2569,805 @@ planet_event = {
     }
 }
 
+#####################################################
+### Building "Institute of Life Engineering" events
+#####################################################
+
+planet_event = {
+    id = zog_building_events.60
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_building = "building_life_engineering_institute"
+        }
+    }
+
+    immediate = {
+        owner = {
+            random_list = {
+                12 = {
+                    if = {
+                        limit = { check_variable = { which = "DEBT_species_points" value > 0 } }
+                        change_variable = { which = "DEBT_species_points" value = -1 }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "HUM_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "HUM_species_points" value < 1 } }
+                            set_variable = { which = "HUM_species_points" value = 1 }
+                            else = { change_variable = { which = "HUM_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "MAM_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "MAM_species_points" value < 1 } }
+                            set_variable = { which = "MAM_species_points" value = 1 }
+                            else = { change_variable = { which = "MAM_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "REP_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "REP_species_points" value < 1 } }
+                            set_variable = { which = "REP_species_points" value = 1 }
+                            else = { change_variable = { which = "REP_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "AVI_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "AVI_species_points" value < 1 } }
+                            set_variable = { which = "AVI_species_points" value = 1 }
+                            else = { change_variable = { which = "AVI_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "ART_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "ART_species_points" value < 1 } }
+                            set_variable = { which = "ART_species_points" value = 1 }
+                            else = { change_variable = { which = "ART_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "FUN_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "FUN_species_points" value < 1 } }
+                            set_variable = { which = "FUN_species_points" value = 1 }
+                            else = { change_variable = { which = "FUN_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "MOL_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "MOL_species_points" value < 1 } }
+                            set_variable = { which = "MOL_species_points" value = 1 }
+                            else = { change_variable = { which = "MOL_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "PLANT_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "PLANT_species_points" value < 1 } }
+                            set_variable = { which = "PLANT_species_points" value = 1 }
+                            else = { change_variable = { which = "PLANT_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                }
+                12 = {
+                    if = {
+                        limit = { check_variable = { which = "DEBT_species_points" value > 0 } }
+                        change_variable = { which = "DEBT_species_points" value = -1 }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "MAM_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "MAM_species_points" value < 1 } }
+                            set_variable = { which = "MAM_species_points" value = 1 }
+                            else = { change_variable = { which = "MAM_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "REP_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "REP_species_points" value < 1 } }
+                            set_variable = { which = "REP_species_points" value = 1 }
+                            else = { change_variable = { which = "REP_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "AVI_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "AVI_species_points" value < 1 } }
+                            set_variable = { which = "AVI_species_points" value = 1 }
+                            else = { change_variable = { which = "AVI_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "ART_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "ART_species_points" value < 1 } }
+                            set_variable = { which = "ART_species_points" value = 1 }
+                            else = { change_variable = { which = "ART_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "FUN_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "FUN_species_points" value < 1 } }
+                            set_variable = { which = "FUN_species_points" value = 1 }
+                            else = { change_variable = { which = "FUN_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "MOL_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "MOL_species_points" value < 1 } }
+                            set_variable = { which = "MOL_species_points" value = 1 }
+                            else = { change_variable = { which = "MOL_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "PLANT_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "PLANT_species_points" value < 1 } }
+                            set_variable = { which = "PLANT_species_points" value = 1 }
+                            else = { change_variable = { which = "PLANT_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "HUM_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "HUM_species_points" value < 1 } }
+                            set_variable = { which = "HUM_species_points" value = 1 }
+                            else = { change_variable = { which = "HUM_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                }
+                12 = {
+                    if = {
+                        limit = { check_variable = { which = "DEBT_species_points" value > 0 } }
+                        change_variable = { which = "DEBT_species_points" value = -1 }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "REP_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "REP_species_points" value < 1 } }
+                            set_variable = { which = "REP_species_points" value = 1 }
+                            else = { change_variable = { which = "REP_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "AVI_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "AVI_species_points" value < 1 } }
+                            set_variable = { which = "AVI_species_points" value = 1 }
+                            else = { change_variable = { which = "AVI_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "ART_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "ART_species_points" value < 1 } }
+                            set_variable = { which = "ART_species_points" value = 1 }
+                            else = { change_variable = { which = "ART_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "FUN_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "FUN_species_points" value < 1 } }
+                            set_variable = { which = "FUN_species_points" value = 1 }
+                            else = { change_variable = { which = "FUN_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "MOL_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "MOL_species_points" value < 1 } }
+                            set_variable = { which = "MOL_species_points" value = 1 }
+                            else = { change_variable = { which = "MOL_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "PLANT_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "PLANT_species_points" value < 1 } }
+                            set_variable = { which = "PLANT_species_points" value = 1 }
+                            else = { change_variable = { which = "PLANT_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "HUM_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "HUM_species_points" value < 1 } }
+                            set_variable = { which = "HUM_species_points" value = 1 }
+                            else = { change_variable = { which = "HUM_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "MAM_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "MAM_species_points" value < 1 } }
+                            set_variable = { which = "MAM_species_points" value = 1 }
+                            else = { change_variable = { which = "MAM_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                }
+                12 = {
+                    if = {
+                        limit = { check_variable = { which = "DEBT_species_points" value > 0 } }
+                        change_variable = { which = "DEBT_species_points" value = -1 }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "AVI_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "AVI_species_points" value < 1 } }
+                            set_variable = { which = "AVI_species_points" value = 1 }
+                            else = { change_variable = { which = "AVI_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "ART_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "ART_species_points" value < 1 } }
+                            set_variable = { which = "ART_species_points" value = 1 }
+                            else = { change_variable = { which = "ART_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "FUN_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "FUN_species_points" value < 1 } }
+                            set_variable = { which = "FUN_species_points" value = 1 }
+                            else = { change_variable = { which = "FUN_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "MOL_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "MOL_species_points" value < 1 } }
+                            set_variable = { which = "MOL_species_points" value = 1 }
+                            else = { change_variable = { which = "MOL_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "PLANT_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "PLANT_species_points" value < 1 } }
+                            set_variable = { which = "PLANT_species_points" value = 1 }
+                            else = { change_variable = { which = "PLANT_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "HUM_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "HUM_species_points" value < 1 } }
+                            set_variable = { which = "HUM_species_points" value = 1 }
+                            else = { change_variable = { which = "HUM_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "MAM_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "MAM_species_points" value < 1 } }
+                            set_variable = { which = "MAM_species_points" value = 1 }
+                            else = { change_variable = { which = "MAM_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "REP_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "REP_species_points" value < 1 } }
+                            set_variable = { which = "REP_species_points" value = 1 }
+                            else = { change_variable = { which = "REP_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                }
+                12 = {
+                    if = {
+                        limit = { check_variable = { which = "DEBT_species_points" value > 0 } }
+                        change_variable = { which = "DEBT_species_points" value = -1 }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "ART_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "ART_species_points" value < 1 } }
+                            set_variable = { which = "ART_species_points" value = 1 }
+                            else = { change_variable = { which = "ART_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "FUN_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "FUN_species_points" value < 1 } }
+                            set_variable = { which = "FUN_species_points" value = 1 }
+                            else = { change_variable = { which = "FUN_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "MOL_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "MOL_species_points" value < 1 } }
+                            set_variable = { which = "MOL_species_points" value = 1 }
+                            else = { change_variable = { which = "MOL_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "PLANT_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "PLANT_species_points" value < 1 } }
+                            set_variable = { which = "PLANT_species_points" value = 1 }
+                            else = { change_variable = { which = "PLANT_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "HUM_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "HUM_species_points" value < 1 } }
+                            set_variable = { which = "HUM_species_points" value = 1 }
+                            else = { change_variable = { which = "HUM_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "MAM_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "MAM_species_points" value < 1 } }
+                            set_variable = { which = "MAM_species_points" value = 1 }
+                            else = { change_variable = { which = "MAM_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "REP_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "REP_species_points" value < 1 } }
+                            set_variable = { which = "REP_species_points" value = 1 }
+                            else = { change_variable = { which = "REP_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "AVI_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "AVI_species_points" value < 1 } }
+                            set_variable = { which = "AVI_species_points" value = 1 }
+                            else = { change_variable = { which = "AVI_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                }
+                12 = {
+                    if = {
+                        limit = { check_variable = { which = "DEBT_species_points" value > 0 } }
+                        change_variable = { which = "DEBT_species_points" value = -1 }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "FUN_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "FUN_species_points" value < 1 } }
+                            set_variable = { which = "FUN_species_points" value = 1 }
+                            else = { change_variable = { which = "FUN_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "MOL_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "MOL_species_points" value < 1 } }
+                            set_variable = { which = "MOL_species_points" value = 1 }
+                            else = { change_variable = { which = "MOL_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "PLANT_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "PLANT_species_points" value < 1 } }
+                            set_variable = { which = "PLANT_species_points" value = 1 }
+                            else = { change_variable = { which = "PLANT_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "HUM_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "HUM_species_points" value < 1 } }
+                            set_variable = { which = "HUM_species_points" value = 1 }
+                            else = { change_variable = { which = "HUM_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "MAM_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "MAM_species_points" value < 1 } }
+                            set_variable = { which = "MAM_species_points" value = 1 }
+                            else = { change_variable = { which = "MAM_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "REP_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "REP_species_points" value < 1 } }
+                            set_variable = { which = "REP_species_points" value = 1 }
+                            else = { change_variable = { which = "REP_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "AVI_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "AVI_species_points" value < 1 } }
+                            set_variable = { which = "AVI_species_points" value = 1 }
+                            else = { change_variable = { which = "AVI_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "ART_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "ART_species_points" value < 1 } }
+                            set_variable = { which = "ART_species_points" value = 1 }
+                            else = { change_variable = { which = "ART_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                }
+                12 = {
+                    if = {
+                        limit = { check_variable = { which = "DEBT_species_points" value > 0 } }
+                        change_variable = { which = "DEBT_species_points" value = -1 }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "MOL_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "MOL_species_points" value < 1 } }
+                            set_variable = { which = "MOL_species_points" value = 1 }
+                            else = { change_variable = { which = "MOL_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "PLANT_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "PLANT_species_points" value < 1 } }
+                            set_variable = { which = "PLANT_species_points" value = 1 }
+                            else = { change_variable = { which = "PLANT_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "HUM_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "HUM_species_points" value < 1 } }
+                            set_variable = { which = "HUM_species_points" value = 1 }
+                            else = { change_variable = { which = "HUM_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "MAM_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "MAM_species_points" value < 1 } }
+                            set_variable = { which = "MAM_species_points" value = 1 }
+                            else = { change_variable = { which = "MAM_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "REP_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "REP_species_points" value < 1 } }
+                            set_variable = { which = "REP_species_points" value = 1 }
+                            else = { change_variable = { which = "REP_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "AVI_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "AVI_species_points" value < 1 } }
+                            set_variable = { which = "AVI_species_points" value = 1 }
+                            else = { change_variable = { which = "AVI_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "ART_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "ART_species_points" value < 1 } }
+                            set_variable = { which = "ART_species_points" value = 1 }
+                            else = { change_variable = { which = "ART_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "FUN_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "FUN_species_points" value < 1 } }
+                            set_variable = { which = "FUN_species_points" value = 1 }
+                            else = { change_variable = { which = "FUN_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                }
+                12 = {
+                    if = {
+                        limit = { check_variable = { which = "DEBT_species_points" value > 0 } }
+                        change_variable = { which = "DEBT_species_points" value = -1 }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "PLANT_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "PLANT_species_points" value < 1 } }
+                            set_variable = { which = "PLANT_species_points" value = 1 }
+                            else = { change_variable = { which = "PLANT_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "HUM_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "HUM_species_points" value < 1 } }
+                            set_variable = { which = "HUM_species_points" value = 1 }
+                            else = { change_variable = { which = "HUM_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "MAM_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "MAM_species_points" value < 1 } }
+                            set_variable = { which = "MAM_species_points" value = 1 }
+                            else = { change_variable = { which = "MAM_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "REP_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "REP_species_points" value < 1 } }
+                            set_variable = { which = "REP_species_points" value = 1 }
+                            else = { change_variable = { which = "REP_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "AVI_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "AVI_species_points" value < 1 } }
+                            set_variable = { which = "AVI_species_points" value = 1 }
+                            else = { change_variable = { which = "AVI_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "ART_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "ART_species_points" value < 1 } }
+                            set_variable = { which = "ART_species_points" value = 1 }
+                            else = { change_variable = { which = "ART_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "FUN_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "FUN_species_points" value < 1 } }
+                            set_variable = { which = "FUN_species_points" value = 1 }
+                            else = { change_variable = { which = "FUN_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "MOL_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "MOL_species_points" value < 1 } }
+                            set_variable = { which = "MOL_species_points" value = 1 }
+                            else = { change_variable = { which = "MOL_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                }
+            }
+        }
+    }
+}
+
+planet_event = {
+    id = zog_building_events.61
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_prev_building = "building_life_engineering_institute"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    has_country_flag = "HUM_species_researched"
+                    check_variable = {
+                        which = "HUM_species_points"
+                        value > 1
+                    }
+                }
+                change_variable = {
+                    which = "HUM_species_points"
+                    value = -1
+                }
+                else = {
+                    if = {
+                        limit = {
+                            has_country_flag = "MAM_species_researched"
+                            check_variable = {
+                                which = "MAM_species_points"
+                                value > 1
+                            }
+                        }
+                        change_variable = {
+                            which = "MAM_species_points"
+                            value = -1
+                        }
+                        else = {
+                            if = {
+                                limit = {
+                                    has_country_flag = "REP_species_researched"
+                                    check_variable = {
+                                        which = "REP_species_points"
+                                        value > 1
+                                    }
+                                }
+                                change_variable = {
+                                    which = "REP_species_points"
+                                    value = -1
+                                }
+                                else = {
+                                    if = {
+                                        limit = {
+                                            has_country_flag = "AVI_species_researched"
+                                            check_variable = {
+                                                which = "AVI_species_points"
+                                                value > 1
+                                            }
+                                        }
+                                        change_variable = {
+                                            which = "AVI_species_points"
+                                            value = -1
+                                        }
+                                        else = {
+                                            if = {
+                                                limit = {
+                                                    has_country_flag = "ART_species_researched"
+                                                    check_variable = {
+                                                        which = "ART_species_points"
+                                                        value > 1
+                                                    }
+                                                }
+                                                change_variable = {
+                                                    which = "ART_species_points"
+                                                    value = -1
+                                                }
+                                                else = {
+                                                    if = {
+                                                        limit = {
+                                                            has_country_flag = "FUN_species_researched"
+                                                            check_variable = {
+                                                                which = "FUN_species_points"
+                                                                value > 1
+                                                            }
+                                                        }
+                                                        change_variable = {
+                                                            which = "FUN_species_points"
+                                                            value = -1
+                                                        }
+                                                        else = {
+                                                            if = {
+                                                                limit = {
+                                                                    has_country_flag = "MOL_species_researched"
+                                                                    check_variable = {
+                                                                        which = "MOL_species_points"
+                                                                        value > 1
+                                                                    }
+                                                                }
+                                                                change_variable = {
+                                                                    which = "MOL_species_points"
+                                                                    value = -1
+                                                                }
+                                                                else = {
+                                                                    if = {
+                                                                        limit = {
+                                                                            has_country_flag = "PLANT_species_researched"
+                                                                            check_variable = {
+                                                                                which = "PLANT_species_points"
+                                                                                value > 1
+                                                                            }
+                                                                        }
+                                                                        change_variable = {
+                                                                            which = "PLANT_species_points"
+                                                                            value = -1
+                                                                        }
+                                                                        else = {
+                                                                            if = {
+                                                                                limit = { check_variable = { which = "DEBT_species_points" value < 1 } }
+                                                                                set_variable = { which = "DEBT_species_points" value = 1 }
+                                                                                else = {
+                                                                                    change_variable = { which = "DEBT_species_points" value = 1 }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 ##########################################
 ### Building "Atlantis City I-III" events
 ##########################################

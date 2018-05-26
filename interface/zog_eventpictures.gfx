@@ -1,5 +1,11 @@
 spriteTypes = {
     spriteType = {
+        name = "GFX_evt_init_boost"
+        texturefile = "gfx/event_pictures/init_boost.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
         name = "GFX_evt_desert_worms"
         texturefile = "gfx/event_pictures/desert_worms.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
@@ -20,6 +26,162 @@ spriteTypes = {
     spriteType = {
         name = "GFX_evt_hazardous_storms"
         texturefile = "gfx/event_pictures/hazardous_storms.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_planet_cracked"
+        texturefile = "gfx/event_pictures/planet_cracked.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_space_monsters_appearance_a"
+        texturefile = "gfx/event_pictures/space_monsters_appearance_a.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_space_monsters_appearance_b"
+        texturefile = "gfx/event_pictures/space_monsters_appearance_b.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_space_monsters_appearance_c"
+        texturefile = "gfx/event_pictures/space_monsters_appearance_c.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_space_monsters_suppression_a"
+        texturefile = "gfx/event_pictures/space_monsters_suppression_a.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_space_monsters_suppression_b"
+        texturefile = "gfx/event_pictures/space_monsters_suppression_b.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_space_monsters_suppression_c"
+        texturefile = "gfx/event_pictures/space_monsters_suppression_c.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_space_monsters_suppressed_a"
+        texturefile = "gfx/event_pictures/space_monsters_suppressed_a.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_space_monsters_suppressed_b"
+        texturefile = "gfx/event_pictures/space_monsters_suppressed_b.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_space_monsters_suppressed_c"
+        texturefile = "gfx/event_pictures/space_monsters_suppressed_c.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_planet_compacting"
+        texturefile = "gfx/event_pictures/planet_compacting.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_planet_cumulation"
+        texturefile = "gfx/event_pictures/planet_cumulation.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_planet_life_engineering"
+        texturefile = "gfx/event_pictures/planet_life_engineering.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_planet_synth_engineering"
+        texturefile = "gfx/event_pictures/planet_synth_engineering.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_species_research_we"
+        texturefile = "gfx/event_pictures/species_research_we.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_species_research_they"
+        texturefile = "gfx/event_pictures/species_research_they.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_species_research_NONE"
+        texturefile = "gfx/event_pictures/species_research_NONE.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_species_research_FAIL"
+        texturefile = "gfx/event_pictures/species_research_FAIL.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_species_research_HUM"
+        texturefile = "gfx/event_pictures/species_research_HUM.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_species_research_MAM"
+        texturefile = "gfx/event_pictures/species_research_MAM.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_species_research_REP"
+        texturefile = "gfx/event_pictures/species_research_REP.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_species_research_AVI"
+        texturefile = "gfx/event_pictures/species_research_AVI.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_species_research_ART"
+        texturefile = "gfx/event_pictures/species_research_ART.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_species_research_FUN"
+        texturefile = "gfx/event_pictures/species_research_FUN.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_species_research_MOL"
+        texturefile = "gfx/event_pictures/species_research_MOL.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_species_research_PLANT"
+        texturefile = "gfx/event_pictures/species_research_PLANT.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }

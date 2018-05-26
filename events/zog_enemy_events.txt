@@ -808,9 +808,13 @@ country_event = {
     trigger = {
         exists = event_target:space_monsters_target_planet
         event_target:space_monsters_target_planet = {
-            # has_owner = yes
-            # owner = { is_same_value = event_target:space_monsters_target_country }
-            # is_controlled_by = event_target:space_monsters_target_country
+            OR = {
+                controller = { is_same_value = root }
+                solar_system = {
+                    exists = starbase
+                    starbase = { owner = { is_same_value = root } }
+                }
+            }
             has_planet_flag = "space_monsters_spawn"
         }
     }
@@ -844,6 +848,13 @@ country_event = {
     trigger = {
         exists = event_target:space_monsters_target_planet
         event_target:space_monsters_target_planet = {
+            OR = {
+                controller = { is_same_value = root }
+                solar_system = {
+                    exists = starbase
+                    starbase = { owner = { is_same_value = root } }
+                }
+            }
             has_planet_flag = "space_monsters_spawn"
         }
         NOT = { has_country_flag = "space_monsters_spawn_alert" }
@@ -877,6 +888,21 @@ country_event = {
 
     trigger = {
         exists = event_target:space_monsters_target_system
+        event_target:space_monsters_target_system = {
+            OR = {
+                AND = {
+                    exists = starbase
+                    starbase = { owner = { is_same_value = root } }
+                }
+                AND = {
+                    has_owner = no
+                    is_surveyed = {
+                        who = root
+                        status = yes
+                    }
+                }
+            }
+        }
         NOT = { has_country_flag = "space_monsters_spawn_alert" }
     }
 

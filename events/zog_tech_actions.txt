@@ -1,0 +1,143 @@
+namespace = zog_tech_events
+
+country_event = {
+    id = zog_tech_events.1
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        last_increased_tech = "tech_life_engineering"
+    }
+
+    immediate = {
+        switch = {
+            trigger = is_species_class
+            HUM = {
+                if = {
+                    limit = { NOT = { has_country_flag = "HUM_species_researched" } }
+                    set_country_flag = "HUM_species_researched"
+                }
+                if = {
+                    limit = { check_variable = { which = "HUM_species_points" value < 1 } }
+                    set_variable = { which = "HUM_species_points" value = 2 }
+                    else = { change_variable = { which = "HUM_species_points" value = 2 } }
+                }
+            }
+            MAM = {
+                if = {
+                    limit = { NOT = { has_country_flag = "MAM_species_researched" } }
+                    set_country_flag = "MAM_species_researched"
+                }
+                if = {
+                    limit = { check_variable = { which = "MAM_species_points" value < 1 } }
+                    set_variable = { which = "MAM_species_points" value = 2 }
+                    else = { change_variable = { which = "MAM_species_points" value = 2 } }
+                }
+            }
+            REP = {
+                if = {
+                    limit = { NOT = { has_country_flag = "REP_species_researched" } }
+                    set_country_flag = "REP_species_researched"
+                }
+                if = {
+                    limit = { check_variable = { which = "REP_species_points" value < 1 } }
+                    set_variable = { which = "REP_species_points" value = 2 }
+                    else = { change_variable = { which = "REP_species_points" value = 2 } }
+                }
+            }
+            AVI = {
+                if = {
+                    limit = { NOT = { has_country_flag = "AVI_species_researched" } }
+                    set_country_flag = "AVI_species_researched"
+                }
+                if = {
+                    limit = { check_variable = { which = "AVI_species_points" value < 1 } }
+                    set_variable = { which = "AVI_species_points" value = 2 }
+                    else = { change_variable = { which = "AVI_species_points" value = 2 } }
+                }
+            }
+            ART = {
+                if = {
+                    limit = { NOT = { has_country_flag = "ART_species_researched" } }
+                    set_country_flag = "ART_species_researched"
+                }
+                if = {
+                    limit = { check_variable = { which = "ART_species_points" value < 1 } }
+                    set_variable = { which = "ART_species_points" value = 2 }
+                    else = { change_variable = { which = "ART_species_points" value = 2 } }
+                }
+            }
+            FUN = {
+                if = {
+                    limit = { NOT = { has_country_flag = "FUN_species_researched" } }
+                    set_country_flag = "FUN_species_researched"
+                }
+                if = {
+                    limit = { check_variable = { which = "FUN_species_points" value < 1 } }
+                    set_variable = { which = "FUN_species_points" value = 2 }
+                    else = { change_variable = { which = "FUN_species_points" value = 2 } }
+                }
+            }
+            MOL = {
+                if = {
+                    limit = { NOT = { has_country_flag = "MOL_species_researched" } }
+                    set_country_flag = "MOL_species_researched"
+                }
+                if = {
+                    limit = { check_variable = { which = "MOL_species_points" value < 1 } }
+                    set_variable = { which = "MOL_species_points" value = 2 }
+                    else = { change_variable = { which = "MOL_species_points" value = 2 } }
+                }
+            }
+            PLANT = {
+                if = {
+                    limit = { NOT = { has_country_flag = "PLANT_species_researched" } }
+                    set_country_flag = "PLANT_species_researched"
+                }
+                if = {
+                    limit = { check_variable = { which = "PLANT_species_points" value < 1 } }
+                    set_variable = { which = "PLANT_species_points" value = 2 }
+                    else = { change_variable = { which = "PLANT_species_points" value = 2 } }
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = zog_tech_events.2
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        last_increased_tech = "tech_synth_engineering"
+    }
+
+    immediate = {
+        switch = {
+            trigger = is_species_class
+            MACHINE = {
+                if = {
+                    limit = { NOT = { has_country_flag = "MACHINE_species_researched" } }
+                    set_country_flag = "MACHINE_species_researched"
+                }
+                if = {
+                    limit = { check_variable = { which = "MACHINE_species_points" value < 1 } }
+                    set_variable = { which = "MACHINE_species_points" value = 2 }
+                    else = { change_variable = { which = "MACHINE_species_points" value = 2 } }
+                }
+            }
+            ROBOT = {
+                if = {
+                    limit = { NOT = { has_country_flag = "ROBOT_species_researched" } }
+                    set_country_flag = "ROBOT_species_researched"
+                }
+                if = {
+                    limit = { check_variable = { which = "ROBOT_species_points" value < 1 } }
+                    set_variable = { which = "ROBOT_species_points" value = 2 }
+                    else = { change_variable = { which = "ROBOT_species_points" value = 2 } }
+                }
+            }
+        }
+    }
+}

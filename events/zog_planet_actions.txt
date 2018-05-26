@@ -1,0 +1,2654 @@
+namespace = zog_planet_events
+
+###################################
+### Uninhabitable planet cracked
+###################################
+
+country_event = {
+    id = zog_planet_events.1
+    title = zog_planet_events.1.title
+    desc = zog_planet_events.1.desc
+    picture = GFX_evt_planet_cracked
+    show_sound = event_super_explosion
+    is_triggered_only = yes
+    location = from.planet
+
+    trigger = {
+        from = { is_megastructure_type = "zog_uninhabitable_planet_cracking_0" }
+        from.owner = { is_ai = no }
+    }
+
+    immediate = {
+        from.planet = {
+            save_event_target_as = "space_monsters_target_planet"
+        }
+        from.owner = {
+            if = {
+                limit = { check_variable = { which = "uninhabitable_planets_cracked" value < 1 } }
+                set_variable = { which = "uninhabitable_planets_cracked" value = 1 }
+                else = { change_variable = { which = "uninhabitable_planets_cracked" value = 1 } }
+            }
+            random_list = {
+                16 = { country_event = { id = zog_planet_events.10 days = 15 random = 5 } }
+                 8 = { country_event = { id = zog_planet_events.10 days = 30 random = 10 } }
+                 4 = { country_event = { id = zog_planet_events.10 days = 45 random = 15 } }
+                 2 = { country_event = { id = zog_planet_events.10 days = 60 random = 20 } }
+                 1 = { country_event = { id = zog_planet_events.10 days = 90 random = 30 } }
+                #69 = {}
+            }
+        }
+    }
+
+    option = {
+        name = zog_planet_events.1.a
+        custom_tooltip = zog_planet_events.1.a.tooltip
+        trigger = {}
+        ai_chance = {
+            factor = 80
+        }
+        hidden_effect = {
+            every_country = {
+                limit = {
+                    NOT = { is_same_value = from.owner }
+                    OR = {
+                        has_communications = from.owner
+                        has_communications = root.owner
+                    }
+                    NOT = {
+                        is_country_type = primitive
+                    }
+                }
+                add_opinion_modifier = {
+                    modifier = opinion_uninhabitable_planet_cracked
+                    who = from.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.1.b
+        custom_tooltip = zog_planet_events.1.b.tooltip
+        trigger = {
+            OR = {
+                is_mercantile_regime = yes
+                is_plutocratic_regime = yes
+            }
+        }
+        ai_chance = {
+            factor = 90
+        }
+        hidden_effect = {
+            every_country = {
+                limit = {
+                    NOT = { is_same_value = from.owner }
+                    OR = {
+                        has_communications = from.owner
+                        has_communications = root.owner
+                    }
+                    NOT = {
+                        is_country_type = primitive
+                    }
+                }
+                if = {
+                    limit = {
+                        from.owner = {
+                            has_country_resource = {
+                                type = minerals
+                                amount > 99
+                            }
+                        }
+                    }
+                    from.owner = {
+                        add_minerals = -100
+                    }
+                    random_list = {
+                        30 = {
+                            add_opinion_modifier = {
+                                modifier = opinion_uninhabitable_planet_cracked
+                                who = from.owner
+                            }
+                        }
+                        70 = {}
+                    }
+                    add_minerals = 50
+                    else = {
+                        add_opinion_modifier = {
+                            modifier = opinion_uninhabitable_planet_cracked
+                            who = from.owner
+                        }
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.1.c
+        custom_tooltip = zog_planet_events.1.c.tooltip
+        trigger = {
+            is_totalitarian_regime = yes
+        }
+        ai_chance = {
+            factor = 90
+        }
+        hidden_effect = {
+            every_country = {
+                limit = {
+                    NOT = { is_same_value = from.owner }
+                    OR = {
+                        has_communications = from.owner
+                        has_communications = root.owner
+                    }
+                    NOT = {
+                        is_country_type = primitive
+                    }
+                }
+                random_list = {
+                    20 = {
+                        add_opinion_modifier = {
+                            modifier = opinion_uninhabitable_planet_cracked
+                            who = from.owner
+                        }
+                    }
+                    80 = {}
+                }
+            }
+            random_list = {
+                15 = {
+                    random_owned_planet = {
+                        limit = {
+                            count_pops = {
+                                count > 0
+                                limit = {
+                                    is_growing = no
+                                    is_robot_pop = no
+                                }
+                            }
+                        }
+                        random_pop = {
+                            limit = {
+                                is_growing = no
+                                is_robot_pop = no
+                            }
+                            kill_pop = yes
+                        }
+                    }
+                }
+                85 = {}
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.1.d
+        custom_tooltip = zog_planet_events.1.d.tooltip
+        trigger = {
+            from.owner = {
+                OR = {
+                    check_variable = { which = "uninhabitable_planets_cracked" value > 24 }
+                    count_neighbor_country = {
+                        count > 1
+                        limit = {
+                            has_technology = "tech_uninhabitable_planet_cracking"
+                        }
+                    }
+                }
+            }
+        }
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {}
+    }
+}
+
+# country_event:1 -> country_event:10
+# - FromFromFrom: Nihal (solar_system)
+# - FromFromFromFrom: ISS Foundry (ship)
+country_event = {
+    id = zog_planet_events.10
+    title = zog_planet_events.10.title
+    desc = zog_planet_events.10.desc
+    picture = GFX_evt_space_monsters_appearance_a
+    show_sound = event_mystic_reveal
+    is_triggered_only = yes
+    location = fromfromfrom
+
+    trigger = {
+        exists = event_target:space_monsters_target_planet
+        event_target:space_monsters_target_planet = {
+            NOT = {
+                has_planet_flag = "space_monsters_spawn"
+            }
+        }
+    }
+
+    immediate = {
+        save_event_target_as = "space_monsters_target_country"
+    }
+
+    option = {
+        name = zog_planet_events.10.a
+        custom_tooltip = zog_planet_events.10.a.tooltip
+        trigger = {}
+        ai_chance = {
+            factor = 90
+        }
+        hidden_effect = {
+            event_target:space_monsters_target_planet = {
+                planet_event = { id = zog_enemy_event.15 days = 5 }
+                set_timed_planet_flag = { flag = "space_monsters_spawn" days = 360 }
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.10.b
+        custom_tooltip = zog_planet_events.10.b.tooltip
+        trigger = {
+            is_militarist = yes
+        }
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {
+            enable_special_project = {
+                name = "ZOG_PROJECT_SPACE_MONSTERS_A"
+                location = event_target:space_monsters_target_planet
+                owner = this
+            }
+            event_target:space_monsters_target_planet = {
+                set_timed_planet_flag = { flag = "space_monsters_spawn" days = 360 }
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.10.c
+        custom_tooltip = zog_planet_events.10.c.tooltip
+        trigger = {
+            is_spiritualist = yes
+        }
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {
+            enable_special_project = {
+                name = "ZOG_PROJECT_SPACE_MONSTERS_B"
+                location = event_target:space_monsters_target_planet
+                owner = this
+            }
+            event_target:space_monsters_target_planet = {
+                set_timed_planet_flag = { flag = "space_monsters_spawn" days = 360 }
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.10.d
+        custom_tooltip = zog_planet_events.10.d.tooltip
+        trigger = {
+            is_technocratic_regime = yes
+        }
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {
+            enable_special_project = {
+                name = "ZOG_PROJECT_SPACE_MONSTERS_C"
+                location = event_target:space_monsters_target_planet
+                owner = this
+            }
+            event_target:space_monsters_target_planet = {
+                set_timed_planet_flag = { flag = "space_monsters_spawn" days = 360 }
+            }
+        }
+    }
+}
+
+###################################
+### Gas Giant planet compacting
+###################################
+
+country_event = {
+    id = zog_planet_events.2
+    title = zog_planet_events.2.title
+    desc = zog_planet_events.2.desc
+    picture = GFX_evt_planet_compacting
+    show_sound = event_ship_explosion
+    is_triggered_only = yes
+    location = from.planet
+
+    trigger = {
+        from = { is_megastructure_type = "zog_gas_giant_planet_compacting_0" }
+    }
+
+    #immediate = {}
+
+    option = {
+        name = zog_planet_events.2.a
+        custom_tooltip = zog_planet_events.2.a.tooltip
+        trigger = {}
+        ai_chance = {
+            factor = 30
+        }
+        hidden_effect = {
+            every_country = {
+                limit = {
+                    NOT = { is_same_value = from.owner }
+                    OR = {
+                        has_communications = from.owner
+                        has_communications = root.owner
+                    }
+                }
+                add_opinion_modifier = {
+                    modifier = opinion_compacted_gas_giant
+                    who = from.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.2.b
+        custom_tooltip = zog_planet_events.2.b.tooltip
+        trigger = {}
+        ai_chance = {
+            factor = 70
+        }
+    }
+}
+
+###################################
+### Habitable planet cumulation
+###################################
+
+country_event = {
+    id = zog_planet_events.3
+    title = zog_planet_events.3.title
+    desc = zog_planet_events.3.desc
+    picture = GFX_evt_planet_cumulation
+    show_sound = event_ship_explosion
+    is_triggered_only = yes
+    location = from.planet
+
+    trigger = {
+        from = { is_megastructure_type = "zog_habitable_planet_cumulation_0" }
+    }
+
+    #immediate = {}
+
+    option = {
+        name = zog_planet_events.3.a
+        custom_tooltip = zog_planet_events.3.a.tooltip
+        trigger = {}
+        ai_chance = {
+            factor = 30
+        }
+        hidden_effect = {
+            every_country = {
+                limit = {
+                    NOT = { is_same_value = from.owner }
+                    OR = {
+                        has_communications = from.owner
+                        has_communications = root.owner
+                    }
+                }
+                add_opinion_modifier = {
+                    modifier = opinion_cumulated_habitable_planet
+                    who = from.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.3.b
+        custom_tooltip = zog_planet_events.3.b.tooltip
+        trigger = {}
+        ai_chance = {
+            factor = 70
+        }
+    }
+}
+
+###############################
+### Organic life engineering
+###############################
+
+country_event = {
+    id = zog_planet_events.4
+    title = zog_planet_events.4.title
+    desc = zog_planet_events.4.desc
+    picture = GFX_evt_planet_life_engineering
+    show_sound = event_primitive_civilization
+    is_triggered_only = yes
+    location = from.planet
+
+    trigger = {
+        from = { is_megastructure_type = "zog_life_engineering_0" }
+    }
+
+    immediate = {
+        from.owner = {
+            save_event_target_as = zog_life_engineering_owner
+        }
+    }
+
+    option = {
+        name = zog_planet_events.4.a
+        custom_tooltip = zog_planet_events.4.a.tooltip
+        trigger = {
+            from.owner = {
+                has_country_flag = "HUM_species_researched"
+                check_variable = {
+                    which = "HUM_species_points"
+                    value > 0
+                }
+            }
+        }
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 100
+                from.owner = {
+                    is_species_class = HUM
+                }
+            }
+        }
+        hidden_effect = {
+            from.planet = {
+                create_species = {
+                    name = random
+                    class = HUM
+                    portrait = random
+                    homeworld = this
+                    traits = {
+                        trait = random_traits
+                    }
+                    sapient = yes
+
+                    effect = {
+                        rename_species = {
+                            prompt_country = from.owner
+                            name_list = "HUM1"
+                        }
+                    }
+                }
+                create_country = {
+                    name = random
+                    authority = random
+                    civics = {
+                        civic = civic_landed_nobility
+                        civic = civic_flat_world_theory
+                    }
+                    species = last_created
+                    ethos = random
+                    flag = {
+                        icon = {
+                            category = "special"
+                            file = "primitive.dds"
+                        }
+                        background = {
+                            category = "backgrounds"
+                            file = "new_dawn.dds"
+                        }
+                        colors = {
+                            "dark_blue"
+                            "black"
+                            "null"
+                            "null"
+                        }
+                    }
+                    type = primitive
+                }
+                last_created_country = {
+                    set_graphical_culture = preindustrial_01
+                    set_country_flag = stone_age 
+                    set_primitive_age = stone_age
+                    change_government = {
+                        authority = random
+                        civics = {
+                            civic = civic_secret_of_fire
+                            civic = civic_the_wheel
+                        }
+                    }
+                    set_country_flag = "engineered_species"
+                }
+                set_owner = last_created_country
+                set_capital = yes
+                create_colony = {
+                    owner = last_created_country
+                    species = last_created
+                    ethos = owner
+                }
+                random_tile = {
+                    limit = { has_building = building_colony_shelter }
+                    remove_building = yes
+                }
+                while = {
+                    count = 1
+                    best_tile_for_pop = {
+                        create_pop = {
+                            species = last_created
+                        }
+                    }
+                }
+                create_army = {
+                    name = "Primitive Humanoid Army"
+                    owner = last_created
+                    species = last_created
+                    type = "primitive_army"
+                }
+                last_created_country = {
+                    establish_contact = { who = from.owner }
+                    establish_communications = from.owner
+                }
+            }
+            from.owner = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = "HUM_species_points"
+                            value > 0
+                        }
+                    }
+                    change_variable = {
+                        which = "HUM_species_points"
+                        value = -1
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.4.b
+        custom_tooltip = zog_planet_events.4.b.tooltip
+        trigger = {
+            from.owner = {
+                has_country_flag = "MAM_species_researched"
+                check_variable = {
+                    which = "MAM_species_points"
+                    value > 0
+                }
+            }
+        }
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 100
+                from.owner = {
+                    is_species_class = MAM
+                }
+            }
+        }
+        hidden_effect = {
+            from.planet = {
+                create_species = {
+                    name = random
+                    class = MAM
+                    portrait = random
+                    homeworld = this
+                    traits = {
+                        trait = random_traits
+                    }
+                    sapient = yes
+
+                    effect = {
+                        rename_species = {
+                            prompt_country = from.owner
+                            name_list = "MAM1"
+                        }
+                    }
+                }
+                create_country = {
+                    name = random
+                    authority = random
+                    civics = {
+                        civic = civic_landed_nobility
+                        civic = civic_flat_world_theory
+                    }
+                    species = last_created
+                    ethos = random
+                    flag = {
+                        icon = {
+                            category = "special"
+                            file = "primitive.dds"
+                        }
+                        background = {
+                            category = "backgrounds"
+                            file = "new_dawn.dds"
+                        }
+                        colors = {
+                            "turquoise"
+                            "green"
+                            "null"
+                            "null"
+                        }
+                    }
+                    type = primitive
+                }
+                last_created_country = {
+                    set_graphical_culture = preindustrial_01
+                    set_country_flag = stone_age 
+                    set_primitive_age = stone_age
+                    change_government = {
+                        authority = random
+                        civics = {
+                            civic = civic_secret_of_fire
+                            civic = civic_the_wheel
+                        }
+                    }
+                    set_country_flag = "engineered_species"
+                }
+                set_owner = last_created_country
+                set_capital = yes
+                create_colony = {
+                    owner = last_created_country
+                    species = last_created
+                    ethos = owner
+                }
+                random_tile = {
+                    limit = { has_building = building_colony_shelter }
+                    remove_building = yes
+                }
+                while = {
+                    count = 1
+                    best_tile_for_pop = {
+                        create_pop = {
+                            species = last_created
+                        }
+                    }
+                }
+                create_army = {
+                    name = "Primitive Mammalian Army"
+                    owner = last_created
+                    species = last_created
+                    type = "primitive_army"
+                }
+                last_created_country = {
+                    establish_contact = { who = from.owner }
+                    establish_communications = from.owner
+                }
+            }
+            from.owner = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = "MAM_species_points"
+                            value > 0
+                        }
+                    }
+                    change_variable = {
+                        which = "MAM_species_points"
+                        value = -1
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.4.c
+        custom_tooltip = zog_planet_events.4.c.tooltip
+        trigger = {
+            from.owner = {
+                has_country_flag = "REP_species_researched"
+                check_variable = {
+                    which = "REP_species_points"
+                    value > 0
+                }
+            }
+        }
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 100
+                from.owner = {
+                    is_species_class = REP
+                }
+            }
+        }
+        hidden_effect = {
+            from.planet = {
+                create_species = {
+                    name = random
+                    class = REP
+                    portrait = random
+                    homeworld = this
+                    traits = {
+                        trait = random_traits
+                    }
+                    sapient = yes
+
+                    effect = {
+                        rename_species = {
+                            prompt_country = from.owner
+                            name_list = "REP1"
+                        }
+                    }
+                }
+                create_country = {
+                    name = random
+                    authority = random
+                    civics = {
+                        civic = civic_landed_nobility
+                        civic = civic_flat_world_theory
+                    }
+                    species = last_created
+                    ethos = random
+                    flag = {
+                        icon = {
+                            category = "special"
+                            file = "primitive.dds"
+                        }
+                        background = {
+                            category = "backgrounds"
+                            file = "new_dawn.dds"
+                        }
+                        colors = {
+                            "red_orange"
+                            "yellow"
+                            "null"
+                            "null"
+                        }
+                    }
+                    type = primitive
+                }
+                last_created_country = {
+                    set_graphical_culture = preindustrial_01
+                    set_country_flag = stone_age 
+                    set_primitive_age = stone_age
+                    change_government = {
+                        authority = random
+                        civics = {
+                            civic = civic_secret_of_fire
+                            civic = civic_the_wheel
+                        }
+                    }
+                    set_country_flag = "engineered_species"
+                }
+                set_owner = last_created_country
+                set_capital = yes
+                create_colony = {
+                    owner = last_created_country
+                    species = last_created
+                    ethos = owner
+                }
+                random_tile = {
+                    limit = { has_building = building_colony_shelter }
+                    remove_building = yes
+                }
+                while = {
+                    count = 1
+                    best_tile_for_pop = {
+                        create_pop = {
+                            species = last_created
+                        }
+                    }
+                }
+                create_army = {
+                    name = "Primitive Reptilian Army"
+                    owner = last_created
+                    species = last_created
+                    type = "primitive_army"
+                }
+                last_created_country = {
+                    establish_contact = { who = from.owner }
+                    establish_communications = from.owner
+                }
+            }
+            from.owner = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = "REP_species_points"
+                            value > 0
+                        }
+                    }
+                    change_variable = {
+                        which = "REP_species_points"
+                        value = -1
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.4.d
+        custom_tooltip = zog_planet_events.4.d.tooltip
+        trigger = {
+            from.owner = {
+                has_country_flag = "AVI_species_researched"
+                check_variable = {
+                    which = "AVI_species_points"
+                    value > 0
+                }
+            }
+        }
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 100
+                from.owner = {
+                    is_species_class = AVI
+                }
+            }
+        }
+        hidden_effect = {
+            from.planet = {
+                create_species = {
+                    name = random
+                    class = AVI
+                    portrait = random
+                    homeworld = this
+                    traits = {
+                        trait = random_traits
+                    }
+                    sapient = yes
+
+                    effect = {
+                        rename_species = {
+                            prompt_country = from.owner
+                            name_list = "AVI1"
+                        }
+                    }
+                }
+                create_country = {
+                    name = random
+                    authority = random
+                    civics = {
+                        civic = civic_landed_nobility
+                        civic = civic_flat_world_theory
+                    }
+                    species = last_created
+                    ethos = random
+                    flag = {
+                        icon = {
+                            category = "special"
+                            file = "primitive.dds"
+                        }
+                        background = {
+                            category = "backgrounds"
+                            file = "new_dawn.dds"
+                        }
+                        colors = {
+                            "purple"
+                            "dark_teal"
+                            "null"
+                            "null"
+                        }
+                    }
+                    type = primitive
+                }
+                last_created_country = {
+                    set_graphical_culture = preindustrial_01
+                    set_country_flag = stone_age 
+                    set_primitive_age = stone_age
+                    change_government = {
+                        authority = random
+                        civics = {
+                            civic = civic_secret_of_fire
+                            civic = civic_the_wheel
+                        }
+                    }
+                    set_country_flag = "engineered_species"
+                }
+                set_owner = last_created_country
+                set_capital = yes
+                create_colony = {
+                    owner = last_created_country
+                    species = last_created
+                    ethos = owner
+                }
+                random_tile = {
+                    limit = { has_building = building_colony_shelter }
+                    remove_building = yes
+                }
+                while = {
+                    count = 1
+                    best_tile_for_pop = {
+                        create_pop = {
+                            species = last_created
+                        }
+                    }
+                }
+                create_army = {
+                    name = "Primitive Avian Army"
+                    owner = last_created
+                    species = last_created
+                    type = "primitive_army"
+                }
+                last_created_country = {
+                    establish_contact = { who = from.owner }
+                    establish_communications = from.owner
+                }
+            }
+            from.owner = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = "AVI_species_points"
+                            value > 0
+                        }
+                    }
+                    change_variable = {
+                        which = "AVI_species_points"
+                        value = -1
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.4.e
+        custom_tooltip = zog_planet_events.4.e.tooltip
+        trigger = {
+            from.owner = {
+                has_country_flag = "ART_species_researched"
+                check_variable = {
+                    which = "ART_species_points"
+                    value > 0
+                }
+            }
+        }
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 100
+                from.owner = {
+                    is_species_class = ART
+                }
+            }
+        }
+        hidden_effect = {
+            from.planet = {
+                create_species = {
+                    name = random
+                    class = ART
+                    portrait = random
+                    homeworld = this
+                    traits = {
+                        trait = random_traits
+                    }
+                    sapient = yes
+
+                    effect = {
+                        rename_species = {
+                            prompt_country = from.owner
+                            name_list = "ART1"
+                        }
+                    }
+                }
+                create_country = {
+                    name = random
+                    authority = random
+                    civics = {
+                        civic = civic_landed_nobility
+                        civic = civic_flat_world_theory
+                    }
+                    species = last_created
+                    ethos = random
+                    flag = {
+                        icon = {
+                            category = "special"
+                            file = "primitive.dds"
+                        }
+                        background = {
+                            category = "backgrounds"
+                            file = "new_dawn.dds"
+                        }
+                        colors = {
+                            "dark_brown"
+                            "indigo"
+                            "null"
+                            "null"
+                        }
+                    }
+                    type = primitive
+                }
+                last_created_country = {
+                    set_graphical_culture = preindustrial_01
+                    set_country_flag = stone_age 
+                    set_primitive_age = stone_age
+                    change_government = {
+                        authority = random
+                        civics = {
+                            civic = civic_secret_of_fire
+                            civic = civic_the_wheel
+                        }
+                    }
+                    set_country_flag = "engineered_species"
+                }
+                set_owner = last_created_country
+                set_capital = yes
+                create_colony = {
+                    owner = last_created_country
+                    species = last_created
+                    ethos = owner
+                }
+                random_tile = {
+                    limit = { has_building = building_colony_shelter }
+                    remove_building = yes
+                }
+                while = {
+                    count = 1
+                    best_tile_for_pop = {
+                        create_pop = {
+                            species = last_created
+                        }
+                    }
+                }
+                create_army = {
+                    name = "Primitive Arthropoid Army"
+                    owner = last_created
+                    species = last_created
+                    type = "primitive_army"
+                }
+                last_created_country = {
+                    establish_contact = { who = from.owner }
+                    establish_communications = from.owner
+                }
+            }
+            from.owner = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = "ART_species_points"
+                            value > 0
+                        }
+                    }
+                    change_variable = {
+                        which = "ART_species_points"
+                        value = -1
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.4.f
+        custom_tooltip = zog_planet_events.4.f.tooltip
+        trigger = {
+            from.owner = {
+                has_country_flag = "FUN_species_researched"
+                check_variable = {
+                    which = "FUN_species_points"
+                    value > 0
+                }
+            }
+        }
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 100
+                from.owner = {
+                    is_species_class = FUN
+                }
+            }
+        }
+        hidden_effect = {
+            from.planet = {
+                create_species = {
+                    name = random
+                    class = FUN
+                    portrait = random
+                    homeworld = this
+                    traits = {
+                        trait = random_traits
+                    }
+                    sapient = yes
+
+                    effect = {
+                        rename_species = {
+                            prompt_country = from.owner
+                            name_list = "FUN1"
+                        }
+                    }
+                }
+                create_country = {
+                    name = random
+                    authority = random
+                    civics = {
+                        civic = civic_landed_nobility
+                        civic = civic_flat_world_theory
+                    }
+                    species = last_created
+                    ethos = random
+                    flag = {
+                        icon = {
+                            category = "special"
+                            file = "primitive.dds"
+                        }
+                        background = {
+                            category = "backgrounds"
+                            file = "new_dawn.dds"
+                        }
+                        colors = {
+                            "light_green"
+                            "pink"
+                            "null"
+                            "null"
+                        }
+                    }
+                    type = primitive
+                }
+                last_created_country = {
+                    set_graphical_culture = preindustrial_01
+                    set_country_flag = stone_age 
+                    set_primitive_age = stone_age
+                    change_government = {
+                        authority = random
+                        civics = {
+                            civic = civic_secret_of_fire
+                            civic = civic_the_wheel
+                        }
+                    }
+                    set_country_flag = "engineered_species"
+                }
+                set_owner = last_created_country
+                set_capital = yes
+                create_colony = {
+                    owner = last_created_country
+                    species = last_created
+                    ethos = owner
+                }
+                random_tile = {
+                    limit = { has_building = building_colony_shelter }
+                    remove_building = yes
+                }
+                while = {
+                    count = 1
+                    best_tile_for_pop = {
+                        create_pop = {
+                            species = last_created
+                        }
+                    }
+                }
+                create_army = {
+                    name = "Primitive Fungoid Army"
+                    owner = last_created
+                    species = last_created
+                    type = "primitive_army"
+                }
+                last_created_country = {
+                    establish_contact = { who = from.owner }
+                    establish_communications = from.owner
+                }
+            }
+            from.owner = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = "FUN_species_points"
+                            value > 0
+                        }
+                    }
+                    change_variable = {
+                        which = "FUN_species_points"
+                        value = -1
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.4.g
+        custom_tooltip = zog_planet_events.4.g.tooltip
+        trigger = {
+            from.owner = {
+                has_country_flag = "MOL_species_researched"
+                check_variable = {
+                    which = "MOL_species_points"
+                    value > 0
+                }
+            }
+        }
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 100
+                from.owner = {
+                    is_species_class = MOL
+                }
+            }
+        }
+        hidden_effect = {
+            from.planet = {
+                create_species = {
+                    name = random
+                    class = MOL
+                    portrait = random
+                    homeworld = this
+                    traits = {
+                        trait = random_traits
+                    }
+                    sapient = yes
+
+                    effect = {
+                        rename_species = {
+                            prompt_country = from.owner
+                            name_list = "MOL1"
+                        }
+                    }
+                }
+                create_country = {
+                    name = random
+                    authority = random
+                    civics = {
+                        civic = civic_landed_nobility
+                        civic = civic_flat_world_theory
+                    }
+                    species = last_created
+                    ethos = random
+                    flag = {
+                        icon = {
+                            category = "special"
+                            file = "primitive.dds"
+                        }
+                        background = {
+                            category = "backgrounds"
+                            file = "new_dawn.dds"
+                        }
+                        colors = {
+                            "teal"
+                            "grey"
+                            "null"
+                            "null"
+                        }
+                    }
+                    type = primitive
+                }
+                last_created_country = {
+                    set_graphical_culture = preindustrial_01
+                    set_country_flag = stone_age 
+                    set_primitive_age = stone_age
+                    change_government = {
+                        authority = random
+                        civics = {
+                            civic = civic_secret_of_fire
+                            civic = civic_the_wheel
+                        }
+                    }
+                    set_country_flag = "engineered_species"
+                }
+                set_owner = last_created_country
+                set_capital = yes
+                create_colony = {
+                    owner = last_created_country
+                    species = last_created
+                    ethos = owner
+                }
+                random_tile = {
+                    limit = { has_building = building_colony_shelter }
+                    remove_building = yes
+                }
+                while = {
+                    count = 1
+                    best_tile_for_pop = {
+                        create_pop = {
+                            species = last_created
+                        }
+                    }
+                }
+                create_army = {
+                    name = "Primitive Molluscoid Army"
+                    owner = last_created
+                    species = last_created
+                    type = "primitive_army"
+                }
+                last_created_country = {
+                    establish_contact = { who = from.owner }
+                    establish_communications = from.owner
+                }
+            }
+            from.owner = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = "MOL_species_points"
+                            value > 0
+                        }
+                    }
+                    change_variable = {
+                        which = "MOL_species_points"
+                        value = -1
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.4.h
+        custom_tooltip = zog_planet_events.4.h.tooltip
+        trigger = {
+            from.owner = {
+                has_country_flag = "PLANT_species_researched"
+                check_variable = {
+                    which = "PLANT_species_points"
+                    value > 0
+                }
+            }
+        }
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 100
+                from.owner = {
+                    is_species_class = PLANT
+                }
+            }
+        }
+        hidden_effect = {
+            from.planet = {
+                create_species = {
+                    name = random
+                    class = PLANT
+                    portrait = random
+                    homeworld = this
+                    traits = {
+                        trait = random_traits
+                    }
+                    sapient = yes
+
+                    effect = {
+                        rename_species = {
+                            prompt_country = from.owner
+                            name_list = "PLANT"
+                        }
+                    }
+                }
+                create_country = {
+                    name = random
+                    authority = random
+                    civics = {
+                        civic = civic_landed_nobility
+                        civic = civic_flat_world_theory
+                    }
+                    species = last_created
+                    ethos = random
+                    flag = {
+                        icon = {
+                            category = "special"
+                            file = "primitive.dds"
+                        }
+                        background = {
+                            category = "backgrounds"
+                            file = "new_dawn.dds"
+                        }
+                        colors = {
+                            "dark_green"
+                            "yellow"
+                            "null"
+                            "null"
+                        }
+                    }
+                    type = primitive
+                }
+                last_created_country = {
+                    set_graphical_culture = preindustrial_01
+                    set_country_flag = stone_age 
+                    set_primitive_age = stone_age
+                    change_government = {
+                        authority = random
+                        civics = {
+                            civic = civic_secret_of_fire
+                            civic = civic_the_wheel
+                        }
+                    }
+                    set_country_flag = "engineered_species"
+                }
+                set_owner = last_created_country
+                set_capital = yes
+                create_colony = {
+                    owner = last_created_country
+                    species = last_created
+                    ethos = owner
+                }
+                random_tile = {
+                    limit = { has_building = building_colony_shelter }
+                    remove_building = yes
+                }
+                while = {
+                    count = 1
+                    best_tile_for_pop = {
+                        create_pop = {
+                            species = last_created
+                        }
+                    }
+                }
+                create_army = {
+                    name = "Primitive Plantoid Army"
+                    owner = last_created
+                    species = last_created
+                    type = "primitive_army"
+                }
+                last_created_country = {
+                    establish_contact = { who = from.owner }
+                    establish_communications = from.owner
+                }
+            }
+            from.owner = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = "PLANT_species_points"
+                            value > 0
+                        }
+                    }
+                    change_variable = {
+                        which = "PLANT_species_points"
+                        value = -1
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.4.z
+        custom_tooltip = zog_planet_events.4.z.tooltip
+        trigger = {}
+        ai_chance = {
+            factor = 40
+        }
+        hidden_effect = {}
+    }
+
+    after = {
+        hidden_effect = {}
+    }
+}
+
+#################################
+### Synthetic life engineering
+#################################
+
+country_event = {
+    id = zog_planet_events.5
+    title = zog_planet_events.5.title
+    desc = zog_planet_events.5.desc
+    picture = GFX_evt_planet_synth_engineering
+    show_sound = event_primitive_civilization
+    is_triggered_only = yes
+    location = from.planet
+
+    trigger = {
+        host_has_dlc = "Synthetic Dawn Story Pack"
+        from = { is_megastructure_type = "zog_synth_engineering_0" }
+    }
+
+    immediate = {
+        from.owner = {
+            save_event_target_as = zog_synth_engineering_owner
+        }
+    }
+
+    option = {
+        name = zog_planet_events.5.a
+        custom_tooltip = zog_planet_events.5.a.tooltip
+        trigger = {
+            from.owner = {
+                has_country_flag = "MACHINE_species_researched"
+                check_variable = {
+                    which = "MACHINE_species_points"
+                    value > 0
+                }
+            }
+        }
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 100
+                from.owner = {
+                    is_species_class = MACHINE
+                }
+            }
+        }
+        hidden_effect = {
+            from.planet = {
+                create_species = {
+                    name = random
+                    class = MACHINE
+                    portrait = "sd_hum_robot"
+                    homeworld = this
+                    traits = {
+                        trait = "trait_machine_unit"
+                        trait = random_traits
+                    }
+                    namelist = "MACHINE1"
+
+                    pops_can_be_colonizers = yes
+                    pops_can_migrate = yes
+                    pops_can_reproduce = yes
+                    pops_can_join_factions = yes
+                    pops_can_be_slaves = no
+                    can_generate_leaders = yes
+                    consumer_goods = yes
+                    pop_ethics = yes
+                    extra_trait_points = 3
+                    allow_negative_traits = no
+
+                    effect = {
+                        set_species_flag = "primitive_robots_flag"
+                    }
+                }
+                create_country = {
+                    name = random
+                    type = default
+                    ignore_initial_colony_error = yes
+                    authority = auth_machine_intelligence
+                    civics = {
+                        civic = civic_machine_remnants
+                    }
+                    species = last_created
+                    ethos = {
+                        ethic = random
+                    }
+                    flag = random
+                }
+                last_created_country = {
+                    set_country_flag = "engineered_species"
+                    add_minerals = 5000
+                    add_energy = 5000
+                    add_food = 500
+                    add_influence = 300
+                }
+                set_owner = last_created_country
+                set_controller = last_created_country
+                set_capital = yes
+                create_colony = {
+                    owner = last_created_country
+                    species = last_created
+                    ethos = owner
+                }
+                while = {
+                    count = 3
+                    best_tile_for_pop = {
+                        create_pop = {
+                            species = last_created
+                        }
+                    }
+                }
+                while = {
+                    count = 3
+                    create_army = {
+                        name = random
+                        owner = last_created
+                        species = last_created
+                        type = "android_army"
+                    }
+                }
+                set_planet_flag = "primitive_robot_planet"
+                add_modifier = { modifier = "primitive_robots" years = -1 }
+                last_created_country = {
+                    establish_contact = { who = from.owner }
+                    establish_communications = from.owner
+                }
+            }
+            from.owner = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = "MACHINE_species_points"
+                            value > 0
+                        }
+                    }
+                    change_variable = {
+                        which = "MACHINE_species_points"
+                        value = -1
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.5.b
+        custom_tooltip = zog_planet_events.5.b.tooltip
+        trigger = {
+            from.owner = {
+                has_country_flag = "ROBOT_species_researched"
+                check_variable = {
+                    which = "ROBOT_species_points"
+                    value > 0
+                }
+            }
+        }
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 100
+                from.owner = {
+                    is_species_class = ROBOT
+                }
+            }
+        }
+        hidden_effect = {
+            from.planet = {
+                create_species = {
+                    name = random
+                    class = ROBOT
+                    portrait = "sd_hum_robot"
+                    homeworld = this
+                    traits = {
+                        trait = "trait_mechanical"
+                        trait = random_traits
+                    }
+                    namelist = "AI"
+
+                    pops_can_be_colonizers = yes
+                    pops_can_migrate = yes
+                    pops_can_reproduce = yes
+                    pops_can_join_factions = yes
+                    pops_can_be_slaves = no
+                    can_generate_leaders = yes
+                    consumer_goods = yes
+                    pop_ethics = yes
+                    extra_trait_points = 3
+                    allow_negative_traits = no
+
+                    effect = {
+                        set_species_flag = "primitive_robots_flag"
+                    }
+                }
+                create_country = {
+                    name = random
+                    type = default
+                    authority = auth_machine_intelligence
+                    civics = {
+                        civic = civic_machine_terminator
+                    }
+                    species = last_created
+                    ethos = {
+                        ethic = random
+                    }
+                    flag = random
+                }
+                last_created_country = {
+                    set_country_flag = "engineered_species"
+                    add_minerals = 5000
+                    add_energy = 5000
+                    add_food = 500
+                    add_influence = 300
+                }
+                set_owner = last_created_country
+                set_controller = last_created_country
+                set_capital = yes
+                create_colony = {
+                    owner = last_created_country
+                    species = last_created
+                    ethos = owner
+                }
+                while = {
+                    count = 3
+                    best_tile_for_pop = {
+                        create_pop = {
+                            species = last_created
+                        }
+                    }
+                }
+                while = {
+                    count = 3
+                    create_army = {
+                        name = random
+                        owner = last_created
+                        species = last_created
+                        type = "android_army"
+                    }
+                }
+                set_planet_flag = "primitive_robot_planet"
+                add_modifier = { modifier = primitive_robots years = -1 }
+                last_created_country = {
+                    establish_contact = { who = from.owner }
+                    establish_communications = from.owner
+                }
+            }
+            from.owner = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = "ROBOT_species_points"
+                            value > 0
+                        }
+                    }
+                    change_variable = {
+                        which = "ROBOT_species_points"
+                        value = -1
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.5.z
+        custom_tooltip = zog_planet_events.5.z.tooltip
+        trigger = {}
+        ai_chance = {
+            factor = 40
+        }
+        hidden_effect = {}
+    }
+
+    after = {
+        hidden_effect = {}
+    }
+}
+
+# This = Country which established the communications
+# From = Country which communications were established with
+country_event = {
+    id = zog_planet_events.20
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_country_flag = "engineered_species" }
+        NOT = { is_same_species_class = from }
+        NOT = {
+            OR = {
+                is_species_class = ROBOT
+                is_species_class = MACHINE
+            }
+        }
+        OR = {
+            is_country_type = default
+            is_country_type = primitive
+        }
+        from = {
+            NOT = { has_country_flag = "engineered_species" }
+            NOT = { is_same_species_class = root }
+            NOT = {
+                OR = {
+                    is_species_class = ROBOT
+                    is_species_class = MACHINE
+                }
+            }
+            OR = {
+                is_country_type = default
+                is_country_type = primitive
+            }
+        }
+    }
+
+    immediate = {
+        random_owned_planet = {
+            limit = {
+                count_pops = {
+                    count > 0
+                    limit = {
+                        is_growing = no
+                        is_robot_pop = no
+                        is_same_species = prev
+                    }
+                }
+            }
+            random_list = {
+                5 = { planet_event = { id = zog_planet_events.21 days = 5 } }
+                5 = { planet_event = { id = zog_planet_events.21 days = 10 } }
+                5 = { planet_event = { id = zog_planet_events.21 days = 15 } }
+                5 = { planet_event = { id = zog_planet_events.21 days = 20 } }
+                5 = { planet_event = { id = zog_planet_events.21 days = 25 } }
+                5 = { planet_event = { id = zog_planet_events.21 days = 30 } }
+                5 = { planet_event = { id = zog_planet_events.21 days = 40 } }
+                5 = { planet_event = { id = zog_planet_events.21 days = 50 } }
+                5 = { planet_event = { id = zog_planet_events.21 days = 60 } }
+                5 = { planet_event = { id = zog_planet_events.21 days = 75 } }
+                5 = { planet_event = { id = zog_planet_events.21 days = 90 } }
+                5 = { planet_event = { id = zog_planet_events.21 days = 105 } }
+                5 = { planet_event = { id = zog_planet_events.21 days = 120 } }
+                5 = { planet_event = { id = zog_planet_events.21 days = 150 } }
+                5 = { planet_event = { id = zog_planet_events.21 days = 180 } }
+                5 = { planet_event = { id = zog_planet_events.21 days = 210 } }
+                5 = { planet_event = { id = zog_planet_events.21 days = 240 } }
+                5 = { planet_event = { id = zog_planet_events.21 days = 280 } }
+                5 = { planet_event = { id = zog_planet_events.21 days = 320 } }
+                5 = { planet_event = { id = zog_planet_events.21 days = 360 } }
+            }
+        }
+        from = {
+            random_owned_planet = {
+                limit = {
+                    count_pops = {
+                        count > 0
+                        limit = {
+                            is_growing = no
+                            is_robot_pop = no
+                            is_same_species = prev
+                        }
+                    }
+                }
+                random_list = {
+                    5 = { planet_event = { id = zog_planet_events.22 days = 30 } }
+                    5 = { planet_event = { id = zog_planet_events.22 days = 50 } }
+                    5 = { planet_event = { id = zog_planet_events.22 days = 70 } }
+                    5 = { planet_event = { id = zog_planet_events.22 days = 90 } }
+                    5 = { planet_event = { id = zog_planet_events.22 days = 120 } }
+                    5 = { planet_event = { id = zog_planet_events.22 days = 150 } }
+                    5 = { planet_event = { id = zog_planet_events.22 days = 180 } }
+                    5 = { planet_event = { id = zog_planet_events.22 days = 210 } }
+                    5 = { planet_event = { id = zog_planet_events.22 days = 250 } }
+                    5 = { planet_event = { id = zog_planet_events.22 days = 290 } }
+                    5 = { planet_event = { id = zog_planet_events.22 days = 330 } }
+                    5 = { planet_event = { id = zog_planet_events.22 days = 370 } }
+                    5 = { planet_event = { id = zog_planet_events.22 days = 420 } }
+                    5 = { planet_event = { id = zog_planet_events.22 days = 470 } }
+                    5 = { planet_event = { id = zog_planet_events.22 days = 520 } }
+                    5 = { planet_event = { id = zog_planet_events.22 days = 570 } }
+                    5 = { planet_event = { id = zog_planet_events.22 days = 630 } }
+                    5 = { planet_event = { id = zog_planet_events.22 days = 700 } }
+                    5 = { planet_event = { id = zog_planet_events.22 days = 770 } }
+                    5 = { planet_event = { id = zog_planet_events.22 days = 840 } }
+                }
+            }
+        }
+    }
+}
+
+planet_event = {
+    id = zog_planet_events.21
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        exists = from
+        count_pops = {
+            count > 0
+            limit = {
+                is_growing = no
+                is_robot_pop = no
+                is_same_species = from
+            }
+        }
+    }
+
+    immediate = {
+        enable_special_project = {
+            name = "ZOG_PROJECT_SPECIES_RESEARCH_B"
+            location = this
+            owner = fromfrom
+        }
+        fromfrom = {
+            country_event = { id = zog_planet_events.23 }
+        }
+    }
+}
+
+planet_event = {
+    id = zog_planet_events.22
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        exists = fromfrom
+        count_pops = {
+            count > 0
+            limit = {
+                is_growing = no
+                is_robot_pop = no
+                is_same_species = fromfrom
+            }
+        }
+    }
+
+    immediate = {
+        enable_special_project = {
+            name = "ZOG_PROJECT_SPECIES_RESEARCH_A"
+            location = this
+            owner = from
+        }
+        from = {
+            country_event = { id = zog_planet_events.24 }
+        }
+    }
+}
+
+country_event = {
+    id = zog_planet_events.23
+    title = zog_planet_events.23.title
+    desc = zog_planet_events.23.desc
+    picture = GFX_evt_species_research_we
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+
+    option = {
+        name = zog_planet_events.23.a
+        custom_tooltip = zog_planet_events.23.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_planet_events.24
+    title = zog_planet_events.24.title
+    desc = zog_planet_events.24.desc
+    picture = GFX_evt_species_research_they
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+
+    option = {
+        name = zog_planet_events.24.a
+        custom_tooltip = zog_planet_events.24.a.tooltip
+    }
+}
+
+planet_event = {
+    id = zog_planet_events.190
+    title = zog_planet_events.190.title
+    desc = zog_planet_events.190.desc
+    picture = GFX_evt_species_research_they # GFX_evt_species_abduction
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+    location = from.planet
+
+    trigger = {}
+
+    immediate = {}
+
+    option = {
+        name = zog_planet_events.190.a
+        custom_tooltip = zog_planet_events.190.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_planet_events.191
+    title = zog_planet_events.191.title
+    desc = zog_planet_events.191.desc
+    picture = GFX_evt_species_research_they
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {}
+
+    immediate = {}
+
+    option = {
+        name = zog_planet_events.191.a
+        custom_tooltip = zog_planet_events.191.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_planet_events.200
+    title = zog_planet_events.200.title
+    desc = zog_planet_events.200.desc
+    picture = GFX_evt_species_research_NONE
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {}
+
+    immediate = {
+        add_society_research = 200
+    }
+
+    option = {
+        name = zog_planet_events.200.a
+        custom_tooltip = zog_planet_events.200.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_planet_events.201
+    title = zog_planet_events.201.title
+    desc = zog_planet_events.201.desc
+    picture = GFX_evt_species_research_HUM
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = "HUM_species_researched"
+    }
+
+    immediate = {
+        add_society_research = 100
+    }
+
+    option = {
+        name = zog_planet_events.201.a
+        custom_tooltip = zog_planet_events.201.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_planet_events.202
+    title = zog_planet_events.202.title
+    desc = zog_planet_events.202.desc
+    picture = GFX_evt_species_research_MAM
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = "MAM_species_researched"
+    }
+
+    immediate = {
+        add_society_research = 100
+    }
+
+    option = {
+        name = zog_planet_events.202.a
+        custom_tooltip = zog_planet_events.202.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_planet_events.203
+    title = zog_planet_events.203.title
+    desc = zog_planet_events.203.desc
+    picture = GFX_evt_species_research_REP
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = "REP_species_researched"
+    }
+
+    immediate = {
+        add_society_research = 100
+    }
+
+    option = {
+        name = zog_planet_events.203.a
+        custom_tooltip = zog_planet_events.203.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_planet_events.204
+    title = zog_planet_events.204.title
+    desc = zog_planet_events.204.desc
+    picture = GFX_evt_species_research_AVI
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = "AVI_species_researched"
+    }
+
+    immediate = {
+        add_society_research = 100
+    }
+
+    option = {
+        name = zog_planet_events.204.a
+        custom_tooltip = zog_planet_events.204.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_planet_events.205
+    title = zog_planet_events.205.title
+    desc = zog_planet_events.205.desc
+    picture = GFX_evt_species_research_ART
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = "ART_species_researched"
+    }
+
+    immediate = {
+        add_society_research = 100
+    }
+
+    option = {
+        name = zog_planet_events.205.a
+        custom_tooltip = zog_planet_events.205.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_planet_events.206
+    title = zog_planet_events.206.title
+    desc = zog_planet_events.206.desc
+    picture = GFX_evt_species_research_FUN
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = "FUN_species_researched"
+    }
+
+    immediate = {
+        add_society_research = 100
+    }
+
+    option = {
+        name = zog_planet_events.206.a
+        custom_tooltip = zog_planet_events.206.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_planet_events.207
+    title = zog_planet_events.207.title
+    desc = zog_planet_events.207.desc
+    picture = GFX_evt_species_research_MOL
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = "MOL_species_researched"
+    }
+
+    immediate = {
+        add_society_research = 100
+    }
+
+    option = {
+        name = zog_planet_events.207.a
+        custom_tooltip = zog_planet_events.207.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_planet_events.208
+    title = zog_planet_events.208.title
+    desc = zog_planet_events.208.desc
+    picture = GFX_evt_species_research_PLANT
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = "PLANT_species_researched"
+    }
+
+    immediate = {
+        add_society_research = 100
+    }
+
+    option = {
+        name = zog_planet_events.208.a
+        custom_tooltip = zog_planet_events.208.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_planet_events.218
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        exists = fromfromfromfrom
+    }
+
+    immediate = {
+        fromfromfromfrom = {
+            save_event_target_as = zog_country_opponent
+        }
+        root = {
+            save_event_target_as = zog_country_origin
+            country_event = { id = zog_planet_events.220 }
+        }
+    }
+}
+
+country_event = {
+    id = zog_planet_events.219
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        exists = fromfromfrom
+    }
+
+    immediate = {
+        fromfromfrom = {
+            save_event_target_as = zog_country_opponent
+        }
+        root = {
+            save_event_target_as = zog_country_origin
+            country_event = { id = zog_planet_events.220 }
+        }
+    }
+}
+
+country_event = {
+    id = zog_planet_events.220
+    title = zog_planet_events.220.title
+    desc = zog_planet_events.220.desc
+    picture = GFX_evt_species_research_FAIL
+    show_sound = event_structural_collapse
+    is_triggered_only = yes
+    hide_window = no
+
+    trigger = {
+        exists = event_target:zog_country_origin
+        exists = event_target:zog_country_opponent
+    }
+
+    immediate = {}
+
+    option = {
+        name = zog_planet_events.220.a
+        custom_tooltip = zog_planet_events.220.a.tooltip
+        trigger = {
+            NOR = {
+                is_pacifist = yes
+                is_spiritualist = yes
+                is_xenophile = yes
+            }
+        }
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {
+            event_target:zog_country_opponent = {
+                country_event = { id = zog_planet_events.222 }
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.220.b
+        custom_tooltip = zog_planet_events.220.b.tooltip
+        trigger = {
+            OR = {
+                is_materialist = yes
+                is_authoritarian = yes
+            }
+        }
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {
+            event_target:zog_country_opponent = {
+                country_event = { id = zog_planet_events.223 }
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.220.c
+        custom_tooltip = zog_planet_events.220.c.tooltip
+        trigger = {
+            NOR = {
+                is_xenophobe = yes
+                is_egalitarian = yes
+                is_militarist = yes
+            }
+        }
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {
+            event_target:zog_country_opponent = {
+                country_event = { id = zog_planet_events.224 }
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.220.d
+        custom_tooltip = zog_planet_events.220.d.tooltip
+        trigger = {
+            has_country_resource = {
+                type = minerals
+                amount > 999
+            }
+        }
+        ai_chance = {
+            factor = 50
+        }
+        add_minerals = -1000
+        hidden_effect = {
+            event_target:zog_country_opponent = {
+                country_event = { id = zog_planet_events.225 }
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.220.e
+        custom_tooltip = zog_planet_events.220.e.tooltip
+        trigger = {
+            has_country_resource = {
+                type = minerals
+                amount > 1999
+            }
+        }
+        ai_chance = {
+            factor = 40
+        }
+        add_minerals = -2000
+        hidden_effect = {
+            event_target:zog_country_opponent = {
+                country_event = { id = zog_planet_events.226 }
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.220.z
+        custom_tooltip = zog_planet_events.220.z.tooltip
+        trigger = {}
+        ai_chance = {
+            factor = 50
+        }
+        hidden_effect = {
+            event_target:zog_country_opponent = {
+                country_event = { id = zog_planet_events.223 }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = zog_planet_events.222
+    title = zog_planet_events.222.title
+    desc = zog_planet_events.222.desc
+    is_triggered_only = yes
+    diplomatic = yes
+
+    picture_event_data = {
+        portrait = event_target:zog_country_origin
+        planet_background = event_target:zog_country_origin
+        graphical_culture = event_target:zog_country_origin
+        city_level = event_target:zog_country_origin
+        room = event_target:zog_country_origin.ruler
+    }
+
+    trigger = {}
+    immediate = {}
+
+    option = {
+        name = zog_planet_events.222.a
+        trigger = {
+            NOR = {
+                is_pacifist = yes
+                is_spiritualist = yes
+                is_xenophile = yes
+            }
+            relative_power = { who = event_target:zog_country_origin value >= equivalent } # inferior superior
+        }
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {
+            add_opinion_modifier = {
+                modifier = opinion_our_species_research_high
+                who = event_target:zog_country_origin
+            }
+            add_threat = { who = event_target:zog_country_origin amount = 1 }
+            if = {
+                limit = {
+                    NOT = {
+                        has_casus_belli = {
+                            target = event_target:zog_country_origin
+                            type = cb_hunger
+                        }
+                    }
+                }
+                add_casus_belli = {
+                    type = cb_hunger
+                    who = event_target:zog_country_origin
+                    days = 360
+                }
+            }
+            random_list = {
+                25 = {
+                    if = {
+                        limit = {
+                            # @see common/game_rules/00_rules.txt
+                            AND = {
+                                event_target:zog_country_opponent = {
+                                    NOT = {
+                                        AND = {
+                                            has_policy_flag = no_wars
+                                            OR = {
+                                                is_subject = no
+                                                overlord = {
+                                                    is_same_value = event_target:zog_country_opponent
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                event_target:zog_country_origin = {
+                                    NOT = {
+                                        AND = {
+                                            OR = {
+                                                is_subject_type = "vassal"
+                                                is_subject_type = "protectorate"
+                                                is_subject_type = "signatory"
+                                            }
+                                            overlord = {
+                                                is_same_value = event_target:zog_country_opponent
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        declare_war = {
+                            target = event_target:zog_country_origin
+                            name = "NAME_Holy_World_War"
+                            attacker_war_goal = wg_absorption
+                        }
+                    }
+                }
+                75 = {}
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.222.b
+        trigger = {}
+        ai_chance = {
+            factor = 90
+        }
+        hidden_effect = {
+            add_opinion_modifier = {
+                modifier = opinion_our_species_research_high
+                who = event_target:zog_country_origin
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.222.c
+        trigger = {
+            OR = {
+                is_pacifist = yes
+                is_spiritualist = yes
+                is_xenophile = yes
+            }
+        }
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {
+            add_opinion_modifier = {
+                modifier = opinion_our_species_research_mid
+                who = event_target:zog_country_origin
+            }
+        }
+    }
+}
+
+country_event = {
+    id = zog_planet_events.223
+    title = zog_planet_events.223.title
+    desc = zog_planet_events.223.desc
+    is_triggered_only = yes
+    diplomatic = yes
+
+    picture_event_data = {
+        portrait = event_target:zog_country_origin
+        planet_background = event_target:zog_country_origin
+        graphical_culture = event_target:zog_country_origin
+        city_level = event_target:zog_country_origin
+        room = event_target:zog_country_origin.ruler
+    }
+
+    trigger = {}
+    immediate = {}
+
+    option = {
+        name = zog_planet_events.223.a
+        trigger = {
+            OR = {
+                is_xenophobe = yes
+                is_egalitarian = yes
+                is_militarist = yes
+            }
+        }
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {
+            add_opinion_modifier = {
+                modifier = opinion_our_species_research_high
+                who = event_target:zog_country_origin
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.223.b
+        trigger = {}
+        ai_chance = {
+            factor = 90
+        }
+        hidden_effect = {
+            add_opinion_modifier = {
+                modifier = opinion_our_species_research_mid
+                who = event_target:zog_country_origin
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.223.c
+        trigger = {
+            OR = {
+                is_pacifist = yes
+                is_spiritualist = yes
+                is_xenophile = yes
+            }
+        }
+        ai_chance = {
+            factor = 80
+        }
+        hidden_effect = {
+            add_opinion_modifier = {
+                modifier = opinion_our_species_research_low
+                who = event_target:zog_country_origin
+            }
+        }
+    }
+}
+
+country_event = {
+    id = zog_planet_events.224
+    title = zog_planet_events.224.title
+    desc = zog_planet_events.224.desc
+    is_triggered_only = yes
+    diplomatic = yes
+
+    picture_event_data = {
+        portrait = event_target:zog_country_origin
+        planet_background = event_target:zog_country_origin
+        graphical_culture = event_target:zog_country_origin
+        city_level = event_target:zog_country_origin
+        room = event_target:zog_country_origin.ruler
+    }
+
+    trigger = {}
+    immediate = {}
+
+    option = {
+        name = zog_planet_events.224.a
+        trigger = {
+            OR = {
+                is_xenophobe = yes
+                is_egalitarian = yes
+                is_militarist = yes
+            }
+        }
+        ai_chance = {
+            factor = 90
+        }
+        hidden_effect = {
+            add_opinion_modifier = {
+                modifier = opinion_our_species_research_mid
+                who = event_target:zog_country_origin
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.224.b
+        trigger = {}
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {
+            add_opinion_modifier = {
+                modifier = opinion_our_species_research_low
+                who = event_target:zog_country_origin
+            }
+        }
+    }
+}
+
+country_event = {
+    id = zog_planet_events.225
+    title = zog_planet_events.225.title
+    desc = zog_planet_events.225.desc
+    is_triggered_only = yes
+    diplomatic = yes
+
+    picture_event_data = {
+        portrait = event_target:zog_country_origin
+        planet_background = event_target:zog_country_origin
+        graphical_culture = event_target:zog_country_origin
+        city_level = event_target:zog_country_origin
+        room = event_target:zog_country_origin.ruler
+    }
+
+    trigger = {}
+
+    immediate = {
+        add_minerals = 750
+    }
+
+    option = {
+        name = zog_planet_events.225.a
+        trigger = {
+            OR = {
+                is_xenophobe = yes
+                is_egalitarian = yes
+                is_militarist = yes
+            }
+        }
+        ai_chance = {
+            factor = 90
+        }
+        hidden_effect = {
+            add_opinion_modifier = {
+                modifier = opinion_our_species_research_low
+                who = event_target:zog_country_origin
+            }
+        }
+    }
+    option = {
+        name = zog_planet_events.225.b
+        ai_chance = {
+            factor = 100
+        }
+    }
+}
+
+country_event = {
+    id = zog_planet_events.226
+    title = zog_planet_events.226.title
+    desc = zog_planet_events.226.desc
+    is_triggered_only = yes
+    diplomatic = yes
+
+    picture_event_data = {
+        portrait = event_target:zog_country_origin
+        planet_background = event_target:zog_country_origin
+        graphical_culture = event_target:zog_country_origin
+        city_level = event_target:zog_country_origin
+        room = event_target:zog_country_origin.ruler
+    }
+
+    trigger = {}
+
+    immediate = {
+        add_minerals = 1500
+    }
+
+    option = {
+        name = zog_planet_events.226.a
+        ai_chance = {
+            factor = 100
+        }
+    }
+}
