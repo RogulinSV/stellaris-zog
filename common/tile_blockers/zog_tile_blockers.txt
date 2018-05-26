@@ -1417,3 +1417,16 @@ tb_ancient_monuments = {
         }
     }
 }
+
+tb_terraforming_crack = {
+    time = 1800
+
+    cost = {
+        energy = 2000
+        minerals = 1000
+    }
+
+    spawn_chance = {
+        # None
+    }
+}
