@@ -1,5 +1,7 @@
 ﻿l_english:
     # Buildings
+    building_life_engineering_institute: ""
+    building_life_engineering_institute_desc: ""
     building_business_city_01: ""
     building_business_city_01_desc: ""
     building_business_city_02: ""

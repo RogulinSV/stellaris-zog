@@ -417,6 +417,33 @@
     tech_transcendental_leader_cap_desc: "Трансцендентные лидеры империи"
     tech_infinitum_leader_cap: "Бесконечные лидеры империи"
     tech_infinitum_leader_cap_desc: "Бесконечные лидеры империи"
+    tech_advanced_biology: "Передовая биоинженерия"
+    tech_advanced_biology_desc: "Передовая биоинженерия"
+    tech_supreme_biology: "Совершенная биоинженерия"
+    tech_supreme_biology_desc: "Совершенная биоинженерия"
+    # Space monsters technologies
+    tech_space_monsters: "Изучение звёздных монстров"
+    tech_space_monsters_desc: "Изучение звёздных монстров"
+    tech_crystal_space_monsters: "Изучение кристаллических звёздных монстров"
+    tech_crystal_space_monsters_desc: "Изучение кристаллических звёздных монстров"
+    tech_cloud_space_monsters: "Изучение эфирных звёздных монстров"
+    tech_cloud_space_monsters_desc: "Изучение эфирных звёздных монстров"
+    tech_amoeba_space_monsters: "Изучение амёбных звёздных монстров"
+    tech_amoeba_space_monsters_desc: "Изучение амёбных звёздных монстров"
+    # Planet cracking technology
+    tech_uninhabitable_planet_cracking: "Расщепление необитаемых миров"
+    tech_uninhabitable_planet_cracking_desc: "Расщепление необитаемых миров"
+    # Planet compacting technology
+    tech_gas_giant_planet_compacting: "Сжатие газовых гигантов"
+    tech_gas_giant_planet_compacting_desc: "Сжатие газовых гигантов"
+    # Planet cumulation technology
+    tech_habitable_planet_cumulation: "Наращивание обитаемых миров"
+    tech_habitable_planet_cumulation_desc: "Наращивание обитаемых миров"
+    # Life engineering technology
+    tech_life_engineering: "Создание органической жизни"
+    tech_life_engineering_desc: "Создание органической жизни"
+    tech_synth_engineering: "Создание синтетической жизни"
+    tech_synth_engineering_desc: "Создание синтетической жизни"
 
     # Tile blocker technology prerequisites
     tech_tb_lava_floods_prereqfor.title: "Управление лавовыми потоками"
@@ -836,3 +863,30 @@
     tech_transcendental_leader_cap_prereqfor.desc: "Трансцендентные лидеры империи"
     tech_infinitum_leader_cap_prereqfor.title: "Бесконечные лидеры империи"
     tech_infinitum_leader_cap_prereqfor.desc: "Бесконечные лидеры империи"
+    tech_advanced_biology_prereqfor.title: "Передовая биоинженерия"
+    tech_advanced_biology_prereqfor.desc: "Передовая биоинженерия"
+    tech_supreme_biology_prereqfor.title: "Совершенная биоинженерия"
+    tech_supreme_biology_prereqfor.desc: "Совершенная биоинженерия"
+    # Space monsters technology prerequisites
+    tech_space_monsters_prereqfor.title: "Изучение звёздных монстров"
+    tech_space_monsters_prereqfor.desc: "Изучение звёздных монстров"
+    tech_crystal_space_monsters_prereqfor.title: "Изучение кристаллических звёздных монстров"
+    tech_crystal_space_monsters_prereqfor.desc: "Изучение кристаллических звёздных монстров"
+    tech_cloud_space_monsters_prereqfor.title: "Изучение эфирных звёздных монстров"
+    tech_cloud_space_monsters_prereqfor.desc: "Изучение эфирных звёздных монстров"
+    tech_amoeba_space_monsters_prereqfor.title: "Изучение амёбных звёздных монстров"
+    tech_amoeba_space_monsters_prereqfor.desc: "Изучение амёбных звёздных монстров"
+    # Planet cracking technology prerequisites
+    tech_uninhabitable_planet_cracking_prereqfor.title: "Расщепление необитаемых миров"
+    tech_uninhabitable_planet_cracking_prereqfor.desc: "Расщепление необитаемых миров"
+    # Planet compacting technology prerequisites
+    tech_gas_giant_planet_compacting_prereqfor.title: "Сжатие газовых гигантов"
+    tech_gas_giant_planet_compacting_prereqfor.desc: "Сжатие газовых гигантов"
+    # Planet cumulation technology prerequisites
+    tech_habitable_planet_cumulation_prereqfor.title: "Наращивание обитаемых миров"
+    tech_habitable_planet_cumulation_prereqfor.desc: "Наращивание обитаемых миров"
+    # Life engineering technology prerequisites
+    tech_life_engineering_prereqfor.title: "Создание органической жизни"
+    tech_life_engineering_prereqfor.desc: "Создание органической жизни"
+    tech_synth_engineering_prereqfor.title: "Создание синтетической жизни"
+    tech_synth_engineering_prereqfor.desc: "Создание синтетической жизни"

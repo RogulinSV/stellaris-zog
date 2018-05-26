@@ -411,6 +411,33 @@
     tech_transcendental_leader_cap_desc: ""
     tech_infinitum_leader_cap: ""
     tech_infinitum_leader_cap_desc: ""
+    tech_advanced_biology: ""
+    tech_advanced_biology_desc: ""
+    tech_supreme_biology: ""
+    tech_supreme_biology_desc: ""
+    # Space monsters technologies
+    tech_space_monsters: ""
+    tech_space_monsters_desc: ""
+    tech_crystal_space_monsters: ""
+    tech_crystal_space_monsters_desc: ""
+    tech_cloud_space_monsters: ""
+    tech_cloud_space_monsters_desc: ""
+    tech_amoeba_space_monsters: ""
+    tech_amoeba_space_monsters_desc: ""
+    # Planet cracking technology
+    tech_uninhabitable_planet_cracking: ""
+    tech_uninhabitable_planet_cracking_desc: ""
+    # Planet compacting technology
+    tech_gas_giant_planet_compacting: ""
+    tech_gas_giant_planet_compacting_desc: ""
+    # Planet cumulation technology
+    tech_habitable_planet_cumulation: ""
+    tech_habitable_planet_cumulation_desc: ""
+    # Life engineering technology
+    tech_life_engineering: ""
+    tech_life_engineering_desc: ""
+    tech_synth_engineering: ""
+    tech_synth_engineering_desc: ""
 
     # Tile blocker technology prerequisites
     tech_tb_lava_floods_prereqfor.title: ""
@@ -826,3 +853,30 @@
     tech_transcendental_leader_cap_prereqfor.desc: ""
     tech_infinitum_leader_cap_prereqfor.title: ""
     tech_infinitum_leader_cap_prereqfor.desc: ""
+    tech_advanced_biology_prereqfor.title: ""
+    tech_advanced_biology_prereqfor.desc: ""
+    tech_supreme_biology_prereqfor.title: ""
+    tech_supreme_biology_prereqfor.desc: ""
+    # Space monsters technology prerequisites
+    tech_space_monsters_prereqfor.title: ""
+    tech_space_monsters_prereqfor.desc: ""
+    tech_crystal_space_monsters_prereqfor.title: ""
+    tech_crystal_space_monsters_prereqfor.desc: ""
+    tech_cloud_space_monsters_prereqfor.title: ""
+    tech_cloud_space_monsters_prereqfor.desc: ""
+    tech_amoeba_space_monsters_prereqfor.title: ""
+    tech_amoeba_space_monsters_prereqfor.desc: ""
+    # Planet cracking technology prerequisites
+    tech_uninhabitable_planet_cracking_prereqfor.title: ""
+    tech_uninhabitable_planet_cracking_prereqfor.desc: ""
+    # Planet compacting technology prerequisites
+    tech_gas_giant_planet_compacting_prereqfor.title: ""
+    tech_gas_giant_planet_compacting_prereqfor.desc: ""
+    # Planet cumulation technology prerequisites
+    tech_habitable_planet_cumulation_prereqfor.title: ""
+    tech_habitable_planet_cumulation_prereqfor.desc: ""
+    # Life engineering technology prerequisites
+    tech_life_engineering_prereqfor.title: ""
+    tech_life_engineering_prereqfor.desc: ""
+    tech_synth_engineering_prereqfor.title: ""
+    tech_synth_engineering_prereqfor.desc: ""

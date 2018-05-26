@@ -1,5 +1,7 @@
 ﻿l_russian:
     # Buildings
+    building_life_engineering_institute: "Институт органической жизни"
+    building_life_engineering_institute_desc: "Институт органической жизни"
     building_business_city_01: "Деловой центр"
     building_business_city_01_desc: "Деловой центр"
     building_business_city_02: "Деловой сектор"
