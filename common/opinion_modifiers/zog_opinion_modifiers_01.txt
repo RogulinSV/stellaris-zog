@@ -1,0 +1,255 @@
+opinion_uninhabitable_planet_cracked = {
+    opinion = {
+        base = 0
+        modifier = {
+            add = -20
+            OR = {
+                is_country_type = fallen_empire
+                is_country_type = awakened_fallen_empire
+            }
+        }
+        modifier = {
+            add = -10
+            OR = {
+                is_xenophobe = yes
+                is_spiritualist = yes
+            }
+        }
+        modifier = {
+            add = -5
+            is_pacifist = yes
+        }
+        modifier = {
+            add = 2
+            is_materialist = yes
+        }
+        modifier = {
+            add = 4
+            is_mercantile_regime = yes
+        }
+    }
+
+    accumulative = yes
+    unique = no
+
+    min = -1000
+    max = 200
+
+    decay = {
+        base = 1
+    }
+}
+
+opinion_compacted_gas_giant = {
+    opinion = {
+        base = 0
+        modifier = {
+            add = -4
+            OR = {
+                is_country_type = fallen_empire
+                is_country_type = awakened_fallen_empire
+            }
+        }
+        modifier = {
+            add = -1
+            OR = {
+                is_xenophobe = yes
+                is_spiritualist = yes
+            }
+        }
+        modifier = {
+            add = 1
+            is_pacifist = yes
+        }
+        modifier = {
+            add = 3
+            is_materialist = yes
+        }
+    }
+
+    accumulative = yes
+    unique = no
+
+    min = -1000
+    max = 200
+
+    decay = {
+        base = 1
+    }
+}
+
+opinion_cumulated_habitable_planet = {
+    opinion = {
+        base = 0
+        modifier = {
+            add = -4
+            OR = {
+                is_country_type = fallen_empire
+                is_country_type = awakened_fallen_empire
+            }
+        }
+        modifier = {
+            add = -2
+            OR = {
+                is_xenophobe = yes
+                is_spiritualist = yes
+            }
+        }
+        modifier = {
+            add = 1
+            is_pacifist = yes
+        }
+        modifier = {
+            add = 2
+            is_materialist = yes
+        }
+    }
+
+    accumulative = yes
+    unique = no
+
+    min = -1000
+    max = 200
+
+    decay = {
+        base = 1
+    }
+}
+
+opinion_our_species_research_high = {
+    opinion = {
+        base = 0
+        modifier = {
+            add = -1000
+            OR = {
+                is_country_type = fallen_empire
+                is_country_type = awakened_fallen_empire
+            }
+        }
+        modifier = {
+            add = -500
+            OR = {
+                is_xenophobe = yes
+                is_egalitarian = yes
+                is_militarist = yes
+            }
+        }
+        modifier = {
+            add = -250
+            OR = {
+                is_authoritarian = yes
+                is_materialist = yes
+            }
+        }
+        modifier = {
+            add = 1
+            OR = {
+                is_pacifist = yes
+                is_spiritualist = yes
+                is_xenophile = yes
+            }
+        }
+    }
+
+    accumulative = yes
+    unique = no
+
+    min = -1000
+    max = 1
+
+    decay = {
+        base = 1
+    }
+}
+
+opinion_our_species_research_mid = {
+    opinion = {
+        base = 0
+        modifier = {
+            add = -500
+            OR = {
+                is_country_type = fallen_empire
+                is_country_type = awakened_fallen_empire
+            }
+        }
+        modifier = {
+            add = -100
+            OR = {
+                is_xenophobe = yes
+                is_egalitarian = yes
+                is_militarist = yes
+            }
+        }
+        modifier = {
+            add = -50
+            OR = {
+                is_authoritarian = yes
+                is_materialist = yes
+            }
+        }
+        modifier = {
+            add = 5
+            OR = {
+                is_pacifist = yes
+                is_spiritualist = yes
+                is_xenophile = yes
+            }
+        }
+    }
+
+    accumulative = yes
+    unique = no
+
+    min = -500
+    max = 5
+
+    decay = {
+        base = 1
+    }
+}
+
+opinion_our_species_research_low = {
+    opinion = {
+        base = 0
+        modifier = {
+            add = -100
+            OR = {
+                is_country_type = fallen_empire
+                is_country_type = awakened_fallen_empire
+            }
+        }
+        modifier = {
+            add = -50
+            OR = {
+                is_xenophobe = yes
+                is_egalitarian = yes
+                is_militarist = yes
+            }
+        }
+        modifier = {
+            add = -1
+            OR = {
+                is_authoritarian = yes
+                is_materialist = yes
+            }
+        }
+        modifier = {
+            add = 10
+            OR = {
+                is_pacifist = yes
+                is_spiritualist = yes
+                is_xenophile = yes
+            }
+        }
+    }
+
+    accumulative = yes
+    unique = no
+
+    min = -100
+    max = 10
+
+    decay = {
+        base = 1
+    }
+}
