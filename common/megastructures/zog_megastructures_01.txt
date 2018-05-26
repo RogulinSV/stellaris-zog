@@ -1,0 +1,1201 @@
+@entity_x = 0
+@entity_y = -20
+
+zog_uninhabitable_planet_cracking_0 = {
+    entity = "think_tank_destroyed_01_entity"
+    construction_entity = "thinktank_phase_03_entity"
+    portrait = "GFX_megastructure_think_tank_background"
+    place_entity_on_planet_plane = no
+    entity_offset = { x = @entity_x y = @entity_y }
+
+    construction_blocks_others = no
+
+    build_time = 360
+    build_cost = {
+        energy = 10000
+        influence = 25
+    }
+
+    potential = {
+        has_technology = "tech_uninhabitable_planet_cracking"
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_inside_border"
+            is_inside_border = from
+        }
+        custom_tooltip = {
+            fail_text = "requires_surveyed_system"
+            NOT = {
+                any_planet = {
+                    is_surveyed = {
+                        who = prev.from
+                        status = no
+                    }
+                }
+            }
+        }
+    }
+
+    placement_rules = {
+        planet_possible = {
+            custom_tooltip = {
+                fail_text = "requires_no_existing_megastructure"
+                NAND = {
+                    has_planet_flag = "megastructure"
+                    has_planet_flag = "has_megastructure"
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_no_cracked"
+                NAND = {
+                    has_planet_flag = "destroyed_by_colossus"
+                    has_planet_flag = "planet_cracked"
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_not_habitat"
+                is_uninhabitable_planet = yes
+                is_terraforming = no
+                has_anomaly = no
+            }
+            custom_tooltip = {
+                fail_text = "requires_no_orbital_station"
+                has_orbital_station = no
+            }
+            custom_tooltip = {
+                fail_text = "requires_small_celestial"
+                planet_size > 9
+            }
+            custom_tooltip = {
+                fail_text = "requires_survey_not_habitable"
+                is_surveyed = {
+                    who = prev.from
+                    status = yes
+                }
+            }
+        }
+    }
+
+    on_build_start = {}
+
+    on_build_cancel = {}
+
+    on_build_complete = {
+        owner = {
+            set_variable = {
+                which = "mined_resource_minerals"
+                value = 0
+            }
+
+            switch = {
+                trigger = planet_size
+                25 = {
+                    random_list = {
+                        5 = {
+                            add_minerals = 17500
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 17500
+                            }
+                        }
+                        35 = {
+                            add_minerals = 15000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 15000
+                            }
+                        }
+                        30 = {
+                            add_minerals = 12500
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 12500
+                            }
+                        }
+                        20 = {
+                            add_minerals = 10000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 10000
+                            }
+                        }
+                        10 = {
+                            add_minerals = 7500
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 7500
+                            }
+                        }
+                    }
+                }
+                24 = {
+                    random_list = {
+                        5 = {
+                            add_minerals = 16000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 16000
+                            }
+                        }
+                        35 = {
+                            add_minerals = 14000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 14000
+                            }
+                        }
+                        30 = {
+                            add_minerals = 12000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 12000
+                            }
+                        }
+                        20 = {
+                            add_minerals = 9000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 9000
+                            }
+                        }
+                        10 = {
+                            add_minerals = 6000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 6000
+                            }
+                        }
+                    }
+                }
+                23 = {
+                    random_list = {
+                        5 = {
+                            add_minerals = 15000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 15000
+                            }
+                        }
+                        35 = {
+                            add_minerals = 13000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 13000
+                            }
+                        }
+                        30 = {
+                            add_minerals = 11000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 11000
+                            }
+                        }
+                        20 = {
+                            add_minerals = 8000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 8000
+                            }
+                        }
+                        10 = {
+                            add_minerals = 5000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 5000
+                            }
+                        }
+                    }
+                }
+                22 = {
+                    random_list = {
+                        5 = {
+                            add_minerals = 14000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 14000
+                            }
+                        }
+                        35 = {
+                            add_minerals = 12000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 12000
+                            }
+                        }
+                        30 = {
+                            add_minerals = 10000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 10000
+                            }
+                        }
+                        20 = {
+                            add_minerals = 7000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 7000
+                            }
+                        }
+                        10 = {
+                            add_minerals = 4000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 4000
+                            }
+                        }
+                    }
+                }
+                21 = {
+                    random_list = {
+                        5 = {
+                            add_minerals = 13000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 13000
+                            }
+                        }
+                        35 = {
+                            add_minerals = 11000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 11000
+                            }
+                        }
+                        30 = {
+                            add_minerals = 9000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 9000
+                            }
+                        }
+                        20 = {
+                            add_minerals = 6000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 6000
+                            }
+                        }
+                        10 = {
+                            add_minerals = 3000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 3000
+                            }
+                        }
+                    }
+                } 
+                20 = {
+                    random_list = {
+                        5 = {
+                            add_minerals = 12000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 12000
+                            }
+                        }
+                        35 = {
+                            add_minerals = 10000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 10000
+                            }
+                        }
+                        30 = {
+                            add_minerals = 8000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 8000
+                            }
+                        }
+                        20 = {
+                            add_minerals = 5000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 5000
+                            }
+                        }
+                        10 = {
+                            add_minerals = 2000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 2000
+                            }
+                        }
+                    }
+                }
+                19 = {
+                    random_list = {
+                        5 = {
+                            add_minerals = 11000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 11000
+                            }
+                        }
+                        35 = {
+                            add_minerals = 9000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 9000
+                            }
+                        }
+                        30 = {
+                            add_minerals = 7000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 7000
+                            }
+                        }
+                        20 = {
+                            add_minerals = 4000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 4000
+                            }
+                        }
+                        10 = {
+                            add_minerals = 1000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 1000
+                            }
+                        }
+                    }
+                }
+                18 = {
+                    random_list = {
+                        5 = {
+                            add_minerals = 10000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 10000
+                            }
+                        }
+                        45 = {
+                            add_minerals = 8000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 8000
+                            }
+                        }
+                        30 = {
+                            add_minerals = 6000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 6000
+                            }
+                        }
+                        20 = {
+                            add_minerals = 3000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 3000
+                            }
+                        }
+                    }
+                }
+                17 = {
+                    random_list = {
+                        5 = {
+                            add_minerals = 9000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 9000
+                            }
+                        }
+                        45 = {
+                            add_minerals = 7000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 7000
+                            }
+                        }
+                        30 = {
+                            add_minerals = 5000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 5000
+                            }
+                        }
+                        20 = {
+                            add_minerals = 2000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 2000
+                            }
+                        }
+                    }
+                }
+                16 = {
+                    random_list = {
+                        5 = {
+                            add_minerals = 8000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 8000
+                            }
+                        }
+                        45 = {
+                            add_minerals = 6000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 6000
+                            }
+                        }
+                        30 = {
+                            add_minerals = 4000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 4000
+                            }
+                        }
+                        20 = {
+                            add_minerals = 1000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 1000
+                            }
+                        }
+                    }
+                }
+                15 = {
+                    random_list = {
+                        5 = {
+                            add_minerals = 7000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 7000
+                            }
+                        }
+                        45 = {
+                            add_minerals = 5000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 5000
+                            }
+                        }
+                        50 = {
+                            add_minerals = 4000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 4000
+                            }
+                        }
+                    }
+                }
+                14 = {
+                    random_list = {
+                        5 = {
+                            add_minerals = 6000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 6000
+                            }
+                        }
+                        45 = {
+                            add_minerals = 4000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 4000
+                            }
+                        }
+                        50 = {
+                            add_minerals = 3000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 3000
+                            }
+                        }
+                    }
+                }
+                13 = {
+                    random_list = {
+                        5 = {
+                            add_minerals = 5000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 5000
+                            }
+                        }
+                        45 = {
+                            add_minerals = 3000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 3000
+                            }
+                        }
+                        50 = {
+                            add_minerals = 2000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 2000
+                            }
+                        }
+                    }
+                }
+                12 = {
+                    random_list = {
+                        5 = {
+                            add_minerals = 4000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 5000
+                            }
+                        }
+                        45 = {
+                            add_minerals = 2000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 2000
+                            }
+                        }
+                        50 = {
+                            add_minerals = 1000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 1000
+                            }
+                        }
+                    }
+                }
+                11 = {
+                    random_list = {
+                        5 = {
+                            add_minerals = 3000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 3000
+                            }
+                        }
+                        95 = {
+                            add_minerals = 1000
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 1000
+                            }
+                        }
+                    }
+                }
+                10 = {
+                    random_list = {
+                        5 = {
+                            add_minerals = 2250
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 2250
+                            }
+                        }
+                        95 = {
+                            add_minerals = 750
+                            set_variable = {
+                                which = "mined_resource_minerals"
+                                value = 750
+                            }
+                        }
+                    }
+                }
+                9 = {
+                    add_minerals = 500
+                    set_variable = {
+                        which = "mined_resource_minerals"
+                        value = 500
+                    }
+                }
+            }
+        }
+        remove_megastructure = fromfrom
+        fromfrom.planet = {
+            change_pc = "pc_broken"
+
+            switch = {
+                trigger = planet_size
+                25 = { change_planet_size = -16 }
+                24 = { change_planet_size = -15 }
+                23 = { change_planet_size = -14 }
+                22 = { change_planet_size = -13 }
+                21 = { change_planet_size = -12 }
+                20 = { change_planet_size = -11 }
+                19 = { change_planet_size = -10 }
+                18 = { change_planet_size = -9 }
+                17 = { change_planet_size = -8 }
+                16 = { change_planet_size = -7 }
+                15 = { change_planet_size = -6 }
+                14 = { change_planet_size = -5 }
+                13 = { change_planet_size = -4 }
+                12 = { change_planet_size = -3 }
+                11 = { change_planet_size = -2 }
+                10 = { change_planet_size = -1 }
+            }
+
+            set_planet_flag = "planet_cracked"
+            set_uninhabitable_cracked_planet_random_resource = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 30
+    }
+}
+
+zog_habitable_planet_cumulation_0 = {
+    entity = "think_tank_destroyed_01_entity"
+    construction_entity = "thinktank_phase_03_entity"
+    portrait = "GFX_megastructure_think_tank_background"
+    place_entity_on_planet_plane = no
+    entity_offset = { x = @entity_x y = @entity_y }
+
+    construction_blocks_others = no
+
+    build_time = 1080
+    build_cost = {
+        energy = 15000
+        minerals = 5000
+        influence = 5
+    }
+
+    potential = {
+        has_technology = "tech_habitable_planet_cumulation"
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_inside_border"
+            is_inside_border = from
+        }
+        custom_tooltip = {
+            fail_text = "requires_surveyed_system"
+            NOT = {
+                any_planet = {
+                    is_surveyed = {
+                        who = prev.from
+                        status = no
+                    }
+                }
+            }
+        }
+    }
+
+    placement_rules = {
+        planet_possible = {
+            custom_tooltip = {
+                fail_text = "requires_no_existing_megastructure"
+                NAND = {
+                    has_planet_flag = "megastructure"
+                    has_planet_flag = "has_megastructure"
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_no_recently_cumulated"
+                NOT = {
+                    has_planet_flag = "habitable_planet_cumulated"
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_is_habitable"
+                OR = {
+                    is_planet_class = "pc_desert"
+                    is_planet_class = "pc_tropical"
+                    is_planet_class = "pc_arid"
+                    is_planet_class = "pc_ocean"
+                    is_planet_class = "pc_tundra"
+                    is_planet_class = "pc_arctic"
+                    is_planet_class = "pc_continental"
+                    is_planet_class = "pc_alpine"
+                    is_planet_class = "pc_savannah"
+                    is_planet_class = "pc_gaia"
+                    is_planet_class = "pc_nuked"
+                    # Special planets
+                    is_planet_class = "pc_magmatic"
+                    is_planet_class = "pc_subtropical"
+                    is_planet_class = "pc_subsavannah"
+                    is_planet_class = "pc_subtundra"
+                    is_planet_class = "pc_subcontinental"
+                    is_planet_class = "pc_floatislands"
+                    is_planet_class = "pc_exogarden"
+                    is_planet_class = "pc_xenovalley"
+                    is_planet_class = "pc_geoprairie"
+                }
+                is_colony = no
+                NOT = { has_colony_progress > 0 }
+                count_pops = { count = 0 }
+            }
+            custom_tooltip = {
+                fail_text = "requires_survey_is_habitable"
+                is_surveyed = {
+                    who = prev.from
+                    status = yes
+                }
+                is_terraforming = no
+                has_anomaly = no
+                planet_size < 25
+            }
+        }
+    }
+
+    on_build_start = {}
+
+    on_build_cancel = {}
+
+    on_build_complete = {
+        remove_megastructure = fromfrom
+        fromfrom.planet = {
+            change_planet_size = 1
+
+            every_tile = {
+                if = {
+                    limit = {
+                        has_blocker = yes
+                    }
+                    remove_blocker = yes
+                    set_blocker = random
+                    else = {
+                        if = {
+                            limit = {
+                                OR = {
+                                    has_building = yes
+                                    has_building_construction = yes
+                                }
+                            }
+                            remove_building = yes
+                        }
+                        if = {
+                            limit = {
+                                OR = {
+                                    has_pop = yes
+                                    has_grown_pop = yes
+                                    has_growing_pop = yes
+                                }
+                            }
+                            kill_pop = yes
+                        }
+                    }
+                }
+            }
+            random_tile = {
+                limit = {
+                    has_blocker = no
+                    has_building = no
+                    has_building_construction = no
+                    has_pop = no
+                    has_grown_pop = no
+                    has_growing_pop = no
+                }
+                set_blocker = "tb_terraforming_crack"
+            }
+
+            set_timed_planet_flag = {
+                flag = "habitable_planet_cumulated"
+                days = 360
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 30
+    }
+}
+
+zog_gas_giant_planet_compacting_0 = {
+    entity = "think_tank_destroyed_01_entity"
+    construction_entity = "thinktank_phase_03_entity"
+    portrait = "GFX_megastructure_think_tank_background"
+    place_entity_on_planet_plane = no
+    entity_offset = { x = @entity_x y = @entity_y }
+
+    construction_blocks_others = no
+
+    build_time = 4320
+    build_cost = {
+        energy = 30000
+        minerals = 7000
+        influence = 10
+    }
+
+    potential = {
+        has_technology = "tech_gas_giant_planet_compacting"
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_inside_border"
+            is_inside_border = from
+        }
+        custom_tooltip = {
+            fail_text = "requires_surveyed_system"
+            NOT = {
+                any_planet = {
+                    is_surveyed = {
+                        who = prev.from
+                        status = no
+                    }
+                }
+            }
+        }
+    }
+
+    placement_rules = {
+        planet_possible = {
+            custom_tooltip = {
+                fail_text = "requires_no_existing_megastructure"
+                NAND = {
+                    has_planet_flag = "megastructure"
+                    has_planet_flag = "has_megastructure"
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_is_gas_giant"
+                OR = {
+                    is_planet_class = "pc_gas_giant"
+                    # Special planets
+                    is_planet_class = "pc_crystal_gas_giant"
+                    is_planet_class = "pc_methane_gas_giant"
+                    is_planet_class = "pc_carbon_gas_giant"
+                    is_planet_class = "pc_nitrogen_gas_giant"
+                    is_planet_class = "pc_sulfuric_gas_giant"
+                }
+                is_terraforming = no
+                has_anomaly = no
+            }
+            custom_tooltip = {
+                fail_text = "requires_no_orbital_station"
+                has_orbital_station = no
+            }
+            custom_tooltip = {
+                fail_text = "requires_large_celestial"
+                planet_size > 24
+            }
+            custom_tooltip = {
+                fail_text = "requires_survey_not_habitable"
+                is_surveyed = {
+                    who = prev.from
+                    status = yes
+                }
+            }
+        }
+    }
+
+    on_build_start = {}
+
+    on_build_cancel = {}
+
+    on_build_complete = {
+        remove_megastructure = fromfrom
+        fromfrom.planet = {
+            switch = {
+                trigger = is_planet_class
+                pc_gas_giant = { change_pc = pc_barren }
+                # Special planets
+                pc_methane_gas_giant = { change_pc = pc_crystal_uninhabitable }
+                pc_carbon_gas_giant = { change_pc = pc_carbon_uninhabitable }
+                pc_nitrogen_gas_giant = { change_pc = pc_nitrogen_uninhabitable }
+                pc_sulfuric_gas_giant = { change_pc = pc_sulfuric_uninhabitable }
+            }
+            if = {
+                limit = {
+                    planet_size > 39
+                }
+                set_planet_size = 25
+                else = {
+                    if = {
+                        limit = {
+                            planet_size > 34
+                        }
+                        random_list = {
+                            50 = { set_planet_size = 22 }
+                            30 = { set_planet_size = 23 }
+                            15 = { set_planet_size = 24 }
+                             5 = { set_planet_size = 25 }
+                        }
+                        else = {
+                            if = {
+                                limit = {
+                                    planet_size > 29
+                                }
+                                random_list = {
+                                    50 = { set_planet_size = 18 }
+                                    30 = { set_planet_size = 19 }
+                                    15 = { set_planet_size = 20 }
+                                     5 = { set_planet_size = 21 }
+                                }
+                                else = {
+                                    if = {
+                                        limit = {
+                                            planet_size > 24
+                                        }
+                                        random_list = {
+                                            50 = { set_planet_size = 14 }
+                                            30 = { set_planet_size = 15 }
+                                            15 = { set_planet_size = 16 }
+                                             5 = { set_planet_size = 17 }
+                                        }
+                                        else = {
+                                            random_list = {
+                                                50 = { set_planet_size = 10 }
+                                                30 = { set_planet_size = 11 }
+                                                15 = { set_planet_size = 12 }
+                                                 5 = { set_planet_size = 13 }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            gas_giant_compacted_set_random_resource = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 30
+    }
+}
+
+zog_life_engineering_0 = {
+    entity = "think_tank_destroyed_01_entity"
+    construction_entity = "thinktank_phase_03_entity"
+    portrait = "GFX_megastructure_think_tank_background"
+    place_entity_on_planet_plane = no
+    entity_offset = { x = @entity_x y = @entity_y }
+
+    construction_blocks_others = no
+
+    build_time = 1800
+    build_cost = {
+        energy = 10000
+        minerals = 10000
+        influence = 900
+    }
+
+    potential = {
+        has_technology = "tech_life_engineering"
+        OR = {
+            check_variable = {
+                which = "HUM_species_points"
+                value > 0
+            }
+            check_variable = {
+                which = "MAM_species_points"
+                value > 0
+            }
+            check_variable = {
+                which = "REP_species_points"
+                value > 0
+            }
+            check_variable = {
+                which = "AVI_species_points"
+                value > 0
+            }
+            check_variable = {
+                which = "ART_species_points"
+                value > 0
+            }
+            check_variable = {
+                which = "FUN_species_points"
+                value > 0
+            }
+            check_variable = {
+                which = "MOL_species_points"
+                value > 0
+            }
+            check_variable = {
+                which = "PLANT_species_points"
+                value > 0
+            }
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_inside_border"
+            is_inside_border = from
+        }
+        custom_tooltip = {
+            fail_text = "requires_surveyed_system"
+            NOT = {
+                any_planet = {
+                    is_surveyed = {
+                        who = prev.from
+                        status = no
+                    }
+                }
+            }
+        }
+    }
+
+    placement_rules = {
+        planet_possible = {
+            custom_tooltip = {
+                fail_text = "requires_no_existing_megastructure"
+                NAND = {
+                    has_planet_flag = "megastructure"
+                    has_planet_flag = "has_megastructure"
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_is_habitable"
+                OR = {
+                    is_planet_class = "pc_desert"
+                    is_planet_class = "pc_tropical"
+                    is_planet_class = "pc_arid"
+                    is_planet_class = "pc_ocean"
+                    is_planet_class = "pc_tundra"
+                    is_planet_class = "pc_arctic"
+                    is_planet_class = "pc_continental"
+                    is_planet_class = "pc_alpine"
+                    is_planet_class = "pc_savannah"
+                    is_planet_class = "pc_gaia"
+                    is_planet_class = "pc_nuked"
+                    # Special planets
+                    is_planet_class = "pc_magmatic"
+                    is_planet_class = "pc_subtropical"
+                    is_planet_class = "pc_subsavannah"
+                    is_planet_class = "pc_subtundra"
+                    is_planet_class = "pc_subcontinental"
+                    is_planet_class = "pc_floatislands"
+                    is_planet_class = "pc_exogarden"
+                    is_planet_class = "pc_xenovalley"
+                    is_planet_class = "pc_geoprairie"
+                }
+                is_colony = no
+                NOT = { has_colony_progress > 0 }
+                is_terraforming = no
+                has_anomaly = no
+                count_pops = { count = 0 }
+            }
+            custom_tooltip = {
+                fail_text = "requires_no_orbital_station"
+                has_orbital_station = no
+            }
+            custom_tooltip = {
+                fail_text = "requires_survey_is_habitable"
+                is_surveyed = {
+                    who = prev.from
+                    status = yes
+                }
+            }
+        }
+    }
+
+    on_build_start = {}
+
+    on_build_cancel = {}
+
+    on_build_complete = {
+        remove_megastructure = fromfrom
+    }
+
+    ai_weight = {
+        weight = 10
+    }
+}
+
+zog_synth_engineering_0 = {
+    entity = "think_tank_destroyed_01_entity"
+    construction_entity = "thinktank_phase_03_entity"
+    portrait = "GFX_megastructure_think_tank_background"
+    place_entity_on_planet_plane = no
+    entity_offset = { x = @entity_x y = @entity_y }
+
+    construction_blocks_others = no
+
+    build_time = 3600
+    build_cost = {
+        energy = 50000
+        minerals = 50000
+        influence = 900
+    }
+
+    potential = {
+        has_technology = "tech_synth_engineering"
+        OR = {
+            check_variable = {
+                which = "MACHINE_species_points"
+                value > 0
+            }
+            check_variable = {
+                which = "ROBOT_species_points"
+                value > 0
+            }
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_inside_border"
+            is_inside_border = from
+        }
+        custom_tooltip = {
+            fail_text = "requires_surveyed_system"
+            NOT = {
+                any_planet = {
+                    is_surveyed = {
+                        who = prev.from
+                        status = no
+                    }
+                }
+            }
+        }
+    }
+
+    placement_rules = {
+        planet_possible = {
+            custom_tooltip = {
+                fail_text = "requires_no_existing_megastructure"
+                NAND = {
+                    has_planet_flag = "megastructure"
+                    has_planet_flag = "has_megastructure"
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_not_habitat"
+                is_uninhabitable_planet = yes
+                is_terraforming = no
+                has_anomaly = no
+            }
+            custom_tooltip = {
+                fail_text = "requires_no_orbital_station"
+                has_orbital_station = no
+            }
+            custom_tooltip = {
+                fail_text = "requires_medium_celestial"
+                planet_size > 19
+            }
+            custom_tooltip = {
+                fail_text = "requires_survey_not_habitable"
+                is_surveyed = {
+                    who = prev.from
+                    status = yes
+                }
+            }
+        }
+    }
+
+    on_build_start = {}
+
+    on_build_cancel = {}
+
+    on_build_complete = {
+        remove_megastructure = fromfrom
+
+        fromfrom.planet = {
+            change_pc = "pc_machine"
+            orbital_deposit_tile = {
+                clear_deposits = yes
+            }
+            if = {
+                limit = { has_mining_station = yes }
+                random_mining_station = { dismantle = yes }
+            }
+            clear_blockers = yes
+            reset_planet = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 10
+    }
+}
