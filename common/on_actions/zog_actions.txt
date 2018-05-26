@@ -220,22 +220,22 @@ on_blocker_cleared = {
 on_megastructure_built = {
     events = {
         # Uninhabitable Planet Cracking
-        zog_planet_events.1
+        zog_megastructure_events.1
         # Gas Giant Compacting
-        zog_planet_events.2
+        zog_megastructure_events.2
         # Habitable Planet Cumulation
-        zog_planet_events.3
+        zog_megastructure_events.3
         # Life Engineering
-        zog_planet_events.4
+        zog_megastructure_events.4
         # Synth Engineering
-        zog_planet_events.5
+        zog_megastructure_events.5
     }
 }
 
 on_post_communications_established = {
     events = {
         # Species research
-        zog_planet_events.20
+        zog_megastructure_events.20
     }
 }
 
