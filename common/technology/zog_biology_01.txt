@@ -1,0 +1,784 @@
+tech_advanced_biology = {
+    cost = 950
+    area = society
+    start_tech = no
+    category = { biology }
+    icon = "tech_advanced_biology"
+    tier = 0
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {}
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_advanced_biology_prereqfor.title
+            desc = tech_advanced_biology_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        category_biology_research_speed_mult = 0.05
+    }
+
+    weight = 100
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            is_ai = yes
+        }
+        modifier = {
+            factor = 0
+            years_passed < 5
+        }
+    }
+
+    ai_weight = {
+        factor = 0
+    }
+}
+
+tech_supreme_biology = {
+    cost = 50000
+    area = society
+    start_tech = no
+    category = { biology }
+    icon = "tech_supreme_biology"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_biology"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_supreme_biology_prereqfor.title
+            desc = tech_supreme_biology_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        category_biology_research_speed_mult = 0.25
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = society
+                has_level < 4
+            }
+        }
+        modifier = {
+            factor = 0.90
+            research_leader = {
+                area = society
+                has_level < 5
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+        modifier = {
+            factor = 0
+            years_passed < 100
+        }
+        modifier = {
+            factor = 0
+            count_tech_options = {
+                area = society
+                count < 20
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.80
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NOT = {
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_tradition = "tr_discovery_faith_in_science"
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_discovery_finish"
+        }
+    }
+
+    ai_weight = {
+        factor = 70
+    }
+}
+
+##################################
+### Space monsters technologies
+##################################
+
+tech_space_monsters = {
+    # Unlocks "Space monsters Repression" country edict
+    # Unlocks "Space monsters Extermination" country edict
+    # Unlocks "Space monsters Coexistence" country edict
+
+    cost = 7500
+    area = society
+    start_tech = no
+    category = { biology }
+    icon = "tech_space_monsters"
+    tier = 1
+
+    is_reverse_engineerable = yes
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {}
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_space_monsters_prereqfor.title
+            desc = tech_space_monsters_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        damage_vs_country_type_amoeba_mult = 0.05
+        damage_vs_country_type_crystal_mult = 0.05
+        damage_vs_country_type_cloud_mult = 0.05
+    }
+
+    weight = 100
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "space_monsters_defeated"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+        modifier = {
+            factor = 1.75
+            has_technology = "tech_supreme_biology"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "space_monsters_defeated"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+    }
+}
+
+tech_crystal_space_monsters = {
+    cost = 15000
+    area = society
+    start_tech = no
+    category = { biology }
+    icon = "tech_crystal_space_monsters"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_space_monsters"
+        "tech_advanced_biology"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_crystal_space_monsters_prereqfor.title
+            desc = tech_crystal_space_monsters_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        damage_vs_country_type_crystal_mult = 0.15
+    }
+
+    weight = 75
+
+    weight_modifier = {
+        modifier = {
+            factor = 0 
+            check_variable = {
+                which = "crystal_space_monsters_defeated"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.85
+            research_leader = {
+                area = society
+                has_level < 4
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_technology = "tech_supreme_biology"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "crystal_space_monsters_defeated"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.85
+            research_leader = {
+                area = society
+                has_level < 4
+            }
+        }
+    }
+}
+
+tech_cloud_space_monsters = {
+    cost = 15000
+    area = society
+    start_tech = no
+    category = { biology }
+    icon = "tech_cloud_space_monsters"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_space_monsters"
+        "tech_advanced_biology"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_cloud_space_monsters_prereqfor.title
+            desc = tech_cloud_space_monsters_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        damage_vs_country_type_cloud_mult = 0.15
+    }
+
+    weight = 75
+
+    weight_modifier = {
+        modifier = {
+            factor = 0 
+            check_variable = {
+                which = "cloud_space_monsters_defeated"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.85
+            research_leader = {
+                area = society
+                has_level < 4
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_technology = "tech_supreme_biology"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "cloud_space_monsters_defeated"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.85
+            research_leader = {
+                area = society
+                has_level < 4
+            }
+        }
+    }
+}
+
+tech_amoeba_space_monsters = {
+    cost = 15000
+    area = society
+    start_tech = no
+    category = { biology }
+    icon = "tech_amoeba_space_monsters"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_space_monsters"
+        "tech_advanced_biology"
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = tech_amoeba_space_monsters_prereqfor.title
+            desc = tech_amoeba_space_monsters_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        damage_vs_country_type_amoeba_mult = 0.15
+    }
+
+    weight = 75
+
+    weight_modifier = {
+        modifier = {
+            factor = 0 
+            check_variable = {
+                which = "amoeba_space_monsters_defeated"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.85
+            research_leader = {
+                area = society
+                has_level < 4
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_technology = "tech_supreme_biology"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "amoeba_space_monsters_defeated"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.85
+            research_leader = {
+                area = society
+                has_level < 4
+            }
+        }
+    }
+}
+
+####################################
+### Life engineering technologies
+####################################
+
+tech_life_engineering = {
+    # Unlocks "Institute of Life Engineering" building
+
+    cost = 100000
+    area = society
+    start_tech = no
+    category = { biology }
+    icon = "tech_life_engineering"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_supreme_biology"
+        "tech_selected_lineages"
+        "tech_gene_expressions"
+    }
+
+    prereqfor_desc = {
+        custom = {
+            title = tech_life_engineering_prereqfor.title
+            desc = tech_life_engineering_prereqfor.desc
+        }
+    }
+
+    weight = 65
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_discovery_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_engineered_evolution"
+            }
+        }
+        modifier = {
+            factor = 1.35
+            has_ascension_perk = "ap_evolutionary_mastery"
+        }
+        modifier = {
+            factor = 1.05
+            years_passed > 99
+        }
+        modifier = {
+            factor = 1.10
+            years_passed > 149
+        }
+        modifier = {
+            factor = 1.15
+            years_passed > 199
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOR = {
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_expertise_biology"
+                }
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.70
+            NOT = {
+                research_leader = {
+                    area = society
+                    has_level < 4
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_discovery_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_engineered_evolution"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOR = {
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_expertise_biology"
+                }
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.70
+            NOT = {
+                research_leader = {
+                    area = society
+                    has_level < 4
+                }
+            }
+        }
+    }
+}
+
+tech_synth_engineering = {
+    cost = 130000
+    area = society
+    start_tech = no
+    category = { biology }
+    icon = "tech_synth_engineering"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_supreme_biology"
+        "tech_synthetic_thought_patterns"
+        "tech_synthetic_leaders"
+    }
+
+    prereqfor_desc = {
+        custom = {
+            title = tech_synth_engineering_prereqfor.title
+            desc = tech_synth_engineering_prereqfor.desc
+        }
+    }
+
+    weight = 65
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                host_has_dlc = "Synthetic Dawn Story Pack"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_discovery_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_synthetic_evolution"
+            }
+        }
+        modifier = {
+            factor = 1.35
+            has_ascension_perk = "ap_evolutionary_mastery"
+        }
+        modifier = {
+            factor = 1.05
+            years_passed > 99
+        }
+        modifier = {
+            factor = 1.10
+            years_passed > 149
+        }
+        modifier = {
+            factor = 1.15
+            years_passed > 199
+        }
+        modifier = {
+            factor = 1.20
+            has_authority = auth_hive_mind
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOR = {
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_expertise_biology"
+                }
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.70
+            NOT = {
+                research_leader = {
+                    area = society
+                    has_level < 4
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                host_has_dlc = "Synthetic Dawn Story Pack"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_discovery_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_synthetic_evolution"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOR = {
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_expertise_biology"
+                }
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.70
+            NOT = {
+                research_leader = {
+                    area = society
+                    has_level < 4
+                }
+            }
+        }
+    }
+}

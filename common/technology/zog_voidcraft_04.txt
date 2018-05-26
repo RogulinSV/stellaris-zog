@@ -1,0 +1,184 @@
+##################################
+### Voidcraft / Planet Cracking
+##################################
+
+tech_uninhabitable_planet_cracking = {
+    cost = 50000
+    area = engineering
+    start_tech = yes
+    category = { voidcraft }
+    icon = "tech_uninhabitable_planet_cracking"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        #"tech_supreme_voidcraft"
+        #"tech_mega_engineering"
+    }
+
+    prereqfor_desc = {
+        ship = {
+            title = tech_uninhabitable_planet_cracking_prereqfor.title
+            desc = tech_uninhabitable_planet_cracking_prereqfor.desc
+        }
+    }
+
+    weight = 75
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_voidborn"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                has_ascension_perk = "ap_master_builders"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOR = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_voidcraft"
+                }
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_curator"
+                }
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_maniacal"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 3
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_voidborn"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                has_ascension_perk = "ap_master_builders"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOR = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_voidcraft"
+                }
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_curator"
+                }
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_maniacal"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 3
+            }
+        }
+    }
+}
+
+###################################
+### Voidcraft / Planet Compacting
+###################################
+
+tech_gas_giant_planet_compacting = {
+    cost = 3000
+    area = engineering
+    start_tech = yes
+    category = { voidcraft }
+    icon = "tech_gas_giant_planet_compacting"
+    tier = 0
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        # "tech_advanced_voidcraft"
+    }
+
+    prereqfor_desc = {
+        ship = {
+            title = tech_gas_giant_planet_compacting_prereqfor.title
+            desc = tech_gas_giant_planet_compacting_prereqfor.desc
+        }
+    }
+
+    weight = 100
+
+    weight_modifier = {
+        
+    }
+
+    ai_weight = {
+        factor = 100
+    }
+}
+
+###################################
+### Voidcraft / Planet Cumulation
+###################################
+
+tech_habitable_planet_cumulation = {
+    cost = 3000
+    area = engineering
+    start_tech = yes
+    category = { voidcraft }
+    icon = "tech_habitable_planet_cumulation"
+    tier = 0
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        # "tech_advanced_voidcraft"
+    }
+
+    prereqfor_desc = {
+        ship = {
+            title = tech_habitable_planet_cumulation_prereqfor.title
+            desc = tech_habitable_planet_cumulation_prereqfor.desc
+        }
+    }
+
+    weight = 100
+
+    weight_modifier = {
+        
+    }
+
+    ai_weight = {
+        factor = 100
+    }
+}
