@@ -1,0 +1,183 @@
+# Scope: Planet
+is_habitable_planet = {
+    OR = {
+        is_planet_class = "pc_desert"
+        is_planet_class = "pc_tropical"
+        is_planet_class = "pc_arid"
+        is_planet_class = "pc_continental"
+        is_planet_class = "pc_ocean"
+        is_planet_class = "pc_tundra"
+        is_planet_class = "pc_arctic"
+        is_planet_class = "pc_alpine"
+        is_planet_class = "pc_savannah"
+        is_planet_class = "pc_gaia"
+        # Special habitable planets
+        is_planet_class = "pc_subtropical"
+        is_planet_class = "pc_subsavannah"
+        is_planet_class = "pc_subtundra"
+        is_planet_class = "pc_subcontinental"
+        is_planet_class = "pc_floatislands"
+        is_planet_class = "pc_exogarden"
+        is_planet_class = "pc_xenovalley"
+        is_planet_class = "pc_geoprairie"
+        is_planet_class = "pc_magmatic"
+        # Specific habitable planets
+        is_planet_class = "pc_crystal_habitable"
+        is_planet_class = "pc_methane_habitable"
+        is_planet_class = "pc_carbon_habitable"
+        is_planet_class = "pc_carbon_warm_habitable"
+        is_planet_class = "pc_nitrogen_habitable"
+        is_planet_class = "pc_nitrogen_cold_habitable"
+        is_planet_class = "pc_nitrogen_warm_habitable"
+        is_planet_class = "pc_sulfuric_habitable"
+        is_planet_class = "pc_sulfuric_cold_habitable"
+        is_planet_class = "pc_sulfuric_warm_habitable"
+        is_planet_class = "pc_montane_habitable"
+        is_planet_class = "pc_montane_cold_habitable"
+        is_planet_class = "pc_montane_warm_habitable"
+        is_planet_class = "pc_flatvacuum_cold_habitable"
+        is_planet_class = "pc_flatvacuum_warm_habitable"
+    }
+}
+
+is_uninhabitable_planet = {
+    OR = {
+        is_planet_class = "pc_molten"
+        is_planet_class = "pc_barren"
+        is_planet_class = "pc_barren_cold"
+        is_planet_class = "pc_toxic"
+        is_planet_class = "pc_frozen"
+        # Specific uninhabitable planets
+        is_planet_class = "pc_crystal_uninhabitable"
+        is_planet_class = "pc_methane_uninhabitable"
+        is_planet_class = "pc_carbon_uninhabitable"
+        is_planet_class = "pc_nitrogen_uninhabitable"
+        is_planet_class = "pc_sulfuric_uninhabitable"
+        is_planet_class = "pc_montane_uninhabitable"
+    }
+}
+
+is_gas_giant_planet = {
+    OR = {
+        is_planet_class = "pc_gas_giant"
+        # Specific gas giants
+        is_planet_class = "pc_crystal_gas_giant"
+        is_planet_class = "pc_methane_gas_giant"
+        is_planet_class = "pc_carbon_gas_giant"
+        is_planet_class = "pc_nitrogen_gas_giant"
+        is_planet_class = "pc_sulfuric_gas_giant"
+    }
+}
+
+is_special_habitable_planet = {
+    OR = {
+        is_planet_class = "pc_subtropical"
+        is_planet_class = "pc_subsavannah"
+        is_planet_class = "pc_subtundra"
+        is_planet_class = "pc_subcontinental"
+        is_planet_class = "pc_floatislands"
+        is_planet_class = "pc_exogarden"
+        is_planet_class = "pc_xenovalley"
+        is_planet_class = "pc_geoprairie"
+        is_planet_class = "pc_magmatic"
+    }
+}
+
+not_colonized_planet = {
+    AND = {
+        OR = {
+            is_planet_class = "pc_desert"
+            is_planet_class = "pc_tropical"
+            is_planet_class = "pc_arid"
+            is_planet_class = "pc_continental"
+            is_planet_class = "pc_ocean"
+            is_planet_class = "pc_tundra"
+            is_planet_class = "pc_arctic"
+            is_planet_class = "pc_alpine"
+            is_planet_class = "pc_savannah"
+            is_planet_class = "pc_gaia"
+            # Special habitable planets
+            is_planet_class = "pc_subtropical"
+            is_planet_class = "pc_subsavannah"
+            is_planet_class = "pc_subtundra"
+            is_planet_class = "pc_subcontinental"
+            is_planet_class = "pc_floatislands"
+            is_planet_class = "pc_exogarden"
+            is_planet_class = "pc_xenovalley"
+            is_planet_class = "pc_geoprairie"
+            is_planet_class = "pc_magmatic"
+            # Specific habitable planets
+            is_planet_class = "pc_crystal_habitable"
+            is_planet_class = "pc_methane_habitable"
+            is_planet_class = "pc_carbon_habitable"
+            is_planet_class = "pc_carbon_warm_habitable"
+            is_planet_class = "pc_nitrogen_habitable"
+            is_planet_class = "pc_nitrogen_cold_habitable"
+            is_planet_class = "pc_nitrogen_warm_habitable"
+            is_planet_class = "pc_sulfuric_habitable"
+            is_planet_class = "pc_sulfuric_cold_habitable"
+            is_planet_class = "pc_sulfuric_warm_habitable"
+            is_planet_class = "pc_montane_habitable"
+            is_planet_class = "pc_montane_cold_habitable"
+            is_planet_class = "pc_montane_warm_habitable"
+            is_planet_class = "pc_flatvacuum_cold_habitable"
+            is_planet_class = "pc_flatvacuum_warm_habitable"
+        }
+        is_capital = no
+        is_colony = no
+    }
+}
+
+# Scope: Tile
+is_empty_tile = {
+    AND = {
+        has_blocker = no
+        has_building = no
+        has_building_construction = no
+        has_pop = no
+        has_growing_pop = no
+    }
+}
+
+# Scope: Country
+is_mercantile_regime = {
+    OR = {
+        has_government = "gov_megacorporation"
+        has_government = "gov_trade_league"
+        has_government = "gov_theocratic_oligarchy"
+        has_government = "gov_plutocratic_oligarchy"
+    }
+}
+
+is_plutocratic_regime = {
+    OR = {
+        has_government = "gov_plutocratic_oligarchy"
+        has_government = "gov_military_junta"
+        has_government = "gov_bandit_commune"
+    }
+}
+
+is_totalitarian_regime = {
+    OR = {
+        has_government = "gov_totalitarian_regime"
+        has_government = "gov_holy_tribunal"
+        has_government = "gov_military_dictatorship"
+        has_government = "gov_purity_order"
+        has_government = "gov_bandit_kingdom"
+    }
+}
+
+is_technocratic_regime = {
+    OR = {
+        has_government = "gov_rational_consensus"
+        has_government = "gov_science_directorate"
+        has_government = "gov_technocratic_dictatorship"
+    }
+}
+
+has_purifier_mindset = {
+    OR = {
+        has_valid_civic = civic_fanatic_purifiers
+        has_ai_personality = fanatic_purifiers
+    }
+}

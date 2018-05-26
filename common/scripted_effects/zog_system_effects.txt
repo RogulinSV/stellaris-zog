@@ -2645,3 +2645,242 @@ ringworld_set_random_resource_01 = {
     }
 }
 
+set_uninhabitable_cracked_planet_random_resource = {
+    random_list = {
+        2 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_energy_deposit_50
+                add_deposit = d_minerals_deposit_50
+                add_deposit = d_science_deposit_50
+            }
+        }
+        5 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_energy_deposit_50
+            }
+        }
+        5 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_minerals_deposit_50
+            }
+        }
+        5 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_science_deposit_50
+            }
+        }
+        11 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_energy_deposit_10
+                add_deposit = d_minerals_deposit_10
+                add_deposit = d_science_deposit_10
+            }
+        }
+        22 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_energy_deposit_15
+                add_deposit = d_minerals_deposit_10
+            }
+        }
+        22 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_energy_deposit_10
+                add_deposit = d_minerals_deposit_15
+            }
+        }
+        20 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_science_deposit_15
+            }
+        }
+        1 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_garanthium_deposit
+                add_deposit = d_minerals_deposit_10
+            }
+        }
+        1 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_engos_deposit
+                add_deposit = d_society_research_deposit_10
+                add_deposit = d_physics_research_deposit_10
+            }
+        }
+        1 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_teldar_deposit
+                add_deposit = d_engineering_research_deposit_10
+                add_deposit = d_society_research_deposit_10
+            }
+        }
+        1 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_yuranic_deposit
+                add_deposit = d_society_research_deposit_10
+                add_deposit = d_engineering_research_deposit_10
+            }
+        }
+        1 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_orillium_deposit
+                add_deposit = d_engineering_research_deposit_10
+            }
+        }
+        1 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_pitharan_deposit
+                add_deposit = d_society_research_deposit_10
+                add_deposit = d_engineering_research_deposit_10
+            }
+        }
+        1 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_satramene_deposit
+                add_deposit = d_energy_deposit_15
+            }
+        }
+        1 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_zro_deposit
+                add_deposit = d_society_research_deposit_10
+                add_deposit = d_physics_research_deposit_10
+            }
+        }
+    }
+}
+
+gas_giant_compacted_set_random_resource = {
+    random_list = {
+        2 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_energy_deposit_50
+                add_deposit = d_minerals_deposit_50
+                add_deposit = d_science_deposit_50
+            }
+        }
+        5 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_energy_deposit_50
+            }
+        }
+        5 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_minerals_deposit_50
+            }
+        }
+        5 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_science_deposit_50
+            }
+        }
+        11 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_energy_deposit_10
+                add_deposit = d_minerals_deposit_10
+                add_deposit = d_science_deposit_10
+            }
+        }
+        22 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_energy_deposit_15
+                add_deposit = d_minerals_deposit_10
+            }
+        }
+        22 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_energy_deposit_10
+                add_deposit = d_minerals_deposit_15
+            }
+        }
+        20 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_science_deposit_15
+            }
+        }
+        1 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_garanthium_deposit
+                add_deposit = d_minerals_deposit_10
+            }
+        }
+        1 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_engos_deposit
+                add_deposit = d_society_research_deposit_10
+                add_deposit = d_physics_research_deposit_10
+            }
+        }
+        1 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_teldar_deposit
+                add_deposit = d_engineering_research_deposit_10
+                add_deposit = d_society_research_deposit_10
+            }
+        }
+        1 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_yuranic_deposit
+                add_deposit = d_society_research_deposit_10
+                add_deposit = d_engineering_research_deposit_10
+            }
+        }
+        1 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_orillium_deposit
+                add_deposit = d_engineering_research_deposit_10
+            }
+        }
+        1 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_pitharan_deposit
+                add_deposit = d_society_research_deposit_10
+                add_deposit = d_engineering_research_deposit_10
+            }
+        }
+        1 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_satramene_deposit
+                add_deposit = d_energy_deposit_15
+            }
+        }
+        1 = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_zro_deposit
+                add_deposit = d_society_research_deposit_10
+                add_deposit = d_physics_research_deposit_10
+            }
+        }
+    }
+}

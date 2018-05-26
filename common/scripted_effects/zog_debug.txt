@@ -1,0 +1,341 @@
+print_country_scope_a = {
+    log = "--- Country A ---------------------------"
+    print_country_scope = yes
+    log = "--------------------------- Country A ---"
+}
+
+print_country_scope_b = {
+    log = "--- Country B ---------------------------"
+    print_country_scope = yes
+    log = "--------------------------- Country B ---"
+}
+
+print_country_scope_c = {
+    log = "--- Country C ---------------------------"
+    print_country_scope = yes
+    log = "--------------------------- Country C ---"
+}
+
+print_country_scope_d = {
+    log = "--- Country D ---------------------------"
+    print_country_scope = yes
+    log = "--------------------------- Country D ---"
+}
+
+print_country_scope_e = {
+    log = "--- Country E ---------------------------"
+    print_country_scope = yes
+    log = "--------------------------- Country E ---"
+}
+
+print_country_scope = {
+    log = "- This: [This.GetName]"
+    log = "- Root: [Root.GetName]"
+    log = "- Prev: [Prev.GetName]"
+    log = "- PrevPrev: [Prev.Prev.GetName]"
+    log = "- PrevPrevPrev: [Prev.Prev.Prev.GetName]"
+    log = "- PrevPrevPrevPrev: [Prev.Prev.Prev.Prev.GetName]"
+    log = "- From: [From.GetName]"
+    log = "- FromFrom: [From.From.GetName]"
+    log = "- FromFromFrom: [From.From.From.GetName]"
+    log = "- FromFromFromFrom: [From.From.From.From.GetName]"
+    log = "- From's Planet: [From.Planet.GetName]"
+    log = "- From's Owner: [From.Owner.GetName]"
+    log = "- This's Solar System: [This.GetStarName]"
+    log = "- This's Planet: [This.Planet.GetName]"
+    log = "- This's Sector: [This.Sector.GetName]"
+    log = "- Root's Solar System: [Root.GetStarName]"
+    log = "- Root's Owner's Name: [Root.Owner.GetName]"
+    log = "- Root's Owner's Capital's Name: [Root.Owner.Capital.GetName]"
+}
+
+print_planet_scope_a = {
+    log = "--- Planet A ---------------------------"
+    print_planet_scope = yes
+    log = "--------------------------- Planet A ---"
+}
+
+print_planet_scope_b = {
+    log = "--- Planet B ---------------------------"
+    print_planet_scope = yes
+    log = "--------------------------- Planet B ---"
+}
+
+print_planet_scope_c = {
+    log = "--- Planet C ---------------------------"
+    print_planet_scope = yes
+    log = "--------------------------- Planet C ---"
+}
+
+print_planet_scope_d = {
+    log = "--- Planet D ---------------------------"
+    print_planet_scope = yes
+    log = "--------------------------- Planet D ---"
+}
+
+print_planet_scope_e = {
+    log = "--- Planet E ---------------------------"
+    print_planet_scope = yes
+    log = "--------------------------- Planet E ---"
+}
+
+print_planet_scope = {
+    log = "- This: [This.GetName]"
+    log = "- Root: [Root.GetName]"
+    log = "- Prev: [Prev.GetName]"
+    log = "- PrevPrev: [Prev.Prev.GetName]"
+    log = "- PrevPrevPrev: [Prev.Prev.Prev.GetName]"
+    log = "- PrevPrevPrevPrev: [Prev.Prev.Prev.Prev.GetName]"
+    log = "- From: [From.GetName]"
+    log = "- From's Owner: [From.Owner.GetName]"
+    log = "- From's Planet: [From.Planet.GetName]"
+    log = "- FromFrom: [From.From.GetName]"
+    log = "- FromFromFrom: [From.From.From.GetName]"
+    log = "- FromFromFromFrom: [From.From.From.From.GetName]"
+    log = "- This's Solar System: [This.GetStarName]"
+    log = "- This's Planet: [This.Planet.GetName]"
+    log = "- This's Sector: [This.Sector.GetName]"
+    log = "- This's Owner: [This.Owner.GetName]"
+    log = "- Root's Solar System: [Root.GetStarName]"
+    log = "- Root's Owner's Name: [Root.Owner.GetName]"
+    log = "- Root's Owner's Capital's Name: [Root.Owner.Capital.GetName]"
+}
+
+print_system_scope_a = {
+    log = "--- System A ---------------------------"
+    print_system_scope = yes
+    log = "--------------------------- System A ---"
+}
+
+print_system_scope_b = {
+    log = "--- System B ---------------------------"
+    print_system_scope = yes
+    log = "--------------------------- System B ---"
+}
+
+print_system_scope_c = {
+    log = "--- System C ---------------------------"
+    print_system_scope = yes
+    log = "--------------------------- System C ---"
+}
+
+print_system_scope_d = {
+    log = "--- System D ---------------------------"
+    print_system_scope = yes
+    log = "--------------------------- System D ---"
+}
+
+print_system_scope_e = {
+    log = "--- System E ---------------------------"
+    print_system_scope = yes
+    log = "--------------------------- System E ---"
+}
+
+print_system_scope = {
+    log = "- This: [This.GetName]"
+    log = "- Root: [Root.GetName]"
+    log = "- Prev: [Prev.GetName]"
+    log = "- PrevPrev: [Prev.Prev.GetName]"
+    log = "- PrevPrevPrev: [Prev.Prev.Prev.GetName]"
+    log = "- PrevPrevPrevPrev: [Prev.Prev.Prev.Prev.GetName]"
+    log = "- From: [From.GetName]"
+    log = "- From's Owner: [From.Owner.GetName]"
+    log = "- From's Planet: [From.Planet.GetName]"
+    log = "- FromFrom: [From.From.GetName]"
+    log = "- FromFromFrom: [From.From.From.GetName]"
+    log = "- FromFromFromFrom: [From.From.From.From.GetName]"
+    log = "- This's Solar System: [This.GetStarName]"
+    log = "- This's Planet: [This.Planet.GetName]"
+    log = "- This's Sector: [This.Sector.GetName]"
+    log = "- This's Owner: [This.Owner.GetName]"
+    log = "- Root's Solar System: [Root.GetStarName]"
+    log = "- Root's Owner's Name: [Root.Owner.GetName]"
+    log = "- Root's Owner's Capital's Name: [Root.Owner.Capital.GetName]"
+}
+
+print_project_scope_a = {
+    log = "--- Project A ---------------------------"
+    print_project_scope = yes
+    log = "------------------------- Project A ---"
+}
+
+print_project_scope_b = {
+    log = "--- Project B ---------------------------"
+    print_project_scope = yes
+    log = "------------------------- Project B ---"
+}
+
+print_project_scope_c = {
+    log = "--- Project C ---------------------------"
+    print_project_scope = yes
+    log = "------------------------- Project C ---"
+}
+
+print_project_scope_d = {
+    log = "--- Project D ---------------------------"
+    print_project_scope = yes
+    log = "------------------------- Project D ---"
+}
+
+print_project_scope_e = {
+    log = "--- Project E ---------------------------"
+    print_project_scope = yes
+    log = "------------------------- Project E ---"
+}
+
+print_project_scope = {
+    log = "- This: [This.GetName]"
+    log = "- Root: [Root.GetName]"
+    log = "- Prev: [Prev.GetName]"
+    log = "- PrevPrev: [Prev.Prev.GetName]"
+    log = "- PrevPrevPrev: [Prev.Prev.Prev.GetName]"
+    log = "- PrevPrevPrevPrev: [Prev.Prev.Prev.Prev.GetName]"
+    log = "- From: [From.GetName]"
+    log = "- From's Owner: [From.Owner.GetName]"
+    log = "- From's Planet: [From.Planet.GetName]"
+    log = "- FromFrom: [From.From.GetName]"
+    log = "- FromFromFrom: [From.From.From.GetName]"
+    log = "- FromFromFromFrom: [From.From.From.From.GetName]"
+    log = "- This's Solar System: [This.GetStarName]"
+    log = "- This's Planet: [This.Planet.GetName]"
+    log = "- This's Sector: [This.Sector.GetName]"
+    log = "- Root's Solar System: [Root.GetStarName]"
+    log = "- Root's Owner's Name: [Root.Owner.GetName]"
+    log = "- Root's Owner's Capital's Name: [Root.Owner.Capital.GetName]"
+}
+
+# This = Country
+print_species_flags = {
+    log = "- This: [This.GetName]"
+    if = {
+        limit = {
+            has_country_flag = "HUM_species_researched"
+        }
+        log = "- Has flag: HUM_species_researched"
+    }
+    if = {
+        limit = {
+            has_country_flag = "MAM_species_researched"
+        }
+        log = "- Has flag: MAM_species_researched"
+    }
+    if = {
+        limit = {
+            has_country_flag = "REP_species_researched"
+        }
+        log = "- Has flag: REP_species_researched"
+    }
+    if = {
+        limit = {
+            has_country_flag = "AVI_species_researched"
+        }
+        log = "- Has flag: AVI_species_researched"
+    }
+    if = {
+        limit = {
+            has_country_flag = "ART_species_researched"
+        }
+        log = "- Has flag: ART_species_researched"
+    }
+    if = {
+        limit = {
+            has_country_flag = "FUN_species_researched"
+        }
+        log = "- Has flag: FUN_species_researched"
+    }
+    if = {
+        limit = {
+            has_country_flag = "MOL_species_researched"
+        }
+        log = "- Has flag: MOL_species_researched"
+    }
+    if = {
+        limit = {
+            has_country_flag = "PLANT_species_researched"
+        }
+        log = "- Has flag: PLANT_species_researched"
+    }
+    if = {
+        limit = {
+            has_country_flag = "MACHINE_species_researched"
+        }
+        log = "- Has flag: MACHINE_species_researched"
+    }
+    if = {
+        limit = {
+            has_country_flag = "ROBOT_species_researched"
+        }
+        log = "- Has flag: ROBOT_species_researched"
+    }
+    if = {
+        limit = {
+            check_variable = { which = "HUM_species_points" value > 0 }
+        }
+        log = "- Has points: [This.HUM_species_points] HUM_species_points"
+    }
+    if = {
+        limit = {
+            check_variable = { which = "MAM_species_points" value > 0 }
+        }
+        log = "- Has points: [This.MAM_species_points] MAM_species_points"
+    }
+    if = {
+        limit = {
+            check_variable = { which = "REP_species_points" value > 0 }
+        }
+        log = "- Has points: [This.REP_species_points] REP_species_points"
+    }
+    if = {
+        limit = {
+            check_variable = { which = "AVI_species_points" value > 0 }
+        }
+        log = "- Has points: [This.AVI_species_points] AVI_species_points"
+    }
+    if = {
+        limit = {
+            check_variable = { which = "ART_species_points" value > 0 }
+        }
+        log = "- Has points: [This.ART_species_points] ART_species_points"
+    }
+    if = {
+        limit = {
+            check_variable = { which = "FUN_species_points" value > 0 }
+        }
+        log = "- Has points: [This.FUN_species_points] FUN_species_points"
+    }
+    if = {
+        limit = {
+            check_variable = { which = "MOL_species_points" value > 0 }
+        }
+        log = "- Has points: [This.MOL_species_points] MOL_species_points"
+    }
+    if = {
+        limit = {
+            check_variable = { which = "PLANT_species_points" value > 0 }
+        }
+        log = "- Has points: [This.PLANT_species_points] PLANT_species_points"
+    }
+    if = {
+        limit = {
+            check_variable = { which = "MACHINE_species_points" value > 0 }
+        }
+        log = "- Has points: [This.MACHINE_species_points] MACHINE_species_points"
+    }
+    if = {
+        limit = {
+            check_variable = { which = "ROBOT_species_points" value > 0 }
+        }
+        log = "- Has points: [This.ROBOT_species_points] ROBOT_species_points"
+    }
+}
+
+# This = Country
+print_country_vars = {
+    log = "- This: [This.GetName]"
+    log = "--- Space monsters -------------------------"
+    log = "- Crustal defeated: [This.crystal_space_monsters_defeated]"
+    log = "- Cloud defeated: [This.cloud_space_monsters_defeated]"
+    log = "- Amoeba defeated: [This.amoeba_space_monsters_defeated]"
+    log = "- Total defeated: [This.space_monsters_defeated]"
+    log = "------------------------- Space monsters ---"
+}

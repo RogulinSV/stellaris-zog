@@ -1,4 +1,9 @@
-create_crystal_fleet_01 = {
+#############################
+### Crystal Monsters fleet
+#############################
+
+# This = Solar System
+create_system_crystal_fleet_01 = {
     random_system_planet = {
         limit = { is_star = no }
         event_target:crystal_country = {
@@ -20,6 +25,7 @@ create_crystal_fleet_01 = {
                             design = "NAME_Small_Crystal_Entity_Blue"
                         }
                     }
+                    set_formation_scale = 4.0
                     set_location = PREVPREV
                     set_fleet_stance = aggressive
                     set_aggro_range_measure_from = self
@@ -30,7 +36,512 @@ create_crystal_fleet_01 = {
     }
 }
 
-create_cloud_fleet_01 = {
+# This = Planet
+create_planet_crystal_fleet_01 = {
+    event_target:crystal_country = {
+        create_fleet = {
+            name = "NAME_Sapphire_Lurkers"
+            effect = {
+                set_owner = event_target:crystal_country
+                while = {
+                    count = 3
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Crystal_Entity_Blue"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = prevprev
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 150
+            }
+        }
+    }
+}
+
+create_planet_crystal_fleet_02 = {
+    event_target:crystal_country = {
+        create_fleet = {
+            name = "NAME_Sapphire_Lurkers"
+            effect = {
+                set_owner = event_target:crystal_country
+                while = {
+                    count = 6
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Crystal_Entity_Blue"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = prevprev
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 150
+            }
+        }
+    }
+}
+
+create_planet_crystal_fleet_03 = {
+    event_target:crystal_country = {
+        create_fleet = {
+            name = "NAME_Sapphire_Lurkers"
+            effect = {
+                set_owner = event_target:crystal_country
+                while = {
+                    count = 1
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Medium_Crystal_Entity_Blue"
+                    }
+                }
+                while = {
+                    count = 5
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Crystal_Entity_Blue"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = prevprev
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 150
+            }
+        }
+    }
+}
+
+create_planet_crystal_fleet_04 = {
+    event_target:crystal_country = {
+        create_fleet = {
+            name = "NAME_Sapphire_Lurkers"
+            effect = {
+                set_owner = event_target:crystal_country
+                while = {
+                    count = 1
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Medium_Crystal_Entity_Blue"
+                    }
+                }
+                while = {
+                    count = 6
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Crystal_Entity_Blue"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = prevprev
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 150
+            }
+        }
+    }
+}
+
+create_planet_crystal_fleet_05 = {
+    event_target:crystal_country = {
+        create_fleet = {
+            name = "NAME_Sapphire_Lurkers"
+            effect = {
+                set_owner = event_target:crystal_country
+                while = {
+                    count = 2
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Medium_Crystal_Entity_Blue"
+                    }
+                }
+                while = {
+                    count = 6
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Crystal_Entity_Blue"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = prevprev
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 150
+            }
+        }
+    }
+}
+
+create_planet_crystal_fleet_06 = {
+    event_target:crystal_country = {
+        create_fleet = {
+            name = "NAME_Sapphire_Lurkers"
+            effect = {
+                set_owner = event_target:crystal_country
+                while = {
+                    count = 3
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Medium_Crystal_Entity_Blue"
+                    }
+                }
+                while = {
+                    count = 8
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Crystal_Entity_Blue"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = prevprev
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 150
+            }
+        }
+    }
+}
+
+create_planet_crystal_fleet_07 = {
+    event_target:crystal_country = {
+        create_fleet = {
+            name = "NAME_Sapphire_Lurkers"
+            effect = {
+                set_owner = event_target:crystal_country
+                while = {
+                    count = 1
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Large_Crystal_Entity_Blue"
+                    }
+                }
+                while = {
+                    count = 3
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Medium_Crystal_Entity_Blue"
+                    }
+                }
+                while = {
+                    count = 8
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Crystal_Entity_Blue"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = prevprev
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 150
+            }
+        }
+    }
+}
+
+create_planet_crystal_fleet_08 = {
+    event_target:crystal_country = {
+        create_fleet = {
+            name = "NAME_Sapphire_Lurkers"
+            effect = {
+                set_owner = event_target:crystal_country
+                while = {
+                    count = 1
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Large_Crystal_Entity_Blue"
+                    }
+                }
+                while = {
+                    count = 4
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Medium_Crystal_Entity_Blue"
+                    }
+                }
+                while = {
+                    count = 10
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Crystal_Entity_Blue"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = prevprev
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 150
+            }
+        }
+    }
+}
+
+create_planet_crystal_fleet_09 = {
+    event_target:crystal_country = {
+        create_fleet = {
+            name = "NAME_Sapphire_Lurkers"
+            effect = {
+                set_owner = event_target:crystal_country
+                while = {
+                    count = 2
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Large_Crystal_Entity_Blue"
+                    }
+                }
+                while = {
+                    count = 4
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Medium_Crystal_Entity_Blue"
+                    }
+                }
+                while = {
+                    count = 15
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Crystal_Entity_Blue"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = prevprev
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 150
+            }
+        }
+    }
+}
+
+create_planet_crystal_fleet_10 = {
+    event_target:crystal_country = {
+        create_fleet = {
+            name = "NAME_Sapphire_Lurkers"
+            effect = {
+                set_owner = event_target:crystal_country
+                while = {
+                    count = 3
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Large_Crystal_Entity_Blue"
+                    }
+                }
+                while = {
+                    count = 6
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Medium_Crystal_Entity_Blue"
+                    }
+                }
+                while = {
+                    count = 15
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Crystal_Entity_Blue"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = prevprev
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 150
+            }
+        }
+    }
+}
+
+create_planet_crystal_fleet_11 = {
+    event_target:crystal_country = {
+        create_fleet = {
+            name = "NAME_Sapphire_Lurkers"
+            effect = {
+                set_owner = event_target:crystal_country
+                while = {
+                    count = 5
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Large_Crystal_Entity_Blue"
+                    }
+                }
+                while = {
+                    count = 10
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Medium_Crystal_Entity_Blue"
+                    }
+                }
+                while = {
+                    count = 30
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Crystal_Entity_Blue"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = prevprev
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 150
+            }
+        }
+    }
+}
+
+create_planet_crystal_fleet_12 = {
+    event_target:crystal_country = {
+        create_fleet = {
+            name = "NAME_Sapphire_Lurkers"
+            effect = {
+                set_owner = event_target:crystal_country
+                while = {
+                    count = 5
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Large_Crystal_Entity_Blue_Elite"
+                    }
+                }
+                while = {
+                    count = 10
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Medium_Crystal_Entity_Blue_Elite"
+                    }
+                }
+                while = {
+                    count = 30
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Crystal_Entity_Blue_Elite"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = prevprev
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 150
+            }
+        }
+    }
+}
+
+create_planet_crystal_fleet_13 = {
+    event_target:crystal_country = {
+        create_fleet = {
+            name = "NAME_Sapphire_Lurkers"
+            effect = {
+                set_owner = event_target:crystal_country
+                while = {
+                    count = 10
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Large_Crystal_Entity_Blue_Elite"
+                    }
+                }
+                while = {
+                    count = 25
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Medium_Crystal_Entity_Blue_Elite"
+                    }
+                }
+                while = {
+                    count = 50
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Crystal_Entity_Blue_Elite"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = prevprev
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 150
+            }
+        }
+    }
+}
+
+create_planet_crystal_fleet_14 = {
+    event_target:crystal_country = {
+        create_fleet = {
+            name = "NAME_Sapphire_Lurkers"
+            effect = {
+                set_owner = event_target:crystal_country
+                while = {
+                    count = 12
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Large_Crystal_Entity_Blue_Elite"
+                    }
+                }
+                while = {
+                    count = 30
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Medium_Crystal_Entity_Blue_Elite"
+                    }
+                }
+                while = {
+                    count = 70
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Crystal_Entity_Blue_Elite"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = prevprev
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 150
+            }
+        }
+    }
+}
+
+create_planet_crystal_fleet_15 = {
+    event_target:crystal_country = {
+        create_fleet = {
+            name = "NAME_Sapphire_Lurkers"
+            effect = {
+                set_owner = event_target:crystal_country
+                while = {
+                    count = 15
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Large_Crystal_Entity_Blue_Elite"
+                    }
+                }
+                while = {
+                    count = 40
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Medium_Crystal_Entity_Blue_Elite"
+                    }
+                }
+                while = {
+                    count = 100
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Crystal_Entity_Blue_Elite"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = prevprev
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 150
+            }
+        }
+    }
+}
+
+###########################
+### Space Monsters fleet
+###########################
+
+# This = Solar System
+create_system_cloud_fleet_01 = {
     random_system_planet = {
         limit = { is_star = yes }
         event_target:cloud_country = {
@@ -45,6 +556,7 @@ create_cloud_fleet_01 = {
                             design = "NAME_Cloud_Entity"
                         }
                     }
+                    set_formation_scale = 4.0
                     set_location = PREVPREV
                     set_fleet_stance = aggressive
                     set_aggro_range_measure_from = self
@@ -55,7 +567,354 @@ create_cloud_fleet_01 = {
     }
 }
 
-create_amoeba_fleet_01 = {
+# This = Planet
+create_planet_cloud_fleet_01 = {
+    event_target:cloud_country = {
+        create_fleet = {
+            name = "NAME_Void_Cloud"
+            effect = {
+                set_owner = event_target:cloud_country
+                while = {
+                    count = 1
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Cloud_Entity"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 500
+            }
+        }
+    }
+}
+
+create_planet_cloud_fleet_02 = {
+    event_target:cloud_country = {
+        create_fleet = {
+            name = "NAME_Void_Cloud"
+            effect = {
+                set_owner = event_target:cloud_country
+                while = {
+                    count = 1
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Cloud_Entity"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 500
+            }
+        }
+    }
+}
+
+create_planet_cloud_fleet_03 = {
+    event_target:cloud_country = {
+        create_fleet = {
+            name = "NAME_Void_Cloud"
+            effect = {
+                set_owner = event_target:cloud_country
+                while = {
+                    count = 2
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Cloud_Entity"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 500
+            }
+        }
+    }
+}
+
+create_planet_cloud_fleet_04 = {
+    event_target:cloud_country = {
+        create_fleet = {
+            name = "NAME_Void_Cloud"
+            effect = {
+                set_owner = event_target:cloud_country
+                while = {
+                    count = 3
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Cloud_Entity"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 500
+            }
+        }
+    }
+}
+
+create_planet_cloud_fleet_05 = {
+    event_target:cloud_country = {
+        create_fleet = {
+            name = "NAME_Void_Cloud"
+            effect = {
+                set_owner = event_target:cloud_country
+                while = {
+                    count = 4
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Cloud_Entity"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 500
+            }
+        }
+    }
+}
+
+create_planet_cloud_fleet_06 = {
+    event_target:cloud_country = {
+        create_fleet = {
+            name = "NAME_Void_Cloud"
+            effect = {
+                set_owner = event_target:cloud_country
+                while = {
+                    count = 6
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Cloud_Entity"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 500
+            }
+        }
+    }
+}
+
+create_planet_cloud_fleet_07 = {
+    event_target:cloud_country = {
+        create_fleet = {
+            name = "NAME_Void_Cloud"
+            effect = {
+                set_owner = event_target:cloud_country
+                while = {
+                    count = 8
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Cloud_Entity"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 500
+            }
+        }
+    }
+}
+
+create_planet_cloud_fleet_08 = {
+    event_target:cloud_country = {
+        create_fleet = {
+            name = "NAME_Void_Cloud"
+            effect = {
+                set_owner = event_target:cloud_country
+                while = {
+                    count = 10
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Cloud_Entity"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 500
+            }
+        }
+    }
+}
+
+create_planet_cloud_fleet_09 = {
+    event_target:cloud_country = {
+        create_fleet = {
+            name = "NAME_Void_Cloud"
+            effect = {
+                set_owner = event_target:cloud_country
+                while = {
+                    count = 15
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Cloud_Entity"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 500
+            }
+        }
+    }
+}
+
+create_planet_cloud_fleet_10 = {
+    event_target:cloud_country = {
+        create_fleet = {
+            name = "NAME_Void_Cloud"
+            effect = {
+                set_owner = event_target:cloud_country
+                while = {
+                    count = 25
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Cloud_Entity"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 500
+            }
+        }
+    }
+}
+
+create_planet_cloud_fleet_11 = {
+    event_target:cloud_country = {
+        create_fleet = {
+            name = "NAME_Void_Cloud"
+            effect = {
+                set_owner = event_target:cloud_country
+                while = {
+                    count = 50
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Cloud_Entity"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 500
+            }
+        }
+    }
+}
+
+create_planet_cloud_fleet_12 = {
+    event_target:cloud_country = {
+        create_fleet = {
+            name = "NAME_Void_Cloud"
+            effect = {
+                set_owner = event_target:cloud_country
+                while = {
+                    count = 75
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Cloud_Entity"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 500
+            }
+        }
+    }
+}
+
+create_planet_cloud_fleet_13 = {
+    event_target:cloud_country = {
+        create_fleet = {
+            name = "NAME_Void_Cloud"
+            effect = {
+                set_owner = event_target:cloud_country
+                while = {
+                    count = 100
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Cloud_Entity"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 500
+            }
+        }
+    }
+}
+
+create_planet_cloud_fleet_14 = {
+    event_target:cloud_country = {
+        create_fleet = {
+            name = "NAME_Void_Cloud"
+            effect = {
+                set_owner = event_target:cloud_country
+                while = {
+                    count = 130
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Cloud_Entity"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 500
+            }
+        }
+    }
+}
+
+create_planet_cloud_fleet_15 = {
+    event_target:cloud_country = {
+        create_fleet = {
+            name = "NAME_Void_Cloud"
+            effect = {
+                set_owner = event_target:cloud_country
+                while = {
+                    count = 170
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Cloud_Entity"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 500
+            }
+        }
+    }
+}
+
+# This = Solar System
+create_system_amoeba_fleet_01 = {
     random_system_planet = {
         limit = { is_star = no }
         event_target:amoeba_country = {
@@ -88,7 +947,480 @@ create_amoeba_fleet_01 = {
     }
 }
 
-create_drone_fleet_01 = {
+# This = Planet
+create_planet_amoeba_fleet_01 = {
+    event_target:amoeba_country = {
+        create_fleet = {
+            name = "NAME_Space_Amoeba"
+            effect = {
+                set_owner = event_target:amoeba_country
+                while = {
+                    count = 4
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Space_Organism_Blue"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 100
+            }
+        }
+    }
+}
+
+create_planet_amoeba_fleet_02 = {
+    event_target:amoeba_country = {
+        create_fleet = {
+            name = "NAME_Space_Amoeba"
+            effect = {
+                set_owner = event_target:amoeba_country
+                while = {
+                    count = 6
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Space_Organism_Blue"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 100
+            }
+        }
+    }
+}
+
+create_planet_amoeba_fleet_03 = {
+    event_target:amoeba_country = {
+        create_fleet = {
+            name = "NAME_Space_Amoeba"
+            effect = {
+                set_owner = event_target:amoeba_country
+                while = {
+                    count = 9
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Space_Organism_Blue"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 100
+            }
+        }
+    }
+}
+
+create_planet_amoeba_fleet_04 = {
+    event_target:amoeba_country = {
+        create_fleet = {
+            name = "NAME_Space_Amoeba"
+            effect = {
+                set_owner = event_target:amoeba_country
+                while = {
+                    count = 5
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Space_Organism_Blue"
+                    }
+                }
+                while = {
+                    count = 1
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Large_Space_Organism_Blue"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 100
+            }
+        }
+    }
+}
+
+create_planet_amoeba_fleet_05 = {
+    event_target:amoeba_country = {
+        create_fleet = {
+            name = "NAME_Space_Amoeba"
+            effect = {
+                set_owner = event_target:amoeba_country
+                while = {
+                    count = 9
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Space_Organism_Blue"
+                    }
+                }
+                while = {
+                    count = 1
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Large_Space_Organism_Blue"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 100
+            }
+        }
+    }
+}
+
+create_planet_amoeba_fleet_06 = {
+    event_target:amoeba_country = {
+        create_fleet = {
+            name = "NAME_Space_Amoeba"
+            effect = {
+                set_owner = event_target:amoeba_country
+                while = {
+                    count = 6
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Space_Organism_Blue"
+                    }
+                }
+                while = {
+                    count = 2
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Large_Space_Organism_Blue"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 100
+            }
+        }
+    }
+}
+
+create_planet_amoeba_fleet_07 = {
+    event_target:amoeba_country = {
+        create_fleet = {
+            name = "NAME_Space_Amoeba"
+            effect = {
+                set_owner = event_target:amoeba_country
+                while = {
+                    count = 10
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Space_Organism_Blue"
+                    }
+                }
+                while = {
+                    count = 2
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Large_Space_Organism_Blue"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 100
+            }
+        }
+    }
+}
+
+create_planet_amoeba_fleet_08 = {
+    event_target:amoeba_country = {
+        create_fleet = {
+            name = "NAME_Space_Amoeba"
+            effect = {
+                set_owner = event_target:amoeba_country
+                while = {
+                    count = 6
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Space_Organism_Teal"
+                    }
+                }
+                while = {
+                    count = 3
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Large_Space_Organism_Teal"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 100
+            }
+        }
+    }
+}
+
+create_planet_amoeba_fleet_09 = {
+    event_target:amoeba_country = {
+        create_fleet = {
+            name = "NAME_Space_Amoeba"
+            effect = {
+                set_owner = event_target:amoeba_country
+                while = {
+                    count = 10
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Space_Organism_Teal"
+                    }
+                }
+                while = {
+                    count = 3
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Large_Space_Organism_Teal"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 100
+            }
+        }
+    }
+}
+
+create_planet_amoeba_fleet_10 = {
+    event_target:amoeba_country = {
+        create_fleet = {
+            name = "NAME_Space_Amoeba"
+            effect = {
+                set_owner = event_target:amoeba_country
+                while = {
+                    count = 5
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Space_Organism_Orange"
+                    }
+                }
+                while = {
+                    count = 2
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Large_Space_Organism_Orange"
+                    }
+                }
+                while = {
+                    count = 1
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Great_Space_Organism"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 100
+            }
+        }
+    }
+}
+
+create_planet_amoeba_fleet_11 = {
+    event_target:amoeba_country = {
+        create_fleet = {
+            name = "NAME_Space_Amoeba"
+            effect = {
+                set_owner = event_target:amoeba_country
+                while = {
+                    count = 9
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Space_Organism_Orange"
+                    }
+                }
+                while = {
+                    count = 2
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Large_Space_Organism_Orange"
+                    }
+                }
+                while = {
+                    count = 1
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Great_Space_Organism"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 100
+            }
+        }
+    }
+}
+
+create_planet_amoeba_fleet_12 = {
+    event_target:amoeba_country = {
+        create_fleet = {
+            name = "NAME_Space_Amoeba"
+            effect = {
+                set_owner = event_target:amoeba_country
+                while = {
+                    count = 9
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Space_Organism_Orange"
+                    }
+                }
+                while = {
+                    count = 3
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Large_Space_Organism_Orange"
+                    }
+                }
+                while = {
+                    count = 1
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Great_Space_Organism"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 100
+            }
+        }
+    }
+}
+
+create_planet_amoeba_fleet_13 = {
+    event_target:amoeba_country = {
+        create_fleet = {
+            name = "NAME_Space_Amoeba"
+            effect = {
+                set_owner = event_target:amoeba_country
+                while = {
+                    count = 9
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Space_Organism_Zebra"
+                    }
+                }
+                while = {
+                    count = 3
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Large_Space_Organism_Zebra"
+                    }
+                }
+                while = {
+                    count = 1
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Great_Space_Organism"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 100
+            }
+        }
+    }
+}
+
+create_planet_amoeba_fleet_14 = {
+    event_target:amoeba_country = {
+        create_fleet = {
+            name = "NAME_Space_Amoeba"
+            effect = {
+                set_owner = event_target:amoeba_country
+                while = {
+                    count = 15
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Space_Organism_Zebra"
+                    }
+                }
+                while = {
+                    count = 5
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Large_Space_Organism_Zebra"
+                    }
+                }
+                while = {
+                    count = 2
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Great_Space_Organism"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 100
+            }
+        }
+    }
+}
+
+create_planet_amoeba_fleet_15 = {
+    event_target:amoeba_country = {
+        create_fleet = {
+            name = "NAME_Space_Amoeba"
+            effect = {
+                set_owner = event_target:amoeba_country
+                while = {
+                    count = 20
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Small_Space_Organism_Zebra"
+                    }
+                }
+                while = {
+                    count = 6
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Large_Space_Organism_Zebra"
+                    }
+                }
+                while = {
+                    count = 3
+                    create_ship = {
+                        name = ""
+                        design = "NAME_Great_Space_Organism"
+                    }
+                }
+                set_formation_scale = 4.0
+                set_location = PREVPREV
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 100
+            }
+        }
+    }
+}
+
+# This = Solar System
+create_system_drone_fleet_01 = {
     random_system_planet = {
         limit = { 
             has_deposit_for = shipclass_mining_station
@@ -136,7 +1468,8 @@ create_drone_fleet_01 = {
     }
 }
 
-create_pirate_fleet_01 = {
+# This = Solar System
+create_system_pirate_fleet_01 = {
     random_system_planet = {
         event_target:pirate_country = {
             create_fleet = {
