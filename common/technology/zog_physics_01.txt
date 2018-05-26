@@ -1192,7 +1192,7 @@ tech_advanced_explosive_weapon_01 = {
                 research_leader = {
                     area = physics
                     has_level > 2
-                    has_trait = "leader_trait_expertise_rocketry"
+                    has_trait = "leader_trait_expertise_materials"
                 }
             }
         }
@@ -1203,7 +1203,7 @@ tech_advanced_explosive_weapon_01 = {
                 research_leader = {
                     area = physics
                     has_level > 2
-                    has_trait = "leader_trait_expertise_rocketry"
+                    has_trait = "leader_trait_expertise_materials"
                 }
             }
         }
@@ -1263,7 +1263,7 @@ tech_advanced_explosive_weapon_02 = {
                     area = physics
                     has_level > 3
                     OR = {
-                        has_trait = "leader_trait_expertise_rocketry"
+                        has_trait = "leader_trait_expertise_materials"
                         has_trait = "leader_trait_curator"
                         has_trait = "leader_trait_scientist_chosen"
                     }
@@ -1281,7 +1281,7 @@ tech_advanced_explosive_weapon_02 = {
                 research_leader = {
                     area = physics
                     has_level > 4
-                    has_trait = "leader_trait_expertise_rocketry"
+                    has_trait = "leader_trait_expertise_materials"
                 }
             }
         }
@@ -1307,7 +1307,7 @@ tech_advanced_explosive_weapon_02 = {
                     area = physics
                     has_level > 3
                     OR = {
-                        has_trait = "leader_trait_expertise_rocketry"
+                        has_trait = "leader_trait_expertise_materials"
                         has_trait = "leader_trait_curator"
                         has_trait = "leader_trait_scientist_chosen"
                     }
@@ -1364,7 +1364,7 @@ tech_advanced_explosive_weapon_03 = {
                     area = physics
                     has_level > 3
                     OR = {
-                        has_trait = "leader_trait_expertise_rocketry"
+                        has_trait = "leader_trait_expertise_materials"
                         has_trait = "leader_trait_curator"
                         has_trait = "leader_trait_scientist_chosen"
                     }
@@ -1442,7 +1442,7 @@ tech_advanced_explosive_weapon_04 = {
                     area = physics
                     has_level > 4
                     OR = {
-                        has_trait = "leader_trait_expertise_rocketry"
+                        has_trait = "leader_trait_expertise_materials"
                         has_trait = "leader_trait_curator"
                         has_trait = "leader_trait_scientist_chosen"
                     }
@@ -1521,7 +1521,7 @@ tech_advanced_explosive_weapon_05 = {
                     area = physics
                     has_level > 4
                     OR = {
-                        has_trait = "leader_trait_expertise_rocketry"
+                        has_trait = "leader_trait_expertise_materials"
                         has_trait = "leader_trait_curator"
                         has_trait = "leader_trait_scientist_chosen"
                     }
@@ -1997,7 +1997,7 @@ tech_supreme_explosive_weapon_01 = {
                     area = physics
                     has_level > 4
                     OR = {
-                        has_trait = "leader_trait_expertise_rocketry"
+                        has_trait = "leader_trait_expertise_materials"
                         has_trait = "leader_trait_curator"
                         has_trait = "leader_trait_scientist_chosen"
                     }
@@ -2008,7 +2008,7 @@ tech_supreme_explosive_weapon_01 = {
             factor = 0.80
             research_leader = {
                 area = physics
-                has_trait = "leader_trait_expertise_rocketry"
+                has_trait = "leader_trait_expertise_materials"
             }
         }
     }
@@ -2061,7 +2061,7 @@ tech_supreme_explosive_weapon_02 = {
                     area = physics
                     has_level > 4
                     OR = {
-                        has_trait = "leader_trait_expertise_rocketry"
+                        has_trait = "leader_trait_expertise_materials"
                         has_trait = "leader_trait_curator"
                         has_trait = "leader_trait_scientist_chosen"
                     }
@@ -2072,7 +2072,7 @@ tech_supreme_explosive_weapon_02 = {
             factor = 0.70
             research_leader = {
                 area = physics
-                has_trait = "leader_trait_expertise_rocketry"
+                has_trait = "leader_trait_expertise_materials"
             }
         }
     }
@@ -2125,7 +2125,7 @@ tech_supreme_explosive_weapon_03 = {
                     area = physics
                     has_level > 4
                     OR = {
-                        has_trait = "leader_trait_expertise_rocketry"
+                        has_trait = "leader_trait_expertise_materials"
                         has_trait = "leader_trait_curator"
                         has_trait = "leader_trait_scientist_chosen"
                     }
@@ -2136,7 +2136,7 @@ tech_supreme_explosive_weapon_03 = {
             factor = 0.60
             research_leader = {
                 area = physics
-                has_trait = "leader_trait_expertise_rocketry"
+                has_trait = "leader_trait_expertise_materials"
             }
         }
     }
