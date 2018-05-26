@@ -1,0 +1,95 @@
+################################################
+### Building / Institute of Life Engineering
+################################################
+
+building_life_engineering_institute = {
+    is_listed = yes
+    empire_unique = no
+    planet_unique = yes
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_life_engineering_institute"
+    tags = {}
+
+    base_buildtime = 950
+
+    prerequisites = {
+        "tech_life_engineering"
+    }
+
+    cost = {
+        minerals = 3000
+        energy = 5000
+    }
+
+    required_resources = {
+        minerals = 15
+        energy = 30
+    }
+
+    produced_resources = {
+        society_research = 10
+    }
+
+    planet_modifier  = {
+        tile_resource_society_research_mult = 0.25
+    }
+
+    adjacency_bonus = {
+        tile_building_resource_society_research_add = 3
+    }
+
+    potential = {
+        owner = {
+            OR = {
+                has_country_flag = "HUM_species_researched"
+                has_country_flag = "MAM_species_researched"
+                has_country_flag = "REP_species_researched"
+                has_country_flag = "AVI_species_researched"
+                has_country_flag = "ART_species_researched"
+                has_country_flag = "FUN_species_researched"
+                has_country_flag = "MOL_species_researched"
+                has_country_flag = "PLANT_species_researched"
+            }
+        }
+    }
+
+    allow = {
+        #if = {
+        #    limit = {
+        #        owner = {
+        #            NOT = { has_authority = auth_machine_intelligence }
+        #        }
+        #    }
+        #    AND = {
+        #        custom_tooltip = {
+        #            fail_text = "requires_building_capital_3"
+        #            planet = {
+        #                has_building = "building_capital_3"
+        #            }
+        #        }
+        #    }
+        #    else = {
+        #        AND = {
+        #            custom_tooltip = {
+        #                fail_text = "requires_building_capital_3"
+        #                planet = {
+        #                    has_building = "building_machine_capital_3"
+        #                }
+        #            }
+        #        }
+        #    }
+        #}
+    }
+
+    ai_allow = {
+        always = yes
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+
+    ai_replace = yes
+}
