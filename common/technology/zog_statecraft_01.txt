@@ -695,7 +695,7 @@ tech_advanced_leader_cap = {
     modifier = {
         country_leader_cap = 2
         country_leader_pool_size = 1
-        leader_influence_cost = -0.10
+        country_election_influence_cost_mult = -0.10
         #faction_influence_add = 1
         #pop_resettlement_cost_mult = -0.15
         #pop_robot_production_output = 0.05
@@ -783,7 +783,7 @@ tech_supreme_leader_cap = {
     modifier = {
         country_leader_cap = 3
         country_leader_pool_size = 2
-        leader_influence_cost = -0.20
+        country_election_influence_cost_mult = -0.20
     }
 
     weight = 70
@@ -856,7 +856,7 @@ tech_transcendental_leader_cap = {
     modifier = {
         country_leader_cap = 4
         country_leader_pool_size = 3
-        leader_influence_cost = -0.30
+        country_election_influence_cost_mult = -0.30
     }
 
     weight = 60
@@ -935,7 +935,7 @@ tech_infinitum_leader_cap = {
     modifier = {
         country_leader_cap = 6
         country_leader_pool_size = 5
-        leader_influence_cost = -0.50
+        country_election_influence_cost_mult = -0.50
     }
 
     weight = 50
