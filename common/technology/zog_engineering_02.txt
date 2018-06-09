@@ -547,9 +547,7 @@ tech_electric_theory = {
         }
     }
 
-    modifier = {
-        building_power_plant_1_build_cost_mult = -0.50
-    }
+    modifier = {}
 
     weight = 100
 
@@ -610,9 +608,7 @@ tech_electric_science = {
         }
     }
 
-    modifier = {
-        building_power_plant_2_build_cost_mult = -0.50
-    }
+    modifier = {}
 
     weight = 90
 
@@ -674,9 +670,7 @@ tech_electric_doctrine = {
         }
     }
 
-    modifier = {
-        building_power_plant_3_build_cost_mult = -0.50
-    }
+    modifier = {}
 
     weight = 80
 
@@ -741,9 +735,7 @@ tech_electric_transcendence = {
         }
     }
 
-    modifier = {
-        building_power_plant_4_build_cost_mult = -0.50
-    }
+    modifier = {}
 
     weight = 70
 
@@ -807,9 +799,7 @@ tech_electric_infinitum = {
         }
     }
 
-    modifier = {
-        building_power_plant_5_build_cost_mult = -0.50
-    }
+    modifier = {}
 
     weight = 60
 
