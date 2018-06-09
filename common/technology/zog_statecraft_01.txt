@@ -362,7 +362,7 @@ tech_advanced_stellar_cap = {
     modifier = {
         country_sector_cap_add = 1
         country_core_sector_system_cap = 1
-        edict_influence_cost = -0.10
+        diplomacy_influence_cost = -0.10
         #faction_influence_add = 1
         #pop_resettlement_cost_mult = -0.15
         #pop_robot_production_output = 0.05
@@ -454,7 +454,7 @@ tech_supreme_stellar_cap = {
     modifier = {
         country_sector_cap_add = 2
         country_core_sector_system_cap = 2
-        edict_influence_cost = -0.20
+        diplomacy_influence_cost = -0.20
     }
 
     weight = 70
@@ -531,7 +531,7 @@ tech_transcendental_stellar_cap = {
     modifier = {
         country_sector_cap_add = 3
         country_core_sector_system_cap = 3
-        edict_influence_cost = -0.30
+        diplomacy_influence_cost = -0.30
     }
 
     weight = 60
@@ -614,7 +614,7 @@ tech_infinitum_stellar_cap = {
     modifier = {
         country_sector_cap_add = 5
         country_core_sector_system_cap = 5
-        edict_influence_cost = -0.50
+        diplomacy_influence_cost = -0.50
     }
 
     weight = 50
