@@ -873,7 +873,7 @@ tech_mining_theory = {
     }
 
     modifier = {
-        building_mining_network_1_build_cost_mult = -0.50
+        mining_network_build_cost_mult = -0.50
     }
 
     weight = 100
@@ -940,7 +940,7 @@ tech_mining_science = {
     }
 
     modifier = {
-        building_mining_network_2_build_cost_mult = -0.50
+        mining_network_build_cost_mult = -0.50
     }
 
     weight = 90
@@ -1007,7 +1007,7 @@ tech_mining_doctrine = {
     }
 
     modifier = {
-        building_mining_network_3_build_cost_mult = -0.50
+        mining_network_build_cost_mult = -0.50
     }
 
     weight = 80
@@ -1074,7 +1074,7 @@ tech_mining_transcendence = {
     }
 
     modifier = {
-        building_mining_network_4_build_cost_mult = -0.50
+        mining_network_build_cost_mult = -0.50
     }
 
     weight = 70
@@ -1140,7 +1140,7 @@ tech_mining_infinitum = {
     }
 
     modifier = {
-        building_mining_network_5_build_cost_mult = -0.50
+        mining_network_build_cost_mult = -0.50
     }
 
     weight = 60
