@@ -1082,7 +1082,7 @@ tech_advanced_battleship_construction = {
 
     modifier = {
         shipsize_battleship_build_cost_mult = -0.10
-        shipsize_battleship_construction_speed_mult = 0.15
+        shipsize_battleship_build_speed_mult = 0.15
     }
 
     weight = 90
@@ -1173,7 +1173,7 @@ tech_supreme_battleship_construction = {
 
     modifier = {
         shipsize_battleship_build_cost_mult = -0.15
-        shipsize_battleship_construction_speed_mult = 0.20
+        shipsize_battleship_build_speed_mult = 0.20
     }
 
     weight = 80
@@ -1259,7 +1259,7 @@ tech_transcendental_battleship_construction = {
 
     modifier = {
         shipsize_battleship_build_cost_mult = -0.25
-        shipsize_battleship_construction_speed_mult = 0.30
+        shipsize_battleship_build_speed_mult = 0.30
     }
 
     weight = 70
@@ -1343,7 +1343,7 @@ tech_infinitum_battleship_construction = {
 
     modifier = {
         shipsize_battleship_build_cost_mult = -0.30
-        shipsize_battleship_construction_speed_mult = 0.30
+        shipsize_battleship_build_speed_mult = 0.30
     }
 
     weight = 60
