@@ -365,7 +365,7 @@ tech_advanced_destroyer_construction = {
 
     modifier = {
         shipsize_destroyer_build_cost_mult = -0.10
-        shipsize_destroyer_construction_speed_mult = 0.15
+        shipsize_destroyer_build_speed_mult = 0.15
     }
 
     weight = 90
@@ -454,7 +454,7 @@ tech_supreme_destroyer_construction = {
 
     modifier = {
         shipsize_destroyer_build_cost_mult = -0.15
-        shipsize_destroyer_construction_speed_mult = 0.20
+        shipsize_destroyer_build_speed_mult = 0.20
     }
 
     weight = 80
@@ -537,7 +537,7 @@ tech_transcendental_destroyer_construction = {
 
     modifier = {
         shipsize_destroyer_build_cost_mult = -0.25
-        shipsize_destroyer_construction_speed_mult = 0.30
+        shipsize_destroyer_build_speed_mult = 0.30
     }
 
     weight = 70
@@ -621,7 +621,7 @@ tech_infinitum_destroyer_construction = {
 
     modifier = {
         shipsize_destroyer_build_cost_mult = -0.30
-        shipsize_destroyer_construction_speed_mult = 0.30
+        shipsize_destroyer_build_speed_mult = 0.30
     }
 
     weight = 60
