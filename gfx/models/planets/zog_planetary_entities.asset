@@ -337,7 +337,7 @@ entity = {
 }
 
 entity = {
-    name = "crystal_gas_giant_01_entity"
+    name = "crystal_gas_giant_planet_01_entity"
     pdxmesh = "planet_no_pole_no_clouds_mesh"
 
     meshsettings = {
@@ -424,7 +424,7 @@ entity = {
 }
 
 entity = {
-    name = "methane_gas_giant_01_entity"
+    name = "methane_gas_giant_planet_01_entity"
     pdxmesh = "planet_no_pole_no_clouds_mesh"
 
     meshsettings = {
@@ -545,7 +545,7 @@ entity = {
 }
 
 entity = {
-    name = "carbon_gas_giant_01_entity"
+    name = "carbon_gas_giant_planet_01_entity"
     pdxmesh = "planet_no_pole_no_clouds_mesh"
 
     meshsettings = {
@@ -716,7 +716,7 @@ entity = {
 }
 
 entity = {
-    name = "nitrogen_gas_giant_01_entity"
+    name = "nitrogen_gas_giant_planet_01_entity"
     pdxmesh = "planet_no_pole_no_clouds_mesh"
 
     meshsettings = {
@@ -887,7 +887,7 @@ entity = {
 }
 
 entity = {
-    name = "sulfuric_gas_giant_01_entity"
+    name = "sulfuric_gas_giant_planet_01_entity"
     pdxmesh = "planet_no_pole_no_clouds_mesh"
 
     meshsettings = {
