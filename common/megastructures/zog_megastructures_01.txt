@@ -83,49 +83,64 @@ zog_uninhabitable_planet_cracking_0 = {
     on_build_cancel = {}
 
     on_build_complete = {
+        remove_megastructure = fromfrom
+
         owner = {
             set_variable = {
                 which = "mined_resource_minerals"
                 value = 0
             }
+            save_event_target_as = "megastructure_owner"
+        }
 
+        fromfrom.planet = {
             switch = {
                 trigger = planet_size
                 25 = {
                     random_list = {
                         5 = {
-                            add_minerals = 17500
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 17500
+                            event_target:megastructure_owner = {
+                                add_minerals = 17500
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 17500
+                                }
                             }
                         }
                         35 = {
-                            add_minerals = 15000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 15000
+                            event_target:megastructure_owner = {
+                                add_minerals = 15000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 15000
+                                }
                             }
                         }
                         30 = {
-                            add_minerals = 12500
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 12500
+                            event_target:megastructure_owner = {
+                                add_minerals = 12500
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 12500
+                                }
                             }
                         }
                         20 = {
-                            add_minerals = 10000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 10000
+                            event_target:megastructure_owner = {
+                                add_minerals = 10000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 10000
+                                }
                             }
                         }
                         10 = {
-                            add_minerals = 7500
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 7500
+                            event_target:megastructure_owner = {
+                                add_minerals = 7500
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 7500
+                                }
                             }
                         }
                     }
@@ -133,38 +148,48 @@ zog_uninhabitable_planet_cracking_0 = {
                 24 = {
                     random_list = {
                         5 = {
-                            add_minerals = 16000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 16000
+                            event_target:megastructure_owner = {
+                                add_minerals = 16000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 16000
+                                }
                             }
                         }
                         35 = {
-                            add_minerals = 14000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 14000
+                            event_target:megastructure_owner = {
+                                add_minerals = 14000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 14000
+                                }
                             }
                         }
                         30 = {
-                            add_minerals = 12000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 12000
+                            event_target:megastructure_owner = {
+                                add_minerals = 12000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 12000
+                                }
                             }
                         }
                         20 = {
-                            add_minerals = 9000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 9000
+                            event_target:megastructure_owner = {
+                                add_minerals = 9000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 9000
+                                }
                             }
                         }
                         10 = {
-                            add_minerals = 6000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 6000
+                            event_target:megastructure_owner = {
+                                add_minerals = 6000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 6000
+                                }
                             }
                         }
                     }
@@ -172,38 +197,48 @@ zog_uninhabitable_planet_cracking_0 = {
                 23 = {
                     random_list = {
                         5 = {
-                            add_minerals = 15000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 15000
+                            event_target:megastructure_owner = {
+                                add_minerals = 15000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 15000
+                                }
                             }
                         }
                         35 = {
-                            add_minerals = 13000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 13000
+                            event_target:megastructure_owner = {
+                                add_minerals = 13000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 13000
+                                }
                             }
                         }
                         30 = {
-                            add_minerals = 11000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 11000
+                            event_target:megastructure_owner = {
+                                add_minerals = 11000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 11000
+                                }
                             }
                         }
                         20 = {
-                            add_minerals = 8000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 8000
+                            event_target:megastructure_owner = {
+                                add_minerals = 8000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 8000
+                                }
                             }
                         }
                         10 = {
-                            add_minerals = 5000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 5000
+                            event_target:megastructure_owner = {
+                                add_minerals = 5000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 5000
+                                }
                             }
                         }
                     }
@@ -211,38 +246,48 @@ zog_uninhabitable_planet_cracking_0 = {
                 22 = {
                     random_list = {
                         5 = {
-                            add_minerals = 14000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 14000
+                            event_target:megastructure_owner = {
+                                add_minerals = 14000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 14000
+                                }
                             }
                         }
                         35 = {
-                            add_minerals = 12000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 12000
+                            event_target:megastructure_owner = {
+                                add_minerals = 12000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 12000
+                                }
                             }
                         }
                         30 = {
-                            add_minerals = 10000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 10000
+                            event_target:megastructure_owner = {
+                                add_minerals = 10000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 10000
+                                }
                             }
                         }
                         20 = {
-                            add_minerals = 7000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 7000
+                            event_target:megastructure_owner = {
+                                add_minerals = 7000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 7000
+                                }
                             }
                         }
                         10 = {
-                            add_minerals = 4000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 4000
+                            event_target:megastructure_owner = {
+                                add_minerals = 4000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 4000
+                                }
                             }
                         }
                     }
@@ -250,38 +295,48 @@ zog_uninhabitable_planet_cracking_0 = {
                 21 = {
                     random_list = {
                         5 = {
-                            add_minerals = 13000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 13000
+                            event_target:megastructure_owner = {
+                                add_minerals = 13000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 13000
+                                }
                             }
                         }
                         35 = {
-                            add_minerals = 11000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 11000
+                            event_target:megastructure_owner = {
+                                add_minerals = 11000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 11000
+                                }
                             }
                         }
                         30 = {
-                            add_minerals = 9000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 9000
+                            event_target:megastructure_owner = {
+                                add_minerals = 9000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 9000
+                                }
                             }
                         }
                         20 = {
-                            add_minerals = 6000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 6000
+                            event_target:megastructure_owner = {
+                                add_minerals = 6000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 6000
+                                }
                             }
                         }
                         10 = {
-                            add_minerals = 3000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 3000
+                            event_target:megastructure_owner = {
+                                add_minerals = 3000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 3000
+                                }
                             }
                         }
                     }
@@ -289,38 +344,48 @@ zog_uninhabitable_planet_cracking_0 = {
                 20 = {
                     random_list = {
                         5 = {
-                            add_minerals = 12000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 12000
+                            event_target:megastructure_owner = {
+                                add_minerals = 12000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 12000
+                                }
                             }
                         }
                         35 = {
-                            add_minerals = 10000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 10000
+                            event_target:megastructure_owner = {
+                                add_minerals = 10000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 10000
+                                }
                             }
                         }
                         30 = {
-                            add_minerals = 8000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 8000
+                            event_target:megastructure_owner = {
+                                add_minerals = 8000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 8000
+                                }
                             }
                         }
                         20 = {
-                            add_minerals = 5000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 5000
+                            event_target:megastructure_owner = {
+                                add_minerals = 5000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 5000
+                                }
                             }
                         }
                         10 = {
-                            add_minerals = 2000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 2000
+                            event_target:megastructure_owner = {
+                                add_minerals = 2000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 2000
+                                }
                             }
                         }
                     }
@@ -328,38 +393,48 @@ zog_uninhabitable_planet_cracking_0 = {
                 19 = {
                     random_list = {
                         5 = {
-                            add_minerals = 11000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 11000
+                            event_target:megastructure_owner = {
+                                add_minerals = 11000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 11000
+                                }
                             }
                         }
                         35 = {
-                            add_minerals = 9000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 9000
+                            event_target:megastructure_owner = {
+                                add_minerals = 9000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 9000
+                                }
                             }
                         }
                         30 = {
-                            add_minerals = 7000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 7000
+                            event_target:megastructure_owner = {
+                                add_minerals = 7000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 7000
+                                }
                             }
                         }
                         20 = {
-                            add_minerals = 4000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 4000
+                            event_target:megastructure_owner = {
+                                add_minerals = 4000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 4000
+                                }
                             }
                         }
                         10 = {
-                            add_minerals = 1000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 1000
+                            event_target:megastructure_owner = {
+                                add_minerals = 1000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 1000
+                                }
                             }
                         }
                     }
@@ -367,31 +442,39 @@ zog_uninhabitable_planet_cracking_0 = {
                 18 = {
                     random_list = {
                         5 = {
-                            add_minerals = 10000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 10000
+                            event_target:megastructure_owner = {
+                                add_minerals = 10000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 10000
+                                }
                             }
                         }
                         45 = {
-                            add_minerals = 8000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 8000
+                            event_target:megastructure_owner = {
+                                add_minerals = 8000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 8000
+                                }
                             }
                         }
                         30 = {
-                            add_minerals = 6000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 6000
+                            event_target:megastructure_owner = {
+                                add_minerals = 6000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 6000
+                                }
                             }
                         }
                         20 = {
-                            add_minerals = 3000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 3000
+                            event_target:megastructure_owner = {
+                                add_minerals = 3000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 3000
+                                }
                             }
                         }
                     }
@@ -399,31 +482,39 @@ zog_uninhabitable_planet_cracking_0 = {
                 17 = {
                     random_list = {
                         5 = {
-                            add_minerals = 9000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 9000
+                            event_target:megastructure_owner = {
+                                add_minerals = 9000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 9000
+                                }
                             }
                         }
                         45 = {
-                            add_minerals = 7000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 7000
+                            event_target:megastructure_owner = {
+                                add_minerals = 7000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 7000
+                                }
                             }
                         }
                         30 = {
-                            add_minerals = 5000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 5000
+                            event_target:megastructure_owner = {
+                                add_minerals = 5000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 5000
+                                }
                             }
                         }
                         20 = {
-                            add_minerals = 2000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 2000
+                            event_target:megastructure_owner = {
+                                add_minerals = 2000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 2000
+                                }
                             }
                         }
                     }
@@ -431,31 +522,39 @@ zog_uninhabitable_planet_cracking_0 = {
                 16 = {
                     random_list = {
                         5 = {
-                            add_minerals = 8000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 8000
+                            event_target:megastructure_owner = {
+                                add_minerals = 8000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 8000
+                                }
                             }
                         }
                         45 = {
-                            add_minerals = 6000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 6000
+                            event_target:megastructure_owner = {
+                                add_minerals = 6000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 6000
+                                }
                             }
                         }
                         30 = {
-                            add_minerals = 4000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 4000
+                            event_target:megastructure_owner = {
+                                add_minerals = 4000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 4000
+                                }
                             }
                         }
                         20 = {
-                            add_minerals = 1000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 1000
+                            event_target:megastructure_owner = {
+                                add_minerals = 1000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 1000
+                                }
                             }
                         }
                     }
@@ -463,24 +562,30 @@ zog_uninhabitable_planet_cracking_0 = {
                 15 = {
                     random_list = {
                         5 = {
-                            add_minerals = 7000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 7000
+                            event_target:megastructure_owner = {
+                                add_minerals = 7000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 7000
+                                }
                             }
                         }
                         45 = {
-                            add_minerals = 5000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 5000
+                            event_target:megastructure_owner = {
+                                add_minerals = 5000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 5000
+                                }
                             }
                         }
                         50 = {
-                            add_minerals = 4000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 4000
+                            event_target:megastructure_owner = {
+                                add_minerals = 4000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 4000
+                                }
                             }
                         }
                     }
@@ -488,24 +593,30 @@ zog_uninhabitable_planet_cracking_0 = {
                 14 = {
                     random_list = {
                         5 = {
-                            add_minerals = 6000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 6000
+                            event_target:megastructure_owner = {
+                                add_minerals = 6000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 6000
+                                }
                             }
                         }
                         45 = {
-                            add_minerals = 4000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 4000
+                            event_target:megastructure_owner = {
+                                add_minerals = 4000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 4000
+                                }
                             }
                         }
                         50 = {
-                            add_minerals = 3000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 3000
+                            event_target:megastructure_owner = {
+                                add_minerals = 3000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 3000
+                                }
                             }
                         }
                     }
@@ -513,24 +624,30 @@ zog_uninhabitable_planet_cracking_0 = {
                 13 = {
                     random_list = {
                         5 = {
-                            add_minerals = 5000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 5000
+                            event_target:megastructure_owner = {
+                                add_minerals = 5000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 5000
+                                }
                             }
                         }
                         45 = {
-                            add_minerals = 3000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 3000
+                            event_target:megastructure_owner = {
+                                add_minerals = 3000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 3000
+                                }
                             }
                         }
                         50 = {
-                            add_minerals = 2000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 2000
+                            event_target:megastructure_owner = {
+                                add_minerals = 2000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 2000
+                                }
                             }
                         }
                     }
@@ -538,24 +655,30 @@ zog_uninhabitable_planet_cracking_0 = {
                 12 = {
                     random_list = {
                         5 = {
-                            add_minerals = 4000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 5000
+                            event_target:megastructure_owner = {
+                                add_minerals = 4000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 5000
+                                }
                             }
                         }
                         45 = {
-                            add_minerals = 2000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 2000
+                            event_target:megastructure_owner = {
+                                add_minerals = 2000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 2000
+                                }
                             }
                         }
                         50 = {
-                            add_minerals = 1000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 1000
+                            event_target:megastructure_owner = {
+                                add_minerals = 1000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 1000
+                                }
                             }
                         }
                     }
@@ -563,17 +686,21 @@ zog_uninhabitable_planet_cracking_0 = {
                 11 = {
                     random_list = {
                         5 = {
-                            add_minerals = 3000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 3000
+                            event_target:megastructure_owner = {
+                                add_minerals = 3000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 3000
+                                }
                             }
                         }
                         95 = {
-                            add_minerals = 1000
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 1000
+                            event_target:megastructure_owner = {
+                                add_minerals = 1000
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 1000
+                                }
                             }
                         }
                     }
@@ -581,32 +708,36 @@ zog_uninhabitable_planet_cracking_0 = {
                 10 = {
                     random_list = {
                         5 = {
-                            add_minerals = 2250
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 2250
+                            event_target:megastructure_owner = {
+                                add_minerals = 2250
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 2250
+                                }
                             }
                         }
                         95 = {
-                            add_minerals = 750
-                            set_variable = {
-                                which = "mined_resource_minerals"
-                                value = 750
+                            event_target:megastructure_owner = {
+                                add_minerals = 750
+                                set_variable = {
+                                    which = "mined_resource_minerals"
+                                    value = 750
+                                }
                             }
                         }
                     }
                 }
                 9 = {
-                    add_minerals = 500
-                    set_variable = {
-                        which = "mined_resource_minerals"
-                        value = 500
+                    event_target:megastructure_owner = {
+                        add_minerals = 500
+                        set_variable = {
+                            which = "mined_resource_minerals"
+                            value = 500
+                        }
                     }
                 }
             }
-        }
-        remove_megastructure = fromfrom
-        fromfrom.planet = {
+
             change_pc = "pc_broken"
 
             switch = {
@@ -631,6 +762,10 @@ zog_uninhabitable_planet_cracking_0 = {
 
             set_planet_flag = "planet_cracked"
             set_uninhabitable_cracked_planet_random_resource = yes
+        }
+
+        set_asteroid_belt = {
+            radius = 10
         }
     }
 
