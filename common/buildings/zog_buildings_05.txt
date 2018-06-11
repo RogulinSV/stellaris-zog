@@ -93,3 +93,72 @@ building_life_engineering_institute = {
 
     ai_replace = yes
 }
+
+building_extraterrestrial_life_ministry = {
+    is_listed = yes
+    empire_unique = no
+    planet_unique = yes
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_extraterrestrial_life_ministry"
+    tags = {}
+
+    base_buildtime = 360
+
+    prerequisites = {
+        # "tech_life_engineering"
+    }
+
+    cost = {
+        minerals = 1500
+        energy = 500
+        influence = 50
+    }
+
+    required_resources = {
+        minerals = 10
+        energy = 10
+    }
+
+    produced_resources = {
+        unity = 1
+    }
+
+    planet_modifier = {
+        pop_citizen_happiness = 0.05
+        tile_resource_unity_mult = 0.10
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = { has_authority = "auth_machine_intelligence" }
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_building_capital_1"
+                planet = {
+                    OR = {
+                        has_building = "building_capital_1"
+                        has_building = "building_capital_2"
+                        has_building = "building_capital_3"
+                    }
+                }
+            }
+            else = {
+                custom_tooltip = {
+                    fail_text = "requires_building_capital_1"
+                    planet = {
+                        OR = {
+                            has_building = "building_machine_capital_1"
+                            has_building = "building_machine_capital_2"
+                            has_building = "building_machine_capital_3"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
