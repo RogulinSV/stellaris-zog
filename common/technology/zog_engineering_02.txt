@@ -332,7 +332,6 @@ tech_hydroponics_doctrine = {
 
     prerequisites = {
         "tech_hydroponics_science"
-        "tech_orbital_hydroponics"
         "tech_gene_crops"
     }
 
