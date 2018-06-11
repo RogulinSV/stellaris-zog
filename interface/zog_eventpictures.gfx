@@ -54,6 +54,12 @@ spriteTypes = {
         alwaystransparent = yes
     }
     spriteType = {
+        name = "GFX_evt_space_monsters_appearance_d"
+        texturefile = "gfx/event_pictures/space_monsters_appearance_d.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
         name = "GFX_evt_space_monsters_suppression_a"
         texturefile = "gfx/event_pictures/space_monsters_suppression_a.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
@@ -126,14 +132,26 @@ spriteTypes = {
         alwaystransparent = yes
     }
     spriteType = {
-        name = "GFX_evt_species_research_NONE"
-        texturefile = "gfx/event_pictures/species_research_NONE.dds"
+        name = "GFX_evt_species_abduction"
+        texturefile = "gfx/event_pictures/species_abduction.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
     spriteType = {
-        name = "GFX_evt_species_research_FAIL"
-        texturefile = "gfx/event_pictures/species_research_FAIL.dds"
+        name = "GFX_evt_species_research_detected"
+        texturefile = "gfx/event_pictures/species_research_detected.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_species_research_separatists"
+        texturefile = "gfx/event_pictures/species_research_separatists.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_species_research_NONE"
+        texturefile = "gfx/event_pictures/species_research_NONE.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }

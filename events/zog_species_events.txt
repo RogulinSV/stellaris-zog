@@ -1,0 +1,3191 @@
+namespace = zog_species_events
+
+#############################################
+### "Species researching" on communication
+#############################################
+
+# This = Country which established the communications
+# From = Country which communications were established with
+country_event = {
+    id = zog_species_events.1
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        NOR = {
+            has_country_flag = "engineered_species"
+            is_same_species_class = from
+        }
+        OR = {
+            is_country_type = default
+            is_country_type = fallen_empire
+            is_country_type = awakened_fallen_empire
+        }
+        from = {
+            NOR = {
+                has_country_flag = "engineered_species"
+                is_same_species_class = root
+            }
+            NOT = {
+                OR = {
+                    is_species_class = ROBOT
+                    is_species_class = MACHINE
+                }
+            }
+            OR = {
+                is_country_type = default
+                is_country_type = primitive
+            }
+        }
+    }
+
+    immediate = {
+        save_event_target_as = "species_researcher_country"
+
+        from = {
+            save_event_target_as = "species_subject_country"
+
+            log = "===== Contect established A"
+            print_country_scope_a = yes
+
+            random_owned_planet = {
+                limit = {
+                    count_pops = {
+                        count > 0
+                        limit = {
+                            is_growing = no
+                            is_robot_pop = no
+                            is_same_species = prev
+                        }
+                    }
+                }
+
+                log = "===== Planet found A"
+                save_event_target_as = "species_subject_planet"
+
+                random_list = {
+                    5 = {
+                        planet_event = { id = zog_species_events.5 days = 33 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.5 days = 65 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.5 days = 99 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.5 days = 127 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.5 days = 156 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.5 days = 188 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.5 days = 205 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.5 days = 227 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.5 days = 251 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.5 days = 290 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.5 days = 332 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.5 days = 367 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.5 days = 399 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.5 days = 425 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.5 days = 454 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.5 days = 482 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.5 days = 504 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.5 days = 531 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.5 days = 576 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.5 days = 601 }
+                    }
+                }
+            }
+        }
+    }
+}
+
+# This = Country which established the communications
+# From = Country which communications were established with
+country_event = {
+    id = zog_species_events.2
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        NOR = {
+            has_country_flag = "engineered_species"
+            is_same_species_class = from
+        }
+        NOT = {
+            OR = {
+                is_species_class = ROBOT
+                is_species_class = MACHINE
+            }
+        }
+        OR = {
+            is_country_type = default
+            is_country_type = primitive
+        }
+        from = {
+            NOR = {
+                has_country_flag = "engineered_species"
+                is_same_species_class = root
+            }
+            OR = {
+                is_country_type = default
+                is_country_type = fallen_empire
+                is_country_type = awakened_fallen_empire
+            }
+        }
+    }
+
+    immediate = {
+        from = {
+            save_event_target_as = "species_researcher_country"
+        }
+        save_event_target_as = "species_subject_country"
+
+        log = "===== Contect established B"
+        print_country_scope_b = yes
+
+        random_owned_planet = {
+            limit = {
+                count_pops = {
+                    count > 0
+                    limit = {
+                        is_growing = no
+                        is_robot_pop = no
+                        is_same_species = prev
+                    }
+                }
+            }
+
+            log = "===== Planet found B"
+            save_event_target_as = "species_subject_planet"
+
+            random_list = {
+                5 = {
+                    planet_event = { id = zog_species_events.7 days = 67 random = 20 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.7 days = 122 random = 30 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.7 days = 189 random = 40 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.7 days = 251 random = 50 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.7 days = 319 random = 60 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.7 days = 386 random = 70 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.7 days = 445 random = 80 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.7 days = 503 random = 90 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.7 days = 578 random = 100 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.7 days = 652 random = 110 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.7 days = 713 random = 120 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.7 days = 770 random = 130 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.7 days = 825 random = 140 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.7 days = 888 random = 150 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.7 days = 937 random = 160 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.7 days = 1001 random = 170 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.7 days = 1062 random = 180 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.7 days = 1112 random = 190 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.7 days = 1181 random = 200 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.7 days = 1249 random = 210 }
+                }
+            }
+        }
+    }
+}
+
+###########################################
+### "Species researching" planet project
+###########################################
+
+planet_event = {
+    id = zog_species_events.5
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        exists = event_target:species_researcher_country
+        exists = event_target:species_subject_country
+        count_pops = {
+            count > 0
+            limit = {
+                is_growing = no
+                is_robot_pop = no
+                is_same_species = event_target:species_subject_country
+            }
+        }
+    }
+
+    immediate = {
+        log = "PROJECT ZOG_PROJECT_SPECIES_RESEARCH_A BEGINS"
+        print_country_scope_a = yes
+
+        enable_special_project = {
+            name = "ZOG_PROJECT_SPECIES_RESEARCH_A"
+            location = this
+            owner = event_target:species_researcher_country
+        }
+        event_target:species_researcher_country = {
+            country_event = { id = zog_species_events.6 days = 5 }
+        }
+    }
+}
+
+country_event = {
+    id = zog_species_events.6
+    title = zog_species_events.6.title
+    desc = zog_species_events.6.desc
+    picture = GFX_evt_species_research_we
+    show_sound = event_laboratory_sound
+    location = event_target:species_subject_planet
+    is_triggered_only = yes
+    hide_window = no
+
+    trigger = {}
+
+    option = {
+        name = zog_species_events.6.a
+        custom_tooltip = zog_species_events.6.a.tooltip
+        ai_chance = {
+            factor = 100
+        }
+    }
+    option = {
+        name = zog_species_events.6.b
+        custom_tooltip = zog_species_events.6.b.tooltip
+        trigger = {
+            has_special_project = "ZOG_PROJECT_SPECIES_RESEARCH_A"
+        }
+        ai_chance = {
+            factor = 25
+        }
+        hidden_effect = {
+            abort_special_project = {
+                type = "ZOG_PROJECT_SPECIES_RESEARCH_A"
+                location = event_target:species_subject_planet
+            }
+        }
+    }
+}
+
+planet_event = {
+    id = zog_species_events.7
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        exists = event_target:species_researcher_country
+        exists = event_target:species_subject_country
+        count_pops = {
+            count > 0
+            limit = {
+                is_growing = no
+                is_robot_pop = no
+                is_same_species = event_target:species_subject_country
+            }
+        }
+    }
+
+    immediate = {
+        log = "PROJECT ZOG_PROJECT_SPECIES_RESEARCH_B BEGINS"
+        print_country_scope_a = yes
+
+        enable_special_project = {
+            name = "ZOG_PROJECT_SPECIES_RESEARCH_B"
+            location = this
+            owner = event_target:species_researcher_country
+        }
+        event_target:species_researcher_country = {
+            country_event = { id = zog_species_events.8 days = 5 }
+        }
+    }
+}
+
+country_event = {
+    id = zog_species_events.8
+    title = zog_species_events.8.title
+    desc = zog_species_events.8.desc
+    picture = GFX_evt_species_research_they
+    show_sound = event_laboratory_sound
+    location = event_target:species_subject_planet
+    is_triggered_only = yes
+    hide_window = no
+
+    trigger = {}
+
+    option = {
+        name = zog_species_events.8.a
+        custom_tooltip = zog_species_events.8.a.tooltip
+        ai_chance = {
+            factor = 100
+        }
+    }
+    option = {
+        name = zog_species_events.8.b
+        custom_tooltip = zog_species_events.8.b.tooltip
+        trigger = {
+            has_special_project = "ZOG_PROJECT_SPECIES_RESEARCH_B"
+        }
+        ai_chance = {
+            factor = 25
+        }
+        hidden_effect = {
+            abort_special_project = {
+                type = "ZOG_PROJECT_SPECIES_RESEARCH_B"
+                location = event_target:species_subject_planet
+            }
+        }
+    }
+}
+
+##########################################
+### "Species researching" pop abduction
+##########################################
+
+country_event = {
+    id = zog_species_events.9
+    title = zog_species_events.9.title
+    desc = zog_species_events.9.desc
+    picture = GFX_evt_species_abduction
+    show_sound = event_red_alert
+    location = event_target:species_subject_planet
+    is_triggered_only = yes
+    hide_window = no
+
+    trigger = {}
+    immediate = {}
+
+    option = {
+        name = zog_species_events.9.a
+        custom_tooltip = zog_species_events.9.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_species_events.10
+    title = zog_species_events.10.title
+    desc = zog_species_events.10.desc
+    picture = GFX_evt_species_research_NONE
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {}
+
+    immediate = {
+        add_society_research = 200
+    }
+
+    option = {
+        name = zog_species_events.10.a
+        custom_tooltip = zog_species_events.10.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_species_events.11
+    title = zog_species_events.11.title
+    desc = zog_species_events.11.desc
+    picture = GFX_evt_species_research_HUM
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = "HUM_species_researched"
+    }
+
+    immediate = {
+        add_society_research = 100
+    }
+
+    option = {
+        name = zog_species_events.11.a
+        custom_tooltip = zog_species_events.11.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_species_events.12
+    title = zog_species_events.12.title
+    desc = zog_species_events.12.desc
+    picture = GFX_evt_species_research_MAM
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = "MAM_species_researched"
+    }
+
+    immediate = {
+        add_society_research = 100
+    }
+
+    option = {
+        name = zog_species_events.12.a
+        custom_tooltip = zog_species_events.12.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_species_events.13
+    title = zog_species_events.13.title
+    desc = zog_species_events.13.desc
+    picture = GFX_evt_species_research_REP
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = "REP_species_researched"
+    }
+
+    immediate = {
+        add_society_research = 100
+    }
+
+    option = {
+        name = zog_species_events.13.a
+        custom_tooltip = zog_species_events.13.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_species_events.14
+    title = zog_species_events.14.title
+    desc = zog_species_events.14.desc
+    picture = GFX_evt_species_research_AVI
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = "AVI_species_researched"
+    }
+
+    immediate = {
+        add_society_research = 100
+    }
+
+    option = {
+        name = zog_species_events.14.a
+        custom_tooltip = zog_species_events.14.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_species_events.15
+    title = zog_species_events.15.title
+    desc = zog_species_events.15.desc
+    picture = GFX_evt_species_research_ART
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = "ART_species_researched"
+    }
+
+    immediate = {
+        add_society_research = 100
+    }
+
+    option = {
+        name = zog_species_events.15.a
+        custom_tooltip = zog_species_events.15.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_species_events.16
+    title = zog_species_events.16.title
+    desc = zog_species_events.16.desc
+    picture = GFX_evt_species_research_FUN
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = "FUN_species_researched"
+    }
+
+    immediate = {
+        add_society_research = 100
+    }
+
+    option = {
+        name = zog_species_events.16.a
+        custom_tooltip = zog_species_events.16.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_species_events.17
+    title = zog_species_events.17.title
+    desc = zog_species_events.17.desc
+    picture = GFX_evt_species_research_MOL
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = "MOL_species_researched"
+    }
+
+    immediate = {
+        add_society_research = 100
+    }
+
+    option = {
+        name = zog_species_events.17.a
+        custom_tooltip = zog_species_events.17.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_species_events.18
+    title = zog_species_events.18.title
+    desc = zog_species_events.18.desc
+    picture = GFX_evt_species_research_PLANT
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = "PLANT_species_researched"
+    }
+
+    immediate = {
+        add_society_research = 100
+    }
+
+    option = {
+        name = zog_species_events.18.a
+        custom_tooltip = zog_species_events.18.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_species_events.25
+    title = zog_species_events.25.title
+    desc = zog_species_events.25.desc
+    picture = GFX_evt_species_research_detected
+    show_sound = event_administrative_work
+    is_triggered_only = yes
+
+    trigger = {
+        exists = event_target:species_researcher_country
+    }
+
+    immediate = {}
+
+    option = {
+        name = zog_species_events.25.a
+        custom_tooltip = zog_species_events.25.a.tooltip
+        trigger = {}
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {
+            event_target:species_researcher_country = {
+                create_message = {
+                    type = DIPLO_ACTION_MAKE_RIVAL
+                    localization = DIPLO_SPECIES_PROJECT_FAILED
+                    days = 30 
+                    target = event_target:species_researcher_country
+                    variable = { type = name localization = COUNTRY1 scope = event_target:species_researcher_country }
+                    variable = { type = name localization = COUNTRY2 scope = event_target:species_subject_country }
+                }
+                country_event = {
+                    id = zog_species_events.30
+                    days = 20
+                    random = 10
+                }
+            }
+        }
+    }
+    option = {
+        name = zog_species_events.25.b
+        custom_tooltip = zog_species_events.25.b.tooltip
+        trigger = {
+            is_country_type = default
+            OR = {
+                is_ai = no
+                is_friendly_to = event_target:species_researcher_country
+                is_cordial_to = event_target:species_researcher_country
+                AND = {
+                    exists = overlord
+                    overlord = {
+                        is_same_value = event_target:species_researcher_country
+                    }
+                    NOT = {
+                        is_disloyal_to = event_target:species_researcher_country
+                    }
+                }
+                relative_power = {
+                    who = event_target:species_researcher_country
+                    category = fleet
+                    value < equivalent
+                }
+            }
+        }
+        ai_chance = {
+            factor = 50
+        }
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = capital_scope
+                    OR = {
+                        has_ethic = ethic_fanatic_militarist
+                        has_ethic = ethic_fanatic_authoritarian
+                        is_xenophobe = yes
+                    }
+                }
+
+                capital_scope = {
+                    closest_system = {
+                        limit = {
+                            NOR = {
+                                has_star_flag = hostile_system
+                                has_star_flag = enclave
+                                has_star_flag = guardian
+                                exists = space_owner
+                                any_ship_in_system = {
+                                    is_ship_size = constructor
+                                    is_constructing = starbase
+                                }
+                            }
+                        }
+
+                        random_system_planet = {
+                            limit = {
+                                is_star = no
+                            }
+
+                            create_country = {
+                                name = "NAME_Pirates"
+                                type = pirate
+                                species = root.species
+                                name_list = "PRT1"
+                                flag = {
+                                    background = {
+                                        category = "backgrounds"
+                                        file = "00_solid.dds"
+                                    }
+                                    colors ={
+                                        "black"
+                                        "black"
+                                        "null"
+                                        "null"
+                                    }
+                                }
+                            }
+
+                            last_created_country = {
+                                set_name = random
+                                randomize_flag_symbol = "pirate"
+
+                                create_fleet = {
+                                    name = "NAME_Pirate_Station"
+                                    effect = {
+                                        set_owner = prev
+                                        create_ship = {
+                                            name = random
+                                            design = "NAME_Pirate_Nest"
+                                            graphical_culture = "pirate_01"
+                                        }
+                                        set_location = prevprev
+                                    }
+                                }
+                                create_leader = {
+                                    type = admiral
+                                    species = root.species
+                                    name = random
+                                    skill = 3
+                                    traits = {
+                                        trait = random_trait
+                                    }
+                                }
+                                create_fleet = {
+                                    name = "NAME_Pirate_Fleet"
+                                    effect = {
+                                        set_owner = prev
+                                        create_ship_design = {
+                                            design = "NAME_Reaver"
+                                        }
+                                        while = {
+                                            count = 29
+                                            create_ship = {
+                                                name = random
+                                                design = last_created_design
+                                                graphical_culture = "pirate_01"
+                                            }
+                                        }
+                                        assign_leader = last_created_leader
+                                        set_location = prevprev
+                                        set_fleet_stance = aggressive
+                                        set_aggro_range_measure_from = self
+                                        set_aggro_range = 150
+                                    }
+                                }
+                            }
+
+                            root = {
+                                country_event = { id = zog_species_events.26 days = 5 }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = zog_species_events.26
+    title = zog_species_events.26.title
+    desc = zog_species_events.26.desc
+    picture = GFX_evt_species_research_separatists
+    show_sound = event_planetary_riot
+    is_triggered_only = yes
+
+    immediate = {
+        print_country_scope_a = yes
+    }
+
+    option = {
+        name = OK
+    }
+}
+
+country_event = {
+    id = zog_species_events.30
+    title = zog_species_events.30.title
+    show_sound = event_conversation
+    is_triggered_only = yes
+    diplomatic = yes
+
+    # Is at war
+    # Is an peaceable
+    # Is not hive mind
+    # Is not fallen empire
+    desc = {
+        trigger = {
+            is_at_war_with = event_target:species_subject_country
+            event_target:species_subject_country = {
+                OR = {
+                    is_pacifist = yes
+                    is_xenophile = yes
+                }
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+            }
+        }
+        text = zog_species_events.30.desc_01
+    }
+
+    # Is at war
+    # Is an combative
+    # Is not hive mind
+    # Is not fallen empire
+    desc = {
+        trigger = {
+            is_at_war_with = event_target:species_subject_country
+            event_target:species_subject_country = {
+                OR = {
+                    is_militarist = yes
+                    is_authoritarian = yes
+                    is_xenophobe = yes
+                }
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+            }
+        }
+        text = zog_species_events.30.desc_02
+    }
+
+    # Is at war
+    # Is an restrained
+    # Is not hive mind
+    # Is not fallen empire
+    desc = {
+        trigger = {
+            is_at_war_with = event_target:species_subject_country
+            event_target:species_subject_country = {
+                OR = {
+                    is_materialist = yes
+                    is_egalitarian = yes
+                }
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+            }
+        }
+        text = zog_species_events.30.desc_03
+    }
+
+    # Is at war
+    # Is an spiritual
+    # Is not hive mind
+    # Is not fallen empire
+    desc = {
+        trigger = {
+            is_at_war_with = event_target:species_subject_country
+            event_target:species_subject_country = {
+                is_spiritualist = yes
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+            }
+        }
+        text = zog_species_events.30.desc_04
+    }
+
+    # Is in federation
+    # Is an peaceable
+    # Is not hive mind
+    # Is not fallen empire
+    desc = {
+        trigger = {
+            is_in_federation_with = event_target:species_subject_country
+            event_target:species_subject_country = {
+                OR = {
+                    is_pacifist = yes
+                    is_xenophile = yes
+                }
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+            }
+        }
+        text = zog_species_events.30.desc_05
+    }
+
+    # Is in federation
+    # Is an combative
+    # Is not hive mind
+    # Is not fallen empire
+    desc = {
+        trigger = {
+            is_in_federation_with = event_target:species_subject_country
+            event_target:species_subject_country = {
+                OR = {
+                    is_militarist = yes
+                    is_authoritarian = yes
+                    is_xenophobe = yes
+                }
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+            }
+        }
+        text = zog_species_events.30.desc_06
+    }
+
+    # Is in federation
+    # Is an restrained
+    # Is not hive mind
+    # Is not fallen empire
+    desc = {
+        trigger = {
+            is_in_federation_with = event_target:species_subject_country
+            event_target:species_subject_country = {
+                OR = {
+                    is_materialist = yes
+                    is_egalitarian = yes
+                }
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+            }
+        }
+        text = zog_species_events.30.desc_07
+    }
+
+    # Is in federation
+    # Is an spiritual
+    # Is not hive mind
+    # Is not fallen empire
+    desc = {
+        trigger = {
+            is_in_federation_with = event_target:species_subject_country
+            event_target:species_subject_country = {
+                is_spiritualist = yes
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+            }
+        }
+        text = zog_species_events.30.desc_08
+    }
+
+    # Is not at war
+    # Is not in federation
+    # Is an peaceable
+    # Has overlord and is disloyal to overlord
+    # Is not hive mind
+    desc = {
+        trigger = {
+            NOR = {
+                is_in_federation_with = event_target:species_subject_country
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                OR = {
+                    is_pacifist = yes
+                    is_xenophile = yes
+                }
+                exists = overlord
+                overlord = {
+                    is_same_value = root
+                }
+                is_disloyal_to = root
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+            }
+        }
+        text = zog_species_events.30.desc_09
+    }
+    # Has overlord and is not disloyal to overlord
+    desc = {
+        trigger = {
+            NOR = {
+                is_in_federation_with = event_target:species_subject_country
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                OR = {
+                    is_pacifist = yes
+                    is_xenophile = yes
+                }
+                exists = overlord
+                overlord = {
+                    is_same_value = root
+                }
+                NOR = {
+                    is_disloyal_to = root
+                    has_ai_personality = hive_mind
+                }
+            }
+        }
+        text = zog_species_events.30.desc_10
+    }
+
+    # Is not at war
+    # Is not in federation
+    # Is an combative
+    # Has overlord and is disloyal to overlord
+    # Is not hive mind
+    desc = {
+        trigger = {
+            NOR = {
+                is_in_federation_with = event_target:species_subject_country
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                OR = {
+                    is_militarist = yes
+                    is_authoritarian = yes
+                    is_xenophobe = yes
+                }
+                exists = overlord
+                overlord = {
+                    is_same_value = root
+                }
+                is_disloyal_to = root
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+            }
+        }
+        text = zog_species_events.30.desc_11
+    }
+    # Has overlord and is not disloyal to overlord
+    desc = {
+        trigger = {
+            NOR = {
+                is_in_federation_with = event_target:species_subject_country
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                OR = {
+                    is_militarist = yes
+                    is_authoritarian = yes
+                    is_xenophobe = yes
+                }
+                exists = overlord
+                overlord = {
+                    is_same_value = root
+                }
+                NOR = {
+                    is_disloyal_to = root
+                    has_ai_personality = hive_mind
+                }
+            }
+        }
+        text = zog_species_events.30.desc_12
+    }
+
+    # Is not at war
+    # Is not in federation
+    # Is an restrained
+    # Has overlord and is disloyal to overlord
+    # Is not hive mind
+    desc = {
+        trigger = {
+            NOR = {
+                is_in_federation_with = event_target:species_subject_country
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                OR = {
+                    is_materialist = yes
+                    is_egalitarian = yes
+                }
+                exists = overlord
+                overlord = {
+                    is_same_value = root
+                }
+                is_disloyal_to = root
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+            }
+        }
+        text = zog_species_events.30.desc_13
+    }
+    # Has overlord and is not disloyal to overlord
+    desc = {
+        trigger = {
+            NOR = {
+                is_in_federation_with = event_target:species_subject_country
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                OR = {
+                    is_materialist = yes
+                    is_egalitarian = yes
+                }
+                exists = overlord
+                overlord = {
+                    is_same_value = root
+                }
+                NOR = {
+                    is_disloyal_to = root
+                    has_ai_personality = hive_mind
+                }
+            }
+        }
+        text = zog_species_events.30.desc_14
+    }
+
+    # Is not at war
+    # Is not in federation
+    # Is an spiritual
+    # Has overlord and is disloyal to overlord
+    # Is not hive mind
+    desc = {
+        trigger = {
+            NOR = {
+                is_in_federation_with = event_target:species_subject_country
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                is_spiritualist = yes
+                exists = overlord
+                overlord = {
+                    is_same_value = root
+                }
+                is_disloyal_to = root
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+            }
+        }
+        text = zog_species_events.30.desc_15
+    }
+    # Has overlord and is not disloyal to overlord
+    desc = {
+        trigger = {
+            NOR = {
+                is_in_federation_with = event_target:species_subject_country
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                is_spiritualist = yes
+                exists = overlord
+                overlord = {
+                    is_same_value = root
+                }
+                NOR = {
+                    is_disloyal_to = root
+                    has_ai_personality = hive_mind
+                }
+            }
+        }
+        text = zog_species_events.30.desc_16
+    }
+
+    # Is not at war
+    # Is not in federation
+    # Is not an peaceable
+    # Is unfriendly
+    # Is not hive mind
+    # Is not fallen empire
+    desc = {
+        trigger = {
+            NOR = {
+                is_in_federation_with = event_target:species_subject_country
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                NOR = {
+                    is_pacifist = yes
+                    is_xenophile = yes
+                }
+                OR = {
+                    is_domineering_to = root # доминирую над
+                    is_unfriendly_to = root # недружественный к
+                    is_threatened_to = root # угрожал
+                    is_hostile_to = root # враждебен к
+                }
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+            }
+        }
+        text = zog_species_events.30.desc_17
+    }
+    # Is an peaceable
+    desc = {
+        trigger = {
+            NOR = {
+                is_in_federation_with = event_target:species_subject_country
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                OR = {
+                    is_pacifist = yes
+                    is_xenophile = yes
+                }
+                OR = {
+                    is_domineering_to = root # доминирую над
+                    is_unfriendly_to = root # недружественный к
+                    is_threatened_to = root # угрожал
+                    is_hostile_to = root # враждебен к
+                }
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+            }
+        }
+        text = zog_species_events.30.desc_18
+    }
+
+    # Is not at war
+    # Is not in federation
+    # Is an peaceable
+    # Is friendly
+    # Is not hive mind
+    # Is not fallen empire
+    desc = {
+        trigger = {
+            NOR = {
+                is_in_federation_with = event_target:species_subject_country
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                NOR = {
+                    is_militarist = yes
+                    is_xenophobe = yes
+                    is_authoritarian = yes
+                }
+                OR = {
+                    is_friendly_to = root # дружествен к
+                    is_cordial_to = root # радушек к
+                    is_protective_to = root # защищаю
+                    is_loyal_to = root # лоялен к
+                }
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+            }
+        }
+        text = zog_species_events.30.desc_19
+    }
+    # Is not an peaceable
+    desc = {
+        trigger = {
+            NOR = {
+                is_in_federation_with = event_target:species_subject_country
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                OR = {
+                    is_militarist = yes
+                    is_xenophobe = yes
+                    is_authoritarian = yes
+                }
+                OR = {
+                    is_friendly_to = root # дружествен к
+                    is_cordial_to = root # радушек к
+                    is_protective_to = root # защищаю
+                    is_loyal_to = root # лоялен к
+                }
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+            }
+        }
+        text = zog_species_events.30.desc_20
+    }
+
+    # Is not at war
+    # Is not in federation
+    # Is an combative
+    # Is angry
+    # Is not hive mind
+    # Is not fallen empire
+    desc = {
+        trigger = {
+            NOR = {
+                is_in_federation_with = event_target:species_subject_country
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                OR = {
+                    is_militarist = yes
+                    is_xenophobe = yes
+                    is_authoritarian = yes
+                }
+                OR = {
+                    is_belligerent_to = root # воинственнен к
+                    is_angry_to = root # злой на
+                }
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+            }
+        }
+        text = zog_species_events.30.desc_21
+    }
+    # Is not an combative
+    desc = {
+        trigger = {
+            NOR = {
+                is_in_federation_with = event_target:species_subject_country
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                NOR = {
+                    is_militarist = yes
+                    is_xenophobe = yes
+                    is_authoritarian = yes
+                }
+                OR = {
+                    is_belligerent_to = root # воинственнен к
+                    is_angry_to = root # злой на
+                }
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+            }
+        }
+        text = zog_species_events.30.desc_22
+    }
+
+    # Is not at war
+    # Is not in federation
+    # Is an egalitarian
+    # Is arrogant
+    # Is not hive mind
+    # Is not fallen empire
+    desc = {
+        trigger = {
+            NOR = {
+                is_in_federation_with = event_target:species_subject_country
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                OR = {
+                    is_egalitarian = yes
+                    is_xenophobe = yes
+                }
+                OR = {
+                    is_arrogant_to = root # высокомерный по отношению к
+                    is_dismissive_to = root # пренебрежителен к
+                }
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+            }
+        }
+        text = zog_species_events.30.desc_23
+    }
+    # Is not an egalitarian
+    desc = {
+        trigger = {
+            NOR = {
+                is_in_federation_with = event_target:species_subject_country
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                NOR = {
+                    is_egalitarian = yes
+                    is_xenophobe = yes
+                }
+                OR = {
+                    is_arrogant_to = root # высокомерный по отношению к
+                    is_dismissive_to = root # пренебрежителен к
+                }
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+            }
+        }
+        text = zog_species_events.30.desc_24
+    }
+
+    # Is at war
+    # Is an berserker
+    # Is not hive mind
+    # Is fallen empire
+    desc = {
+        trigger = {
+            is_at_war_with = event_target:species_subject_country
+            event_target:species_subject_country = {
+                OR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+                is_berserker_to = root # безжалостен по отношению к
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+            }
+        }
+        text = zog_species_events.30.desc_25
+    }
+    # Is not an berserker
+    desc = {
+        trigger = {
+            is_at_war_with = event_target:species_subject_country
+            event_target:species_subject_country = {
+                OR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+                NOR = {
+                    is_berserker_to = root
+                    has_ai_personality = hive_mind
+                }
+            }
+        }
+        text = zog_species_events.30.desc_26
+    }
+
+    # Is not at war
+    # Is an combative
+    # Is an overlord
+    # Is not hive mind
+    # Is fallen empire
+    desc = {
+        trigger = {
+            NOT = {
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                OR = {
+                    has_ethic = ethic_fanatic_xenophobe
+                    has_ethic = ethic_fanatic_militarist
+                }
+                OR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+                OR = {
+                    is_imperious_to = root # властный над
+                    is_overlord_to = root # повеливаю над
+                    is_custodial_to = root # под стражей
+                }
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+            }
+        }
+        text = zog_species_events.30.desc_27
+    }
+    # Is not an combative
+    desc = {
+        trigger = {
+            NOT = {
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                NOR = {
+                    has_ethic = ethic_fanatic_xenophobe
+                    has_ethic = ethic_fanatic_militarist
+                }
+                OR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+                OR = {
+                    is_imperious_to = root # властный над
+                    is_overlord_to = root # повеливаю над
+                    is_custodial_to = root # под стражей
+                }
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+            }
+        }
+        text = zog_species_events.30.desc_28
+    }
+
+    # Is not at war
+    # Is an peaceable
+    # Is an patronizing
+    # Is not hive mind
+    # Is fallen empire
+    desc = {
+        trigger = {
+            NOT = {
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                OR = {
+                    has_ethic = ethic_fanatic_xenophile
+                    has_ethic = ethic_fanatic_pacifist
+                }
+                OR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+                is_patronizing_to = root # покровительствующий над
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+            }
+        }
+        text = zog_species_events.30.desc_29
+    }
+    # Is not an peaceable
+    desc = {
+        trigger = {
+            NOT = {
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                NOR = {
+                    has_ethic = ethic_fanatic_xenophile
+                    has_ethic = ethic_fanatic_pacifist
+                }
+                OR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+                is_patronizing_to = root # покровительствующий над
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+            }
+        }
+        text = zog_species_events.30.desc_30
+    }
+
+    # Is not at war
+    # Is an spiritual
+    # Is an enigmatic
+    # Is not hive mind
+    # Is fallen empire
+    desc = {
+        trigger = {
+            NOT = {
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                OR = {
+                    has_ethic = ethic_spiritualist
+                    has_ethic = ethic_fanatic_spiritualist
+                }
+                OR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+                is_enigmatic_to = root # загадочен по отношению к
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+            }
+        }
+        text = zog_species_events.30.desc_31
+    }
+    # Is not an spiritual
+    desc = {
+        trigger = {
+            NOT = {
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                NOR = {
+                    has_ethic = ethic_spiritualist
+                    has_ethic = ethic_fanatic_spiritualist
+                }
+                OR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+                is_enigmatic_to = root # загадочен по отношению к
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+            }
+        }
+        text = zog_species_events.30.desc_32
+    }
+
+    # Is not at war
+    # Is not hive mind
+    # Is fallen empire
+    desc = {
+        trigger = {
+            NOT = {
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                OR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+                NOR = {
+                    is_berserker_to = root
+                    is_imperious_to = root
+                    is_overlord_to = root
+                    is_custodial_to = root
+                    is_patronizing_to = root
+                    is_enigmatic_to = root
+                }
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+            }
+        }
+        text = zog_species_events.30.desc_33
+    }
+
+    # Is at war
+    # Is hive mind or robot
+    # Is fallen empire
+    desc = {
+        trigger = {
+            is_at_war_with = event_target:species_subject_country
+            event_target:species_subject_country = {
+                OR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+                OR = {
+                    has_ai_personality = hive_mind
+                    has_authority = auth_machine_intelligence
+                }
+            }
+        }
+        text = zog_species_events.30.desc_34
+    }
+
+    # Is not at war
+    # Is hive mind or robot
+    # Is fallen empire
+    desc = {
+        trigger = {
+            NOT = {
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                OR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+                OR = {
+                    has_ai_personality = hive_mind
+                    has_authority = auth_machine_intelligence
+                }
+            }
+        }
+        text = zog_species_events.30.desc_35
+    }
+
+    # Is not at war
+    # Is not in federation
+    # Is an peaceable
+    # Is neutral
+    # Is not hive mind
+    # Is not fallen empire
+    desc = {
+        trigger = {
+            NOR = {
+                is_in_federation_with = event_target:species_subject_country
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                is_neutral_to = root
+                OR = {
+                    is_pacifist = yes
+                    is_xenophile = yes
+                }
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+            }
+        }
+        text = zog_species_events.30.desc_36
+    }
+
+    # Is not at war
+    # Is not in federation
+    # Is an combative
+    # Is neutral
+    # Is not hive mind
+    # Is not fallen empire
+    desc = {
+        trigger = {
+            NOR = {
+                is_in_federation_with = event_target:species_subject_country
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                is_neutral_to = root
+                OR = {
+                    is_militarist = yes
+                    is_xenophobe = yes
+                    is_authoritarian = yes
+                }
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+            }
+        }
+        text = zog_species_events.30.desc_37
+    }
+
+    # Is not at war
+    # Is not in federation
+    # Is an restrained
+    # Is neutral
+    # Is not hive mind
+    # Is not fallen empire
+    desc = {
+        trigger = {
+            NOR = {
+                is_in_federation_with = event_target:species_subject_country
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                is_neutral_to = root
+                OR = {
+                    is_materialist = yes
+                    is_egalitarian = yes
+                }
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+            }
+        }
+        text = zog_species_events.30.desc_38
+    }
+
+    # Is not at war
+    # Is not in federation
+    # Is an spiritual
+    # Is neutral
+    # Is not hive mind
+    # Is not fallen empire
+    desc = {
+        trigger = {
+            NOR = {
+                is_in_federation_with = event_target:species_subject_country
+                is_at_war_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                is_neutral_to = root
+                is_spiritualist = yes
+                NOT = {
+                    has_ai_personality = hive_mind
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+            }
+        }
+        text = zog_species_events.30.desc_39
+    }
+
+    # Is at war
+    # Is an berserker
+    # Is hive mind or robot
+    # Is not fallen empire
+    desc = {
+        trigger = {
+            is_at_war_with = event_target:species_subject_country
+            event_target:species_subject_country = {
+                OR = {
+                    has_ai_personality = hive_mind
+                    has_authority = auth_machine_intelligence
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+                OR = {
+                    is_berserker_to = root
+                    is_belligerent_to = root
+                    is_angry_to = root
+                    is_unfriendly_to = root
+                    is_hostile_to = root
+                    is_threatened_to = root
+                }
+            }
+        }
+        text = zog_species_events.30.desc_40
+    }
+
+    # Is at war
+    # Is not an berserker
+    # Is hive mind or robot
+    # Is not fallen empire
+    desc = {
+        trigger = {
+            is_at_war_with = event_target:species_subject_country
+            event_target:species_subject_country = {
+                OR = {
+                    has_ai_personality = hive_mind
+                    has_authority = auth_machine_intelligence
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+                NOR = {
+                    is_berserker_to = root
+                    is_belligerent_to = root
+                    is_angry_to = root
+                    is_unfriendly_to = root
+                    is_hostile_to = root
+                    is_threatened_to = root
+                }
+            }
+        }
+        text = zog_species_events.30.desc_41
+    }
+
+    # Is in federation
+    # Is friendly
+    # Is hive mind or robot
+    # Is not fallen empire
+    desc = {
+        trigger = {
+            is_in_federation_with = event_target:species_subject_country
+            event_target:species_subject_country = {
+                OR = {
+                    has_ai_personality = hive_mind
+                    has_authority = auth_machine_intelligence
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+                OR = {
+                    is_friendly_to = root
+                    is_cordial_to = root
+                    is_protective_to = root
+                    is_loyal_to = root
+                }
+            }
+        }
+        text = zog_species_events.30.desc_42
+    }
+
+    # Is in federation
+    # Is not friendly
+    # Is hive mind or robot
+    # Is not fallen empire
+    desc = {
+        trigger = {
+            is_in_federation_with = event_target:species_subject_country
+            event_target:species_subject_country = {
+                OR = {
+                    has_ai_personality = hive_mind
+                    has_authority = auth_machine_intelligence
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+                NOR = {
+                    is_friendly_to = root
+                    is_cordial_to = root
+                    is_protective_to = root
+                    is_loyal_to = root
+                }
+            }
+        }
+        text = zog_species_events.30.desc_43
+    }
+
+    # Is not in war
+    # Is not in federation
+    # Is friendly
+    # Is hive mind or robot
+    # Is not fallen empire
+    desc = {
+        trigger = {
+            NOR = {
+                is_at_war_with = event_target:species_subject_country
+                is_in_federation_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                OR = {
+                    has_ai_personality = hive_mind
+                    has_authority = auth_machine_intelligence
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+                OR = {
+                    is_friendly_to = root
+                    is_cordial_to = root
+                    is_protective_to = root
+                    is_loyal_to = root
+                }
+            }
+        }
+        text = zog_species_events.30.desc_44
+    }
+
+    # Is not in war
+    # Is not in federation
+    # Is unfriendly
+    # Is hive mind or robot
+    # Is not fallen empire
+    desc = {
+        trigger = {
+            NOR = {
+                is_at_war_with = event_target:species_subject_country
+                is_in_federation_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                OR = {
+                    has_ai_personality = hive_mind
+                    has_authority = auth_machine_intelligence
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+                OR = {
+                    is_domineering_to = root
+                    is_unfriendly_to = root
+                    is_threatened_to = root
+                    is_hostile_to = root
+                }
+            }
+        }
+        text = zog_species_events.30.desc_45
+    }
+
+    # Is not in war
+    # Is not in federation
+    # Is any other
+    # Is hive mind or robot
+    # Is not fallen empire
+    desc = {
+        trigger = {
+            NOR = {
+                is_at_war_with = event_target:species_subject_country
+                is_in_federation_with = event_target:species_subject_country
+            }
+            event_target:species_subject_country = {
+                OR = {
+                    has_ai_personality = hive_mind
+                    has_authority = auth_machine_intelligence
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+                NOR = {
+                    is_friendly_to = root
+                    is_cordial_to = root
+                    is_protective_to = root
+                    is_loyal_to = root
+                    is_domineering_to = root
+                    is_unfriendly_to = root
+                    is_threatened_to = root
+                    is_hostile_to = root
+                }
+            }
+        }
+        text = zog_species_events.30.desc_46
+    }
+
+    picture_event_data = {
+        portrait = event_target:species_subject_country
+        planet_background = event_target:species_subject_country
+        graphical_culture = event_target:species_subject_country
+        city_level = event_target:species_subject_country
+        room = event_target:species_subject_country.ruler
+    }
+
+    trigger = {
+        exists = event_target:species_subject_country
+    }
+
+    immediate = {}
+
+    option = {
+        name = zog_species_events.30.opt_01
+        trigger = {
+            NOR = {
+                is_pacifist = yes
+                is_xenophile = yes
+            }
+            OR = {
+                is_ai = no
+                NOR = {
+                    is_friendly_to = event_target:species_subject_country
+                    is_cordial_to = event_target:species_subject_country
+                    is_protective_to = event_target:species_subject_country
+                }
+            }
+            OR = {
+                has_ethic = ethic_fanatic_militarist
+                relative_power = {
+                    who = event_target:species_subject_country
+                    category = fleet
+                    value >= equivalent
+                }
+            }
+        }
+        ai_chance = {
+            factor = 75
+        }
+        hidden_effect = {
+            event_target:species_subject_country = {
+                country_event = {
+                    id = zog_species_events.35
+                    days = 15
+                    random = 5
+                }
+            }
+        }
+    }
+
+    option = {
+        name = zog_species_events.30.opt_02
+        trigger = {
+            NOR = {
+                is_xenophile = yes
+                has_ethic = ethic_fanatic_pacifist
+            }
+            OR = {
+                is_ai = no
+                NOT = {
+                    is_cordial_to = event_target:species_subject_country
+                }
+            }
+        }
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {
+            event_target:species_subject_country = {
+                country_event = {
+                    id = zog_species_events.36
+                    days = 10
+                    random = 5
+                }
+            }
+        }
+    }
+
+    option = {
+        name = zog_species_events.30.opt_03
+        trigger = {
+            OR = {
+                is_technocratic_regime = yes
+                relative_power = {
+                    who = event_target:species_subject_country
+                    category = technology
+                    value >= superior
+                }
+            }
+        }
+        ai_chance = {
+            factor = 85
+        }
+        hidden_effect = {
+            event_target:species_subject_country = {
+                country_event = {
+                    id = zog_species_events.37
+                    days = 30
+                    random = 15
+                }
+            }
+        }
+    }
+
+    option = {
+        name = zog_species_events.30.opt_04
+        trigger = {
+            is_mercantile_regime = yes
+            has_country_resource = {
+                type = minerals
+                amount > 999
+            }
+        }
+        ai_chance = {
+            factor = 90
+        }
+        add_minerals = -1000
+        hidden_effect = {
+            event_target:species_subject_country = {
+                country_event = {
+                    id = zog_species_events.38
+                    days = 15
+                    random = 5
+                }
+            }
+        }
+    }
+
+    option = {
+        name = zog_species_events.30.opt_05
+        trigger = {
+            is_plutocratic_regime = yes
+            has_country_resource = {
+                type = minerals
+                amount > 1499
+            }
+        }
+        ai_chance = {
+            factor = 90
+        }
+        add_minerals = -1500
+        hidden_effect = {
+            event_target:species_subject_country = {
+                country_event = {
+                    id = zog_species_events.38
+                    days = 15
+                    random = 5
+                }
+            }
+        }
+    }
+
+    option = {
+        name = zog_species_events.30.opt_06
+        trigger = {
+            NOR = {
+                is_militarist = yes
+                has_ethic = ethic_fanatic_xenophobe
+            }
+            OR = {
+                is_ai = no
+                NOR = {
+                    is_unfriendly_to = event_target:species_subject_country
+                    is_hostile_to = event_target:species_subject_country
+                }
+            }
+            OR = {
+                is_pacifist = yes
+                has_ethic = ethic_fanatic_xenophile
+                relative_power = {
+                    who = event_target:species_subject_country
+                    category = fleet
+                    value < equivalent # inferior equivalent superior
+                }
+            }
+        }
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {
+            event_target:species_subject_country = {
+                country_event = {
+                    id = zog_species_events.39
+                    days = 10
+                    random = 5
+                }
+            }
+        }
+    }
+
+    option = {
+        name = zog_species_events.30.opt_07
+        trigger = {
+            has_ethic = ethic_fanatic_authoritarian
+            any_owned_leader = {
+                leader_class = scientist
+            }
+        }
+        ai_chance = {
+            factor = 50
+        }
+        hidden_effect = {
+            random_owned_leader = {
+                limit = {
+                    leader_class = scientist
+                }
+                kill_leader = {
+                    type = scientist 
+                    show_notification = no
+                }
+            }
+            event_target:species_subject_country = {
+                country_event = {
+                    id = zog_species_events.40
+                    days = 30
+                    random = 10
+                }
+            }
+        }
+    }
+
+    option = {
+        name = zog_species_events.30.opt_20
+        trigger = {}
+        ai_chance = {
+            factor = 25
+        }
+        hidden_effect = {
+            if = {
+                limit = {
+                    has_special_project = "ZOG_PROJECT_SPECIES_RESEARCH_A"
+                }
+                abort_special_project = {
+                    type = "ZOG_PROJECT_SPECIES_RESEARCH_A"
+                    location = event_target:species_subject_planet
+                }
+                else = {
+                    if = {
+                        limit = {
+                            has_special_project = "ZOG_PROJECT_SPECIES_RESEARCH_B"
+                        }
+                        abort_special_project = {
+                            type = "ZOG_PROJECT_SPECIES_RESEARCH_B"
+                            location = event_target:species_subject_planet
+                        }
+                    }
+                }
+            }
+            event_target:species_subject_country = {
+                country_event = {
+                    id = zog_species_events.50
+                    days = 10
+                    random = 5
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = zog_species_events.35
+    title = zog_species_events.35.title
+    is_triggered_only = yes
+    diplomatic = yes
+
+    desc = {
+        trigger = {
+            OR = {
+                is_militarist = yes
+                is_xenophobe = yes
+                is_authoritarian = yes
+            }
+            NOR = {
+                has_ai_personality = hive_mind
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = zog_species_events.35.desc_01
+    }
+
+    desc = {
+        trigger = {
+            NOR = {
+                is_militarist = yes
+                is_xenophobe = yes
+                is_authoritarian = yes
+            }
+            NOR = {
+                has_ai_personality = hive_mind
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = zog_species_events.35.desc_02
+    }
+
+    desc = {
+        trigger = {
+            OR = {
+                has_ai_personality = hive_mind
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = zog_species_events.35.desc_03
+    }
+
+    picture_event_data = {
+        portrait = event_target:species_researcher_country
+        planet_background = event_target:species_researcher_country
+        graphical_culture = event_target:species_researcher_country
+        city_level = event_target:species_researcher_country
+        room = event_target:species_researcher_country.ruler
+    }
+
+    trigger = {
+        exists = event_target:species_researcher_country
+    }
+
+    immediate = {
+        add_opinion_modifier = {
+            modifier = opinion_our_species_research_high
+            who = event_target:species_researcher_country
+        }
+        add_threat = {
+            who = event_target:species_researcher_country
+            amount = 3
+        }
+        if = {
+            limit = {
+                NOT = {
+                    is_at_war_with = event_target:species_researcher_country
+                }
+                OR = {
+                    is_country_type = default
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+                NOT = {
+                    has_casus_belli = {
+                        target = event_target:species_researcher_country
+                        type = cb_hunger
+                    }
+                }
+            }
+            add_casus_belli = {
+                type = cb_hunger
+                who = event_target:species_researcher_country
+                days = 720
+            }
+        }
+    }
+
+    after = {
+        if = {
+            limit = {
+                NOR = {
+                    is_at_war_with = event_target:species_researcher_country
+                    is_in_federation_with = event_target:species_researcher_country
+                }
+                # @see common/game_rules/00_rules.txt
+                event_target:species_researcher_country = {
+                    NAND = {
+                        has_policy_flag = no_wars
+                        OR = {
+                            is_subject = no
+                            overlord = {
+                                is_same_value = event_target:species_researcher_country
+                            }
+                        }
+                    }
+                }
+                NAND = {
+                    OR = {
+                        is_subject_type = "vassal"
+                        is_subject_type = "protectorate"
+                        is_subject_type = "signatory"
+                    }
+                    overlord = {
+                        is_same_value = event_target:species_researcher_country
+                    }
+                }
+            }
+            declare_war = {
+                target = event_target:species_researcher_country
+                name = "NAME_Holy_World_War"
+                attacker_war_goal = wg_absorption
+            }
+        }
+    }
+
+    option = {
+        name = zog_species_events.35.a
+        trigger = {
+            is_militarist = yes
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = {
+        name = zog_species_events.35.b
+        trigger = {
+            is_xenophobe = yes
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = {
+        name = zog_species_events.35.c
+        trigger = {
+            is_authoritarian = yes
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = {
+        name = zog_species_events.35.d
+        trigger = {
+            is_spiritualist = yes
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = {
+        name = zog_species_events.35.e
+        trigger = {
+            is_egalitarian = yes
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = {
+        name = OK
+    }
+}
+
+country_event = {
+    id = zog_species_events.36
+    title = zog_species_events.36.title
+    is_triggered_only = yes
+    diplomatic = yes
+
+    desc = {
+        trigger = {
+            OR = {
+                is_militarist = yes
+                is_xenophobe = yes
+                is_authoritarian = yes
+            }
+            NOR = {
+                has_ai_personality = hive_mind
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = zog_species_events.36.desc_01
+    }
+
+    desc = {
+        trigger = {
+            OR = {
+                has_ethic = ethic_fanatic_pacifist
+                has_ethic = ethic_fanatic_xenophile
+            }
+            NOR = {
+                has_ai_personality = hive_mind
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = zog_species_events.36.desc_02
+    }
+
+    desc = {
+        trigger = {
+            NOR = {
+                has_ai_personality = hive_mind
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = zog_species_events.36.desc_03
+    }
+
+    desc = {
+        trigger = {
+            OR = {
+                has_ai_personality = hive_mind
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = zog_species_events.36.desc_04
+    }
+
+    picture_event_data = {
+        portrait = event_target:species_researcher_country
+        planet_background = event_target:species_researcher_country
+        graphical_culture = event_target:species_researcher_country
+        city_level = event_target:species_researcher_country
+        room = event_target:species_researcher_country.ruler
+    }
+
+    trigger = {
+        exists = event_target:species_researcher_country
+    }
+
+    immediate = {
+        add_opinion_modifier = {
+            modifier = opinion_our_species_research_mid
+            who = event_target:species_researcher_country
+        }
+        add_threat = {
+            who = event_target:species_researcher_country
+            amount = 1
+        }
+    }
+
+    option = {
+        name = zog_species_events.36.a
+        trigger = {
+            is_militarist = yes
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = {
+        name = zog_species_events.36.b
+        trigger = {
+            is_xenophobe = yes
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = {
+        name = zog_species_events.36.c
+        trigger = {
+            is_authoritarian = yes
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = {
+        name = zog_species_events.36.d
+        trigger = {
+            is_spiritualist = yes
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = {
+        name = zog_species_events.36.e
+        trigger = {
+            is_egalitarian = yes
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = {
+        name = OK
+    }
+}
+
+country_event = {
+    id = zog_species_events.37
+    title = zog_species_events.37.title
+    is_triggered_only = yes
+    diplomatic = yes
+
+    desc = {
+        trigger = {
+            is_technocratic_regime = yes
+            OR = {
+                is_xenophobe = yes
+                has_ethic = ethic_fanatic_authoritarian
+            }
+            NOR = {
+                has_ai_personality = hive_mind
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = zog_species_events.37.desc_01
+    }
+
+    desc = {
+        trigger = {
+            is_technocratic_regime = yes
+            NOR = {
+                is_xenophobe = yes
+                has_ethic = ethic_fanatic_authoritarian
+            }
+            NOR = {
+                has_ai_personality = hive_mind
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = zog_species_events.37.desc_02
+    }
+
+    desc = {
+        trigger = {
+            NOT = {
+                is_technocratic_regime = yes
+            }
+            OR = {
+                is_xenophobe = yes
+                has_ethic = ethic_fanatic_authoritarian
+            }
+            NOR = {
+                has_ai_personality = hive_mind
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = zog_species_events.37.desc_03
+    }
+
+    desc = {
+        trigger = {
+            NOT = {
+                is_technocratic_regime = yes
+            }
+            NOR = {
+                is_xenophobe = yes
+                has_ethic = ethic_fanatic_authoritarian
+            }
+            NOR = {
+                has_ai_personality = hive_mind
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = zog_species_events.37.desc_04
+    }
+
+    desc = {
+        trigger = {
+            OR = {
+                has_ai_personality = hive_mind
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = zog_species_events.37.desc_05
+    }
+
+    picture_event_data = {
+        portrait = event_target:species_researcher_country
+        planet_background = event_target:species_researcher_country
+        graphical_culture = event_target:species_researcher_country
+        city_level = event_target:species_researcher_country
+        room = event_target:species_researcher_country.ruler
+    }
+
+    trigger = {
+        exists = event_target:species_researcher_country
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                OR = {
+                    AND = {
+                        NOT = {
+                            is_technocratic_regime = yes
+                        }
+                        NOR = {
+                            is_xenophobe = yes
+                            has_ethic = ethic_fanatic_authoritarian
+                        }
+                    }
+                    AND = {
+                        is_technocratic_regime = yes
+                        OR = {
+                            is_xenophobe = yes
+                            has_ethic = ethic_fanatic_authoritarian
+                        }
+                    }
+                }
+            }
+            add_opinion_modifier = {
+                modifier = opinion_our_species_research_mid
+                who = event_target:species_researcher_country
+            }
+            add_threat = {
+                who = event_target:species_researcher_country
+                amount = 1
+            }
+            else = {
+                if = {
+                    limit = {
+                        NOT = {
+                            is_technocratic_regime = yes
+                        }
+                        OR = {
+                            is_xenophobe = yes
+                            has_ethic = ethic_fanatic_authoritarian
+                        }
+                    }
+                    add_opinion_modifier = {
+                        modifier = opinion_our_species_research_high
+                        who = event_target:species_researcher_country
+                    }
+                    add_threat = {
+                        who = event_target:species_researcher_country
+                        amount = 3
+                    }
+                    else = {
+                        if = {
+                            limit = {
+                                is_technocratic_regime = yes
+                                NOR = {
+                                    is_xenophobe = yes
+                                    has_ethic = ethic_fanatic_authoritarian
+                                }
+                            }
+                            add_opinion_modifier = {
+                                modifier = opinion_our_species_research_low
+                                who = event_target:species_researcher_country
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = zog_species_events.37.a
+        trigger = {
+            is_militarist = yes
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = {
+        name = zog_species_events.37.b
+        trigger = {
+            is_xenophobe = yes
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = {
+        name = zog_species_events.37.c
+        trigger = {
+            is_authoritarian = yes
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = {
+        name = zog_species_events.37.d
+        trigger = {
+            is_spiritualist = yes
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = {
+        name = zog_species_events.37.e
+        trigger = {
+            is_egalitarian = yes
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = {
+        name = zog_species_events.37.f
+        trigger = {
+            is_xenophile = yes
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = {
+        name = zog_species_events.37.g
+        trigger = {
+            is_pacifist = yes
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = {
+        name = OK
+    }
+}
+
+country_event = {
+    id = zog_species_events.38
+    title = zog_species_events.38.title
+    is_triggered_only = yes
+    diplomatic = yes
+
+    desc = {
+        trigger = {
+            OR = {
+                is_plutocratic_regime = yes
+                is_mercantile_regime = yes
+            }
+            NOR = {
+                has_ai_personality = hive_mind
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = zog_species_events.38.desc_01
+    }
+
+    desc = {
+        trigger = {
+            NOR = {
+                is_plutocratic_regime = yes
+                is_mercantile_regime = yes
+            }
+            NOR = {
+                has_ai_personality = hive_mind
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = zog_species_events.38.desc_02
+    }
+
+    desc = {
+        trigger = {
+            OR = {
+                has_ai_personality = hive_mind
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = zog_species_events.38.desc_03
+    }
+
+    picture_event_data = {
+        portrait = event_target:species_researcher_country
+        planet_background = event_target:species_researcher_country
+        graphical_culture = event_target:species_researcher_country
+        city_level = event_target:species_researcher_country
+        room = event_target:species_researcher_country.ruler
+    }
+
+    trigger = {
+        exists = event_target:species_researcher_country
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                is_plutocratic_regime = yes
+            }
+            add_minerals = 500
+            else = {
+                add_minerals = 1000
+            }
+        }
+        if = {
+            limit = {
+                is_xenophobe = yes
+            }
+            add_opinion_modifier = {
+                modifier = opinion_our_species_research_low
+                who = event_target:species_researcher_country
+            }
+        }
+    }
+
+    option = {
+        name = OK
+    }
+}
+
+country_event = {
+    id = zog_species_events.39
+    title = zog_species_events.39.title
+    is_triggered_only = yes
+    diplomatic = yes
+
+    desc = {
+        trigger = {
+            OR = {
+                has_ethic = ethic_fanatic_pacifist
+                is_xenophile = yes
+                is_spiritualist = yes
+            }
+            NOR = {
+                has_ai_personality = hive_mind
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = zog_species_events.39.desc_01
+    }
+
+    desc = {
+        trigger = {
+            NOR = {
+                has_ethic = ethic_fanatic_pacifist
+                is_xenophile = yes
+                is_spiritualist = yes
+            }
+            NOR = {
+                has_ai_personality = hive_mind
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = zog_species_events.39.desc_02
+    }
+
+    desc = {
+        trigger = {
+            OR = {
+                has_ai_personality = hive_mind
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = zog_species_events.39.desc_03
+    }
+
+    picture_event_data = {
+        portrait = event_target:species_researcher_country
+        planet_background = event_target:species_researcher_country
+        graphical_culture = event_target:species_researcher_country
+        city_level = event_target:species_researcher_country
+        room = event_target:species_researcher_country.ruler
+    }
+
+    trigger = {
+        exists = event_target:species_researcher_country
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                has_ethic = ethic_fanatic_xenophobe
+            }
+            add_opinion_modifier = {
+                modifier = opinion_our_species_research_mid
+                who = event_target:species_researcher_country
+            }
+            else = {
+                if = {
+                    limit = {
+                        has_ethic = ethic_xenophobe
+                    }
+                    add_opinion_modifier = {
+                        modifier = opinion_our_species_research_low
+                        who = event_target:species_researcher_country
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = OK
+    }
+}
+
+country_event = {
+    id = zog_species_events.40
+    title = zog_species_events.40.title
+    is_triggered_only = yes
+    diplomatic = yes
+
+    desc = {
+        trigger = {
+            is_authoritarian = yes
+            NOR = {
+                has_ai_personality = hive_mind
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = zog_species_events.40.desc_01
+    }
+
+    desc = {
+        trigger = {
+            NOT = {
+                is_authoritarian = yes
+            }
+            NOR = {
+                has_ai_personality = hive_mind
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = zog_species_events.40.desc_02
+    }
+
+    desc = {
+        trigger = {
+            is_authoritarian = yes
+            OR = {
+                has_ai_personality = hive_mind
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = zog_species_events.40.desc_03
+    }
+
+    desc = {
+        trigger = {
+            NOT = {
+                is_authoritarian = yes
+            }
+            OR = {
+                has_ai_personality = hive_mind
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = zog_species_events.40.desc_04
+    }
+
+    picture_event_data = {
+        portrait = event_target:species_researcher_country
+        planet_background = event_target:species_researcher_country
+        graphical_culture = event_target:species_researcher_country
+        city_level = event_target:species_researcher_country
+        room = event_target:species_researcher_country.ruler
+    }
+
+    trigger = {
+        exists = event_target:species_researcher_country
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                is_authoritarian = yes
+                free_leader_slots > 0
+            }
+            create_leader = {
+                type = scientist
+                species = event_target:species_researcher_country.species
+                name = random
+                skill = 3
+                event_leader = yes
+                leader_age_min = 25
+                leader_age_max = 45
+                traits = {
+                    trait = random_trait
+                }
+            }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    is_authoritarian = yes
+                }
+                free_leader_slots > 0
+            }
+            random_list = {
+                70 = {
+                    create_leader = {
+                        type = scientist
+                        species = event_target:species_researcher_country.species
+                        name = random
+                        skill = 3
+                        event_leader = yes
+                        leader_age_min = 25
+                        leader_age_max = 45
+                        traits = {
+                            trait = random_trait
+                        }
+                    }
+                }
+                30 = {}
+            }
+        }
+    }
+
+    option = {
+        name = OK
+    }
+}
+
+country_event = {
+    id = zog_species_events.50
+    title = zog_species_events.50.title
+    desc = zog_species_events.50.desc
+    is_triggered_only = yes
+    diplomatic = yes
+
+    picture_event_data = {
+        portrait = event_target:species_researcher_country
+        planet_background = event_target:species_researcher_country
+        graphical_culture = event_target:species_researcher_country
+        city_level = event_target:species_researcher_country
+        room = event_target:species_researcher_country.ruler
+    }
+
+    trigger = {
+        exists = event_target:species_researcher_country
+    }
+
+    immediate = {}
+
+    option = {
+        name = OK
+    }
+}

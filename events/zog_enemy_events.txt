@@ -88,6 +88,53 @@ country_event = {
 }
 
 #######################################################
+### "Space monsters appearance" after planet cracking
+#######################################################
+
+# - FromFromFrom: Nihal (solar_system)
+# - FromFromFromFrom: ISS Foundry (ship)
+country_event = {
+    id = zog_enemy_event.5
+    title = zog_enemy_event.5.title
+    desc = zog_enemy_event.5.desc
+    picture = GFX_evt_space_monsters_appearance_d
+    show_sound = event_mystic_reveal
+    is_triggered_only = yes
+    location = fromfromfrom
+
+    trigger = {
+        exists = event_target:space_monsters_target_planet
+        event_target:space_monsters_target_planet = {
+            NOT = {
+                has_planet_flag = "space_monsters_spawn"
+            }
+        }
+        NOR = {
+            has_edict = "space_monsters_repression"
+            has_edict = "space_monsters_extermination"
+            has_edict = "space_monsters_coexistence"
+        }
+    }
+
+    immediate = {
+        save_event_target_as = "space_monsters_target_country"
+        event_target:space_monsters_target_planet = {
+            planet_event = { id = zog_enemy_event.15 days = 5 }
+            set_timed_planet_flag = { flag = "space_monsters_spawn" days = 10 }
+        }
+    }
+
+    option = {
+        name = zog_enemy_event.5.a
+        custom_tooltip = zog_enemy_event.5.a.tooltip
+        trigger = {}
+        ai_chance = {
+            factor = 100
+        }
+    }
+}
+
+#######################################################
 ### "Space monsters appearance" five-year pulse event
 #######################################################
 
@@ -284,9 +331,10 @@ event = {
                                         is_pirate_system = no
                                     }
                                     AND = {
-                                        owner = { is_same_value = prevprevprev }
+                                        exists = starbase
                                         starbase = {
-                                            has_starbase_size = starbase_outpost
+                                            has_starbase_size = "starbase_outpost"
+                                            owner = { is_same_value = prevprevprevprev }
                                         }
                                     }
                                 }
@@ -808,12 +856,9 @@ country_event = {
     trigger = {
         exists = event_target:space_monsters_target_planet
         event_target:space_monsters_target_planet = {
-            OR = {
-                controller = { is_same_value = root }
-                solar_system = {
-                    exists = starbase
-                    starbase = { owner = { is_same_value = root } }
-                }
+            solar_system = {
+                exists = starbase
+                starbase = { owner = { is_same_value = root } }
             }
             has_planet_flag = "space_monsters_spawn"
         }

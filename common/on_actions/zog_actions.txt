@@ -235,7 +235,8 @@ on_megastructure_built = {
 on_post_communications_established = {
     events = {
         # Species research
-        zog_megastructure_events.20
+        zog_species_events.1
+        zog_species_events.2
     }
 }
 
