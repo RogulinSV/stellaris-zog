@@ -658,7 +658,7 @@ tech_electric_doctrine = {
 
     prerequisites = {
         "tech_electric_science"
-        "tech_solar_panel_network"
+        "tech_power_hub_1"
         "tech_power_plant_3"
     }
 
