@@ -326,7 +326,7 @@ tech_mining_greenaurium = {
     is_dangerous = no
 
     prerequisites = {
-        "tech_sensors_1"
+        "tech_sensors_2"
     }
 
     prereqfor_desc = {
@@ -482,7 +482,7 @@ tech_mining_admilium = {
     is_dangerous = no
 
     prerequisites = {
-        "tech_sensors_1"
+        "tech_sensors_2"
     }
 
     prereqfor_desc = {
@@ -597,7 +597,7 @@ tech_mining_cobaltium = {
     is_dangerous = no
 
     prerequisites = {
-        "tech_sensors_1"
+        "tech_sensors_2"
     }
 
     prereqfor_desc = {
@@ -713,7 +713,7 @@ tech_mining_glitterium = {
     is_dangerous = no
 
     prerequisites = {
-        "tech_sensors_1"
+        "tech_sensors_3"
     }
 
     prereqfor_desc = {
