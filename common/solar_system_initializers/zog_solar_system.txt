@@ -24,11 +24,23 @@
 edem_system = {
     name = "NAME_Edem"
     class = "rl_standard_stars"
-    asteroids_distance = 130
     flags = {
         "empire_home_system"
         "star_system_edem"
     }
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 110
+    }
+    asteroid_belt = {
+        type = icy_asteroid_belt
+        radius = 145
+    }
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 205
+    }
+    prevent_anomalies = yes
 
     usage = custom_empire
     max_instances = 1
@@ -48,7 +60,7 @@ edem_system = {
 
     planet = {
         name = "NAME_Selena"
-        class = pc_crystal # pc_desert
+        class = pc_crystal
         orbit_distance = 60
         orbit_angle = { min = 10 max = 350 }
         size = { min = @habitable_planet_mod_size max = @habitable_planet_max_size }
@@ -494,7 +506,11 @@ edem_system = {
 edem_neighbor_system_01 = {
     name = "NAME_Sirius"
     class = "rl_standard_stars"
-    asteroids_distance = 190
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 190
+    }
 
     planet = {
         class = none
@@ -699,7 +715,11 @@ edem_neighbor_system_01 = {
 edem_neighbor_system_02 = {
     name = "NAME_Procyon"
     class = "rl_standard_stars"
-    asteroids_distance = 80
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 80
+    }
 
     planet = {
         name = "NAME_Procyon"
