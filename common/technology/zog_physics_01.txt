@@ -1156,7 +1156,7 @@ tech_advanced_explosive_weapon_01 = {
     cost = 5000
     area = physics
     tier = 1
-    category = { rocketry }
+    category = { propulsion }
     icon = "tech_advanced_explosive_weapon_01"
 
     is_reverse_engineerable = no
@@ -1229,7 +1229,7 @@ tech_advanced_explosive_weapon_02 = {
     cost = 10000
     area = physics
     tier = 1
-    category = { rocketry }
+    category = { propulsion }
     icon = "tech_advanced_explosive_weapon_02"
 
     is_reverse_engineerable = no
@@ -1329,7 +1329,7 @@ tech_advanced_explosive_weapon_03 = {
     cost = 20000
     area = physics
     tier = 1
-    category = { rocketry }
+    category = { propulsion }
     icon = "tech_advanced_explosive_weapon_03"
 
     is_reverse_engineerable = no
@@ -1404,7 +1404,7 @@ tech_advanced_explosive_weapon_04 = {
     cost = 40000
     area = physics
     tier = 1
-    category = { rocketry }
+    category = { propulsion }
     icon = "tech_advanced_explosive_weapon_04"
 
     is_reverse_engineerable = no
@@ -1483,7 +1483,7 @@ tech_advanced_explosive_weapon_05 = {
     cost = 80000
     area = physics
     tier = 1
-    category = { rocketry }
+    category = { propulsion }
     icon = "tech_advanced_explosive_weapon_05"
 
     is_reverse_engineerable = no
