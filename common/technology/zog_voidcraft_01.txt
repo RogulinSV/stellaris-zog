@@ -322,15 +322,14 @@ tech_advanced_military_station_offense_02 = {
     start_tech = no
     category = { voidcraft }
     icon = "tech_advanced_military_station_offense_02"
-    tier = 1
+    tier = 2
 
     is_reverse_engineerable = no
     is_rare = no
     is_dangerous = no
 
     prerequisites = {
-        "tech_advanced_voidcraft"
-        "tech_space_defense_station_2"
+        "tech_advanced_military_station_offense_01"
     }
 
     prereqfor_desc = {
@@ -410,15 +409,14 @@ tech_advanced_military_station_defence_02 = {
     start_tech = no
     category = { voidcraft }
     icon = "tech_advanced_military_station_defence_02"
-    tier = 1
+    tier = 2
 
     is_reverse_engineerable = no
     is_rare = no
     is_dangerous = no
 
     prerequisites = {
-        "tech_advanced_voidcraft"
-        "tech_space_defense_station_2"
+        "tech_advanced_military_station_defence_01"
     }
 
     prereqfor_desc = {
@@ -496,15 +494,14 @@ tech_advanced_military_station_offense_03 = {
     start_tech = no
     category = { voidcraft }
     icon = "tech_advanced_military_station_offense_03"
-    tier = 1
+    tier = 3
 
     is_reverse_engineerable = no
     is_rare = yes
     is_dangerous = no
 
     prerequisites = {
-        "tech_advanced_voidcraft"
-        "tech_space_defense_station_3"
+        "tech_advanced_military_station_offense_02"
     }
 
     prereqfor_desc = {
@@ -583,15 +580,14 @@ tech_advanced_military_station_defence_03 = {
     start_tech = no
     category = { voidcraft }
     icon = "tech_advanced_military_station_defence_03"
-    tier = 1
+    tier = 3
 
     is_reverse_engineerable = no
     is_rare = yes
     is_dangerous = no
 
     prerequisites = {
-        "tech_advanced_voidcraft"
-        "tech_space_defense_station_3"
+        "tech_advanced_military_station_defence_02"
     }
 
     prereqfor_desc = {
@@ -676,8 +672,6 @@ tech_supreme_military_station_offense_01 = {
     is_dangerous = no
 
     prerequisites = {
-        "tech_advanced_military_station_offense_01"
-        "tech_advanced_military_station_offense_02"
         "tech_advanced_military_station_offense_03"
     }
 
@@ -770,8 +764,6 @@ tech_supreme_military_station_defence_01 = {
     is_dangerous = no
 
     prerequisites = {
-        "tech_advanced_military_station_defence_01"
-        "tech_advanced_military_station_defence_02"
         "tech_advanced_military_station_defence_03"
     }
 
