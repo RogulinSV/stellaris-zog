@@ -2245,6 +2245,8 @@ planet_event = {
     }
 
     immediate = {
+        log = "===== BUILDING POWER_PLANT_1 BUILDED"
+
         owner = {
             if = {
                 limit = {
@@ -3358,6 +3360,133 @@ planet_event = {
                                             }
                                         }
                                     }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#####################################################
+### Building "Institute of Synth Engineering" events
+#####################################################
+
+planet_event = {
+    id = zog_building_events.62
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_building = "building_synth_engineering_institute"
+        }
+    }
+
+    immediate = {
+        owner = {
+            random_list = {
+                50 = {
+                    if = {
+                        limit = { check_variable = { which = "DEBT_species_points" value > 0 } }
+                        change_variable = { which = "DEBT_species_points" value = -1 }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "ROBOT_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "ROBOT_species_points" value < 1 } }
+                            set_variable = { which = "ROBOT_species_points" value = 1 }
+                            else = { change_variable = { which = "ROBOT_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "MACHINE_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "MACHINE_species_points" value < 1 } }
+                            set_variable = { which = "MACHINE_species_points" value = 1 }
+                            else = { change_variable = { which = "MACHINE_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                }
+                50 = {
+                    if = {
+                        limit = { check_variable = { which = "DEBT_species_points" value > 0 } }
+                        change_variable = { which = "DEBT_species_points" value = -1 }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "MACHINE_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "MACHINE_species_points" value < 1 } }
+                            set_variable = { which = "MACHINE_species_points" value = 1 }
+                            else = { change_variable = { which = "MACHINE_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                    if = {
+                        limit = { has_country_flag = "ROBOT_species_researched" }
+                        if = { 
+                            limit = { check_variable = { which = "ROBOT_species_points" value < 1 } }
+                            set_variable = { which = "ROBOT_species_points" value = 1 }
+                            else = { change_variable = { which = "ROBOT_species_points" value = 1 } }
+                        }
+                        break = yes
+                    }
+                }
+            }
+        }
+    }
+}
+
+planet_event = {
+    id = zog_building_events.63
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            has_prev_building = "building_synth_engineering_institute"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    has_country_flag = "ROBOT_species_researched"
+                    check_variable = {
+                        which = "ROBOT_species_points"
+                        value > 1
+                    }
+                }
+                change_variable = {
+                    which = "ROBOT_species_points"
+                    value = -1
+                }
+                else = {
+                    if = {
+                        limit = {
+                            has_country_flag = "MACHINE_species_researched"
+                            check_variable = {
+                                which = "MACHINE_species_points"
+                                value > 1
+                            }
+                        }
+                        change_variable = {
+                            which = "MACHINE_species_points"
+                            value = -1
+                        }
+                        else = {
+                            if = {
+                                limit = { check_variable = { which = "DEBT_species_points" value < 1 } }
+                                set_variable = { which = "DEBT_species_points" value = 1 }
+                                else = {
+                                    change_variable = { which = "DEBT_species_points" value = 1 }
                                 }
                             }
                         }

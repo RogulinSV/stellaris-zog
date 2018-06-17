@@ -203,4 +203,46 @@ spriteTypes = {
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
+    spriteType = {
+        name = "GFX_evt_mechanism_research_we"
+        texturefile = "gfx/event_pictures/mechanism_research_we.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_mechanism_research_they"
+        texturefile = "gfx/event_pictures/mechanism_research_they.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_mechanism_abduction"
+        texturefile = "gfx/event_pictures/mechanism_abduction.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_mechanism_research_detected"
+        texturefile = "gfx/event_pictures/mechanism_research_detected.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_species_research_ROBOT"
+        texturefile = "gfx/event_pictures/species_research_ROBOT.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_species_research_MACHINE"
+        texturefile = "gfx/event_pictures/species_research_MACHINE.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_masseffect_discovered"
+        texturefile = "gfx/event_pictures/masseffect_discovered.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
 }

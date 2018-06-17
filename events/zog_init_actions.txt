@@ -54,7 +54,12 @@ country_event = {
         is_ai = no
     }
 
-    immediate = {}
+    immediate = {
+        country_event = {
+            id = zog_init_events.2
+            days = 5
+        }
+    }
 
     option = {
         name = zog_init_events.1.a
@@ -66,5 +71,92 @@ country_event = {
     option = {
         name = zog_init_events.1.b
         custom_tooltip = zog_init_events.1.b.tooltip
+    }
+}
+
+country_event = {
+    id = zog_init_events.2
+    title = zog_init_events.2.title
+    desc = zog_init_events.2.desc
+    picture = GFX_evt_init_boost
+    show_sound = event_administrative_work
+    hide_window = no
+    is_triggered_only = yes
+
+    trigger = {
+        is_ai = no
+    }
+
+    immediate = {
+        country_event = {
+            id = zog_init_events.3
+            days = 5
+        }
+    }
+
+    option = {
+        name = zog_init_events.2.a
+        custom_tooltip = zog_init_events.2.b.tooltip
+        hidden_effect = {
+            add_research_option = "tech_synth_engineering"
+            add_tech_progress = {
+                tech = "tech_synth_engineering"
+                progress = 0.95
+            }
+            add_research_option = "tech_life_engineering"
+            add_tech_progress = {
+                tech = "tech_life_engineering"
+                progress = 0.95
+            }
+        }
+    }
+    option = {
+        name = zog_init_events.2.b
+        custom_tooltip = zog_init_events.2.b.tooltip
+    }
+}
+
+country_event = {
+    id = zog_init_events.3
+    title = zog_init_events.3.title
+    desc = zog_init_events.3.desc
+    picture = GFX_evt_init_boost
+    show_sound = event_administrative_work
+    hide_window = no
+    is_triggered_only = yes
+
+    trigger = {
+        is_ai = no
+    }
+
+    immediate = {}
+
+    option = {
+        name = zog_init_events.3.a
+        custom_tooltip = zog_init_events.3.b.tooltip
+        hidden_effect = {
+            create_fleet = {
+                effect = {
+                    set_owner = root
+                    while = {
+                        count = 17
+                        create_ship = {
+                            name = random
+                            random_existing_design = corvette
+                            graphical_culture = root
+                        }
+                    }
+                    set_location = {
+                        target = root.capital_scope
+                        distance = 30
+                        angle = -90
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = zog_init_events.3.b
+        custom_tooltip = zog_init_events.3.b.tooltip
     }
 }
