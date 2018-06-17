@@ -59,6 +59,8 @@ on_building_complete = {
         zog_building_events.52
         # Building "Institute of Life Engineering"
         zog_building_events.60
+        # Building "Institute of Synth Engineering"
+        zog_building_events.62
         # Building "Atlantis City I-III"
         zog_building_events.100
         # Attack of the "Desert worms" event
@@ -90,6 +92,8 @@ on_building_upgraded = {
         zog_building_events.52
         # Building "Institute of Life Engineering"
         zog_building_events.60
+        # Building "Institute of Synth Engineering"
+        zog_building_events.62
         # Building "Atlantis City I-III"
         zog_building_events.100
         # Attack of the "Desert worms" event
@@ -121,6 +125,8 @@ on_building_demolished = {
         zog_building_events.57
         # Building "Institute of Life Engineering"
         zog_building_events.61
+        # Building "Institute of Synth Engineering"
+        zog_building_events.63
         # Building "Atlantis City I-III"
         zog_building_events.101
         # Attack of the "Desert worms" event
@@ -152,6 +158,8 @@ on_building_replaced = {
         zog_building_events.57
         # Building "Institute of Life Engineering"
         zog_building_events.61
+        # Building "Institute of Synth Engineering"
+        zog_building_events.63
         # Building "Atlantis City I-III"
         zog_building_events.101
         # Attack of the "Desert worms" event
