@@ -1395,3 +1395,104 @@ tech_infinitum_battleship_construction = {
         factor = 60
     }
 }
+
+##########################################
+## Engineering / Voidcraft / Titan Ship
+##########################################
+
+tech_advanced_titan_construction = {
+    # Unlocks "MASSEFFECT_REACTOR_1" utility component
+
+    cost = 15000
+    area = engineering
+    start_tech = no
+    category = { voidcraft }
+    icon = "tech_advanced_titan_construction"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_supreme_voidcraft"
+        "tech_titans"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_advanced_titan_construction_prereqfor.title
+            desc = tech_advanced_titan_construction_prereqfor.desc
+        }
+    }
+
+    modifier = {}
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_finish"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_ethic = "ethic_militarist"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                has_ethic = "ethic_fanatic_militarist"
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_level > 5
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_ethic = "ethic_militarist"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                has_ethic = "ethic_fanatic_militarist"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_finish"
+            }
+        }
+    }
+}
