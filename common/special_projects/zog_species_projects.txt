@@ -1,7 +1,7 @@
 special_project = {
     key = "ZOG_PROJECT_SPECIES_RESEARCH_A"
     cost = {
-        base = 55
+        base = 300
         scaled_modifier = {
             limit = {
                 is_robot_pop = no
@@ -15,23 +15,23 @@ special_project = {
     AI_wait_days = {
         weight = 180
         modifier = {
-            factor = 2.0
+            factor = 1.5
             num_communications > 1
         }
         modifier = {
-            factor = 4.0
+            factor = 2.0
             num_communications > 3
         }
         modifier = {
-            factor = 6.0
+            factor = 2.5
             num_communications > 5
         }
         modifier = {
-            factor = 10.0
+            factor = 3.0
             is_xenophile = yes
         }
         modifier = {
-            factor = 100.0
+            factor = 6.0
             NOT = { has_technology = "tech_alien_life_studies" }
         }
         modifier = {
@@ -56,6 +56,9 @@ special_project = {
     requirements = {}
 
     on_start = {
+        log = "===== ON ZOG_PROJECT_SPECIES_RESEARCH_A START"
+        print_project_scope_a = yes
+
         event_target:species_subject_planet = {
             if = {
                 limit = {
@@ -85,9 +88,8 @@ special_project = {
                         days = 360
                     }
                 }
-                event_target:species_subject_country = {
-                    country_event = { id = zog_species_events.9 }
-                }
+                log = "===== IS POP KILLED"
+
                 if = {
                     limit = {
                         check_variable = {
@@ -106,51 +108,74 @@ special_project = {
                         }
                     }
                 }
+                event_target:species_subject_country = {
+                    country_event = {
+                        id = zog_species_events.13
+                    }
+                }
             }
         }
     }
 
     on_progress_50 = {
-        set_variable = { which = "event_trigger" value = 0 }
+        log = "===== ON ZOG_PROJECT_SPECIES_RESEARCH_A 50%"
+        print_project_scope_a = yes
 
+        set_variable = {
+            which = "event_trigger"
+            value = 0
+        }
         if = {
             limit = {
                 event_target:species_subject_planet = {
                     has_building = "building_extraterrestrial_life_ministry"
                 }
             }
-            change_variable = { which = "event_trigger" value = 1 }
+            change_variable = {
+                which = "event_trigger"
+                value = 1
+            }
             else = {
                 random_list = {
                     50 = {
-                        change_variable = { which = "event_trigger" value = 1 }
+                        change_variable = {
+                            which = "event_trigger"
+                            value = 1
+                        }
                     }
                     50 = {}
                 }
             }
         }
-
         if = {
             limit = {
-                check_variable = { which = "event_trigger" value > 0 }
+                check_variable = {
+                    which = "event_trigger"
+                    value > 0
+                }
             }
+            log = "===== IS EVENT ZOG_SPECIES_EVENTS.38 SHOULD TRIGGER"
             event_target:species_subject_country = {
-                country_event = { id = zog_species_events.25 }
+                country_event = {
+                    id = zog_species_events.38
+                }
             }
-            set_variable = { which = "event_trigger" value = 0 }
+            set_variable = {
+                which = "event_trigger"
+                value = 0
+            }
+            else = {
+                log = "===== IS EVENT ZOG_SPECIES_EVENTS.38 SHOULD NOT TRIGGER"
+            }
         }
     }
 
     # Scope Planet
     on_success = {
-        event_target:species_subject_country = {
-            if = {
-                limit = {
-                    has_country_flag = "IS_species_researched"
-                }
-                remove_country_flag = "IS_species_researched"
-            }
+        log = "===== ON ZOG_PROJECT_SPECIES_RESEARCH_A SUCCESS"
+        print_project_scope_a = yes
 
+        event_target:species_subject_country = {
             switch = {
                 trigger = is_species_class
                 HUM = {
@@ -158,8 +183,7 @@ special_project = {
                         if = {
                             limit = { NOT = { has_country_flag = "HUM_species_researched" } }
                             set_country_flag = "HUM_species_researched"
-                            country_event = { id = zog_species_events.11 }
-                            prev = { set_country_flag = "IS_species_researched" }
+                            country_event = { id = zog_species_events.16 }
                         }
                     }
                 }
@@ -168,8 +192,7 @@ special_project = {
                         if = {
                             limit = { NOT = { has_country_flag = "MAM_species_researched" } }
                             set_country_flag = "MAM_species_researched"
-                            country_event = { id = zog_species_events.12 }
-                            prev = { set_country_flag = "IS_species_researched" }
+                            country_event = { id = zog_species_events.17 }
                         }
                     }
                 }
@@ -178,8 +201,7 @@ special_project = {
                         if = {
                             limit = { NOT = { has_country_flag = "REP_species_researched" } }
                             set_country_flag = "REP_species_researched"
-                            country_event = { id = zog_species_events.13 }
-                            prev = { set_country_flag = "IS_species_researched" }
+                            country_event = { id = zog_species_events.18 }
                         }
                     }
                 }
@@ -188,8 +210,7 @@ special_project = {
                         if = {
                             limit = { NOT = { has_country_flag = "AVI_species_researched" } }
                             set_country_flag = "AVI_species_researched"
-                            country_event = { id = zog_species_events.14 }
-                            prev = { set_country_flag = "IS_species_researched" }
+                            country_event = { id = zog_species_events.19 }
                         }
                     }
                 }
@@ -198,8 +219,7 @@ special_project = {
                         if = {
                             limit = { NOT = { has_country_flag = "ART_species_researched" } }
                             set_country_flag = "ART_species_researched"
-                            country_event = { id = zog_species_events.15 }
-                            prev = { set_country_flag = "IS_species_researched" }
+                            country_event = { id = zog_species_events.20 }
                         }
                     }
                 }
@@ -208,8 +228,7 @@ special_project = {
                         if = {
                             limit = { NOT = { has_country_flag = "FUN_species_researched" } }
                             set_country_flag = "FUN_species_researched"
-                            country_event = { id = zog_species_events.16 }
-                            prev = { set_country_flag = "IS_species_researched" }
+                            country_event = { id = zog_species_events.21 }
                         }
                     }
                 }
@@ -218,8 +237,7 @@ special_project = {
                         if = {
                             limit = { NOT = { has_country_flag = "MOL_species_researched" } }
                             set_country_flag = "MOL_species_researched"
-                            country_event = { id = zog_species_events.17 }
-                            prev = { set_country_flag = "IS_species_researched" }
+                            country_event = { id = zog_species_events.22 }
                         }
                     }
                 }
@@ -228,21 +246,17 @@ special_project = {
                         if = {
                             limit = { NOT = { has_country_flag = "PLANT_species_researched" } }
                             set_country_flag = "PLANT_species_researched"
-                            country_event = { id = zog_species_events.18 }
-                            prev = { set_country_flag = "IS_species_researched" }
+                            country_event = { id = zog_species_events.23 }
                         }
                     }
                 }
-            }
-
-            if = {
-                limit = {
-                    has_country_flag = "IS_species_researched"
-                }
-                remove_country_flag = "IS_species_researched"
-                else = {
+                default = {
+                    log = "===== SPECIES_CLASS IS [is_species_class]"
+                    log = "===== IS EVENT ZOG_SPECIES_EVENTS.15 SHOULD TRIGGER"
                     event_target:species_researcher_country = {
-                        country_event = { id = zog_species_events.10 }
+                        country_event = {
+                            id = zog_species_events.15
+                        }
                     }
                 }
             }
@@ -250,10 +264,10 @@ special_project = {
     }
 
     on_fail = {
-        event_target:species_subject_planet = {
-            log = "===== ZOG_PROJECT_SPECIES_RESEARCH_A: ON FAIL"
-            print_planet_scope_a = yes
+        log = "===== ON ZOG_PROJECT_SPECIES_RESEARCH_A FAIL"
+        print_project_scope_a = yes
 
+        event_target:species_subject_planet = {
             if = {
                 limit = {
                     count_pops = {
@@ -278,6 +292,7 @@ special_project = {
                         species = event_target:species_subject_country.species
                     }
                 }
+                log = "===== IS POP CREATED"
             }
         }
     }
@@ -286,7 +301,7 @@ special_project = {
 special_project = {
     key = "ZOG_PROJECT_SPECIES_RESEARCH_B"
     cost = {
-        base = 55
+        base = 300
         scaled_modifier = {
             limit = {
                 is_robot_pop = no
@@ -300,23 +315,23 @@ special_project = {
     AI_wait_days = {
         weight = 180
         modifier = {
-            factor = 2.0
+            factor = 1.5
             num_communications > 1
         }
         modifier = {
-            factor = 4.0
+            factor = 2.0
             num_communications > 3
         }
         modifier = {
-            factor = 6.0
+            factor = 2.5
             num_communications > 5
         }
         modifier = {
-            factor = 10.0
+            factor = 3.0
             is_xenophile = yes
         }
         modifier = {
-            factor = 100.0
+            factor = 6.0
             NOT = { has_technology = "tech_alien_life_studies" }
         }
         modifier = {
@@ -341,6 +356,9 @@ special_project = {
     requirements = {}
 
     on_start = {
+        log = "===== ON ZOG_PROJECT_SPECIES_RESEARCH_B START"
+        print_project_scope_b = yes
+
         event_target:species_subject_planet = {
             if = {
                 limit = {
@@ -361,6 +379,8 @@ special_project = {
                     }
                     kill_pop = yes
                 }
+                log = "===== IS POP KILLED"
+
                 if = {
                     limit = {
                         NOT = { has_modifier = "scared_population" }
@@ -369,9 +389,6 @@ special_project = {
                         modifier = "scared_population"
                         days = 360
                     }
-                }
-                event_target:species_subject_country = {
-                    country_event = { id = zog_species_events.9 }
                 }
                 if = {
                     limit = {
@@ -391,51 +408,74 @@ special_project = {
                         }
                     }
                 }
+                event_target:species_subject_country = {
+                    country_event = {
+                        id = zog_species_events.13
+                    }
+                }
             }
         }
     }
 
     on_progress_25 = {
-        set_variable = { which = "event_trigger" value = 0 }
+        log = "===== ON ZOG_PROJECT_SPECIES_RESEARCH_B 25%"
+        print_project_scope_b = yes
 
+        set_variable = {
+            which = "event_trigger"
+            value = 0
+        }
         if = {
             limit = {
                 event_target:species_subject_planet = {
                     has_building = "building_extraterrestrial_life_ministry"
                 }
             }
-            change_variable = { which = "event_trigger" value = 1 }
+            change_variable = {
+                which = "event_trigger"
+                value = 1
+            }
             else = {
                 random_list = {
                     50 = {
-                        change_variable = { which = "event_trigger" value = 1 }
+                        change_variable = {
+                            which = "event_trigger"
+                            value = 1
+                        }
                     }
                     50 = {}
                 }
             }
         }
-
         if = {
             limit = {
-                check_variable = { which = "event_trigger" value > 0 }
+                check_variable = {
+                    which = "event_trigger"
+                    value > 0
+                }
             }
+            log = "===== IS EVENT ZOG_SPECIES_EVENTS.38 SHOULD TRIGGER"
             event_target:species_subject_country = {
-                country_event = { id = zog_species_events.25 }
+                country_event = {
+                    id = zog_species_events.38
+                }
             }
-            set_variable = { which = "event_trigger" value = 0 }
+            set_variable = {
+                which = "event_trigger"
+                value = 0
+            }
+            else = {
+                log = "===== IS EVENT ZOG_SPECIES_EVENTS.38 SHOULD NOT TRIGGER"
+            }
         }
     }
 
     # Scope Planet
     on_success = {
-        event_target:species_subject_country = {
-            if = {
-                limit = {
-                    has_country_flag = "IS_species_researched"
-                }
-                remove_country_flag = "IS_species_researched"
-            }
+        log = "===== ON ZOG_PROJECT_SPECIES_RESEARCH_B SUCCESS"
+        print_project_scope_b = yes
 
+        event_target:species_subject_country = {
             switch = {
                 trigger = is_species_class
                 HUM = {
@@ -443,8 +483,7 @@ special_project = {
                         if = {
                             limit = { NOT = { has_country_flag = "HUM_species_researched" } }
                             set_country_flag = "HUM_species_researched"
-                            country_event = { id = zog_species_events.11 }
-                            prev = { set_country_flag = "IS_species_researched" }
+                            country_event = { id = zog_species_events.16 }
                         }
                     }
                 }
@@ -453,8 +492,7 @@ special_project = {
                         if = {
                             limit = { NOT = { has_country_flag = "MAM_species_researched" } }
                             set_country_flag = "MAM_species_researched"
-                            country_event = { id = zog_species_events.12 }
-                            prev = { set_country_flag = "IS_species_researched" }
+                            country_event = { id = zog_species_events.17 }
                         }
                     }
                 }
@@ -463,8 +501,7 @@ special_project = {
                         if = {
                             limit = { NOT = { has_country_flag = "REP_species_researched" } }
                             set_country_flag = "REP_species_researched"
-                            country_event = { id = zog_species_events.13 }
-                            prev = { set_country_flag = "IS_species_researched" }
+                            country_event = { id = zog_species_events.18 }
                         }
                     }
                 }
@@ -473,8 +510,7 @@ special_project = {
                         if = {
                             limit = { NOT = { has_country_flag = "AVI_species_researched" } }
                             set_country_flag = "AVI_species_researched"
-                            country_event = { id = zog_species_events.14 }
-                            prev = { set_country_flag = "IS_species_researched" }
+                            country_event = { id = zog_species_events.19 }
                         }
                     }
                 }
@@ -483,8 +519,7 @@ special_project = {
                         if = {
                             limit = { NOT = { has_country_flag = "ART_species_researched" } }
                             set_country_flag = "ART_species_researched"
-                            country_event = { id = zog_species_events.15 }
-                            prev = { set_country_flag = "IS_species_researched" }
+                            country_event = { id = zog_species_events.20 }
                         }
                     }
                 }
@@ -493,8 +528,7 @@ special_project = {
                         if = {
                             limit = { NOT = { has_country_flag = "FUN_species_researched" } }
                             set_country_flag = "FUN_species_researched"
-                            country_event = { id = zog_species_events.16 }
-                            prev = { set_country_flag = "IS_species_researched" }
+                            country_event = { id = zog_species_events.21 }
                         }
                     }
                 }
@@ -503,8 +537,7 @@ special_project = {
                         if = {
                             limit = { NOT = { has_country_flag = "MOL_species_researched" } }
                             set_country_flag = "MOL_species_researched"
-                            country_event = { id = zog_species_events.17 }
-                            prev = { set_country_flag = "IS_species_researched" }
+                            country_event = { id = zog_species_events.22 }
                         }
                     }
                 }
@@ -513,21 +546,17 @@ special_project = {
                         if = {
                             limit = { NOT = { has_country_flag = "PLANT_species_researched" } }
                             set_country_flag = "PLANT_species_researched"
-                            country_event = { id = zog_species_events.18 }
-                            prev = { set_country_flag = "IS_species_researched" }
+                            country_event = { id = zog_species_events.23 }
                         }
                     }
                 }
-            }
-
-            if = {
-                limit = {
-                    has_country_flag = "IS_species_researched"
-                }
-                remove_country_flag = "IS_species_researched"
-                else = {
+                default = {
+                    log = "===== SPECIES_CLASS IS [is_species_class]"
+                    log = "===== IS EVENT ZOG_SPECIES_EVENTS.15 SHOULD TRIGGER"
                     event_target:species_researcher_country = {
-                        country_event = { id = zog_species_events.10 }
+                        country_event = {
+                            id = zog_species_events.15
+                        }
                     }
                 }
             }
@@ -535,6 +564,9 @@ special_project = {
     }
 
     on_fail = {
+        log = "===== ON ZOG_PROJECT_SPECIES_RESEARCH_B FAIL"
+        print_project_scope_b = yes
+
         event_target:species_subject_planet = {
             if = {
                 limit = {
@@ -560,6 +592,507 @@ special_project = {
                         species = event_target:species_subject_country.species
                     }
                 }
+                log = "===== IS POP CREATED"
+            }
+        }
+    }
+}
+
+special_project = {
+    key = "ZOG_PROJECT_MECHANISM_RESEARCH_A"
+    cost = {
+        base = 55
+        scaled_modifier = {
+            limit = {
+                is_robot_pop = yes
+                is_same_species = event_target:species_subject_country
+            }
+            scope = event_target:species_subject_planet
+            add = -1
+            calc = pop_count
+        }
+    }
+    AI_wait_days = {
+        weight = 180
+        modifier = {
+            factor = 1.5
+            num_communications > 1
+        }
+        modifier = {
+            factor = 2.0
+            num_communications > 3
+        }
+        modifier = {
+            factor = 2.5
+            num_communications > 5
+        }
+        modifier = {
+            factor = 3.0
+            is_xenophile = yes
+        }
+        modifier = {
+            factor = 6.0
+            NOT = { has_technology = "tech_robotic_workers" }
+        }
+        modifier = {
+            factor = 0.75
+            has_technology = "tech_droid_workers"
+        }
+        modifier = {
+            factor = 0.5
+            has_technology = "tech_synthetic_workers"
+        }
+        modifier = {
+            factor = 0.25
+            has_technology = "tech_synthetic_leaders"
+        }
+        modifier = {
+            factor = 0.15
+            is_technocratic_regime = yes
+        }
+    }
+    days_to_research = 0
+    timelimit = -1
+    tech_department = engineering_technology
+    picture = GFX_evt_mechanism_research_we
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = planet_event
+    requirements = {}
+
+    on_start = {
+        log = "===== ON ZOG_PROJECT_MECHANISM_RESEARCH_A START"
+        print_project_scope_c = yes
+
+        event_target:species_subject_planet = {
+            if = {
+                limit = {
+                    count_pops = {
+                        count > 1
+                        limit = {
+                            is_growing = no
+                            is_robot_pop = yes
+                            is_same_species = event_target:species_subject_country
+                        }
+                    }
+                }
+                random_pop = {
+                    limit = {
+                        is_growing = no
+                        is_robot_pop = yes
+                        is_same_species = event_target:species_subject_country
+                    }
+                    kill_pop = yes
+                }
+                log = "===== IS POP KILLED"
+
+                if = {
+                    limit = {
+                        NOT = { has_modifier = "scared_population" }
+                    }
+                    add_modifier = {
+                        modifier = "scared_population"
+                        days = 360
+                    }
+                }
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = "planet_pop_abduction"
+                            value > 0
+                        }
+                    }
+                    change_variable = {
+                        which = "planet_pop_abduction"
+                        value = 1
+                    }
+                    else = {
+                        set_variable = {
+                            which = "planet_pop_abduction"
+                            value = 1
+                        }
+                    }
+                }
+                event_target:species_subject_country = {
+                    country_event = {
+                        id = zog_species_events.14
+                    }
+                }
+            }
+        }
+    }
+
+    on_progress_50 = {
+        log = "===== ON ZOG_PROJECT_MECHANISM_RESEARCH_A 50%"
+        print_project_scope_c = yes
+
+        set_variable = {
+            which = "event_trigger"
+            value = 0
+        }
+        if = {
+            limit = {
+                event_target:species_subject_planet = {
+                    has_building = "building_synthetic_life_ministry"
+                }
+            }
+            change_variable = {
+                which = "event_trigger"
+                value = 1
+            }
+            else = {
+                random_list = {
+                    50 = {
+                        change_variable = {
+                            which = "event_trigger"
+                            value = 1
+                        }
+                    }
+                    50 = {}
+                }
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "event_trigger"
+                    value > 0
+                }
+            }
+            log = "===== IS EVENT ZOG_SPECIES_EVENTS.40 SHOULD TRIGGER"
+            event_target:species_subject_country = {
+                country_event = {
+                    id = zog_species_events.40
+                }
+            }
+            set_variable = {
+                which = "event_trigger"
+                value = 0
+            }
+            else = {
+                log = "===== IS EVENT ZOG_SPECIES_EVENTS.40 SHOULD NOT TRIGGER"
+            }
+        }
+    }
+
+    # Scope Planet
+    on_success = {
+        log = "===== ON ZOG_PROJECT_MECHANISM_RESEARCH_A SUCCESS"
+        print_project_scope_c = yes
+
+        event_target:species_subject_country = {
+            switch = {
+                trigger = is_species_class
+                ROBOT = {
+                    event_target:species_researcher_country = {
+                        if = {
+                            limit = { NOT = { has_country_flag = "ROBOT_species_researched" } }
+                            set_country_flag = "ROBOT_species_researched"
+                            country_event = { id = zog_species_events.24 }
+                        }
+                    }
+                }
+                MACHINE = {
+                    event_target:species_researcher_country = {
+                        if = {
+                            limit = { NOT = { has_country_flag = "MACHINE_species_researched" } }
+                            set_country_flag = "MACHINE_species_researched"
+                            country_event = { id = zog_species_events.25 }
+                        }
+                    }
+                }
+                default = {
+                    log = "===== IS EVENT ZOG_SPECIES_EVENTS.15 SHOULD TRIGGER"
+                    event_target:species_researcher_country = {
+                        country_event = {
+                            id = zog_species_events.15
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    on_fail = {
+        log = "===== ON ZOG_PROJECT_MECHANISM_RESEARCH_A FAIL"
+        print_project_scope_c = yes
+
+        event_target:species_subject_planet = {
+            if = {
+                limit = {
+                    count_pops = {
+                        count > 0
+                        limit = {
+                            is_growing = no
+                            is_robot_pop = yes
+                            is_same_species = event_target:species_subject_country
+                        }
+                    }
+                    count_tile = {
+                        count > 0
+                        limit = {
+                            has_pop = no
+                            has_blocker = no
+                            has_building = no
+                        }
+                    }
+                }
+                best_tile_for_pop = {
+                    create_pop = {
+                        species = event_target:species_subject_country.species
+                    }
+                }
+                log = "===== IS POP CREATED"
+            }
+        }
+    }
+}
+
+special_project = {
+    key = "ZOG_PROJECT_MECHANISM_RESEARCH_B"
+    cost = {
+        base = 55
+        scaled_modifier = {
+            limit = {
+                is_robot_pop = yes
+                is_same_species = event_target:species_subject_country
+            }
+            scope = event_target:species_subject_planet
+            add = -1
+            calc = pop_count
+        }
+    }
+    AI_wait_days = {
+        weight = 180
+        modifier = {
+            factor = 1.5
+            num_communications > 1
+        }
+        modifier = {
+            factor = 2.0
+            num_communications > 3
+        }
+        modifier = {
+            factor = 2.5
+            num_communications > 5
+        }
+        modifier = {
+            factor = 3.0
+            is_xenophile = yes
+        }
+        modifier = {
+            factor = 6.0
+            NOT = { has_technology = "tech_robotic_workers" }
+        }
+        modifier = {
+            factor = 0.75
+            has_technology = "tech_droid_workers"
+        }
+        modifier = {
+            factor = 0.5
+            has_technology = "tech_synthetic_workers"
+        }
+        modifier = {
+            factor = 0.25
+            has_technology = "tech_synthetic_leaders"
+        }
+        modifier = {
+            factor = 0.15
+            is_technocratic_regime = yes
+        }
+    }
+    days_to_research = 0
+    timelimit = -1
+    tech_department = engineering_technology
+    picture = GFX_evt_mechanism_research_we
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = planet_event
+    requirements = {}
+
+    on_start = {
+        log = "===== ON ZOG_PROJECT_MECHANISM_RESEARCH_B START"
+        print_project_scope_d = yes
+
+        event_target:species_subject_planet = {
+            if = {
+                limit = {
+                    count_pops = {
+                        count > 1
+                        limit = {
+                            is_growing = no
+                            is_robot_pop = yes
+                            is_same_species = event_target:species_subject_country
+                        }
+                    }
+                }
+                random_pop = {
+                    limit = {
+                        is_growing = no
+                        is_robot_pop = yes
+                        is_same_species = event_target:species_subject_country
+                    }
+                    kill_pop = yes
+                }
+                log = "===== IS POP KILLED"
+
+                if = {
+                    limit = {
+                        NOT = { has_modifier = "scared_population" }
+                    }
+                    add_modifier = {
+                        modifier = "scared_population"
+                        days = 360
+                    }
+                }
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = "planet_pop_abduction"
+                            value > 0
+                        }
+                    }
+                    change_variable = {
+                        which = "planet_pop_abduction"
+                        value = 1
+                    }
+                    else = {
+                        set_variable = {
+                            which = "planet_pop_abduction"
+                            value = 1
+                        }
+                    }
+                }
+                event_target:species_subject_country = {
+                    country_event = {
+                        id = zog_species_events.14
+                    }
+                }
+            }
+        }
+    }
+
+    on_progress_25 = {
+        log = "===== ON ZOG_PROJECT_MECHANISM_RESEARCH_B 25%"
+        print_project_scope_d = yes
+
+        set_variable = {
+            which = "event_trigger"
+            value = 0
+        }
+        if = {
+            limit = {
+                event_target:species_subject_planet = {
+                    has_building = "building_synthetic_life_ministry"
+                }
+            }
+            change_variable = {
+                which = "event_trigger"
+                value = 1
+            }
+            else = {
+                random_list = {
+                    50 = {
+                        change_variable = {
+                            which = "event_trigger"
+                            value = 1
+                        }
+                    }
+                    50 = {}
+                }
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "event_trigger"
+                    value > 0
+                }
+            }
+            log = "===== IS EVENT ZOG_SPECIES_EVENTS.40 SHOULD TRIGGER"
+            event_target:species_subject_country = {
+                country_event = {
+                    id = zog_species_events.40
+                }
+            }
+            set_variable = {
+                which = "event_trigger"
+                value = 0
+            }
+            else = {
+                log = "===== IS EVENT ZOG_SPECIES_EVENTS.40 SHOULD NOT TRIGGER"
+            }
+        }
+    }
+
+    # Scope Planet
+    on_success = {
+        log = "===== ON ZOG_PROJECT_MECHANISM_RESEARCH_B SUCCESS"
+        print_project_scope_d = yes
+
+        event_target:species_subject_country = {
+            switch = {
+                trigger = is_species_class
+                ROBOT = {
+                    event_target:species_researcher_country = {
+                        if = {
+                            limit = { NOT = { has_country_flag = "ROBOT_species_researched" } }
+                            set_country_flag = "ROBOT_species_researched"
+                            country_event = { id = zog_species_events.24 }
+                        }
+                    }
+                }
+                MACHINE = {
+                    event_target:species_researcher_country = {
+                        if = {
+                            limit = { NOT = { has_country_flag = "MACHINE_species_researched" } }
+                            set_country_flag = "MACHINE_species_researched"
+                            country_event = { id = zog_species_events.25 }
+                        }
+                    }
+                }
+                default = {
+                    log = "===== IS EVENT ZOG_SPECIES_EVENTS.15 SHOULD TRIGGER"
+                    event_target:species_researcher_country = {
+                        country_event = {
+                            id = zog_species_events.15
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    on_fail = {
+        log = "===== ON ZOG_PROJECT_MECHANISM_RESEARCH_B FAIL"
+        print_project_scope_d = yes
+
+        event_target:species_subject_planet = {
+            if = {
+                limit = {
+                    count_pops = {
+                        count > 0
+                        limit = {
+                            is_growing = no
+                            is_robot_pop = yes
+                            is_same_species = event_target:species_subject_country
+                        }
+                    }
+                    count_tile = {
+                        count > 0
+                        limit = {
+                            has_pop = no
+                            has_blocker = no
+                            has_building = no
+                        }
+                    }
+                }
+                best_tile_for_pop = {
+                    create_pop = {
+                        species = event_target:species_subject_country.species
+                    }
+                }
+                log = "===== IS POP CREATED"
             }
         }
     }

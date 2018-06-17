@@ -245,6 +245,8 @@ on_post_communications_established = {
         # Species research
         zog_species_events.1
         zog_species_events.2
+        zog_species_events.3
+        zog_species_events.4
     }
 }
 

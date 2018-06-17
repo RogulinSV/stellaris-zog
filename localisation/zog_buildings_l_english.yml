@@ -2,8 +2,12 @@
     # Buildings
     building_life_engineering_institute: ""
     building_life_engineering_institute_desc: ""
+    building_synth_engineering_institute: ""
+    building_synth_engineering_institute_desc: ""
     building_extraterrestrial_life_ministry: ""
     building_extraterrestrial_life_ministry_desc: ""
+    building_synthetic_life_ministry:0 ""
+    building_synthetic_life_ministry_desc:0 ""
     building_business_city_01: ""
     building_business_city_01_desc: ""
     building_business_city_02: ""

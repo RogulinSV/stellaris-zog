@@ -26,15 +26,18 @@ country_event = {
                 has_country_flag = "engineered_species"
                 is_same_species_class = root
             }
-            NOT = {
-                OR = {
-                    is_species_class = ROBOT
-                    is_species_class = MACHINE
-                }
+            NOR = {
+                is_species_class = ROBOT
+                is_species_class = MACHINE
             }
             OR = {
                 is_country_type = default
                 is_country_type = primitive
+            }
+            NAND = {
+                is_subject = yes
+                exists = overlord
+                overlord = { is_same_value = root }
             }
         }
     }
@@ -44,9 +47,6 @@ country_event = {
 
         from = {
             save_event_target_as = "species_subject_country"
-
-            log = "===== Contect established A"
-            print_country_scope_a = yes
 
             random_owned_planet = {
                 limit = {
@@ -60,7 +60,6 @@ country_event = {
                     }
                 }
 
-                log = "===== Planet found A"
                 save_event_target_as = "species_subject_planet"
 
                 random_list = {
@@ -152,6 +151,11 @@ country_event = {
             is_country_type = default
             is_country_type = primitive
         }
+        NAND = {
+            is_subject = yes
+            exists = overlord
+            overlord = { is_same_value = from }
+        }
         from = {
             NOR = {
                 has_country_flag = "engineered_species"
@@ -171,9 +175,6 @@ country_event = {
         }
         save_event_target_as = "species_subject_country"
 
-        log = "===== Contect established B"
-        print_country_scope_b = yes
-
         random_owned_planet = {
             limit = {
                 count_pops = {
@@ -186,7 +187,6 @@ country_event = {
                 }
             }
 
-            log = "===== Planet found B"
             save_event_target_as = "species_subject_planet"
 
             random_list = {
@@ -255,6 +255,259 @@ country_event = {
     }
 }
 
+#############################################
+### "Mechanism researching" on communication
+#############################################
+
+# This = Country which established the communications
+# From = Country which communications were established with
+country_event = {
+    id = zog_species_events.3
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        NOR = {
+            has_country_flag = "engineered_species"
+            is_species_class = ROBOT
+            is_species_class = MACHINE
+        }
+        OR = {
+            is_country_type = default
+            is_country_type = fallen_empire
+            is_country_type = awakened_fallen_empire
+        }
+        from = {
+            NOT = {
+                has_country_flag = "engineered_species"
+            }
+            OR = {
+                is_species_class = ROBOT
+                is_species_class = MACHINE
+            }
+            OR = {
+                is_country_type = default
+                is_country_type = primitive
+            }
+            NAND = {
+                is_subject = yes
+                exists = overlord
+                overlord = { is_same_value = root }
+            }
+        }
+    }
+
+    immediate = {
+        save_event_target_as = "species_researcher_country"
+
+        from = {
+            save_event_target_as = "species_subject_country"
+
+            random_owned_planet = {
+                limit = {
+                    count_pops = {
+                        count > 0
+                        limit = {
+                            is_growing = no
+                            is_robot_pop = yes
+                            is_same_species = prev
+                        }
+                    }
+                }
+
+                save_event_target_as = "species_subject_planet"
+
+                random_list = {
+                    5 = {
+                        planet_event = { id = zog_species_events.9 days = 33 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.9 days = 66 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.9 days = 99 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.9 days = 121 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.9 days = 155 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.9 days = 191 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.9 days = 220 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.9 days = 262 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.9 days = 299 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.9 days = 334 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.9 days = 369 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.9 days = 398 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.9 days = 428 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.9 days = 451 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.9 days = 489 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.9 days = 505 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.9 days = 537 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.9 days = 562 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.9 days = 597 }
+                    }
+                    5 = {
+                        planet_event = { id = zog_species_events.9 days = 611 }
+                    }
+                }
+            }
+        }
+    }
+}
+
+# This = Country which established the communications
+# From = Country which communications were established with
+country_event = {
+    id = zog_species_events.4
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = {
+            has_country_flag = "engineered_species"
+        }
+        OR = {
+            is_species_class = ROBOT
+            is_species_class = MACHINE
+        }
+        OR = {
+            is_country_type = default
+            is_country_type = primitive
+        }
+        NAND = {
+            is_subject = yes
+            exists = overlord
+            overlord = { is_same_value = from }
+        }
+        from = {
+            NOR = {
+                has_country_flag = "engineered_species"
+                is_species_class = ROBOT
+                is_species_class = MACHINE
+            }
+            OR = {
+                is_country_type = default
+                is_country_type = fallen_empire
+                is_country_type = awakened_fallen_empire
+            }
+        }
+    }
+
+    immediate = {
+        from = {
+            save_event_target_as = "species_researcher_country"
+        }
+        save_event_target_as = "species_subject_country"
+
+        random_owned_planet = {
+            limit = {
+                count_pops = {
+                    count > 0
+                    limit = {
+                        is_growing = no
+                        is_robot_pop = yes
+                        is_same_species = prev
+                    }
+                }
+            }
+
+            save_event_target_as = "species_subject_planet"
+
+            random_list = {
+                5 = {
+                    planet_event = { id = zog_species_events.11 days = 67 random = 20 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.11 days = 122 random = 30 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.11 days = 189 random = 40 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.11 days = 251 random = 50 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.11 days = 319 random = 60 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.11 days = 386 random = 70 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.11 days = 445 random = 80 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.11 days = 503 random = 90 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.11 days = 578 random = 100 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.11 days = 652 random = 110 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.11 days = 713 random = 120 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.11 days = 770 random = 130 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.11 days = 825 random = 140 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.11 days = 888 random = 150 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.11 days = 937 random = 160 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.11 days = 1001 random = 170 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.11 days = 1062 random = 180 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.11 days = 1112 random = 190 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.11 days = 1181 random = 200 }
+                }
+                5 = {
+                    planet_event = { id = zog_species_events.11 days = 1249 random = 210 }
+                }
+            }
+        }
+    }
+}
+
 ###########################################
 ### "Species researching" planet project
 ###########################################
@@ -278,9 +531,6 @@ planet_event = {
     }
 
     immediate = {
-        log = "PROJECT ZOG_PROJECT_SPECIES_RESEARCH_A BEGINS"
-        print_country_scope_a = yes
-
         enable_special_project = {
             name = "ZOG_PROJECT_SPECIES_RESEARCH_A"
             location = this
@@ -348,9 +598,6 @@ planet_event = {
     }
 
     immediate = {
-        log = "PROJECT ZOG_PROJECT_SPECIES_RESEARCH_B BEGINS"
-        print_country_scope_a = yes
-
         enable_special_project = {
             name = "ZOG_PROJECT_SPECIES_RESEARCH_B"
             location = this
@@ -399,26 +646,37 @@ country_event = {
     }
 }
 
-##########################################
-### "Species researching" pop abduction
-##########################################
+#############################################
+### "Mechanism researching" planet project
+#############################################
 
-country_event = {
+planet_event = {
     id = zog_species_events.9
-    title = zog_species_events.9.title
-    desc = zog_species_events.9.desc
-    picture = GFX_evt_species_abduction
-    show_sound = event_red_alert
-    location = event_target:species_subject_planet
+    hide_window = yes
     is_triggered_only = yes
-    hide_window = no
 
-    trigger = {}
-    immediate = {}
+    trigger = {
+        exists = event_target:species_researcher_country
+        exists = event_target:species_subject_country
+        count_pops = {
+            count > 0
+            limit = {
+                is_growing = no
+                is_robot_pop = yes
+                is_same_species = event_target:species_subject_country
+            }
+        }
+    }
 
-    option = {
-        name = zog_species_events.9.a
-        custom_tooltip = zog_species_events.9.a.tooltip
+    immediate = {
+        enable_special_project = {
+            name = "ZOG_PROJECT_MECHANISM_RESEARCH_A"
+            location = this
+            owner = event_target:species_researcher_country
+        }
+        event_target:species_researcher_country = {
+            country_event = { id = zog_species_events.10 days = 5 }
+        }
     }
 }
 
@@ -426,41 +684,66 @@ country_event = {
     id = zog_species_events.10
     title = zog_species_events.10.title
     desc = zog_species_events.10.desc
-    picture = GFX_evt_species_research_NONE
-    show_sound = event_activating_unknown_technology
+    picture = GFX_evt_mechanism_research_we
+    show_sound = event_laboratory_sound
+    location = event_target:species_subject_planet
     is_triggered_only = yes
+    hide_window = no
 
     trigger = {}
-
-    immediate = {
-        add_society_research = 200
-    }
 
     option = {
         name = zog_species_events.10.a
         custom_tooltip = zog_species_events.10.a.tooltip
+        ai_chance = {
+            factor = 100
+        }
+    }
+    option = {
+        name = zog_species_events.10.b
+        custom_tooltip = zog_species_events.10.b.tooltip
+        trigger = {
+            has_special_project = "ZOG_PROJECT_MECHANISM_RESEARCH_A"
+        }
+        ai_chance = {
+            factor = 25
+        }
+        hidden_effect = {
+            abort_special_project = {
+                type = "ZOG_PROJECT_MECHANISM_RESEARCH_A"
+                location = event_target:species_subject_planet
+            }
+        }
     }
 }
 
-country_event = {
+planet_event = {
     id = zog_species_events.11
-    title = zog_species_events.11.title
-    desc = zog_species_events.11.desc
-    picture = GFX_evt_species_research_HUM
-    show_sound = event_activating_unknown_technology
+    hide_window = yes
     is_triggered_only = yes
 
     trigger = {
-        has_country_flag = "HUM_species_researched"
+        exists = event_target:species_researcher_country
+        exists = event_target:species_subject_country
+        count_pops = {
+            count > 0
+            limit = {
+                is_growing = no
+                is_robot_pop = yes
+                is_same_species = event_target:species_subject_country
+            }
+        }
     }
 
     immediate = {
-        add_society_research = 100
-    }
-
-    option = {
-        name = zog_species_events.11.a
-        custom_tooltip = zog_species_events.11.a.tooltip
+        enable_special_project = {
+            name = "ZOG_PROJECT_MECHANISM_RESEARCH_B"
+            location = this
+            owner = event_target:species_researcher_country
+        }
+        event_target:species_researcher_country = {
+            country_event = { id = zog_species_events.12 days = 5 }
+        }
     }
 }
 
@@ -468,38 +751,58 @@ country_event = {
     id = zog_species_events.12
     title = zog_species_events.12.title
     desc = zog_species_events.12.desc
-    picture = GFX_evt_species_research_MAM
-    show_sound = event_activating_unknown_technology
+    picture = GFX_evt_mechanism_research_they
+    show_sound = event_laboratory_sound
+    location = event_target:species_subject_planet
     is_triggered_only = yes
+    hide_window = no
 
-    trigger = {
-        has_country_flag = "MAM_species_researched"
-    }
-
-    immediate = {
-        add_society_research = 100
-    }
+    trigger = {}
 
     option = {
         name = zog_species_events.12.a
         custom_tooltip = zog_species_events.12.a.tooltip
+        ai_chance = {
+            factor = 100
+        }
+    }
+    option = {
+        name = zog_species_events.12.b
+        custom_tooltip = zog_species_events.12.b.tooltip
+        trigger = {
+            has_special_project = "ZOG_PROJECT_MECHANISM_RESEARCH_B"
+        }
+        ai_chance = {
+            factor = 25
+        }
+        hidden_effect = {
+            abort_special_project = {
+                type = "ZOG_PROJECT_MECHANISM_RESEARCH_B"
+                location = event_target:species_subject_planet
+            }
+        }
     }
 }
+
+##########################################
+### "Species researching" pop abduction
+##########################################
 
 country_event = {
     id = zog_species_events.13
     title = zog_species_events.13.title
     desc = zog_species_events.13.desc
-    picture = GFX_evt_species_research_REP
-    show_sound = event_activating_unknown_technology
+    picture = GFX_evt_species_abduction
+    show_sound = event_red_alert
+    location = event_target:species_subject_planet
     is_triggered_only = yes
+    hide_window = no
 
-    trigger = {
-        has_country_flag = "REP_species_researched"
-    }
+    trigger = {}
 
     immediate = {
-        add_society_research = 100
+        log = "===== ON SPECIES RESEARCHING POP ABDUCTION EVENT"
+        print_country_scope_a = yes
     }
 
     option = {
@@ -508,20 +811,25 @@ country_event = {
     }
 }
 
+############################################
+### "Mechanism researching" pop abduction
+############################################
+
 country_event = {
     id = zog_species_events.14
     title = zog_species_events.14.title
     desc = zog_species_events.14.desc
-    picture = GFX_evt_species_research_AVI
-    show_sound = event_activating_unknown_technology
+    picture = GFX_evt_mechanism_abduction
+    show_sound = event_red_alert
+    location = event_target:species_subject_planet
     is_triggered_only = yes
+    hide_window = no
 
-    trigger = {
-        has_country_flag = "AVI_species_researched"
-    }
+    trigger = {}
 
     immediate = {
-        add_society_research = 100
+        log = "===== ON MECHANISM RESEARCHING POP ABDUCTION EVENT"
+        print_country_scope_b = yes
     }
 
     option = {
@@ -534,16 +842,14 @@ country_event = {
     id = zog_species_events.15
     title = zog_species_events.15.title
     desc = zog_species_events.15.desc
-    picture = GFX_evt_species_research_ART
+    picture = GFX_evt_species_research_NONE
     show_sound = event_activating_unknown_technology
     is_triggered_only = yes
 
-    trigger = {
-        has_country_flag = "ART_species_researched"
-    }
+    trigger = {}
 
     immediate = {
-        add_society_research = 100
+        add_society_research = 200
     }
 
     option = {
@@ -556,12 +862,12 @@ country_event = {
     id = zog_species_events.16
     title = zog_species_events.16.title
     desc = zog_species_events.16.desc
-    picture = GFX_evt_species_research_FUN
+    picture = GFX_evt_species_research_HUM
     show_sound = event_activating_unknown_technology
     is_triggered_only = yes
 
     trigger = {
-        has_country_flag = "FUN_species_researched"
+        has_country_flag = "HUM_species_researched"
     }
 
     immediate = {
@@ -578,12 +884,12 @@ country_event = {
     id = zog_species_events.17
     title = zog_species_events.17.title
     desc = zog_species_events.17.desc
-    picture = GFX_evt_species_research_MOL
+    picture = GFX_evt_species_research_MAM
     show_sound = event_activating_unknown_technology
     is_triggered_only = yes
 
     trigger = {
-        has_country_flag = "MOL_species_researched"
+        has_country_flag = "MAM_species_researched"
     }
 
     immediate = {
@@ -600,12 +906,12 @@ country_event = {
     id = zog_species_events.18
     title = zog_species_events.18.title
     desc = zog_species_events.18.desc
-    picture = GFX_evt_species_research_PLANT
+    picture = GFX_evt_species_research_REP
     show_sound = event_activating_unknown_technology
     is_triggered_only = yes
 
     trigger = {
-        has_country_flag = "PLANT_species_researched"
+        has_country_flag = "REP_species_researched"
     }
 
     immediate = {
@@ -619,9 +925,169 @@ country_event = {
 }
 
 country_event = {
+    id = zog_species_events.19
+    title = zog_species_events.19.title
+    desc = zog_species_events.19.desc
+    picture = GFX_evt_species_research_AVI
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = "AVI_species_researched"
+    }
+
+    immediate = {
+        add_society_research = 100
+    }
+
+    option = {
+        name = zog_species_events.19.a
+        custom_tooltip = zog_species_events.19.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_species_events.20
+    title = zog_species_events.20.title
+    desc = zog_species_events.20.desc
+    picture = GFX_evt_species_research_ART
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = "ART_species_researched"
+    }
+
+    immediate = {
+        add_society_research = 100
+    }
+
+    option = {
+        name = zog_species_events.20.a
+        custom_tooltip = zog_species_events.20.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_species_events.21
+    title = zog_species_events.21.title
+    desc = zog_species_events.21.desc
+    picture = GFX_evt_species_research_FUN
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = "FUN_species_researched"
+    }
+
+    immediate = {
+        add_society_research = 100
+    }
+
+    option = {
+        name = zog_species_events.21.a
+        custom_tooltip = zog_species_events.21.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_species_events.22
+    title = zog_species_events.22.title
+    desc = zog_species_events.22.desc
+    picture = GFX_evt_species_research_MOL
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = "MOL_species_researched"
+    }
+
+    immediate = {
+        add_society_research = 100
+    }
+
+    option = {
+        name = zog_species_events.22.a
+        custom_tooltip = zog_species_events.22.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_species_events.23
+    title = zog_species_events.23.title
+    desc = zog_species_events.23.desc
+    picture = GFX_evt_species_research_PLANT
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = "PLANT_species_researched"
+    }
+
+    immediate = {
+        add_society_research = 100
+    }
+
+    option = {
+        name = zog_species_events.23.a
+        custom_tooltip = zog_species_events.23.a.tooltip
+    }
+}
+
+country_event = {
+    id = zog_species_events.24
+    title = zog_species_events.24.title
+    desc = zog_species_events.24.desc
+    picture = GFX_evt_species_research_ROBOT
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = "ROBOT_species_researched"
+    }
+
+    immediate = {
+        add_engineering_research = 100
+        add_physics_research = 50
+    }
+
+    option = {
+        name = zog_species_events.24.a
+        custom_tooltip = zog_species_events.24.a.tooltip
+    }
+}
+
+country_event = {
     id = zog_species_events.25
-    title = zog_species_events.25.title
-    desc = zog_species_events.25.desc
+    title = zog_species_events.24.title
+    desc = zog_species_events.24.desc
+    picture = GFX_evt_species_research_MACHINE
+    show_sound = event_activating_unknown_technology
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = "MACHINE_species_researched"
+    }
+
+    immediate = {
+        add_engineering_research = 100
+        add_physics_research = 50
+    }
+
+    option = {
+        name = zog_species_events.25.a
+        custom_tooltip = zog_species_events.25.a.tooltip
+    }
+}
+
+#####################################
+### "Species researching" detected
+#####################################
+
+country_event = {
+    id = zog_species_events.38
+    title = zog_species_events.38.title
+    desc = zog_species_events.38.desc
     picture = GFX_evt_species_research_detected
     show_sound = event_administrative_work
     is_triggered_only = yes
@@ -630,11 +1096,14 @@ country_event = {
         exists = event_target:species_researcher_country
     }
 
-    immediate = {}
+    immediate = {
+        log = "===== ON SPECIES RESEARCHING DETECTED EVENT"
+        print_country_scope_a = yes
+    }
 
     option = {
-        name = zog_species_events.25.a
-        custom_tooltip = zog_species_events.25.a.tooltip
+        name = zog_species_events.38.a
+        custom_tooltip = zog_species_events.38.a.tooltip
         trigger = {}
         ai_chance = {
             factor = 100
@@ -650,7 +1119,7 @@ country_event = {
                     variable = { type = name localization = COUNTRY2 scope = event_target:species_subject_country }
                 }
                 country_event = {
-                    id = zog_species_events.30
+                    id = zog_species_events.42
                     days = 20
                     random = 10
                 }
@@ -658,8 +1127,8 @@ country_event = {
         }
     }
     option = {
-        name = zog_species_events.25.b
-        custom_tooltip = zog_species_events.25.b.tooltip
+        name = zog_species_events.38.b
+        custom_tooltip = zog_species_events.38.b.tooltip
         trigger = {
             is_country_type = default
             OR = {
@@ -686,106 +1155,113 @@ country_event = {
             factor = 50
         }
         hidden_effect = {
-            if = {
+            country_event = { id = zog_species_events.39 days = 10 }
+        }
+    }
+}
+
+country_event = {
+    id = zog_species_events.39
+    title = zog_species_events.39.title
+    desc = zog_species_events.39.desc
+    picture = GFX_evt_species_research_separatists
+    show_sound = event_planetary_riot
+    is_triggered_only = yes
+
+    trigger = {
+        exists = capital_scope
+        OR = {
+            has_ethic = ethic_fanatic_militarist
+            has_ethic = ethic_fanatic_authoritarian
+            is_xenophobe = yes
+        }
+    }
+
+    immediate = {
+        capital_scope = {
+            closest_system = {
                 limit = {
-                    exists = capital_scope
-                    OR = {
-                        has_ethic = ethic_fanatic_militarist
-                        has_ethic = ethic_fanatic_authoritarian
-                        is_xenophobe = yes
+                    NOR = {
+                        has_star_flag = hostile_system
+                        has_star_flag = enclave
+                        has_star_flag = guardian
+                        exists = space_owner
+                        any_ship_in_system = {
+                            is_ship_size = constructor
+                            is_constructing = starbase
+                        }
                     }
                 }
 
-                capital_scope = {
-                    closest_system = {
-                        limit = {
-                            NOR = {
-                                has_star_flag = hostile_system
-                                has_star_flag = enclave
-                                has_star_flag = guardian
-                                exists = space_owner
-                                any_ship_in_system = {
-                                    is_ship_size = constructor
-                                    is_constructing = starbase
-                                }
+                random_system_planet = {
+                    limit = {
+                        is_star = no
+                    }
+
+                    create_country = {
+                        name = "NAME_Pirates"
+                        type = pirate
+                        species = root.species
+                        name_list = "PRT1"
+                        flag = {
+                            background = {
+                                category = "backgrounds"
+                                file = "00_solid.dds"
+                            }
+                            colors ={
+                                "black"
+                                "black"
+                                "null"
+                                "null"
                             }
                         }
+                    }
 
-                        random_system_planet = {
-                            limit = {
-                                is_star = no
-                            }
+                    last_created_country = {
+                        set_name = random
+                        randomize_flag_symbol = "pirate"
 
-                            create_country = {
-                                name = "NAME_Pirates"
-                                type = pirate
-                                species = root.species
-                                name_list = "PRT1"
-                                flag = {
-                                    background = {
-                                        category = "backgrounds"
-                                        file = "00_solid.dds"
-                                    }
-                                    colors ={
-                                        "black"
-                                        "black"
-                                        "null"
-                                        "null"
-                                    }
-                                }
-                            }
-
-                            last_created_country = {
-                                set_name = random
-                                randomize_flag_symbol = "pirate"
-
-                                create_fleet = {
-                                    name = "NAME_Pirate_Station"
-                                    effect = {
-                                        set_owner = prev
-                                        create_ship = {
-                                            name = random
-                                            design = "NAME_Pirate_Nest"
-                                            graphical_culture = "pirate_01"
-                                        }
-                                        set_location = prevprev
-                                    }
-                                }
-                                create_leader = {
-                                    type = admiral
-                                    species = root.species
+                        create_fleet = {
+                            name = "NAME_Pirate_Station"
+                            effect = {
+                                set_owner = prev
+                                create_ship = {
                                     name = random
-                                    skill = 3
-                                    traits = {
-                                        trait = random_trait
-                                    }
+                                    design = "NAME_Pirate_Nest"
+                                    graphical_culture = "pirate_01"
                                 }
-                                create_fleet = {
-                                    name = "NAME_Pirate_Fleet"
-                                    effect = {
-                                        set_owner = prev
-                                        create_ship_design = {
-                                            design = "NAME_Reaver"
-                                        }
-                                        while = {
-                                            count = 29
-                                            create_ship = {
-                                                name = random
-                                                design = last_created_design
-                                                graphical_culture = "pirate_01"
-                                            }
-                                        }
-                                        assign_leader = last_created_leader
-                                        set_location = prevprev
-                                        set_fleet_stance = aggressive
-                                        set_aggro_range_measure_from = self
-                                        set_aggro_range = 150
-                                    }
-                                }
+                                set_location = prevprev
                             }
-
-                            root = {
-                                country_event = { id = zog_species_events.26 days = 5 }
+                        }
+                        create_leader = {
+                            type = admiral
+                            species = root.species
+                            name = random
+                            skill = 3
+                            traits = {
+                                trait = random_trait
+                            }
+                        }
+                        create_fleet = {
+                            name = "NAME_Pirate_Fleet"
+                            effect = {
+                                set_owner = prev
+                                create_ship_design = {
+                                    design = "NAME_Reaver"
+                                }
+                                while = {
+                                    count = 29
+                                    create_ship = {
+                                        name = random
+                                        design = last_created_design
+                                        graphical_culture = "pirate_01"
+                                    }
+                                }
+                                assign_leader = last_created_leader
+                                set_location = prevprev
+                                set_fleet_stance = aggressive
+                                set_aggro_range_measure_from = self
+                                set_aggro_range = 150
                             }
                         }
                     }
@@ -793,28 +1269,87 @@ country_event = {
             }
         }
     }
-}
-
-country_event = {
-    id = zog_species_events.26
-    title = zog_species_events.26.title
-    desc = zog_species_events.26.desc
-    picture = GFX_evt_species_research_separatists
-    show_sound = event_planetary_riot
-    is_triggered_only = yes
-
-    immediate = {
-        print_country_scope_a = yes
-    }
 
     option = {
         name = OK
     }
 }
 
+#######################################
+### "Mechanism researching" detected
+#######################################
+
 country_event = {
-    id = zog_species_events.30
-    title = zog_species_events.30.title
+    id = zog_species_events.40
+    title = zog_species_events.40.title
+    desc = zog_species_events.40.desc
+    picture = GFX_evt_mechanism_research_detected
+    show_sound = event_administrative_work
+    is_triggered_only = yes
+
+    trigger = {
+        exists = event_target:species_researcher_country
+    }
+
+    immediate = {
+        log = "===== ON MECHANISM RESEARCHING DETECTED EVENT"
+        print_country_scope_b = yes
+    }
+
+    option = {
+        name = zog_species_events.40.a
+        custom_tooltip = zog_species_events.40.a.tooltip
+        trigger = {}
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {
+            event_target:species_researcher_country = {
+                create_message = {
+                    type = DIPLO_ACTION_MAKE_RIVAL
+                    localization = DIPLO_SPECIES_PROJECT_FAILED
+                    days = 30 
+                    target = event_target:species_researcher_country
+                    variable = { type = name localization = COUNTRY1 scope = event_target:species_researcher_country }
+                    variable = { type = name localization = COUNTRY2 scope = event_target:species_subject_country }
+                }
+                country_event = {
+                    id = zog_species_events.42
+                    days = 20
+                    random = 10
+                }
+            }
+        }
+    }
+    option = {
+        name = zog_species_events.40.b
+        custom_tooltip = zog_species_events.40.b.tooltip
+        trigger = {
+            OR = {
+                is_ai = no
+                AND = {
+                    exists = overlord
+                    overlord = {
+                        is_same_value = event_target:species_researcher_country
+                    }
+                }
+                relative_power = {
+                    who = event_target:species_researcher_country
+                    category = fleet
+                    value < equivalent
+                }
+            }
+        }
+        ai_chance = {
+            factor = 50
+        }
+        hidden_effect = {}
+    }
+}
+
+country_event = {
+    id = zog_species_events.42
+    title = zog_species_events.42.title
     show_sound = event_conversation
     is_triggered_only = yes
     diplomatic = yes
@@ -840,7 +1375,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_01
+        text = zog_species_events.42.desc_01
     }
 
     # Is at war
@@ -865,7 +1400,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_02
+        text = zog_species_events.42.desc_02
     }
 
     # Is at war
@@ -889,7 +1424,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_03
+        text = zog_species_events.42.desc_03
     }
 
     # Is at war
@@ -910,7 +1445,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_04
+        text = zog_species_events.42.desc_04
     }
 
     # Is in federation
@@ -934,7 +1469,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_05
+        text = zog_species_events.42.desc_05
     }
 
     # Is in federation
@@ -959,7 +1494,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_06
+        text = zog_species_events.42.desc_06
     }
 
     # Is in federation
@@ -983,7 +1518,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_07
+        text = zog_species_events.42.desc_07
     }
 
     # Is in federation
@@ -1004,7 +1539,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_08
+        text = zog_species_events.42.desc_08
     }
 
     # Is not at war
@@ -1033,7 +1568,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_09
+        text = zog_species_events.42.desc_09
     }
     # Has overlord and is not disloyal to overlord
     desc = {
@@ -1057,7 +1592,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_10
+        text = zog_species_events.42.desc_10
     }
 
     # Is not at war
@@ -1087,7 +1622,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_11
+        text = zog_species_events.42.desc_11
     }
     # Has overlord and is not disloyal to overlord
     desc = {
@@ -1112,7 +1647,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_12
+        text = zog_species_events.42.desc_12
     }
 
     # Is not at war
@@ -1141,7 +1676,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_13
+        text = zog_species_events.42.desc_13
     }
     # Has overlord and is not disloyal to overlord
     desc = {
@@ -1165,7 +1700,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_14
+        text = zog_species_events.42.desc_14
     }
 
     # Is not at war
@@ -1191,7 +1726,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_15
+        text = zog_species_events.42.desc_15
     }
     # Has overlord and is not disloyal to overlord
     desc = {
@@ -1212,7 +1747,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_16
+        text = zog_species_events.42.desc_16
     }
 
     # Is not at war
@@ -1247,7 +1782,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_17
+        text = zog_species_events.42.desc_17
     }
     # Is an peaceable
     desc = {
@@ -1276,7 +1811,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_18
+        text = zog_species_events.42.desc_18
     }
 
     # Is not at war
@@ -1312,7 +1847,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_19
+        text = zog_species_events.42.desc_19
     }
     # Is not an peaceable
     desc = {
@@ -1342,7 +1877,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_20
+        text = zog_species_events.42.desc_20
     }
 
     # Is not at war
@@ -1376,7 +1911,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_21
+        text = zog_species_events.42.desc_21
     }
     # Is not an combative
     desc = {
@@ -1404,7 +1939,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_22
+        text = zog_species_events.42.desc_22
     }
 
     # Is not at war
@@ -1437,7 +1972,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_23
+        text = zog_species_events.42.desc_23
     }
     # Is not an egalitarian
     desc = {
@@ -1464,7 +1999,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_24
+        text = zog_species_events.42.desc_24
     }
 
     # Is at war
@@ -1485,7 +2020,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_25
+        text = zog_species_events.42.desc_25
     }
     # Is not an berserker
     desc = {
@@ -1502,7 +2037,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_26
+        text = zog_species_events.42.desc_26
     }
 
     # Is not at war
@@ -1534,7 +2069,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_27
+        text = zog_species_events.42.desc_27
     }
     # Is not an combative
     desc = {
@@ -1561,7 +2096,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_28
+        text = zog_species_events.42.desc_28
     }
 
     # Is not at war
@@ -1589,7 +2124,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_29
+        text = zog_species_events.42.desc_29
     }
     # Is not an peaceable
     desc = {
@@ -1612,7 +2147,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_30
+        text = zog_species_events.42.desc_30
     }
 
     # Is not at war
@@ -1640,7 +2175,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_31
+        text = zog_species_events.42.desc_31
     }
     # Is not an spiritual
     desc = {
@@ -1663,7 +2198,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_32
+        text = zog_species_events.42.desc_32
     }
 
     # Is not at war
@@ -1692,7 +2227,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_33
+        text = zog_species_events.42.desc_33
     }
 
     # Is at war
@@ -1712,7 +2247,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_34
+        text = zog_species_events.42.desc_34
     }
 
     # Is not at war
@@ -1734,7 +2269,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_35
+        text = zog_species_events.42.desc_35
     }
 
     # Is not at war
@@ -1764,7 +2299,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_36
+        text = zog_species_events.42.desc_36
     }
 
     # Is not at war
@@ -1795,7 +2330,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_37
+        text = zog_species_events.42.desc_37
     }
 
     # Is not at war
@@ -1825,7 +2360,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_38
+        text = zog_species_events.42.desc_38
     }
 
     # Is not at war
@@ -1852,7 +2387,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_39
+        text = zog_species_events.42.desc_39
     }
 
     # Is at war
@@ -1881,7 +2416,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_40
+        text = zog_species_events.42.desc_40
     }
 
     # Is at war
@@ -1910,7 +2445,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_41
+        text = zog_species_events.42.desc_41
     }
 
     # Is in federation
@@ -1937,7 +2472,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_42
+        text = zog_species_events.42.desc_42
     }
 
     # Is in federation
@@ -1964,7 +2499,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_43
+        text = zog_species_events.42.desc_43
     }
 
     # Is not in war
@@ -1995,7 +2530,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_44
+        text = zog_species_events.42.desc_44
     }
 
     # Is not in war
@@ -2026,7 +2561,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_45
+        text = zog_species_events.42.desc_45
     }
 
     # Is not in war
@@ -2061,7 +2596,7 @@ country_event = {
                 }
             }
         }
-        text = zog_species_events.30.desc_46
+        text = zog_species_events.42.desc_46
     }
 
     picture_event_data = {
@@ -2076,10 +2611,13 @@ country_event = {
         exists = event_target:species_subject_country
     }
 
-    immediate = {}
+    immediate = {
+        log = "===== ON REQUIREMENTS ARE ADVANCED EVENT"
+        print_country_scope_c = yes
+    }
 
     option = {
-        name = zog_species_events.30.opt_01
+        name = zog_species_events.42.opt_01
         trigger = {
             NOR = {
                 is_pacifist = yes
@@ -2108,7 +2646,7 @@ country_event = {
         hidden_effect = {
             event_target:species_subject_country = {
                 country_event = {
-                    id = zog_species_events.35
+                    id = zog_species_events.43
                     days = 15
                     random = 5
                 }
@@ -2117,7 +2655,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.30.opt_02
+        name = zog_species_events.42.opt_02
         trigger = {
             NOR = {
                 is_xenophile = yes
@@ -2136,7 +2674,7 @@ country_event = {
         hidden_effect = {
             event_target:species_subject_country = {
                 country_event = {
-                    id = zog_species_events.36
+                    id = zog_species_events.44
                     days = 10
                     random = 5
                 }
@@ -2145,7 +2683,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.30.opt_03
+        name = zog_species_events.42.opt_03
         trigger = {
             OR = {
                 is_technocratic_regime = yes
@@ -2162,7 +2700,7 @@ country_event = {
         hidden_effect = {
             event_target:species_subject_country = {
                 country_event = {
-                    id = zog_species_events.37
+                    id = zog_species_events.45
                     days = 30
                     random = 15
                 }
@@ -2171,7 +2709,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.30.opt_04
+        name = zog_species_events.42.opt_04
         trigger = {
             is_mercantile_regime = yes
             has_country_resource = {
@@ -2186,7 +2724,7 @@ country_event = {
         hidden_effect = {
             event_target:species_subject_country = {
                 country_event = {
-                    id = zog_species_events.38
+                    id = zog_species_events.46
                     days = 15
                     random = 5
                 }
@@ -2195,7 +2733,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.30.opt_05
+        name = zog_species_events.42.opt_05
         trigger = {
             is_plutocratic_regime = yes
             has_country_resource = {
@@ -2210,7 +2748,7 @@ country_event = {
         hidden_effect = {
             event_target:species_subject_country = {
                 country_event = {
-                    id = zog_species_events.38
+                    id = zog_species_events.46
                     days = 15
                     random = 5
                 }
@@ -2219,7 +2757,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.30.opt_06
+        name = zog_species_events.42.opt_06
         trigger = {
             NOR = {
                 is_militarist = yes
@@ -2248,7 +2786,7 @@ country_event = {
         hidden_effect = {
             event_target:species_subject_country = {
                 country_event = {
-                    id = zog_species_events.39
+                    id = zog_species_events.47
                     days = 10
                     random = 5
                 }
@@ -2257,7 +2795,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.30.opt_07
+        name = zog_species_events.42.opt_07
         trigger = {
             has_ethic = ethic_fanatic_authoritarian
             any_owned_leader = {
@@ -2279,7 +2817,7 @@ country_event = {
             }
             event_target:species_subject_country = {
                 country_event = {
-                    id = zog_species_events.40
+                    id = zog_species_events.48
                     days = 30
                     random = 10
                 }
@@ -2288,7 +2826,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.30.opt_20
+        name = zog_species_events.42.opt_20
         trigger = {}
         ai_chance = {
             factor = 25
@@ -2316,7 +2854,7 @@ country_event = {
             }
             event_target:species_subject_country = {
                 country_event = {
-                    id = zog_species_events.50
+                    id = zog_species_events.49
                     days = 10
                     random = 5
                 }
@@ -2326,8 +2864,8 @@ country_event = {
 }
 
 country_event = {
-    id = zog_species_events.35
-    title = zog_species_events.35.title
+    id = zog_species_events.43
+    title = zog_species_events.43.title
     is_triggered_only = yes
     diplomatic = yes
 
@@ -2343,7 +2881,7 @@ country_event = {
                 has_authority = auth_machine_intelligence
             }
         }
-        text = zog_species_events.35.desc_01
+        text = zog_species_events.43.desc_01
     }
 
     desc = {
@@ -2358,7 +2896,7 @@ country_event = {
                 has_authority = auth_machine_intelligence
             }
         }
-        text = zog_species_events.35.desc_02
+        text = zog_species_events.43.desc_02
     }
 
     desc = {
@@ -2368,7 +2906,7 @@ country_event = {
                 has_authority = auth_machine_intelligence
             }
         }
-        text = zog_species_events.35.desc_03
+        text = zog_species_events.43.desc_03
     }
 
     picture_event_data = {
@@ -2384,6 +2922,8 @@ country_event = {
     }
 
     immediate = {
+        log = "===== ON RESPONSE WAR EVENT"
+
         add_opinion_modifier = {
             modifier = opinion_our_species_research_high
             who = event_target:species_researcher_country
@@ -2456,7 +2996,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.35.a
+        name = zog_species_events.43.a
         trigger = {
             is_militarist = yes
         }
@@ -2466,7 +3006,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.35.b
+        name = zog_species_events.43.b
         trigger = {
             is_xenophobe = yes
         }
@@ -2476,7 +3016,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.35.c
+        name = zog_species_events.43.c
         trigger = {
             is_authoritarian = yes
         }
@@ -2486,7 +3026,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.35.d
+        name = zog_species_events.43.d
         trigger = {
             is_spiritualist = yes
         }
@@ -2496,7 +3036,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.35.e
+        name = zog_species_events.43.e
         trigger = {
             is_egalitarian = yes
         }
@@ -2511,8 +3051,8 @@ country_event = {
 }
 
 country_event = {
-    id = zog_species_events.36
-    title = zog_species_events.36.title
+    id = zog_species_events.44
+    title = zog_species_events.44.title
     is_triggered_only = yes
     diplomatic = yes
 
@@ -2528,7 +3068,7 @@ country_event = {
                 has_authority = auth_machine_intelligence
             }
         }
-        text = zog_species_events.36.desc_01
+        text = zog_species_events.44.desc_01
     }
 
     desc = {
@@ -2542,7 +3082,7 @@ country_event = {
                 has_authority = auth_machine_intelligence
             }
         }
-        text = zog_species_events.36.desc_02
+        text = zog_species_events.44.desc_02
     }
 
     desc = {
@@ -2552,7 +3092,7 @@ country_event = {
                 has_authority = auth_machine_intelligence
             }
         }
-        text = zog_species_events.36.desc_03
+        text = zog_species_events.44.desc_03
     }
 
     desc = {
@@ -2562,7 +3102,7 @@ country_event = {
                 has_authority = auth_machine_intelligence
             }
         }
-        text = zog_species_events.36.desc_04
+        text = zog_species_events.44.desc_04
     }
 
     picture_event_data = {
@@ -2578,6 +3118,8 @@ country_event = {
     }
 
     immediate = {
+        log = "===== ON RESPONSE PRE WAR EVENT"
+
         add_opinion_modifier = {
             modifier = opinion_our_species_research_mid
             who = event_target:species_researcher_country
@@ -2589,7 +3131,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.36.a
+        name = zog_species_events.44.a
         trigger = {
             is_militarist = yes
         }
@@ -2599,7 +3141,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.36.b
+        name = zog_species_events.44.b
         trigger = {
             is_xenophobe = yes
         }
@@ -2609,7 +3151,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.36.c
+        name = zog_species_events.44.c
         trigger = {
             is_authoritarian = yes
         }
@@ -2619,7 +3161,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.36.d
+        name = zog_species_events.44.d
         trigger = {
             is_spiritualist = yes
         }
@@ -2629,7 +3171,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.36.e
+        name = zog_species_events.44.e
         trigger = {
             is_egalitarian = yes
         }
@@ -2644,8 +3186,8 @@ country_event = {
 }
 
 country_event = {
-    id = zog_species_events.37
-    title = zog_species_events.37.title
+    id = zog_species_events.45
+    title = zog_species_events.45.title
     is_triggered_only = yes
     diplomatic = yes
 
@@ -2661,7 +3203,7 @@ country_event = {
                 has_authority = auth_machine_intelligence
             }
         }
-        text = zog_species_events.37.desc_01
+        text = zog_species_events.45.desc_01
     }
 
     desc = {
@@ -2676,7 +3218,7 @@ country_event = {
                 has_authority = auth_machine_intelligence
             }
         }
-        text = zog_species_events.37.desc_02
+        text = zog_species_events.45.desc_02
     }
 
     desc = {
@@ -2693,7 +3235,7 @@ country_event = {
                 has_authority = auth_machine_intelligence
             }
         }
-        text = zog_species_events.37.desc_03
+        text = zog_species_events.45.desc_03
     }
 
     desc = {
@@ -2710,7 +3252,7 @@ country_event = {
                 has_authority = auth_machine_intelligence
             }
         }
-        text = zog_species_events.37.desc_04
+        text = zog_species_events.45.desc_04
     }
 
     desc = {
@@ -2720,7 +3262,7 @@ country_event = {
                 has_authority = auth_machine_intelligence
             }
         }
-        text = zog_species_events.37.desc_05
+        text = zog_species_events.45.desc_05
     }
 
     picture_event_data = {
@@ -2736,6 +3278,8 @@ country_event = {
     }
 
     immediate = {
+        log = "===== ON RESPONSE SCIENCE EVENT"
+
         if = {
             limit = {
                 OR = {
@@ -2805,7 +3349,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.37.a
+        name = zog_species_events.45.a
         trigger = {
             is_militarist = yes
         }
@@ -2815,7 +3359,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.37.b
+        name = zog_species_events.45.b
         trigger = {
             is_xenophobe = yes
         }
@@ -2825,7 +3369,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.37.c
+        name = zog_species_events.45.c
         trigger = {
             is_authoritarian = yes
         }
@@ -2835,7 +3379,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.37.d
+        name = zog_species_events.45.d
         trigger = {
             is_spiritualist = yes
         }
@@ -2845,7 +3389,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.37.e
+        name = zog_species_events.45.e
         trigger = {
             is_egalitarian = yes
         }
@@ -2855,7 +3399,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.37.f
+        name = zog_species_events.45.f
         trigger = {
             is_xenophile = yes
         }
@@ -2865,7 +3409,7 @@ country_event = {
     }
 
     option = {
-        name = zog_species_events.37.g
+        name = zog_species_events.45.g
         trigger = {
             is_pacifist = yes
         }
@@ -2880,8 +3424,8 @@ country_event = {
 }
 
 country_event = {
-    id = zog_species_events.38
-    title = zog_species_events.38.title
+    id = zog_species_events.46
+    title = zog_species_events.46.title
     is_triggered_only = yes
     diplomatic = yes
 
@@ -2896,7 +3440,7 @@ country_event = {
                 has_authority = auth_machine_intelligence
             }
         }
-        text = zog_species_events.38.desc_01
+        text = zog_species_events.46.desc_01
     }
 
     desc = {
@@ -2910,7 +3454,7 @@ country_event = {
                 has_authority = auth_machine_intelligence
             }
         }
-        text = zog_species_events.38.desc_02
+        text = zog_species_events.46.desc_02
     }
 
     desc = {
@@ -2920,7 +3464,7 @@ country_event = {
                 has_authority = auth_machine_intelligence
             }
         }
-        text = zog_species_events.38.desc_03
+        text = zog_species_events.46.desc_03
     }
 
     picture_event_data = {
@@ -2936,6 +3480,8 @@ country_event = {
     }
 
     immediate = {
+        log = "===== ON RESPONSE PLUTOCRATIC EVENT"
+
         if = {
             limit = {
                 is_plutocratic_regime = yes
@@ -2962,8 +3508,8 @@ country_event = {
 }
 
 country_event = {
-    id = zog_species_events.39
-    title = zog_species_events.39.title
+    id = zog_species_events.47
+    title = zog_species_events.47.title
     is_triggered_only = yes
     diplomatic = yes
 
@@ -2979,7 +3525,7 @@ country_event = {
                 has_authority = auth_machine_intelligence
             }
         }
-        text = zog_species_events.39.desc_01
+        text = zog_species_events.47.desc_01
     }
 
     desc = {
@@ -2994,7 +3540,7 @@ country_event = {
                 has_authority = auth_machine_intelligence
             }
         }
-        text = zog_species_events.39.desc_02
+        text = zog_species_events.47.desc_02
     }
 
     desc = {
@@ -3004,7 +3550,7 @@ country_event = {
                 has_authority = auth_machine_intelligence
             }
         }
-        text = zog_species_events.39.desc_03
+        text = zog_species_events.47.desc_03
     }
 
     picture_event_data = {
@@ -3020,6 +3566,8 @@ country_event = {
     }
 
     immediate = {
+        log = "===== ON RESPONSE BAD OPINION EVENT"
+
         if = {
             limit = {
                 has_ethic = ethic_fanatic_xenophobe
@@ -3048,8 +3596,8 @@ country_event = {
 }
 
 country_event = {
-    id = zog_species_events.40
-    title = zog_species_events.40.title
+    id = zog_species_events.48
+    title = zog_species_events.48.title
     is_triggered_only = yes
     diplomatic = yes
 
@@ -3061,7 +3609,7 @@ country_event = {
                 has_authority = auth_machine_intelligence
             }
         }
-        text = zog_species_events.40.desc_01
+        text = zog_species_events.48.desc_01
     }
 
     desc = {
@@ -3074,7 +3622,7 @@ country_event = {
                 has_authority = auth_machine_intelligence
             }
         }
-        text = zog_species_events.40.desc_02
+        text = zog_species_events.48.desc_02
     }
 
     desc = {
@@ -3085,7 +3633,7 @@ country_event = {
                 has_authority = auth_machine_intelligence
             }
         }
-        text = zog_species_events.40.desc_03
+        text = zog_species_events.48.desc_03
     }
 
     desc = {
@@ -3098,7 +3646,7 @@ country_event = {
                 has_authority = auth_machine_intelligence
             }
         }
-        text = zog_species_events.40.desc_04
+        text = zog_species_events.48.desc_04
     }
 
     picture_event_data = {
@@ -3114,6 +3662,8 @@ country_event = {
     }
 
     immediate = {
+        log = "===== ON RESPONSE AUTHORITARIAN EVENT"
+
         if = {
             limit = {
                 is_authoritarian = yes
@@ -3165,9 +3715,9 @@ country_event = {
 }
 
 country_event = {
-    id = zog_species_events.50
-    title = zog_species_events.50.title
-    desc = zog_species_events.50.desc
+    id = zog_species_events.49
+    title = zog_species_events.49.title
+    desc = zog_species_events.49.desc
     is_triggered_only = yes
     diplomatic = yes
 
@@ -3183,7 +3733,9 @@ country_event = {
         exists = event_target:species_researcher_country
     }
 
-    immediate = {}
+    immediate = {
+        log = "===== ON RESPONSE CANCEL PROJECT EVENT"
+    }
 
     option = {
         name = OK
