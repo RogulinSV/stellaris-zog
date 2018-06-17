@@ -1,0 +1,3 @@
+﻿l_russian:
+    MASSEFFECT_ANOMALY_CAT:0 "Аномалия выброса энергии"
+    MASSEFFECT_ANOMALY_CAT_DESC:0 "Наблюдается аномальный выброс энергии на [From.GetName]"

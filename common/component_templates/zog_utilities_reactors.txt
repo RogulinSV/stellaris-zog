@@ -1,0 +1,941 @@
+##############################
+### "Mass Effect" Reactors
+##############################
+
+@corvette_power_1 = 100         # +25
+@corvette_power_2 = 130         # +30
+@corvette_power_3 = 165         # +35
+@corvette_power_4 = 210         # +40
+@corvette_power_5 = 270         # +50
+@corvette_power_6 = 345         # +60
+
+@destroyer_power_1 = 175        # +35
+@destroyer_power_2 = 220        # +40
+@destroyer_power_3 = 290        # +50
+@destroyer_power_4 = 380        # +60
+@destroyer_power_5 = 505        # +75
+@destroyer_power_6 = 640        # +90
+
+@cruiser_power_1 = 330          # +50
+@cruiser_power_2 = 420          # +60
+@cruiser_power_3 = 555          # +75
+@cruiser_power_4 = 705          # +85
+@cruiser_power_5 = 800          # +100
+@cruiser_power_6 = 1155         # +125
+
+@battleship_power_1 = 615       # +65
+@battleship_power_2 = 800       # +80
+@battleship_power_3 = 1045      # +95
+@battleship_power_4 = 1375      # +125
+@battleship_power_5 = 1700      # +150
+@battleship_power_6 = 2200      # +200
+
+@titan_power_1 = 1200           # +100
+@titan_power_2 = 1600           # +150
+@titan_power_3 = 2100           # +200
+@titan_power_4 = 2750           # +250
+@titan_power_5 = 3500           # +300
+@titan_power_6 = 4600           # +400
+
+@platform_power_1 = 250         # +50
+@platform_power_2 = 360         # +100
+@platform_power_3 = 490         # +150
+@platform_power_4 = 640         # +200
+@platform_power_5 = 825         # +250
+@platform_power_6 = 1100        # +350
+
+@starbase_power = 15000         # +5000
+
+@corvette_cost_1 = 20
+@corvette_cost_2 = 25
+@corvette_cost_3 = 30
+@corvette_cost_4 = 35
+@corvette_cost_5 = 40
+@corvette_cost_6 = 45
+
+@destroyer_cost_1 = 40
+@destroyer_cost_2 = 50
+@destroyer_cost_3 = 60
+@destroyer_cost_4 = 70
+@destroyer_cost_5 = 80
+@destroyer_cost_6 = 90
+
+@cruiser_cost_1 = 100
+@cruiser_cost_2 = 130
+@cruiser_cost_3 = 160
+@cruiser_cost_4 = 190
+@cruiser_cost_5 = 220
+@cruiser_cost_6 = 250
+
+@battleship_cost_1 = 200
+@battleship_cost_2 = 260
+@battleship_cost_3 = 320
+@battleship_cost_4 = 380
+@battleship_cost_5 = 440
+@battleship_cost_6 = 500
+
+@titan_cost_1 = 400
+@titan_cost_2 = 450
+@titan_cost_3 = 500
+@titan_cost_4 = 550
+@titan_cost_5 = 1054
+@titan_cost_6 = 1370
+
+@platform_cost_1 = 40
+@platform_cost_2 = 50
+@platform_cost_3 = 60
+@platform_cost_4 = 70
+@platform_cost_5 = 80
+@platform_cost_6 = 90
+
+######################################
+### Corvette reactor of Mass Effect
+######################################
+
+utility_component_template = {
+    key = "CORVETTE_MASSEFFECT_REACTOR_1"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_1"
+    icon_frame = 1
+    power = @corvette_power_1
+    cost = @corvette_cost_1
+
+    prerequisites = { "tech_power_masseffect_01" }
+    component_set = "power_core"
+    size_restriction = { corvette colonizer constructor science transport }
+    upgrades_to = "CORVETTE_MASSEFFECT_REACTOR_2"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "CORVETTE_MASSEFFECT_REACTOR_2"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_2"
+    icon_frame = 1
+    power = @corvette_power_2
+    cost = @corvette_cost_2
+
+    prerequisites = { "tech_power_masseffect_02" }
+    component_set = "power_core"
+    size_restriction = { corvette colonizer constructor science transport }
+    upgrades_to = "CORVETTE_MASSEFFECT_REACTOR_3"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "CORVETTE_MASSEFFECT_REACTOR_3"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_3"
+    icon_frame = 1
+    power = @corvette_power_3
+    cost = @corvette_cost_3
+
+    prerequisites = { "tech_power_masseffect_03" }
+    component_set = "power_core"
+    size_restriction = { corvette colonizer constructor science transport }
+    upgrades_to = "CORVETTE_MASSEFFECT_REACTOR_4"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "CORVETTE_MASSEFFECT_REACTOR_4"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_4"
+    icon_frame = 1
+    power = @corvette_power_4
+    cost = @corvette_cost_4
+
+    prerequisites = { "tech_power_masseffect_04" }
+    component_set = "power_core"
+    size_restriction = { corvette colonizer constructor science transport }
+    upgrades_to = "CORVETTE_MASSEFFECT_REACTOR_5"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "CORVETTE_MASSEFFECT_REACTOR_5"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_5"
+    icon_frame = 1
+    power = @corvette_power_5
+    cost = @corvette_cost_5
+
+    prerequisites = { "tech_power_masseffect_05" }
+    component_set = "power_core"
+    size_restriction = { corvette colonizer constructor science transport }
+    upgrades_to = "CORVETTE_MASSEFFECT_REACTOR_6"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "CORVETTE_MASSEFFECT_REACTOR_6"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_6"
+    icon_frame = 1
+    power = @corvette_power_6
+    cost = @corvette_cost_6
+
+    prerequisites = { "tech_power_masseffect_06" }
+    component_set = "power_core"
+    size_restriction = { corvette colonizer constructor science transport }
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+########################################
+### Destroyer reactor of Mass Effect
+########################################
+
+utility_component_template = {
+    key = "DESTROYER_MASSEFFECT_REACTOR_1"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_1"
+    icon_frame = 1
+    power = @destroyer_power_1
+    cost = @destroyer_cost_1
+
+    prerequisites = { "tech_power_masseffect_01" }
+    component_set = "power_core"
+    size_restriction = { destroyer }
+    upgrades_to = "DESTROYER_MASSEFFECT_REACTOR_2"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "DESTROYER_MASSEFFECT_REACTOR_2"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_2"
+    icon_frame = 1
+    power = @destroyer_power_2
+    cost = @destroyer_cost_2
+
+    prerequisites = { "tech_power_masseffect_02" }
+    component_set = "power_core"
+    size_restriction = { destroyer }
+    upgrades_to = "DESTROYER_MASSEFFECT_REACTOR_3"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "DESTROYER_MASSEFFECT_REACTOR_3"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_3"
+    icon_frame = 1
+    power = @destroyer_power_3
+    cost = @destroyer_cost_3
+
+    prerequisites = { "tech_power_masseffect_03" }
+    component_set = "power_core"
+    size_restriction = { destroyer }
+    upgrades_to = "DESTROYER_MASSEFFECT_REACTOR_4"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "DESTROYER_MASSEFFECT_REACTOR_4"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_4"
+    icon_frame = 1
+    power = @destroyer_power_4
+    cost = @destroyer_cost_4
+
+    prerequisites = { "tech_power_masseffect_04" }
+    component_set = "power_core"
+    size_restriction = { destroyer }
+    upgrades_to = "DESTROYER_MASSEFFECT_REACTOR_5"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "DESTROYER_MASSEFFECT_REACTOR_5"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_5"
+    icon_frame = 1
+    power = @destroyer_power_5
+    cost = @destroyer_cost_5
+
+    prerequisites = { "tech_power_masseffect_05" }
+    component_set = "power_core"
+    size_restriction = { destroyer }
+    upgrades_to = "DESTROYER_MASSEFFECT_REACTOR_6"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "DESTROYER_MASSEFFECT_REACTOR_6"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_6"
+    icon_frame = 1
+    power = @destroyer_power_6
+    cost = @destroyer_cost_6
+
+    prerequisites = { "tech_power_masseffect_06" }
+    component_set = "power_core"
+    size_restriction = { destroyer }
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+#####################################
+### Cruiser reactor of Mass Effect
+#####################################
+
+utility_component_template = {
+    key = "CRUISER_MASSEFFECT_REACTOR_1"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_1"
+    icon_frame = 1
+    power = @cruiser_power_1
+    cost = @cruiser_cost_1
+
+    prerequisites = { "tech_power_masseffect_01" }
+    component_set = "power_core"
+    size_restriction = { cruiser }
+    upgrades_to = "CRUISER_MASSEFFECT_REACTOR_2"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "CRUISER_MASSEFFECT_REACTOR_2"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_2"
+    icon_frame = 1
+    power = @cruiser_power_2
+    cost = @cruiser_cost_2
+
+    prerequisites = { "tech_power_masseffect_02" }
+    component_set = "power_core"
+    size_restriction = { cruiser }
+    upgrades_to = "CRUISER_MASSEFFECT_REACTOR_3"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "CRUISER_MASSEFFECT_REACTOR_3"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_3"
+    icon_frame = 1
+    power = @cruiser_power_3
+    cost = @cruiser_cost_3
+
+    prerequisites = { "tech_power_masseffect_03" }
+    component_set = "power_core"
+    size_restriction = { cruiser }
+    upgrades_to = "CRUISER_MASSEFFECT_REACTOR_4"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "CRUISER_MASSEFFECT_REACTOR_4"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_4"
+    icon_frame = 1
+    power = @cruiser_power_4
+    cost = @cruiser_cost_4
+
+    prerequisites = { "tech_power_masseffect_04" }
+    component_set = "power_core"
+    size_restriction = { cruiser }
+    upgrades_to = "CRUISER_MASSEFFECT_REACTOR_5"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "CRUISER_MASSEFFECT_REACTOR_5"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_5"
+    icon_frame = 1
+    power = @cruiser_power_5
+    cost = @cruiser_cost_5
+
+    prerequisites = { "tech_power_masseffect_05" }
+    component_set = "power_core"
+    size_restriction = { cruiser }
+    upgrades_to = "CRUISER_MASSEFFECT_REACTOR_6"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "CRUISER_MASSEFFECT_REACTOR_6"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_6"
+    icon_frame = 1
+    power = @cruiser_power_6
+    cost = @cruiser_cost_6
+
+    prerequisites = { "tech_power_masseffect_06" }
+    component_set = "power_core"
+    size_restriction = { cruiser }
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+########################################
+### Battleship reactor of Mass Effect
+########################################
+
+utility_component_template = {
+    key = "BATTLESHIP_MASSEFFECT_REACTOR_1"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_1"
+    icon_frame = 1
+    power = @battleship_power_1
+    cost = @battleship_cost_1
+
+    prerequisites = { "tech_power_masseffect_01" }
+    component_set = "power_core"
+    size_restriction = { battleship }
+    upgrades_to = "BATTLESHIP_MASSEFFECT_REACTOR_2"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "BATTLESHIP_MASSEFFECT_REACTOR_2"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_2"
+    icon_frame = 1
+    power = @battleship_power_2
+    cost = @battleship_cost_2
+
+    prerequisites = { "tech_power_masseffect_02" }
+    component_set = "power_core"
+    size_restriction = { battleship }
+    upgrades_to = "BATTLESHIP_MASSEFFECT_REACTOR_3"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "BATTLESHIP_MASSEFFECT_REACTOR_3"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_3"
+    icon_frame = 1
+    power = @battleship_power_3
+    cost = @battleship_cost_3
+
+    prerequisites = { "tech_power_masseffect_03" }
+    component_set = "power_core"
+    size_restriction = { battleship }
+    upgrades_to = "BATTLESHIP_MASSEFFECT_REACTOR_4"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "BATTLESHIP_MASSEFFECT_REACTOR_4"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_4"
+    icon_frame = 1
+    power = @battleship_power_4
+    cost = @battleship_cost_4
+
+    prerequisites = { "tech_power_masseffect_04" }
+    component_set = "power_core"
+    size_restriction = { battleship }
+    upgrades_to = "BATTLESHIP_MASSEFFECT_REACTOR_5"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "BATTLESHIP_MASSEFFECT_REACTOR_5"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_5"
+    icon_frame = 1
+    power = @battleship_power_5
+    cost = @battleship_cost_5
+
+    prerequisites = { "tech_power_masseffect_05" }
+    component_set = "power_core"
+    size_restriction = { battleship }
+    upgrades_to = "BATTLESHIP_MASSEFFECT_REACTOR_6"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "BATTLESHIP_MASSEFFECT_REACTOR_6"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_6"
+    icon_frame = 1
+    power = @battleship_power_6
+    cost = @battleship_cost_6
+
+    prerequisites = { "tech_power_masseffect_06" }
+    component_set = "power_core"
+    size_restriction = { battleship }
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+##################################
+### Titan reactor of Mass Effect
+##################################
+
+utility_component_template = {
+    key = "TITAN_MASSEFFECT_REACTOR_1"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_1"
+    icon_frame = 1
+    power = @titan_power_1
+    cost = @titan_cost_1
+
+    prerequisites = { "tech_power_masseffect_01" }
+    component_set = "power_core"
+    size_restriction = { titan }
+    upgrades_to = "TITAN_MASSEFFECT_REACTOR_2"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "TITAN_MASSEFFECT_REACTOR_2"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_2"
+    icon_frame = 1
+    power = @titan_power_2
+    cost = @titan_cost_2
+
+    prerequisites = { "tech_power_masseffect_02" }
+    component_set = "power_core"
+    size_restriction = { titan }
+    upgrades_to = "TITAN_MASSEFFECT_REACTOR_3"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "TITAN_MASSEFFECT_REACTOR_3"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_3"
+    icon_frame = 1
+    power = @titan_power_3
+    cost = @titan_cost_3
+
+    prerequisites = { "tech_power_masseffect_03" }
+    component_set = "power_core"
+    size_restriction = { titan }
+    upgrades_to = "TITAN_MASSEFFECT_REACTOR_4"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "TITAN_MASSEFFECT_REACTOR_4"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_4"
+    icon_frame = 1
+    power = @titan_power_4
+    cost = @titan_cost_4
+
+    prerequisites = { "tech_power_masseffect_04" }
+    component_set = "power_core"
+    size_restriction = { titan }
+    upgrades_to = "TITAN_MASSEFFECT_REACTOR_5"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "TITAN_MASSEFFECT_REACTOR_5"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_5"
+    icon_frame = 1
+    power = @titan_power_5
+    cost = @titan_cost_5
+
+    prerequisites = { "tech_power_masseffect_05" }
+    component_set = "power_core"
+    size_restriction = { titan }
+    upgrades_to = "TITAN_MASSEFFECT_REACTOR_6"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "TITAN_MASSEFFECT_REACTOR_6"
+    size = small
+    icon = "GFX_ship_part_masseffect_reactor_6"
+    icon_frame = 1
+    power = @titan_power_6
+    cost = @titan_cost_6
+
+    prerequisites = { "tech_power_masseffect_06" }
+    component_set = "power_core"
+    size_restriction = { titan }
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+######################################
+### Platform reactor of Mass Effect
+######################################
+
+utility_component_template = {
+    key = "PLATFORM_MASSEFFECT_REACTOR_1"
+    size = large
+    icon = "GFX_ship_part_masseffect_reactor_1"
+    icon_frame = 1
+    power = @platform_power_1
+    cost = @platform_cost_1
+
+    prerequisites = {
+        "tech_power_masseffect_01"
+        "tech_advanced_military_station_defence_01"
+    }
+    class_restriction = { shipclass_military_station }
+    size_restriction = {
+        military_station_small
+        military_station_medium
+        military_station_large
+    }
+    component_set = "power_core"
+    upgrades_to = "PLATFORM_MASSEFFECT_REACTOR_2"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "PLATFORM_MASSEFFECT_REACTOR_2"
+    size = large
+    icon = "GFX_ship_part_masseffect_reactor_2"
+    icon_frame = 1
+    power = @platform_power_2
+    cost = @platform_cost_2
+
+    prerequisites = { "tech_power_masseffect_02" }
+    class_restriction = { shipclass_military_station }
+    size_restriction = {
+        military_station_small
+        military_station_medium
+        military_station_large
+    }
+    component_set = "power_core"
+    upgrades_to = "PLATFORM_MASSEFFECT_REACTOR_3"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "PLATFORM_MASSEFFECT_REACTOR_3"
+    size = large
+    icon = "GFX_ship_part_masseffect_reactor_3"
+    icon_frame = 1
+    power = @platform_power_3
+    cost = @platform_cost_3
+
+    prerequisites = { "tech_power_masseffect_03" }
+    class_restriction = { shipclass_military_station }
+    size_restriction = {
+        military_station_small
+        military_station_medium
+        military_station_large
+    }
+    component_set = "power_core"
+    upgrades_to = "PLATFORM_MASSEFFECT_REACTOR_4"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "PLATFORM_MASSEFFECT_REACTOR_4"
+    size = large
+    icon = "GFX_ship_part_masseffect_reactor_4"
+    icon_frame = 1
+    power = @platform_power_4
+    cost = @platform_cost_4
+
+    prerequisites = { "tech_power_masseffect_04" }
+    class_restriction = { shipclass_military_station }
+    size_restriction = {
+        military_station_small
+        military_station_medium
+        military_station_large
+    }
+    component_set = "power_core"
+    upgrades_to = "PLATFORM_MASSEFFECT_REACTOR_5"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "PLATFORM_MASSEFFECT_REACTOR_5"
+    size = large
+    icon = "GFX_ship_part_masseffect_reactor_5"
+    icon_frame = 1
+    power = @platform_power_5
+    cost = @platform_cost_5
+
+    prerequisites = { "tech_power_masseffect_05" }
+    class_restriction = { shipclass_military_station }
+    size_restriction = {
+        military_station_small
+        military_station_medium
+        military_station_large
+    }
+    component_set = "power_core"
+    upgrades_to = "PLATFORM_MASSEFFECT_REACTOR_6"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "PLATFORM_MASSEFFECT_REACTOR_6"
+    size = large
+    icon = "GFX_ship_part_masseffect_reactor_6"
+    icon_frame = 1
+    power = @platform_power_6
+    cost = @platform_cost_6
+
+    prerequisites = { "tech_power_masseffect_06" }
+    class_restriction = { shipclass_military_station }
+    size_restriction = {
+        military_station_small
+        military_station_medium
+        military_station_large
+    }
+    component_set = "power_core"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+######################################
+### Starbase reactor of Mass Effect
+######################################
+
+utility_component_template = {
+    key = "STARBASE_MASSEFFECT_REACTOR_1"
+    size = large
+    icon = "GFX_ship_part_masseffect_reactor_1"
+    icon_frame = 1
+    power = @starbase_power
+    cost = 0
+
+    prerequisites = { "tech_power_masseffect_01" }
+    class_restriction = { shipclass_starbase }
+    component_set = "power_core"
+    size_restriction = {
+        starbase_outpost
+        starbase_starport
+        starbase_starhold
+        starbase_starfortress
+        starbase_citadel
+    }
+    upgrades_to = "STARBASE_MASSEFFECT_REACTOR_2"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "STARBASE_MASSEFFECT_REACTOR_2"
+    size = large
+    icon = "GFX_ship_part_masseffect_reactor_2"
+    icon_frame = 1
+    power = @starbase_power
+    cost = 0
+
+    prerequisites = { "tech_power_masseffect_02" }
+    class_restriction = { shipclass_starbase }
+    component_set = "power_core"
+    size_restriction = {
+        starbase_outpost
+        starbase_starport
+        starbase_starhold
+        starbase_starfortress
+        starbase_citadel
+    }
+    upgrades_to = "STARBASE_MASSEFFECT_REACTOR_3"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "STARBASE_MASSEFFECT_REACTOR_3"
+    size = large
+    icon = "GFX_ship_part_masseffect_reactor_3"
+    icon_frame = 1
+    power = @starbase_power
+    cost = 0
+
+    prerequisites = { "tech_power_masseffect_03" }
+    class_restriction = { shipclass_starbase }
+    component_set = "power_core"
+    size_restriction = {
+        starbase_outpost
+        starbase_starport
+        starbase_starhold
+        starbase_starfortress
+        starbase_citadel
+    }
+    upgrades_to = "STARBASE_MASSEFFECT_REACTOR_4"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "STARBASE_MASSEFFECT_REACTOR_4"
+    size = large
+    icon = "GFX_ship_part_masseffect_reactor_4"
+    icon_frame = 1
+    power = @starbase_power
+    cost = 0
+
+    prerequisites = { "tech_power_masseffect_04" }
+    class_restriction = { shipclass_starbase }
+    component_set = "power_core"
+    size_restriction = {
+        starbase_outpost
+        starbase_starport
+        starbase_starhold
+        starbase_starfortress
+        starbase_citadel
+    }
+    upgrades_to = "STARBASE_MASSEFFECT_REACTOR_5"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "STARBASE_MASSEFFECT_REACTOR_5"
+    size = large
+    icon = "GFX_ship_part_masseffect_reactor_5"
+    icon_frame = 1
+    power = @starbase_power
+    cost = 0
+
+    prerequisites = { "tech_power_masseffect_05" }
+    class_restriction = { shipclass_starbase }
+    component_set = "power_core"
+    size_restriction = {
+        starbase_outpost
+        starbase_starport
+        starbase_starhold
+        starbase_starfortress
+        starbase_citadel
+    }
+    upgrades_to = "STARBASE_MASSEFFECT_REACTOR_6"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "STARBASE_MASSEFFECT_REACTOR_6"
+    size = large
+    icon = "GFX_ship_part_masseffect_reactor_6"
+    icon_frame = 1
+    power = @starbase_power
+    cost = 0
+
+    prerequisites = { "tech_power_masseffect_06" }
+    class_restriction = { shipclass_starbase }
+    component_set = "power_core"
+    size_restriction = {
+        starbase_outpost
+        starbase_starport
+        starbase_starhold
+        starbase_starfortress
+        starbase_citadel
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+}

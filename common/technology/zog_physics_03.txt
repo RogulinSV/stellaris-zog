@@ -1,0 +1,673 @@
+#############################
+### Power of "Mass Effect"
+#############################
+
+tech_masseffect_force = {
+    cost = 5000
+    area = physics
+    start_tech = no
+    category = { particles }
+    icon = "tech_masseffect_force"
+    tier = 0
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    weight = 0
+    ai_weight = {
+        factor = 0
+    }
+}
+
+tech_power_masseffect_01 = {
+    # Unlocks "MASSEFFECT_REACTOR_1" utility component
+
+    cost = 7500
+    area = physics
+    start_tech = no
+    category = { particles }
+    icon = "tech_power_masseffect_01"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_masseffect_force"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_power_masseffect_01_prereqfor.title
+            desc = tech_power_masseffect_01_prereqfor.desc
+        }
+    }
+
+    weight = 100
+
+    weight_modifier = {
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+        modifier = {
+            factor = 1.35
+            research_leader = {
+                area = physics
+                OR = {
+                    has_trait = "leader_trait_curator"
+                    has_trait = "leader_trait_scientist_chosen"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = physics
+                has_level > 2
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = physics
+                has_level > 3
+            }
+        }
+        modifier = {
+            factor = 1.30
+            research_leader = {
+                area = physics
+                has_level > 4
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_discovery_adopt"
+        }
+        modifier = {
+            factor = 1.50
+            has_tradition = "tr_discovery_polytechnic_education"
+        }
+        modifier = {
+            factor = 1.75
+            has_tradition = "tr_discovery_faith_in_science"
+        }
+        modifier = {
+            factor = 2.0
+            has_tradition = "tr_discovery_finish"
+        }
+        modifier = {
+            factor = 2.50
+            has_ascension_perk = "ap_technological_ascendancy"
+        }
+        modifier = {
+            factor = 2.0
+            has_technology = "tech_supreme_physics"
+        }
+    }
+
+    ai_weight = {
+        factor = 1
+    }
+}
+
+tech_power_masseffect_02 = {
+    # Unlocks "MASSEFFECT_REACTOR_2" utility component
+
+    cost = 10000
+    area = physics
+    start_tech = no
+    category = { particles }
+    icon = "tech_power_masseffect_02"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_power_masseffect_01"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_power_masseffect_02_prereqfor.title
+            desc = tech_power_masseffect_02_prereqfor.desc
+        }
+    }
+
+    weight = 90
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = physics
+                has_level < 2
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                OR = {
+                    has_trait = "leader_trait_curator"
+                    has_trait = "leader_trait_scientist_chosen"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = physics
+                has_level > 2
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = physics
+                has_level > 3
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_level > 4
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_discovery_polytechnic_education"
+        }
+        modifier = {
+            factor = 1.50
+            has_tradition = "tr_discovery_faith_in_science"
+        }
+        modifier = {
+            factor = 1.75
+            has_tradition = "tr_discovery_finish"
+        }
+        modifier = {
+            factor = 2.0
+            has_ascension_perk = "ap_technological_ascendancy"
+        }
+        modifier = {
+            factor = 1.75
+            has_technology = "tech_supreme_physics"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = physics
+                has_level < 2
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+    }
+}
+
+tech_power_masseffect_03 = {
+    # Unlocks "MASSEFFECT_REACTOR_3" utility component
+
+    cost = 20000
+    area = physics
+    start_tech = no
+    category = { particles }
+    icon = "tech_power_masseffect_03"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_power_masseffect_02"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_power_masseffect_03_prereqfor.title
+            desc = tech_power_masseffect_03_prereqfor.desc
+        }
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = physics
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = physics
+                OR = {
+                    has_trait = "leader_trait_curator"
+                    has_trait = "leader_trait_scientist_chosen"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = physics
+                has_level > 3
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = physics
+                has_level > 4
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_tradition = "tr_discovery_faith_in_science"
+        }
+        modifier = {
+            factor = 1.35
+            has_tradition = "tr_discovery_finish"
+        }
+        modifier = {
+            factor = 1.55
+            has_ascension_perk = "ap_technological_ascendancy"
+        }
+        modifier = {
+            factor = 1.45
+            has_technology = "tech_supreme_physics"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = physics
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+    }
+}
+
+tech_power_masseffect_04 = {
+    # Unlocks "MASSEFFECT_REACTOR_4" utility component
+
+    cost = 35000
+    area = physics
+    start_tech = no
+    category = { particles }
+    icon = "tech_power_masseffect_04"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_power_masseffect_03"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_power_masseffect_04_prereqfor.title
+            desc = tech_power_masseffect_04_prereqfor.desc
+        }
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = physics
+                has_level < 4
+            }
+        }
+        modifier = {
+            factor = 1.05
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = physics
+                OR = {
+                    has_trait = "leader_trait_curator"
+                    has_trait = "leader_trait_scientist_chosen"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = physics
+                has_level > 4
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.10
+            has_tradition = "tr_discovery_finish"
+        }
+        modifier = {
+            factor = 1.25
+            has_ascension_perk = "ap_technological_ascendancy"
+        }
+        modifier = {
+            factor = 1.20
+            has_technology = "tech_supreme_physics"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = physics
+                has_level < 4
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+    }
+}
+
+tech_power_masseffect_05 = {
+    # Unlocks "MASSEFFECT_REACTOR_5" utility component
+
+    cost = 50000
+    area = physics
+    start_tech = no
+    category = { particles }
+    icon = "tech_power_masseffect_05"
+    tier = 3
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_power_masseffect_04"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_power_masseffect_05_prereqfor.title
+            desc = tech_power_masseffect_05_prereqfor.desc
+        }
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = physics
+                has_level < 5
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = physics
+                NOR = {
+                    has_trait = "leader_trait_expertise_particles"
+                    has_trait = "leader_trait_curator"
+                    has_trait = "leader_trait_scientist_chosen"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = physics
+                OR = {
+                    has_trait = "leader_trait_curator"
+                    has_trait = "leader_trait_scientist_chosen"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_tradition = "tr_discovery_finish"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_ascension_perk = "ap_technological_ascendancy"
+        }
+        modifier = {
+            factor = 1.10
+            has_technology = "tech_supreme_physics"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = physics
+                has_level < 5
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = physics
+                NOR = {
+                    has_trait = "leader_trait_expertise_particles"
+                    has_trait = "leader_trait_curator"
+                    has_trait = "leader_trait_scientist_chosen"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 0.50
+            NOT = {
+                has_tradition = "tr_discovery_finish"
+            }
+        }
+    }
+}
+
+tech_power_masseffect_06 = {
+    # Unlocks "MASSEFFECT_REACTOR_6" utility component
+
+    cost = 75000
+    area = physics
+    start_tech = no
+    category = { particles }
+    icon = "tech_power_masseffect_06"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_power_masseffect_05"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_power_masseffect_06_prereqfor.title
+            desc = tech_power_masseffect_06_prereqfor.desc
+        }
+    }
+
+    weight = 55
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = physics
+                has_level < 5
+            }
+        }
+        modifier = {
+            factor = 0.55
+            research_leader = {
+                area = physics
+                NOR = {
+                    has_trait = "leader_trait_expertise_particles"
+                    has_trait = "leader_trait_curator"
+                    has_trait = "leader_trait_scientist_chosen"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_discovery_finish"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                has_ascension_perk = "ap_technological_ascendancy"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_technology = "tech_supreme_physics"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = physics
+                has_level < 5
+            }
+        }
+        modifier = {
+            factor = 0.55
+            research_leader = {
+                area = physics
+                NOR = {
+                    has_trait = "leader_trait_expertise_particles"
+                    has_trait = "leader_trait_curator"
+                    has_trait = "leader_trait_scientist_chosen"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_discovery_finish"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                has_ascension_perk = "ap_technological_ascendancy"
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+MASSEFFECT_ANOMALY_CAT = {
+    desc = "MASSEFFECT_ANOMALY_CAT_DESC"
+    picture = "GFX_evt_space_debris"
+    level = 3
+
+    spawn_chance = {
+        modifier = {
+            add = 0
+        }
+    }
+
+    on_spawn = {
+    }
+
+    on_success = zog_anomaly_events.1
+}
