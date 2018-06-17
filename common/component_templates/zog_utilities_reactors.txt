@@ -100,7 +100,10 @@ utility_component_template = {
     power = @corvette_power_1
     cost = @corvette_cost_1
 
-    prerequisites = { "tech_power_masseffect_01" }
+    prerequisites = {
+        "tech_power_masseffect_01"
+        "tech_advanced_corvette_construction"
+    }
     component_set = "power_core"
     size_restriction = { corvette colonizer constructor science transport }
     upgrades_to = "CORVETTE_MASSEFFECT_REACTOR_2"
@@ -211,7 +214,10 @@ utility_component_template = {
     power = @destroyer_power_1
     cost = @destroyer_cost_1
 
-    prerequisites = { "tech_power_masseffect_01" }
+    prerequisites = {
+        "tech_power_masseffect_01"
+        "tech_advanced_destroyer_construction"
+    }
     component_set = "power_core"
     size_restriction = { destroyer }
     upgrades_to = "DESTROYER_MASSEFFECT_REACTOR_2"
@@ -322,7 +328,10 @@ utility_component_template = {
     power = @cruiser_power_1
     cost = @cruiser_cost_1
 
-    prerequisites = { "tech_power_masseffect_01" }
+    prerequisites = {
+        "tech_power_masseffect_01"
+        "tech_advanced_cruiser_construction"
+    }
     component_set = "power_core"
     size_restriction = { cruiser }
     upgrades_to = "CRUISER_MASSEFFECT_REACTOR_2"
@@ -433,7 +442,10 @@ utility_component_template = {
     power = @battleship_power_1
     cost = @battleship_cost_1
 
-    prerequisites = { "tech_power_masseffect_01" }
+    prerequisites = {
+        "tech_power_masseffect_01"
+        "tech_advanced_battleship_construction"
+    }
     component_set = "power_core"
     size_restriction = { battleship }
     upgrades_to = "BATTLESHIP_MASSEFFECT_REACTOR_2"
@@ -544,7 +556,10 @@ utility_component_template = {
     power = @titan_power_1
     cost = @titan_cost_1
 
-    prerequisites = { "tech_power_masseffect_01" }
+    prerequisites = {
+        "tech_power_masseffect_01"
+        "tech_advanced_titan_construction"
+    }
     component_set = "power_core"
     size_restriction = { titan }
     upgrades_to = "TITAN_MASSEFFECT_REACTOR_2"
@@ -657,6 +672,7 @@ utility_component_template = {
 
     prerequisites = {
         "tech_power_masseffect_01"
+        "tech_advanced_military_station_offense_01"
         "tech_advanced_military_station_defence_01"
     }
     class_restriction = { shipclass_military_station }
@@ -799,7 +815,11 @@ utility_component_template = {
     power = @starbase_power
     cost = 0
 
-    prerequisites = { "tech_power_masseffect_01" }
+    prerequisites = {
+        "tech_power_masseffect_01"
+        "tech_advanced_starbase_offense_01"
+        "tech_advanced_starbase_defence_01"
+    }
     class_restriction = { shipclass_starbase }
     component_set = "power_core"
     size_restriction = {

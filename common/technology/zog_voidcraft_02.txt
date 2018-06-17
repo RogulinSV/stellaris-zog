@@ -7,6 +7,8 @@
 #######################
 
 tech_advanced_starbase_offense_01 = {
+    # Unlocks "MASSEFFECT_REACTOR_1" utility component
+
     cost = 7500
     area = engineering
     start_tech = no
@@ -603,6 +605,8 @@ tech_advanced_starbase_offense_05 = {
 #######################
 
 tech_advanced_starbase_defence_01 = {
+    # Unlocks "MASSEFFECT_REACTOR_1" utility component
+
     cost = 7500
     area = engineering
     start_tech = no

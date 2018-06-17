@@ -153,6 +153,7 @@ tech_supreme_voidcraft = {
 
 tech_advanced_military_station_offense_01 = {
     # Unlocks "MILITARY_STATION_SMALL_ADVANCED_MID_01" section template
+    # Unlocks "MASSEFFECT_REACTOR_1" utility component
 
     cost = 2500
     area = engineering
