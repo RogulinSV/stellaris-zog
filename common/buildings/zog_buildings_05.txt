@@ -94,6 +94,97 @@ building_life_engineering_institute = {
     ai_replace = yes
 }
 
+building_synth_engineering_institute = {
+    is_listed = yes
+    empire_unique = no
+    planet_unique = yes
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_synth_engineering_institute"
+    tags = {}
+
+    base_buildtime = 950
+
+    prerequisites = {
+        "tech_synth_engineering"
+    }
+
+    cost = {
+        minerals = 3000
+        energy = 5000
+    }
+
+    required_resources = {
+        minerals = 15
+        energy = 30
+    }
+
+    produced_resources = {
+        engineering_research = 10
+        physics_research = 5
+    }
+
+    planet_modifier  = {
+        tile_resource_engineering_research_mult = 0.25
+        tile_resource_physics_research_mult = 0.15
+    }
+
+    adjacency_bonus = {
+        tile_building_resource_engineering_research_add = 3
+        tile_building_resource_physics_research_add = 2
+    }
+
+    potential = {
+        owner = {
+            OR = {
+                has_country_flag = "ROBOT_species_researched"
+                has_country_flag = "MACHINE_species_researched"
+                is_species_class = ROBOT
+                is_species_class = MACHINE
+            }
+        }
+    }
+
+    allow = {
+        #if = {
+        #    limit = {
+        #        owner = {
+        #            NOT = { has_authority = auth_machine_intelligence }
+        #        }
+        #    }
+        #    AND = {
+        #        custom_tooltip = {
+        #            fail_text = "requires_building_capital_3"
+        #            planet = {
+        #                has_building = "building_capital_3"
+        #            }
+        #        }
+        #    }
+        #    else = {
+        #        AND = {
+        #            custom_tooltip = {
+        #                fail_text = "requires_building_capital_3"
+        #                planet = {
+        #                    has_building = "building_machine_capital_3"
+        #                }
+        #            }
+        #        }
+        #    }
+        #}
+    }
+
+    ai_allow = {
+        always = yes
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+
+    ai_replace = yes
+}
+
 building_extraterrestrial_life_ministry = {
     is_listed = yes
     empire_unique = no
@@ -128,6 +219,78 @@ building_extraterrestrial_life_ministry = {
     planet_modifier = {
         pop_citizen_happiness = 0.05
         tile_resource_unity_mult = 0.10
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = { has_authority = "auth_machine_intelligence" }
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_building_capital_1"
+                planet = {
+                    OR = {
+                        has_building = "building_capital_1"
+                        has_building = "building_capital_2"
+                        has_building = "building_capital_3"
+                    }
+                }
+            }
+            else = {
+                custom_tooltip = {
+                    fail_text = "requires_building_capital_1"
+                    planet = {
+                        OR = {
+                            has_building = "building_machine_capital_1"
+                            has_building = "building_machine_capital_2"
+                            has_building = "building_machine_capital_3"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+building_synthetic_life_ministry = {
+    is_listed = yes
+    empire_unique = no
+    planet_unique = yes
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_synthetic_life_ministry"
+    tags = {}
+
+    base_buildtime = 360
+
+    prerequisites = {
+        # "tech_synth_engineering"
+    }
+
+    cost = {
+        minerals = 1500
+        energy = 500
+        influence = 50
+    }
+
+    required_resources = {
+        minerals = 10
+        energy = 10
+    }
+
+    produced_resources = {
+        unity = 1
+    }
+
+    planet_modifier = {
+        pop_robot_build_speed_mult = 0.25
+        pop_robot_build_cost_mult = -0.20
+        pop_robot_production_output = 0.15
+        pop_robot_upkeep_mult = -0.10
+        pop_robot_non_energy_output = -0.50
     }
 
     allow = {
