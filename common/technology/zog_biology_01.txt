@@ -636,6 +636,8 @@ tech_life_engineering = {
 }
 
 tech_synth_engineering = {
+    # Unlocks "Institute of Synth Engineering" building
+
     cost = 130000
     area = society
     start_tech = no
