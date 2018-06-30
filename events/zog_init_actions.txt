@@ -45,7 +45,7 @@ country_event = {
     id = zog_init_events.1
     title = zog_init_events.1.title
     desc = zog_init_events.1.desc
-    picture = GFX_evt_init_boost
+    picture = GFX_evt_init_economic_boost
     show_sound = event_administrative_work
     hide_window = no
     is_triggered_only = yes
@@ -78,7 +78,7 @@ country_event = {
     id = zog_init_events.2
     title = zog_init_events.2.title
     desc = zog_init_events.2.desc
-    picture = GFX_evt_init_boost
+    picture = GFX_evt_init_sciencific_boost
     show_sound = event_administrative_work
     hide_window = no
     is_triggered_only = yes
@@ -98,16 +98,11 @@ country_event = {
         name = zog_init_events.2.a
         custom_tooltip = zog_init_events.2.b.tooltip
         hidden_effect = {
-            add_research_option = "tech_synth_engineering"
-            add_tech_progress = {
-                tech = "tech_synth_engineering"
-                progress = 0.95
-            }
-            add_research_option = "tech_life_engineering"
-            add_tech_progress = {
-                tech = "tech_life_engineering"
-                progress = 0.95
-            }
+            give_technology = { tech = "tech_synth_engineering" message = no }
+            give_technology = { tech = "tech_life_engineering" message = no }
+            give_technology = { tech = "tech_generator_of_mass_effect_01" message = no }
+            give_technology = { tech = "tech_advanced_corvette_construction" message = no }
+            give_technology = { tech = "tech_advanced_destroyer_construction" message = no }
         }
     }
     option = {
@@ -120,7 +115,7 @@ country_event = {
     id = zog_init_events.3
     title = zog_init_events.3.title
     desc = zog_init_events.3.desc
-    picture = GFX_evt_init_boost
+    picture = GFX_evt_init_military_boost
     show_sound = event_administrative_work
     hide_window = no
     is_triggered_only = yes

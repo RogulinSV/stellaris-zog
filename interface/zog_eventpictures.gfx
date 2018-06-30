@@ -1,7 +1,19 @@
 spriteTypes = {
     spriteType = {
-        name = "GFX_evt_init_boost"
-        texturefile = "gfx/event_pictures/init_boost.dds"
+        name = "GFX_evt_init_economic_boost"
+        texturefile = "gfx/event_pictures/init_economic_boost.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_init_sciencific_boost"
+        texturefile = "gfx/event_pictures/init_sciencific_boost.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_init_military_boost"
+        texturefile = "gfx/event_pictures/init_military_boost.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
