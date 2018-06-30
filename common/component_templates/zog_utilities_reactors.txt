@@ -8,6 +8,9 @@
 @corvette_power_4 = 210         # +40
 @corvette_power_5 = 270         # +50
 @corvette_power_6 = 345         # +60
+@corvette_auxiliary_1 = 25
+@corvette_auxiliary_2 = 30
+@corvette_auxiliary_3 = 35
 
 @destroyer_power_1 = 175        # +35
 @destroyer_power_2 = 220        # +40
@@ -15,6 +18,10 @@
 @destroyer_power_4 = 380        # +60
 @destroyer_power_5 = 505        # +75
 @destroyer_power_6 = 640        # +90
+@destroyer_auxiliary_1 = 25
+@destroyer_auxiliary_2 = 30
+@destroyer_auxiliary_3 = 35
+@destroyer_auxiliary_4 = 40
 
 @cruiser_power_1 = 330          # +50
 @cruiser_power_2 = 420          # +60
@@ -22,6 +29,14 @@
 @cruiser_power_4 = 705          # +85
 @cruiser_power_5 = 800          # +100
 @cruiser_power_6 = 1155         # +125
+@cruiser_auxiliary_1 = 25
+@cruiser_auxiliary_2 = 30
+@cruiser_auxiliary_3 = 35
+@cruiser_auxiliary_4 = 40
+@cruiser_auxiliary_5 = 50
+@cruiser_auxiliary_6 = 60
+@cruiser_auxiliary_7 = 80
+@cruiser_auxiliary_8 = 100
 
 @battleship_power_1 = 615       # +65
 @battleship_power_2 = 800       # +80
@@ -29,6 +44,14 @@
 @battleship_power_4 = 1375      # +125
 @battleship_power_5 = 1700      # +150
 @battleship_power_6 = 2200      # +200
+@battleship_auxiliary_1 = 25
+@battleship_auxiliary_2 = 30
+@battleship_auxiliary_3 = 35
+@battleship_auxiliary_4 = 40
+@battleship_auxiliary_5 = 50
+@battleship_auxiliary_6 = 60
+@battleship_auxiliary_7 = 80
+@battleship_auxiliary_8 = 100
 
 @titan_power_1 = 1200           # +100
 @titan_power_2 = 1600           # +150
@@ -36,6 +59,14 @@
 @titan_power_4 = 2750           # +250
 @titan_power_5 = 3500           # +300
 @titan_power_6 = 4600           # +400
+@titan_auxiliary_1 = 50
+@titan_auxiliary_2 = 60
+@titan_auxiliary_3 = 70
+@titan_auxiliary_4 = 80
+@titan_auxiliary_5 = 100
+@titan_auxiliary_6 = 120
+@titan_auxiliary_7 = 135
+@titan_auxiliary_8 = 170
 
 @platform_power_1 = 250         # +50
 @platform_power_2 = 360         # +100
@@ -43,6 +74,14 @@
 @platform_power_4 = 640         # +200
 @platform_power_5 = 825         # +250
 @platform_power_6 = 1100        # +350
+@platform_auxiliary_1 = 25
+@platform_auxiliary_2 = 30
+@platform_auxiliary_3 = 35
+@platform_auxiliary_4 = 40
+@platform_auxiliary_5 = 50
+@platform_auxiliary_6 = 60
+@platform_auxiliary_7 = 80
+@platform_auxiliary_8 = 100
 
 @starbase_power = 15000         # +5000
 
@@ -66,6 +105,10 @@
 @cruiser_cost_4 = 190
 @cruiser_cost_5 = 220
 @cruiser_cost_6 = 250
+@cruiser_cost_7 = 280
+@cruiser_cost_8 = 310
+@cruiser_cost_9 = 350
+@cruiser_cost_10 = 390
 
 @battleship_cost_1 = 200
 @battleship_cost_2 = 260
@@ -73,13 +116,21 @@
 @battleship_cost_4 = 380
 @battleship_cost_5 = 440
 @battleship_cost_6 = 500
+@battleship_cost_7 = 560
+@battleship_cost_8 = 620
+@battleship_cost_9 = 700
+@battleship_cost_10 = 780
 
 @titan_cost_1 = 400
 @titan_cost_2 = 450
 @titan_cost_3 = 500
 @titan_cost_4 = 550
-@titan_cost_5 = 1054
-@titan_cost_6 = 1370
+@titan_cost_5 = 600
+@titan_cost_6 = 650
+@titan_cost_7 = 700
+@titan_cost_8 = 750
+@titan_cost_9 = 800
+@titan_cost_10 = 900
 
 @platform_cost_1 = 40
 @platform_cost_2 = 50
@@ -87,6 +138,10 @@
 @platform_cost_4 = 70
 @platform_cost_5 = 80
 @platform_cost_6 = 90
+@platform_cost_7 = 100
+@platform_cost_8 = 110
+@platform_cost_9 = 130
+@platform_cost_10 = 155
 
 ######################################
 ### Corvette reactor of Mass Effect
@@ -101,7 +156,7 @@ utility_component_template = {
     cost = @corvette_cost_1
 
     prerequisites = {
-        "tech_power_masseffect_01"
+        "tech_reactor_of_mass_effect_01"
         "tech_advanced_corvette_construction"
     }
     component_set = "power_core"
@@ -121,7 +176,7 @@ utility_component_template = {
     power = @corvette_power_2
     cost = @corvette_cost_2
 
-    prerequisites = { "tech_power_masseffect_02" }
+    prerequisites = { "tech_reactor_of_mass_effect_02" }
     component_set = "power_core"
     size_restriction = { corvette colonizer constructor science transport }
     upgrades_to = "CORVETTE_MASSEFFECT_REACTOR_3"
@@ -139,7 +194,7 @@ utility_component_template = {
     power = @corvette_power_3
     cost = @corvette_cost_3
 
-    prerequisites = { "tech_power_masseffect_03" }
+    prerequisites = { "tech_reactor_of_mass_effect_03" }
     component_set = "power_core"
     size_restriction = { corvette colonizer constructor science transport }
     upgrades_to = "CORVETTE_MASSEFFECT_REACTOR_4"
@@ -157,7 +212,7 @@ utility_component_template = {
     power = @corvette_power_4
     cost = @corvette_cost_4
 
-    prerequisites = { "tech_power_masseffect_04" }
+    prerequisites = { "tech_reactor_of_mass_effect_04" }
     component_set = "power_core"
     size_restriction = { corvette colonizer constructor science transport }
     upgrades_to = "CORVETTE_MASSEFFECT_REACTOR_5"
@@ -175,7 +230,7 @@ utility_component_template = {
     power = @corvette_power_5
     cost = @corvette_cost_5
 
-    prerequisites = { "tech_power_masseffect_05" }
+    prerequisites = { "tech_reactor_of_mass_effect_05" }
     component_set = "power_core"
     size_restriction = { corvette colonizer constructor science transport }
     upgrades_to = "CORVETTE_MASSEFFECT_REACTOR_6"
@@ -193,7 +248,7 @@ utility_component_template = {
     power = @corvette_power_6
     cost = @corvette_cost_6
 
-    prerequisites = { "tech_power_masseffect_06" }
+    prerequisites = { "tech_reactor_of_mass_effect_06" }
     component_set = "power_core"
     size_restriction = { corvette colonizer constructor science transport }
 
@@ -215,7 +270,7 @@ utility_component_template = {
     cost = @destroyer_cost_1
 
     prerequisites = {
-        "tech_power_masseffect_01"
+        "tech_reactor_of_mass_effect_01"
         "tech_advanced_destroyer_construction"
     }
     component_set = "power_core"
@@ -235,7 +290,7 @@ utility_component_template = {
     power = @destroyer_power_2
     cost = @destroyer_cost_2
 
-    prerequisites = { "tech_power_masseffect_02" }
+    prerequisites = { "tech_reactor_of_mass_effect_02" }
     component_set = "power_core"
     size_restriction = { destroyer }
     upgrades_to = "DESTROYER_MASSEFFECT_REACTOR_3"
@@ -253,7 +308,7 @@ utility_component_template = {
     power = @destroyer_power_3
     cost = @destroyer_cost_3
 
-    prerequisites = { "tech_power_masseffect_03" }
+    prerequisites = { "tech_reactor_of_mass_effect_03" }
     component_set = "power_core"
     size_restriction = { destroyer }
     upgrades_to = "DESTROYER_MASSEFFECT_REACTOR_4"
@@ -271,7 +326,7 @@ utility_component_template = {
     power = @destroyer_power_4
     cost = @destroyer_cost_4
 
-    prerequisites = { "tech_power_masseffect_04" }
+    prerequisites = { "tech_reactor_of_mass_effect_04" }
     component_set = "power_core"
     size_restriction = { destroyer }
     upgrades_to = "DESTROYER_MASSEFFECT_REACTOR_5"
@@ -289,7 +344,7 @@ utility_component_template = {
     power = @destroyer_power_5
     cost = @destroyer_cost_5
 
-    prerequisites = { "tech_power_masseffect_05" }
+    prerequisites = { "tech_reactor_of_mass_effect_05" }
     component_set = "power_core"
     size_restriction = { destroyer }
     upgrades_to = "DESTROYER_MASSEFFECT_REACTOR_6"
@@ -307,7 +362,7 @@ utility_component_template = {
     power = @destroyer_power_6
     cost = @destroyer_cost_6
 
-    prerequisites = { "tech_power_masseffect_06" }
+    prerequisites = { "tech_reactor_of_mass_effect_06" }
     component_set = "power_core"
     size_restriction = { destroyer }
 
@@ -329,7 +384,7 @@ utility_component_template = {
     cost = @cruiser_cost_1
 
     prerequisites = {
-        "tech_power_masseffect_01"
+        "tech_reactor_of_mass_effect_01"
         "tech_advanced_cruiser_construction"
     }
     component_set = "power_core"
@@ -349,7 +404,7 @@ utility_component_template = {
     power = @cruiser_power_2
     cost = @cruiser_cost_2
 
-    prerequisites = { "tech_power_masseffect_02" }
+    prerequisites = { "tech_reactor_of_mass_effect_02" }
     component_set = "power_core"
     size_restriction = { cruiser }
     upgrades_to = "CRUISER_MASSEFFECT_REACTOR_3"
@@ -367,7 +422,7 @@ utility_component_template = {
     power = @cruiser_power_3
     cost = @cruiser_cost_3
 
-    prerequisites = { "tech_power_masseffect_03" }
+    prerequisites = { "tech_reactor_of_mass_effect_03" }
     component_set = "power_core"
     size_restriction = { cruiser }
     upgrades_to = "CRUISER_MASSEFFECT_REACTOR_4"
@@ -385,7 +440,7 @@ utility_component_template = {
     power = @cruiser_power_4
     cost = @cruiser_cost_4
 
-    prerequisites = { "tech_power_masseffect_04" }
+    prerequisites = { "tech_reactor_of_mass_effect_04" }
     component_set = "power_core"
     size_restriction = { cruiser }
     upgrades_to = "CRUISER_MASSEFFECT_REACTOR_5"
@@ -403,7 +458,7 @@ utility_component_template = {
     power = @cruiser_power_5
     cost = @cruiser_cost_5
 
-    prerequisites = { "tech_power_masseffect_05" }
+    prerequisites = { "tech_reactor_of_mass_effect_05" }
     component_set = "power_core"
     size_restriction = { cruiser }
     upgrades_to = "CRUISER_MASSEFFECT_REACTOR_6"
@@ -421,7 +476,7 @@ utility_component_template = {
     power = @cruiser_power_6
     cost = @cruiser_cost_6
 
-    prerequisites = { "tech_power_masseffect_06" }
+    prerequisites = { "tech_reactor_of_mass_effect_06" }
     component_set = "power_core"
     size_restriction = { cruiser }
 
@@ -443,7 +498,7 @@ utility_component_template = {
     cost = @battleship_cost_1
 
     prerequisites = {
-        "tech_power_masseffect_01"
+        "tech_reactor_of_mass_effect_01"
         "tech_advanced_battleship_construction"
     }
     component_set = "power_core"
@@ -463,7 +518,7 @@ utility_component_template = {
     power = @battleship_power_2
     cost = @battleship_cost_2
 
-    prerequisites = { "tech_power_masseffect_02" }
+    prerequisites = { "tech_reactor_of_mass_effect_02" }
     component_set = "power_core"
     size_restriction = { battleship }
     upgrades_to = "BATTLESHIP_MASSEFFECT_REACTOR_3"
@@ -481,7 +536,7 @@ utility_component_template = {
     power = @battleship_power_3
     cost = @battleship_cost_3
 
-    prerequisites = { "tech_power_masseffect_03" }
+    prerequisites = { "tech_reactor_of_mass_effect_03" }
     component_set = "power_core"
     size_restriction = { battleship }
     upgrades_to = "BATTLESHIP_MASSEFFECT_REACTOR_4"
@@ -499,7 +554,7 @@ utility_component_template = {
     power = @battleship_power_4
     cost = @battleship_cost_4
 
-    prerequisites = { "tech_power_masseffect_04" }
+    prerequisites = { "tech_reactor_of_mass_effect_04" }
     component_set = "power_core"
     size_restriction = { battleship }
     upgrades_to = "BATTLESHIP_MASSEFFECT_REACTOR_5"
@@ -517,7 +572,7 @@ utility_component_template = {
     power = @battleship_power_5
     cost = @battleship_cost_5
 
-    prerequisites = { "tech_power_masseffect_05" }
+    prerequisites = { "tech_reactor_of_mass_effect_05" }
     component_set = "power_core"
     size_restriction = { battleship }
     upgrades_to = "BATTLESHIP_MASSEFFECT_REACTOR_6"
@@ -535,7 +590,7 @@ utility_component_template = {
     power = @battleship_power_6
     cost = @battleship_cost_6
 
-    prerequisites = { "tech_power_masseffect_06" }
+    prerequisites = { "tech_reactor_of_mass_effect_06" }
     component_set = "power_core"
     size_restriction = { battleship }
 
@@ -557,7 +612,7 @@ utility_component_template = {
     cost = @titan_cost_1
 
     prerequisites = {
-        "tech_power_masseffect_01"
+        "tech_reactor_of_mass_effect_01"
         "tech_advanced_titan_construction"
     }
     component_set = "power_core"
@@ -577,7 +632,7 @@ utility_component_template = {
     power = @titan_power_2
     cost = @titan_cost_2
 
-    prerequisites = { "tech_power_masseffect_02" }
+    prerequisites = { "tech_reactor_of_mass_effect_02" }
     component_set = "power_core"
     size_restriction = { titan }
     upgrades_to = "TITAN_MASSEFFECT_REACTOR_3"
@@ -595,7 +650,7 @@ utility_component_template = {
     power = @titan_power_3
     cost = @titan_cost_3
 
-    prerequisites = { "tech_power_masseffect_03" }
+    prerequisites = { "tech_reactor_of_mass_effect_03" }
     component_set = "power_core"
     size_restriction = { titan }
     upgrades_to = "TITAN_MASSEFFECT_REACTOR_4"
@@ -613,7 +668,7 @@ utility_component_template = {
     power = @titan_power_4
     cost = @titan_cost_4
 
-    prerequisites = { "tech_power_masseffect_04" }
+    prerequisites = { "tech_reactor_of_mass_effect_04" }
     component_set = "power_core"
     size_restriction = { titan }
     upgrades_to = "TITAN_MASSEFFECT_REACTOR_5"
@@ -631,7 +686,7 @@ utility_component_template = {
     power = @titan_power_5
     cost = @titan_cost_5
 
-    prerequisites = { "tech_power_masseffect_05" }
+    prerequisites = { "tech_reactor_of_mass_effect_05" }
     component_set = "power_core"
     size_restriction = { titan }
     upgrades_to = "TITAN_MASSEFFECT_REACTOR_6"
@@ -649,7 +704,7 @@ utility_component_template = {
     power = @titan_power_6
     cost = @titan_cost_6
 
-    prerequisites = { "tech_power_masseffect_06" }
+    prerequisites = { "tech_reactor_of_mass_effect_06" }
     component_set = "power_core"
     size_restriction = { titan }
 
@@ -671,7 +726,7 @@ utility_component_template = {
     cost = @platform_cost_1
 
     prerequisites = {
-        "tech_power_masseffect_01"
+        "tech_reactor_of_mass_effect_01"
         "tech_advanced_military_station_offense_01"
         "tech_advanced_military_station_defence_01"
     }
@@ -697,7 +752,7 @@ utility_component_template = {
     power = @platform_power_2
     cost = @platform_cost_2
 
-    prerequisites = { "tech_power_masseffect_02" }
+    prerequisites = { "tech_reactor_of_mass_effect_02" }
     class_restriction = { shipclass_military_station }
     size_restriction = {
         military_station_small
@@ -720,7 +775,7 @@ utility_component_template = {
     power = @platform_power_3
     cost = @platform_cost_3
 
-    prerequisites = { "tech_power_masseffect_03" }
+    prerequisites = { "tech_reactor_of_mass_effect_03" }
     class_restriction = { shipclass_military_station }
     size_restriction = {
         military_station_small
@@ -743,7 +798,7 @@ utility_component_template = {
     power = @platform_power_4
     cost = @platform_cost_4
 
-    prerequisites = { "tech_power_masseffect_04" }
+    prerequisites = { "tech_reactor_of_mass_effect_04" }
     class_restriction = { shipclass_military_station }
     size_restriction = {
         military_station_small
@@ -766,7 +821,7 @@ utility_component_template = {
     power = @platform_power_5
     cost = @platform_cost_5
 
-    prerequisites = { "tech_power_masseffect_05" }
+    prerequisites = { "tech_reactor_of_mass_effect_05" }
     class_restriction = { shipclass_military_station }
     size_restriction = {
         military_station_small
@@ -789,7 +844,7 @@ utility_component_template = {
     power = @platform_power_6
     cost = @platform_cost_6
 
-    prerequisites = { "tech_power_masseffect_06" }
+    prerequisites = { "tech_reactor_of_mass_effect_06" }
     class_restriction = { shipclass_military_station }
     size_restriction = {
         military_station_small
@@ -816,7 +871,7 @@ utility_component_template = {
     cost = 0
 
     prerequisites = {
-        "tech_power_masseffect_01"
+        "tech_reactor_of_mass_effect_01"
         "tech_advanced_starbase_offense_01"
         "tech_advanced_starbase_defence_01"
     }
@@ -844,7 +899,7 @@ utility_component_template = {
     power = @starbase_power
     cost = 0
 
-    prerequisites = { "tech_power_masseffect_02" }
+    prerequisites = { "tech_reactor_of_mass_effect_02" }
     class_restriction = { shipclass_starbase }
     component_set = "power_core"
     size_restriction = {
@@ -869,7 +924,7 @@ utility_component_template = {
     power = @starbase_power
     cost = 0
 
-    prerequisites = { "tech_power_masseffect_03" }
+    prerequisites = { "tech_reactor_of_mass_effect_03" }
     class_restriction = { shipclass_starbase }
     component_set = "power_core"
     size_restriction = {
@@ -894,7 +949,7 @@ utility_component_template = {
     power = @starbase_power
     cost = 0
 
-    prerequisites = { "tech_power_masseffect_04" }
+    prerequisites = { "tech_reactor_of_mass_effect_04" }
     class_restriction = { shipclass_starbase }
     component_set = "power_core"
     size_restriction = {
@@ -919,7 +974,7 @@ utility_component_template = {
     power = @starbase_power
     cost = 0
 
-    prerequisites = { "tech_power_masseffect_05" }
+    prerequisites = { "tech_reactor_of_mass_effect_05" }
     class_restriction = { shipclass_starbase }
     component_set = "power_core"
     size_restriction = {
@@ -944,7 +999,7 @@ utility_component_template = {
     power = @starbase_power
     cost = 0
 
-    prerequisites = { "tech_power_masseffect_06" }
+    prerequisites = { "tech_reactor_of_mass_effect_06" }
     class_restriction = { shipclass_starbase }
     component_set = "power_core"
     size_restriction = {
@@ -954,6 +1009,785 @@ utility_component_template = {
         starbase_starfortress
         starbase_citadel
     }
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+########################################
+### Corvette generator of Mass Effect
+########################################
+
+utility_component_template = {
+    key = "CORVETTE_MASSEFFECT_GENERATOR_1"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_1"
+    icon_frame = 1
+    power = @corvette_auxiliary_1
+    cost = @corvette_cost_3
+
+    prerequisites = {
+        "tech_generator_of_mass_effect_01"
+        "tech_advanced_corvette_construction"
+    }
+    component_set = "CORVETTE_MASSEFFECT_GENERATOR_1"
+    size_restriction = { corvette }
+    upgrades_to = "CORVETTE_MASSEFFECT_GENERATOR_2"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "CORVETTE_MASSEFFECT_GENERATOR_2"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_2"
+    icon_frame = 1
+    power = @corvette_auxiliary_2
+    cost = @corvette_cost_4
+
+    prerequisites = { "tech_reactor_of_mass_effect_02" }
+    component_set = "CORVETTE_MASSEFFECT_GENERATOR_2"
+    size_restriction = { corvette }
+    upgrades_to = "CORVETTE_MASSEFFECT_GENERATOR_3"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "CORVETTE_MASSEFFECT_GENERATOR_3"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_3"
+    icon_frame = 1
+    power = @corvette_auxiliary_3
+    cost = @corvette_cost_5
+
+    prerequisites = { "tech_reactor_of_mass_effect_03" }
+    size_restriction = { corvette }
+    component_set = "CORVETTE_MASSEFFECT_GENERATOR_3"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+#########################################
+### Destroyer generator of Mass Effect
+#########################################
+
+utility_component_template = {
+    key = "DESTROYER_MASSEFFECT_GENERATOR_1"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_1"
+    icon_frame = 1
+    power = @destroyer_auxiliary_1
+    cost = @destroyer_cost_3
+
+    prerequisites = {
+        "tech_generator_of_mass_effect_01"
+        "tech_advanced_destroyer_construction"
+    }
+    component_set = "DESTROYER_MASSEFFECT_GENERATOR_1"
+    size_restriction = { destroyer }
+    upgrades_to = "DESTROYER_MASSEFFECT_GENERATOR_2"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "DESTROYER_MASSEFFECT_GENERATOR_2"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_2"
+    icon_frame = 1
+    power = @destroyer_auxiliary_2
+    cost = @destroyer_cost_4
+
+    prerequisites = { "tech_generator_of_mass_effect_02" }
+    component_set = "DESTROYER_MASSEFFECT_GENERATOR_2"
+    size_restriction = { destroyer }
+    upgrades_to = "DESTROYER_MASSEFFECT_GENERATOR_3"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "DESTROYER_MASSEFFECT_GENERATOR_3"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_3"
+    icon_frame = 1
+    power = @destroyer_auxiliary_3
+    cost = @destroyer_cost_5
+
+    prerequisites = { "tech_generator_of_mass_effect_03" }
+    component_set = "DESTROYER_MASSEFFECT_GENERATOR_3"
+    size_restriction = { destroyer }
+    upgrades_to = "DESTROYER_MASSEFFECT_GENERATOR_4"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "DESTROYER_MASSEFFECT_GENERATOR_4"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_4"
+    icon_frame = 1
+    power = @destroyer_auxiliary_4
+    cost = @destroyer_cost_6
+
+    prerequisites = { "tech_generator_of_mass_effect_04" }
+    size_restriction = { destroyer }
+    component_set = "DESTROYER_MASSEFFECT_GENERATOR_4"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+#######################################
+### Cruiser generator of Mass Effect
+#######################################
+
+utility_component_template = {
+    key = "CRUISER_MASSEFFECT_GENERATOR_1"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_1"
+    icon_frame = 1
+    power = @cruiser_auxiliary_1
+    cost = @cruiser_cost_3
+
+    prerequisites = {
+        "tech_generator_of_mass_effect_01"
+        "tech_advanced_cruiser_construction"
+    }
+    component_set = "CRUISER_MASSEFFECT_GENERATOR_1"
+    size_restriction = { cruiser }
+    upgrades_to = "CRUISER_MASSEFFECT_GENERATOR_2"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "CRUISER_MASSEFFECT_GENERATOR_2"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_2"
+    icon_frame = 1
+    power = @cruiser_auxiliary_2
+    cost = @cruiser_cost_4
+
+    prerequisites = { "tech_generator_of_mass_effect_02" }
+    component_set = "CRUISER_MASSEFFECT_GENERATOR_2"
+    size_restriction = { cruiser }
+    upgrades_to = "CRUISER_MASSEFFECT_GENERATOR_3"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "CRUISER_MASSEFFECT_GENERATOR_3"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_3"
+    icon_frame = 1
+    power = @cruiser_auxiliary_3
+    cost = @cruiser_cost_5
+
+    prerequisites = { "tech_generator_of_mass_effect_03" }
+    component_set = "CRUISER_MASSEFFECT_GENERATOR_3"
+    size_restriction = { cruiser }
+    upgrades_to = "CRUISER_MASSEFFECT_GENERATOR_4"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "CRUISER_MASSEFFECT_GENERATOR_4"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_4"
+    icon_frame = 1
+    power = @cruiser_auxiliary_4
+    cost = @cruiser_cost_6
+
+    prerequisites = { "tech_generator_of_mass_effect_04" }
+    component_set = "CRUISER_MASSEFFECT_GENERATOR_4"
+    size_restriction = { cruiser }
+    upgrades_to = "CRUISER_MASSEFFECT_GENERATOR_5"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "CRUISER_MASSEFFECT_GENERATOR_5"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_5"
+    icon_frame = 1
+    power = @cruiser_auxiliary_5
+    cost = @cruiser_cost_7
+
+    prerequisites = { "tech_generator_of_mass_effect_05" }
+    component_set = "CRUISER_MASSEFFECT_GENERATOR_5"
+    size_restriction = { cruiser }
+    upgrades_to = "CRUISER_MASSEFFECT_GENERATOR_6"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "CRUISER_MASSEFFECT_GENERATOR_6"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_6"
+    icon_frame = 1
+    power = @cruiser_auxiliary_6
+    cost = @cruiser_cost_8
+
+    prerequisites = { "tech_generator_of_mass_effect_06" }
+    component_set = "CRUISER_MASSEFFECT_GENERATOR_6"
+    size_restriction = { cruiser }
+    upgrades_to = "CRUISER_MASSEFFECT_GENERATOR_7"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "CRUISER_MASSEFFECT_GENERATOR_7"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_7"
+    icon_frame = 1
+    power = @cruiser_auxiliary_7
+    cost = @cruiser_cost_9
+
+    prerequisites = { "tech_generator_of_mass_effect_07" }
+    component_set = "CRUISER_MASSEFFECT_GENERATOR_7"
+    size_restriction = { cruiser }
+    upgrades_to = "CRUISER_MASSEFFECT_GENERATOR_8"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "CRUISER_MASSEFFECT_GENERATOR_8"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_8"
+    icon_frame = 1
+    power = @cruiser_auxiliary_8
+    cost = @cruiser_cost_10
+
+    prerequisites = { "tech_generator_of_mass_effect_08" }
+    size_restriction = { cruiser }
+    component_set = "CRUISER_MASSEFFECT_GENERATOR_8"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+##########################################
+### Battleship generator of Mass Effect
+##########################################
+
+utility_component_template = {
+    key = "BATTLESHIP_MASSEFFECT_GENERATOR_1"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_1"
+    icon_frame = 1
+    power = @battleship_auxiliary_1
+    cost = @battleship_cost_3
+
+    prerequisites = {
+        "tech_generator_of_mass_effect_01"
+        "tech_advanced_battleship_construction"
+    }
+    component_set = "BATTLESHIP_MASSEFFECT_GENERATOR_1"
+    size_restriction = { battleship }
+    upgrades_to = "BATTLESHIP_MASSEFFECT_GENERATOR_2"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "BATTLESHIP_MASSEFFECT_GENERATOR_2"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_2"
+    icon_frame = 1
+    power = @battleship_auxiliary_2
+    cost = @battleship_cost_4
+
+    prerequisites = { "tech_generator_of_mass_effect_02" }
+    component_set = "BATTLESHIP_MASSEFFECT_GENERATOR_2"
+    size_restriction = { battleship }
+    upgrades_to = "BATTLESHIP_MASSEFFECT_GENERATOR_3"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "BATTLESHIP_MASSEFFECT_GENERATOR_3"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_3"
+    icon_frame = 1
+    power = @battleship_auxiliary_3
+    cost = @battleship_cost_5
+
+    prerequisites = { "tech_generator_of_mass_effect_03" }
+    component_set = "BATTLESHIP_MASSEFFECT_GENERATOR_3"
+    size_restriction = { battleship }
+    upgrades_to = "BATTLESHIP_MASSEFFECT_GENERATOR_4"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "BATTLESHIP_MASSEFFECT_GENERATOR_4"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_4"
+    icon_frame = 1
+    power = @battleship_auxiliary_4
+    cost = @battleship_cost_6
+
+    prerequisites = { "tech_generator_of_mass_effect_04" }
+    component_set = "BATTLESHIP_MASSEFFECT_GENERATOR_4"
+    size_restriction = { battleship }
+    upgrades_to = "BATTLESHIP_MASSEFFECT_GENERATOR_5"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "BATTLESHIP_MASSEFFECT_GENERATOR_5"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_5"
+    icon_frame = 1
+    power = @battleship_auxiliary_5
+    cost = @battleship_cost_7
+
+    prerequisites = { "tech_generator_of_mass_effect_05" }
+    component_set = "BATTLESHIP_MASSEFFECT_GENERATOR_5"
+    size_restriction = { battleship }
+    upgrades_to = "BATTLESHIP_MASSEFFECT_GENERATOR_6"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "BATTLESHIP_MASSEFFECT_GENERATOR_6"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_6"
+    icon_frame = 1
+    power = @battleship_auxiliary_6
+    cost = @battleship_cost_8
+
+    prerequisites = { "tech_generator_of_mass_effect_06" }
+    component_set = "BATTLESHIP_MASSEFFECT_GENERATOR_6"
+    size_restriction = { battleship }
+    upgrades_to = "BATTLESHIP_MASSEFFECT_GENERATOR_7"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "BATTLESHIP_MASSEFFECT_GENERATOR_7"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_7"
+    icon_frame = 1
+    power = @battleship_auxiliary_7
+    cost = @battleship_cost_9
+
+    prerequisites = { "tech_generator_of_mass_effect_07" }
+    component_set = "BATTLESHIP_MASSEFFECT_GENERATOR_7"
+    size_restriction = { battleship }
+    upgrades_to = "BATTLESHIP_MASSEFFECT_GENERATOR_8"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "BATTLESHIP_MASSEFFECT_GENERATOR_8"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_8"
+    icon_frame = 1
+    power = @battleship_auxiliary_8
+    cost = @battleship_cost_10
+
+    prerequisites = { "tech_generator_of_mass_effect_08" }
+    size_restriction = { battleship }
+    component_set = "BATTLESHIP_MASSEFFECT_GENERATOR_8"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+#####################################
+### Titan generator of Mass Effect
+#####################################
+
+utility_component_template = {
+    key = "TITAN_MASSEFFECT_GENERATOR_1"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_1"
+    icon_frame = 1
+    power = @titan_auxiliary_1
+    cost = @titan_cost_3
+
+    prerequisites = {
+        "tech_generator_of_mass_effect_01"
+        "tech_advanced_titan_construction"
+    }
+    component_set = "TITAN_MASSEFFECT_GENERATOR_1"
+    size_restriction = { titan }
+    upgrades_to = "TITAN_MASSEFFECT_GENERATOR_2"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "TITAN_MASSEFFECT_GENERATOR_2"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_2"
+    icon_frame = 1
+    power = @titan_auxiliary_2
+    cost = @titan_cost_4
+
+    prerequisites = { "tech_generator_of_mass_effect_02" }
+    component_set = "TITAN_MASSEFFECT_GENERATOR_2"
+    size_restriction = { titan }
+    upgrades_to = "TITAN_MASSEFFECT_GENERATOR_3"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "TITAN_MASSEFFECT_GENERATOR_3"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_3"
+    icon_frame = 1
+    power = @titan_auxiliary_3
+    cost = @titan_cost_5
+
+    prerequisites = { "tech_generator_of_mass_effect_03" }
+    component_set = "TITAN_MASSEFFECT_GENERATOR_3"
+    size_restriction = { titan }
+    upgrades_to = "TITAN_MASSEFFECT_GENERATOR_4"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "TITAN_MASSEFFECT_GENERATOR_4"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_4"
+    icon_frame = 1
+    power = @titan_auxiliary_4
+    cost = @titan_cost_6
+
+    prerequisites = { "tech_generator_of_mass_effect_04" }
+    component_set = "TITAN_MASSEFFECT_GENERATOR_4"
+    size_restriction = { titan }
+    upgrades_to = "TITAN_MASSEFFECT_GENERATOR_5"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "TITAN_MASSEFFECT_GENERATOR_5"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_5"
+    icon_frame = 1
+    power = @titan_auxiliary_5
+    cost = @titan_cost_7
+
+    prerequisites = { "tech_generator_of_mass_effect_05" }
+    component_set = "TITAN_MASSEFFECT_GENERATOR_5"
+    size_restriction = { titan }
+    upgrades_to = "TITAN_MASSEFFECT_GENERATOR_6"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "TITAN_MASSEFFECT_GENERATOR_6"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_6"
+    icon_frame = 1
+    power = @titan_auxiliary_6
+    cost = @titan_cost_8
+
+    prerequisites = { "tech_generator_of_mass_effect_06" }
+    component_set = "TITAN_MASSEFFECT_GENERATOR_6"
+    size_restriction = { titan }
+    upgrades_to = "TITAN_MASSEFFECT_GENERATOR_7"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "TITAN_MASSEFFECT_GENERATOR_7"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_7"
+    icon_frame = 1
+    power = @titan_auxiliary_7
+    cost = @titan_cost_9
+
+    prerequisites = { "tech_generator_of_mass_effect_07" }
+    component_set = "TITAN_MASSEFFECT_GENERATOR_7"
+    size_restriction = { titan }
+    upgrades_to = "TITAN_MASSEFFECT_GENERATOR_8"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "TITAN_MASSEFFECT_GENERATOR_8"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_8"
+    icon_frame = 1
+    power = @titan_auxiliary_8
+    cost = @titan_cost_10
+
+    prerequisites = { "tech_generator_of_mass_effect_08" }
+    component_set = "TITAN_MASSEFFECT_GENERATOR_8"
+    size_restriction = { titan }
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+########################################
+### Platform generator of Mass Effect
+########################################
+
+utility_component_template = {
+    key = "PLATFORM_MASSEFFECT_GENERATOR_1"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_1"
+    icon_frame = 1
+    power = @platform_auxiliary_1
+    cost = @platform_cost_3
+
+    prerequisites = {
+        "tech_generator_of_mass_effect_01"
+        "tech_advanced_military_station_offense_01"
+        "tech_advanced_military_station_defence_01"
+    }
+    class_restriction = { shipclass_military_station }
+    size_restriction = {
+        military_station_small
+        military_station_medium
+        military_station_large
+    }
+    component_set = "PLATFORM_MASSEFFECT_GENERATOR_1"
+    upgrades_to = "PLATFORM_MASSEFFECT_GENERATOR_2"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "PLATFORM_MASSEFFECT_GENERATOR_2"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_2"
+    icon_frame = 1
+    power = @platform_auxiliary_2
+    cost = @platform_cost_4
+
+    prerequisites = { "tech_generator_of_mass_effect_02" }
+    class_restriction = { shipclass_military_station }
+    size_restriction = {
+        military_station_small
+        military_station_medium
+        military_station_large
+    }
+    component_set = "PLATFORM_MASSEFFECT_GENERATOR_2"
+    upgrades_to = "PLATFORM_MASSEFFECT_GENERATOR_3"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "PLATFORM_MASSEFFECT_GENERATOR_3"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_3"
+    icon_frame = 1
+    power = @platform_auxiliary_3
+    cost = @platform_cost_5
+
+    prerequisites = { "tech_generator_of_mass_effect_03" }
+    class_restriction = { shipclass_military_station }
+    size_restriction = {
+        military_station_small
+        military_station_medium
+        military_station_large
+    }
+    component_set = "PLATFORM_MASSEFFECT_GENERATOR_3"
+    upgrades_to = "PLATFORM_MASSEFFECT_GENERATOR_4"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "PLATFORM_MASSEFFECT_GENERATOR_4"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_4"
+    icon_frame = 1
+    power = @platform_auxiliary_4
+    cost = @platform_cost_6
+
+    prerequisites = { "tech_generator_of_mass_effect_04" }
+    class_restriction = { shipclass_military_station }
+    size_restriction = {
+        military_station_small
+        military_station_medium
+        military_station_large
+    }
+    component_set = "PLATFORM_MASSEFFECT_GENERATOR_4"
+    upgrades_to = "PLATFORM_MASSEFFECT_GENERATOR_5"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "PLATFORM_MASSEFFECT_GENERATOR_5"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_5"
+    icon_frame = 1
+    power = @platform_auxiliary_5
+    cost = @platform_cost_7
+
+    prerequisites = { "tech_generator_of_mass_effect_05" }
+    class_restriction = { shipclass_military_station }
+    size_restriction = {
+        military_station_small
+        military_station_medium
+        military_station_large
+    }
+    component_set = "PLATFORM_MASSEFFECT_GENERATOR_5"
+    upgrades_to = "PLATFORM_MASSEFFECT_GENERATOR_6"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "PLATFORM_MASSEFFECT_GENERATOR_6"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_6"
+    icon_frame = 1
+    power = @platform_auxiliary_6
+    cost = @platform_cost_8
+
+    prerequisites = { "tech_generator_of_mass_effect_06" }
+    class_restriction = { shipclass_military_station }
+    size_restriction = {
+        military_station_small
+        military_station_medium
+        military_station_large
+    }
+    component_set = "PLATFORM_MASSEFFECT_GENERATOR_6"
+    upgrades_to = "PLATFORM_MASSEFFECT_GENERATOR_7"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "PLATFORM_MASSEFFECT_GENERATOR_7"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_7"
+    icon_frame = 1
+    power = @platform_auxiliary_7
+    cost = @platform_cost_9
+
+    prerequisites = { "tech_generator_of_mass_effect_07" }
+    class_restriction = { shipclass_military_station }
+    size_restriction = {
+        military_station_small
+        military_station_medium
+        military_station_large
+    }
+    component_set = "PLATFORM_MASSEFFECT_GENERATOR_7"
+    upgrades_to = "PLATFORM_MASSEFFECT_GENERATOR_8"
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+utility_component_template = {
+    key = "PLATFORM_MASSEFFECT_GENERATOR_8"
+    size = aux
+    icon = "GFX_ship_part_masseffect_generator_8"
+    icon_frame = 1
+    power = @platform_auxiliary_8
+    cost = @platform_cost_10
+
+    prerequisites = { "tech_generator_of_mass_effect_08" }
+    class_restriction = { shipclass_military_station }
+    size_restriction = {
+        military_station_small
+        military_station_medium
+        military_station_large
+    }
+    component_set = "PLATFORM_MASSEFFECT_GENERATOR_8"
 
     ai_weight = {
         weight = 1

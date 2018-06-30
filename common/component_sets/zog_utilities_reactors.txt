@@ -1,0 +1,257 @@
+#########################
+### Corvette generators
+#########################
+
+component_set = {
+    key = "CORVETTE_MASSEFFECT_GENERATOR_1"
+    icon = "GFX_ship_part_masseffect_generator_1"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "CORVETTE_MASSEFFECT_GENERATOR_2"
+    icon = "GFX_ship_part_masseffect_generator_2"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "CORVETTE_MASSEFFECT_GENERATOR_3"
+    icon = "GFX_ship_part_masseffect_generator_3"
+    icon_frame = 1
+}
+
+###########################
+### Destroyer generators
+###########################
+
+component_set = {
+    key = "DESTROYER_MASSEFFECT_GENERATOR_1"
+    icon = "GFX_ship_part_masseffect_generator_1"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "DESTROYER_MASSEFFECT_GENERATOR_2"
+    icon = "GFX_ship_part_masseffect_generator_2"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "DESTROYER_MASSEFFECT_GENERATOR_3"
+    icon = "GFX_ship_part_masseffect_generator_3"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "DESTROYER_MASSEFFECT_GENERATOR_4"
+    icon = "GFX_ship_part_masseffect_generator_4"
+    icon_frame = 1
+}
+
+#########################
+### Cruiser generators
+#########################
+
+component_set = {
+    key = "CRUISER_MASSEFFECT_GENERATOR_1"
+    icon = "GFX_ship_part_masseffect_generator_1"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "CRUISER_MASSEFFECT_GENERATOR_2"
+    icon = "GFX_ship_part_masseffect_generator_2"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "CRUISER_MASSEFFECT_GENERATOR_3"
+    icon = "GFX_ship_part_masseffect_generator_3"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "CRUISER_MASSEFFECT_GENERATOR_4"
+    icon = "GFX_ship_part_masseffect_generator_4"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "CRUISER_MASSEFFECT_GENERATOR_5"
+    icon = "GFX_ship_part_masseffect_generator_5"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "CRUISER_MASSEFFECT_GENERATOR_6"
+    icon = "GFX_ship_part_masseffect_generator_6"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "CRUISER_MASSEFFECT_GENERATOR_7"
+    icon = "GFX_ship_part_masseffect_generator_7"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "CRUISER_MASSEFFECT_GENERATOR_8"
+    icon = "GFX_ship_part_masseffect_generator_8"
+    icon_frame = 1
+}
+
+############################
+### Battleship generators
+############################
+
+component_set = {
+    key = "BATTLESHIP_MASSEFFECT_GENERATOR_1"
+    icon = "GFX_ship_part_masseffect_generator_1"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "BATTLESHIP_MASSEFFECT_GENERATOR_2"
+    icon = "GFX_ship_part_masseffect_generator_2"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "BATTLESHIP_MASSEFFECT_GENERATOR_3"
+    icon = "GFX_ship_part_masseffect_generator_3"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "BATTLESHIP_MASSEFFECT_GENERATOR_4"
+    icon = "GFX_ship_part_masseffect_generator_4"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "BATTLESHIP_MASSEFFECT_GENERATOR_5"
+    icon = "GFX_ship_part_masseffect_generator_5"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "BATTLESHIP_MASSEFFECT_GENERATOR_6"
+    icon = "GFX_ship_part_masseffect_generator_6"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "BATTLESHIP_MASSEFFECT_GENERATOR_7"
+    icon = "GFX_ship_part_masseffect_generator_7"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "BATTLESHIP_MASSEFFECT_GENERATOR_8"
+    icon = "GFX_ship_part_masseffect_generator_8"
+    icon_frame = 1
+}
+
+#######################
+### Titan generators
+#######################
+
+component_set = {
+    key = "TITAN_MASSEFFECT_GENERATOR_1"
+    icon = "GFX_ship_part_masseffect_generator_1"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "TITAN_MASSEFFECT_GENERATOR_2"
+    icon = "GFX_ship_part_masseffect_generator_2"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "TITAN_MASSEFFECT_GENERATOR_3"
+    icon = "GFX_ship_part_masseffect_generator_3"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "TITAN_MASSEFFECT_GENERATOR_4"
+    icon = "GFX_ship_part_masseffect_generator_4"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "TITAN_MASSEFFECT_GENERATOR_5"
+    icon = "GFX_ship_part_masseffect_generator_5"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "TITAN_MASSEFFECT_GENERATOR_6"
+    icon = "GFX_ship_part_masseffect_generator_6"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "TITAN_MASSEFFECT_GENERATOR_7"
+    icon = "GFX_ship_part_masseffect_generator_7"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "TITAN_MASSEFFECT_GENERATOR_8"
+    icon = "GFX_ship_part_masseffect_generator_8"
+    icon_frame = 1
+}
+
+##########################
+### Platform generators
+##########################
+
+component_set = {
+    key = "PLATFORM_MASSEFFECT_GENERATOR_1"
+    icon = "GFX_ship_part_masseffect_generator_1"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "PLATFORM_MASSEFFECT_GENERATOR_2"
+    icon = "GFX_ship_part_masseffect_generator_2"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "PLATFORM_MASSEFFECT_GENERATOR_3"
+    icon = "GFX_ship_part_masseffect_generator_3"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "PLATFORM_MASSEFFECT_GENERATOR_4"
+    icon = "GFX_ship_part_masseffect_generator_4"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "PLATFORM_MASSEFFECT_GENERATOR_5"
+    icon = "GFX_ship_part_masseffect_generator_5"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "PLATFORM_MASSEFFECT_GENERATOR_6"
+    icon = "GFX_ship_part_masseffect_generator_6"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "PLATFORM_MASSEFFECT_GENERATOR_7"
+    icon = "GFX_ship_part_masseffect_generator_7"
+    icon_frame = 1
+}
+
+component_set = {
+    key = "PLATFORM_MASSEFFECT_GENERATOR_8"
+    icon = "GFX_ship_part_masseffect_generator_8"
+    icon_frame = 1
+}

@@ -1,0 +1,9 @@
+masseffect_anomaly_chain = {
+    icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+    picture = GFX_evt_masseffect_detected
+    counter = {
+        anomalies_discovered = {
+            max = 8
+        }
+    }
+}

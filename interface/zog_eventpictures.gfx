@@ -240,8 +240,74 @@ spriteTypes = {
         alwaystransparent = yes
     }
     spriteType = {
+        name = "GFX_evt_masseffect_detected"
+        texturefile = "gfx/event_pictures/masseffect_detected.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
         name = "GFX_evt_masseffect_discovered"
         texturefile = "gfx/event_pictures/masseffect_discovered.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_masseffect_completed"
+        texturefile = "gfx/event_pictures/masseffect_completed.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_masseffect_project_a"
+        texturefile = "gfx/event_pictures/masseffect_project_a.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_masseffect_project_b"
+        texturefile = "gfx/event_pictures/masseffect_project_b.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_masseffect_project_c"
+        texturefile = "gfx/event_pictures/masseffect_project_c.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_masseffect_project_d"
+        texturefile = "gfx/event_pictures/masseffect_project_d.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_masseffect_project_e"
+        texturefile = "gfx/event_pictures/masseffect_project_e.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_masseffect_project_f"
+        texturefile = "gfx/event_pictures/masseffect_project_f.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_masseffect_project_g"
+        texturefile = "gfx/event_pictures/masseffect_project_g.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_masseffect_project_h"
+        texturefile = "gfx/event_pictures/masseffect_project_h.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_masseffect_extracted"
+        texturefile = "gfx/event_pictures/masseffect_extracted.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }

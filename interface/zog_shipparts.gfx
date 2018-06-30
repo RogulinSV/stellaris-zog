@@ -23,4 +23,36 @@ spriteTypes = {
         name = "GFX_ship_part_masseffect_reactor_6"
         texturefile = "gfx/interface/icons/ship_parts/ship_part_masseffect_reactor_6.dds"
     }
+    spriteType = {
+        name = "GFX_ship_part_masseffect_generator_1"
+        texturefile = "gfx/interface/icons/ship_parts/ship_part_masseffect_generator_1.dds"
+    }
+    spriteType = {
+        name = "GFX_ship_part_masseffect_generator_2"
+        texturefile = "gfx/interface/icons/ship_parts/ship_part_masseffect_generator_2.dds"
+    }
+    spriteType = {
+        name = "GFX_ship_part_masseffect_generator_3"
+        texturefile = "gfx/interface/icons/ship_parts/ship_part_masseffect_generator_3.dds"
+    }
+    spriteType = {
+        name = "GFX_ship_part_masseffect_generator_4"
+        texturefile = "gfx/interface/icons/ship_parts/ship_part_masseffect_generator_4.dds"
+    }
+    spriteType = {
+        name = "GFX_ship_part_masseffect_generator_5"
+        texturefile = "gfx/interface/icons/ship_parts/ship_part_masseffect_generator_5.dds"
+    }
+    spriteType = {
+        name = "GFX_ship_part_masseffect_generator_6"
+        texturefile = "gfx/interface/icons/ship_parts/ship_part_masseffect_generator_6.dds"
+    }
+    spriteType = {
+        name = "GFX_ship_part_masseffect_generator_7"
+        texturefile = "gfx/interface/icons/ship_parts/ship_part_masseffect_generator_7.dds"
+    }
+    spriteType = {
+        name = "GFX_ship_part_masseffect_generator_8"
+        texturefile = "gfx/interface/icons/ship_parts/ship_part_masseffect_generator_8.dds"
+    }
 }

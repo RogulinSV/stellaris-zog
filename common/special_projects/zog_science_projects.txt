@@ -1,0 +1,243 @@
+special_project = {
+    key = "MASSEFFECT_ANOMALY_PROJECT_A"
+    event_chain = "masseffect_anomaly_chain"
+    cost = 1000
+    days_to_research = 0
+    timelimit = -1
+    tech_department = engineering_technology
+    picture = GFX_evt_masseffect_project_a
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = ship_event
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+    }
+
+    on_success = {
+        log = "----- ON SUCCESS MASSEFFECT_ANOMALY_PROJECT_A"
+        print_project_scope_a = yes
+        owner = {
+            country_event = { id = zog_science_events.12 }
+            country_event = { id = zog_science_events.15 }
+        }
+    }
+
+    on_fail = {
+        log = "----- ON FAIL MASSEFFECT_ANOMALY_PROJECT_A"
+        print_project_scope_a = yes
+        country_event = { id = zog_science_events.11 }
+    }
+}
+
+special_project = {
+    key = "MASSEFFECT_ANOMALY_PROJECT_B"
+    event_chain = "masseffect_anomaly_chain"
+    cost = 2000
+    days_to_research = 0
+    timelimit = -1
+    tech_department = engineering_technology
+    picture = GFX_evt_masseffect_project_b
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = ship_event
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+    }
+
+    on_success = {
+        log = "----- ON SUCCESS MASSEFFECT_ANOMALY_PROJECT_B"
+        print_project_scope_a = yes
+        owner = {
+            country_event = { id = zog_science_events.12 }
+            country_event = { id = zog_science_events.15 }
+        }
+    }
+
+    on_fail = {
+        log = "----- ON FAIL MASSEFFECT_ANOMALY_PROJECT_B"
+        print_project_scope_a = yes
+        country_event = { id = zog_science_events.11 }
+    }
+}
+
+special_project = {
+    key = "MASSEFFECT_ANOMALY_PROJECT_C"
+    event_chain = "masseffect_anomaly_chain"
+    cost = 3000
+    days_to_research = 0
+    timelimit = -1
+    tech_department = engineering_technology
+    picture = GFX_evt_masseffect_project_c
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = ship_event
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+    }
+
+    on_success = {
+        log = "----- ON SUCCESS MASSEFFECT_ANOMALY_PROJECT_C"
+        print_project_scope_a = yes
+        owner = {
+            country_event = { id = zog_science_events.12 }
+            country_event = { id = zog_science_events.15 }
+        }
+    }
+
+    on_fail = {
+        log = "----- ON FAIL MASSEFFECT_ANOMALY_PROJECT_C"
+        print_project_scope_a = yes
+        country_event = { id = zog_science_events.11 }
+    }
+}
+
+special_project = {
+    key = "MASSEFFECT_ANOMALY_PROJECT_D"
+    event_chain = "masseffect_anomaly_chain"
+    cost = 4000
+    days_to_research = 0
+    timelimit = -1
+    tech_department = engineering_technology
+    picture = GFX_evt_masseffect_project_d
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = ship_event
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+    }
+
+    on_success = {
+        log = "----- ON SUCCESS MASSEFFECT_ANOMALY_PROJECT_D"
+        print_project_scope_a = yes
+        owner = {
+            country_event = { id = zog_science_events.12 }
+            country_event = { id = zog_science_events.15 }
+        }
+    }
+
+    on_fail = {
+        log = "----- ON FAIL MASSEFFECT_ANOMALY_PROJECT_D"
+        print_project_scope_a = yes
+        country_event = { id = zog_science_events.11 }
+    }
+}
+
+special_project = {
+    key = "MASSEFFECT_ANOMALY_PROJECT_E"
+    event_chain = "masseffect_anomaly_chain"
+    cost = 5000
+    days_to_research = 0
+    timelimit = -1
+    tech_department = engineering_technology
+    picture = GFX_evt_masseffect_project_e
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = ship_event
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+    }
+
+    on_success = {
+        log = "----- ON SUCCESS MASSEFFECT_ANOMALY_PROJECT_E"
+        print_project_scope_a = yes
+        owner = {
+            country_event = { id = zog_science_events.12 }
+            country_event = { id = zog_science_events.15 }
+        }
+    }
+
+    on_fail = {
+        log = "----- ON FAIL MASSEFFECT_ANOMALY_PROJECT_E"
+        print_project_scope_a = yes
+        country_event = { id = zog_science_events.11 }
+    }
+}
+
+special_project = {
+    key = "MASSEFFECT_ANOMALY_PROJECT_F"
+    event_chain = "masseffect_anomaly_chain"
+    cost = 6000
+    days_to_research = 0
+    timelimit = -1
+    tech_department = engineering_technology
+    picture = GFX_evt_masseffect_project_f
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = ship_event
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+    }
+
+    on_success = {
+        owner = {
+            country_event = { id = zog_science_events.12 }
+            country_event = { id = zog_science_events.15 }
+        }
+    }
+
+    on_fail = {
+        country_event = { id = zog_science_events.11 }
+    }
+}
+
+special_project = {
+    key = "MASSEFFECT_ANOMALY_PROJECT_G"
+    event_chain = "masseffect_anomaly_chain"
+    cost = 7000
+    days_to_research = 0
+    timelimit = -1
+    tech_department = engineering_technology
+    picture = GFX_evt_masseffect_project_g
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = ship_event
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+    }
+
+    on_success = {
+        owner = {
+            country_event = { id = zog_science_events.12 }
+            country_event = { id = zog_science_events.15 }
+        }
+    }
+
+    on_fail = {
+        country_event = { id = zog_science_events.11 }
+    }
+}
+
+special_project = {
+    key = "MASSEFFECT_ANOMALY_PROJECT_H"
+    event_chain = "masseffect_anomaly_chain"
+    cost = 8000
+    days_to_research = 0
+    timelimit = -1
+    tech_department = engineering_technology
+    picture = GFX_evt_masseffect_project_h
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = ship_event
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+    }
+
+    on_success = {
+        owner = {
+            country_event = { id = zog_science_events.12 }
+            country_event = { id = zog_science_events.15 }
+        }
+    }
+
+    on_fail = {
+        country_event = { id = zog_science_events.11 }
+    }
+}

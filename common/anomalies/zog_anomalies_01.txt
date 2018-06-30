@@ -1,6 +1,51 @@
-MASSEFFECT_ANOMALY_CAT = {
-    desc = "MASSEFFECT_ANOMALY_CAT_DESC"
-    picture = "GFX_evt_space_debris"
+MASSEFFECT_ANOMALY_INIT = {
+    desc = "MASSEFFECT_ANOMALY_INIT_DESC"
+    picture = "GFX_evt_masseffect_detected"
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            add = 0
+        }
+    }
+
+    on_spawn = {}
+    on_success = zog_science_events.0
+}
+
+MASSEFFECT_ANOMALY_CAT1 = {
+    desc = "MASSEFFECT_ANOMALY_CAT1_DESC"
+    picture = "GFX_evt_masseffect_detected"
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            add = 0
+        }
+    }
+
+    on_spawn = {}
+    on_success = zog_science_events.1
+}
+
+MASSEFFECT_ANOMALY_CAT2 = {
+    desc = "MASSEFFECT_ANOMALY_CAT2_DESC"
+    picture = "GFX_evt_masseffect_detected"
+    level = 2
+
+    spawn_chance = {
+        modifier = {
+            add = 0
+        }
+    }
+
+    on_spawn = {}
+    on_success = zog_science_events.2
+}
+
+MASSEFFECT_ANOMALY_CAT3 = {
+    desc = "MASSEFFECT_ANOMALY_CAT3_DESC"
+    picture = "GFX_evt_masseffect_detected"
     level = 3
 
     spawn_chance = {
@@ -9,8 +54,81 @@ MASSEFFECT_ANOMALY_CAT = {
         }
     }
 
-    on_spawn = {
+    on_spawn = {}
+    on_success = zog_science_events.3
+}
+
+MASSEFFECT_ANOMALY_CAT4 = {
+    desc = "MASSEFFECT_ANOMALY_CAT4_DESC"
+    picture = "GFX_evt_masseffect_detected"
+    level = 4
+
+    spawn_chance = {
+        modifier = {
+            add = 0
+        }
     }
 
-    on_success = zog_anomaly_events.1
+    on_spawn = {}
+    on_success = zog_science_events.4
+}
+
+MASSEFFECT_ANOMALY_CAT5 = {
+    desc = "MASSEFFECT_ANOMALY_CAT5_DESC"
+    picture = "GFX_evt_masseffect_detected"
+    level = 5
+
+    spawn_chance = {
+        modifier = {
+            add = 0
+        }
+    }
+
+    on_spawn = {}
+    on_success = zog_science_events.5
+}
+
+MASSEFFECT_ANOMALY_CAT6 = {
+    desc = "MASSEFFECT_ANOMALY_CAT6_DESC"
+    picture = "GFX_evt_masseffect_detected"
+    level = 6
+
+    spawn_chance = {
+        modifier = {
+            add = 0
+        }
+    }
+
+    on_spawn = {}
+    on_success = zog_science_events.6
+}
+
+MASSEFFECT_ANOMALY_CAT7 = {
+    desc = "MASSEFFECT_ANOMALY_CAT7_DESC"
+    picture = "GFX_evt_masseffect_detected"
+    level = 7
+
+    spawn_chance = {
+        modifier = {
+            add = 0
+        }
+    }
+
+    on_spawn = {}
+    on_success = zog_science_events.7
+}
+
+MASSEFFECT_ANOMALY_CAT8 = {
+    desc = "MASSEFFECT_ANOMALY_CAT8_DESC"
+    picture = "GFX_evt_masseffect_detected"
+    level = 8
+
+    spawn_chance = {
+        modifier = {
+            add = 0
+        }
+    }
+
+    on_spawn = {}
+    on_success = zog_science_events.8
 }

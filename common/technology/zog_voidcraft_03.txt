@@ -6,6 +6,7 @@ tech_advanced_corvette_construction = {
     # Unlocks "CORVETTE_ADVANCED_MID_01" section template
     # Unlocks "CORVETTE_ADVANCED_MID_02" section template
     # Unlocks "MASSEFFECT_REACTOR_1" utility component
+    # Unlocks "MASSEFFECT_GENERATOR_1" utility component
 
     cost = 2500
     area = engineering
@@ -341,6 +342,7 @@ tech_advanced_destroyer_construction = {
     # Unlocks "DESTROYER_ADVANCED_STERN_02" section template
     # Unlocks "DESTROYER_ADVANCED_STERN_03" section template
     # Unlocks "MASSEFFECT_REACTOR_1" utility component
+    # Unlocks "MASSEFFECT_GENERATOR_1" utility component
 
     cost = 2500
     area = engineering
@@ -693,6 +695,7 @@ tech_advanced_cruiser_construction = {
     # Unlocks "CRUISER_ADVANCED_STERN_02" section template
     # Unlocks "CRUISER_ADVANCED_STERN_03" section template
     # Unlocks "MASSEFFECT_REACTOR_1" utility component
+    # Unlocks "MASSEFFECT_GENERATOR_1" utility component
 
     cost = 2500
     area = engineering
@@ -1060,6 +1063,7 @@ tech_advanced_battleship_construction = {
     # Unlocks "BATTLESHIP_ADVANCED_STERN_03" section template
     # Unlocks "BATTLESHIP_ADVANCED_STERN_04" section template
     # Unlocks "MASSEFFECT_REACTOR_1" utility component
+    # Unlocks "MASSEFFECT_GENERATOR_1" utility component
 
     cost = 2500
     area = engineering
@@ -1406,6 +1410,7 @@ tech_infinitum_battleship_construction = {
 
 tech_advanced_titan_construction = {
     # Unlocks "MASSEFFECT_REACTOR_1" utility component
+    # Unlocks "MASSEFFECT_GENERATOR_1" utility component
 
     cost = 15000
     area = engineering
