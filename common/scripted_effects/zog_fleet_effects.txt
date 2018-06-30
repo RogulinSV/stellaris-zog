@@ -1533,3 +1533,38 @@ create_system_pirate_fleet_01 = {
         }
     }
 }
+
+#########################
+### Space Drones fleet
+#########################
+
+# This = Planet
+create_drone_fleet_01 = {
+    event_target:drone_country = {
+        save_event_target_as = mining_drones
+        create_fleet = {
+            name = "NAME_Ancient_Mining_Drones"
+            effect = {
+                set_owner = event_target:drone_country
+                while = {
+                    count = 5
+                    create_ship = {
+                        name = random
+                        design = "NAME_Ancient_Mining_Drone"
+                    }
+                }
+                while = {
+                    count = 15
+                    create_ship = {
+                        name = random
+                        design = "NAME_Ancient_Combat_Drone"
+                    }
+                }
+                set_location = prevprev
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 450
+            }
+        }
+    }
+}

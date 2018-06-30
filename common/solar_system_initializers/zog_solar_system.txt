@@ -570,7 +570,9 @@ edem_neighbor_system_01 = {
             init_effect = {
                 planet_set_random_blockers_01 = yes
                 planet_set_random_resources_02 = yes
-                add_anomaly = MASSEFFECT_ANOMALY_CAT
+                add_anomaly = MASSEFFECT_ANOMALY_INIT
+                create_drone_country = yes
+                create_drone_fleet_01 = yes
             }
         }
 
