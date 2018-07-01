@@ -15,8 +15,6 @@ special_project = {
     }
 
     on_success = {
-        log = "----- ON SUCCESS MASSEFFECT_ANOMALY_PROJECT_A"
-        print_project_scope_a = yes
         owner = {
             country_event = { id = zog_science_events.12 }
             country_event = { id = zog_science_events.15 }
@@ -24,8 +22,6 @@ special_project = {
     }
 
     on_fail = {
-        log = "----- ON FAIL MASSEFFECT_ANOMALY_PROJECT_A"
-        print_project_scope_a = yes
         country_event = { id = zog_science_events.11 }
     }
 }
@@ -47,8 +43,6 @@ special_project = {
     }
 
     on_success = {
-        log = "----- ON SUCCESS MASSEFFECT_ANOMALY_PROJECT_B"
-        print_project_scope_a = yes
         owner = {
             country_event = { id = zog_science_events.12 }
             country_event = { id = zog_science_events.15 }
@@ -56,8 +50,6 @@ special_project = {
     }
 
     on_fail = {
-        log = "----- ON FAIL MASSEFFECT_ANOMALY_PROJECT_B"
-        print_project_scope_a = yes
         country_event = { id = zog_science_events.11 }
     }
 }
@@ -79,8 +71,6 @@ special_project = {
     }
 
     on_success = {
-        log = "----- ON SUCCESS MASSEFFECT_ANOMALY_PROJECT_C"
-        print_project_scope_a = yes
         owner = {
             country_event = { id = zog_science_events.12 }
             country_event = { id = zog_science_events.15 }
@@ -88,8 +78,6 @@ special_project = {
     }
 
     on_fail = {
-        log = "----- ON FAIL MASSEFFECT_ANOMALY_PROJECT_C"
-        print_project_scope_a = yes
         country_event = { id = zog_science_events.11 }
     }
 }
@@ -111,8 +99,6 @@ special_project = {
     }
 
     on_success = {
-        log = "----- ON SUCCESS MASSEFFECT_ANOMALY_PROJECT_D"
-        print_project_scope_a = yes
         owner = {
             country_event = { id = zog_science_events.12 }
             country_event = { id = zog_science_events.15 }
@@ -120,8 +106,6 @@ special_project = {
     }
 
     on_fail = {
-        log = "----- ON FAIL MASSEFFECT_ANOMALY_PROJECT_D"
-        print_project_scope_a = yes
         country_event = { id = zog_science_events.11 }
     }
 }
@@ -143,8 +127,6 @@ special_project = {
     }
 
     on_success = {
-        log = "----- ON SUCCESS MASSEFFECT_ANOMALY_PROJECT_E"
-        print_project_scope_a = yes
         owner = {
             country_event = { id = zog_science_events.12 }
             country_event = { id = zog_science_events.15 }
@@ -152,8 +134,6 @@ special_project = {
     }
 
     on_fail = {
-        log = "----- ON FAIL MASSEFFECT_ANOMALY_PROJECT_E"
-        print_project_scope_a = yes
         country_event = { id = zog_science_events.11 }
     }
 }
