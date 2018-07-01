@@ -1,6 +1,6 @@
-###########################
+#########################
 ## Engineering / Boost
-###########################
+#########################
 
 tech_engineering_theory = {
     cost = 5000
@@ -225,7 +225,7 @@ tech_hydroponics_theory = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NAND = {
+            NOR = {
                 check_variable = {
                     which = "hydroponics_farm_1_built"
                     value > 5
@@ -288,7 +288,7 @@ tech_hydroponics_science = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NAND = {
+            NOR = {
                 check_variable = {
                     which = "hydroponics_farm_1_built"
                     value > 10
@@ -351,7 +351,7 @@ tech_hydroponics_doctrine = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NAND = {
+            NOR = {
                 check_variable = {
                     which = "hydroponics_module_built"
                     value > 0
@@ -418,7 +418,7 @@ tech_hydroponics_transcendence = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NAND = {
+            NOR = {
                 check_variable = {
                     which = "hydroponics_module_built"
                     value > 4
@@ -484,7 +484,7 @@ tech_hydroponics_infinitum = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NAND = {
+            NOR = {
                 check_variable = {
                     which = "hydroponics_module_built"
                     value > 9
@@ -553,7 +553,7 @@ tech_electric_theory = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NAND = {
+            NOR = {
                 check_variable = {
                     which = "power_plant_1_built"
                     value > 5
@@ -614,7 +614,7 @@ tech_electric_science = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NAND = {
+            NOR = {
                 check_variable = {
                     which = "power_plant_1_built"
                     value > 10
@@ -676,7 +676,7 @@ tech_electric_doctrine = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NAND = {
+            NOR = {
                 check_variable = {
                     which = "solar_panel_module_built"
                     value > 0
@@ -741,7 +741,7 @@ tech_electric_transcendence = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NAND = {
+            NOR = {
                 check_variable = {
                     which = "solar_panel_module_built"
                     value > 4
@@ -805,7 +805,7 @@ tech_electric_infinitum = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NAND = {
+            NOR = {
                 check_variable = {
                     which = "solar_panel_module_built"
                     value > 9
@@ -880,7 +880,7 @@ tech_mining_theory = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NAND = {
+            NOR = {
                 check_variable = {
                     which = "mining_network_1_built"
                     value > 5
@@ -947,7 +947,7 @@ tech_mining_science = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NAND = {
+            NOR = {
                 check_variable = {
                     which = "mining_network_1_built"
                     value > 10
@@ -1014,7 +1014,7 @@ tech_mining_doctrine = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NAND = {
+            NOR = {
                 check_variable = {
                     which = "mining_network_1_built"
                     value > 20
@@ -1081,7 +1081,7 @@ tech_mining_transcendence = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NAND = {
+            NOR = {
                 check_variable = {
                     which = "mining_network_1_built"
                     value > 40
@@ -1147,7 +1147,7 @@ tech_mining_infinitum = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NAND = {
+            NOR = {
                 check_variable = {
                     which = "mining_network_1_built"
                     value > 80
