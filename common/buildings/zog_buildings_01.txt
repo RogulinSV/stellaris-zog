@@ -89,7 +89,7 @@ building_business_city_01 = {
                 }
             }
             planet = {
-                NAND = {
+                NOR = {
                     is_planet_class = pc_tropical
                     is_planet_class = pc_continental
                     is_planet_class = pc_tundra
@@ -233,7 +233,7 @@ building_business_city_02 = {
                 }
             }
             planet = {
-                NAND = {
+                NOR = {
                     is_planet_class = pc_tropical
                     is_planet_class = pc_continental
                     is_planet_class = pc_tundra
@@ -375,7 +375,7 @@ building_business_city_03 = {
                 }
             }
             planet = {
-                NAND = {
+                NOR = {
                     is_planet_class = pc_tropical
                     is_planet_class = pc_continental
                     is_planet_class = pc_tundra
@@ -514,7 +514,7 @@ building_scientific_city_01 = {
                 }
             }
             planet = {
-                NAND = {
+                NOR = {
                     is_planet_class = pc_tropical
                     is_planet_class = pc_continental
                     is_planet_class = pc_tundra
@@ -652,7 +652,7 @@ building_scientific_city_02 = {
                 }
             }
             planet = {
-                NAND = {
+                NOR = {
                     is_planet_class = pc_tropical
                     is_planet_class = pc_continental
                     is_planet_class = pc_tundra
@@ -790,7 +790,7 @@ building_scientific_city_03 = {
                 }
             }
             planet = {
-                NAND = {
+                NOR = {
                     is_planet_class = pc_tropical
                     is_planet_class = pc_continental
                     is_planet_class = pc_tundra
@@ -936,7 +936,7 @@ building_industrial_city_01 = {
                 }
             }
             planet = {
-                NAND = {
+                NOR = {
                     is_planet_class = pc_tropical
                     is_planet_class = pc_continental
                     is_planet_class = pc_tundra
@@ -1081,7 +1081,7 @@ building_industrial_city_02a = {
                 }
             }
             planet = {
-                NAND = {
+                NOR = {
                     is_planet_class = pc_tropical
                     is_planet_class = pc_continental
                     is_planet_class = pc_tundra
@@ -1224,7 +1224,7 @@ building_industrial_city_02b = {
                 }
             }
             planet = {
-                NAND = {
+                NOR = {
                     is_planet_class = pc_tropical
                     is_planet_class = pc_continental
                     is_planet_class = pc_tundra
@@ -1363,7 +1363,7 @@ building_industrial_city_03a = {
                 }
             }
             planet = {
-                NAND = {
+                NOR = {
                     is_planet_class = pc_tropical
                     is_planet_class = pc_continental
                     is_planet_class = pc_tundra
@@ -1501,7 +1501,7 @@ building_industrial_city_03b = {
                 }
             }
             planet = {
-                NAND = {
+                NOR = {
                     is_planet_class = pc_tropical
                     is_planet_class = pc_continental
                     is_planet_class = pc_tundra
@@ -1641,7 +1641,7 @@ building_atlantis_city_01 = {
                 }
             }
             planet = {
-                NAND = {
+                NOR = {
                     is_planet_class = pc_ocean
                     # @depend "Planetary Diversity" (id:819148835)
                     is_planet_class = pc_tidallylocked
@@ -1815,7 +1815,7 @@ building_atlantis_city_02 = {
                 }
             }
             planet = {
-                NAND = {
+                NOR = {
                     is_planet_class = pc_ocean
                     # @depend "Planetary Diversity" (id:819148835)
                     is_planet_class = pc_tidallylocked
@@ -1968,7 +1968,7 @@ building_atlantis_city_03 = {
                 }
             }
             planet = {
-                NAND = {
+                NOR = {
                     is_planet_class = pc_ocean
                     # @depend "Planetary Diversity" (id:819148835)
                     is_planet_class = pc_tidallylocked

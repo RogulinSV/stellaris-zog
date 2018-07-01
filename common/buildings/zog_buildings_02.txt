@@ -73,7 +73,7 @@ building_windmill_01 = {
                 }
             }
             planet = {
-                NAND = {
+                NOR = {
                     is_planet_class = pc_desert
                     is_planet_class = pc_arid
                     is_planet_class = pc_savannah
@@ -185,7 +185,7 @@ building_windmill_02 = {
                 }
             }
             planet = {
-                NAND = {
+                NOR = {
                     is_planet_class = pc_desert
                     is_planet_class = pc_arid
                     is_planet_class = pc_savannah
@@ -291,7 +291,7 @@ building_windmill_03 = {
                 }
             }
             planet = {
-                NAND = {
+                NOR = {
                     is_planet_class = pc_desert
                     is_planet_class = pc_arid
                     is_planet_class = pc_savannah
@@ -466,7 +466,7 @@ building_thermal_borehole_01 = {
                 }
             }
             planet = {
-                NAND = {
+                NOR = {
                     is_planet_class = pc_desert
                     is_planet_class = pc_arid
                     # @depend "Planetary Diversity" (id:819148835)
@@ -679,7 +679,7 @@ building_thermal_borehole_02 = {
                 }
             }
             planet = {
-                NAND = {
+                NOR = {
                     is_planet_class = pc_desert
                     is_planet_class = pc_arid
                     # @depend "Planetary Diversity" (id:819148835)
