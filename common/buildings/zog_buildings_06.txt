@@ -1,0 +1,386 @@
+################################
+## Buildings / Mining Factory
+################################
+
+@factory1time = 220
+@factory1cost = 300
+@factory1produce1 = 10
+@factory1produce2 = 2
+@factory1mult1 = 0.25
+@factory1mult2 = 0.15
+@factory1upkeep = 4
+
+@factory2time = 360
+@factory2cost = 600
+@factory2produce1 = 12
+@factory2produce2 = 2
+@factory2mult1 = 0.25
+@factory2mult2 = 0.15
+@factory2upkeep = 6
+
+@factory3time = 480
+@factory3cost = 900
+@factory3produce1 = 14
+@factory3produce2 = 2
+@factory3mult1 = 0.25
+@factory3mult2 = 0.15
+@factory3upkeep = 8
+
+building_mining_factory_1 = {
+    is_listed = yes
+    empire_unique = no
+    planet_unique = no
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_mining_factory_1"
+    tags = { mining_network }
+
+    base_buildtime = @factory1time
+    cost = {
+        minerals = @factory1cost
+        energy = @factory1cost
+    }
+
+    prerequisites = {
+        "tech_mining_factory_1"
+    }
+
+    upgrades = {
+        "building_mining_factory_2"
+    }
+
+    produced_resources = {
+        minerals = @factory1produce1
+    }
+    required_resources = {
+        energy = @factory1upkeep
+    }
+
+    produced_resource_trigger = {
+        modifier = {
+            has_tradition = "tr_prosperity_trans_stellar_corporations"
+            resources = {
+                minerals = @factory1produce2
+                energy = @factory1produce2
+            }
+        }
+        modifier = {
+            has_tradition = "tr_prosperity_pursuit_of_profit"
+            resources = {
+                minerals = @factory1produce2
+                energy = @factory1produce2
+            }
+        }
+    }
+
+    planet_modifier_with_pop_trigger = {
+        key = building_mining_factory_amplifier
+        potential = {
+            is_robot_pop = yes
+            is_enslaved = no
+        }
+        modifier = {
+            tile_resource_minerals_mult = @factory1mult1
+            tile_resource_energy_mult = @factory1mult2
+        }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = { has_authority = auth_machine_intelligence }
+                }
+            }
+            AND = {
+                custom_tooltip = {
+                    text = "requires_building_capital_3"
+                    planet = {
+                        has_building = "building_capital_3"
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_minerals_1"
+                    tile = {
+                        has_resource = {
+                            type = minerals
+                            amount > 0
+                        }
+                    }
+                }
+            }
+        }
+        if = {
+            limit = {
+                owner = { has_authority = auth_machine_intelligence }
+            }
+            AND = {
+                custom_tooltip = {
+                    text = "requires_building_machine_capital_3"
+                    planet = {
+                        has_building = "building_machine_capital_3"
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_minerals_1"
+                    tile = {
+                        has_resource = {
+                            type = minerals
+                            amount > 0
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        is_slave_tile_or_planet = no
+        is_robot_tile_or_planet = no
+    }
+
+    ai_weight = {
+        factor = 100
+    }
+
+    ai_replace = yes
+}
+
+building_mining_factory_2 = {
+    is_listed = no
+    empire_unique = no
+    planet_unique = no
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_mining_factory_2"
+    tags = { mining_network }
+
+    base_buildtime = @factory2time
+    cost = {
+        minerals = @factory2cost
+        energy = @factory2cost
+    }
+
+    prerequisites = {
+        "tech_mining_factory_2"
+    }
+
+    upgrades = {
+        "building_mining_factory_3"
+    }
+
+    produced_resources = {
+        minerals = @factory2produce1
+    }
+    required_resources = {
+        energy = @factory2upkeep
+    }
+
+    produced_resource_trigger = {
+        modifier = {
+            has_tradition = "tr_prosperity_trans_stellar_corporations"
+            resources = {
+                minerals = @factory2produce2
+                energy = @factory2produce2
+            }
+        }
+        modifier = {
+            has_tradition = "tr_prosperity_pursuit_of_profit"
+            resources = {
+                minerals = @factory2produce2
+                energy = @factory2produce2
+            }
+        }
+    }
+
+    planet_modifier_with_pop_trigger = {
+        key = building_mining_factory_amplifier
+        potential = {
+            is_robot_pop = yes
+            is_enslaved = no
+        }
+        modifier = {
+            tile_resource_minerals_mult = @factory2mult1
+            tile_resource_energy_mult = @factory2mult2
+        }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = { has_authority = auth_machine_intelligence }
+                }
+            }
+            AND = {
+                custom_tooltip = {
+                    text = "requires_building_capital_3"
+                    planet = {
+                        has_building = "building_capital_3"
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_minerals_1"
+                    tile = {
+                        has_resource = {
+                            type = minerals
+                            amount > 0
+                        }
+                    }
+                }
+            }
+        }
+        if = {
+            limit = {
+                owner = { has_authority = auth_machine_intelligence }
+            }
+            AND = {
+                custom_tooltip = {
+                    text = "requires_building_machine_capital_3"
+                    planet = {
+                        has_building = "building_machine_capital_3"
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_minerals_1"
+                    tile = {
+                        has_resource = {
+                            type = minerals
+                            amount > 0
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        is_slave_tile_or_planet = no
+        is_robot_tile_or_planet = no
+    }
+
+    ai_weight = {
+        factor = 100
+    }
+
+    ai_replace = yes
+}
+
+building_mining_factory_3 = {
+    is_listed = no
+    empire_unique = no
+    planet_unique = no
+    requires_pop = no
+    event_building = no
+    can_demolish = yes
+    icon = "building_mining_factory_3"
+    tags = { mining_network }
+
+    base_buildtime = @factory3time
+    cost = {
+        minerals = @factory3cost
+        energy = @factory3cost
+    }
+
+    prerequisites = {
+        "tech_mining_factory_3"
+    }
+
+    produced_resources = {
+        minerals = @factory3produce1
+    }
+    required_resources = {
+        energy = @factory3upkeep
+    }
+
+    produced_resource_trigger = {
+        modifier = {
+            has_tradition = "tr_prosperity_trans_stellar_corporations"
+            resources = {
+                minerals = @factory3produce2
+                energy = @factory3produce2
+            }
+        }
+        modifier = {
+            has_tradition = "tr_prosperity_pursuit_of_profit"
+            resources = {
+                minerals = @factory3produce2
+                energy = @factory3produce2
+            }
+        }
+    }
+
+    planet_modifier_with_pop_trigger = {
+        key = building_mining_factory_amplifier
+        potential = {
+            is_robot_pop = yes
+            is_enslaved = no
+        }
+        modifier = {
+            tile_resource_minerals_mult = 0.25
+            tile_resource_energy_mult = 0.25
+        }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = { has_authority = auth_machine_intelligence }
+                }
+            }
+            AND = {
+                custom_tooltip = {
+                    text = "requires_building_capital_3"
+                    planet = {
+                        has_building = "building_capital_3"
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_minerals_1"
+                    tile = {
+                        has_resource = {
+                            type = minerals
+                            amount > 0
+                        }
+                    }
+                }
+            }
+        }
+        if = {
+            limit = {
+                owner = { has_authority = auth_machine_intelligence }
+            }
+            AND = {
+                custom_tooltip = {
+                    text = "requires_building_machine_capital_3"
+                    planet = {
+                        has_building = "building_machine_capital_3"
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = "requires_resource_minerals_1"
+                    tile = {
+                        has_resource = {
+                            type = minerals
+                            amount > 0
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ai_allow = {
+        is_slave_tile_or_planet = no
+        is_robot_tile_or_planet = no
+    }
+
+    ai_weight = {
+        factor = 100
+    }
+
+    ai_replace = yes
+}

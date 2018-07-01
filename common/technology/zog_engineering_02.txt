@@ -1176,3 +1176,347 @@ tech_mining_infinitum = {
         factor = 60
     }
 }
+
+#############################################
+## Engineering / Building / Mining Factory
+#############################################
+
+tech_mining_factory_1 = {
+    # Unlocks "Mining Factory I" building
+
+    cost = 12000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_mining_factory_1"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_mining_science"
+        "tech_mining_network_4"
+    }
+
+    prereqfor_desc = {
+        custom = {
+            title = tech_mining_factory_1_prereqfor.title
+            desc = tech_mining_factory_1_prereqfor.desc
+        }
+    }
+
+    weight = 90
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_sct"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_prosperity_administrative_operations"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                has_tradition = "tr_prosperity_pursuit_of_profit"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                OR = {
+                    has_trait = "leader_trait_curator"
+                    has_trait = "leader_trait_scientist_chosen"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                has_level > 3
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_level > 4
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_sct"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_prosperity_administrative_operations"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                has_tradition = "tr_prosperity_pursuit_of_profit"
+            }
+        }
+    }
+}
+
+tech_mining_factory_2 = {
+    # Unlocks "Mining Factory II" building
+
+    cost = 18000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_mining_factory_2"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_mining_doctrine"
+        "tech_mining_factory_1"
+    }
+
+    prereqfor_desc = {
+        custom = {
+            title = tech_mining_factory_2_prereqfor.title
+            desc = tech_mining_factory_2_prereqfor.desc
+        }
+    }
+
+    weight = 85
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_administrative_operations"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_prosperity_pursuit_of_profit"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = engineering
+                OR = {
+                    has_trait = "leader_trait_curator"
+                    has_trait = "leader_trait_scientist_chosen"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = engineering
+                has_level < 4
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = engineering
+                has_level > 4
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_administrative_operations"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_prosperity_pursuit_of_profit"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = engineering
+                has_level < 4
+            }
+        }
+    }
+}
+
+tech_mining_factory_3 = {
+    # Unlocks "Mining Factory III" building
+
+    cost = 26000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_mining_factory_3"
+    tier = 3
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_mining_transcendence"
+        "tech_mining_factory_2"
+    }
+
+    prereqfor_desc = {
+        custom = {
+            title = tech_mining_factory_3_prereqfor.title
+            desc = tech_mining_factory_3_prereqfor.desc
+        }
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_pursuit_of_profit"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+        modifier = {
+            factor = 0.85
+            research_leader = {
+                area = engineering
+                NOT = {
+                    has_trait = "leader_trait_expertise_industry"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                OR = {
+                    has_trait = "leader_trait_curator"
+                    has_trait = "leader_trait_scientist_chosen"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.50
+            research_leader = {
+                area = engineering
+                has_level < 4
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = engineering
+                has_level < 5
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_pursuit_of_profit"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+        modifier = {
+            factor = 0.85
+            research_leader = {
+                area = engineering
+                NOT = {
+                    has_trait = "leader_trait_expertise_industry"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.50
+            research_leader = {
+                area = engineering
+                has_level < 4
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = engineering
+                has_level < 5
+            }
+        }
+    }
+}
