@@ -12,7 +12,7 @@ tech_advanced_mineral_extraction = {
 
     is_reverse_engineerable = no
     is_rare = yes
-    is_dangerous = yes
+    is_dangerous = no
 
     prerequisites = {
         "tech_supreme_engineering"
@@ -36,9 +36,8 @@ tech_advanced_mineral_extraction = {
         modifier = {
             factor = 0
             OR = {
-                NAND = {
-                    has_government = "gov_megacorporation"
-                    has_government = "gov_trade_league"
+                NOT = {
+                    is_mercantile_regime = yes
                 }
                 is_at_war = yes
                 has_monthly_income = {
@@ -101,7 +100,7 @@ tech_supreme_mineral_extraction = {
 
     is_reverse_engineerable = no
     is_rare = yes
-    is_dangerous = yes
+    is_dangerous = no
 
     prerequisites = {
         "tech_advanced_mineral_extraction"
@@ -125,9 +124,8 @@ tech_supreme_mineral_extraction = {
         modifier = {
             factor = 0
             OR = {
-                NAND = {
-                    has_government = "gov_megacorporation"
-                    has_government = "gov_trade_league"
+                NOT = {
+                    is_mercantile_regime = yes
                 }
                 is_at_war = yes
                 has_monthly_income = {
@@ -138,7 +136,9 @@ tech_supreme_mineral_extraction = {
                     area = engineering
                     has_level < 4
                 }
-                has_ascension_perk = "ap_imperial_prerogative"
+                NOT = {
+                    has_ascension_perk = "ap_imperial_prerogative"
+                }
             }
         }
         modifier = {
@@ -216,9 +216,8 @@ tech_transcendental_mineral_extraction = {
         modifier = {
             factor = 0
             OR = {
-                NAND = {
-                    has_government = "gov_megacorporation"
-                    has_government = "gov_trade_league"
+                NOT = {
+                    is_mercantile_regime = yes
                 }
                 is_at_war = yes
                 recently_lost_war = yes
@@ -230,7 +229,7 @@ tech_transcendental_mineral_extraction = {
                     area = engineering
                     has_level < 5
                 }
-                NOR = {
+                NAND = {
                     has_ascension_perk = "ap_imperial_prerogative"
                     has_ascension_perk = "ap_master_builders"
                 }
@@ -292,9 +291,8 @@ tech_infinitum_mineral_extraction = {
         modifier = {
             factor = 0
             OR = {
-                NAND = {
-                    has_government = "gov_megacorporation"
-                    has_government = "gov_trade_league"
+                NOT = {
+                    is_mercantile_regime = yes
                 }
                 is_at_war = yes
                 recently_lost_war = yes
@@ -308,12 +306,12 @@ tech_infinitum_mineral_extraction = {
                 }
                 research_leader = {
                     area = engineering
-                    NAND = {
+                    NOR = {
                         has_trait = "leader_trait_expertise_industry"
                         has_trait = "leader_trait_scientist_chosen"
                     }
                 }
-                NOR = {
+                NAND = {
                     has_ascension_perk = "ap_imperial_prerogative"
                     has_ascension_perk = "ap_galactic_wonders"
                 }
@@ -353,7 +351,7 @@ tech_advanced_energy_extraction = {
 
     is_reverse_engineerable = no
     is_rare = yes
-    is_dangerous = yes
+    is_dangerous = no
 
     prerequisites = {
         "tech_supreme_engineering"
@@ -377,9 +375,8 @@ tech_advanced_energy_extraction = {
         modifier = {
             factor = 0
             OR = {
-                NAND = {
-                    has_government = "gov_megacorporation"
-                    has_government = "gov_trade_league"
+                NOT = {
+                    is_mercantile_regime = yes
                 }
                 is_at_war = yes
                 has_monthly_income = {
@@ -442,7 +439,7 @@ tech_supreme_energy_extraction = {
 
     is_reverse_engineerable = no
     is_rare = yes
-    is_dangerous = yes
+    is_dangerous = no
 
     prerequisites = {
         "tech_advanced_energy_extraction"
@@ -466,9 +463,8 @@ tech_supreme_energy_extraction = {
         modifier = {
             factor = 0
             OR = {
-                NAND = {
-                    has_government = "gov_megacorporation"
-                    has_government = "gov_trade_league"
+                NOT = {
+                    is_mercantile_regime = yes
                 }
                 is_at_war = yes
                 has_monthly_income = {
@@ -479,7 +475,9 @@ tech_supreme_energy_extraction = {
                     area = engineering
                     has_level < 4
                 }
-                has_ascension_perk = "ap_imperial_prerogative"
+                NOT = {
+                    has_ascension_perk = "ap_imperial_prerogative"
+                }
             }
         }
         modifier = {
@@ -557,9 +555,8 @@ tech_transcendental_energy_extraction = {
         modifier = {
             factor = 0
             OR = {
-                NAND = {
-                    has_government = "gov_megacorporation"
-                    has_government = "gov_trade_league"
+                NOT = {
+                    is_mercantile_regime = yes
                 }
                 is_at_war = yes
                 recently_lost_war = yes
@@ -571,7 +568,7 @@ tech_transcendental_energy_extraction = {
                     area = engineering
                     has_level < 5
                 }
-                NOR = {
+                NAND = {
                     has_ascension_perk = "ap_imperial_prerogative"
                     has_ascension_perk = "ap_master_builders"
                 }
@@ -633,9 +630,8 @@ tech_infinitum_energy_extraction = {
         modifier = {
             factor = 0
             OR = {
-                NAND = {
-                    has_government = "gov_megacorporation"
-                    has_government = "gov_trade_league"
+                NOT = {
+                    is_mercantile_regime = yes
                 }
                 is_at_war = yes
                 recently_lost_war = yes
@@ -649,12 +645,12 @@ tech_infinitum_energy_extraction = {
                 }
                 research_leader = {
                     area = engineering
-                    NAND = {
+                    NOR = {
                         has_trait = "leader_trait_expertise_field_manipulation"
                         has_trait = "leader_trait_scientist_chosen"
                     }
                 }
-                NOR = {
+                NAND = {
                     has_ascension_perk = "ap_imperial_prerogative"
                     has_ascension_perk = "ap_galactic_wonders"
                 }
@@ -889,7 +885,7 @@ tech_transcendental_planetary_engineering = {
         }
         modifier = {
             factor = 0.50
-            NAND = {
+            NOR = {
                 has_ethic = "ethic_egalitarian"
                 has_ethic = "ethic_fanatic_egalitarian"
                 has_ethic = "ethic_materialist"
@@ -980,7 +976,7 @@ tech_infinitum_planetary_engineering = {
         }
         modifier = {
             factor = 0
-            NAND = {
+            NOR = {
                 has_ethic = "ethic_fanatic_egalitarian"
                 has_ethic = "ethic_fanatic_materialist"
                 has_valid_civic = "civic_functional_architecture"
@@ -1059,11 +1055,8 @@ tech_advanced_strike_craft_01 = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NOR = {
-                OR = {
-                    has_ethic = "ethic_militarist"
-                    has_ethic = "ethic_fanatic_militarist"
-                }
+            NAND = {
+                is_militarist = yes
                 OR = {
                     has_valid_civic = "civic_distinguished_admiralty"
                     has_tradition = "tr_prosperity_adopt"
@@ -1153,11 +1146,8 @@ tech_advanced_strike_craft_02 = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NOR = {
-                OR = {
-                    has_ethic = "ethic_militarist"
-                    has_ethic = "ethic_fanatic_militarist"
-                }
+            NAND = {
+                is_militarist = yes
                 OR = {
                     has_valid_civic = "civic_distinguished_admiralty"
                     has_tradition = "tr_prosperity_sct"
@@ -1247,11 +1237,8 @@ tech_advanced_strike_craft_03 = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NOR = {
-                OR = {
-                    has_ethic = "ethic_militarist"
-                    has_ethic = "ethic_fanatic_militarist"
-                }
+            NAND = {
+                is_militarist = yes
                 OR = {
                     has_valid_civic = "civic_distinguished_admiralty"
                     has_tradition = "tr_prosperity_fleet_logistical_corps"
@@ -1337,7 +1324,7 @@ tech_advanced_strike_craft_04 = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NOR = {
+            NAND = {
                 has_ethic = "ethic_fanatic_militarist"
                 has_tradition = "tr_prosperity_finish"
                 research_leader = {
@@ -1409,7 +1396,7 @@ tech_advanced_strike_craft_05 = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NOR = {
+            NAND = {
                 has_ethic = "ethic_fanatic_militarist"
                 has_tradition = "tr_prosperity_finish"
                 has_ascension_perk = "ap_galactic_force_projection"
@@ -1454,7 +1441,7 @@ tech_advanced_mineral_consumption = {
 
     is_reverse_engineerable = no
     is_rare = yes
-    is_dangerous = yes
+    is_dangerous = no
 
     prerequisites = {
         "tech_supreme_engineering"
@@ -1477,15 +1464,9 @@ tech_advanced_mineral_consumption = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NAND = {
-                OR = {
-                    has_government = "gov_totalitarian_regime"
-                    has_government = "gov_executive_committee"
-                }
-                OR = {
-                    has_ethic = "ethic_authoritarian"
-                    has_ethic = "ethic_fanatic_authoritarian"
-                }
+            NOR = {
+                is_totalitarian_regime = yes
+                is_authoritarian = yes
             }
         }
         modifier = {
@@ -1546,7 +1527,7 @@ tech_supreme_mineral_consumption = {
 
     is_reverse_engineerable = no
     is_rare = yes
-    is_dangerous = yes
+    is_dangerous = no
 
     prerequisites = {
         "tech_advanced_mineral_consumption"
@@ -1568,11 +1549,11 @@ tech_supreme_mineral_consumption = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NOR = {
+            NAND = {
                 has_ascension_perk = "ap_one_vision"
                 OR = {
-                    has_government = "gov_totalitarian_regime"
-                    has_ethic = "ethic_fanatic_authoritarian"
+                    is_totalitarian_regime = yes
+                    is_authoritarian = yes
                 }
             }
         }
