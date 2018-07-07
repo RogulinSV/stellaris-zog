@@ -1413,13 +1413,6 @@ tech_advanced_strike_craft_05 = {
         }
         modifier = {
             factor = 0.90
-            research_leader = {
-                area = engineering
-                has_trait = "leader_trait_expertise_voidcraft"
-            }
-        }
-        modifier = {
-            factor = 0.90
             NOT = {
                 has_valid_civic = "civic_distinguished_admiralty"
             }
