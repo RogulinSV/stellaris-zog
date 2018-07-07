@@ -566,6 +566,7 @@ edem_neighbor_system_01 = {
             orbit_angle = { min = 50 max = 310 }
             size = { min = @habitable_planet_mod_size max = @habitable_planet_max_size }
             has_ring = no
+            anomaly = none
 
             init_effect = {
                 planet_set_random_blockers_01 = yes
