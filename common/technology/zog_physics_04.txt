@@ -1,0 +1,414 @@
+#######################
+### Physics / Robots
+#######################
+
+tech_neural_networks = {
+    cost = 5000
+    area = physics
+    start_tech = no
+    category = { computing }
+    icon = "tech_neural_networks"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_advanced_physics"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_neural_networks_prereqfor.title
+            desc = tech_neural_networks_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        category_computing_research_speed_mult = 0.05
+    }
+
+    weight = 100
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            count_owned_pops = {
+                limit = {
+                    is_robot_pop = yes
+                    is_enslaved = no
+                }
+                count < 5
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = physics
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_computing"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = physics
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_computing"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = physics
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_computing"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_tradition = "tr_discovery_polytechnic_education"
+        }
+        modifier = {
+            factor = 1.20
+            has_tradition = "tr_discovery_faith_in_science"
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_discovery_finish"
+        }
+        modifier = {
+            factor = 1.75
+            has_ascension_perk = "ap_technological_ascendancy"
+            has_ascension_perk = "ap_transcendence"
+        }
+    }
+
+    ai_weight = {
+        factor = 1
+
+        modifier = {
+            factor = 0
+            count_owned_pops = {
+                limit = {
+                    is_robot_pop = yes
+                    is_enslaved = no
+                }
+                count < 5
+            }
+        }
+    }
+}
+
+tech_laws_of_robotics = {
+    cost = 10000
+    area = physics
+    start_tech = no
+    category = { computing }
+    icon = "tech_laws_of_robotics"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_neural_networks"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_laws_of_robotics_prereqfor.title
+            desc = tech_laws_of_robotics_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        category_computing_research_speed_mult = 0.10
+    }
+
+    weight = 90
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            count_owned_pops = {
+                limit = {
+                    is_robot_pop = yes
+                    is_enslaved = no
+                }
+                count < 10
+            }
+        }
+        modifier = {
+            factor = 1.05
+            research_leader = {
+                area = physics
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_computing"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = physics
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_computing"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = physics
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_computing"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.10
+            has_tradition = "tr_discovery_polytechnic_education"
+        }
+        modifier = {
+            factor = 1.15
+            has_tradition = "tr_discovery_faith_in_science"
+        }
+        modifier = {
+            factor = 1.20
+            has_tradition = "tr_discovery_finish"
+        }
+        modifier = {
+            factor = 1.50
+            has_ascension_perk = "ap_technological_ascendancy"
+            has_ascension_perk = "ap_transcendence"
+        }
+    }
+
+    ai_weight = {
+        factor = 1
+
+        modifier = {
+            factor = 0
+            count_owned_pops = {
+                limit = {
+                    is_robot_pop = yes
+                    is_enslaved = no
+                }
+                count < 10
+            }
+        }
+    }
+}
+
+tech_droid_cooperation = {
+    cost = 20000
+    area = physics
+    start_tech = no
+    category = { computing }
+    icon = "tech_droid_cooperation"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_laws_of_robotics"
+        "tech_droid_workers"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_droid_cooperation_prereqfor.title
+            desc = tech_droid_cooperation_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        pop_robot_upkeep_mult = -0.10
+        pop_robot_production_output = 0.10
+    }
+
+    weight = 85
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            count_owned_pops = {
+                limit = {
+                    is_robot_pop = yes
+                    is_enslaved = no
+                }
+                count < 15
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = physics
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_computing"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = physics
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_computing"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_tradition = "tr_discovery_polytechnic_education"
+        }
+        modifier = {
+            factor = 1.10
+            has_tradition = "tr_discovery_faith_in_science"
+        }
+        modifier = {
+            factor = 1.15
+            has_tradition = "tr_discovery_finish"
+        }
+        modifier = {
+            factor = 1.40
+            has_ascension_perk = "ap_technological_ascendancy"
+            has_ascension_perk = "ap_transcendence"
+        }
+    }
+
+    ai_weight = {
+        factor = 1
+
+        modifier = {
+            factor = 0
+            count_owned_pops = {
+                limit = {
+                    is_robot_pop = yes
+                    is_enslaved = no
+                }
+                count < 15
+            }
+        }
+    }
+}
+
+tech_synthetic_cooperation = {
+    cost = 35000
+    area = physics
+    start_tech = no
+    category = { computing }
+    icon = "tech_synthetic_cooperation"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_laws_of_robotics"
+        "tech_synthetic_workers"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_synthetic_cooperation_prereqfor.title
+            desc = tech_synthetic_cooperation_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        pop_robot_upkeep_mult = -0.20
+        pop_robot_production_output = 0.20
+        pop_robot_non_energy_output = -0.05
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            count_owned_pops = {
+                limit = {
+                    is_robot_pop = yes
+                    is_enslaved = no
+                }
+                count < 20
+            }
+        }
+        modifier = {
+            factor = 1.05
+            research_leader = {
+                area = physics
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_computing"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = physics
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_computing"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_tradition = "tr_discovery_faith_in_science"
+        }
+        modifier = {
+            factor = 1.10
+            has_tradition = "tr_discovery_finish"
+        }
+        modifier = {
+            factor = 1.25
+            has_ascension_perk = "ap_technological_ascendancy"
+            has_ascension_perk = "ap_transcendence"
+        }
+    }
+
+    ai_weight = {
+        factor = 1
+
+        modifier = {
+            factor = 0
+            count_owned_pops = {
+                limit = {
+                    is_robot_pop = yes
+                    is_enslaved = no
+                }
+                count < 20
+            }
+        }
+    }
+}

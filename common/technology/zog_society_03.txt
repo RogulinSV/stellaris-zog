@@ -1,0 +1,1292 @@
+###################################
+## Society / Defence Initiatives
+###################################
+
+tech_wargames_theory = {
+    cost = 4000
+    area = society
+    start_tech = no
+    category = { military_theory }
+    icon = "tech_wargames_theory"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prereqfor_desc = {
+        component = {
+            title = tech_wargames_theory_prereqfor.title
+            desc = tech_wargames_theory_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        category_military_theory_research_speed_mult = 0.10
+    }
+
+    weight = 100
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_global_flag = "ZOG_SCIENCE_EVERYONE"
+                is_ai = no
+            }
+        }
+        modifier = {
+            factor = 0
+            years_passed < 5
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_global_flag = "ZOG_SCIENCE_EVERYONE"
+                is_ai = no
+            }
+        }
+        modifier = {
+            factor = 0
+            years_passed < 5
+        }
+    }
+}
+
+tech_defence_initiative = {
+    cost = 7000
+    area = society
+    start_tech = no
+    category = { military_theory }
+    icon = "tech_defence_initiative"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_xenomind_theory"
+        "tech_planetary_unification"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_defence_initiative_prereqfor.title
+            desc = tech_defence_initiative_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        country_starbase_capacity_add = 2
+    }
+
+    weight = 100
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            num_communications < 3
+        }
+        modifier = {
+            factor = 1.05
+            num_communications > 4
+        }
+        modifier = {
+            factor = 1.10
+            num_communications > 5
+        }
+        modifier = {
+            factor = 1.15
+            num_communications > 6
+        }
+        modifier = {
+            factor = 1.20
+            num_communications > 7
+        }
+        modifier = {
+            factor = 1.25
+            num_communications > 8
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+        modifier = {
+            factor = 1.20
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 1
+
+        modifier = {
+            factor = 0
+            num_communications < 3
+        }
+    }
+}
+
+tech_supervisory_initiative = {
+    cost = 15000
+    area = society
+    start_tech = no
+    category = { military_theory }
+    icon = "tech_supervisory_initiative"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_defence_initiative"
+        "tech_colonial_centralization"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_supervisory_initiative_prereqfor.title
+            desc = tech_supervisory_initiative_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        country_command_limit_add = 20
+        country_occupation_armies_add = 5
+        country_starbase_capacity_add = 2
+    }
+
+    weight = 90
+
+    weight_modifier = {
+        modifier = {
+            factor = 0.75
+            is_pacifist = yes
+        }
+        modifier = {
+            factor = 0
+            num_communications < 4
+        }
+        modifier = {
+            factor = 1.05
+            num_communications > 5
+        }
+        modifier = {
+            factor = 1.10
+            num_communications > 6
+        }
+        modifier = {
+            factor = 1.15
+            num_communications > 7
+        }
+        modifier = {
+            factor = 1.20
+            num_communications > 8
+        }
+        modifier = {
+            factor = 1.10
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.05
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_valid_civic = "civic_imperial_cult"
+        }
+    }
+
+    ai_weight = {
+        factor = 1
+
+        modifier = {
+            factor = 0.75
+            is_pacifist = yes
+        }
+        modifier = {
+            factor = 0
+            num_communications < 4
+        }
+    }
+}
+
+tech_enslavement_initiative = {
+    cost = 25000
+    area = society
+    start_tech = no
+    category = { military_theory }
+    icon = "tech_enslavement_initiative"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_supervisory_initiative"
+        "tech_galactic_administration"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_enslavement_initiative_prereqfor.title
+            desc = tech_enslavement_initiative_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        country_command_limit_add = 30
+        country_occupation_armies_add = 8
+        country_starbase_capacity_add = 3
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            is_pacifist = yes
+        }
+        modifier = {
+            factor = 0
+            num_communications < 5
+        }
+        modifier = {
+            factor = 1.05
+            num_communications > 6
+        }
+        modifier = {
+            factor = 1.10
+            num_communications > 7
+        }
+        modifier = {
+            factor = 1.15
+            num_communications > 8
+        }
+        modifier = {
+            factor = 1.05
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.10
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 0.50
+            research_leader = {
+                area = society
+                has_level < 2
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = society
+                NOT = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.05
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_valid_civic = "civic_imperial_cult"
+        }
+        modifier = {
+            factor = 1.15
+            has_valid_civic = "civic_slaver_guilds"
+        }
+    }
+
+    ai_weight = {
+        factor = 1
+
+        modifier = {
+            factor = 0
+            is_pacifist = yes
+        }
+        modifier = {
+            factor = 0
+            num_communications < 5
+        }
+        modifier = {
+            factor = 0.50
+            research_leader = {
+                area = society
+                has_level < 2
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = society
+                NOT = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                }
+            }
+        }
+    }
+}
+
+tech_extermination_initiative = {
+    cost = 50000
+    area = society
+    start_tech = no
+    category = { military_theory }
+    icon = "tech_extermination_initiative"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_enslavement_initiative"
+        "tech_interstellar_campaigns"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_extermination_initiative_prereqfor.title
+            desc = tech_extermination_initiative_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        country_command_limit_add = 40
+        country_occupation_armies_add = 12
+        country_starbase_capacity_add = 5
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                is_militarist = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            num_communications < 6
+        }
+        modifier = {
+            factor = 0
+            fleet_power < 99999
+        }
+        modifier = {
+            factor = 1.05
+            num_communications > 7
+        }
+        modifier = {
+            factor = 1.10
+            num_communications > 8
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                NOT = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            has_valid_civic = "civic_imperial_cult"
+        }
+        modifier = {
+            factor = 1.15
+            has_valid_civic = "civic_slaver_guilds"
+        }
+    }
+
+    ai_weight = {
+        factor = 1
+
+        modifier = {
+            factor = 0
+            NOT = {
+                is_militarist = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            num_communications < 6
+        }
+        modifier = {
+            factor = 0
+            fleet_power < 99999
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                NOT = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                }
+            }
+        }
+    }
+}
+
+#######################
+### Society / Armies
+#######################
+
+tech_planetary_defence_forces = {
+    cost = 5000
+    area = society
+    start_tech = no
+    category = { military_theory }
+    icon = "tech_planetary_defence_forces"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_defence_initiative"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_planetary_defence_forces_prereqfor.title
+            desc = tech_planetary_defence_forces_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        army_defense_health_mult = 0.10
+        army_defense_damage_mult = 0.10
+        army_upkeep_mult = -0.05
+        army_health = 0.05
+    }
+
+    weight = 100
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            num_communications < 1
+        }
+        modifier = {
+            factor = 1.05
+            num_communications > 2
+        }
+        modifier = {
+            factor = 1.10
+            num_communications > 3
+        }
+        modifier = {
+            factor = 1.15
+            num_communications > 4
+        }
+        modifier = {
+            factor = 1.20
+            num_communications > 5
+        }
+        modifier = {
+            factor = 1.25
+            num_communications > 6
+        }
+        modifier = {
+            factor = 0
+            num_armies < 5
+        }
+        modifier = {
+            factor = 1.15
+            OR = {
+                is_militarist = yes
+                is_totalitarian_regime = yes
+            }
+        }
+        modifier = {
+            factor = 1.35
+            has_valid_civic = "civic_citizen_service"
+        }
+        modifier = {
+            factor = 1.05
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 1
+
+        modifier = {
+            factor = 0
+            num_communications < 1
+        }
+        modifier = {
+            factor = 0
+            num_armies < 5
+        }
+    }
+}
+
+tech_interstellar_defence_forces = {
+    cost = 15000
+    area = society
+    start_tech = no
+    category = { military_theory }
+    icon = "tech_interstellar_defence_forces"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_planetary_defence_forces"
+        "tech_supervisory_initiative"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_interstellar_defence_forces_prereqfor.title
+            desc = tech_interstellar_defence_forces_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        army_defense_health_mult = 0.25
+        army_defense_damage_mult = 0.25
+        army_upkeep_mult = -0.15
+        army_health = 0.15
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            num_communications < 4
+        }
+        modifier = {
+            factor = 1.05
+            num_communications > 5
+        }
+        modifier = {
+            factor = 1.10
+            num_communications > 6
+        }
+        modifier = {
+            factor = 1.15
+            num_communications > 7
+        }
+        modifier = {
+            factor = 0
+            num_armies < 14
+        }
+        modifier = {
+            factor = 1.25
+            has_valid_civic = "civic_citizen_service"
+        }
+        modifier = {
+            factor = 1.05
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 1
+
+        modifier = {
+            factor = 0
+            num_communications < 4
+        }
+        modifier = {
+            factor = 0
+            num_armies < 14
+        }
+    }
+}
+
+tech_galactic_defence_forces = {
+    cost = 25000
+    area = society
+    start_tech = no
+    category = { military_theory }
+    icon = "tech_galactic_defence_forces"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_interstellar_defence_forces"
+        "tech_enslavement_initiative"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_galactic_defence_forces_prereqfor.title
+            desc = tech_galactic_defence_forces_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        army_defense_health_mult = 0.40
+        army_defense_damage_mult = 0.40
+        army_upkeep_mult = -0.25
+        army_health = 0.25
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            num_communications < 6
+        }
+        modifier = {
+            factor = 1.05
+            num_communications > 7
+        }
+        modifier = {
+            factor = 0
+            num_armies < 19
+        }
+        modifier = {
+            factor = 1.15
+            has_valid_civic = "civic_citizen_service"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = society
+                NOT = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 1
+
+        modifier = {
+            factor = 0
+            num_communications < 6
+        }
+        modifier = {
+            factor = 0
+            num_armies < 19
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = society
+                NOT = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                }
+            }
+        }
+    }
+}
+
+tech_planetary_offence_forces = {
+    cost = 7500
+    area = society
+    start_tech = no
+    category = { military_theory }
+    icon = "tech_planetary_offence_forces"
+    tier = 0
+
+    is_reverse_engineerable = no
+    is_rare = no
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_planetary_defence_forces"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_planetary_offence_forces_prereqfor.title
+            desc = tech_planetary_offence_forces_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        army_attack_damage_mult = 0.10
+        army_attack_morale_mult = 0.10
+        army_upkeep_mult = -0.05
+        army_morale = 0.05
+    }
+
+    weight = 100
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            num_communications < 1
+        }
+        modifier = {
+            factor = 1.05
+            num_communications > 2
+        }
+        modifier = {
+            factor = 1.10
+            num_communications > 3
+        }
+        modifier = {
+            factor = 1.15
+            num_communications > 4
+        }
+        modifier = {
+            factor = 1.20
+            num_communications > 5
+        }
+        modifier = {
+            factor = 1.25
+            num_communications > 6
+        }
+        modifier = {
+            factor = 0
+            num_armies < 9
+        }
+        modifier = {
+            factor = 0
+            is_pacifist = yes
+        }
+        modifier = {
+            factor = 1.35
+            has_valid_civic = "civic_imperial_cult"
+        }
+        modifier = {
+            factor = 1.05
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 1
+
+        modifier = {
+            factor = 0
+            num_communications < 1
+        }
+        modifier = {
+            factor = 0
+            is_pacifist = yes
+        }
+        modifier = {
+            factor = 0
+            num_armies < 9
+        }
+    }
+}
+
+tech_interstellar_offence_forces = {
+    cost = 25000
+    area = society
+    start_tech = no
+    category = { military_theory }
+    icon = "tech_interstellar_offence_forces"
+    tier = 1
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_interstellar_defence_forces"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_interstellar_offence_forces_prereqfor.title
+            desc = tech_interstellar_offence_forces_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        army_attack_damage_mult = 0.25
+        army_attack_morale_mult = 0.25
+        army_upkeep_mult = -0.15
+        army_morale = 0.15
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            num_communications < 4
+        }
+        modifier = {
+            factor = 1.05
+            num_communications > 5
+        }
+        modifier = {
+            factor = 1.10
+            num_communications > 6
+        }
+        modifier = {
+            factor = 1.15
+            num_communications > 7
+        }
+        modifier = {
+            factor = 0
+            num_armies < 19
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                is_militarist = yes
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                has_valid_civic = "civic_imperial_cult"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = society
+                OR = {
+                    has_level < 3
+                    NOT = {
+                        has_trait = "leader_trait_expertise_military_theory"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.05
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 1
+
+        modifier = {
+            factor = 0
+            num_communications < 4
+        }
+        modifier = {
+            factor = 0
+            num_armies < 19
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                is_militarist = yes
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                has_valid_civic = "civic_imperial_cult"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = society
+                OR = {
+                    has_level < 3
+                    NOT = {
+                        has_trait = "leader_trait_expertise_military_theory"
+                    }
+                }
+            }
+        }
+    }
+}
+
+tech_galactic_offence_forces = {
+    cost = 40000
+    area = society
+    start_tech = no
+    category = { military_theory }
+    icon = "tech_galactic_offence_forces"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_galactic_defence_forces"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_galactic_offence_forces_prereqfor.title
+            desc = tech_galactic_offence_forces_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        army_attack_damage_mult = 0.40
+        army_attack_morale_mult = 0.40
+        army_upkeep_mult = -0.25
+        army_morale = 0.25
+    }
+
+    weight = 70
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            num_communications < 7
+        }
+        modifier = {
+            factor = 0
+            num_armies < 29
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                is_militarist = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_valid_civic = "civic_imperial_cult"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                OR = {
+                    has_level < 3
+                    NOT = {
+                        has_trait = "leader_trait_expertise_military_theory"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 1
+
+        modifier = {
+            factor = 0
+            num_communications < 7
+        }
+        modifier = {
+            factor = 0
+            num_armies < 29
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                is_militarist = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_valid_civic = "civic_imperial_cult"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                OR = {
+                    has_level < 3
+                    NOT = {
+                        has_trait = "leader_trait_expertise_military_theory"
+                    }
+                }
+            }
+        }
+    }
+}
+
+tech_universe_offence_forces = {
+    cost = 80000
+    area = society
+    start_tech = no
+    category = { military_theory }
+    icon = "tech_universe_offence_forces"
+    tier = 4
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = yes
+
+    prerequisites = {
+        "tech_galactic_offence_forces"
+        "tech_extermination_initiative"
+    }
+
+    prereqfor_desc = {
+        component = {
+            title = tech_universe_offence_forces_prereqfor.title
+            desc = tech_universe_offence_forces_prereqfor.desc
+        }
+    }
+
+    modifier = {
+        army_attack_damage_mult = 0.55
+        army_attack_morale_mult = 0.55
+        army_upkeep_mult = -0.35
+        army_morale = 0.35
+    }
+
+    weight = 60
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            num_communications < 7
+        }
+        modifier = {
+            factor = 0
+            num_armies < 35
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                is_militarist = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_valid_civic = "civic_imperial_cult"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                OR = {
+                    has_level < 4
+                    NOT = {
+                        has_trait = "leader_trait_expertise_military_theory"
+                    }
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 1
+
+        modifier = {
+            factor = 0
+            num_communications < 7
+        }
+        modifier = {
+            factor = 0
+            num_armies < 35
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                is_militarist = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_valid_civic = "civic_imperial_cult"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                OR = {
+                    has_level < 4
+                    NOT = {
+                        has_trait = "leader_trait_expertise_military_theory"
+                    }
+                }
+            }
+        }
+    }
+}

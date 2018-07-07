@@ -844,6 +844,8 @@ tech_electric_infinitum = {
 ##########################################
 
 tech_mining_theory = {
+    # Unlocks "Mineral Plant I" building
+    # Unlocks "Mineral Cultivator I" building
     # Unlocks "Galkatite Factory I" building
     # Unlocks "Greenaurium Factory I" building
     # Unlocks "Glitterium Factory I" building
@@ -911,6 +913,8 @@ tech_mining_theory = {
 }
 
 tech_mining_science = {
+    # Unlocks "Mineral Plant II" building
+    # Unlocks "Mineral Cultivator II" building
     # Unlocks "Galkatite Factory II" building
     # Unlocks "Greenaurium Factory II" building
     # Unlocks "Glitterium Factory II" building
@@ -978,6 +982,8 @@ tech_mining_science = {
 }
 
 tech_mining_doctrine = {
+    # Unlocks "Mineral Plant III" building
+    # Unlocks "Mineral Cultivator III" building
     # Unlocks "Galkatite Factory III" building
     # Unlocks "Greenaurium Factory III" building
     # Unlocks "Glitterium Factory III" building
@@ -1045,6 +1051,8 @@ tech_mining_doctrine = {
 }
 
 tech_mining_transcendence = {
+    # Unlocks "Mineral Plant IV" building
+    # Unlocks "Mineral Cultivator IV" building
     # Unlocks "Galkatite Factory IV" building
     # Unlocks "Greenaurium Factory IV" building
     # Unlocks "Glitterium Factory IV" building
@@ -1112,6 +1120,8 @@ tech_mining_transcendence = {
 }
 
 tech_mining_infinitum = {
+    # Unlocks "Mineral Plant V" building
+    # Unlocks "Mineral Cultivator V" building
     # Unlocks "Galkatite Factory V" building
     # Unlocks "Greenaurium Factory V" building
     # Unlocks "Glitterium Factory V" building
@@ -1516,6 +1526,346 @@ tech_mining_factory_3 = {
             research_leader = {
                 area = engineering
                 has_level < 5
+            }
+        }
+    }
+}
+
+#############################################
+## Engineering / Building / Mining Factory
+#############################################
+
+tech_mineral_plant_6 = {
+    # Unlocks "Mineral Plant VI" building
+
+    cost = 30000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_mineral_plant_6"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_mining_infinitum"
+    }
+
+    prereqfor_desc = {
+        custom = {
+            title = tech_mineral_plant_6_prereqfor.title
+            desc = tech_mineral_plant_6_prereqfor.desc
+        }
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 2
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            research_leader = {
+                area = engineering
+                has_level > 3
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 4
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 2
+            }
+        }
+    }
+}
+
+tech_mineral_plant_7 = {
+    # Unlocks "Mineral Plant VII" building
+
+    cost = 40000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_mineral_plant_7"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_mineral_plant_6"
+    }
+
+    prereqfor_desc = {
+        custom = {
+            title = tech_mineral_plant_7_prereqfor.title
+            desc = tech_mineral_plant_7_prereqfor.desc
+        }
+    }
+
+    weight = 75
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.85
+            research_leader = {
+                area = engineering
+                NOT = {
+                    has_trait = "leader_trait_expertise_industry"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 4
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.85
+            research_leader = {
+                area = engineering
+                NOT = {
+                    has_trait = "leader_trait_expertise_industry"
+                }
+            }
+        }
+    }
+}
+
+#################################################
+## Engineering / Building / Mineral Cultivator
+#################################################
+
+tech_mineral_cultivator_6 = {
+    # Unlocks "Mineral Cultivator VI" building
+
+    cost = 30000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_mineral_cultivator_6"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_mining_infinitum"
+    }
+
+    prereqfor_desc = {
+        custom = {
+            title = tech_mineral_cultivator_6_prereqfor.title
+            desc = tech_mineral_cultivator_6_prereqfor.desc
+        }
+    }
+
+    weight = 80
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 2
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            research_leader = {
+                area = engineering
+                has_level > 3
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 4
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 2
+            }
+        }
+    }
+}
+
+tech_mineral_cultivator_7 = {
+    # Unlocks "Mineral Cultivator VII" building
+
+    cost = 40000
+    area = engineering
+    start_tech = no
+    category = { industry }
+    icon = "tech_mineral_cultivator_7"
+    tier = 2
+
+    is_reverse_engineerable = no
+    is_rare = yes
+    is_dangerous = no
+
+    prerequisites = {
+        "tech_mineral_cultivator_6"
+    }
+
+    prereqfor_desc = {
+        custom = {
+            title = tech_mineral_cultivator_7_prereqfor.title
+            desc = tech_mineral_cultivator_7_prereqfor.desc
+        }
+    }
+
+    weight = 75
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.85
+            research_leader = {
+                area = engineering
+                NOT = {
+                    has_trait = "leader_trait_expertise_industry"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = engineering
+                has_level > 4
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.85
+            research_leader = {
+                area = engineering
+                NOT = {
+                    has_trait = "leader_trait_expertise_industry"
+                }
             }
         }
     }
